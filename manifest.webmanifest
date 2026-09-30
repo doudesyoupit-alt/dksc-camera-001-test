@@ -1,17 +1,24 @@
 {
-  "name": "DKSC Camera Acceptance Test",
-  "short_name": "DKSC Camera Test",
+  "name": "DKSC 図面生成アプリ",
+  "short_name": "DKSC図面",
+  "description": "スマホ-PC案件引継ぎ・CORE v2保存互換",
+  "lang": "ja",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f4f6f8",
-  "theme_color": "#111827",
-  "description": "DKSC Stage 1 camera acceptance diagnostic",
+  "background_color": "#0a0f1b",
+  "theme_color": "#0b1020",
   "icons": [
     {
-      "src": "./icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]

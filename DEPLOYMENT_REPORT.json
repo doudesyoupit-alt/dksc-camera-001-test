@@ -1,0 +1,52 @@
+{
+  "purpose": "v1.18 Stage 1 real-device HTTPS/PWA acceptance deployment",
+  "canonical_v1_18_modified": false,
+  "v1_10_modified": false,
+  "camera_logic_modified": false,
+  "deployment_only_changes": [
+    "Flattened relative paths for vendor JS and icon files in a separate deployment copy.",
+    "No application JavaScript logic, CORE logic, UI logic, or camera event logic was changed."
+  ],
+  "unchanged_file_hashes": {
+    "core.js": {
+      "source": "d71a91a0d98aef04086a8c3deb87f938882687fda9eefac8c8930225694ae130",
+      "deployment": "d71a91a0d98aef04086a8c3deb87f938882687fda9eefac8c8930225694ae130",
+      "identical": true
+    },
+    "input_adapters.js": {
+      "source": "3b2b5fa415610157a83b6aded5f71dd65714f7ea72d6b3e289347fc641944501",
+      "deployment": "3b2b5fa415610157a83b6aded5f71dd65714f7ea72d6b3e289347fc641944501",
+      "identical": true
+    },
+    "exporters.js": {
+      "source": "273af4c6fe65d4c6abbf1f9b88d5c3f4638a981624c489214488d6c420d1e010",
+      "deployment": "273af4c6fe65d4c6abbf1f9b88d5c3f4638a981624c489214488d6c420d1e010",
+      "identical": true
+    },
+    "project_io.js": {
+      "source": "3e00736dc4672ef6d1b16150788f196191f93f02e9d5656f24285982153d3ad2",
+      "deployment": "3e00736dc4672ef6d1b16150788f196191f93f02e9d5656f24285982153d3ad2",
+      "identical": true
+    },
+    "jszip.min.js": {
+      "source": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+      "deployment": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+      "identical": true
+    },
+    "pptxgen.min.js": {
+      "source": "968beaa4b3f355150c08826e43ee2ece4d09305b41d636755d85c2a355de3f31",
+      "deployment": "968beaa4b3f355150c08826e43ee2ece4d09305b41d636755d85c2a355de3f31",
+      "identical": true
+    },
+    "icon-192.png": {
+      "source": "7874747fef944a20d6492fee0f9ea069f5babd329532e2a148602deccbcfac03",
+      "deployment": "7874747fef944a20d6492fee0f9ea069f5babd329532e2a148602deccbcfac03",
+      "identical": true
+    },
+    "icon-512.png": {
+      "source": "623e9b3a79e142eaa3fb07349039649a5ce94c2815becbe6b5f10dc80e64e786",
+      "deployment": "623e9b3a79e142eaa3fb07349039649a5ce94c2815becbe6b5f10dc80e64e786",
+      "identical": true
+    }
+  }
+}

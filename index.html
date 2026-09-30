@@ -2,223 +2,2102 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#111827">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" href="./icon.svg" type="image/svg+xml">
-<title>DKSC Camera Acceptance Test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b1020">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="DKSC図面">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>DKSC 図面生成アプリ v1.18 PHASE 10</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#f4f6f8;color:#172033}
-main{max-width:760px;margin:auto;padding:18px 14px 60px}
-h1{font-size:21px;margin:0 0 8px}
-h2{font-size:16px;margin:0 0 8px}
-p{line-height:1.6}
-.card{background:#fff;border:1px solid #dfe5ec;border-radius:16px;padding:14px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.03)}
-.status{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-.badge{padding:6px 9px;border-radius:999px;background:#eef2f7;font-size:12px;font-weight:800}
-.ok{background:#dcfce7;color:#166534}
-.ng{background:#fee2e2;color:#991b1b}
-.warn{background:#fef3c7;color:#92400e}
-button,.labelBtn{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;border:0;border-radius:12px;background:#1d4ed8;color:white;font-size:15px;font-weight:900;margin:8px 0;text-decoration:none}
-.secondary{background:#334155}
-.danger{background:#991b1b}
-input[type=file]{position:absolute;left:-9999px;width:1px;height:1px;opacity:.001}
-pre{white-space:pre-wrap;word-break:break-word;background:#0f172a;color:#e2e8f0;padding:12px;border-radius:12px;font-size:12px;line-height:1.55}
-video,img{width:100%;max-height:420px;object-fit:contain;background:#111827;border-radius:12px;margin-top:10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(max-width:520px){.grid{grid-template-columns:1fr}}
-.small{font-size:12px;color:#64748b}
-.result{font-weight:800;margin-top:8px}
+:root{
+  --bg:#0a0f1b;--ink:#f8fafc;--muted:#94a3b8;--accent:#5da8ff;--ok:#57d39c;--warn:#ffc857;
+  --sheet:#f8fafc;--sheetInk:#172033;--sheetMuted:#667085;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif}
+body{overscroll-behavior:none;touch-action:none}
+button,input{font:inherit}button{cursor:pointer}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:1100px;margin:auto;background:linear-gradient(180deg,#0d1422,#090e18)}
+.topbar{position:sticky;top:0;z-index:60;padding:calc(10px + env(safe-area-inset-top)) 12px 10px;background:rgba(9,14,24,.95);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.topline{display:flex;align-items:center;gap:8px}
+.brand{min-width:0;flex:1}
+.brand small{display:block;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.11em}
+.brand strong{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.statusbar{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:7px 10px;font-size:10px;font-weight:900;background:#132033;color:#dce6f2;border:1px solid rgba(255,255,255,.06)}
+.pill.primary{background:rgba(93,168,255,.12);color:#cfe6ff;border-color:rgba(93,168,255,.22)}
+.pill.ok{background:rgba(87,211,156,.10);color:#b7f0d6;border-color:rgba(87,211,156,.22)}
+.pill.warn{background:rgba(255,200,87,.10);color:#ffe2a1;border-color:rgba(255,200,87,.22)}
+.iconbtn{width:38px;height:38px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#141d2e;color:#fff;font-size:17px}
+
+.workspace{flex:1;min-height:0;padding:8px 8px 104px}
+.canvas-shell{position:relative;height:calc(100dvh - 180px);min-height:450px;border-radius:20px;overflow:hidden;background:#dfe5ed;border:1px solid rgba(255,255,255,.08);box-shadow:0 22px 65px rgba(0,0,0,.32)}
+#board{width:100%;height:100%;display:block;background:#f1f4f8;touch-action:none}
+.hint{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:11;max-width:88%;background:rgba(15,23,37,.88);color:#fff;border:1px solid rgba(255,255,255,.08);padding:8px 11px;border-radius:999px;font-size:10px;font-weight:800;opacity:0;pointer-events:none;transition:.2s}
+.hint.show{opacity:1}
+.floating-right{position:absolute;right:10px;top:10px;z-index:10;display:flex;flex-direction:column;gap:7px}
+.floatbtn{width:42px;height:42px;border:1px solid rgba(255,255,255,.18);border-radius:13px;background:rgba(16,24,40,.92);color:#fff;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.18)}
+.floatbtn.primary{background:#1d4ed8}
+.inspector{position:absolute;left:8px;right:8px;bottom:8px;z-index:15;display:none;background:rgba(255,255,255,.97);color:#152033;border-radius:17px;padding:8px;box-shadow:0 14px 36px rgba(20,30,50,.22)}
+.inspector.show{display:block}
+.inspectrow{display:flex;align-items:center;gap:7px}
+.inspectrow strong{font-size:11px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inspectrow button{border:0;border-radius:10px;background:#edf1f7;color:#26334a;font-weight:900;min-height:36px;padding:0 10px;font-size:10px}
+.inspectrow button.danger{background:#fff0f1;color:#b4232b}
+
+.bottom-tools{position:fixed;z-index:70;left:50%;bottom:0;transform:translateX(-50%);width:min(1100px,100%);padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(9,14,24,.96);backdrop-filter:blur(18px);border-top:1px solid rgba(255,255,255,.07)}
+.mainnav{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.navbtn{border:0;background:transparent;color:#8190a6;min-height:58px;border-radius:14px;font-size:10px;font-weight:900}
+.navbtn span{display:block;font-size:21px;margin-bottom:2px}
+.navbtn.active{background:#17243a;color:#fff}
+.contextbar{display:none;gap:7px;overflow-x:auto;padding:0 0 8px;scrollbar-width:none}
+.contextbar.show{display:flex}
+.contextbar::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 12px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#131d30;color:#dfe7f2;font-size:11px;font-weight:900}
+.chip.active{border-color:var(--accent);background:#203b61;color:#fff}
+
+.sheetback{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.52);display:none}
+.sheetback.show{display:block}
+.sheet{position:absolute;left:0;right:0;bottom:0;max-height:85dvh;overflow:auto;background:var(--sheet);color:var(--sheetInk);border-radius:24px 24px 0 0;padding:10px 14px calc(18px + env(safe-area-inset-bottom))}
+.grab{width:42px;height:5px;border-radius:999px;background:#d5dbe5;margin:0 auto 12px}
+.sheet h2{font-size:18px;margin:3px 0 4px}
+.sheet p{font-size:12px;line-height:1.6;color:var(--sheetMuted);margin:0 0 13px}
+.card{background:#fff;border:1px solid #e2e6ed;border-radius:16px;padding:12px;margin-bottom:10px}
+.card h4{font-size:13px;margin:0 0 8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sheet button,.sheet input{min-height:46px;border-radius:12px}
+.sheet button{border:1px solid #dbe1e9;background:#fff;color:#192238;font-weight:900;padding:0 12px}
+.sheet button.primary{background:#2563eb;color:#fff;border-color:#2563eb}
+.sheet input{width:100%;border:1px solid #d9dfe8;background:#fff;color:#182238;padding:0 11px}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice{border:1px solid #dce2ea;background:#fff;border-radius:18px;padding:14px;text-align:left}
+.choice.active{border-color:#2563eb;background:#eef5ff}
+.choice b{display:block;font-size:14px}
+.choice small{display:block;color:#667085;margin-top:5px;line-height:1.5}
+.exportlist{display:grid;gap:8px}
+.exportitem{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid #e1e6ed;background:#fff;border-radius:14px;padding:11px;color:#172033}
+.exportitem .ico{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#edf4ff;font-size:19px}
+.exportitem b{display:block;font-size:12px}
+.exportitem small{display:block;color:#667085;margin-top:2px}
+.empty-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:9;pointer-events:none;background:linear-gradient(180deg,rgba(247,249,252,0),rgba(247,249,252,.26))}
+.empty-card{pointer-events:auto;width:min(90%,460px);background:rgba(255,255,255,.96);border:1px solid #e5e9ef;border-radius:22px;padding:18px;box-shadow:0 18px 50px rgba(20,30,50,.18)}
+.empty-card h3{margin:0 0 6px;font-size:17px;color:#152033}
+.empty-card p{margin:0 0 14px;font-size:12px;line-height:1.6;color:#667085}
+.empty-card button{min-height:50px;border-radius:14px;font-weight:900}
+.toast{position:fixed;left:50%;bottom:94px;z-index:150;transform:translate(-50%,20px);opacity:0;background:#101827;color:#fff;border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:10px 14px;font-size:11px;font-weight:900;transition:.2s;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.snap-ring{fill:rgba(37,99,235,.10);stroke:#2563eb;stroke-width:4;stroke-dasharray:7 5;pointer-events:none}
+.snap-line{stroke:#2563eb;stroke-width:2;stroke-dasharray:6 5;pointer-events:none}
+.snap-dot{fill:#2563eb;stroke:#fff;stroke-width:3;pointer-events:none}
+
+@media(min-width:760px){
+  .workspace{padding:12px 16px 104px}
+  .canvas-shell{height:calc(100dvh - 170px);min-height:600px}
+  .bottom-tools{width:720px;border:1px solid rgba(255,255,255,.08);border-bottom:0;border-radius:20px 20px 0 0}
+}
+@media print{
+  .topbar,.bottom-tools,.floating-right,.hint,.inspector,.empty-overlay{display:none!important}
+  .workspace{padding:0}.canvas-shell{height:100vh;border:0;border-radius:0}
+}
+
+.savebtn{
+  width:42px;height:38px;border-radius:12px;border:1px solid rgba(255,255,255,.08);
+  background:#1b2b43;color:#fff;font-weight:900
+}
+.desktop-panel{
+  display:none;background:#f8fafc;color:#172033;border-radius:20px;border:1px solid #e2e8f0;
+  overflow:auto;min-height:0
+}
+.desktop-panel .head{
+  position:sticky;top:0;z-index:2;padding:14px;background:#f8fafc;border-bottom:1px solid #e2e8f0
+}
+.desktop-panel h3{font-size:14px;margin:0 0 4px}
+.desktop-panel p{font-size:11px;color:#667085;margin:0}
+.desktop-panel .body{padding:12px}
+.pc-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:11px;margin-bottom:10px}
+.pc-card h4{font-size:12px;margin:0 0 8px}
+.pc-grid2{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.pc-field{display:grid;gap:4px;margin-bottom:8px}
+.pc-field label{font-size:10px;color:#667085;font-weight:800}
+.pc-field input{width:100%;height:38px;border:1px solid #d7dee8;border-radius:9px;padding:0 8px;color:#172033;background:#fff;font-size:12px}
+.pc-btn{min-height:38px;border:1px solid #d7dee8;background:#fff;border-radius:9px;color:#172033;font-size:11px;font-weight:900;padding:0 9px}
+.pc-btn.primary{background:#2563eb;border-color:#2563eb;color:#fff}
+.pc-btn.danger{background:#fff0f1;border-color:#ffd1d5;color:#b4232b}
+.pc-assets{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.pc-assets button{min-height:38px}
+.mobile-edit-btn{background:#e8f1ff!important;color:#1d4ed8!important}
+
+@media(min-width:900px){
+  .workspace{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 310px;
+    gap:12px;
+    padding:12px 16px 24px;
+    min-height:0
+  }
+  .canvas-shell{
+    height:calc(100vh - 150px);
+    min-height:620px
+  }
+  .desktop-panel{display:block;height:calc(100vh - 150px)}
+  .bottom-tools{
+    position:sticky;bottom:0;left:auto;transform:none;width:auto;
+    grid-column:1 / -1;border-radius:16px;margin-top:0
+  }
+}
+
+
+.pc-only-import{display:none}
+.pc-page-list{display:grid;gap:6px}
+.pc-page-btn{
+  min-height:36px;border:1px solid #d7dee8;border-radius:9px;background:#fff;
+  color:#172033;font-size:11px;font-weight:900;padding:0 9px;text-align:left
+}
+.pc-page-btn.active{background:#e8f1ff;border-color:#8bbcff;color:#1d4ed8}
+@media(min-width:900px){.pc-only-import{display:block}}
 </style>
 </head>
 <body>
-<main>
-<h1>DKSC カメラ受入診断</h1>
-<p>第1段階 CAMERA-001 の原因を、アプリコード・ブラウザー・HTTPS・権限・サンドボックスに切り分けます。</p>
+<div class="app">
+  <header class="topbar">
+    <div class="topline">
+      <div class="brand">
+        <small>DKSC DRAWING</small>
+        <strong id="projectTitle">現調図面</strong>
+      </div>
+      <button class="savebtn" id="saveBtn" aria-label="保存">保存</button>
+      <button class="iconbtn" id="moreBtn">•••</button>
+    </div>
+    <div class="statusbar">
+      <div class="pill primary" id="targetPill">編集先：PowerPoint</div>
+      <div class="pill" id="stylePill">出力：編集可能PPTX</div>
+      <div class="pill" id="savePill">保存済み</div>
+      <div class="pill" id="dimensionPill" style="display:none"></div>
+      <div class="pill warn">スマホ：現場可視化 / PC：詳細変換・仕上げ</div>
+    </div>
+  </header>
 
-<div class="card">
-<h2>0. 実行環境</h2>
-<div class="status" id="badges"></div>
-<pre id="env"></pre>
+  <main class="workspace">
+    <section class="canvas-shell">
+      <svg id="board" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+            <path d="M25 0H0V25" fill="none" stroke="#dbe2ea" stroke-width="1"/>
+          </pattern>
+          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".15"/>
+          </filter>
+        </defs>
+        <rect x="0" y="0" width="1200" height="800" fill="#f6f8fb"/>
+        <rect x="0" y="0" width="1200" height="800" fill="url(#grid)"/>
+        <image id="bgImage" x="0" y="0" width="1200" height="800" preserveAspectRatio="xMidYMid meet" opacity=".22" style="display:none"/>
+        <g id="objectLayer"></g>
+        <g id="previewLayer"></g>
+        <g id="selectionLayer"></g>
+      </svg>
+
+      <div class="hint" id="hint"></div>
+
+      <div class="floating-right">
+        <button class="floatbtn primary" id="startFlowBtn">＋</button>
+        <button class="floatbtn" id="undoBtn">↶</button>
+        <button class="floatbtn" id="redoBtn">↷</button>
+        <button class="floatbtn" id="fitBtn">⌂</button>
+      </div>
+
+      <div class="inspector" id="inspector">
+        <div class="inspectrow">
+          <strong id="inspectLabel">選択中</strong>
+          <button class="mobile-edit-btn" id="editPropsBtn">簡易編集</button>
+          <button id="duplicateBtn">複製</button>
+          <button class="danger" id="deleteBtn">削除</button>
+          <button id="doneBtn">完了</button>
+        </div>
+      </div>
+
+      <div class="empty-overlay" id="emptyOverlay">
+        <div class="empty-card">
+          <h3>写真に写っている形をそのままトレース</h3>
+          <p>壁など特定対象だけではなく、<b>写真に写っている輪郭・線・形そのもの</b>を高精度にベクター化します。その後PowerPointまたはJw_cadで編集できます。</p>
+          <button class="primary" id="emptyStartBtn" style="width:100%">はじめる</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="desktop-panel" id="desktopPanel">
+      <div class="head">
+        <h3>PC詳細編集</h3>
+        <p>座標・寸法・図形を数値で仕上げる</p>
+      </div>
+      <div class="body">
+        <div class="pc-card">
+          <h4>ページ / スライド</h4>
+          <div class="pc-page-list" id="pcPagePanel"></div>
+        </div>
+        <div class="pc-card pc-only-import">
+          <h4>PC資料を読み込む</h4>
+          <button class="pc-btn primary" id="pcOfficeImportBtn" style="width:100%">PowerPoint / PDF</button>
+        </div>
+        <div class="pc-card pc-only-import">
+          <h4>PowerPoint → Jw_cad</h4>
+          <p style="font-size:10px;color:#667085;margin:0 0 8px">読み込んだ現在のスライドをCORE経由でDXF化します。</p>
+          <button class="pc-btn primary" id="pcConvertToDxfBtn" style="width:100%">現在ページをDXF出力</button>
+        </div>
+        <div id="pcSelectionPanel"></div>
+        <div class="pc-card">
+          <h4>素材を追加</h4>
+          <div class="pc-assets" id="pcAssetPalette"></div>
+        </div>
+        <div class="pc-card">
+          <h4>案件</h4>
+          <div class="pc-grid2">
+            <button class="pc-btn primary" id="pcSaveBtn">保存</button>
+            <button class="pc-btn" id="pcFitBtn">全体表示</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <nav class="bottom-tools">
+    <div class="contextbar" id="contextbar"></div>
+    <div class="mainnav">
+      <button class="navbtn active" data-main="start"><span>◎</span>開始</button>
+      <button class="navbtn" data-main="edit"><span>✎</span>編集</button>
+      <button class="navbtn" data-main="export"><span>⇧</span>出力</button>
+    </div>
+  </nav>
 </div>
 
-<div class="card">
-<h2>1. 直接 capture 入力</h2>
-<p>JavaScriptの <code>.click()</code> を使わず、HTMLのラベルから直接カメラ入力を開きます。</p>
-<label class="labelBtn" for="directCapture">背面カメラを直接開く</label>
-<input id="directCapture" type="file" accept="image/*" capture="environment">
-<div class="result" id="directResult">未実施</div>
+<div class="sheetback" id="sheetback">
+  <div class="sheet">
+    <div class="grab"></div>
+    <div id="sheetContent"></div>
+  </div>
 </div>
+<div class="toast" id="toast"></div>
 
-<div class="card">
-<h2>2. v1.18と同じ方式</h2>
-<p>非表示の <code>input capture</code> を、ユーザーのボタン操作から <code>.click()</code> します。</p>
-<button id="programmaticBtn">v1.18方式でカメラを開く</button>
-<input id="programmaticCapture" type="file" accept="image/*" capture="environment">
-<div class="result" id="programmaticResult">未実施</div>
-</div>
+<input id="cameraInput" type="file" accept="image/*" capture="environment" hidden>
+<input id="galleryInput" type="file" accept="image/*" hidden>
+<input id="projectInput" type="file" accept=".json,.dksc.json,application/json" hidden>
+<input id="officeInput" type="file" accept=".pptx,.pdf,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/pdf" hidden>
 
-<div class="card">
-<h2>3. getUserMedia方式</h2>
-<p>Chromeからカメラ権限を直接要求します。HTTPS / Secure Contextが必要です。</p>
-<div class="grid">
-<button id="gumBtn">カメラ権限を要求</button>
-<button id="snapBtn" class="secondary" disabled>撮影</button>
-</div>
-<video id="video" playsinline autoplay muted hidden></video>
-<canvas id="canvas" hidden></canvas>
-<div class="result" id="gumResult">未実施</div>
-</div>
-
-<div class="card">
-<h2>写真読込結果</h2>
-<img id="preview" alt="撮影画像プレビュー" hidden>
-<div class="result" id="imageResult">まだ写真はありません</div>
-</div>
-
-<div class="card">
-<h2>診断ログ</h2>
-<pre id="log"></pre>
-<button id="copyBtn" class="secondary">診断結果をコピー</button>
-</div>
-
-<div class="card">
-<h2>判定の見方</h2>
-<p class="small">
-A. Chrome/PWAで「直接capture」と「v1.18方式」が両方成功 → v1.18コードは原則正常。ChatGPTプレビュー等の環境制限が濃厚。<br>
-B. 直接capture成功・v1.18方式失敗 → 非表示inputのprogrammatic click経路をカメラ関連だけ修正。<br>
-C. capture失敗・getUserMedia成功 → Android/Chromeのcapture属性経路の相性。getUserMedia fallbackを追加候補。<br>
-D. getUserMediaがNotAllowedError → Chrome権限またはiframe/Permissions Policy。<br>
-E. getUserMediaが「Secure Context=false」またはmediaDevicesなし → HTTPS等の実行環境問題。
-</p>
-</div>
-</main>
-
+<script src="./core.js"></script>
+<script src="./jszip.min.js"></script>
+<script src="./input_adapters.js"></script>
+<script src="./exporters.js"></script>
+<script src="./project_io.js"></script>
+<script src="./jszip.min.js"></script>
+<script src="./input_adapters.js"></script>
+<script src="./pptxgen.min.js"></script>
 <script>
-(()=>{
+(() => {
 'use strict';
+
+/* =========================================================
+   1. STATE / CONSTANTS
+========================================================= */
 const $=s=>document.querySelector(s);
-const logs=[];
-const log=(...a)=>{
-  const msg=a.map(x=>typeof x==='string'?x:JSON.stringify(x)).join(' ');
-  logs.push(new Date().toLocaleTimeString()+' '+msg);
-  $('#log').textContent=logs.join('\n');
+const $$=s=>[...document.querySelectorAll(s)];
+
+const svg=$('#board');
+const bgImage=$('#bgImage');
+const objectLayer=$('#objectLayer');
+const previewLayer=$('#previewLayer');
+const selectionLayer=$('#selectionLayer');
+const contextbar=$('#contextbar');
+const hint=$('#hint');
+const inspector=$('#inspector');
+const inspectLabel=$('#inspectLabel');
+const sheetback=$('#sheetback');
+const sheetContent=$('#sheetContent');
+const toast=$('#toast');
+const emptyOverlay=$('#emptyOverlay');
+const pcSelectionPanel=$('#pcSelectionPanel');
+const pcAssetPalette=$('#pcAssetPalette');
+const pcPagePanel=$('#pcPagePanel');
+
+const STORAGE_KEY='dkscDrawingV118';
+const LEGACY_STORAGE_KEYS=['dkscDrawingV117','dkscDrawingV116','dkscDrawingV115','dkscDrawingV114','dkscDrawingV113','dkscDrawingV112','dkscDrawingV111','dkscDrawingV110','dkscDrawingV19','dkscDrawingV18','dkscDrawingV17','dkscDrawingV16','dkscDrawingV15'];
+const DEFAULT_VIEW={x:0,y:0,w:1200,h:800};
+const SNAP_DISTANCE=56;
+
+const ASSETS={
+  room:{label:'部屋',type:'room'},
+  wall:{label:'壁',type:'wall'},
+  door:{label:'ドア',type:'door'},
+  window:{label:'窓',type:'window'},
+  meetingTable:{label:'会議テーブル',type:'furniture'},
+  deskBench:{label:'オフィスデスク',type:'furniture'},
+  sofa:{label:'ソファ',type:'furniture'},
+  plant:{label:'植栽',type:'furniture'},
+  counter:{label:'カウンター',type:'furniture'},
+  panel:{label:'分電盤',type:'device',short:'盤'},
+  ev:{label:'EV充電器',type:'device',short:'EV'},
+  battery:{label:'蓄電池',type:'device',short:'蓄'},
+  aircon:{label:'エアコン',type:'device',short:'冷'},
+  car:{label:'車',type:'device',short:'車'},
+  ecocute:{label:'エコキュート',type:'device',short:'湯'},
+  person:{label:'人',type:'device',short:'人'},
+  meter:{label:'電力量計',type:'device',short:'計'},
+  earth:{label:'接地',type:'device',short:'⏚'}
 };
-const setResult=(id,msg,ok=null)=>{
-  const el=$(id); el.textContent=msg;
-  el.style.color=ok===true?'#166534':ok===false?'#991b1b':'#334155';
+
+const TOOL_ORDER=[
+  'select','route','dimension','note',
+  'room','wall','door','window',
+  'meetingTable','deskBench','sofa','plant','counter',
+  'panel','ev','battery','aircon','car','ecocute','person','meter','earth'
+];
+const TOOL_LABEL={
+  select:'☝ 選択',route:'⌁ 配線',dimension:'↔ 寸法',note:'Ｔ 注記',
+  room:'▭ 部屋',wall:'━ 壁',door:'∩ ドア',window:'═ 窓',
+  meetingTable:'◫ 会議',deskBench:'┬ 机',sofa:'⌔ ソファ',plant:'✿ 植栽',counter:'▤ 受付',
+  panel:'▦ 分電盤',ev:'⚡ EV',battery:'▤ 蓄電池',aircon:'❄ エアコン',car:'🚗 車',
+  ecocute:'♨ エコキュート',person:'🧍 人',meter:'◉ 計器',earth:'⏚ 接地'
 };
-const showImage=file=>{
-  if(!file)return;
-  const url=URL.createObjectURL(file);
-  const img=$('#preview');
-  img.src=url;img.hidden=false;
-  setResult('#imageResult',`${file.name||'camera.jpg'} / ${Math.round(file.size/1024)} KB`,true);
-  log('image loaded',file.type,file.size);
-};
 
-const env={
-  href:location.href,
-  protocol:location.protocol,
-  origin:location.origin,
-  isSecureContext:window.isSecureContext,
-  topLevel:window.top===window.self,
-  userAgent:navigator.userAgent,
-  mediaDevices:!!navigator.mediaDevices,
-  getUserMedia:!!navigator.mediaDevices?.getUserMedia,
-  standalone:matchMedia('(display-mode: standalone)').matches,
-  visibility:document.visibilityState,
-  permissionsPolicyCamera:
-    document.permissionsPolicy?.allowsFeature?.('camera') ??
-    document.featurePolicy?.allowsFeature?.('camera') ??
-    'unknown'
-};
-$('#env').textContent=JSON.stringify(env,null,2);
-const badges=$('#badges');
-const badge=(text,cls)=>{const b=document.createElement('span');b.className='badge '+cls;b.textContent=text;badges.appendChild(b)};
-badge(env.isSecureContext?'Secure Context':'Not Secure',env.isSecureContext?'ok':'ng');
-badge(env.topLevel?'Top-level':'iframe/sandbox',env.topLevel?'ok':'warn');
-badge(env.getUserMedia?'getUserMediaあり':'getUserMediaなし',env.getUserMedia?'ok':'ng');
-badge(env.standalone?'PWA standalone':'Browser/preview',env.standalone?'ok':'warn');
-log('environment',env);
-
-(async()=>{
-  try{
-    if(navigator.permissions?.query){
-      const p=await navigator.permissions.query({name:'camera'});
-      log('camera permission',p.state);
-      p.onchange=()=>log('camera permission changed',p.state);
-    }
-  }catch(e){log('permissions.query camera unsupported',e.name,e.message)}
-})();
-
-$('#directCapture').addEventListener('change',e=>{
-  const f=e.target.files?.[0];
-  if(f){setResult('#directResult','成功：直接captureで画像取得',true);showImage(f)}
-  else setResult('#directResult','ファイル未取得',false);
-});
-
-$('#programmaticBtn').addEventListener('click',()=>{
-  log('programmatic user click',navigator.userActivation?.isActive);
-  $('#programmaticCapture').click();
-});
-$('#programmaticCapture').addEventListener('change',e=>{
-  const f=e.target.files?.[0];
-  if(f){setResult('#programmaticResult','成功：v1.18方式で画像取得',true);showImage(f)}
-  else setResult('#programmaticResult','ファイル未取得',false);
-});
-
-let stream=null;
-$('#gumBtn').addEventListener('click',async()=>{
-  try{
-    if(!window.isSecureContext){
-      setResult('#gumResult','失敗：Secure Contextではありません。HTTPSで開いてください。',false);
-      log('getUserMedia blocked: insecure context');
-      return;
-    }
-    if(!navigator.mediaDevices?.getUserMedia){
-      setResult('#gumResult','失敗：navigator.mediaDevices.getUserMedia がありません。',false);
-      log('getUserMedia unavailable');
-      return;
-    }
-    stream=await navigator.mediaDevices.getUserMedia({
-      video:{facingMode:{ideal:'environment'}},
-      audio:false
-    });
-    const v=$('#video');
-    v.srcObject=stream;v.hidden=false;
-    $('#snapBtn').disabled=false;
-    setResult('#gumResult','成功：カメラストリーム取得',true);
-    log('getUserMedia success',stream.getVideoTracks().map(t=>t.getSettings()));
-  }catch(e){
-    setResult('#gumResult',`失敗：${e.name} / ${e.message}`,false);
-    log('getUserMedia error',e.name,e.message);
-  }
-});
-
-$('#snapBtn').addEventListener('click',async()=>{
-  const v=$('#video');
-  if(!v.videoWidth)return;
-  const c=$('#canvas');
-  c.width=v.videoWidth;c.height=v.videoHeight;
-  c.getContext('2d').drawImage(v,0,0);
-  const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.9));
-  const f=new File([blob],'getUserMedia-camera.jpg',{type:'image/jpeg'});
-  showImage(f);
-  setResult('#gumResult','成功：getUserMediaで撮影・画像化',true);
-  log('snapshot success',v.videoWidth,v.videoHeight,blob.size);
-});
-
-$('#copyBtn').addEventListener('click',async()=>{
-  const text='DKSC CAMERA TEST\n'+JSON.stringify(env,null,2)+'\n\n'+logs.join('\n');
-  try{await navigator.clipboard.writeText(text);setResult('#imageResult','診断結果をコピーしました',true)}
-  catch{prompt('この内容をコピーしてください',text)}
-});
-
-if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost')){
-  addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(()=>log('service worker registered')).catch(e=>log('sw error',e.message)));
+function defaultState(){
+  return {
+    schema:'dksc-drawing-v1.18',
+    projectTitle:'現調図面',
+    outputTarget:'presentation',
+    backgroundDataUrl:null,
+    showSourcePhoto:false,
+    traceQuality:'high',
+    history:[],
+    redo:[],
+    core:DKSC_CORE.createCore({mmPerUnit:10})
+  };
 }
+function loadState(){
+  let raw=null;
+  try{
+    raw=localStorage.getItem(STORAGE_KEY);
+    if(!raw){
+      for(const key of LEGACY_STORAGE_KEYS){
+        raw=localStorage.getItem(key);
+        if(raw)break;
+      }
+    }
+    const parsed=raw?JSON.parse(raw):{};
+    const migrated=DKSC_CORE.migrateAppState(parsed,defaultState());
+    migrated.schema='dksc-drawing-v1.18';
+    return DKSC_CORE.bindLegacyAliases(migrated);
+  }catch{
+    return DKSC_CORE.bindLegacyAliases(defaultState());
+  }
+}
+
+let state=loadState();
+const coreCheck=DKSC_CORE.validateCore(state.core);
+if(!coreCheck.ok)console.warn('DKSC CORE validation',coreCheck.errors);
+let currentMain='start';
+let tool='select';
+let subtool='select';
+let selectedId=null;
+let drag=null;
+let longPress=null;
+let pendingDimension=null;
+let installPrompt=null;
+let saveTimer=null;
+let view={...DEFAULT_VIEW};
+const pointers=new Map();
+let pinchStart=null;
+
+/* =========================================================
+   2. GENERIC HELPERS
+========================================================= */
+function uid(){return 'o'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function assetInfo(kind){return ASSETS[kind]||{label:'要素',type:'device',short:'?'}}
+function targetLabel(){return state.outputTarget==='cad'?'CAD':'PowerPoint'}
+function styleLabel(){return state.outputTarget==='cad'?'DXF → Jw_cadで編集':'PPTX → PowerPointで編集'}
+function isPresentation(){return state.outputTarget!=='cad'}
+function distance(a,b){return Math.hypot(b.x-a.x,b.y-a.y)}
+function formatMm(mm){return mm>=1000?(mm/1000).toFixed(2)+' m':Math.round(mm)+' mm'}
+function vibrate(ms=8){try{navigator.vibrate?.(ms)}catch{}}
+function showToast(msg){
+  toast.textContent=msg;toast.classList.add('show');
+  clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('show'),1500);
+}
+function showHint(msg,ms=1700){
+  hint.textContent=msg;hint.classList.add('show');
+  clearTimeout(showHint.t);showHint.t=setTimeout(()=>hint.classList.remove('show'),ms);
+}
+function syncSourcePhotoVisibility(){
+  if(state.backgroundDataUrl && state.showSourcePhoto){
+    bgImage.setAttribute('href',state.backgroundDataUrl);
+    bgImage.style.display='';
+  }else{
+    bgImage.style.display='none';
+  }
+}
+function refreshHeader(){
+  $('#projectTitle').textContent=state.projectTitle||'現調図面';
+  $('#targetPill').textContent='編集先：'+targetLabel();
+  $('#stylePill').textContent='出力：'+styleLabel();
+}
+function updateEmptyState(){
+  emptyOverlay.style.display=(!state.backgroundDataUrl&&!state.objects.length)?'flex':'none';
+}
+function serializedState(){
+  return DKSC_PROJECT.serialize(state,DKSC_CORE,'dksc-drawing-v1.18');
+}
+function saveNow(){
+  const current=serializedState();
+  const check=DKSC_CORE.validateCore(current.core);
+  if(!check.ok){
+    showToast('保存前検証で問題を検出しました');
+    return;
+  }
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(current));
+  $('#savePill').textContent='保存済み';
+  $('#savePill').className='pill ok';
+  showToast('案件を保存しました');
+}
+function saveSoon(){
+  $('#savePill').textContent='保存中';
+  $('#savePill').className='pill';
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(()=>{
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(serializedState()));
+    $('#savePill').textContent='保存済み';
+    $('#savePill').className='pill ok';
+  },230);
+}
+function snapshot(){
+  state.history.push(DKSC_CORE.snapshotCore(state.core));
+  if(state.history.length>50)state.history.shift();
+  state.redo=[];
+}
+function restoreSnapshot(raw){
+  state.core=DKSC_CORE.restoreCoreSnapshot(raw);
+  clearSelection();
+  render();saveSoon();
+}
+function undo(){
+  const h=state.history.pop();if(!h)return showToast('戻せる履歴がありません');
+  state.redo.push(DKSC_CORE.snapshotCore(state.core));
+  restoreSnapshot(h);
+}
+function redo(){
+  const h=state.redo.pop();if(!h)return showToast('やり直せる履歴がありません');
+  state.history.push(DKSC_CORE.snapshotCore(state.core));
+  restoreSnapshot(h);
+}
+function setView(v){view=v;svg.setAttribute('viewBox',`${v.x} ${v.y} ${v.w} ${v.h}`)}
+function fit(){setView({...DEFAULT_VIEW});showToast('全体表示')}
+function screenToSvg(clientX,clientY){
+  const pt=svg.createSVGPoint();pt.x=clientX;pt.y=clientY;
+  return pt.matrixTransform(svg.getScreenCTM().inverse());
+}
+
+/* =========================================================
+   3. SHEETS / NAV
+========================================================= */
+function openSheet(content){
+  sheetContent.innerHTML=content;
+  sheetback.classList.add('show');
+  wireSheet();
+}
+function closeSheet(){sheetback.classList.remove('show')}
+sheetback.addEventListener('click',e=>{if(e.target===sheetback)closeSheet()});
+
+function isDesktopUi(){
+  return window.matchMedia && window.matchMedia('(min-width:900px)').matches;
+}
+function fieldProgress(){
+  const hasPhoto=!!state.backgroundDataUrl;
+  const hasTrace=state.objects.some(o=>o.type==='trace'||o.source==='auto');
+  const hasDimension=state.objects.some(o=>o.type==='dimension'&&o.manualMm);
+  const hasAsset=state.objects.some(o=>['device','furniture','room','door','window'].includes(o.type)&&o.source==='manual');
+  return{hasPhoto,hasTrace,hasDimension,hasAsset};
+}
+function openStartSheet(){
+  if(isDesktopUi()){
+    openSheet(`
+      <h2>PC作業を開始</h2>
+      <p>PCではPowerPoint/PDFの読込、詳細編集、Jw_cad向け仕上げを行います。</p>
+      <div class="card">
+        <h4>資料を読み込む</h4>
+        <div class="grid2">
+          <button data-a="officeImport">PowerPoint / PDF</button>
+          <button data-a="import">案件ファイル</button>
+        </div>
+      </div>
+      <div class="card">
+        <h4>写真案件を続ける</h4>
+        <div class="grid2">
+          <button data-a="camera">写真を撮る</button>
+          <button data-a="gallery">画像を選ぶ</button>
+        </div>
+      </div>
+      <div class="card">
+        <h4>編集先</h4>
+        <div class="choice-grid">
+          <button class="choice ${state.outputTarget==='presentation'?'active':''}" data-a="targetPpt"><b>PowerPoint</b><small>提案・説明資料</small></button>
+          <button class="choice ${state.outputTarget==='cad'?'active':''}" data-a="targetCad"><b>Jw_cad</b><small>DXF仕上げ</small></button>
+        </div>
+      </div>
+    `);
+    return;
+  }
+
+  const p=fieldProgress();
+  openSheet(`
+    <h2>現場で作る</h2>
+    <p>スマホは「撮る・トレース・配置する・見せる」を優先します。細かな座標やレイヤー調整はPCで仕上げます。</p>
+
+    <div class="card">
+      <h4>1. 写真</h4>
+      <div class="grid2">
+        <button class="${p.hasPhoto?'primary':''}" data-a="camera">📷 撮影</button>
+        <button data-a="gallery">画像を選ぶ</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>2. トレース</h4>
+      <button class="${p.hasTrace?'primary':''}" data-a="autoTrace" style="width:100%">✦ 写真全体をトレース</button>
+    </div>
+
+    <div class="card">
+      <h4>3. 現場で必要な修正</h4>
+      <div class="grid2">
+        <button class="${p.hasDimension?'primary':''}" data-a="mobileDimension">↔ 基準寸法</button>
+        <button class="${p.hasAsset?'primary':''}" data-a="mobileAssets">▣ 素材を配置</button>
+      </div>
+      <p style="margin-top:8px">選択・長押し移動・複製・削除・注記は編集画面で行えます。</p>
+    </div>
+
+    <div class="card">
+      <h4>4. 次の使い方</h4>
+      <div class="grid2">
+        <button class="primary" data-a="mobilePresent">お客様に見せる</button>
+        <button data-a="mobileHandoff">PCへ引き継ぐ</button>
+      </div>
+    </div>
+  `);
+}
+function openExportSheet(){
+  openSheet(`
+    <h2>編集用ファイルへ出力</h2>
+    <p>「風」ではなく、最終的に編集するアプリへそのまま渡します。元写真は出力しません。</p>
+
+    <div class="card">
+      <h4>最終編集先</h4>
+      <div class="choice-grid">
+        <button class="choice ${state.outputTarget==='presentation'?'active':''}" data-a="targetPpt">
+          <b>PowerPoint</b><small>ネイティブ図形の .pptx</small>
+        </button>
+        <button class="choice ${state.outputTarget==='cad'?'active':''}" data-a="targetCad">
+          <b>Jw_cad</b><small>DXFを開いて編集</small>
+        </button>
+      </div>
+    </div>
+
+    <div class="exportlist">
+      <button class="exportitem" data-a="pptx"><span class="ico">PPTX</span><span><b>PowerPoint</b><small>編集可能な図形・線・文字</small></span></button>
+      <button class="exportitem" data-a="dxf"><span class="ico">DXF</span><span><b>Jw_cad</b><small>編集可能なDXF図面</small></span></button>
+      <button class="exportitem" data-a="xlsx"><span class="ico">XLSX</span><span><b>Excel</b><small>Pages / Objects / Dimensionsを編集</small></span></button>
+      <button class="exportitem" data-a="pdf"><span class="ico">PDF</span><span><b>PDF</b><small>提出・印刷・お客様共有</small></span></button>
+      <button class="exportitem" data-a="projectFile"><span class="ico">SAVE</span><span><b>案件ファイル</b><small>スマホ⇄PC引継ぎ用</small></span></button>
+      <button class="exportitem" data-a="share"><span class="ico">⇄</span><span><b>LINE等で共有</b><small>案件ファイルを共有シートへ</small></span></button>
+      <button class="exportitem" data-a="install"><span class="ico">⬇</span><span><b>ホーム画面に追加</b><small>スマホアプリとして起動</small></span></button>
+    </div>
+  `);
+}
+function openProjectSheet(){
+  openSheet(`
+    <h2>案件設定</h2>
+    <p>普段は触らなくて大丈夫です。トレース精度だけ必要な場合に変更できます。</p>
+
+    <div class="card"><h4>図面タイトル</h4><input id="projectNameInput" value="${esc(state.projectTitle)}"></div>
+
+    <div class="card">
+      <h4>トレース精度</h4>
+      <div class="grid3">
+        <button class="${state.traceQuality==='standard'?'primary':''}" data-a="qualityStandard">標準</button>
+        <button class="${state.traceQuality==='high'?'primary':''}" data-a="qualityHigh">高精度</button>
+        <button class="${state.traceQuality==='ultra'?'primary':''}" data-a="qualityUltra">最高精度</button>
+      </div>
+      <p style="margin-top:8px">通常は「高精度」で十分です。最高精度は細かい線を多く拾うぶん処理が重くなります。</p>
+    </div>
+
+    <div class="card"><h4>現在の縮尺</h4><input id="scaleInput" inputmode="decimal" value="${state.scaleMmPerUnit}"><p style="margin-top:6px">寸法ツールで実寸を入力すると自動補正されます。</p></div>
+    <div class="card">
+      <h4>寸法整合</h4>
+      <p>${(()=>{const h=DKSC_CORE.getDimensionHealth(state.core);return h.constraintCount?`拘束 ${h.constraintCount}件 / 矛盾 ${h.conflictCount}件`:'基準寸法なし';})()}</p>
+    </div>
+
+    <div class="grid3">
+      <button data-a="camera">📷 写真</button>
+      <button data-a="gallery">▧ 画像</button>
+      <button data-a="togglePhoto">${state.showSourcePhoto?'🙈 元写真を隠す':'👁 元写真を表示'}</button>
+    </div>
+
+    <button class="primary" data-a="saveProject" style="width:100%;margin-top:10px">保存</button>
+  `);
+}
+function openNoteSheet(p){
+  openSheet(`
+    <h2>注記を追加</h2>
+    <p>配置位置は選択済みです。</p>
+    <div class="card"><input id="noteText" placeholder="例：Meeting Room / CV8sq-3C"></div>
+    <button class="primary" data-a="saveNote" data-x="${p.x}" data-y="${p.y}" style="width:100%">配置する</button>
+  `);
+}
+function openDimensionSheet(p1,p2){
+  pendingDimension={p1:{...p1},p2:{...p2}};
+  openSheet(`
+    <h2>実寸を入力</h2>
+    <p>引いた2点間の実際の長さを入力してください。この寸法を基準に図面全体の縮尺を補正します。</p>
+    <div class="card">
+      <input id="actualMmInput" inputmode="decimal" placeholder="例：1820">
+    </div>
+    <button class="primary" data-a="saveDimension" style="width:100%">寸法を確定</button>
+  `);
+}
+
+function setMain(main){
+  currentMain=main;
+  $$('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.main===main));
+  contextbar.innerHTML='';contextbar.classList.remove('show');
+
+  if(main==='start'){
+    tool='select';subtool='select';openStartSheet();
+    showHint('写真 → 自動トレース → 必要箇所を修正 → 寸法入力');
+    return;
+  }
+  if(main==='edit'){
+    contextbar.classList.add('show');
+    TOOL_ORDER.forEach((key,i)=>{
+      const b=document.createElement('button');
+      b.className='chip'+(i===0?' active':'');
+      b.textContent=TOOL_LABEL[key];
+      b.onclick=()=>{
+        [...contextbar.children].forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');applySubtool(key);
+      };
+      contextbar.appendChild(b);
+    });
+    applySubtool('select');
+    return;
+  }
+  tool='select';subtool='select';openExportSheet();
+}
+function applySubtool(key){
+  subtool=key;
+  if(key==='select'){tool='select';showHint('タップで選択。長押ししてスライドで移動');return}
+  if(['route','dimension','note','wall'].includes(key)){
+    tool='draw';
+    showHint(key==='note'?'置く場所をタップ':'始点から終点までドラッグ');
+    return;
+  }
+  tool='asset';
+  showHint('置きたい位置をタップ');
+}
+$$('.navbtn').forEach(b=>b.onclick=()=>setMain(b.dataset.main));
+
+/* =========================================================
+   4. OBJECT FACTORY / RENDER
+========================================================= */
+function makeAsset(kind,x,y){
+  const info=assetInfo(kind);
+  if(kind==='room')return{id:uid(),type:'room',kind,x,y,w:260,h:180,label:'Room',source:'manual'};
+  if(kind==='door')return{id:uid(),type:'door',kind,x,y,w:80,h:54,label:'Door',source:'manual'};
+  if(kind==='window')return{id:uid(),type:'window',kind,x,y,w:100,h:22,label:'Window',source:'manual'};
+  if(info.type==='furniture')return{id:uid(),type:'furniture',kind,x,y,w:140,h:90,label:info.label,source:'manual'};
+  return{id:uid(),type:'device',kind,x,y,label:info.label,source:'manual'};
+}
+function getAnchorCenter(o){
+  if(!o)return null;
+  if(o.x!=null&&o.y!=null)return{x:o.x,y:o.y};
+  if(o.p1&&o.p2)return{x:(o.p1.x+o.p2.x)/2,y:(o.p1.y+o.p2.y)/2};
+  return null;
+}
+function nearestSnapTarget(point,excludeId=null){
+  let best=null,bestD=Infinity;
+  for(const o of state.objects){
+    if(o.id===excludeId||!['room','furniture','device'].includes(o.type))continue;
+    const c=getAnchorCenter(o);if(!c)continue;
+    const d=distance(point,c);
+    if(d<=SNAP_DISTANCE&&d<bestD){best={obj:o,point:c};bestD=d}
+  }
+  return best;
+}
+function snappedPoint(point,excludeId=null){
+  const n=nearestSnapTarget(point,excludeId);
+  return n?{point:n.point,anchorId:n.obj.id,snapped:true}:{point,anchorId:null,snapped:false};
+}
+function updateConnectedObjects(id){
+  const source=state.objects.find(o=>o.id===id);
+  const c=getAnchorCenter(source);if(!c)return;
+  for(const o of state.objects){
+    if(o.startAnchorId===id)o.p1={...c};
+    if(o.endAnchorId===id)o.p2={...c};
+    if(o.type==='dimension'&&o.p1&&o.p2&&!o.manualMm)o.mm=distance(o.p1,o.p2)*state.scaleMmPerUnit;
+  }
+}
+function renderSnapIndicator(point,target){
+  previewLayer.querySelector('#snapIndicator')?.remove();
+  if(!target)return;
+  const g=document.createElementNS('http://www.w3.org/2000/svg','g');
+  g.id='snapIndicator';
+  g.innerHTML=`<circle class="snap-ring" cx="${target.point.x}" cy="${target.point.y}" r="34"/>
+    <line class="snap-line" x1="${point.x}" y1="${point.y}" x2="${target.point.x}" y2="${target.point.y}"/>
+    <circle class="snap-dot" cx="${target.point.x}" cy="${target.point.y}" r="8"/>`;
+  previewLayer.appendChild(g);
+}
+
+function renderRoom(o){
+  if(isPresentation()){
+    const fill=o.fill||['#efe6cc','#eceff2','#eee9df','#f2eadc'][Math.abs(hashCode(o.id))%4];
+    return `<rect x="${o.x-o.w/2}" y="${o.y-o.h/2}" width="${o.w}" height="${o.h}" fill="${fill}" stroke="#5d6268" stroke-width="10"/>
+      <rect x="${o.x-o.w/2+10}" y="${o.y-o.h/2+10}" width="${o.w-20}" height="${o.h-20}" fill="${fill}" stroke="#353a40" stroke-width="2"/>
+      <text x="${o.x}" y="${o.y+6}" text-anchor="middle" fill="#222" font-size="20" font-weight="800">${esc(o.label||'Room')}</text>`;
+  }
+  return `<rect x="${o.x-o.w/2}" y="${o.y-o.h/2}" width="${o.w}" height="${o.h}" fill="none" stroke="#202020" stroke-width="4"/>
+    <text x="${o.x}" y="${o.y+6}" text-anchor="middle" fill="#202020" font-size="17" font-weight="700">${esc(o.label||'Room')}</text>`;
+}
+function renderWall(o){
+  return `<line x1="${o.p1.x}" y1="${o.p1.y}" x2="${o.p2.x}" y2="${o.p2.y}" stroke="${isPresentation()?'#55595d':'#202020'}" stroke-width="${isPresentation()?12:4}" stroke-linecap="square"/>`;
+}
+function renderDoor(o){
+  const stroke=isPresentation()?'#c6a979':'#202020';
+  return `<path d="M ${o.x-o.w/2} ${o.y+o.h/2} A ${o.w/2} ${o.h/2} 0 0 1 ${o.x+o.w/2} ${o.y-o.h/2}" fill="none" stroke="${stroke}" stroke-width="${isPresentation()?4:2}"/>
+    <line x1="${o.x-o.w/2}" y1="${o.y+o.h/2}" x2="${o.x+o.w/2}" y2="${o.y+o.h/2}" stroke="${stroke}" stroke-width="2"/>`;
+}
+function renderWindow(o){
+  const stroke=isPresentation()?'#79cfff':'#202020';
+  return `<rect x="${o.x-o.w/2}" y="${o.y-o.h/2}" width="${o.w}" height="${o.h}" fill="${isPresentation()?'#d9f2ff':'none'}" stroke="${stroke}" stroke-width="3"/>
+    <line x1="${o.x}" y1="${o.y-o.h/2}" x2="${o.x}" y2="${o.y+o.h/2}" stroke="${stroke}" stroke-width="2"/>`;
+}
+function renderFurniture(o){
+  const x=o.x,y=o.y,k=o.kind;
+  if(k==='meetingTable'){
+    if(isPresentation())return `<ellipse cx="${x}" cy="${y}" rx="78" ry="31" fill="#f4efe9" stroke="#c8c0b7" stroke-width="3"/>
+      ${[-60,-20,20,60].map(dx=>`<rect x="${x+dx-11}" y="${y-52}" width="22" height="17" rx="6" fill="#eee4db" stroke="#c8c0b7" stroke-width="2"/>`).join('')}
+      ${[-60,-20,20,60].map(dx=>`<rect x="${x+dx-11}" y="${y+35}" width="22" height="17" rx="6" fill="#eee4db" stroke="#c8c0b7" stroke-width="2"/>`).join('')}`;
+    return `<ellipse cx="${x}" cy="${y}" rx="78" ry="31" fill="none" stroke="#202020" stroke-width="3"/>`;
+  }
+  if(k==='deskBench'){
+    return isPresentation()
+      ? `<rect x="${x-70}" y="${y-34}" width="140" height="68" rx="10" fill="#ffad47" stroke="#d9892a" stroke-width="3"/><line x1="${x}" y1="${y-34}" x2="${x}" y2="${y+34}" stroke="#bc7022" stroke-width="3"/>`
+      : `<rect x="${x-70}" y="${y-34}" width="140" height="68" fill="none" stroke="#202020" stroke-width="3"/>`;
+  }
+  if(k==='sofa'){
+    return isPresentation()
+      ? `<rect x="${x-44}" y="${y-22}" width="88" height="44" rx="10" fill="#d8c7b1" stroke="#b39b7b" stroke-width="3"/>`
+      : `<rect x="${x-44}" y="${y-22}" width="88" height="44" fill="none" stroke="#202020" stroke-width="3"/>`;
+  }
+  if(k==='plant'){
+    return isPresentation()
+      ? `<circle cx="${x}" cy="${y}" r="10" fill="#7a5327"/><circle cx="${x-16}" cy="${y-10}" r="14" fill="#1f9f57"/><circle cx="${x+16}" cy="${y-12}" r="14" fill="#28b263"/><circle cx="${x-4}" cy="${y-20}" r="16" fill="#30bc69"/>`
+      : `<circle cx="${x}" cy="${y}" r="18" fill="none" stroke="#202020" stroke-width="3"/>`;
+  }
+  return isPresentation()
+    ? `<rect x="${x-60}" y="${y-16}" width="120" height="32" rx="12" fill="#d5851d" stroke="#ba6d15" stroke-width="3"/>`
+    : `<rect x="${x-60}" y="${y-16}" width="120" height="32" fill="none" stroke="#202020" stroke-width="3"/>`;
+}
+function renderDevice(o){
+  const x=o.x,y=o.y,info=assetInfo(o.kind);
+  if(!isPresentation()){
+    return `<rect x="${x-26}" y="${y-26}" width="52" height="52" fill="none" stroke="#202020" stroke-width="3"/>
+      <text x="${x}" y="${y+6}" text-anchor="middle" fill="#202020" font-size="14" font-weight="900">${esc(info.short||'?')}</text>
+      <text x="${x}" y="${y+46}" text-anchor="middle" fill="#202020" font-size="12">${esc(o.label||info.label)}</text>`;
+  }
+  if(o.kind==='car'){
+    return `<rect x="${x-45}" y="${y-20}" width="90" height="40" rx="16" fill="#ffad47" stroke="#d9892a" stroke-width="4"/>
+      <circle cx="${x-22}" cy="${y+24}" r="8" fill="#6b4a26"/><circle cx="${x+22}" cy="${y+24}" r="8" fill="#6b4a26"/>
+      <text x="${x}" y="${y+54}" text-anchor="middle" fill="#172033" font-size="13" font-weight="900">${esc(o.label)}</text>`;
+  }
+  if(o.kind==='person'){
+    return `<circle cx="${x}" cy="${y-20}" r="12" fill="#d5d8a8" stroke="#afb37e" stroke-width="3"/><rect x="${x-14}" y="${y-4}" width="28" height="40" rx="12" fill="#ece4b2" stroke="#afb37e" stroke-width="3"/>
+      <text x="${x}" y="${y+54}" text-anchor="middle" fill="#172033" font-size="13" font-weight="900">${esc(o.label)}</text>`;
+  }
+  if(o.kind==='aircon'){
+    return `<rect x="${x-38}" y="${y-18}" width="76" height="36" rx="12" fill="#f3f7fb" stroke="#96aec6" stroke-width="4"/><line x1="${x-20}" y1="${y+8}" x2="${x+20}" y2="${y+8}" stroke="#96aec6" stroke-width="3"/>
+      <text x="${x}" y="${y+54}" text-anchor="middle" fill="#172033" font-size="13" font-weight="900">${esc(o.label)}</text>`;
+  }
+  if(o.kind==='battery'){
+    return `<rect x="${x-32}" y="${y-24}" width="64" height="48" rx="10" fill="#f4efe9" stroke="#81858a" stroke-width="4"/><rect x="${x+32}" y="${y-10}" width="10" height="20" rx="4" fill="#f4efe9" stroke="#81858a" stroke-width="3"/>
+      <text x="${x}" y="${y+7}" text-anchor="middle" fill="#172033" font-size="16" font-weight="900">${esc(info.short)}</text><text x="${x}" y="${y+52}" text-anchor="middle" fill="#172033" font-size="13" font-weight="900">${esc(o.label)}</text>`;
+  }
+  if(o.kind==='ecocute'){
+    return `<rect x="${x-28}" y="${y-36}" width="56" height="72" rx="16" fill="#f4efe9" stroke="#81858a" stroke-width="4"/><text x="${x}" y="${y+7}" text-anchor="middle" fill="#172033" font-size="16" font-weight="900">${esc(info.short)}</text><text x="${x}" y="${y+60}" text-anchor="middle" fill="#172033" font-size="13" font-weight="900">${esc(o.label)}</text>`;
+  }
+  return `<rect x="${x-30}" y="${y-30}" width="60" height="60" rx="12" fill="#13213a" stroke="#5da8ff" stroke-width="4" filter="url(#shadow)"/>
+    <text x="${x}" y="${y+7}" text-anchor="middle" fill="#fff" font-size="17" font-weight="900">${esc(info.short||'?')}</text><text x="${x}" y="${y+52}" text-anchor="middle" fill="#172033" font-size="13" font-weight="900">${esc(o.label||info.label)}</text>`;
+}
+function renderTrace(o){
+  if(!o.points||o.points.length<2)return '';
+  const points=o.points.map(p=>`${p.x},${p.y}`).join(' ');
+  const stroke=isPresentation()?'#30343A':'#202020';
+  const width=isPresentation()?2.4:1.4;
+  return `<polyline points="${points}" fill="${o.closed?'rgba(235,238,242,.15)':'none'}" stroke="${stroke}" stroke-width="${width}" stroke-linejoin="round" stroke-linecap="round"/>`;
+}
+function renderImportedShape(o){
+  const stroke=isPresentation()?'#4b5563':'#202020';
+  const fill=isPresentation()?'#eef2f6':'none';
+  if(o.shapeKind==='ellipse'){
+    return `<ellipse cx="${o.x}" cy="${o.y}" rx="${o.w/2}" ry="${o.h/2}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>
+      ${o.text?`<text x="${o.x}" y="${o.y+5}" text-anchor="middle" fill="#202020" font-size="15">${esc(o.text)}</text>`:''}`;
+  }
+  const rx=o.shapeKind==='roundRect'?10:0;
+  return `<rect x="${o.x-o.w/2}" y="${o.y-o.h/2}" width="${o.w}" height="${o.h}" rx="${rx}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>
+    ${o.text?`<text x="${o.x}" y="${o.y+5}" text-anchor="middle" fill="#202020" font-size="15">${esc(o.text)}</text>`:''}`;
+}
+function renderImportedText(o){
+  return `<text x="${o.x}" y="${o.y}" fill="#202020" font-size="15">${esc(o.text||o.label||'')}</text>`;
+}
+function renderImportedImage(o){
+  return `<rect x="${o.x-o.w/2}" y="${o.y-o.h/2}" width="${o.w}" height="${o.h}" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="${o.x}" y="${o.y}" text-anchor="middle" fill="#64748b" font-size="13">${esc(o.label||'Image')}</text>`;
+}
+function renderGenericLine(o){
+  return `<line x1="${o.p1.x}" y1="${o.p1.y}" x2="${o.p2.x}" y2="${o.p2.y}" stroke="#202020" stroke-width="2"/>`;
+}
+function renderObject(o){
+  if(o.type==='shape')return renderImportedShape(o);
+  if(o.type==='text')return renderImportedText(o);
+  if(o.type==='image')return renderImportedImage(o);
+  if(o.type==='line')return renderGenericLine(o);
+  if(o.type==='trace')return renderTrace(o);
+  if(o.type==='room')return renderRoom(o);
+  if(o.type==='wall')return renderWall(o);
+  if(o.type==='door')return renderDoor(o);
+  if(o.type==='window')return renderWindow(o);
+  if(o.type==='furniture')return renderFurniture(o);
+  if(o.type==='device')return renderDevice(o);
+  if(o.type==='note'){
+    const w=Math.max(100,o.text.length*(isPresentation()?18:15));
+    return `<rect x="${o.x-8}" y="${o.y-27}" width="${w}" height="38" rx="10" fill="#fff" stroke="#bdc8d7"/><text x="${o.x+8}" y="${o.y}" fill="#172033" font-size="${isPresentation()?18:14}" font-weight="800">${esc(o.text)}</text>`;
+  }
+  if(o.type==='route'){
+    return `<line x1="${o.p1.x}" y1="${o.p1.y}" x2="${o.p2.x}" y2="${o.p2.y}" stroke="${isPresentation()?'#4b4f56':'#202020'}" stroke-width="${isPresentation()?8:3}" stroke-linecap="round"/>`;
+  }
+  if(o.type==='dimension'){
+    const mx=(o.p1.x+o.p2.x)/2,my=(o.p1.y+o.p2.y)/2;
+    return `<line x1="${o.p1.x}" y1="${o.p1.y}" x2="${o.p2.x}" y2="${o.p2.y}" stroke="#d68500" stroke-width="2"/>
+      <circle cx="${o.p1.x}" cy="${o.p1.y}" r="5" fill="#d68500"/><circle cx="${o.p2.x}" cy="${o.p2.y}" r="5" fill="#d68500"/>
+      <rect x="${mx-58}" y="${my-25}" width="116" height="34" rx="10" fill="#fff5d9" stroke="#ffc857"/><text x="${mx}" y="${my-3}" text-anchor="middle" fill="#7f5100" font-size="${isPresentation()?17:14}" font-weight="900">${formatMm(o.mm)}</text>`;
+  }
+  return '';
+}
+function hashCode(s){
+  let h=0;for(let i=0;i<s.length;i++)h=((h<<5)-h)+s.charCodeAt(i)|0;
+  return h;
+}
+function renderSelection(){
+  const o=state.objects.find(x=>x.id===selectedId);if(!o)return;
+  if(o.type==='trace'&&o.points?.length){
+    const xs=o.points.map(p=>p.x),ys=o.points.map(p=>p.y);
+    const x1=Math.min(...xs),x2=Math.max(...xs),y1=Math.min(...ys),y2=Math.max(...ys);
+    selectionLayer.innerHTML=`<rect x="${x1-8}" y="${y1-8}" width="${x2-x1+16}" height="${y2-y1+16}" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="7 5"/>`;
+  }else if(o.x!=null&&o.y!=null){
+    const r=Math.max(44,(o.w||0)/2,(o.h||0)/2);
+    selectionLayer.innerHTML=`<circle cx="${o.x}" cy="${o.y}" r="${r+8}" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="7 5"/>`;
+  }else if(o.p1&&o.p2){
+    selectionLayer.innerHTML=`<line x1="${o.p1.x}" y1="${o.p1.y}" x2="${o.p2.x}" y2="${o.p2.y}" stroke="#2563eb" stroke-width="2" stroke-dasharray="7 5"/>
+      <circle data-handle="p1" cx="${o.p1.x}" cy="${o.p1.y}" r="11" fill="#fff" stroke="#2563eb" stroke-width="4"/>
+      <circle data-handle="p2" cx="${o.p2.x}" cy="${o.p2.y}" r="11" fill="#fff" stroke="#2563eb" stroke-width="4"/>`;
+    [...selectionLayer.querySelectorAll('[data-handle]')].forEach(h=>h.addEventListener('pointerdown',e=>handlePointerDown(e,h.dataset.handle)));
+  }
+}
+
+function objectDisplayName(o){
+  return o?.label || o?.text || assetInfo(o?.kind).label || o?.type || '要素';
+}
+function num(v,digits=1){
+  const n=Number(v);
+  return Number.isFinite(n)?Number(n.toFixed(digits)):0;
+}
+function objectPropertyModel(o){
+  if(!o)return null;
+  const m={
+    id:o.id,type:o.type,name:objectDisplayName(o),
+    label:o.label||'',text:o.text||''
+  };
+  if(o.x!=null){m.x=num(o.x);m.y=num(o.y)}
+  if(o.w!=null){m.w=num(o.w);m.h=num(o.h)}
+  if(o.p1&&o.p2){
+    m.x1=num(o.p1.x);m.y1=num(o.p1.y);m.x2=num(o.p2.x);m.y2=num(o.p2.y);
+  }
+  if(o.type==='dimension')m.mm=num(o.mm,0);
+  if(o.type==='trace')m.pointCount=o.points?.length||0;
+  return m;
+}
+function propertyFieldsHtml(o,prefix='prop'){
+  const m=objectPropertyModel(o);
+  if(!m)return '<p style="font-size:11px;color:#667085">図面上の要素を選択してください。</p>';
+
+  let fields=`<div class="pc-field"><label>名称 / 注記</label><input id="${prefix}Label" value="${esc(o.text??o.label??'')}"></div>`;
+
+  if(o.x!=null){
+    fields+=`<div class="pc-grid2">
+      <div class="pc-field"><label>X</label><input id="${prefix}X" inputmode="decimal" value="${m.x}"></div>
+      <div class="pc-field"><label>Y</label><input id="${prefix}Y" inputmode="decimal" value="${m.y}"></div>
+    </div>`;
+  }
+  if(o.w!=null){
+    fields+=`<div class="pc-grid2">
+      <div class="pc-field"><label>幅</label><input id="${prefix}W" inputmode="decimal" value="${m.w}"></div>
+      <div class="pc-field"><label>高さ</label><input id="${prefix}H" inputmode="decimal" value="${m.h}"></div>
+    </div>`;
+  }
+  if(o.p1&&o.p2){
+    fields+=`<div class="pc-grid2">
+      <div class="pc-field"><label>始点 X</label><input id="${prefix}X1" inputmode="decimal" value="${m.x1}"></div>
+      <div class="pc-field"><label>始点 Y</label><input id="${prefix}Y1" inputmode="decimal" value="${m.y1}"></div>
+      <div class="pc-field"><label>終点 X</label><input id="${prefix}X2" inputmode="decimal" value="${m.x2}"></div>
+      <div class="pc-field"><label>終点 Y</label><input id="${prefix}Y2" inputmode="decimal" value="${m.y2}"></div>
+    </div>`;
+  }
+  if(o.type==='dimension'){
+    fields+=`<div class="pc-field"><label>実寸 mm</label><input id="${prefix}Mm" inputmode="decimal" value="${m.mm}"></div>`;
+  }
+  if(o.type==='trace'){
+    fields+=`<p style="font-size:10px;color:#667085;margin:6px 0">トレース点数：${m.pointCount}。位置は長押し移動できます。</p>`;
+  }
+  return fields;
+}
+function readNumberInput(id,fallback){
+  const el=document.getElementById(id);
+  if(!el)return fallback;
+  const v=parseFloat(el.value);
+  return Number.isFinite(v)?v:fallback;
+}
+function applyPropertyInputs(prefix='prop'){
+  const o=state.objects.find(x=>x.id===selectedId);
+  if(!o)return;
+  snapshot();
+
+  const labelEl=document.getElementById(prefix+'Label');
+  if(labelEl){
+    const value=labelEl.value.trim();
+    if(o.type==='note')o.text=value;
+    else o.label=value;
+  }
+  if(o.x!=null){
+    const nx=readNumberInput(prefix+'X',o.x),ny=readNumberInput(prefix+'Y',o.y);
+    const dx=nx-o.x,dy=ny-o.y;
+    o.x=nx;o.y=ny;
+    if(o.points)o.points=o.points.map(p=>({x:p.x+dx,y:p.y+dy}));
+    updateConnectedObjects(o.id);
+  }
+  if(o.w!=null){
+    o.w=Math.max(1,readNumberInput(prefix+'W',o.w));
+    o.h=Math.max(1,readNumberInput(prefix+'H',o.h));
+  }
+  if(o.p1&&o.p2){
+    o.p1={
+      x:readNumberInput(prefix+'X1',o.p1.x),
+      y:readNumberInput(prefix+'Y1',o.p1.y)
+    };
+    o.p2={
+      x:readNumberInput(prefix+'X2',o.p2.x),
+      y:readNumberInput(prefix+'Y2',o.p2.y)
+    };
+  }
+  if(o.type==='dimension'){
+    const mm=Math.max(.01,readNumberInput(prefix+'Mm',o.mm||1));
+    commitDimensionValue(o,mm,{quiet:true});
+  }
+  o.source='manual';
+  render();saveSoon();showToast('編集内容を反映しました');
+}
+
+function renderPcPagePanel(){
+  if(!pcPagePanel)return;
+  pcPagePanel.innerHTML='';
+  const pages=state.core.pages||[];
+  for(const page of pages){
+    const b=document.createElement('button');
+    b.className='pc-page-btn'+(page.id===state.core.activePageId?' active':'');
+    b.textContent=`${page.index+1}. ${page.name}`;
+    b.onclick=()=>{
+      DKSC_CORE.setActivePage(state.core,page.id);
+      selectedId=null;
+      state.backgroundDataUrl=null;
+      state.showSourcePhoto=false;
+      syncSourcePhotoVisibility();
+      const active=DKSC_CORE.getActivePage(state.core);
+      if(active?.canvas){
+        setView({x:0,y:0,w:active.canvas.width||1200,h:active.canvas.height||800});
+      }
+      render();
+      saveSoon();
+    };
+    pcPagePanel.appendChild(b);
+  }
+}
+
+function renderPcSelectionPanel(){
+  if(!pcSelectionPanel)return;
+  const o=state.objects.find(x=>x.id===selectedId);
+  if(!o){
+    pcSelectionPanel.innerHTML=`<div class="pc-card"><h4>プロパティ</h4><p style="font-size:11px;color:#667085;margin:0">図面上の要素を選択すると、ここで数値編集できます。</p></div>`;
+    return;
+  }
+  pcSelectionPanel.innerHTML=`<div class="pc-card">
+    <h4>${esc(objectDisplayName(o))}</h4>
+    ${propertyFieldsHtml(o,'pcProp')}
+    <div class="pc-grid2">
+      <button class="pc-btn primary" id="pcApplyProps">反映</button>
+      <button class="pc-btn danger" id="pcDeleteSelected">削除</button>
+    </div>
+  </div>`;
+  $('#pcApplyProps').onclick=()=>applyPropertyInputs('pcProp');
+  $('#pcDeleteSelected').onclick=()=>{$('#deleteBtn').click()};
+}
+function openMobilePropertySheet(){
+  const o=state.objects.find(x=>x.id===selectedId);
+  if(!o)return showToast('編集する要素を選択してください');
+
+  let fields='';
+  if(o.type==='dimension'){
+    fields=`<div class="pc-field">
+      <label>実寸 mm</label>
+      <input id="mobQuickMm" inputmode="decimal" value="${Math.round(o.mm||0)}">
+    </div>
+    <p style="font-size:11px;color:#667085">位置は図面上の端点を動かして調整します。</p>`;
+  }else if(o.type==='note'){
+    fields=`<div class="pc-field">
+      <label>注記</label>
+      <input id="mobQuickLabel" value="${esc(o.text||'')}">
+    </div>`;
+  }else{
+    fields=`<div class="pc-field">
+      <label>名称</label>
+      <input id="mobQuickLabel" value="${esc(o.label||objectDisplayName(o))}">
+    </div>
+    <p style="font-size:11px;color:#667085">位置は長押しして移動します。細かな座標・レイヤー編集はPCで行います。</p>`;
+  }
+
+  openSheet(`
+    <h2>${esc(objectDisplayName(o))}を簡易編集</h2>
+    <p>スマホでは現場で必要な修正だけを行います。</p>
+    <div class="card">${fields}</div>
+    <div class="grid2">
+      <button data-a="mobileDuplicateSelected">複製</button>
+      <button data-a="mobileDeleteSelected">削除</button>
+    </div>
+    <button class="primary" data-a="mobileQuickApply" style="width:100%;margin-top:8px">変更を反映</button>
+  `);
+}
+function buildPcAssetPalette(){
+  if(!pcAssetPalette)return;
+  const keys=['room','wall','door','window','meetingTable','deskBench','sofa','plant','counter','panel','ev','battery','aircon','car','ecocute','person','meter','earth'];
+  pcAssetPalette.innerHTML='';
+  keys.forEach(key=>{
+    const b=document.createElement('button');
+    b.className='pc-btn';
+    b.textContent=TOOL_LABEL[key]||assetInfo(key).label;
+    b.onclick=()=>{
+      setMain('edit');
+      applySubtool(key);
+      showHint(`${assetInfo(key).label}を置く位置を図面上でクリック`);
+    };
+    pcAssetPalette.appendChild(b);
+  });
+}
+
+
+function commitDimensionValue(element,mm,{quiet=false}={}){
+  if(!element||element.type!=='dimension')return{ok:false,conflicts:[]};
+  const value=Number(mm);
+  if(!Number.isFinite(value)||value<=0)return{ok:false,conflicts:[]};
+
+  element.mm=value;
+  element.manualMm=true;
+  element.source='manual';
+
+  const result=DKSC_CORE.upsertDimensionConstraint(state.core,element,value,{source:'user'});
+  if(result.ok){
+    state.core=result.core;
+    DKSC_CORE.bindLegacyAliases(state);
+  }
+  if(!quiet){
+    if(result.conflicts?.length){
+      showToast(`寸法矛盾を${result.conflicts.length}件検出しました`);
+    }else{
+      showToast('寸法関係をCOREへ保存しました');
+    }
+  }
+  return result;
+}
+function refreshDimensionStatus(){
+  const pill=document.getElementById('dimensionPill');
+  if(!pill)return;
+  const health=DKSC_CORE.getDimensionHealth(state.core);
+  state.core=health.core;
+  DKSC_CORE.bindLegacyAliases(state);
+
+  if(!health.constraintCount){
+    pill.style.display='none';
+    return;
+  }
+  pill.style.display='inline-flex';
+  if(health.conflictCount){
+    pill.className='pill warn';
+    pill.textContent=`寸法矛盾 ${health.conflictCount}`;
+  }else{
+    pill.className='pill ok';
+    pill.textContent=`寸法 ${health.constraintCount}件 OK`;
+  }
+}
+
+function render(){
+  objectLayer.innerHTML='';selectionLayer.innerHTML='';updateEmptyState();
+
+  for(const o of state.objects){
+    if(o.startAnchorId){
+      const c=getAnchorCenter(state.objects.find(x=>x.id===o.startAnchorId));if(c)o.p1={...c};
+    }
+    if(o.endAnchorId){
+      const c=getAnchorCenter(state.objects.find(x=>x.id===o.endAnchorId));if(c)o.p2={...c};
+    }
+    if(o.type==='dimension'&&!o.manualMm&&o.p1&&o.p2)o.mm=distance(o.p1,o.p2)*state.scaleMmPerUnit;
+  }
+
+  for(const o of state.objects){
+    const g=document.createElementNS('http://www.w3.org/2000/svg','g');
+    g.dataset.id=o.id;g.style.cursor='pointer';g.innerHTML=renderObject(o);
+    g.addEventListener('pointerdown',e=>objectPointerDown(e,o.id));
+    objectLayer.appendChild(g);
+  }
+  if(selectedId)renderSelection();
+  renderPcSelectionPanel();
+  renderPcPagePanel();
+  refreshDimensionStatus();
+}
+
+/* =========================================================
+   5. SELECTION / POINTERS
+========================================================= */
+function selectObject(id){
+  selectedId=id;
+  const o=state.objects.find(x=>x.id===id);if(!o)return;
+  inspectLabel.textContent=o.label||assetInfo(o.kind).label||o.type;
+  inspector.classList.add('show');renderSelection();renderPcSelectionPanel();vibrate();
+}
+function clearSelection(hide=true){
+  selectedId=null;selectionLayer.innerHTML='';if(hide)inspector.classList.remove('show');
+  renderPcSelectionPanel();
+}
+$('#doneBtn').onclick=()=>clearSelection();
+$('#editPropsBtn').onclick=openMobilePropertySheet;
+$('#deleteBtn').onclick=()=>{
+  if(!selectedId)return;snapshot();
+  state.objects=state.objects.filter(o=>o.id!==selectedId);
+  clearSelection();render();saveSoon();showToast('削除しました');
+};
+$('#duplicateBtn').onclick=()=>{
+  const o=state.objects.find(x=>x.id===selectedId);if(!o)return;snapshot();
+  const c=JSON.parse(JSON.stringify(o));c.id=uid();c.source='manual';
+  if(c.x!=null){c.x+=30;c.y+=30}
+  if(c.p1){c.p1.x+=30;c.p1.y+=30;c.p2.x+=30;c.p2.y+=30}
+  if(c.points)c.points=c.points.map(p=>({x:p.x+30,y:p.y+30}));
+  state.objects.push(c);selectedId=c.id;render();saveSoon();showToast('複製しました');
+};
+
+function objectPointerDown(e,id){
+  e.stopPropagation();
+  const o=state.objects.find(x=>x.id===id);if(!o)return;
+  const startClient={x:e.clientX,y:e.clientY};
+  const startSvg=screenToSvg(e.clientX,e.clientY);
+  if(longPress?.timer)clearTimeout(longPress.timer);
+  longPress={
+    id,pointerId:e.pointerId,startClient,startSvg,moved:false,activated:false,
+    timer:setTimeout(()=>{
+      const current=state.objects.find(x=>x.id===id);
+      if(!current||longPress?.moved)return;
+      longPress.activated=true;snapshot();selectedId=id;current.source='manual';
+      inspectLabel.textContent=current.label||assetInfo(current.kind).label||current.type;
+      inspector.classList.add('show');
+      drag={kind:'object',id,start:startSvg,original:JSON.parse(JSON.stringify(current)),pointerId:e.pointerId};
+      svg.setPointerCapture?.(e.pointerId);vibrate(18);showHint('つかみました。そのまま移動',800);render();
+    },320)
+  };
+  svg.setPointerCapture?.(e.pointerId);
+}
+function handlePointerDown(e,which){
+  if(!selectedId)return;e.stopPropagation();snapshot();
+  const o=state.objects.find(x=>x.id===selectedId);if(o)o.source='manual';
+  drag={kind:'handle',id:selectedId,which,start:screenToSvg(e.clientX,e.clientY),original:JSON.parse(JSON.stringify(o)),pointerId:e.pointerId};
+  svg.setPointerCapture?.(e.pointerId);
+}
+function pointerDown(e){
+  pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pointers.size===2){startPinch();return}
+
+  if(tool==='select'){
+    if(e.target.closest('#objectLayer')||e.target.closest('#selectionLayer'))return;
+    clearSelection();
+    drag={kind:'pan',pointerId:e.pointerId,startClient:{x:e.clientX,y:e.clientY},startView:{...view}};
+    svg.setPointerCapture?.(e.pointerId);return;
+  }
+
+  const p=screenToSvg(e.clientX,e.clientY);
+
+  if(tool==='asset'){
+    snapshot();state.objects.push(makeAsset(subtool,p.x,p.y));
+    render();saveSoon();vibrate();showToast('配置しました');return;
+  }
+  if(tool==='draw'&&subtool==='note'){openNoteSheet(p);return}
+  if(tool==='draw'&&['route','dimension','wall'].includes(subtool)){
+    const snap=subtool==='wall'?{point:p,anchorId:null,snapped:false}:snappedPoint(p);
+    drag={kind:'draw',type:subtool,p1:snap.point,p2:snap.point,startAnchorId:snap.anchorId,endAnchorId:snap.anchorId,pointerId:e.pointerId};
+    svg.setPointerCapture?.(e.pointerId);renderPreview();
+  }
+}
+function pointerMove(e){
+  if(pointers.has(e.pointerId))pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(longPress&&longPress.pointerId===e.pointerId&&!longPress.activated){
+    const d=Math.hypot(e.clientX-longPress.startClient.x,e.clientY-longPress.startClient.y);
+    if(d>12){longPress.moved=true;clearTimeout(longPress.timer)}
+  }
+  if(pointers.size===2&&pinchStart){movePinch();return}
+  if(!drag||drag.pointerId!==e.pointerId)return;
+
+  if(drag.kind==='pan'){
+    const dx=(e.clientX-drag.startClient.x)/svg.clientWidth*drag.startView.w;
+    const dy=(e.clientY-drag.startClient.y)/svg.clientHeight*drag.startView.h;
+    setView({...drag.startView,x:drag.startView.x-dx,y:drag.startView.y-dy});return;
+  }
+
+  const p=screenToSvg(e.clientX,e.clientY);
+
+  if(drag.kind==='draw'){
+    if(drag.type==='wall'){
+      drag.p2=p;renderPreview();return;
+    }
+    const snap=snappedPoint(p);
+    drag.p2=snap.point;drag.endAnchorId=snap.anchorId;
+    renderPreview();renderSnapIndicator(p,snap.snapped?{point:snap.point}:null);return;
+  }
+
+  const o=state.objects.find(x=>x.id===drag.id);if(!o)return;
+  const dx=p.x-drag.start.x,dy=p.y-drag.start.y;
+
+  if(drag.kind==='object'){
+    if(o.x!=null){
+      o.x=drag.original.x+dx;o.y=drag.original.y+dy;updateConnectedObjects(o.id);
+    }
+    if(o.p1){
+      o.p1={x:drag.original.p1.x+dx,y:drag.original.p1.y+dy};
+      o.p2={x:drag.original.p2.x+dx,y:drag.original.p2.y+dy};
+      if(o.type==='dimension'&&!o.manualMm)o.mm=distance(o.p1,o.p2)*state.scaleMmPerUnit;
+    }
+    if(o.points){
+      o.points=drag.original.points.map(pt=>({x:pt.x+dx,y:pt.y+dy}));
+    }
+    render();return;
+  }
+
+  if(drag.kind==='handle'){
+    const snap=['wall'].includes(o.type)?{point:p,anchorId:null}:snappedPoint(p);
+    o[drag.which]=snap.point;
+    if(drag.which==='p1')o.startAnchorId=snap.anchorId;
+    if(drag.which==='p2')o.endAnchorId=snap.anchorId;
+    if(o.type==='dimension'&&!o.manualMm)o.mm=distance(o.p1,o.p2)*state.scaleMmPerUnit;
+    render();renderSnapIndicator(p,snap.snapped?{point:snap.point}:null);
+  }
+}
+function pointerUp(e){
+  pointers.delete(e.pointerId);if(pointers.size<2)pinchStart=null;
+
+  if(longPress&&longPress.pointerId===e.pointerId){
+    clearTimeout(longPress.timer);
+    if(!longPress.activated&&!longPress.moved&&tool==='select')selectObject(longPress.id);
+    if(longPress.activated&&drag&&drag.kind==='object'){render();saveSoon();showToast('移動しました')}
+    longPress=null;
+  }
+
+  if(!drag||drag.pointerId!==e.pointerId)return;
+
+  if(drag.kind==='draw'){
+    const d=distance(drag.p1,drag.p2);previewLayer.innerHTML='';
+    if(d>6){
+      if(drag.type==='dimension'){
+        const p1={...drag.p1},p2={...drag.p2};drag=null;openDimensionSheet(p1,p2);return;
+      }
+      snapshot();
+      state.objects.push({
+        id:uid(),type:drag.type,p1:{...drag.p1},p2:{...drag.p2},
+        startAnchorId:drag.startAnchorId||null,endAnchorId:drag.endAnchorId||null,
+        source:'manual'
+      });
+      render();saveSoon();vibrate(16);showToast('追加しました');
+    }
+  }else{
+    const edited=drag?.id?state.objects.find(x=>x.id===drag.id):null;
+    if(edited?.type==='dimension'&&edited.manualMm){
+      commitDimensionValue(edited,edited.mm,{quiet:true});
+    }
+    previewLayer.innerHTML='';render();saveSoon();
+  }
+  drag=null;
+}
+function renderPreview(){
+  previewLayer.innerHTML='';
+  if(!drag||drag.kind!=='draw')return;
+  const stroke=drag.type==='dimension'?'#d68500':drag.type==='wall'?'#55595d':'#4b4f56';
+  const width=drag.type==='wall'?(isPresentation()?12:4):drag.type==='route'?(isPresentation()?8:3):3;
+  previewLayer.innerHTML=`<line x1="${drag.p1.x}" y1="${drag.p1.y}" x2="${drag.p2.x}" y2="${drag.p2.y}" stroke="${stroke}" stroke-width="${width}" stroke-dasharray="8 5" stroke-linecap="round"/>`;
+}
+function startPinch(){
+  const pts=[...pointers.values()];if(pts.length!==2)return;
+  const dist=Math.hypot(pts[1].x-pts[0].x,pts[1].y-pts[0].y);
+  const mid={x:(pts[0].x+pts[1].x)/2,y:(pts[0].y+pts[1].y)/2};
+  pinchStart={dist,view:{...view},svgPoint:screenToSvg(mid.x,mid.y)};
+  drag=null;previewLayer.innerHTML='';
+}
+function movePinch(){
+  const pts=[...pointers.values()];if(pts.length!==2||!pinchStart)return;
+  const dist=Math.hypot(pts[1].x-pts[0].x,pts[1].y-pts[0].y);
+  const ratio=pinchStart.dist/dist;
+  let nw=Math.max(300,Math.min(2400,pinchStart.view.w*ratio));
+  let nh=nw*(800/1200);
+  const mid={x:(pts[0].x+pts[1].x)/2,y:(pts[0].y+pts[1].y)/2};
+  const rect=svg.getBoundingClientRect();
+  const relx=(mid.x-rect.left)/rect.width,rely=(mid.y-rect.top)/rect.height;
+  setView({x:pinchStart.svgPoint.x-relx*nw,y:pinchStart.svgPoint.y-rely*nh,w:nw,h:nh});
+}
+svg.addEventListener('pointerdown',pointerDown);
+svg.addEventListener('pointermove',pointerMove);
+svg.addEventListener('pointerup',pointerUp);
+svg.addEventListener('pointercancel',e=>{if(longPress?.timer)clearTimeout(longPress.timer);longPress=null;pointerUp(e)});
+
+/* =========================================================
+   6. IMAGE LOAD / LOCAL AUTO TRACE
+========================================================= */
+function loadImage(file){
+  if(!file)return;
+  const r=new FileReader();
+  r.onload=()=>{
+    const img=new Image();
+    img.onload=()=>{
+      const max=1800,ratio=Math.min(1,max/Math.max(img.width,img.height));
+      const c=document.createElement('canvas');
+      c.width=Math.round(img.width*ratio);c.height=Math.round(img.height*ratio);
+      c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+      state.backgroundDataUrl=c.toDataURL('image/jpeg',.80);
+      state.showSourcePhoto=true;
+      syncSourcePhotoVisibility();
+      render();saveSoon();showToast('写真を読み込みました。写真全体を高精度トレースできます');
+    };
+    img.src=r.result;
+  };
+  r.readAsDataURL(file);
+}
+function imageFromDataUrl(dataUrl){
+  return new Promise((resolve,reject)=>{
+    const img=new Image();
+    img.onload=()=>resolve(img);
+    img.onerror=reject;
+    img.src=dataUrl;
+  });
+}
+function traceConfig(){
+  if(state.traceQuality==='standard'){
+    return {maxSide:440,highPercentile:.87,lowRatio:.42,epsilon:1.9,minChain:16,maxPaths:120};
+  }
+  if(state.traceQuality==='ultra'){
+    return {maxSide:820,highPercentile:.80,lowRatio:.34,epsilon:.72,minChain:8,maxPaths:240};
+  }
+  return {maxSide:620,highPercentile:.84,lowRatio:.38,epsilon:1.15,minChain:10,maxPaths:180};
+}
+function percentileFromSorted(sorted,p){
+  if(!sorted.length)return 0;
+  const i=Math.max(0,Math.min(sorted.length-1,Math.floor((sorted.length-1)*p)));
+  return sorted[i];
+}
+function grayscaleAndNormalize(imageData,w,h){
+  const src=imageData.data;
+  const gray=new Uint8Array(w*h);
+  const hist=new Uint32Array(256);
+  for(let i=0;i<w*h;i++){
+    const j=i*4;
+    const g=Math.max(0,Math.min(255,Math.round(src[j]*.299+src[j+1]*.587+src[j+2]*.114)));
+    gray[i]=g;hist[g]++;
+  }
+  const total=w*h;
+  const quantile=q=>{
+    const target=total*q;
+    let sum=0;
+    for(let i=0;i<256;i++){sum+=hist[i];if(sum>=target)return i}
+    return 255;
+  };
+  const lo=quantile(.02),hi=Math.max(lo+8,quantile(.98));
+  const out=new Float32Array(w*h);
+  const scale=255/(hi-lo);
+  for(let i=0;i<out.length;i++)out[i]=Math.max(0,Math.min(255,(gray[i]-lo)*scale));
+  return out;
+}
+function gaussianBlur5(src,w,h){
+  const kernel=[1,4,6,4,1];
+  const tmp=new Float32Array(w*h);
+  const out=new Float32Array(w*h);
+
+  for(let y=0;y<h;y++){
+    for(let x=0;x<w;x++){
+      let sum=0,weight=0;
+      for(let k=-2;k<=2;k++){
+        const xx=Math.max(0,Math.min(w-1,x+k));
+        const kw=kernel[k+2];
+        sum+=src[y*w+xx]*kw;weight+=kw;
+      }
+      tmp[y*w+x]=sum/weight;
+    }
+  }
+
+  for(let y=0;y<h;y++){
+    for(let x=0;x<w;x++){
+      let sum=0,weight=0;
+      for(let k=-2;k<=2;k++){
+        const yy=Math.max(0,Math.min(h-1,y+k));
+        const kw=kernel[k+2];
+        sum+=tmp[yy*w+x]*kw;weight+=kw;
+      }
+      out[y*w+x]=sum/weight;
+    }
+  }
+  return out;
+}
+function sobelMagnitudeDirection(src,w,h){
+  const mag=new Float32Array(w*h);
+  const dir=new Uint8Array(w*h);
+  for(let y=1;y<h-1;y++){
+    for(let x=1;x<w-1;x++){
+      const i=y*w+x;
+      const a=src[i-w-1],b=src[i-w],c=src[i-w+1];
+      const d=src[i-1],f=src[i+1];
+      const g=src[i+w-1],hh=src[i+w],j=src[i+w+1];
+      const gx=-a+c-2*d+2*f-g+j;
+      const gy=-a-2*b-c+g+2*hh+j;
+      const m=Math.hypot(gx,gy);
+      mag[i]=m;
+
+      let angle=Math.atan2(gy,gx)*180/Math.PI;
+      if(angle<0)angle+=180;
+      dir[i]=angle<22.5||angle>=157.5?0:angle<67.5?1:angle<112.5?2:3;
+    }
+  }
+  return{mag,dir};
+}
+function nonMaximumSuppress(mag,dir,w,h){
+  const out=new Float32Array(w*h);
+  for(let y=1;y<h-1;y++){
+    for(let x=1;x<w-1;x++){
+      const i=y*w+x,m=mag[i];
+      if(!m)continue;
+      let a=0,b=0;
+      if(dir[i]===0){a=mag[i-1];b=mag[i+1]}
+      else if(dir[i]===1){a=mag[i-w+1];b=mag[i+w-1]}
+      else if(dir[i]===2){a=mag[i-w];b=mag[i+w]}
+      else{a=mag[i-w-1];b=mag[i+w+1]}
+      if(m>=a&&m>=b)out[i]=m;
+    }
+  }
+  return out;
+}
+function hysteresisEdges(nms,w,h,cfg){
+  const values=[];
+  const step=Math.max(1,Math.floor(nms.length/120000));
+  for(let i=0;i<nms.length;i+=step)if(nms[i]>0)values.push(nms[i]);
+  values.sort((a,b)=>a-b);
+  const high=Math.max(12,percentileFromSorted(values,cfg.highPercentile));
+  const low=high*cfg.lowRatio;
+
+  const edges=new Uint8Array(w*h);
+  const queue=[];
+  for(let i=0;i<nms.length;i++){
+    if(nms[i]>=high){edges[i]=2;queue.push(i)}
+    else if(nms[i]>=low)edges[i]=1;
+  }
+
+  const dirs=[-w-1,-w,-w+1,-1,1,w-1,w,w+1];
+  for(let q=0;q<queue.length;q++){
+    const i=queue[q];
+    const x=i%w,y=(i/w)|0;
+    for(const d of dirs){
+      const n=i+d;
+      if(n<0||n>=edges.length)continue;
+      const nx=n%w,ny=(n/w)|0;
+      if(Math.abs(nx-x)>1||Math.abs(ny-y)>1)continue;
+      if(edges[n]===1){edges[n]=2;queue.push(n)}
+    }
+  }
+  for(let i=0;i<edges.length;i++)edges[i]=edges[i]===2?1:0;
+  return edges;
+}
+function removeIsolatedEdges(edges,w,h){
+  const src=edges.slice();
+  for(let y=1;y<h-1;y++){
+    for(let x=1;x<w-1;x++){
+      const i=y*w+x;
+      if(!src[i])continue;
+      let n=0;
+      for(let yy=-1;yy<=1;yy++)for(let xx=-1;xx<=1;xx++){
+        if(!xx&&!yy)continue;
+        n+=src[(y+yy)*w+(x+xx)]?1:0;
+      }
+      if(n<=1)edges[i]=0;
+    }
+  }
+  return edges;
+}
+function edgeNeighbors(idx,edges,w,h){
+  const x=idx%w,y=(idx/w)|0;
+  const out=[];
+  for(let yy=-1;yy<=1;yy++){
+    for(let xx=-1;xx<=1;xx++){
+      if(!xx&&!yy)continue;
+      const nx=x+xx,ny=y+yy;
+      if(nx<0||nx>=w||ny<0||ny>=h)continue;
+      const n=ny*w+nx;
+      if(edges[n])out.push(n);
+    }
+  }
+  return out;
+}
+function edgeKey(a,b){return a<b?`${a}:${b}`:`${b}:${a}`}
+function walkEdgeChain(start,next,edges,w,h,visited,maxLen=20000){
+  const chain=[start,next];
+  visited.add(edgeKey(start,next));
+  let prev=start,cur=next;
+
+  while(chain.length<maxLen){
+    const ns=edgeNeighbors(cur,edges,w,h).filter(n=>n!==prev);
+    const options=ns.filter(n=>!visited.has(edgeKey(cur,n)));
+    if(options.length!==1)break;
+    const n=options[0];
+    visited.add(edgeKey(cur,n));
+    chain.push(n);
+    prev=cur;cur=n;
+    if(cur===start)break;
+  }
+  return chain;
+}
+function traceEdgeChains(edges,w,h){
+  const visited=new Set();
+  const chains=[];
+
+  for(let i=0;i<edges.length;i++){
+    if(!edges[i])continue;
+    const ns=edgeNeighbors(i,edges,w,h);
+    if(ns.length===2)continue;
+    for(const n of ns){
+      if(visited.has(edgeKey(i,n)))continue;
+      const chain=walkEdgeChain(i,n,edges,w,h,visited);
+      if(chain.length>1)chains.push(chain);
+    }
+  }
+
+  for(let i=0;i<edges.length;i++){
+    if(!edges[i])continue;
+    for(const n of edgeNeighbors(i,edges,w,h)){
+      if(visited.has(edgeKey(i,n)))continue;
+      const chain=walkEdgeChain(i,n,edges,w,h,visited);
+      if(chain.length>1)chains.push(chain);
+    }
+  }
+  return chains;
+}
+function pointLineDistance(p,a,b){
+  const dx=b.x-a.x,dy=b.y-a.y;
+  if(!dx&&!dy)return Math.hypot(p.x-a.x,p.y-a.y);
+  const t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/(dx*dx+dy*dy)));
+  const qx=a.x+t*dx,qy=a.y+t*dy;
+  return Math.hypot(p.x-qx,p.y-qy);
+}
+function simplifyRDP(points,epsilon){
+  if(points.length<3)return points;
+  let maxD=0,index=0;
+  const first=points[0],last=points[points.length-1];
+  for(let i=1;i<points.length-1;i++){
+    const d=pointLineDistance(points[i],first,last);
+    if(d>maxD){maxD=d;index=i}
+  }
+  if(maxD>epsilon){
+    const left=simplifyRDP(points.slice(0,index+1),epsilon);
+    const right=simplifyRDP(points.slice(index),epsilon);
+    return left.slice(0,-1).concat(right);
+  }
+  return[first,last];
+}
+function polylineLength(points){
+  let n=0;
+  for(let i=1;i<points.length;i++)n+=distance(points[i-1],points[i]);
+  return n;
+}
+async function tracePhotoToVectors(){
+  const cfg=traceConfig();
+  const img=await imageFromDataUrl(state.backgroundDataUrl);
+
+  const scale=Math.min(1,cfg.maxSide/Math.max(img.width,img.height));
+  const w=Math.max(80,Math.round(img.width*scale));
+  const h=Math.max(80,Math.round(img.height*scale));
+
+  const c=document.createElement('canvas');
+  c.width=w;c.height=h;
+  const ctx=c.getContext('2d',{willReadFrequently:true});
+  ctx.drawImage(img,0,0,w,h);
+
+  const imageData=ctx.getImageData(0,0,w,h);
+  const gray=grayscaleAndNormalize(imageData,w,h);
+  const blurred=gaussianBlur5(gray,w,h);
+  const {mag,dir}=sobelMagnitudeDirection(blurred,w,h);
+  const nms=nonMaximumSuppress(mag,dir,w,h);
+  const edges=removeIsolatedEdges(hysteresisEdges(nms,w,h,cfg),w,h);
+  const rawChains=traceEdgeChains(edges,w,h);
+
+  const boardScale=Math.min(1200/w,800/h);
+  const ox=(1200-w*boardScale)/2;
+  const oy=(800-h*boardScale)/2;
+
+  const paths=[];
+  for(const chain of rawChains){
+    if(chain.length<cfg.minChain)continue;
+    const px=chain.map(i=>({x:i%w,y:(i/w)|0}));
+    const simplified=simplifyRDP(px,cfg.epsilon);
+    if(simplified.length<2)continue;
+
+    const mapped=simplified.map(p=>({
+      x:ox+p.x*boardScale,
+      y:oy+p.y*boardScale
+    }));
+
+    const len=polylineLength(mapped);
+    if(len<18)continue;
+
+    const closed=distance(mapped[0],mapped[mapped.length-1])<boardScale*2.2;
+    paths.push({
+      id:uid(),
+      type:'trace',
+      kind:'trace',
+      points:mapped,
+      closed,
+      length:len,
+      label:'トレース線',
+      source:'auto'
+    });
+  }
+
+  paths.sort((a,b)=>b.length-a.length);
+  return paths.slice(0,cfg.maxPaths);
+}
+async function runAutoTrace(){
+  if(!state.backgroundDataUrl){
+    showToast('先に写真を用意してください');
+    openStartSheet();
+    return;
+  }
+
+  showToast('写真の輪郭を高精度トレース中…');
+  snapshot();
+
+  // 手動修正したものは残し、未修正の自動トレースだけ差し替える。
+  state.objects=state.objects.filter(o=>!(o.type==='trace'&&o.source==='auto'));
+
+  try{
+    const traced=await tracePhotoToVectors();
+
+    if(!traced.length){
+      showToast('輪郭を検出できませんでした。別の写真か最高精度を試してください');
+      return;
+    }
+
+    state.objects.push(...traced);
+    state.showSourcePhoto=false;
+    syncSourcePhotoVisibility();
+    render();
+    saveSoon();
+    vibrate(16);
+    closeSheet();
+    setMain('edit');
+    showToast(`${traced.length}本をトレースしました。寸法や素材を追加できます`);
+  }catch(err){
+    showToast('トレースに失敗しました。写真を変更して再試行してください');
+  }
+}
+
+/* =========================================================
+   7. FILES / EXPORT
+========================================================= */
+function readImage(file){
+  if(!file)return;
+  const r=new FileReader();
+  r.onload=()=>{
+    const img=new Image();
+    img.onload=()=>{
+      const max=1800,ratio=Math.min(1,max/Math.max(img.width,img.height));
+      const c=document.createElement('canvas');
+      c.width=Math.round(img.width*ratio);c.height=Math.round(img.height*ratio);
+      c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+      state.backgroundDataUrl=c.toDataURL('image/jpeg',.80);
+      state.showSourcePhoto=true;
+      syncSourcePhotoVisibility();
+      render();saveSoon();showToast('写真を読み込みました。写真全体を高精度トレースできます');
+    };
+    img.src=r.result;
+  };
+  r.readAsDataURL(file);
+}
+
+async function importOfficeFile(file){
+  if(!file)return;
+  try{
+    showToast(`${file.name} を解析中…`);
+    const result=await DKSC_INPUT.importFile(file,{Core:DKSC_CORE,ZipLib:window.JSZip});
+    const check=DKSC_CORE.validateCore(result.core);
+    if(!check.ok)throw new Error('Imported CORE validation failed: '+check.errors.join(', '));
+
+    snapshot();
+    state.core=result.core;
+    DKSC_CORE.bindLegacyAliases(state);
+    state.projectTitle=result.title||file.name||'Imported document';
+    state.backgroundDataUrl=null;
+    state.showSourcePhoto=false;
+    state.history=[];
+    state.redo=[];
+    selectedId=null;
+
+    refreshHeader();
+    syncSourcePhotoVisibility();
+    const active=DKSC_CORE.getActivePage(state.core);
+    if(active?.canvas){
+      setView({x:0,y:0,w:active.canvas.width||1200,h:active.canvas.height||800});
+    }
+    render();
+    saveSoon();
+    closeSheet();
+
+    const suffix=result.warnings?.length?` / 注意 ${result.warnings.length}件`:'';
+    showToast(`${result.kind.toUpperCase()} ${state.core.pages.length}ページを読み込みました${suffix}`);
+  }catch(err){
+    console.error(err);
+    showToast('資料を読み込めませんでした');
+  }
+}
+
+async function importProject(file){
+  if(!file)return;
+  try{
+    const parsed=JSON.parse(await file.text());
+    state=DKSC_PROJECT.parse(parsed,defaultState(),DKSC_CORE);
+    state.schema='dksc-drawing-v1.18';
+    const check=DKSC_PROJECT.validateProject(state,DKSC_CORE);
+    if(!check.ok)throw new Error(check.errors.join(','));
+    refreshHeader();
+    syncSourcePhotoVisibility();
+    render();saveSoon();closeSheet();
+    showToast(`案件を読み込みました / ${check.pageCount}ページ`);
+  }catch(err){
+    console.error(err);
+    showToast('案件ファイルを読み込めません');
+  }
+}
+$('#cameraInput').onchange=e=>readImage(e.target.files[0]);
+$('#galleryInput').onchange=e=>readImage(e.target.files[0]);
+$('#projectInput').onchange=e=>importProject(e.target.files[0]);
+$('#officeInput').onchange=e=>importOfficeFile(e.target.files[0]);
+
+function fileName(){return DKSC_PROJECT.safeFileName(state.projectTitle||'DKSC_project')}
+function blobDownload(text,type,name){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function payload(){
+  const out=DKSC_PROJECT.serialize(state,DKSC_CORE,'dksc-drawing-v1.18');
+  out.exportedAt=new Date().toISOString();
+  return out;
+}
+
+function blobDownloadBytes(bytes,type,name){
+  const blob=new Blob([bytes],{type});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=name;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1200);
+}
+async function exportXlsx(){
+  try{
+    const bytes=await DKSC_EXPORT.toXlsxBytes(state.core,state.projectTitle,window.JSZip);
+    blobDownloadBytes(bytes,'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',fileName()+'.xlsx');
+    showToast('Excelを出力しました');
+  }catch(err){
+    console.error(err);showToast('Excel出力に失敗しました');
+  }
+}
+async function boardToJpegBytes(page){
+  const clone=svg.cloneNode(true);
+  clone.querySelector('#bgImage')?.remove();
+  clone.querySelector('#previewLayer')?.remove();
+  clone.querySelector('#selectionLayer')?.remove();
+  clone.querySelectorAll('rect').forEach(r=>{
+    if(r.getAttribute('fill')==='url(#grid)')r.remove();
+  });
+
+  const w=Number(page?.canvas?.width)||1200;
+  const h=Number(page?.canvas?.height)||800;
+  clone.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  clone.setAttribute('width',String(w));
+  clone.setAttribute('height',String(h));
+
+  const source=new XMLSerializer().serializeToString(clone);
+  const url=URL.createObjectURL(new Blob([source],{type:'image/svg+xml'}));
+  try{
+    const img=await new Promise((resolve,reject)=>{
+      const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=url;
+    });
+    const targetW=1800;
+    const targetH=Math.max(300,Math.round(targetW*h/w));
+    const c=document.createElement('canvas');c.width=targetW;c.height=targetH;
+    const ctx=c.getContext('2d');
+    ctx.fillStyle='#fff';ctx.fillRect(0,0,targetW,targetH);
+    ctx.drawImage(img,0,0,targetW,targetH);
+    const blob=await new Promise(resolve=>c.toBlob(resolve,'image/jpeg',.92));
+    return{
+      bytes:new Uint8Array(await blob.arrayBuffer()),
+      width:targetW,height:targetH
+    };
+  }finally{
+    URL.revokeObjectURL(url);
+  }
+}
+async function exportPdf(){
+  const originalPage=state.core.activePageId;
+  const originalSelected=selectedId;
+  const originalView={...view};
+  try{
+    selectedId=null;
+    const pages=[];
+    for(const page of state.core.pages){
+      DKSC_CORE.setActivePage(state.core,page.id);
+      setView({x:0,y:0,w:page.canvas?.width||1200,h:page.canvas?.height||800});
+      render();
+      pages.push(await boardToJpegBytes(page));
+    }
+    const bytes=DKSC_EXPORT.jpegPagesToPdf(pages);
+    blobDownloadBytes(bytes,'application/pdf',fileName()+'.pdf');
+    showToast(`PDFを${pages.length}ページで出力しました`);
+  }catch(err){
+    console.error(err);showToast('PDF出力に失敗しました');
+  }finally{
+    DKSC_CORE.setActivePage(state.core,originalPage);
+    selectedId=originalSelected;
+    setView(originalView);
+    render();
+  }
+}
+
+function downloadJSON(){blobDownload(JSON.stringify(payload(),null,2),'application/json',fileName()+'.dksc.json');showToast('案件データを保存')}
+function exportPptxEditable(){
+  try{
+    if(typeof PptxGenJS==='undefined')throw new Error('PptxGenJS unavailable');
+    const pptx=DKSC_EXPORT.buildPptx(state.core,state.projectTitle,PptxGenJS);
+    pptx.writeFile({fileName:fileName()+'.pptx'})
+      .then(()=>showToast(`編集可能PPTXを${state.core.pages.length}スライドで出力しました`))
+      .catch(err=>{console.error(err);showToast('PowerPoint出力に失敗しました')});
+  }catch(err){
+    console.error(err);
+    showToast('PowerPoint出力に失敗しました');
+  }
+}
+function downloadDXF(){
+  try{
+    const out=DKSC_EXPORT.toDXF(state.core);
+    blobDownload(out,'application/dxf',fileName()+'.dxf');
+    showToast('Jw_cad編集用DXFを出力しました');
+  }catch(err){
+    console.error(err);
+    showToast('DXF出力に失敗しました');
+  }
+}
+async function shareProject(){
+  const f=new File([JSON.stringify(payload(),null,2)],fileName()+'.dksc.json',{type:'application/json'});
+  try{
+    if(navigator.share&&navigator.canShare?.({files:[f]}))await navigator.share({title:state.projectTitle,text:'DKSC図面案件',files:[f]});
+    else downloadJSON();
+  }catch(e){if(e.name!=='AbortError')downloadJSON()}
+}
+function installGuide(){
+  openSheet(`<h2>スマホアプリとして使う</h2><p>HTTPSで公開するとホーム画面へ追加できます。</p>
+    <div class="card"><h4>Android</h4><p>Chrome → メニュー →「アプリをインストール」または「ホーム画面に追加」</p></div>
+    <div class="card"><h4>iPhone / iPad</h4><p>Safari → 共有 →「ホーム画面に追加」</p></div>`);
+}
+async function installApp(){
+  if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}
+  else installGuide();
+}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e});
+if('serviceWorker'in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+}
+
+/* =========================================================
+   8. SHEET ACTIONS / STATIC WIRING
+========================================================= */
+function wireSheet(){
+  $$('[data-a]',sheetContent).forEach(btn=>btn.onclick=async()=>{
+    const a=btn.dataset.a;
+    if(a==='camera')$('#cameraInput').click();
+    if(a==='gallery')$('#galleryInput').click();
+    if(a==='import')$('#projectInput').click();
+    if(a==='officeImport')$('#officeInput').click();
+    if(a==='mobileDimension'){
+      closeSheet();
+      setMain('edit');
+      setTimeout(()=>applySubtool('dimension'),0);
+      showHint('実寸が分かる2点をドラッグ');
+    }
+    if(a==='mobileAssets'){
+      closeSheet();
+      setMain('edit');
+      showHint('下の素材一覧から置くものを選択');
+    }
+    if(a==='mobilePresent'){
+      state.outputTarget='presentation';
+      refreshHeader();
+      closeSheet();
+      setMain('edit');
+      state.showSourcePhoto=false;
+      syncSourcePhotoVisibility();
+      render();saveSoon();
+      showToast('お客様説明用の表示にしました');
+    }
+    if(a==='mobileHandoff'){
+      saveNow();
+      closeSheet();
+      await shareProject();
+    }
+    if(a==='clearbg'){
+      state.backgroundDataUrl=null;state.showSourcePhoto=false;syncSourcePhotoVisibility();render();saveSoon();closeSheet();showToast('元写真を削除');
+    }
+    if(a==='togglePhoto'){
+      state.showSourcePhoto=!state.showSourcePhoto;
+      syncSourcePhotoVisibility();saveSoon();openProjectSheet();
+    }
+    if(a==='qualityStandard'){
+      state.traceQuality='standard';saveSoon();openProjectSheet();showToast('標準精度に設定');
+    }
+    if(a==='qualityHigh'){
+      state.traceQuality='high';saveSoon();openProjectSheet();showToast('高精度に設定');
+    }
+    if(a==='qualityUltra'){
+      state.traceQuality='ultra';saveSoon();openProjectSheet();showToast('最高精度に設定');
+    }
+    if(a==='targetPpt'){
+      state.outputTarget='presentation';refreshHeader();render();saveSoon();openStartSheet();showToast('PowerPoint編集に設定');
+    }
+    if(a==='targetCad'){
+      state.outputTarget='cad';refreshHeader();render();saveSoon();openStartSheet();showToast('Jw_cad編集に設定');
+    }
+    if(a==='autoTrace'){closeSheet();setTimeout(runAutoTrace,100)}
+    if(a==='pptView'){state.outputTarget='presentation';refreshHeader();render();closeSheet();showToast('PowerPoint出力プレビュー')}
+    if(a==='cadView'){state.outputTarget='cad';refreshHeader();render();closeSheet();showToast('Jw_cad出力プレビュー')}
+    if(a==='pptx')exportPptxEditable();
+    if(a==='dxf')downloadDXF();
+    if(a==='xlsx')await exportXlsx();
+    if(a==='pdf')await exportPdf();
+    if(a==='json')downloadJSON();
+    if(a==='projectFile')downloadJSON();
+    if(a==='share')await shareProject();
+    if(a==='install')await installApp();
+
+    if(a==='saveNote'){
+      const value=$('#noteText').value.trim();if(!value)return showToast('注記を入力してください');
+      snapshot();state.objects.push({id:uid(),type:'note',kind:'note',x:+btn.dataset.x,y:+btn.dataset.y,text:value,label:value,source:'manual'});
+      render();saveSoon();closeSheet();showToast('注記を追加');
+    }
+    if(a==='saveDimension'){
+      const actual=parseFloat($('#actualMmInput').value);
+      if(!actual||actual<=0)return showToast('実寸をmmで入力してください');
+      snapshot();
+      const dim={
+        id:uid(),type:'dimension',kind:'dimension',
+        p1:{...pendingDimension.p1},p2:{...pendingDimension.p2},
+        mm:actual,manualMm:true,label:formatMm(actual),source:'manual'
+      };
+      state.objects.push(dim);
+      const result=commitDimensionValue(dim,actual,{quiet:true});
+      pendingDimension=null;
+      render();saveSoon();closeSheet();
+      if(result.conflicts?.length){
+        showToast(`寸法を保存。矛盾候補 ${result.conflicts.length}件`);
+      }else{
+        showToast('寸法をCOREへ保存し縮尺を補正しました');
+      }
+    }
+    if(a==='mobileQuickApply'){
+      const o=state.objects.find(x=>x.id===selectedId);
+      if(o){
+        snapshot();
+        const labelEl=document.getElementById('mobQuickLabel');
+        if(labelEl){
+          const value=labelEl.value.trim();
+          if(o.type==='note')o.text=value;
+          else o.label=value;
+        }
+        const mmEl=document.getElementById('mobQuickMm');
+        if(mmEl&&o.type==='dimension'){
+          const mm=parseFloat(mmEl.value);
+          if(Number.isFinite(mm)&&mm>0){
+            commitDimensionValue(o,mm,{quiet:true});
+          }
+        }
+        o.source='manual';
+        render();saveSoon();
+      }
+      closeSheet();
+      showToast('簡易修正を反映しました');
+    }
+    if(a==='mobileDuplicateSelected'){
+      closeSheet();
+      $('#duplicateBtn').click();
+    }
+    if(a==='mobileDeleteSelected'){
+      closeSheet();
+      $('#deleteBtn').click();
+    }
+    if(a==='saveProject'){
+      state.projectTitle=$('#projectNameInput').value.trim()||'無題の図面';
+      state.scaleMmPerUnit=parseFloat($('#scaleInput').value)||state.scaleMmPerUnit||10;
+      refreshHeader();saveSoon();closeSheet();showToast('案件設定を保存');
+    }
+  });
+}
+
+$('#moreBtn').onclick=openProjectSheet;
+$('#saveBtn').onclick=saveNow;
+$('#pcSaveBtn').onclick=saveNow;
+$('#pcFitBtn').onclick=fit;
+$('#pcOfficeImportBtn').onclick=()=>$('#officeInput').click();
+$('#pcConvertToDxfBtn').onclick=downloadDXF;
+$('#startFlowBtn').onclick=openStartSheet;
+$('#emptyStartBtn').onclick=openStartSheet;
+$('#undoBtn').onclick=undo;
+$('#redoBtn').onclick=redo;
+$('#fitBtn').onclick=fit;
+
+/* =========================================================
+   9. INIT
+========================================================= */
+refreshHeader();
+syncSourcePhotoVisibility();
+buildPcAssetPalette();
+render();setView({...DEFAULT_VIEW});setMain('start');
+setTimeout(()=>showHint('スマホ：撮る・トレース・配置・見せる / PC：詳細編集・変換・仕上げ',2700),500);
+
 })();
 </script>
 </body>
