@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<title>DKSC Camera Acceptance Test</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#f4f6f8;color:#172033}
+main{max-width:760px;margin:auto;padding:18px 14px 60px}
+h1{font-size:21px;margin:0 0 8px}
+h2{font-size:16px;margin:0 0 8px}
+p{line-height:1.6}
+.card{background:#fff;border:1px solid #dfe5ec;border-radius:16px;padding:14px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.status{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.badge{padding:6px 9px;border-radius:999px;background:#eef2f7;font-size:12px;font-weight:800}
+.ok{background:#dcfce7;color:#166534}
+.ng{background:#fee2e2;color:#991b1b}
+.warn{background:#fef3c7;color:#92400e}
+button,.labelBtn{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;border:0;border-radius:12px;background:#1d4ed8;color:white;font-size:15px;font-weight:900;margin:8px 0;text-decoration:none}
+.secondary{background:#334155}
+.danger{background:#991b1b}
+input[type=file]{position:absolute;left:-9999px;width:1px;height:1px;opacity:.001}
+pre{white-space:pre-wrap;word-break:break-word;background:#0f172a;color:#e2e8f0;padding:12px;border-radius:12px;font-size:12px;line-height:1.55}
+video,img{width:100%;max-height:420px;object-fit:contain;background:#111827;border-radius:12px;margin-top:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.small{font-size:12px;color:#64748b}
+.result{font-weight:800;margin-top:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>DKSC カメラ受入診断</h1>
+<p>第1段階 CAMERA-001 の原因を、アプリコード・ブラウザー・HTTPS・権限・サンドボックスに切り分けます。</p>
+
+<div class="card">
+<h2>0. 実行環境</h2>
+<div class="status" id="badges"></div>
+<pre id="env"></pre>
+</div>
+
+<div class="card">
+<h2>1. 直接 capture 入力</h2>
+<p>JavaScriptの <code>.click()</code> を使わず、HTMLのラベルから直接カメラ入力を開きます。</p>
+<label class="labelBtn" for="directCapture">背面カメラを直接開く</label>
+<input id="directCapture" type="file" accept="image/*" capture="environment">
+<div class="result" id="directResult">未実施</div>
+</div>
+
+<div class="card">
+<h2>2. v1.18と同じ方式</h2>
+<p>非表示の <code>input capture</code> を、ユーザーのボタン操作から <code>.click()</code> します。</p>
+<button id="programmaticBtn">v1.18方式でカメラを開く</button>
+<input id="programmaticCapture" type="file" accept="image/*" capture="environment">
+<div class="result" id="programmaticResult">未実施</div>
+</div>
+
+<div class="card">
+<h2>3. getUserMedia方式</h2>
+<p>Chromeからカメラ権限を直接要求します。HTTPS / Secure Contextが必要です。</p>
+<div class="grid">
+<button id="gumBtn">カメラ権限を要求</button>
+<button id="snapBtn" class="secondary" disabled>撮影</button>
+</div>
+<video id="video" playsinline autoplay muted hidden></video>
+<canvas id="canvas" hidden></canvas>
+<div class="result" id="gumResult">未実施</div>
+</div>
+
+<div class="card">
+<h2>写真読込結果</h2>
+<img id="preview" alt="撮影画像プレビュー" hidden>
+<div class="result" id="imageResult">まだ写真はありません</div>
+</div>
+
+<div class="card">
+<h2>診断ログ</h2>
+<pre id="log"></pre>
+<button id="copyBtn" class="secondary">診断結果をコピー</button>
+</div>
+
+<div class="card">
+<h2>判定の見方</h2>
+<p class="small">
+A. Chrome/PWAで「直接capture」と「v1.18方式」が両方成功 → v1.18コードは原則正常。ChatGPTプレビュー等の環境制限が濃厚。<br>
+B. 直接capture成功・v1.18方式失敗 → 非表示inputのprogrammatic click経路をカメラ関連だけ修正。<br>
+C. capture失敗・getUserMedia成功 → Android/Chromeのcapture属性経路の相性。getUserMedia fallbackを追加候補。<br>
+D. getUserMediaがNotAllowedError → Chrome権限またはiframe/Permissions Policy。<br>
+E. getUserMediaが「Secure Context=false」またはmediaDevicesなし → HTTPS等の実行環境問題。
+</p>
+</div>
+</main>
+
+<script>
+(()=>{
+'use strict';
+const $=s=>document.querySelector(s);
+const logs=[];
+const log=(...a)=>{
+  const msg=a.map(x=>typeof x==='string'?x:JSON.stringify(x)).join(' ');
+  logs.push(new Date().toLocaleTimeString()+' '+msg);
+  $('#log').textContent=logs.join('\n');
+};
+const setResult=(id,msg,ok=null)=>{
+  const el=$(id); el.textContent=msg;
+  el.style.color=ok===true?'#166534':ok===false?'#991b1b':'#334155';
+};
+const showImage=file=>{
+  if(!file)return;
+  const url=URL.createObjectURL(file);
+  const img=$('#preview');
+  img.src=url;img.hidden=false;
+  setResult('#imageResult',`${file.name||'camera.jpg'} / ${Math.round(file.size/1024)} KB`,true);
+  log('image loaded',file.type,file.size);
+};
+
+const env={
+  href:location.href,
+  protocol:location.protocol,
+  origin:location.origin,
+  isSecureContext:window.isSecureContext,
+  topLevel:window.top===window.self,
+  userAgent:navigator.userAgent,
+  mediaDevices:!!navigator.mediaDevices,
+  getUserMedia:!!navigator.mediaDevices?.getUserMedia,
+  standalone:matchMedia('(display-mode: standalone)').matches,
+  visibility:document.visibilityState,
+  permissionsPolicyCamera:
+    document.permissionsPolicy?.allowsFeature?.('camera') ??
+    document.featurePolicy?.allowsFeature?.('camera') ??
+    'unknown'
+};
+$('#env').textContent=JSON.stringify(env,null,2);
+const badges=$('#badges');
+const badge=(text,cls)=>{const b=document.createElement('span');b.className='badge '+cls;b.textContent=text;badges.appendChild(b)};
+badge(env.isSecureContext?'Secure Context':'Not Secure',env.isSecureContext?'ok':'ng');
+badge(env.topLevel?'Top-level':'iframe/sandbox',env.topLevel?'ok':'warn');
+badge(env.getUserMedia?'getUserMediaあり':'getUserMediaなし',env.getUserMedia?'ok':'ng');
+badge(env.standalone?'PWA standalone':'Browser/preview',env.standalone?'ok':'warn');
+log('environment',env);
+
+(async()=>{
+  try{
+    if(navigator.permissions?.query){
+      const p=await navigator.permissions.query({name:'camera'});
+      log('camera permission',p.state);
+      p.onchange=()=>log('camera permission changed',p.state);
+    }
+  }catch(e){log('permissions.query camera unsupported',e.name,e.message)}
+})();
+
+$('#directCapture').addEventListener('change',e=>{
+  const f=e.target.files?.[0];
+  if(f){setResult('#directResult','成功：直接captureで画像取得',true);showImage(f)}
+  else setResult('#directResult','ファイル未取得',false);
+});
+
+$('#programmaticBtn').addEventListener('click',()=>{
+  log('programmatic user click',navigator.userActivation?.isActive);
+  $('#programmaticCapture').click();
+});
+$('#programmaticCapture').addEventListener('change',e=>{
+  const f=e.target.files?.[0];
+  if(f){setResult('#programmaticResult','成功：v1.18方式で画像取得',true);showImage(f)}
+  else setResult('#programmaticResult','ファイル未取得',false);
+});
+
+let stream=null;
+$('#gumBtn').addEventListener('click',async()=>{
+  try{
+    if(!window.isSecureContext){
+      setResult('#gumResult','失敗：Secure Contextではありません。HTTPSで開いてください。',false);
+      log('getUserMedia blocked: insecure context');
+      return;
+    }
+    if(!navigator.mediaDevices?.getUserMedia){
+      setResult('#gumResult','失敗：navigator.mediaDevices.getUserMedia がありません。',false);
+      log('getUserMedia unavailable');
+      return;
+    }
+    stream=await navigator.mediaDevices.getUserMedia({
+      video:{facingMode:{ideal:'environment'}},
+      audio:false
+    });
+    const v=$('#video');
+    v.srcObject=stream;v.hidden=false;
+    $('#snapBtn').disabled=false;
+    setResult('#gumResult','成功：カメラストリーム取得',true);
+    log('getUserMedia success',stream.getVideoTracks().map(t=>t.getSettings()));
+  }catch(e){
+    setResult('#gumResult',`失敗：${e.name} / ${e.message}`,false);
+    log('getUserMedia error',e.name,e.message);
+  }
+});
+
+$('#snapBtn').addEventListener('click',async()=>{
+  const v=$('#video');
+  if(!v.videoWidth)return;
+  const c=$('#canvas');
+  c.width=v.videoWidth;c.height=v.videoHeight;
+  c.getContext('2d').drawImage(v,0,0);
+  const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.9));
+  const f=new File([blob],'getUserMedia-camera.jpg',{type:'image/jpeg'});
+  showImage(f);
+  setResult('#gumResult','成功：getUserMediaで撮影・画像化',true);
+  log('snapshot success',v.videoWidth,v.videoHeight,blob.size);
+});
+
+$('#copyBtn').addEventListener('click',async()=>{
+  const text='DKSC CAMERA TEST\n'+JSON.stringify(env,null,2)+'\n\n'+logs.join('\n');
+  try{await navigator.clipboard.writeText(text);setResult('#imageResult','診断結果をコピーしました',true)}
+  catch{prompt('この内容をコピーしてください',text)}
+});
+
+if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost')){
+  addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(()=>log('service worker registered')).catch(e=>log('sw error',e.message)));
+}
+})();
+</script>
+</body>
+</html>
