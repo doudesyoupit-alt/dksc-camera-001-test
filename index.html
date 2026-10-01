@@ -193,7 +193,7 @@ button,input{font:inherit}button{cursor:pointer}
         </defs>
         <rect x="0" y="0" width="1200" height="800" fill="#f6f8fb"/>
         <rect x="0" y="0" width="1200" height="800" fill="url(#grid)"/>
-        <image id="bgImage" x="0" y="0" width="1200" height="800" preserveAspectRatio="xMidYMid meet" opacity=".22" style="display:none"/>
+        <image id="bgImage" x="0" y="0" width="1200" height="800" preserveAspectRatio="xMidYMid meet" opacity=".34" style="display:none"/>
         <g id="objectLayer"></g>
         <g id="previewLayer"></g>
         <g id="selectionLayer"></g>
@@ -1405,13 +1405,26 @@ function imageFromDataUrl(dataUrl){
   });
 }
 function traceConfig(){
+  // TRACE-001: 全画像対象は維持し、品質差は「拾う細かさ」と後処理強度だけで調整する。
   if(state.traceQuality==='standard'){
-    return {maxSide:440,highPercentile:.87,lowRatio:.42,epsilon:1.9,minChain:16,maxPaths:120};
+    return {
+      maxSide:440,highPercentile:.87,lowRatio:.42,epsilon:1.9,maxPaths:120,
+      minComponentPx:6,minComponentSpan:5,minPathRatio:.014,
+      bridgeGap:2.6,bridgeAngle:44,strongShortRatio:1.30
+    };
   }
   if(state.traceQuality==='ultra'){
-    return {maxSide:820,highPercentile:.80,lowRatio:.34,epsilon:.72,minChain:8,maxPaths:240};
+    return {
+      maxSide:820,highPercentile:.80,lowRatio:.34,epsilon:.72,maxPaths:240,
+      minComponentPx:5,minComponentSpan:4,minPathRatio:.010,
+      bridgeGap:3.8,bridgeAngle:50,strongShortRatio:1.22
+    };
   }
-  return {maxSide:620,highPercentile:.84,lowRatio:.38,epsilon:1.15,minChain:10,maxPaths:180};
+  return {
+    maxSide:620,highPercentile:.84,lowRatio:.38,epsilon:1.15,maxPaths:180,
+    minComponentPx:6,minComponentSpan:5,minPathRatio:.012,
+    bridgeGap:3.2,bridgeAngle:47,strongShortRatio:1.26
+  };
 }
 function percentileFromSorted(sorted,p){
   if(!sorted.length)return 0;
@@ -1535,23 +1548,7 @@ function hysteresisEdges(nms,w,h,cfg){
     }
   }
   for(let i=0;i<edges.length;i++)edges[i]=edges[i]===2?1:0;
-  return edges;
-}
-function removeIsolatedEdges(edges,w,h){
-  const src=edges.slice();
-  for(let y=1;y<h-1;y++){
-    for(let x=1;x<w-1;x++){
-      const i=y*w+x;
-      if(!src[i])continue;
-      let n=0;
-      for(let yy=-1;yy<=1;yy++)for(let xx=-1;xx<=1;xx++){
-        if(!xx&&!yy)continue;
-        n+=src[(y+yy)*w+(x+xx)]?1:0;
-      }
-      if(n<=1)edges[i]=0;
-    }
-  }
-  return edges;
+  return {edges,high,low};
 }
 function edgeNeighbors(idx,edges,w,h){
   const x=idx%w,y=(idx/w)|0;
@@ -1567,7 +1564,145 @@ function edgeNeighbors(idx,edges,w,h){
   }
   return out;
 }
+function edgeNeighborCount(idx,edges,w,h){
+  return edgeNeighbors(idx,edges,w,h).length;
+}
+function drawBinaryLine(edges,w,h,a,b){
+  let x0=a%w,y0=(a/w)|0,x1=b%w,y1=(b/w)|0;
+  const dx=Math.abs(x1-x0),sx=x0<x1?1:-1;
+  const dy=-Math.abs(y1-y0),sy=y0<y1?1:-1;
+  let err=dx+dy;
+  while(true){
+    if(x0>=0&&x0<w&&y0>=0&&y0<h)edges[y0*w+x0]=1;
+    if(x0===x1&&y0===y1)break;
+    const e2=2*err;
+    if(e2>=dy){err+=dy;x0+=sx}
+    if(e2<=dx){err+=dx;y0+=sy}
+  }
+}
+function endpointOutwardVector(idx,edges,w,h){
+  const startX=idx%w,startY=(idx/w)|0;
+  let prev=-1,cur=idx,last=idx;
+  for(let step=0;step<5;step++){
+    const options=edgeNeighbors(cur,edges,w,h).filter(n=>n!==prev);
+    if(!options.length)break;
+    let next=options[0];
+    if(options.length>1&&prev>=0){
+      const px=prev%w,py=(prev/w)|0,cx=cur%w,cy=(cur/w)|0;
+      const vx=cx-px,vy=cy-py;
+      let best=-Infinity;
+      for(const n of options){
+        const nx=n%w,ny=(n/w)|0;
+        const nvx=nx-cx,nvy=ny-cy;
+        const d=(vx*nvx+vy*nvy)/(Math.hypot(vx,vy)*Math.hypot(nvx,nvy)||1);
+        if(d>best){best=d;next=n}
+      }
+    }
+    prev=cur;cur=next;last=cur;
+  }
+  const lx=last%w,ly=(last/w)|0;
+  const vx=startX-lx,vy=startY-ly;
+  const len=Math.hypot(vx,vy)||1;
+  return{x:vx/len,y:vy/len};
+}
+function bridgeSmallEdgeGaps(edges,w,h,cfg){
+  const scale=Math.max(w,h)/620;
+  const maxGap=Math.max(1.8,Math.min(5.5,cfg.bridgeGap*Math.max(.72,scale)));
+  const cosLimit=Math.cos(cfg.bridgeAngle*Math.PI/180);
+  const endpoints=[];
+  for(let i=0;i<edges.length;i++){
+    if(edges[i]&&edgeNeighborCount(i,edges,w,h)===1){
+      endpoints.push({idx:i,x:i%w,y:(i/w)|0,out:endpointOutwardVector(i,edges,w,h)});
+    }
+  }
+  if(endpoints.length<2)return 0;
+
+  const cell=Math.max(2,Math.ceil(maxGap));
+  const buckets=new Map();
+  const key=(x,y)=>`${x},${y}`;
+  endpoints.forEach((p,i)=>{
+    const k=key(Math.floor(p.x/cell),Math.floor(p.y/cell));
+    if(!buckets.has(k))buckets.set(k,[]);
+    buckets.get(k).push(i);
+  });
+
+  const candidates=[];
+  for(let i=0;i<endpoints.length;i++){
+    const a=endpoints[i],cx=Math.floor(a.x/cell),cy=Math.floor(a.y/cell);
+    for(let yy=-1;yy<=1;yy++)for(let xx=-1;xx<=1;xx++){
+      const list=buckets.get(key(cx+xx,cy+yy))||[];
+      for(const j of list){
+        if(j<=i)continue;
+        const b=endpoints[j],dx=b.x-a.x,dy=b.y-a.y,dist=Math.hypot(dx,dy);
+        if(dist<1.35||dist>maxGap)continue;
+        const ux=dx/dist,uy=dy/dist;
+        const alignA=a.out.x*ux+a.out.y*uy;
+        const alignB=b.out.x*(-ux)+b.out.y*(-uy);
+        const closeEnough=dist<=2.2&&alignA>.15&&alignB>.15;
+        if(!closeEnough&&(alignA<cosLimit||alignB<cosLimit))continue;
+        const score=dist+(2-alignA-alignB)*maxGap*.45;
+        candidates.push({i,j,score});
+      }
+    }
+  }
+  candidates.sort((a,b)=>a.score-b.score);
+  const used=new Uint8Array(endpoints.length);
+  let joined=0;
+  for(const c of candidates){
+    if(used[c.i]||used[c.j])continue;
+    drawBinaryLine(edges,w,h,endpoints[c.i].idx,endpoints[c.j].idx);
+    used[c.i]=used[c.j]=1;joined++;
+  }
+  return joined;
+}
+function filterSmallEdgeComponents(edges,nms,w,h,high,cfg){
+  const visited=new Uint8Array(edges.length);
+  const minPixels=Math.max(4,Math.round(cfg.minComponentPx*Math.max(.78,Math.max(w,h)/620)));
+  const minSpan=Math.max(4,Math.round(cfg.minComponentSpan*Math.max(.78,Math.max(w,h)/620)));
+  const offsets=[-w-1,-w,-w+1,-1,1,w-1,w,w+1];
+
+  for(let i=0;i<edges.length;i++){
+    if(!edges[i]||visited[i])continue;
+    const stack=[i],component=[];
+    visited[i]=1;
+    let minX=w,maxX=0,minY=h,maxY=0,strength=0;
+    while(stack.length){
+      const cur=stack.pop();component.push(cur);
+      const x=cur%w,y=(cur/w)|0;
+      if(x<minX)minX=x;if(x>maxX)maxX=x;if(y<minY)minY=y;if(y>maxY)maxY=y;
+      strength+=nms[cur]||0;
+      for(const d of offsets){
+        const n=cur+d;
+        if(n<0||n>=edges.length||visited[n]||!edges[n])continue;
+        const nx=n%w,ny=(n/w)|0;
+        if(Math.abs(nx-x)>1||Math.abs(ny-y)>1)continue;
+        visited[n]=1;stack.push(n);
+      }
+    }
+    const span=Math.max(maxX-minX+1,maxY-minY+1);
+    const avgStrength=strength/Math.max(1,component.length);
+    const clearlyReal=avgStrength>=high*1.32;
+    if(component.length<minPixels&&span<minSpan&&!clearlyReal){
+      for(const idx of component)edges[idx]=0;
+    }
+  }
+  return edges;
+}
 function edgeKey(a,b){return a<b?`${a}:${b}`:`${b}:${a}`}
+function chooseContinuation(prev,cur,options,w){
+  if(options.length===1)return options[0];
+  const px=prev%w,py=(prev/w)|0,cx=cur%w,cy=(cur/w)|0;
+  const vx=cx-px,vy=cy-py;
+  const vl=Math.hypot(vx,vy)||1;
+  let best=options[0],bestScore=-Infinity;
+  for(const n of options){
+    const nx=n%w,ny=(n/w)|0;
+    const nvx=nx-cx,nvy=ny-cy,nl=Math.hypot(nvx,nvy)||1;
+    const straight=(vx*nvx+vy*nvy)/(vl*nl);
+    if(straight>bestScore){bestScore=straight;best=n}
+  }
+  return best;
+}
 function walkEdgeChain(start,next,edges,w,h,visited,maxLen=20000){
   const chain=[start,next];
   visited.add(edgeKey(start,next));
@@ -1576,8 +1711,8 @@ function walkEdgeChain(start,next,edges,w,h,visited,maxLen=20000){
   while(chain.length<maxLen){
     const ns=edgeNeighbors(cur,edges,w,h).filter(n=>n!==prev);
     const options=ns.filter(n=>!visited.has(edgeKey(cur,n)));
-    if(options.length!==1)break;
-    const n=options[0];
+    if(!options.length)break;
+    const n=chooseContinuation(prev,cur,options,w);
     visited.add(edgeKey(cur,n));
     chain.push(n);
     prev=cur;cur=n;
@@ -1637,6 +1772,37 @@ function polylineLength(points){
   for(let i=1;i<points.length;i++)n+=distance(points[i-1],points[i]);
   return n;
 }
+function pixelPolylineLength(chain,w){
+  let n=0;
+  for(let i=1;i<chain.length;i++){
+    const a=chain[i-1],b=chain[i];
+    n+=Math.hypot((b%w)-(a%w),((b/w)|0)-((a/w)|0));
+  }
+  return n;
+}
+function traceChainMetrics(chain,nms,edges,w,h,high){
+  let minX=w,maxX=0,minY=h,maxY=0,strength=0;
+  for(const idx of chain){
+    const x=idx%w,y=(idx/w)|0;
+    if(x<minX)minX=x;if(x>maxX)maxX=x;if(y<minY)minY=y;if(y>maxY)maxY=y;
+    strength+=nms[idx]||0;
+  }
+  const pxLength=pixelPolylineLength(chain,w);
+  const diag=Math.hypot(w,h)||1;
+  const spanX=(maxX-minX+1)/w,spanY=(maxY-minY+1)/h;
+  const areaCoverage=Math.sqrt(Math.max(0,(maxX-minX+1)*(maxY-minY+1)/(w*h)));
+  const coverage=Math.max(spanX,spanY,areaCoverage);
+  const strengthRatio=(strength/Math.max(1,chain.length))/Math.max(1,high);
+  const closed=Math.hypot((chain[0]%w)-(chain[chain.length-1]%w),((chain[0]/w)|0)-((chain[chain.length-1]/w)|0))<=2.2;
+  const firstDegree=edgeNeighborCount(chain[0],edges,w,h);
+  const lastDegree=edgeNeighborCount(chain[chain.length-1],edges,w,h);
+  const continuity=closed?1:Math.min(1,.56+(firstDegree>1?.18:0)+(lastDegree>1?.18:0)+Math.min(.08,chain.length/400));
+  const lengthNorm=Math.min(1,pxLength/(diag*.22));
+  const strengthNorm=Math.min(1,strengthRatio/1.12);
+  const coverageNorm=Math.min(1,coverage/.24);
+  const score=lengthNorm*.36+continuity*.22+strengthNorm*.24+coverageNorm*.18;
+  return{pxLength,coverage,strengthRatio,continuity,score,closed};
+}
 async function tracePhotoToVectors(){
   const cfg=traceConfig();
   const img=await imageFromDataUrl(state.backgroundDataUrl);
@@ -1655,29 +1821,44 @@ async function tracePhotoToVectors(){
   const blurred=gaussianBlur5(gray,w,h);
   const {mag,dir}=sobelMagnitudeDirection(blurred,w,h);
   const nms=nonMaximumSuppress(mag,dir,w,h);
-  const edges=removeIsolatedEdges(hysteresisEdges(nms,w,h,cfg),w,h);
-  const rawChains=traceEdgeChains(edges,w,h);
+  const hysteresis=hysteresisEdges(nms,w,h,cfg);
+  const edges=hysteresis.edges;
 
+  // TRACE-001: 1〜数pxの小さな切れ目だけを、端点方向が一致する場合に補完。
+  bridgeSmallEdgeGaps(edges,w,h,cfg);
+  // 微小な弱い連結成分を落とす。強い細線はサイズが小さくても保持する。
+  filterSmallEdgeComponents(edges,nms,w,h,hysteresis.high,cfg);
+
+  const rawChains=traceEdgeChains(edges,w,h);
   const boardScale=Math.min(1200/w,800/h);
   const ox=(1200-w*boardScale)/2;
   const oy=(800-h*boardScale)/2;
+  const diag=Math.hypot(w,h)||1;
+  const minPathPx=Math.max(7,diag*cfg.minPathRatio);
+  const adaptiveEpsilon=cfg.epsilon*Math.max(.72,Math.min(1.45,Math.max(w,h)/620));
 
   const paths=[];
   for(const chain of rawChains){
-    if(chain.length<cfg.minChain)continue;
+    if(chain.length<3)continue;
+    const metrics=traceChainMetrics(chain,nms,edges,w,h,hysteresis.high);
+    const isolated=edgeNeighborCount(chain[0],edges,w,h)<=1&&edgeNeighborCount(chain[chain.length-1],edges,w,h)<=1;
+    const strongShort=metrics.strengthRatio>=cfg.strongShortRatio&&metrics.pxLength>=minPathPx*.55;
+    const spatiallyRelevant=metrics.coverage>=.035&&metrics.pxLength>=minPathPx*.70;
+    if(metrics.pxLength<minPathPx&&!strongShort&&!spatiallyRelevant)continue;
+    if(isolated&&metrics.pxLength<minPathPx*1.28&&metrics.strengthRatio<cfg.strongShortRatio&&metrics.coverage<.045)continue;
+
     const px=chain.map(i=>({x:i%w,y:(i/w)|0}));
-    const simplified=simplifyRDP(px,cfg.epsilon);
+    const simplified=simplifyRDP(px,adaptiveEpsilon);
     if(simplified.length<2)continue;
 
     const mapped=simplified.map(p=>({
       x:ox+p.x*boardScale,
       y:oy+p.y*boardScale
     }));
-
     const len=polylineLength(mapped);
-    if(len<18)continue;
+    if(len<14&&!strongShort)continue;
 
-    const closed=distance(mapped[0],mapped[mapped.length-1])<boardScale*2.2;
+    const closed=metrics.closed||distance(mapped[0],mapped[mapped.length-1])<boardScale*2.2;
     paths.push({
       id:uid(),
       type:'trace',
@@ -1686,12 +1867,16 @@ async function tracePhotoToVectors(){
       closed,
       length:len,
       label:'トレース線',
-      source:'auto'
+      source:'auto',
+      _tracePriority:metrics.score
     });
   }
 
-  paths.sort((a,b)=>b.length-a.length);
-  return paths.slice(0,cfg.maxPaths);
+  // 長さだけではなく、連続性・エッジ強度・画面占有範囲を含む優先度で並べる。
+  paths.sort((a,b)=>(b._tracePriority-a._tracePriority)||(b.length-a.length));
+  const selected=paths.slice(0,cfg.maxPaths);
+  for(const p of selected)delete p._tracePriority;
+  return selected;
 }
 async function runAutoTrace(){
   if(!state.backgroundDataUrl){
@@ -1715,7 +1900,8 @@ async function runAutoTrace(){
     }
 
     state.objects.push(...traced);
-    state.showSourcePhoto=false;
+    // TRACE-001: 現場可視化では元写真を背景として保持し、線・素材を重ねる。
+    state.showSourcePhoto=true;
     syncSourcePhotoVisibility();
     render();
     saveSoon();
@@ -1970,7 +2156,8 @@ function wireSheet(){
       refreshHeader();
       closeSheet();
       setMain('edit');
-      state.showSourcePhoto=false;
+      // TRACE-001: お客様説明用でも写真背景を保持。表示／非表示は案件設定から切替可能。
+      state.showSourcePhoto=!!state.backgroundDataUrl;
       syncSourcePhotoVisibility();
       render();saveSoon();
       showToast('お客様説明用の表示にしました');
