@@ -1,0 +1,104 @@
+name: VDRAW MOBILE 006 Debug APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [validation]
+    paths:
+      - 'prototype/vdraw-mobile-006/**'
+      - '.github/workflows/vdraw-mobile-006-debug.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vdraw-mobile-006-debug-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  debug-apk:
+    if: github.ref == 'refs/heads/validation' && github.repository == 'doudesyoupit-alt/dksc-camera-001-test'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: bash
+        working-directory: prototype/vdraw-mobile-006
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_RUN_ID: ${{ github.run_id }}
+      VDRAW_COMMIT_SHA: ${{ github.sha }}
+    steps:
+      - name: Checkout exact validation commit
+        uses: actions/checkout@v7
+        timeout-minutes: 2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Confirm isolated project exists
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        run: timeout -k 5s 60s python3 scripts/check-ci-source.py
+      - name: Node
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        uses: actions/setup-node@v7
+        timeout-minutes: 2
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: JDK
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        uses: actions/setup-java@v6
+        timeout-minutes: 2
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+          cache-dependency-path: prototype/vdraw-mobile-006/android/gradle/wrapper/gradle-wrapper.properties
+      - name: Use runner Android SDK
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/ci
+          test -n "${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          vdraw_sdk_root="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+          timeout -k 5s 120s "$vdraw_sdk_root/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0' > evidence/ci/sdk.log 2>&1
+      - name: Install locked dependencies
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        run: timeout -k 5s 120s npm ci --no-audit --no-fund > evidence/ci/npm-ci.log 2>&1
+      - name: Build web native bridge and sync existing Android project
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        run: timeout -k 5s 120s npm run android:sync > evidence/ci/sync.log 2>&1
+      - name: Android structure
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        run: timeout -k 5s 60s python3 tests/native-assets-006.py > evidence/ci/native-assets.log 2>&1
+      - name: Bounded debug build only
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        run: timeout -k 5s 180s python3 scripts/build-debug.py > evidence/ci/build-result.log 2>&1
+      - name: Inspect actual APK and record metadata
+        if: hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        run: timeout -k 5s 120s python3 scripts/check-apk.py evidence/VDRAW-MOBILE-006-debug.apk --output evidence/ci/APK-report.json
+      - name: APK artifact only after successful build and inspection
+        if: success() && hashFiles('prototype/vdraw-mobile-006/evidence/VDRAW-MOBILE-006-debug.apk') != ''
+        uses: actions/upload-artifact@v7
+        timeout-minutes: 2
+        with:
+          name: VDRAW-MOBILE-006-debug-${{ github.run_id }}
+          path: |
+            prototype/vdraw-mobile-006/evidence/VDRAW-MOBILE-006-debug.apk
+            prototype/vdraw-mobile-006/evidence/APK-SHA256.txt
+            prototype/vdraw-mobile-006/evidence/ci/APK-report.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve diagnostics even if build is blocked
+        if: always() && hashFiles('prototype/vdraw-mobile-006/package.json') != ''
+        uses: actions/upload-artifact@v7
+        timeout-minutes: 2
+        with:
+          name: VDRAW-MOBILE-006-build-logs-${{ github.run_id }}
+          path: |
+            prototype/vdraw-mobile-006/evidence/ci/*.log
+            prototype/vdraw-mobile-006/evidence/ci/*.json
+            prototype/vdraw-mobile-006/evidence/android-build.log
+            prototype/vdraw-mobile-006/evidence/android-environment.json
+          if-no-files-found: warn
+          retention-days: 14
