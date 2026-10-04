@@ -26,7 +26,8 @@ concurrency:
 
 jobs:
   debug-apk:
-    if: github.ref == 'refs/heads/validation' && github.repository == 'doudesyoupit-alt/dksc-camera-001-test'
+    # Verification-only maintenance commits preserve the already inspected debug APK.
+    if: github.ref == 'refs/heads/validation' && github.repository == 'doudesyoupit-alt/dksc-camera-001-test' && !contains(github.event.head_commit.message, '[verification-only]')
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     defaults:
@@ -134,7 +135,9 @@ jobs:
           node-version: '24'
           package-manager-cache: false
       - name: Install locked benchmark dependency
-        run: timeout -k 5s 120s npm ci --no-audit --no-fund
+        run: |
+          mkdir -p evidence
+          timeout -k 5s 120s npm ci --no-audit --no-fund
       - name: Single 500 / 2000 / 5000 browser pass
         if: inputs.measure_performance == true
         run: timeout -k 5s 120s node tests/performance-final-006.mjs
