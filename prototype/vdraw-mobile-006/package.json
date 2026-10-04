@@ -1,0 +1,33 @@
+{
+  "name": "vdraw-mobile-independent-prototype",
+  "private": true,
+  "version": "0.6.0",
+  "type": "module",
+  "scripts": {
+    "start": "python3 serve.py",
+    "test:core": "node --test tests/core.test.mjs",
+    "build:bridge": "esbuild native/bridge-entry.js --bundle --format=esm --minify --outfile=web/vendor/native-bridge.js",
+    "android:sync": "npm run build:bridge && cap sync android",
+    "android:debug": "python3 scripts/build-debug.py",
+    "android:check": "python3 scripts/check-android-env.py",
+    "test:native": "node --test tests/native-shell.test.mjs",
+    "test:vision": "node --test tests/vision-provider.test.mjs",
+    "vision:check": "node server/vision-cli.mjs --check"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/camera": "8.2.5",
+    "@capacitor/cli": "8.5.2",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/filesystem": "8.1.4",
+    "@capacitor/keyboard": "8.0.6",
+    "@capacitor/share": "8.0.3",
+    "@capacitor/splash-screen": "8.0.2",
+    "@capacitor/status-bar": "8.0.4",
+    "esbuild": "0.28.2"
+  }
+}

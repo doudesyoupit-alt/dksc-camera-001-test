@@ -102,3 +102,45 @@ jobs:
             prototype/vdraw-mobile-006/evidence/android-environment.json
           if-no-files-found: warn
           retention-days: 14
+
+  final-performance:
+    if: github.ref == 'refs/heads/validation' && github.repository == 'doudesyoupit-alt/dksc-camera-001-test'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    defaults:
+      run:
+        working-directory: prototype/vdraw-mobile-006
+        shell: bash
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@v7
+        timeout-minutes: 2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        timeout-minutes: 2
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install locked benchmark dependency
+        run: timeout -k 5s 120s npm ci --no-audit --no-fund
+      - name: Single 500 / 2000 / 5000 browser pass
+        run: timeout -k 5s 120s node tests/performance-final-006.mjs
+      - name: Changed storage isolation and safety
+        run: |
+          timeout -k 5s 120s node tests/storage-extra-006.mjs
+          timeout -k 5s 120s node tests/storage-safety-006.mjs
+      - name: Preserve measured results or explicit blocker
+        if: always()
+        uses: actions/upload-artifact@v7
+        timeout-minutes: 2
+        with:
+          name: VDRAW-MOBILE-006-performance-${{ github.run_id }}
+          path: |
+            prototype/vdraw-mobile-006/evidence/storage-*-006-results.json
+            prototype/vdraw-mobile-006/evidence/performance-final-006.json
+            prototype/vdraw-mobile-006/evidence/performance-*-final-390.png
+          if-no-files-found: warn
+          retention-days: 14
