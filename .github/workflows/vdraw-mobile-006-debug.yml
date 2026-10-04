@@ -2,6 +2,15 @@ name: VDRAW MOBILE 006 Debug APK
 
 on:
   workflow_dispatch:
+    inputs:
+      measure_performance:
+        description: 'Explicitly request a new single performance pass (006 final pass is already archived)'
+        type: boolean
+        default: false
+      extended_storage:
+        description: 'Request extended storage cases (initial 006 run already passed eight cases)'
+        type: boolean
+        default: false
   push:
     branches: [validation]
     paths:
@@ -127,11 +136,13 @@ jobs:
       - name: Install locked benchmark dependency
         run: timeout -k 5s 120s npm ci --no-audit --no-fund
       - name: Single 500 / 2000 / 5000 browser pass
+        if: inputs.measure_performance == true
         run: timeout -k 5s 120s node tests/performance-final-006.mjs
+      - name: Extended storage (explicit request only)
+        if: inputs.extended_storage == true
+        run: timeout -k 5s 120s node tests/storage-extra-006.mjs
       - name: Changed storage isolation and safety
-        run: |
-          timeout -k 5s 120s node tests/storage-extra-006.mjs
-          timeout -k 5s 120s node tests/storage-safety-006.mjs
+        run: timeout -k 5s 120s node tests/storage-safety-006.mjs
       - name: Preserve measured results or explicit blocker
         if: always()
         uses: actions/upload-artifact@v7
