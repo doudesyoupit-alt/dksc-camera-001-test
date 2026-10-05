@@ -1,0 +1,1374 @@
+{
+  "limited": {
+    "schema": "vdraw-regression-run/1",
+    "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+    "profile": "limited",
+    "suiteComplete": false,
+    "pass": 16,
+    "fail": 0,
+    "blocked": 0,
+    "skip": 0,
+    "durationSeconds": 4.465,
+    "rawEntryCount": 45,
+    "mappedHistoricalEntries": {
+      "tests/native-assets-003.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype003/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/native-assets-004.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype004/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/native-assets-005.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype005/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/native-assets-006.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype006/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/storage-extra-005.mjs": {
+        "replacement": "tests/storage-extra-006.mjs",
+        "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
+      },
+      "tests/gestures-update.mjs": {
+        "replacement": "tests/gestures-update-007.mjs",
+        "reason": "002 PWA namespace hardcoded;007 copy retains every assertion and substitutes only SW version/cache namespace."
+      }
+    },
+    "newEntryDiscovery": true,
+    "runCopyTransforms": [],
+    "rows": [
+      {
+        "id": "core.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/core.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "core.test.mjs.log"
+      },
+      {
+        "id": "command-update-004.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/command-update-004.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.616,
+        "logFile": "command-update-004.test.mjs.log"
+      },
+      {
+        "id": "history-codec-005.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/history-codec-005.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.165,
+        "logFile": "history-codec-005.test.mjs.log"
+      },
+      {
+        "id": "changes-006.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/changes-006.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "changes-006.test.mjs.log"
+      },
+      {
+        "id": "native-shell.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/native-shell.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.165,
+        "logFile": "native-shell.test.mjs.log"
+      },
+      {
+        "id": "native-io-005.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/native-io-005.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.164,
+        "logFile": "native-io-005.test.mjs.log"
+      },
+      {
+        "id": "vision-contract-005.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/vision-contract-005.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "vision-contract-005.test.mjs.log"
+      },
+      {
+        "id": "vision-provider.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/vision-provider.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "vision-provider.test.mjs.log"
+      },
+      {
+        "id": "ui-theme-007.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/ui-theme-007.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.167,
+        "logFile": "ui-theme-007.test.mjs.log"
+      },
+      {
+        "id": "bounded-process-005.py",
+        "command": [
+          "python3",
+          "tests/bounded-process-005.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.517,
+        "logFile": "bounded-process-005.py.log"
+      },
+      {
+        "id": "native-assets-007.py",
+        "command": [
+          "python3",
+          "tests/native-assets-007.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.032,
+        "logFile": "native-assets-007.py.log"
+      },
+      {
+        "id": "engine-001-regression.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/engine-001-regression.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.315,
+        "logFile": "engine-001-regression.test.mjs.log"
+      },
+      {
+        "id": "input-001-regression.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/input-001-regression.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "input-001-regression.test.mjs.log"
+      },
+      {
+        "id": "integration-offline-round1.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/integration-offline-round1.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "integration-offline-round1.test.mjs.log"
+      },
+      {
+        "id": "output-race-regression.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/output-race-regression.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.315,
+        "logFile": "output-race-regression.test.mjs.log"
+      },
+      {
+        "id": "qa-round2-independent.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/qa-round2-independent.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "limited",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.716,
+        "logFile": "qa-round2-independent.test.mjs.log"
+      }
+    ],
+    "scope": "Software harnesses only; no Android device or signing proof. PASS is not full acceptance without separate QA/P0/P1/006/signing gates.",
+    "nodeCaseCounts": {
+      "pass": 167,
+      "fail": 0,
+      "skip": 0
+    },
+    "pythonUnitCaseCounts": {
+      "pass": 4,
+      "fail": 0,
+      "skip": 0
+    },
+    "logPathsAreScratchOnly": true
+  },
+  "full": {
+    "schema": "vdraw-regression-run/1",
+    "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+    "profile": "full",
+    "suiteComplete": false,
+    "pass": 17,
+    "fail": 0,
+    "blocked": 29,
+    "skip": 0,
+    "durationSeconds": 5.267,
+    "rawEntryCount": 45,
+    "mappedHistoricalEntries": {
+      "tests/native-assets-003.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype003/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/native-assets-004.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype004/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/native-assets-005.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype005/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/native-assets-006.py": {
+        "replacement": "tests/native-assets-007.py",
+        "reason": "Original asserts historical prototype006/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+      },
+      "tests/storage-extra-005.mjs": {
+        "replacement": "tests/storage-extra-006.mjs",
+        "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
+      },
+      "tests/gestures-update.mjs": {
+        "replacement": "tests/gestures-update-007.mjs",
+        "reason": "002 PWA namespace hardcoded;007 copy retains every assertion and substitutes only SW version/cache namespace."
+      }
+    },
+    "newEntryDiscovery": true,
+    "runCopyTransforms": [],
+    "rows": [
+      {
+        "id": "core.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/core.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "core.test.mjs.log"
+      },
+      {
+        "id": "command-update-004.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/command-update-004.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.716,
+        "logFile": "command-update-004.test.mjs.log"
+      },
+      {
+        "id": "history-codec-005.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/history-codec-005.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.216,
+        "logFile": "history-codec-005.test.mjs.log"
+      },
+      {
+        "id": "changes-006.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/changes-006.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "changes-006.test.mjs.log"
+      },
+      {
+        "id": "native-shell.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/native-shell.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.165,
+        "logFile": "native-shell.test.mjs.log"
+      },
+      {
+        "id": "native-io-005.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/native-io-005.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.165,
+        "logFile": "native-io-005.test.mjs.log"
+      },
+      {
+        "id": "vision-contract-005.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/vision-contract-005.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.216,
+        "logFile": "vision-contract-005.test.mjs.log"
+      },
+      {
+        "id": "vision-provider.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/vision-provider.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.218,
+        "logFile": "vision-provider.test.mjs.log"
+      },
+      {
+        "id": "ui-theme-007.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/ui-theme-007.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.166,
+        "logFile": "ui-theme-007.test.mjs.log"
+      },
+      {
+        "id": "bounded-process-005.py",
+        "command": [
+          "python3",
+          "tests/bounded-process-005.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.516,
+        "logFile": "bounded-process-005.py.log"
+      },
+      {
+        "id": "native-assets-007.py",
+        "command": [
+          "python3",
+          "tests/native-assets-007.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.064,
+        "logFile": "native-assets-007.py.log"
+      },
+      {
+        "id": "performance-core-006.mjs",
+        "command": [
+          "node",
+          "tests/performance-core-006.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.666,
+        "logFile": "performance-core-006.mjs.log"
+      },
+      {
+        "id": "product.mjs",
+        "command": [
+          "node",
+          "tests/product.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "output-regression.mjs",
+        "command": [
+          "node",
+          "tests/output-regression.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "PREREQUISITE_NOT_PASS:product.mjs"
+      },
+      {
+        "id": "recovery-input.mjs",
+        "command": [
+          "node",
+          "tests/recovery-input.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "PREREQUISITE_NOT_PASS:output-regression.mjs"
+      },
+      {
+        "id": "vision-flow-003.mjs",
+        "command": [
+          "node",
+          "tests/vision-flow-003.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "inspect-protocol-003.py",
+        "command": [
+          "python3",
+          "tests/inspect-protocol-003.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "PREREQUISITE_NOT_PASS:vision-flow-003.mjs"
+      },
+      {
+        "id": "photo-pipeline-005.mjs",
+        "command": [
+          "node",
+          "tests/photo-pipeline-005.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "output-quality-005.mjs",
+        "command": [
+          "node",
+          "tests/output-quality-005.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "output-structure-005.py",
+        "command": [
+          "python3",
+          "tests/output-structure-005.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "PREREQUISITE_NOT_PASS:photo-pipeline-005.mjs,output-quality-005.mjs"
+      },
+      {
+        "id": "inspect_outputs.py",
+        "command": [
+          "python3",
+          "tests/inspect_outputs.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "PREREQUISITE_NOT_PASS:product.mjs,output-regression.mjs"
+      },
+      {
+        "id": "render-export-004.mjs",
+        "command": [
+          "node",
+          "tests/render-export-004.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "output-inspect-004.py",
+        "command": [
+          "python3",
+          "tests/output-inspect-004.py"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "PREREQUISITE_NOT_PASS:render-export-004.mjs"
+      },
+      {
+        "id": "gestures-004.mjs",
+        "command": [
+          "node",
+          "tests/gestures-004.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "gestures-update-007.mjs",
+        "command": [
+          "node",
+          "tests/gestures-update-007.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "save-gesture-003.mjs",
+        "command": [
+          "node",
+          "tests/save-gesture-003.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "storage-conflict.mjs",
+        "command": [
+          "node",
+          "tests/storage-conflict.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "storage-safety-004.mjs",
+        "command": [
+          "node",
+          "tests/storage-safety-004.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "storage-safety-006.mjs",
+        "command": [
+          "node",
+          "tests/storage-safety-006.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "storage-extra-006.mjs",
+        "command": [
+          "node",
+          "tests/storage-extra-006.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "ui-state-005.mjs",
+        "command": [
+          "node",
+          "tests/ui-state-005.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "ui-smoke-007.mjs",
+        "command": [
+          "node",
+          "tests/ui-smoke-007.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "screenshots-005.mjs",
+        "command": [
+          "node",
+          "tests/screenshots-005.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "PREREQUISITE_NOT_PASS:photo-pipeline-005.mjs"
+      },
+      {
+        "id": "performance.mjs",
+        "command": [
+          "node",
+          "tests/performance.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "performance-003.mjs",
+        "command": [
+          "node",
+          "tests/performance-003.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "performance-004.mjs",
+        "command": [
+          "node",
+          "tests/performance-004.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "performance-005.mjs",
+        "command": [
+          "node",
+          "tests/performance-005.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "performance-final-006.mjs",
+        "command": [
+          "node",
+          "tests/performance-final-006.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "ui-performance-007.mjs",
+        "command": [
+          "node",
+          "tests/ui-performance-007.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "clone-profile-005.mjs",
+        "command": [
+          "node",
+          "tests/clone-profile-005.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "segment-probe-005.mjs",
+        "command": [
+          "node",
+          "tests/segment-probe-005.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "BLOCKED",
+        "reason": "BROWSER_EXECUTABLE_UNAVAILABLE"
+      },
+      {
+        "id": "engine-001-regression.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/engine-001-regression.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.316,
+        "logFile": "engine-001-regression.test.mjs.log"
+      },
+      {
+        "id": "input-001-regression.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/input-001-regression.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "input-001-regression.test.mjs.log"
+      },
+      {
+        "id": "integration-offline-round1.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/integration-offline-round1.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.215,
+        "logFile": "integration-offline-round1.test.mjs.log"
+      },
+      {
+        "id": "output-race-regression.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/output-race-regression.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.316,
+        "logFile": "output-race-regression.test.mjs.log"
+      },
+      {
+        "id": "qa-round2-independent.test.mjs",
+        "command": [
+          "node",
+          "--test",
+          "tests/qa-round2-independent.test.mjs"
+        ],
+        "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+        "profile": "full",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationSeconds": 0.666,
+        "logFile": "qa-round2-independent.test.mjs.log"
+      }
+    ],
+    "scope": "Software harnesses only; no Android device or signing proof. PASS is not full acceptance without separate QA/P0/P1/006/signing gates.",
+    "nodeCaseCounts": {
+      "pass": 167,
+      "fail": 0,
+      "skip": 0
+    },
+    "pythonUnitCaseCounts": {
+      "pass": 4,
+      "fail": 0,
+      "skip": 0
+    },
+    "logPathsAreScratchOnly": true
+  },
+  "independentQA": {
+    "before": {
+      "phase": "BEFORE",
+      "head": "9c1dcdf8d87e32a9f0d86996c210a8a4b7ebb2fc",
+      "harnessVersion": 2,
+      "harnessSha256": "c18515bde6f5b8ab7e92c3f9c56ef53fcbe21ba68c19c57c8750dc865d297e48",
+      "counts": {
+        "tests": 31,
+        "pass": 6,
+        "fail": 25,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "cases": [
+        {
+          "name": "ENGINE external JSON original huge angle terminates safely",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE external JSON large finite non-progress angle terminates safely",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass Infinity terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass negative Infinity terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass NaN terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass raw huge finite terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass raw large finite terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE normal/multiturn 0→180 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 0→720 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 720→0 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 180→0 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT original 2000x1000 source: actual preview and adoption preserve normalized geometry",
+          "status": "FAIL"
+        },
+        {
+          "name": "INPUT receive preserves authoritative coordinateSpace and reference frame across JSON persistence",
+          "status": "FAIL"
+        },
+        {
+          "name": "INPUT source switch rejects preview/adoption atomically",
+          "status": "FAIL"
+        },
+        {
+          "name": "INPUT same source on different active page rejects preview/adoption atomically",
+          "status": "FAIL"
+        },
+        {
+          "name": "INPUT same-size replacement image rejects stale candidate atomically",
+          "status": "FAIL"
+        },
+        {
+          "name": "INPUT source image pageNumber change rejects stale candidate atomically",
+          "status": "FAIL"
+        },
+        {
+          "name": "INPUT unknown coordinateSpace is rejected before candidate acceptance",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT pptx: format/options changes cannot relabel bytes or history",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT dxf: format/options changes cannot relabel bytes or history",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT pdf: format/options changes cannot relabel bytes or history",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT deferred A→B cannot deliver under B name or touch B history",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT deferred A→B→A new session cannot resurrect stale generation",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT edit during generation keeps newest geometry and cancels stale snapshot",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT direct metadata mutation without revision still invalidates stale job",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT owner changes after OS handoff: no history on B and no old A restoration",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT owner changes during save: stale success cannot overwrite B screen or notify as B success",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT repeated concurrent clicks launch only one generation and one history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT failed generation releases busy gate for a later job",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT wrong MIME is rejected before delivery/history",
+          "status": "FAIL"
+        },
+        {
+          "name": "OUTPUT attempted out-of-order B job cannot overlap A; later B job keeps B identity",
+          "status": "FAIL"
+        }
+      ],
+      "sameHarnessAcrossBeforeAfter": true,
+      "rawArcAcceptance": "Invalid raw arc is rejected by [] or explicit exception; empty shape/finite selection/hit false required. Normal arcs retain strict 49 finite points, nonempty polyline and successful hit.",
+      "scope": "Bounded Node geometry processes and actual production module/function execution. Export generation and OS delivery are controlled deferred mocks. Valid synthetic PNG fixture.",
+      "browserUI": "NOT_RUN",
+      "physicalAndroid": "NOT_RUN",
+      "realAI": "NOT_RUN",
+      "fullRegression": "NOT_RUN",
+      "APK": "NOT_RUN",
+      "sourceChangesByQA": 0
+    },
+    "after": {
+      "phase": "AFTER",
+      "head": "3b9a37f146c728e65a8998b6f5e21edeb6c37313",
+      "harnessVersion": 2,
+      "harnessSha256": "c18515bde6f5b8ab7e92c3f9c56ef53fcbe21ba68c19c57c8750dc865d297e48",
+      "counts": {
+        "tests": 31,
+        "pass": 31,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "cases": [
+        {
+          "name": "ENGINE external JSON original huge angle terminates safely",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE external JSON large finite non-progress angle terminates safely",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE raw bypass Infinity terminates or rejects",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE raw bypass negative Infinity terminates or rejects",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE raw bypass NaN terminates or rejects",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE raw bypass raw huge finite terminates or rejects",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE raw bypass raw large finite terminates or rejects",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 0→180 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 0→720 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 720→0 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 180→0 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT original 2000x1000 source: actual preview and adoption preserve normalized geometry",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT receive preserves authoritative coordinateSpace and reference frame across JSON persistence",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT source switch rejects preview/adoption atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT same source on different active page rejects preview/adoption atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT same-size replacement image rejects stale candidate atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT source image pageNumber change rejects stale candidate atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT unknown coordinateSpace is rejected before candidate acceptance",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT pptx: format/options changes cannot relabel bytes or history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT dxf: format/options changes cannot relabel bytes or history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT pdf: format/options changes cannot relabel bytes or history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT deferred A→B cannot deliver under B name or touch B history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT deferred A→B→A new session cannot resurrect stale generation",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT edit during generation keeps newest geometry and cancels stale snapshot",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT direct metadata mutation without revision still invalidates stale job",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT owner changes after OS handoff: no history on B and no old A restoration",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT owner changes during save: stale success cannot overwrite B screen or notify as B success",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT repeated concurrent clicks launch only one generation and one history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT failed generation releases busy gate for a later job",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT wrong MIME is rejected before delivery/history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT attempted out-of-order B job cannot overlap A; later B job keeps B identity",
+          "status": "PASS"
+        }
+      ],
+      "sameHarnessAcrossBeforeAfter": true,
+      "rawArcAcceptance": "Invalid raw arc is rejected by [] or explicit exception; empty shape/finite selection/hit false required. Normal arcs retain strict 49 finite points, nonempty polyline and successful hit.",
+      "scope": "Bounded Node geometry processes and actual production module/function execution. Export generation and OS delivery are controlled deferred mocks. Valid synthetic PNG fixture.",
+      "browserUI": "NOT_RUN",
+      "physicalAndroid": "NOT_RUN",
+      "realAI": "NOT_RUN",
+      "fullRegression": "NOT_RUN",
+      "APK": "NOT_RUN",
+      "sourceChangesByQA": 0,
+      "originalFourP1Status": {
+        "ENGINE-001": "SOFTWARE_PASS",
+        "INPUT-001": "SOFTWARE_PASS",
+        "OUTPUT-001": "SOFTWARE_PASS",
+        "EXPORT_OWNER_RACE": "SOFTWARE_PASS"
+      },
+      "P0Detected": 0,
+      "P1RemainingWithinExecutedScope": 0,
+      "P2AdditionalDetected": 0,
+      "noDeviceAcceptanceClaim": true,
+      "testedRuntimeHashes": {
+        "web/src/core.js": "94f5ae9ffe1c4459a673cf83f864efbfa3d74ef39b4dd8b504925499eeca023d",
+        "web/src/render.js": "214e198d84821ebfff7253b780d8313abddd9388cdd4d4726d765894c3c9bce9",
+        "web/src/vision.js": "fbc75a16c9a3cad249b6f6ff36defd8d5362c9eb654287744e34febcd39451a0",
+        "web/src/app.js": "0fc9c7ac9b53267f74d5890a8a0b394334c76cb24db25b9deea61af348ecdf60",
+        "web/src/export-jobs.js": "2b774a3f908b907bcd5838fcaf5423a110cdb153754df4fa627a01437c92ffd1"
+      },
+      "v1Result": "26 PASS / 5 FAIL / skip 0; five raw arc assertions demanded exception or 49 points and excluded valid empty-array rejection. Exact V1 report retained. This correction changes assertion semantics for invalid raw inputs only; no cases deleted or skipped."
+    },
+    "v1Correction": {
+      "phase": "AFTER_EXACT_ORIGINAL_HARNESS",
+      "candidateCommit": "3b9a37f146c728e65a8998b6f5e21edeb6c37313",
+      "harnessSha256": "50e708ab8b3b50f0e1025d9cc92660a0d857e7fb74ab3271e96ee922c766a61a",
+      "sameHarnessAsBefore": true,
+      "counts": {
+        "tests": 31,
+        "pass": 26,
+        "fail": 5,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "cases": [
+        {
+          "name": "ENGINE external JSON original huge angle terminates safely",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE external JSON large finite non-progress angle terminates safely",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE raw bypass Infinity terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass negative Infinity terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass NaN terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass raw huge finite terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE raw bypass raw large finite terminates or rejects",
+          "status": "FAIL"
+        },
+        {
+          "name": "ENGINE normal/multiturn 0→180 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 0→720 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 720→0 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "ENGINE normal/multiturn 180→0 yields 49 finite bounded points",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT original 2000x1000 source: actual preview and adoption preserve normalized geometry",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT receive preserves authoritative coordinateSpace and reference frame across JSON persistence",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT source switch rejects preview/adoption atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT same source on different active page rejects preview/adoption atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT same-size replacement image rejects stale candidate atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT source image pageNumber change rejects stale candidate atomically",
+          "status": "PASS"
+        },
+        {
+          "name": "INPUT unknown coordinateSpace is rejected before candidate acceptance",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT pptx: format/options changes cannot relabel bytes or history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT dxf: format/options changes cannot relabel bytes or history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT pdf: format/options changes cannot relabel bytes or history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT deferred A→B cannot deliver under B name or touch B history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT deferred A→B→A new session cannot resurrect stale generation",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT edit during generation keeps newest geometry and cancels stale snapshot",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT direct metadata mutation without revision still invalidates stale job",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT owner changes after OS handoff: no history on B and no old A restoration",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT owner changes during save: stale success cannot overwrite B screen or notify as B success",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT repeated concurrent clicks launch only one generation and one history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT failed generation releases busy gate for a later job",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT wrong MIME is rejected before delivery/history",
+          "status": "PASS"
+        },
+        {
+          "name": "OUTPUT attempted out-of-order B job cannot overlap A; later B job keeps B identity",
+          "status": "PASS"
+        }
+      ],
+      "rawFailureAssessment": "The five raw arc tests demand 49 finite points or an exception. Candidate production arcPoints returns [] immediately for invalid arcs. No hang or NaN points were observed. Empty array is a safe rejection representation; test assertion is too narrow to classify these failures as remaining P1. Original exact-harness result is preserved pending acceptance-contract clarification.",
+      "originalFourP1Conditions": "PASS within bounded software test scope",
+      "physicalAndroid": "NOT_RUN",
+      "browserUI": "NOT_RUN",
+      "realAI": "NOT_RUN",
+      "fullRegression": "NOT_RUN",
+      "APK": "NOT_RUN"
+    }
+  },
+  "runtimeHashComparison": {
+    "core.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "94f5ae9ffe1c4459a673cf83f864efbfa3d74ef39b4dd8b504925499eeca023d"
+    },
+    "render.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "214e198d84821ebfff7253b780d8313abddd9388cdd4d4726d765894c3c9bce9"
+    },
+    "vision.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "fbc75a16c9a3cad249b6f6ff36defd8d5362c9eb654287744e34febcd39451a0"
+    },
+    "app.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "0fc9c7ac9b53267f74d5890a8a0b394334c76cb24db25b9deea61af348ecdf60"
+    },
+    "export-jobs.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "2b774a3f908b907bcd5838fcaf5423a110cdb153754df4fa627a01437c92ffd1"
+    },
+    "sw.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "341d5e70bd65698655986e13a36b1a476230e111f6c801bbf61f0c157433259a"
+    }
+  }
+}

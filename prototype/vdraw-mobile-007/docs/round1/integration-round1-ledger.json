@@ -1,0 +1,165 @@
+{
+  "schema": "vdraw-round1-integration/1",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "baseline": "9c1dcdf8d87e32a9f0d86996c210a8a4b7ebb2fc",
+  "newIntegrationBranch": "work/vdraw007-integration-round1-20261006",
+  "testedCandidateHead": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+  "codeHeadIndependentQA": "3b9a37f146c728e65a8998b6f5e21edeb6c37313",
+  "accepted": [
+    {
+      "owner": "Engine",
+      "branch": "work/vdraw007-fix-engine-001-20261006",
+      "sha": "a1464c1abbf27bba5d8fc04b94165fbe7a32fe84"
+    },
+    {
+      "owner": "Input",
+      "branch": "work/vdraw007-fix-input-001-20261006",
+      "sha": "c8cffe8950ed39faa2efa9842ac26f8b753516c2"
+    },
+    {
+      "owner": "Output",
+      "branch": "work/vdraw007-fix-output-race-20261006",
+      "sha": "d0cc49833482855469e341ca557a68a68d4f4c45"
+    },
+    {
+      "owner": "IndependentQA",
+      "branch": "work/vdraw007-qa-round2-20261006",
+      "sha": "15d223faa98cd97ae53a72b4daa13b5ffd681624",
+      "previousBeforeCommit": "bee62890df11e85016c1887ea965215f06acb727"
+    },
+    {
+      "owner": "Regression",
+      "branch": "work/vdraw007-regression-assets-round1-20261006",
+      "sha": "03610a3e6f8ab59bb74c5366724fd0528c65f494"
+    },
+    {
+      "owner": "Android",
+      "branch": "work/vdraw007-signing-audit-round1-20261006",
+      "sha": "50730045d4979b68b06cc9b2afb18f36baf72e0f"
+    }
+  ],
+  "issues": {
+    "ENGINE_001": "RESOLVED_IN_INDEPENDENT_SOFTWARE_QA",
+    "INPUT_001": "RESOLVED_IN_INDEPENDENT_SOFTWARE_QA",
+    "OUTPUT_001": "RESOLVED_IN_INDEPENDENT_SOFTWARE_QA",
+    "EXPORT_OWNER_RACE": "RESOLVED_IN_INDEPENDENT_SOFTWARE_QA"
+  },
+  "severity": {
+    "P0Detected": 0,
+    "knownP1Remaining": 0,
+    "P2": "UNCONFIRMED",
+    "scope": "bounded software checks; no physical device/UI full acceptance claim"
+  },
+  "qa": {
+    "before": {
+      "pass": 6,
+      "fail": 25,
+      "skip": 0
+    },
+    "after": {
+      "pass": 31,
+      "fail": 0,
+      "skip": 0
+    },
+    "harnessSha256": "c18515bde6f5b8ab7e92c3f9c56ef53fcbe21ba68c19c57c8750dc865d297e48",
+    "v1": {
+      "pass": 26,
+      "fail": 5,
+      "classification": "QA contract incorrectly excluded safe [] rejection; original evidence and test text retained; no case deletion or skip addition"
+    }
+  },
+  "limited": {
+    "nodeCases": {
+      "pass": 167,
+      "fail": 0,
+      "skip": 0
+    },
+    "pythonUnitCases": {
+      "pass": 4,
+      "fail": 0,
+      "skip": 0
+    },
+    "entries": {
+      "pass": 16,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0
+    },
+    "nativeStatic": "PASS",
+    "scope": "171 unit cases including31 independentQA; native source static separately PASS"
+  },
+  "full": {
+    "entries": {
+      "pass": 17,
+      "fail": 0,
+      "blocked": 29,
+      "skip": 0
+    },
+    "suiteComplete": false,
+    "browserEntriesBlocked": 25,
+    "dependentInspectorsBlocked": 4,
+    "performanceCore": "PASS",
+    "true006BrowserPerformance": "NOT_RUN",
+    "reason": "Browser executable unavailable; normal Playwright download returned0MiB invalidZIP; no further retry"
+  },
+  "protection": {
+    "sourceSha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+    "protectedRefsChanged": [],
+    "baseline006Subtree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "candidate006Subtree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "baseline006SourceProtection": true,
+    "existingTestsBefore": 18,
+    "existingTestsAfter": 74,
+    "existingTestBlobsModifiedOrRemoved": [],
+    "sourceProtectionPASS": true
+  },
+  "runtimeHashComparison": {
+    "core.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "94f5ae9ffe1c4459a673cf83f864efbfa3d74ef39b4dd8b504925499eeca023d"
+    },
+    "render.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "214e198d84821ebfff7253b780d8313abddd9388cdd4d4726d765894c3c9bce9"
+    },
+    "vision.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "fbc75a16c9a3cad249b6f6ff36defd8d5362c9eb654287744e34febcd39451a0"
+    },
+    "app.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "0fc9c7ac9b53267f74d5890a8a0b394334c76cb24db25b9deea61af348ecdf60"
+    },
+    "export-jobs.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "2b774a3f908b907bcd5838fcaf5423a110cdb153754df4fa627a01437c92ffd1"
+    },
+    "sw.js": {
+      "unchangedSinceIndependentQA": true,
+      "sha256": "341d5e70bd65698655986e13a36b1a476230e111f6c801bbf61f0c157433259a"
+    }
+  },
+  "signing": {
+    "installedIdentity": "NOT_VERIFIED",
+    "existingPrivateKey": "NOT_RECOVERED",
+    "updateCompatibility": "BLOCKED",
+    "referenceApplicationId": "jp.dksc.vdraw.prototype007",
+    "referenceVersionCode": 7,
+    "referenceVersionName": "0.7.0",
+    "referenceAPKsha256": "89350a7e6d8471ba3bbe983dfaeefba477d6ad31519f1036105da5cf9af71d09",
+    "referenceCertificateSha256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855"
+  },
+  "release": {
+    "APK": "NOT_GENERATED",
+    "workflowTriggered": false,
+    "validationUpdated": false,
+    "acceptance": "BLOCKED_FULL_REGRESSION_AND_SIGNING"
+  },
+  "integrationNotes": {
+    "app": "three-way merge of Input candidatePreview and Output job changes; both retained",
+    "serviceWorker": "new export-jobs module precached with dedicated007round1 cache; offline imported graph test PASS",
+    "permanentAssets": "47 archive test/fixture/dependency assets restored byte identical; source logs/generated artifacts not added",
+    "androidDocCanonicalization": "remote MD lacks one terminal LF present locally; all content equal; immutable remote blob adopted",
+    "legacyBuildChecker": "original UI-only checker/manifest unchanged; future APK build needs approved007 differential source gate rather than falsifying006 logic protection"
+  }
+}
