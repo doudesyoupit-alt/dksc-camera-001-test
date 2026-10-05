@@ -4,6 +4,14 @@ export const uid = () => globalThis.crypto.randomUUID();
 export const classes = ['建物','室内','家具','設備','車','人物','植栽','未知対象','汎用図形'];
 const validKinds=new Set(['rect','ellipse','line','polygon','text','dimension','arc']);
 const validColor=/^#[\da-f]{6}$/i;
+// Degrees remain in the stored document. Bound supported angles/spans to one
+// million turns; ordinary negative angles and explicit multi-turn arcs survive.
+export const MAX_ARC_DEGREES=360*1_000_000;
+export function validArc(e){
+ if(!e||![e.x,e.y,e.w,e.h,e.startAngle,e.endAngle].every(Number.isFinite)||e.w<=0||e.w!==e.h)return false;
+ const span=e.endAngle-e.startAngle;
+ return Math.abs(e.startAngle)<=MAX_ARC_DEGREES&&Math.abs(e.endAngle)<=MAX_ARC_DEGREES&&Number.isFinite(span)&&Math.abs(span)<=MAX_ARC_DEGREES&&[e.x+e.w,e.y+e.h].every(Number.isFinite);
+}
 export const pageOf = d => d.pages.find(p=>p.id===d.activePageId) || d.pages[0];
 export function newPage(name='図面 1') {
  return {id:uid(),name,canvas:{width:1200,height:800,yAxis:'down'},elements:[],layers:[{id:'drawing',name:'図面',visible:true,locked:false}],sourceId:null,calibration:{status:'UNSCALED',references:[],mmPerUnit:null},view:{x:0,y:0,scale:1}};
@@ -24,7 +32,7 @@ export function validate(d) {
   const eids=new Set();for(const e of p.elements){if(eids.has(e.id)||!e.id)throw Error('対象IDが重複しています');eids.add(e.id);count++;
    if(!validKinds.has(e.kind)||!Number.isFinite(e.x)||!Number.isFinite(e.y)||!Number.isFinite(e.w)||!Number.isFinite(e.h)||!Number.isFinite(e.strokeWidth)||e.w<0||e.h<0)throw Error('図形が不正です');
    if(!validColor.test(e.stroke)||!(e.fill==='none'||validColor.test(e.fill)))throw Error('色が不正です');
-   if(e.kind==='arc'&&(!Number.isFinite(e.startAngle)||!Number.isFinite(e.endAngle)||e.w!==e.h||e.w<=0))throw Error('円弧が不正です');
+   if(e.kind==='arc'&&!validArc(e))throw Error('円弧が不正です');
    if(e.kind==='ellipse'&&(e.w<=0||e.h<=0))throw Error('楕円が不正です');
    if(typeof e.name!=='string'||typeof e.category!=='string'||typeof e.text!=='string'||!Number.isFinite(e.fontSize)||e.fontSize<=0||e.strokeWidth<0||e.strokeWidth>30)throw Error('対象の属性が不正です');
    if(!Array.isArray(e.points)||e.points.some(p=>p.length!==2||!p.every(Number.isFinite)))throw Error('頂点が不正です');
@@ -41,4 +49,12 @@ export function sample(){const d=project('室内レイアウトの検討');d.sam
  d.sources=[{id:uid(),name:'操作確認用サンプル.svg',type:'image/svg+xml',original:null,workImage:null,kind:'sample',locked:true,note:'合成の操作確認用サンプル。実写真・実AIの認識結果ではありません。'}];p.sourceId=d.sources[0].id;return d;
 }
 
-export function arcPoints(e){const start=e.startAngle*Math.PI/180,end=e.endAngle*Math.PI/180;let span=end-start;while(span<=0)span+=2*Math.PI;return Array.from({length:49},(_,i)=>[e.x+e.w/2+e.w/2*Math.cos(start+span*i/48),e.y+e.h/2+e.h/2*Math.sin(start+span*i/48)]);}
+export function arcPoints(e){
+ // Rendering/export can receive a raw object before document validation. Refuse
+ // malformed arcs here too, without changing the object or iterating over turns.
+ if(!validArc(e))return [];
+ const start=(e.startAngle%360)*Math.PI/180;let degrees=e.endAngle-e.startAngle;
+ if(degrees<=0)degrees=((degrees%360)+360)%360||360;
+ const span=degrees*Math.PI/180;
+ return Array.from({length:49},(_,i)=>[e.x+e.w/2+e.w/2*Math.cos(start+span*i/48),e.y+e.h/2+e.h/2*Math.sin(start+span*i/48)]);
+}

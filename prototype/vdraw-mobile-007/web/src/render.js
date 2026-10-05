@@ -1,7 +1,7 @@
-import {bounds,arcPoints} from './core.js';
+import {bounds,arcPoints,validArc} from './core.js';
 export const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 export function shape(e){const style=`fill="${esc(e.fill)}" stroke="${esc(e.stroke)}" stroke-width="${e.strokeWidth}" stroke-linejoin="round"`;
- switch(e.kind){case 'arc':return `<polyline points="${arcPoints(e).map(p=>p.join(',')).join(' ')}" fill="none" stroke="${e.stroke}" stroke-width="${e.strokeWidth}"/>`; case 'rect':return `<rect x="${e.x}" y="${e.y}" width="${e.w}" height="${e.h}" ${style}/>`;
+ switch(e.kind){case 'arc':{const pts=arcPoints(e);if(pts.length!==49||!pts.every(p=>p.every(Number.isFinite)))return '';return `<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="${esc(e.stroke)}" stroke-width="${e.strokeWidth}"/>`;} case 'rect':return `<rect x="${e.x}" y="${e.y}" width="${e.w}" height="${e.h}" ${style}/>`;
  case 'ellipse':return `<ellipse cx="${e.x+e.w/2}" cy="${e.y+e.h/2}" rx="${e.w/2}" ry="${e.h/2}" ${style}/>`;
  case 'polygon':return `<polygon points="${e.points.map(p=>p.join(',')).join(' ')}" ${style}/>`;
  case 'line':return `<line x1="${e.x}" y1="${e.y}" x2="${e.x+e.w}" y2="${e.y+e.h}" ${style}/>`;
@@ -10,7 +10,7 @@ export function shape(e){const style=`fill="${esc(e.fill)}" stroke="${esc(e.stro
  }
 }
 export function drawingSvg(p,source=null,{sourceVisible=false,drawingVisible=true,overlay=false}={}){return `<svg xmlns="http://www.w3.org/2000/svg" width="${p.canvas.width}" height="${p.canvas.height}" viewBox="0 0 ${p.canvas.width} ${p.canvas.height}"><rect width="100%" height="100%" fill="#FFFFFF"/>${sourceVisible&&source?.workImage?`<image href="${esc(source.workImage)}" width="${p.canvas.width}" height="${p.canvas.height}" preserveAspectRatio="xMidYMid meet"/>`:''}<g opacity="${overlay?0.75:1}">${drawingVisible?p.elements.filter(e=>e.visible!==false).map(shape).join(''):''}</g></svg>`;}
-export function selection(e){const b=bounds(e);return `<rect x="${b.x-8}" y="${b.y-8}" width="${Math.max(16,b.w+16)}" height="${Math.max(16,b.h+16)}" fill="none" stroke="#285EC6" stroke-width="2" vector-effect="non-scaling-stroke" stroke-dasharray="5 4"/>`;}
+export function selection(e){if(e.kind==='arc'&&!validArc(e))return '';const b=bounds(e);return `<rect x="${b.x-8}" y="${b.y-8}" width="${Math.max(16,b.w+16)}" height="${Math.max(16,b.h+16)}" fill="none" stroke="#285EC6" stroke-width="2" vector-effect="non-scaling-stroke" stroke-dasharray="5 4"/>`;}
 const segment=(x,y,a,b)=>{const dx=b[0]-a[0],dy=b[1]-a[1],t=Math.max(0,Math.min(1,((x-a[0])*dx+(y-a[1])*dy)/(dx*dx+dy*dy||1)));return Math.hypot(x-a[0]-t*dx,y-a[1]-t*dy);};
 export function hit(e,x,y,tol=15){if(e.visible===false)return false;const b=bounds(e);
  if(e.kind==='arc'){const pts=arcPoints(e);return pts.slice(1).some((q,i)=>segment(x,y,pts[i],q)<=tol);}
