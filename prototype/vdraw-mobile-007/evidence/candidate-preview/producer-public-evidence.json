@@ -1,0 +1,38 @@
+{
+  "baselineHead": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "issue": "INPUT_CANDIDATE_POST_ADOPTION_PREVIEW_BLOCKED",
+  "severity": "P1",
+  "producerFocusedTests": {
+    "pass": 119,
+    "fail": 0,
+    "skip": 0,
+    "existingIndependentQaCases": 31,
+    "newUnitCases": 8
+  },
+  "actualChromiumBrowser": {
+    "status": "PASS",
+    "issue": "INPUT_CANDIDATE_POST_ADOPTION_PREVIEW_BLOCKED",
+    "checks": [
+      "saved adopted candidate reopens after real save/reload",
+      "all three review views remain usable",
+      "re-adoption from unrelated active page rejected",
+      "original and edited adopted page unchanged",
+      "explicit discard works",
+      "unidentifiable saved candidate warning and explicit discard work"
+    ],
+    "errors": [],
+    "externalRequests": []
+  },
+  "runtimeBlobs": {
+    "web/src/vision.js": {
+      "beforeGitBlob": "c61030b58f764a37362bf6ae68d0f98a631377ac",
+      "afterGitBlob": "37be20846f9694cfd023c0194a32cd75cf6312fd"
+    },
+    "web/src/app.js": {
+      "beforeGitBlob": "6b2f8afa9f492016b4e4822e516fefd3b0c1b2e3",
+      "afterGitBlob": "5a7fbb572cd7d62b3d91fc849cca71bee2eaaa27"
+    }
+  },
+  "independentQa": "pending formal branch HEAD verification; producer PASS alone does not resolve P1",
+  "apkGenerated": false
+}
