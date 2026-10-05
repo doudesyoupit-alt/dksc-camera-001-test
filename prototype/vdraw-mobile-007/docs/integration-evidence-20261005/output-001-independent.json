@@ -1,0 +1,35 @@
+{
+  "id": "OUTPUT-001",
+  "independentReproduced": true,
+  "scope": "exact original output/exportBusy function extraction with deferred export and mocked OS boundary, no browser or Android UI",
+  "actionButtonsDisabledWhileBusy": true,
+  "formatButtonDisabledWhileBusy": false,
+  "calls": [
+    {
+      "stage": "generate",
+      "format": "pptx",
+      "opts": {
+        "includePhoto": false,
+        "includeOriginal": false
+      }
+    },
+    {
+      "stage": "handoff",
+      "name": "Drawing.pdf",
+      "actualType": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    }
+  ],
+  "exportHistory": [
+    {
+      "id": "export-1",
+      "format": "pdf",
+      "status": "downloaded",
+      "at": "2026-10-05T14:28:44.147Z",
+      "revision": 0,
+      "includePhoto": true,
+      "includeOriginal": false
+    }
+  ],
+  "severity": "P1",
+  "effect": "PPTX bytes are handed off with PDF extension and false PDF/includePhoto history after format/options change during export"
+}

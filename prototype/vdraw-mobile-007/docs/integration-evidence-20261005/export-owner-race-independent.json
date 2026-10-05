@@ -1,0 +1,42 @@
+{
+  "id": "EXPORT_OWNER_RACE",
+  "independentReproduced": true,
+  "scope": "exact output function extracted; deferred export and mocked doc switch, actual browser interaction NOT_RUN",
+  "calls": [
+    {
+      "stage": "generate",
+      "docId": "doc-a"
+    },
+    {
+      "stage": "handoff",
+      "name": "案件B.pptx"
+    },
+    {
+      "stage": "save",
+      "docId": "doc-b"
+    }
+  ],
+  "docA": {
+    "id": "doc-a",
+    "title": "案件A",
+    "revision": 1,
+    "exports": []
+  },
+  "docB": {
+    "id": "doc-b",
+    "title": "案件B",
+    "revision": 18,
+    "exports": [
+      {
+        "id": "export-1",
+        "format": "pptx",
+        "status": "downloaded",
+        "at": "2026-10-05T14:29:51.580Z",
+        "revision": 17,
+        "includePhoto": false,
+        "includeOriginal": false
+      }
+    ]
+  },
+  "severity": "P1 wrong file name/project history; no diagram geometry destruction proven"
+}

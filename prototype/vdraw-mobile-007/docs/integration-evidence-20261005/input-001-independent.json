@@ -1,0 +1,25 @@
+{
+  "id": "INPUT-001",
+  "independentReproduced": true,
+  "scope": "synthetic protocol-fixture accepted by exact VisionJobs.receive/adopt and extracted candidatePreview, no real AI/camera",
+  "lostCoordinateSpace": null,
+  "previewCanvas": [
+    2000,
+    1000
+  ],
+  "adoptCanvas": [
+    1200,
+    800
+  ],
+  "before": {
+    "x": 0.3,
+    "y": 0.4
+  },
+  "after": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "severity": "P1 candidate verification mismatch",
+  "currentRealProviderStatus": "BLOCKED",
+  "UI_BROWSER": "NOT_RUN"
+}

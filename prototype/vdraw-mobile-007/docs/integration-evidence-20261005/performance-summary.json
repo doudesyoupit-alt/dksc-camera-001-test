@@ -1,0 +1,121 @@
+{
+  "at": "2026-10-05T14:29:40.440361+00:00",
+  "source_path": "/workspace/scratch/0b6a431d47bd/source-007/VDRAW-MOBILE-007",
+  "reported_start_sha": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+  "branch_assigned": "work/vdraw007-performance-20261005",
+  "source_git": "Source directory is an extracted archive without .git; no source edits or branch commits performed. Start SHA supplied by integration coordinator.",
+  "node": {
+    "files": [
+      "core.test.mjs",
+      "history-codec-005.test.mjs",
+      "native-io-005.test.mjs",
+      "native-shell.test.mjs",
+      "ui-theme-007.test.mjs",
+      "vision-contract-005.test.mjs",
+      "vision-provider.test.mjs"
+    ],
+    "pass": 47,
+    "fail": 0,
+    "skip": 0,
+    "excluded_files": [
+      "changes-006.test.mjs",
+      "command-update-004.test.mjs"
+    ],
+    "exclusion_reason": "Contains 5000-element boundary cases; coordinator prohibits rerunning 5000-element tests. No tests deleted, rewritten, or skip added."
+  },
+  "python": {
+    "files": [
+      "bounded-process-005.py"
+    ],
+    "pass": 4,
+    "fail": 0,
+    "skip": 0
+  },
+  "combined": {
+    "pass": 51,
+    "fail": 0,
+    "skip": 0,
+    "full_regression_complete": false
+  },
+  "manifests": {
+    "CI-SOURCE-MANIFEST.json": {
+      "files": 141,
+      "matching": 141,
+      "missing": [],
+      "mismatches": [],
+      "status": "PASS"
+    },
+    "BASELINE-LOGIC-MANIFEST.json": {
+      "files": 34,
+      "matching": 34,
+      "missing": [],
+      "mismatches": [],
+      "status": "PASS"
+    }
+  },
+  "source_preservation": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "total_files_before": 515,
+    "total_files_after": 515
+  },
+  "scope": {
+    "checks": {
+      "geometry": true,
+      "draw": true,
+      "patchShape": true,
+      "restoreDrawing": true,
+      "scheduleSave": true,
+      "markDirty": true,
+      "change": true,
+      "save": true,
+      "open": true,
+      "begin": true,
+      "measuredExport": true,
+      "pagesSheet": true,
+      "attachGestures": true,
+      "resize": true
+    },
+    "functions_count": 14,
+    "unchanged_count": 14,
+    "output_unchanged_except_presentation": true,
+    "method": "Existing check-ui-scope algorithm reproduced read-only; original checker was not run because it writes under source evidence."
+  },
+  "past_performance_only": {
+    "evidence": "evidence/ui-007/final/performance-sentinel.json",
+    "browser": "Chromium 154.0.8037.57",
+    "cpu_multiplier": 4,
+    "elements": 5000,
+    "median_color_006_ms": 171.39432799999986,
+    "median_color_007_ms": 169.80283599999984,
+    "ratio": 0.9907144418454733,
+    "first_display_006_ms": 368.3000000000029,
+    "first_display_007_ms": 325.5,
+    "color_100ms_target_met": false,
+    "android_real_device_measured": false,
+    "reexecuted_this_run": false
+  },
+  "not_run": [
+    "5000-element Node boundary cases",
+    "Browser functional regression",
+    "500/2000/5000 performance and UI sentinel",
+    "Heavy image processing",
+    "Real Android OS camera/sharing/keyboard/rotation/background kill/restart",
+    "Real Claude/SAM inference",
+    "PowerPoint/Jw_cad real applications",
+    "007 real device acceptance flow",
+    "Python output/native inspectors relying on old-version contracts or preexisting artifacts"
+  ],
+  "cross_team_issues": [
+    {
+      "file": "scripts/check-ci-source.py",
+      "issue": "Still asserts prototype006 / versionCode6 / versionName0.6.0 and therefore cannot serve as a valid 007 build checker without Android-owner review."
+    },
+    {
+      "file": "tests/native-assets-006.py",
+      "issue": "006-specific inspector, not an applicable 007 native asset regression test."
+    }
+  ],
+  "gate": "Light regression PASS; cannot claim full regression or real-device acceptance."
+}

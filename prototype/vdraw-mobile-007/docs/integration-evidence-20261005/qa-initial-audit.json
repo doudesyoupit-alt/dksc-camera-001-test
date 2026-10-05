@@ -1,0 +1,88 @@
+{
+  "role": "Independent QA / Debug",
+  "source": "/workspace/scratch/0b6a431d47bd/source-007/VDRAW-MOBILE-007",
+  "baselineCommit": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+  "sourceMutations": 0,
+  "branchMutations": 0,
+  "executedExistingNodeTests": {
+    "total": 45,
+    "pass": 45,
+    "fail": 0,
+    "skip": 0,
+    "cancelled": 0
+  },
+  "executedOutputEvidenceChecks": {
+    "passGroups": 6,
+    "fail": 0,
+    "scope": "3 byte/SHA checks; PPTX CRC+XML/native shapes; DXF parser+entities; PDF 2-page parse, no viewer/render"
+  },
+  "targetedBugReproductions": {
+    "confirmedIssueRecords": 4,
+    "files": [
+      "engine-001-independent.json",
+      "output-001-independent.json",
+      "input-001-independent.json",
+      "export-owner-race-independent.json"
+    ],
+    "productPassClaim": false
+  },
+  "classification": {
+    "P0Confirmed": 0,
+    "P1IssueRecords": 4,
+    "P2Confirmed": 0,
+    "note": "P0=0 is no detection within executed scope, not full acceptance; OUTPUT-001 and EXPORT_OWNER_RACE share async snapshot/owner boundary and may be fixed as one work item"
+  },
+  "issues": [
+    {
+      "id": "ENGINE-001",
+      "severity": "P1",
+      "status": "INDEPENDENTLY_REPRODUCED",
+      "trigger": "Externally imported JSON finite startAngle=1e308,endAngle=0",
+      "actual": "importFile accepts; drawingSvg does not return within 2 s child-process timeout",
+      "normalControl": "0→180 arc yields 49 finite points",
+      "impact": "UI main thread hang; no data loss independently proven"
+    },
+    {
+      "id": "OUTPUT-001",
+      "severity": "P1",
+      "status": "INDEPENDENTLY_REPRODUCED_FUNCTION_BOUNDARY",
+      "trigger": "Switch format/options while awaited PPTX generation pending",
+      "actual": "PPTX MIME bytes handed to Drawing.pdf; false PDF/includePhoto history",
+      "UI_BROWSER": "NOT_RUN"
+    },
+    {
+      "id": "EXPORT_OWNER_RACE",
+      "severity": "P1",
+      "status": "INDEPENDENTLY_REPRODUCED_FUNCTION_BOUNDARY",
+      "trigger": "Switch doc owner A→B while export promise pending",
+      "actual": "A data handed off with B title; B export history/revision saved",
+      "impact": "Incorrect file naming/history, no diagram geometry destruction independently proven",
+      "UI_BROWSER": "NOT_RUN"
+    },
+    {
+      "id": "INPUT-001",
+      "severity": "P1",
+      "status": "INDEPENDENTLY_REPRODUCED_SYNTHETIC_PROVIDER_BOUNDARY",
+      "trigger": "2000x1000 input, drawing-1200x800 server candidate",
+      "actual": "coordinateSpace lost; preview x/y=(0.3,0.4), adopted x/y=(0.5,0.5)",
+      "realProvider": "BLOCKED",
+      "UI_BROWSER": "NOT_RUN"
+    }
+  ],
+  "priorSmoke": {
+    "scope": "11 groups real Chromium synthetic inputs; mock Web Share and keyboard viewport",
+    "freshExecution": "NOT_RUN",
+    "cannotAttest": [
+      "Android OS share",
+      "actual camera/gallery permission",
+      "actual OS keyboard",
+      "Android process death/persistence",
+      "real AI recognition",
+      "Office/CAD real-app acceptance"
+    ]
+  },
+  "deviceAcceptance": "NOT_RUN (user reported open is context, not independent full observation)",
+  "validationGate": "BLOCKED_PENDING_P1_FIX_AND_INDEPENDENT_RETEST",
+  "nextDeviceItem": "新規白紙へ線・寸法を追加し、保存済みを確認後、終了→再起動→同じ案件を再読込して内容が残るか。既存006ではなく007の新規テスト案件を使う。",
+  "completionClaim": "Initial independent audit complete; no fixes made, no full regression/physical-device PASS claimed"
+}
