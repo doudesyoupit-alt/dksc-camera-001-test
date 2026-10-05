@@ -1,0 +1,1315 @@
+{
+  "schema": "vdraw-regression-assets/1",
+  "sourceBaseline": "9c1dcdf8d87e32a9f0d86996c210a8a4b7ebb2fc",
+  "archiveSha256": "3d91a85c663bde84ceee89fcfa2192fb443c83ace43f1f154e0e329f1b475e46",
+  "archiveExecutableCount": 45,
+  "archiveAssets": [
+    {
+      "path": "tests/baseline005/commands.js",
+      "sha256": "183e42b12325c529cdae604b6ac7603089722fbf6e3b7c448e27a50496a6fb7c",
+      "bytes": 3531,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/baseline005/core.js",
+      "sha256": "58012eb207a94c58e33daa7d3d5e31d51ca33ae703cd9ae0cf2811c6a57746f1",
+      "bytes": 5638,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/baseline005/history-codec.js",
+      "sha256": "d0ec933f2f139425e50820308e0dd3ac6940ea968a710c7d652a36d6c3a17de7",
+      "bytes": 2327,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/baseline005/perf.js",
+      "sha256": "a77b9fee36938d14093bca35022a79d9b50799bbd937aa493b8e965bf983e7cd",
+      "bytes": 544,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/baseline006-ui/app.js",
+      "sha256": "8563a264eeb9b465df3129a8bc3038a62d59a1233d606e01f4382b09e1601fd1",
+      "bytes": 49108,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/baseline006-ui/icons.js",
+      "sha256": "450184b8f4f5ec07d1f033cb34fda42ab4c6c91acdf0b07aa9ff141c400a2665",
+      "bytes": 1429,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/baseline006-ui/index.html",
+      "sha256": "e66235fb6ec147d71fd9badaa753c8cc84937299e635f1c5c7f5d17e5ecf2a22",
+      "bytes": 1172,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/baseline006-ui/style.css",
+      "sha256": "ee4b6e6ddf3e23b9356bdcbec2d0c369a0daae67cd926141efc6fd8f3ea931f7",
+      "bytes": 11378,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/baseline006-ui/sw.js",
+      "sha256": "0420a3bc9e65cfb66b3d7a005dcec4ff416bff124403648c55fc23153a8dd65b",
+      "bytes": 1177,
+      "classification": "persistent-baseline-fixture",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/bounded-process-005.py",
+      "sha256": "88e4b72883afae131949a8027e980cfb094a25fa5275b1406272609ad05adac7",
+      "bytes": 2519,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/changes-006.test.mjs",
+      "sha256": "3965244f890bbaf7d55410ce9c7418395725a181e21e83287f6360fbff117e5f",
+      "bytes": 3792,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/clone-profile-005.mjs",
+      "sha256": "e94e0159b30b4ecc9eee68d91d5d08e0f8c96b117a18e0d3d2a256088624d6bd",
+      "bytes": 1373,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/command-update-004.test.mjs",
+      "sha256": "aad1eb43681eaeca3ec14de2e03c4722c2f53ad33cb4604a108ded11c76b78cb",
+      "bytes": 2474,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "a7279243315b6b109f34fe510cc6c2a959f7d0835af88c2bc558cc8942eae082",
+      "bytes": 3142,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/gestures-004.mjs",
+      "sha256": "aed73840cf74f8aeb367e6bb1e515af577f9ceeec6390042c8b0f86015589b14",
+      "bytes": 4985,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/gestures-update.mjs",
+      "sha256": "dda892dc6e313d9efffa18ce642ce05c9fabdbcfaa505a17c9e7e3e6e6978300",
+      "bytes": 6930,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/history-codec-005.test.mjs",
+      "sha256": "82c5468bd2ec43b2cafb968e332d8246ebdf04dab4beb2979872da24bd731c85",
+      "bytes": 1743,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/inspect-protocol-003.py",
+      "sha256": "0ae185ea6e28ab14170b492e361499f8c5ed1983139334d6e549f5facb0658d5",
+      "bytes": 2464,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/inspect_outputs.py",
+      "sha256": "3352c0b5bfa12d831af697cbc69f56e0dafc2363320191b1c6f145776fe3d302",
+      "bytes": 2613,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/native-assets-003.py",
+      "sha256": "4ba335ef03802614554bf9aa7c914e3d7dc2c7e02a432668b3def0969a0e788e",
+      "bytes": 1754,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/native-assets-004.py",
+      "sha256": "aaf3559460423003dc7506c16494da778f655af210d4ea33cb4ccc05d98e8ee7",
+      "bytes": 1754,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/native-assets-005.py",
+      "sha256": "3ea0a24070976a16250aa76b7849d54fe622fa0fce2fe328c1ecedbee5e5d746",
+      "bytes": 1754,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/native-assets-006.py",
+      "sha256": "f48ff99fcaf01dc7c8f878a4ef87f80f61bb7439b447e24f0bb76c094f97d4de",
+      "bytes": 1754,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/native-io-005.test.mjs",
+      "sha256": "95de465ed9bac3147b7a37003d19b1a8201819a73c923afef04110984a7f03ec",
+      "bytes": 2412,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/native-shell.test.mjs",
+      "sha256": "c0bdbb3590dd60fd118fdb6f14f4f77f83fc3e25c2e0109282a8afb90621b816",
+      "bytes": 3983,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/output-inspect-004.py",
+      "sha256": "cb32ade88e889925b2bf7393eaefa40562e2a9366af2addd2435d4197e896cd3",
+      "bytes": 2017,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/output-quality-005.mjs",
+      "sha256": "7ea7d95be3c931e441528e8db94252b6033e0b410a69d714d6594a3a51a02cce",
+      "bytes": 3083,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/output-regression.mjs",
+      "sha256": "4a7f486d2d2105157d43f7c735d6d86d316bd25069410a6d54c30e2cbf0fc20f",
+      "bytes": 2681,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/output-structure-005.py",
+      "sha256": "c54ec13160f030a8fc5104098de8211bd9754fdf8b1be26d9e1ec7677dbfd17c",
+      "bytes": 3705,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/performance-003.mjs",
+      "sha256": "3bd338b93cbe26a8368a80761d92cab4ebaf37d2adaca3c28bd710d9fd49ed0b",
+      "bytes": 6103,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/performance-004.mjs",
+      "sha256": "8b5f4c38ce9f87ec736c36657db380f73974f0c4a39cb3f6b0a92e6102f049d7",
+      "bytes": 6834,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/performance-005.mjs",
+      "sha256": "6c71a0cd0ecfa0ab2b43264402fea4df3c642df38f33b84c3217f831b3fb7e13",
+      "bytes": 7202,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/performance-core-006.mjs",
+      "sha256": "c5e9a22a1e81fe24946788def641d1870ddebb233de51757876f833af4c33740",
+      "bytes": 2439,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/performance-final-006.mjs",
+      "sha256": "f14cf296b6c5845d36d0013bc6bdb30525184f585322d2ea3d7e21e382de75d3",
+      "bytes": 5341,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/performance.mjs",
+      "sha256": "ba67ffa148de461b737500b887d4e3d94521e9054caeec2e16fea12051ab5d9a",
+      "bytes": 5585,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/photo-pipeline-005.mjs",
+      "sha256": "c505fa25537bc7b6239af8943ca0e85375574422d1a122c13eff8ea3e6c3928c",
+      "bytes": 8510,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/product.mjs",
+      "sha256": "0df77d0b1813b2d6ccb2b5dce1c481e2633e9f34968cf8bc2c2b6a76088892aa",
+      "bytes": 11388,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/recovery-input.mjs",
+      "sha256": "859fb687c5b4056f91ef8833fe27efb609775b967a5704f5711fa48b16228543",
+      "bytes": 4156,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/render-export-004.mjs",
+      "sha256": "6aa5b7049e118fc925f57cb80fc5aebcd50d97dcaf9a04a4a6f818d75a8d356f",
+      "bytes": 5634,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/requirements-inspect.txt",
+      "sha256": "0ca830815e9447ab4708611dafc6e172dcf34e7b7cfa3f9e7f82cd0dfeeb93a5",
+      "bytes": 45,
+      "classification": "persistent-requirements",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/save-gesture-003.mjs",
+      "sha256": "8521a332b6ecbaece193f6c4028b72afd76f89684876573252de9aa0999200e2",
+      "bytes": 4365,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/screenshots-005.mjs",
+      "sha256": "d656f4673c286567a975597ea53b2cbd8a9e17cf53f908e7646717ebdd26e3dd",
+      "bytes": 1863,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/segment-probe-005.mjs",
+      "sha256": "66cdf6d3cf9b548a887179105910848a64b82e8acc4e005d99484f307cbecbe4",
+      "bytes": 2141,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/storage-conflict.mjs",
+      "sha256": "f0c84037473f83109d50ef30ca2bed46c4591080853eabb61b722b06b60a0428",
+      "bytes": 1826,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/storage-extra-005.mjs",
+      "sha256": "3cb37c68c0de0eb47941df0507f5b8b0814c51a045e816a6a34ed3b194606889",
+      "bytes": 6171,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/storage-extra-006.mjs",
+      "sha256": "621d43d19e7c29aa8552461932d26ff87a1c0def2b167fce564fb2532bdeea5a",
+      "bytes": 6275,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/storage-safety-004.mjs",
+      "sha256": "8fcfa7274776b7ae372e15e4f4921f371124632792fd6a523397fc1623f1c4d0",
+      "bytes": 5361,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/storage-safety-006.mjs",
+      "sha256": "691fffca1f753907ff01a53f65f8f9be169db48b97b78bb9bb82a9bfff6ddaff",
+      "bytes": 5437,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/ui-performance-007.mjs",
+      "sha256": "f9d55b47e34d673dfd66c011df322eba4da7e5125a18e3cee212d7672eb8460e",
+      "bytes": 3712,
+      "classification": "persistent-regression-entry",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/ui-smoke-007.mjs",
+      "sha256": "56753cf89ebf84d4f0a3b0672556434d0b7ed459abe98212e2c8d76c1717ef8c",
+      "bytes": 10757,
+      "classification": "persistent-regression-entry",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/ui-state-005.mjs",
+      "sha256": "f04f5b6904388635b7dc6d5af2651333911fa6e35f8af3a01bc3ff8273af8356",
+      "bytes": 5789,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/ui-theme-007.test.mjs",
+      "sha256": "81756679be3117841e79dd1751028a1b4a07bdf75b45cfe12b08463da25baf3e",
+      "bytes": 1472,
+      "classification": "persistent-regression-entry",
+      "baselineGit": true
+    },
+    {
+      "path": "tests/vision-contract-005.test.mjs",
+      "sha256": "0019019830443a1b2150d87b08907be5627c45acdf463f28e24ff62faef5d909",
+      "bytes": 5763,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/vision-flow-003.mjs",
+      "sha256": "d412baeca6ae403d9d22228d155a6549ade03ba1c671d55307aafad2314c7c27",
+      "bytes": 7089,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    },
+    {
+      "path": "tests/vision-provider.test.mjs",
+      "sha256": "6d326e1492796a55126d43776344e7c319e2dd864b6c22da3d277c5f5ca640ba",
+      "bytes": 5720,
+      "classification": "persistent-regression-entry",
+      "baselineGit": false
+    }
+  ],
+  "historicalMappings": {
+    "tests/native-assets-003.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype003/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/native-assets-004.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype004/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/native-assets-005.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype005/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/native-assets-006.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype006/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/storage-extra-005.mjs": {
+      "replacement": "tests/storage-extra-006.mjs",
+      "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
+    },
+    "tests/gestures-update.mjs": {
+      "replacement": "tests/gestures-update-007.mjs",
+      "reason": "002 PWA namespace hardcoded;007 copy retains every assertion and substitutes only SW version/cache namespace."
+    }
+  },
+  "entries": [
+    {
+      "id": "core.test.mjs",
+      "path": "tests/core.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/core.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "command-update-004.test.mjs",
+      "path": "tests/command-update-004.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/command-update-004.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "history-codec-005.test.mjs",
+      "path": "tests/history-codec-005.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/history-codec-005.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "changes-006.test.mjs",
+      "path": "tests/changes-006.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/changes-006.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "native-shell.test.mjs",
+      "path": "tests/native-shell.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/native-shell.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "native-io-005.test.mjs",
+      "path": "tests/native-io-005.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/native-io-005.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "vision-contract-005.test.mjs",
+      "path": "tests/vision-contract-005.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/vision-contract-005.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "vision-provider.test.mjs",
+      "path": "tests/vision-provider.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/vision-provider.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "ui-theme-007.test.mjs",
+      "path": "tests/ui-theme-007.test.mjs",
+      "kind": "node-test",
+      "command": [
+        "node",
+        "--test",
+        "tests/ui-theme-007.test.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "CORE/editing/undo"
+      ]
+    },
+    {
+      "id": "bounded-process-005.py",
+      "path": "tests/bounded-process-005.py",
+      "kind": "python-unit",
+      "command": [
+        "python3",
+        "tests/bounded-process-005.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "bounded child process"
+      ]
+    },
+    {
+      "id": "native-assets-007.py",
+      "path": "tests/native-assets-007.py",
+      "kind": "python-static",
+      "command": [
+        "python3",
+        "tests/native-assets-007.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "native source static"
+      ]
+    },
+    {
+      "id": "performance-core-006.mjs",
+      "path": "tests/performance-core-006.mjs",
+      "kind": "node-performance",
+      "command": [
+        "node",
+        "tests/performance-core-006.mjs"
+      ],
+      "timeoutSeconds": 300,
+      "applicability": "current",
+      "coverage": [
+        "Node performance only"
+      ]
+    },
+    {
+      "id": "product.mjs",
+      "path": "tests/product.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/product.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "output-regression.mjs",
+      "path": "tests/output-regression.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/output-regression.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "dependencies": [
+        "product.mjs"
+      ]
+    },
+    {
+      "id": "recovery-input.mjs",
+      "path": "tests/recovery-input.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/recovery-input.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "dependencies": [
+        "output-regression.mjs"
+      ]
+    },
+    {
+      "id": "vision-flow-003.mjs",
+      "path": "tests/vision-flow-003.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/vision-flow-003.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "inspect-protocol-003.py",
+      "path": "tests/inspect-protocol-003.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/inspect-protocol-003.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "generated file structure"
+      ],
+      "dependencies": [
+        "vision-flow-003.mjs"
+      ]
+    },
+    {
+      "id": "photo-pipeline-005.mjs",
+      "path": "tests/photo-pipeline-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/photo-pipeline-005.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "output-quality-005.mjs",
+      "path": "tests/output-quality-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/output-quality-005.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "output-structure-005.py",
+      "path": "tests/output-structure-005.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/output-structure-005.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "generated file structure"
+      ],
+      "dependencies": [
+        "photo-pipeline-005.mjs",
+        "output-quality-005.mjs"
+      ]
+    },
+    {
+      "id": "inspect_outputs.py",
+      "path": "tests/inspect_outputs.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/inspect_outputs.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "generated file structure"
+      ],
+      "dependencies": [
+        "product.mjs",
+        "output-regression.mjs"
+      ]
+    },
+    {
+      "id": "render-export-004.mjs",
+      "path": "tests/render-export-004.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/render-export-004.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "output-inspect-004.py",
+      "path": "tests/output-inspect-004.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/output-inspect-004.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "generated file structure"
+      ],
+      "dependencies": [
+        "render-export-004.mjs"
+      ]
+    },
+    {
+      "id": "gestures-004.mjs",
+      "path": "tests/gestures-004.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/gestures-004.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "gestures-update-007.mjs",
+      "path": "tests/gestures-update-007.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/gestures-update-007.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "save-gesture-003.mjs",
+      "path": "tests/save-gesture-003.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/save-gesture-003.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "storage-conflict.mjs",
+      "path": "tests/storage-conflict.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/storage-conflict.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "storage-safety-004.mjs",
+      "path": "tests/storage-safety-004.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/storage-safety-004.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "storage-safety-006.mjs",
+      "path": "tests/storage-safety-006.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/storage-safety-006.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "storage-extra-006.mjs",
+      "path": "tests/storage-extra-006.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/storage-extra-006.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "ui-state-005.mjs",
+      "path": "tests/ui-state-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/ui-state-005.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "ui-smoke-007.mjs",
+      "path": "tests/ui-smoke-007.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/ui-smoke-007.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "limitation": "UI-only comparison and synthetic fixtures; independent fixed-origin actual candidate smoke required for P1 acceptance."
+    },
+    {
+      "id": "screenshots-005.mjs",
+      "path": "tests/screenshots-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/screenshots-005.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "dependencies": [
+        "photo-pipeline-005.mjs"
+      ]
+    },
+    {
+      "id": "performance.mjs",
+      "path": "tests/performance.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/performance.mjs"
+      ],
+      "timeoutSeconds": 300,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "performance-003.mjs",
+      "path": "tests/performance-003.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/performance-003.mjs"
+      ],
+      "timeoutSeconds": 300,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "performance-004.mjs",
+      "path": "tests/performance-004.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/performance-004.mjs"
+      ],
+      "timeoutSeconds": 300,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "performance-005.mjs",
+      "path": "tests/performance-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/performance-005.mjs"
+      ],
+      "timeoutSeconds": 300,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "performance-final-006.mjs",
+      "path": "tests/performance-final-006.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/performance-final-006.mjs"
+      ],
+      "timeoutSeconds": 300,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-final-006.json"
+      ],
+      "limitation": "Common candidate UI/storage with005 vs candidate engine; phase006 is legacy label, never true006 baseline after logic changes."
+    },
+    {
+      "id": "ui-performance-007.mjs",
+      "path": "tests/ui-performance-007.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/ui-performance-007.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/ui-007/performance-sentinel.json"
+      ],
+      "limitation": "UI-only comparison;006 label substitutes5UI files while keeping candidate logic; not true006 protection/performance."
+    },
+    {
+      "id": "clone-profile-005.mjs",
+      "path": "tests/clone-profile-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/clone-profile-005.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "segment-probe-005.mjs",
+      "path": "tests/segment-probe-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/segment-probe-005.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ]
+    },
+    {
+      "id": "gestures-update.mjs",
+      "path": "tests/gestures-update.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/gestures-update.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "replacement": "tests/gestures-update-007.mjs",
+      "reason": "002 PWA namespace hardcoded;007 copy retains every assertion and substitutes only SW version/cache namespace."
+    },
+    {
+      "id": "native-assets-003.py",
+      "path": "tests/native-assets-003.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/native-assets-003.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "generated file structure"
+      ],
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype003/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    {
+      "id": "native-assets-004.py",
+      "path": "tests/native-assets-004.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/native-assets-004.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "generated file structure"
+      ],
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype004/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    {
+      "id": "native-assets-005.py",
+      "path": "tests/native-assets-005.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/native-assets-005.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "generated file structure"
+      ],
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype005/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    {
+      "id": "native-assets-006.py",
+      "path": "tests/native-assets-006.py",
+      "kind": "python-inspector",
+      "command": [
+        "python3",
+        "tests/native-assets-006.py"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "generated file structure"
+      ],
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype006/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    {
+      "id": "storage-extra-005.mjs",
+      "path": "tests/storage-extra-005.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/storage-extra-005.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "replacement": "tests/storage-extra-006.mjs",
+      "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
+    }
+  ],
+  "executionContract": {
+    "runOn": "integrated candidate SHA only after target tests and independentQA",
+    "sourceAssertions": "archive entries and baseline fixtures remain byte identical",
+    "fullGate": "all current entries PASS; six historical targets explicitly mapped to assertions retained in current targets; any missing browser/dependency FAIL/BLOCKED forbids acceptance;skip0 is not proof of suite completion",
+    "newTests": "runner also discovers all *.test.mjs not in manifest",
+    "exclusions": [
+      "generated logs/evidence/APKs/exported files/node_modules/temp run copies"
+    ],
+    "additionalSeparateGates": [
+      "independent P1 BEFORE/AFTER",
+      "006 Git subtree hash protection",
+      "true006 vs007 fixed conditions performance",
+      "Android source/assets parity after sync",
+      "installed device signing compatibility",
+      "Android physical acceptance"
+    ]
+  },
+  "environment": {
+    "browser": "BLOCKED: no executable;normal Playwright install returned0MiB invalid ZIP",
+    "node": "available",
+    "pythonInspectorPackages": "ezdxf/openpyxl/fitz installed"
+  },
+  "true006Reference": {
+    "subtreeSha": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "webBlobs": [
+      {
+        "path": "web/assets/FONT-OFL.txt",
+        "gitBlobSha": "1c9f43281b8f216c5461fe9ac729afbade7724e4"
+      },
+      {
+        "path": "web/assets/NotoSansJP.ttf",
+        "gitBlobSha": "3b36ace75266682e80760cf0c1bf8310bb3a3efe"
+      },
+      {
+        "path": "web/assets/icon-192.png",
+        "gitBlobSha": "83e4e96610face716141055b770b2f31798a946d"
+      },
+      {
+        "path": "web/assets/icon-512.png",
+        "gitBlobSha": "5c1d761f9b342c3853548a29ff34100b2efde58d"
+      },
+      {
+        "path": "web/assets/icon-maskable.png",
+        "gitBlobSha": "5c1d761f9b342c3853548a29ff34100b2efde58d"
+      },
+      {
+        "path": "web/assets/icon.svg",
+        "gitBlobSha": "43df8fda4c16dfe907b4346b86990bb6825a014d"
+      },
+      {
+        "path": "web/index.html",
+        "gitBlobSha": "76a7833173d746de78db1e2c8058ed692ab4a2c8"
+      },
+      {
+        "path": "web/manifest.webmanifest",
+        "gitBlobSha": "a018139d30f912fbd7cfaf4d82786875e1344951"
+      },
+      {
+        "path": "web/src/app.js",
+        "gitBlobSha": "623f7cfc7e6bceea01d37eb0a471422901013385"
+      },
+      {
+        "path": "web/src/commands.js",
+        "gitBlobSha": "510a05e0643099eb84c0d6f117d812e55c126e9e"
+      },
+      {
+        "path": "web/src/core.js",
+        "gitBlobSha": "ad5f8d07a0d7a5d4d8e44840660be91844dcae78"
+      },
+      {
+        "path": "web/src/device.js",
+        "gitBlobSha": "e2dd4f08ce5aaa7cd6aaf1841b6894ecfc20a5c6"
+      },
+      {
+        "path": "web/src/exporters.js",
+        "gitBlobSha": "712b837480bee2865bd37b5a82fac8b9864b8b47"
+      },
+      {
+        "path": "web/src/history-codec.js",
+        "gitBlobSha": "80ca264c41030d9911308afcb907e74d703f7b4d"
+      },
+      {
+        "path": "web/src/icons.js",
+        "gitBlobSha": "ea3ab9b3aae3227bf73842b5abe31e17d4091a02"
+      },
+      {
+        "path": "web/src/importers.js",
+        "gitBlobSha": "33fe27ec3d1f33647967892d386b2c7148b7b84c"
+      },
+      {
+        "path": "web/src/native-io.js",
+        "gitBlobSha": "86f1e88aa4d3f214711690745413a96b5d317eb4"
+      },
+      {
+        "path": "web/src/native-runtime.js",
+        "gitBlobSha": "89281de15e57851aee9c97f21404fe2982e1330c"
+      },
+      {
+        "path": "web/src/perf.js",
+        "gitBlobSha": "83af8439a0204e6c94d513ae1700dfc7b768eaef"
+      },
+      {
+        "path": "web/src/render.js",
+        "gitBlobSha": "1ed98b27d73ea85d2c67573579ba92488cc0abbc"
+      },
+      {
+        "path": "web/src/shell.js",
+        "gitBlobSha": "ece64a3215632b3c5b727e0fb143cccc9e7bf850"
+      },
+      {
+        "path": "web/src/storage.js",
+        "gitBlobSha": "6115e6b09d6dbfac019bbd1ff82690e8783512d2"
+      },
+      {
+        "path": "web/src/trial-event.js",
+        "gitBlobSha": "e568d0f8f7162bf632d6abb0d327e76ee29867e0"
+      },
+      {
+        "path": "web/src/trial-recorder.js",
+        "gitBlobSha": "ba23310a15c732b840620ffc943d968325ae9d99"
+      },
+      {
+        "path": "web/src/vision.js",
+        "gitBlobSha": "194d25ce1d40490b3f700e2329abe71d3189c6ce"
+      },
+      {
+        "path": "web/style.css",
+        "gitBlobSha": "4484897b0e9c17ab02a55f8f703f7be85984e388"
+      },
+      {
+        "path": "web/sw.js",
+        "gitBlobSha": "ea90154318b9038f4498797af350709cc075bb1b"
+      },
+      {
+        "path": "web/vendor/jszip-LICENSE.markdown",
+        "gitBlobSha": "f8250b37a61862ea61ea9a93d5d423cad395a364"
+      },
+      {
+        "path": "web/vendor/jszip.min.js",
+        "gitBlobSha": "ff4cfd5e8fdc49176c2d1d409afa897f40be01f4"
+      },
+      {
+        "path": "web/vendor/native-bridge.js",
+        "gitBlobSha": "01d55d41a32205902fd5634d86058abd04e9724c"
+      },
+      {
+        "path": "web/vendor/pdf-lib-LICENSE.md",
+        "gitBlobSha": "7a237e68e37abe7ac934c4e89f49e1a94f161f33"
+      },
+      {
+        "path": "web/vendor/pdf-lib.min.js",
+        "gitBlobSha": "edb12c72cdaa11b608eb5967cf1531892b7f3b31"
+      },
+      {
+        "path": "web/vendor/pdf.mjs",
+        "gitBlobSha": "18ef923aca905c9897db648c146923ea2630f206"
+      },
+      {
+        "path": "web/vendor/pdf.worker.mjs",
+        "gitBlobSha": "049a23c3e6d54fd17cb5844d8da3834d4944dd2a"
+      },
+      {
+        "path": "web/vendor/pdfjs-dist-LICENSE",
+        "gitBlobSha": "f433b1a53f5b830a205fd2df78e2b34974656c7b"
+      },
+      {
+        "path": "web/vendor/pptxgen.bundle.js",
+        "gitBlobSha": "c20c9445033558f594d28a2178e8c60d22d14870"
+      },
+      {
+        "path": "web/vendor/pptxgenjs-LICENSE",
+        "gitBlobSha": "0b21750ad94fcfc08e723c81d337fd66e5b35964"
+      }
+    ],
+    "fixtureMapping": {
+      "web/src/app.js": "tests/baseline006-ui/app.js",
+      "web/src/icons.js": "tests/baseline006-ui/icons.js",
+      "web/index.html": "tests/baseline006-ui/index.html",
+      "web/sw.js": "tests/baseline006-ui/sw.js",
+      "web/style.css": "tests/baseline006-ui/style.css"
+    },
+    "warning": "Copy candidate web then5UI substitution is NOT true006 after P1 changes. Build only listed006webblobs from immutable start source/verified fixtures and hash all."
+  }
+}

@@ -1,0 +1,6 @@
+import {createRequire} from 'node:module';import {spawn} from 'node:child_process';import fs from 'node:fs/promises';
+const require=createRequire(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/runtime.js'),{chromium}=require('playwright');
+const server=spawn('python3',['serve.py','--port','4196']);server.stderr.on('data',()=>{});let browser;
+try{browser=await chromium.launch({executablePath:'/tmp/chromium',args:['--no-sandbox']});const page=await browser.newPage();await page.goto('http://127.0.0.1:4196');await page.waitForFunction(()=>window.VDRAW);const cdp=await page.context().newCDPSession(page);await cdp.send('Emulation.setCPUThrottlingRate',{rate:4});
+const result=await page.evaluate(async()=>{const {project,element}=await import('./src/core.js'),d=project();for(let i=0;i<5000;i++)d.pages[0].elements.push(element('rect','合成'+i));const results=[];for(let i=0;i<6;i++){let t=performance.now();structuredClone(d);const structured=performance.now()-t;t=performance.now();const text=JSON.stringify(d);const serialize=performance.now()-t;t=performance.now();JSON.parse(text);const parse=performance.now()-t;results.push({structured,serialize,parse});}return{count:5000,cpuRate:4,results};});await fs.writeFile('evidence/clone-profile.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+}finally{await browser?.close();server.kill();}
