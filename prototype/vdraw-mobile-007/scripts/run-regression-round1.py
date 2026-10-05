@@ -3,7 +3,7 @@ Raw archive harnesses remain unchanged. Only fixed executable paths in the *run 
 are replaced by VDRAW_CHROMIUM; all assertions and UI selectors remain unchanged.
 """
 from pathlib import Path
-import argparse, json, os, subprocess, tempfile, shutil, signal, sys, time
+import argparse, json, os, subprocess, tempfile, shutil, signal, sys, time, re
 p=argparse.ArgumentParser();p.add_argument('--profile', choices=['assets','limited','full'], default='assets');p.add_argument('--source-sha', required=True);p.add_argument('--output-root');p.add_argument('--include-native-assets',action='store_true');a=p.parse_args()
 root=Path(__file__).resolve().parents[1];manifest=json.loads((root/'tests/regression-manifest-round1.json').read_text())
 out=Path(a.output_root or tempfile.mkdtemp(prefix='vdraw007-regression-run-')).resolve();out.mkdir(parents=True,exist_ok=True)
@@ -14,6 +14,9 @@ for name in ['serve.py','package.json','package-lock.json','capacitor.config.jso
  if (root/name).exists():shutil.copy2(root/name,work/name)
 (work/'evidence').mkdir();(out/'logs').mkdir()
 rows=[];start=time.time();env=os.environ.copy()
+for name in ['PWA_ONLY','SCREENS_ONLY','PRODUCT_PHASE']:
+ if env.get(name):raise SystemExit('PARTIAL_TEST_MODE_FORBIDDEN:'+name)
+(out/'verdicts').mkdir()
 browser=env.get('VDRAW_CHROMIUM');browser_ok=bool(browser and Path(browser).is_file() and Path(browser).stat().st_size>1000 and os.access(browser,os.X_OK))
 transformations=[]
 if browser_ok:
@@ -39,6 +42,7 @@ for e in entries:
   row.update(status='BLOCKED',reason='PREREQUISITE_NOT_PASS:'+','.join(dependencies));rows.append(row);print(e['id']+' BLOCKED',flush=True);continue
  if e['kind']=='browser' and not browser_ok:
   row.update(status='BLOCKED',reason='BROWSER_EXECUTABLE_UNAVAILABLE');rows.append(row);print(e['id']+' BLOCKED',flush=True);continue
+ before_json={str(q):q.stat().st_mtime_ns for q in (work/'evidence').rglob('*.json')}
  t=time.time();log=out/'logs'/(e['id']+'.log');code=None
  with log.open('w') as f:
   try:
@@ -48,13 +52,45 @@ for e in entries:
     os.killpg(proc.pid,signal.SIGKILL);proc.wait();row['reason']='HARNESS_TIMEOUT'
   except (OSError,ValueError) as ex:row['reason']=str(ex)
  row.update(status='PASS' if code==0 else 'FAIL',exitCode=code,durationSeconds=round(time.time()-t,3),log=str(log))
+ log_text=log.read_text()
+ skip_counts=[int(n) for n in re.findall(r'^(?:# |ℹ )(?:skip|skipped) (\d+)\s*$',log_text,re.M)]+[int(n) for n in re.findall(r'\bskipped=(\d+)',log_text)]
+ row['skip']=sum(skip_counts)
+ if e['kind']=='node-test':
+  case_counts=[int(n) for n in re.findall(r'^(?:# |ℹ )tests (\d+)\s*$',log_text,re.M)]
+  row['caseCount']=sum(case_counts)
+  if not row['caseCount']:row.update(status='FAIL',reason='NO_NODE_TEST_CASES_EXECUTED')
+ invalid_counts=[int(n) for n in re.findall(r'^(?:# |ℹ )(?:todo|cancelled) (\d+)\s*$',log_text,re.M)]
+ if any(invalid_counts):row.update(status='FAIL',reason='TESTS_TODO_OR_CANCELLED')
+ if row['skip']:row.update(status='FAIL',reason='TESTS_SKIPPED')
+ # Inspect every fresh browser diagnostic, including exit-zero FAIL reporters.
+ if e['kind']=='browser':
+  for q in (work/'evidence').rglob('*.json'):
+   if before_json.get(str(q))==q.stat().st_mtime_ns:continue
+   try:d=json.loads(q.read_text())
+   except (ValueError,OSError):continue
+   if not isinstance(d,dict):continue
+   bad=bool(d.get('skip',0)) or bool(d.get('skipped',0)) or d.get('status') in ['BLOCKED','FAIL','FAILED','SKIP','SKIPPED'] or bool(d.get('failure')) or bool(d.get('errors')) or bool(d.get('consoleErrors'))
+   for field in ['results','rows','checks']:
+    for item in d.get(field,[]) if isinstance(d.get(field),list) else []:
+     if isinstance(item,dict) and (item.get('status') in ['BLOCKED','FAIL','FAILED','SKIP','SKIPPED'] or item.get('result') in ['BLOCKED','FAIL','FAILED','SKIP','SKIPPED']):bad=True
+   if bad:row.update(status='FAIL',reason='NON_PASS_FRESH_EVIDENCE:'+str(q.relative_to(work)))
  # An inherited diagnostic may return exit 0 for BLOCKED: inspect its fresh output.
  for report in e.get('verdictFiles',[]):
   q=work/report
   if not q.exists():row.update(status='FAIL',reason='EXPECTED_EVIDENCE_NOT_GENERATED:'+report);continue
-  d=json.loads(q.read_text())
-  if d.get('status') in ['BLOCKED','FAIL','FAILED']:row.update(status='FAIL',reason='NON_PASS_EVIDENCE:'+report)
+  try:d=json.loads(q.read_text())
+  except (OSError,ValueError):row.update(status='FAIL',reason='EXPECTED_EVIDENCE_MALFORMED:'+report);continue
+  if not isinstance(d,dict):row.update(status='FAIL',reason='EXPECTED_EVIDENCE_NOT_OBJECT:'+report);continue
+  if isinstance(d.get('skip'),int):row['skip']+=d['skip']
+  if isinstance(d.get('skipped'),int):row['skip']+=d['skipped']
+  if row['skip']:row.update(status='FAIL',reason='TESTS_SKIPPED_IN_EVIDENCE')
+  for field in ['results','rows','checks','measurements']:
+   if field in d and isinstance(d[field],list) and not d[field]:row.update(status='FAIL',reason='EMPTY_MEASUREMENT_OR_CASES:'+report)
+  snapshot=out/'verdicts'/(e['id']+'--'+q.name);shutil.copy2(q,snapshot)
+  row.setdefault('verdictSnapshots',[]).append(str(snapshot))
+  if d.get('status') in ['BLOCKED','FAIL','FAILED','SKIP','SKIPPED'] or d.get('failure') or d.get('errors') or d.get('consoleErrors'):row.update(status='FAIL',reason='NON_PASS_EVIDENCE:'+report)
+  if before_json.get(str(q))==q.stat().st_mtime_ns:row.update(status='FAIL',reason='EXPECTED_EVIDENCE_NOT_FRESH:'+report)
  rows.append(row);print(e['id']+' '+row['status'],flush=True)
-summary={'schema':'vdraw-regression-run/1','sourceSha':a.source_sha,'profile':a.profile,'suiteComplete':a.profile=='full' and all(r['status']=='PASS' for r in rows),'pass':sum(r['status']=='PASS' for r in rows),'fail':sum(r['status']=='FAIL' for r in rows),'blocked':sum(r['status']=='BLOCKED' for r in rows),'skip':0,'durationSeconds':round(time.time()-start,3),'rawEntryCount':manifest['archiveExecutableCount'],'mappedHistoricalEntries':manifest['historicalMappings'],'newEntryDiscovery':True,'runCopyTransforms':transformations,'rows':rows,'scope':'Software harnesses only; no Android device or signing proof. PASS is not full acceptance without separate QA/P0/P1/006/signing gates.'}
+summary={'schema':'vdraw-regression-run/1','sourceSha':a.source_sha,'profile':a.profile,'suiteComplete':a.profile=='full' and all(r['status']=='PASS' for r in rows),'pass':sum(r['status']=='PASS' for r in rows),'fail':sum(r['status']=='FAIL' for r in rows),'blocked':sum(r['status']=='BLOCKED' for r in rows),'skip':sum(r.get('skip',0) for r in rows),'durationSeconds':round(time.time()-start,3),'rawEntryCount':manifest['archiveExecutableCount'],'mappedHistoricalEntries':manifest['historicalMappings'],'newEntryDiscovery':True,'runCopyTransforms':transformations,'rows':rows,'scope':'Software harnesses only; no Android device or signing proof. PASS is not full acceptance without separate QA/P0/P1/006/signing gates.'}
 (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n');print(json.dumps({k:summary[k] for k in ['sourceSha','profile','suiteComplete','pass','fail','blocked','skip']}));print(str(out/'summary.json'))
 sys.exit(0 if all(r['status']=='PASS' for r in rows) else 1)

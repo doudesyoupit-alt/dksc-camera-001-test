@@ -412,8 +412,8 @@
       "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
     },
     "tests/gestures-update.mjs": {
-      "replacement": "tests/gestures-update-007.mjs",
-      "reason": "002 PWA namespace hardcoded;007 copy retains every assertion and substitutes only SW version/cache namespace."
+      "replacement": "tests/gestures-update-release.mjs",
+      "reason": "All original gesture/save/PWA assertions retained; current source CACHE namespace explicitly derived rather than stale 007-v1 string."
     }
   },
   "entries": [
@@ -606,6 +606,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/product-results.json"
       ]
     },
     {
@@ -623,6 +626,9 @@
       ],
       "dependencies": [
         "product.mjs"
+      ],
+      "verdictFiles": [
+        "evidence/output-regression-results.json"
       ]
     },
     {
@@ -640,6 +646,9 @@
       ],
       "dependencies": [
         "output-regression.mjs"
+      ],
+      "verdictFiles": [
+        "evidence/recovery-input-results.json"
       ]
     },
     {
@@ -654,6 +663,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/vision-flow-003-results.json"
       ]
     },
     {
@@ -685,6 +697,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/photo-pipeline-results.json"
       ]
     },
     {
@@ -699,6 +714,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/output-quality-results.json"
       ]
     },
     {
@@ -749,6 +767,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/render-export-results.json"
       ]
     },
     {
@@ -780,20 +801,26 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/gestures-004-results.json"
       ]
     },
     {
-      "id": "gestures-update-007.mjs",
-      "path": "tests/gestures-update-007.mjs",
+      "id": "gestures-update-release.mjs",
+      "path": "tests/gestures-update-release.mjs",
       "kind": "browser",
       "command": [
         "node",
-        "tests/gestures-update-007.mjs"
+        "tests/gestures-update-release.mjs"
       ],
       "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/gestures-update-results.json"
       ]
     },
     {
@@ -808,6 +835,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/save-gesture-003-results.json"
       ]
     },
     {
@@ -822,6 +852,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-conflict-results.json"
       ]
     },
     {
@@ -836,6 +869,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-safety-results.json"
       ]
     },
     {
@@ -850,6 +886,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-safety-006-results.json"
       ]
     },
     {
@@ -864,6 +903,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-extra-006-results.json"
       ]
     },
     {
@@ -878,6 +920,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/ui-state-results.json"
       ]
     },
     {
@@ -893,7 +938,10 @@
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
       ],
-      "limitation": "UI-only comparison and synthetic fixtures; independent fixed-origin actual candidate smoke required for P1 acceptance."
+      "limitation": "UI-only comparison and synthetic fixtures; independent fixed-origin actual candidate smoke required for P1 acceptance.",
+      "verdictFiles": [
+        "evidence/ui-007/UI-smoke-results.json"
+      ]
     },
     {
       "id": "screenshots-005.mjs",
@@ -910,6 +958,9 @@
       ],
       "dependencies": [
         "photo-pipeline-005.mjs"
+      ],
+      "verdictFiles": [
+        "evidence/screenshots.json"
       ]
     },
     {
@@ -924,6 +975,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-results.json"
       ]
     },
     {
@@ -938,6 +992,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-003-results.json"
       ]
     },
     {
@@ -952,6 +1009,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-after-results.json"
       ]
     },
     {
@@ -966,6 +1026,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-after-results.json"
       ]
     },
     {
@@ -1016,6 +1079,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/clone-profile.json"
       ]
     },
     {
@@ -1030,6 +1096,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/segment-probe.json"
       ]
     },
     {
