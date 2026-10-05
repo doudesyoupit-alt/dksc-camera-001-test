@@ -1,0 +1,2095 @@
+{
+  "schema": "vdraw/performance-regression-audit/1",
+  "audit_date_jst": "2026-10-05",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "branch": "work/vdraw007-performance-20261005",
+  "source_sha": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+  "integration_docs_sha": "1e3dd26184fa967fbf6798cb749b3705c64297dd",
+  "this_turn": {
+    "audit_only": true,
+    "test_runs": 0,
+    "heavy_image_runs": 0,
+    "performance_runs": 0,
+    "apk_builds": 0,
+    "app_source_edits": 0,
+    "test_edits": 0,
+    "manifest_edits": 0,
+    "checkpoint_updates": 0
+  },
+  "prior_limited_result": {
+    "at": "2026-10-05T14:29:40.440361+00:00",
+    "source_path": "/workspace/scratch/0b6a431d47bd/source-007/VDRAW-MOBILE-007",
+    "reported_start_sha": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "branch_assigned": "work/vdraw007-performance-20261005",
+    "source_git": "Source directory is an extracted archive without .git; no source edits or branch commits performed. Start SHA supplied by integration coordinator.",
+    "node": {
+      "files": [
+        "core.test.mjs",
+        "history-codec-005.test.mjs",
+        "native-io-005.test.mjs",
+        "native-shell.test.mjs",
+        "ui-theme-007.test.mjs",
+        "vision-contract-005.test.mjs",
+        "vision-provider.test.mjs"
+      ],
+      "pass": 47,
+      "fail": 0,
+      "skip": 0,
+      "excluded_files": [
+        "changes-006.test.mjs",
+        "command-update-004.test.mjs"
+      ],
+      "exclusion_reason": "Contains 5000-element boundary cases; coordinator prohibits rerunning 5000-element tests. No tests deleted, rewritten, or skip added."
+    },
+    "python": {
+      "files": [
+        "bounded-process-005.py"
+      ],
+      "pass": 4,
+      "fail": 0,
+      "skip": 0
+    },
+    "combined": {
+      "pass": 51,
+      "fail": 0,
+      "skip": 0,
+      "full_regression_complete": false
+    },
+    "manifests": {
+      "CI-SOURCE-MANIFEST.json": {
+        "files": 141,
+        "matching": 141,
+        "missing": [],
+        "mismatches": [],
+        "status": "PASS"
+      },
+      "BASELINE-LOGIC-MANIFEST.json": {
+        "files": 34,
+        "matching": 34,
+        "missing": [],
+        "mismatches": [],
+        "status": "PASS"
+      }
+    },
+    "source_preservation": {
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "total_files_before": 515,
+      "total_files_after": 515
+    },
+    "scope": {
+      "checks": {
+        "geometry": true,
+        "draw": true,
+        "patchShape": true,
+        "restoreDrawing": true,
+        "scheduleSave": true,
+        "markDirty": true,
+        "change": true,
+        "save": true,
+        "open": true,
+        "begin": true,
+        "measuredExport": true,
+        "pagesSheet": true,
+        "attachGestures": true,
+        "resize": true
+      },
+      "functions_count": 14,
+      "unchanged_count": 14,
+      "output_unchanged_except_presentation": true,
+      "method": "Existing check-ui-scope algorithm reproduced read-only; original checker was not run because it writes under source evidence."
+    },
+    "past_performance_only": {
+      "evidence": "evidence/ui-007/final/performance-sentinel.json",
+      "browser": "Chromium 154.0.8037.57",
+      "cpu_multiplier": 4,
+      "elements": 5000,
+      "median_color_006_ms": 171.39432799999986,
+      "median_color_007_ms": 169.80283599999984,
+      "ratio": 0.9907144418454733,
+      "first_display_006_ms": 368.3000000000029,
+      "first_display_007_ms": 325.5,
+      "color_100ms_target_met": false,
+      "android_real_device_measured": false,
+      "reexecuted_this_run": false
+    },
+    "not_run": [
+      "5000-element Node boundary cases",
+      "Browser functional regression",
+      "500/2000/5000 performance and UI sentinel",
+      "Heavy image processing",
+      "Real Android OS camera/sharing/keyboard/rotation/background kill/restart",
+      "Real Claude/SAM inference",
+      "PowerPoint/Jw_cad real applications",
+      "007 real device acceptance flow",
+      "Python output/native inspectors relying on old-version contracts or preexisting artifacts"
+    ],
+    "cross_team_issues": [
+      {
+        "file": "scripts/check-ci-source.py",
+        "issue": "Still asserts prototype006 / versionCode6 / versionName0.6.0 and therefore cannot serve as a valid 007 build checker without Android-owner review."
+      },
+      {
+        "file": "tests/native-assets-006.py",
+        "issue": "006-specific inspector, not an applicable 007 native asset regression test."
+      }
+    ],
+    "gate": "Light regression PASS; cannot claim full regression or real-device acceptance."
+  },
+  "refs_observed": {
+    "branch": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "git/ref/heads/main": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+    "git/ref/heads/validation": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "checkpoint-VDRAW-MOBILE-007": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "checkpoint-VDRAW-MOBILE-007-UI-CHECKPOINT": "e9a56b9f65ee4679ec83cc97cf67365d89f05e82"
+  },
+  "workflow_receipts": [
+    {
+      "run_id": 37282999062,
+      "sha": "e9a56b9f65ee4679ec83cc97cf67365d89f05e82",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 111675208413,
+          "name": "ui-smoke",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111675209841,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "run_id": 37283743856,
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 111677615053,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111677616807,
+          "name": "ui-smoke",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ],
+  "full_regression_gate": {
+    "state": "WAITING",
+    "requires": [
+      "integration_candidate_sha",
+      "independent_qa_results_bound_to_fix_sha",
+      "applicable_case_inventory_and_asset_route",
+      "006_preservation",
+      "007_checker_contract",
+      "runtime_and_fixture_hashes",
+      "predeclared_thresholds"
+    ],
+    "fail": 0,
+    "skip": 0,
+    "cancelled": 0,
+    "timeout": 0,
+    "unexecuted_applicable_cases": 0,
+    "these_numbers_are_required_not_results": true
+  },
+  "known_unresolved_ids": [
+    "ENGINE-001",
+    "INPUT-001",
+    "OUTPUT-001",
+    "EXPORT_OWNER_RACE"
+  ],
+  "cross_team_issues": [
+    {
+      "id": "PERF-REG-001",
+      "issue": "42 executable archive tests absent from 007 start git tree; test:core/native/vision refer to absent files",
+      "action": "fix reproducible test asset route before candidate run, no reconstruction this turn"
+    },
+    {
+      "id": "PERF-REG-002",
+      "issue": "UI-only 34 hashes /14 app functions gate conflicts with future authorized logic fixes",
+      "action": "retain baseline evidence; separate 006 preservation and candidate approved-diff verification"
+    },
+    {
+      "id": "PERF-REG-003",
+      "issue": "performance sentinel 006 is 007 working-copy with old UI files, not frozen full 006",
+      "action": "separate true006-to-candidate and UI-only comparisons"
+    },
+    {
+      "id": "PERF-REG-004",
+      "issue": "legacy native/package/export/selectors cannot be treated as unfiltered 007 regression",
+      "action": "freeze applicable and replacement cases before execution; no test deletion or skip"
+    }
+  ],
+  "archive": {
+    "name": "VDRAW-MOBILE-007.zip",
+    "bytes": 24863422,
+    "sha256": "3d91a85c663bde84ceee89fcfa2192fb443c83ace43f1f154e0e329f1b475e46",
+    "crc": "normal",
+    "entry_count": 515,
+    "read_only_original": true
+  },
+  "asset_summary": {
+    "tests_direct_files": 46,
+    "executable_entrypoints": 45,
+    "git_007_executable_entrypoints": 3,
+    "archive_only_executable_entrypoints": 42,
+    "requirements_file_is_not_test": true,
+    "baseline_fixture_files_are_not_entrypoints": true
+  },
+  "test_catalog": [
+    {
+      "path": "tests/bounded-process-005.py",
+      "sha256": "88e4b72883afae131949a8027e980cfb094a25fa5275b1406272609ad05adac7",
+      "bytes": 2519,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "bounded_harness_contract",
+      "prior_execution": "included_in_prior_4_Python_summary",
+      "prior_cases": 4,
+      "next_reason": "process timeout harness integrity"
+    },
+    {
+      "path": "tests/changes-006.test.mjs",
+      "sha256": "3965244f890bbaf7d55410ce9c7418395725a181e21e83287f6360fbff117e5f",
+      "bytes": 3792,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "005 and 006 validation preserve rejection/acceptance and messages",
+        "event allowlist strips sensitive extras and retains required fields",
+        "server blocked trial records every stage without invented counts/times",
+        "browser recorder roundtrip preserves attestation and counts, no raw content"
+      ],
+      "large_markers": [
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "./baseline005/core.js",
+        "../web/src/core.js",
+        "../server/photo-trial.mjs",
+        "../web/src/trial-recorder.js",
+        "../web/src/trial-event.js"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "6",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "large_Node_boundary",
+      "prior_execution": "NOT_RUN_in_prior_51",
+      "next_reason": "deferred by no-5000 instruction; run after full-regression gate"
+    },
+    {
+      "path": "tests/clone-profile-005.mjs",
+      "sha256": "e94e0159b30b4ecc9eee68d91d5d08e0f8c96b117a18e0d3d2a256088624d6bd",
+      "bytes": 1373,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises"
+      ],
+      "write_paths": [
+        "evidence/clone-profile.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/command-update-004.test.mjs",
+      "sha256": "aad1eb43681eaeca3ec14de2e03c4722c2f53ad33cb4604a108ded11c76b78cb",
+      "bytes": 2474,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "fast update keeps independent snapshot despite later pan/drag/direct metadata mutation",
+        "mixed fast and general commands undo/redo across page adoption and removal",
+        "invalid patch, missing id, ID change and no-op do not pollute history",
+        "history JSON stays compatible, bounded and unaliased after reload"
+      ],
+      "large_markers": [
+        "4993+sample=>5000_equivalent"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "../web/src/commands.js",
+        "../web/src/core.js"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "4",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "large_Node_boundary",
+      "prior_execution": "NOT_RUN_in_prior_51",
+      "next_reason": "deferred by no-5000 instruction; run after full-regression gate"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "a7279243315b6b109f34fe510cc6c2a959f7d0835af88c2bc558cc8942eae082",
+      "bytes": 3142,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "real color changes survive undo/redo, selection is absent from export renderer",
+        "candidate adoption adds a page and preserves manually edited geometry",
+        "invalid colors/NaN/duplicate ids are rejected atomically",
+        "photo calibration is not promoted by adding an edge dimension",
+        "thin lines hit tolerance, distinct overlapping targets can be enumerated",
+        "polygon translation preserves angles and no rectangle correction is applied",
+        "multi-page JSON round trip preserves every diagram page",
+        "unconnected AI cannot send photos or restart after reconnect"
+      ],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "../web/src/core.js",
+        "../web/src/commands.js",
+        "../web/src/vision.js",
+        "../web/src/render.js"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "applicable_light_contract",
+      "prior_execution": "included_in_prior_47_Node_summary",
+      "prior_cases": 8,
+      "next_reason": "related fixes and integrated candidate need new SHA-bound outcome"
+    },
+    {
+      "path": "tests/gestures-004.mjs",
+      "sha256": "aed73840cf74f8aeb367e6bb1e515af577f9ceeec6390042c8b0f86015589b14",
+      "bytes": 4985,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "web/sw.js",
+        "evidence/gestures-004-results.json",
+        "evidence/gestures-004-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "4",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_gesture_PWA_adaptation",
+      "prior_execution": "historical_only",
+      "next_reason": "old selectors/cache-version expectations; writes web/sw.js; execute only isolated disposable copy"
+    },
+    {
+      "path": "tests/gestures-update.mjs",
+      "sha256": "dda892dc6e313d9efffa18ce642ce05c9fabdbcfaa505a17c9e7e3e6e6978300",
+      "bytes": 6930,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "5000"
+      ],
+      "contract_markers": [
+        "vdraw-mobile-shell-002-test-v2",
+        "vdraw-mobile-shell-002-v1"
+      ],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "web/sw.js",
+        "web/sw.js",
+        "evidence/update-debug.json",
+        "evidence/gestures-update-results.json",
+        "evidence/gestures-update-results.json",
+        "web/sw.js"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_gesture_PWA_adaptation",
+      "prior_execution": "historical_only",
+      "next_reason": "old selectors/cache-version expectations; writes web/sw.js; execute only isolated disposable copy"
+    },
+    {
+      "path": "tests/history-codec-005.test.mjs",
+      "sha256": "82c5468bd2ec43b2cafb968e332d8246ebdf04dab4beb2979872da24bd731c85",
+      "bytes": 1743,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "compressed history round-trip retains pages/text/color and independent snapshots",
+        "empty history and unsupported codec reject safely; overlimit remains explicitly optional",
+        "declared byte mismatch and damaged compressed stream stop rather than allocating unbounded",
+        "no CompressionStream falls back to the compatible schema2 history path"
+      ],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "../web/src/history-codec.js",
+        "../web/src/core.js"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "applicable_light_contract",
+      "prior_execution": "included_in_prior_47_Node_summary",
+      "prior_cases": 4,
+      "next_reason": "related fixes and integrated candidate need new SHA-bound outcome"
+    },
+    {
+      "path": "tests/inspect-protocol-003.py",
+      "sha256": "0ae185ea6e28ab14170b492e361499f8c5ed1983139334d6e549f5facb0658d5",
+      "bytes": 2464,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "3",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "artifact_inspector",
+      "prior_execution": "historical_fixture_inspection_only",
+      "next_reason": "bind newly generated candidate output; old artifact PASS does not prove candidate generation"
+    },
+    {
+      "path": "tests/inspect_outputs.py",
+      "sha256": "3352c0b5bfa12d831af697cbc69f56e0dafc2363320191b1c6f145776fe3d302",
+      "bytes": 2613,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "legacy_export_or_UI_contract",
+      "prior_execution": "historical_only",
+      "next_reason": "old 7-format/export artifact/UI expectations need applicability mapping for 007 3-format acceptance"
+    },
+    {
+      "path": "tests/native-assets-003.py",
+      "sha256": "4ba335ef03802614554bf9aa7c914e3d7dc2c7e02a432668b3def0969a0e788e",
+      "bytes": 1754,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [
+        "prototype003",
+        "vdraw-mobile-shell-003-"
+      ],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "3",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "legacy_version_checker",
+      "prior_execution": "historical_only",
+      "next_reason": "do not apply package/cache old-version assertions to 007; Android-owned 007 path required",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/native-assets-004.py",
+      "sha256": "aaf3559460423003dc7506c16494da778f655af210d4ea33cb4ccc05d98e8ee7",
+      "bytes": 1754,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [
+        "prototype004",
+        "vdraw-mobile-shell-004-"
+      ],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "4",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "legacy_version_checker",
+      "prior_execution": "historical_only",
+      "next_reason": "do not apply package/cache old-version assertions to 007; Android-owned 007 path required",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/native-assets-005.py",
+      "sha256": "3ea0a24070976a16250aa76b7849d54fe622fa0fce2fe328c1ecedbee5e5d746",
+      "bytes": 1754,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [
+        "prototype005",
+        "vdraw-mobile-shell-005-"
+      ],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "legacy_version_checker",
+      "prior_execution": "historical_only",
+      "next_reason": "do not apply package/cache old-version assertions to 007; Android-owned 007 path required",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/native-assets-006.py",
+      "sha256": "f48ff99fcaf01dc7c8f878a4ef87f80f61bb7439b447e24f0bb76c094f97d4de",
+      "bytes": 1754,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [
+        "prototype006",
+        "vdraw-mobile-shell-006-"
+      ],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "6",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "legacy_version_checker",
+      "prior_execution": "historical_only",
+      "next_reason": "do not apply package/cache old-version assertions to 007; Android-owned 007 path required",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/native-io-005.test.mjs",
+      "sha256": "95de465ed9bac3147b7a37003d19b1a8201819a73c923afef04110984a7f03ec",
+      "bytes": 2412,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "camera requests OS URI/orientation, does not save to gallery",
+        "camera denial/cancellation fails clearly, not a successful blank photo",
+        "write private cache before sharing actual URI; reported only as request",
+        "filesystem failure/missing URI never invokes share; path traversal rejected",
+        "share cancellation is a rejection, not successful save at a receiver"
+      ],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "../web/src/native-io.js"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "applicable_light_contract",
+      "prior_execution": "included_in_prior_47_Node_summary",
+      "prior_cases": 5,
+      "next_reason": "related fixes and integrated candidate need new SHA-bound outcome",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/native-shell.test.mjs",
+      "sha256": "c0bdbb3590dd60fd118fdb6f14f4f77f83fc3e25c2e0109282a8afb90621b816",
+      "bytes": 3983,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "isolates status and keyboard failures; splash still hides",
+        "back consumed by editor does not minimize; unconsumed home back does",
+        "failed save prevents minimizing and reports error",
+        "pause and resume are actual callbacks; failed pause is reported",
+        "only successful Camera.getPhoto restored results imported; failed result reported",
+        "listener cleanup suppresses old callbacks and removes each subscription",
+        "splash failure visible; all other features remain ready"
+      ],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "../web/src/native-runtime.js"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "applicable_light_contract",
+      "prior_execution": "included_in_prior_47_Node_summary",
+      "prior_cases": 7,
+      "next_reason": "related fixes and integrated candidate need new SHA-bound outcome",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/output-inspect-004.py",
+      "sha256": "cb32ade88e889925b2bf7393eaefa40562e2a9366af2addd2435d4197e896cd3",
+      "bytes": 2017,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "4",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "artifact_inspector",
+      "prior_execution": "historical_fixture_inspection_only",
+      "next_reason": "bind newly generated candidate output; old artifact PASS does not prove candidate generation"
+    },
+    {
+      "path": "tests/output-quality-005.mjs",
+      "sha256": "7ea7d95be3c931e441528e8db94252b6033e0b410a69d714d6594a3a51a02cce",
+      "bytes": 3083,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/output-quality-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device"
+    },
+    {
+      "path": "tests/output-regression.mjs",
+      "sha256": "4a7f486d2d2105157d43f7c735d6d86d316bd25069410a6d54c30e2cbf0fc20f",
+      "bytes": 2681,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "500"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/duplicate-name-polygons.pptx",
+        "evidence/output-regression-results.json",
+        "evidence/output-regression-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device"
+    },
+    {
+      "path": "tests/output-structure-005.py",
+      "sha256": "c54ec13160f030a8fc5104098de8211bd9754fdf8b1be26d9e1ec7677dbfd17c",
+      "bytes": 3705,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "artifact_inspector",
+      "prior_execution": "historical_fixture_inspection_only",
+      "next_reason": "bind newly generated candidate output; old artifact PASS does not prove candidate generation"
+    },
+    {
+      "path": "tests/performance-003.mjs",
+      "sha256": "3bd338b93cbe26a8368a80761d92cab4ebaf37d2adaca3c28bd710d9fd49ed0b",
+      "bytes": 6103,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/performance-003-results.json",
+        "evidence/performance-003-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "3",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/performance-004.mjs",
+      "sha256": "8b5f4c38ce9f87ec736c36657db380f73974f0c4a39cb3f6b0a92e6102f049d7",
+      "bytes": 6834,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "4",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/performance-005.mjs",
+      "sha256": "6c71a0cd0ecfa0ab2b43264402fea4df3c642df38f33b84c3217f831b3fb7e13",
+      "bytes": 7202,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/performance-core-006.mjs",
+      "sha256": "c5e9a22a1e81fe24946788def641d1870ddebb233de51757876f833af4c33740",
+      "bytes": 2439,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:fs/promises",
+        "node:assert/strict",
+        "node:perf_hooks",
+        "./baseline005/core.js",
+        "./baseline005/commands.js",
+        "../web/src/commands.js",
+        "../web/src/history-codec.js"
+      ],
+      "write_paths": [
+        "evidence/performance-core-006.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "6",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/performance-final-006.mjs",
+      "sha256": "f14cf296b6c5845d36d0013bc6bdb30525184f585322d2ea3d7e21e382de75d3",
+      "bytes": 5341,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:os",
+        "node:path",
+        "node:assert/strict"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "6",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/performance.mjs",
+      "sha256": "ba67ffa148de461b737500b887d4e3d94521e9054caeec2e16fea12051ab5d9a",
+      "bytes": 5585,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/performance-results.json",
+        "evidence/performance-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/photo-pipeline-005.mjs",
+      "sha256": "c505fa25537bc7b6239af8943ca0e85375574422d1a122c13eff8ea3e6c3928c",
+      "bytes": 8510,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict",
+        "../server/vision-provider.mjs",
+        "../server/photo-trial.mjs"
+      ],
+      "write_paths": [
+        "evidence/synthetic-input.png",
+        "evidence/fixture-candidate.json",
+        "evidence/fixture-photo-trial.json",
+        "evidence/fixture-photo-trial-downloaded.json",
+        "evidence/photo-pipeline-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device"
+    },
+    {
+      "path": "tests/product.mjs",
+      "sha256": "0df77d0b1813b2d6ccb2b5dce1c481e2633e9f34968cf8bc2c2b6a76088892aa",
+      "bytes": 11388,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/pwa-installability.json",
+        "evidence/product-results.json",
+        "evidence/product-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "legacy_export_or_UI_contract",
+      "prior_execution": "historical_only",
+      "next_reason": "old 7-format/export artifact/UI expectations need applicability mapping for 007 3-format acceptance"
+    },
+    {
+      "path": "tests/recovery-input.mjs",
+      "sha256": "859fb687c5b4056f91ef8833fe27efb609775b967a5704f5711fa48b16228543",
+      "bytes": 4156,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/recovery-input-results.json",
+        "evidence/recovery-input-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device"
+    },
+    {
+      "path": "tests/render-export-004.mjs",
+      "sha256": "6aa5b7049e118fc925f57cb80fc5aebcd50d97dcaf9a04a4a6f818d75a8d356f",
+      "bytes": 5634,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/render-export-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "4",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device"
+    },
+    {
+      "path": "tests/requirements-inspect.txt",
+      "sha256": "0ca830815e9447ab4708611dafc6e172dcf34e7b7cfa3f9e7f82cd0dfeeb93a5",
+      "bytes": 45,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "dependency_input_not_test",
+      "prior_execution": "not_a_test",
+      "next_reason": "inspector dependencies/version record"
+    },
+    {
+      "path": "tests/save-gesture-003.mjs",
+      "sha256": "8521a332b6ecbaece193f6c4028b72afd76f89684876573252de9aa0999200e2",
+      "bytes": 4365,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/save-gesture-003-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "3",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device"
+    },
+    {
+      "path": "tests/screenshots-005.mjs",
+      "sha256": "d656f4673c286567a975597ea53b2cbd8a9e17cf53f908e7646717ebdd26e3dd",
+      "bytes": 1863,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/fixture-pipeline.json",
+        "evidence/screenshots.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "visual_evidence_helper",
+      "prior_execution": "historical_only",
+      "next_reason": "screenshots are evidence, not full regression verdict"
+    },
+    {
+      "path": "tests/segment-probe-005.mjs",
+      "sha256": "66cdf6d3cf9b548a887179105910848a64b82e8acc4e005d99484f307cbecbe4",
+      "bytes": 2141,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises"
+      ],
+      "write_paths": [
+        "evidence/segment-probe.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_performance_or_diagnostic",
+      "prior_execution": "historical_only_not_current_007_full_result",
+      "next_reason": "incompatible generation/method/Node-vs-UI; keep history, freeze one candidate campaign"
+    },
+    {
+      "path": "tests/storage-conflict.mjs",
+      "sha256": "f0c84037473f83109d50ef30ca2bed46c4591080853eabb61b722b06b60a0428",
+      "bytes": 1826,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/storage-conflict-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "storage_browser_candidate_adaptation",
+      "prior_execution": "historical_006_or_unversioned_evidence_only",
+      "next_reason": "candidate save/restore/CAS/corruption; schema006 DB name deliberately remains"
+    },
+    {
+      "path": "tests/storage-extra-005.mjs",
+      "sha256": "3cb37c68c0de0eb47941df0507f5b8b0814c51a045e816a6a34ed3b194606889",
+      "bytes": 6171,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "5000"
+      ],
+      "contract_markers": [
+        "vdraw-mobile-prototype-005",
+        "vdraw-mobile-storage/2",
+        "vdraw-mobile-storage/3"
+      ],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/storage-extra-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_storage_overlap",
+      "prior_execution": "historical_only",
+      "next_reason": "prefer reviewed006 storage coverage; obsolete DB005 contract must not run unchanged against007"
+    },
+    {
+      "path": "tests/storage-extra-006.mjs",
+      "sha256": "621d43d19e7c29aa8552461932d26ff87a1c0def2b167fce564fb2532bdeea5a",
+      "bytes": 6275,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [
+        "5000"
+      ],
+      "contract_markers": [
+        "vdraw-mobile-prototype-006",
+        "vdraw-mobile-storage/2",
+        "vdraw-mobile-storage/3"
+      ],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/storage-extra-006-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "6",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "storage_browser_candidate_adaptation",
+      "prior_execution": "historical_006_or_unversioned_evidence_only",
+      "next_reason": "candidate save/restore/CAS/corruption; schema006 DB name deliberately remains"
+    },
+    {
+      "path": "tests/storage-safety-004.mjs",
+      "sha256": "8fcfa7274776b7ae372e15e4f4921f371124632792fd6a523397fc1623f1c4d0",
+      "bytes": 5361,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/storage-safety-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "4",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "historical_storage_overlap",
+      "prior_execution": "historical_only",
+      "next_reason": "prefer reviewed006 storage coverage; obsolete DB005 contract must not run unchanged against007"
+    },
+    {
+      "path": "tests/storage-safety-006.mjs",
+      "sha256": "691fffca1f753907ff01a53f65f8f9be169db48b97b78bb9bb82a9bfff6ddaff",
+      "bytes": 5437,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/storage-safety-006-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "6",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "storage_browser_candidate_adaptation",
+      "prior_execution": "historical_006_or_unversioned_evidence_only",
+      "next_reason": "candidate save/restore/CAS/corruption; schema006 DB name deliberately remains"
+    },
+    {
+      "path": "tests/ui-performance-007.mjs",
+      "sha256": "f9d55b47e34d673dfd66c011df322eba4da7e5125a18e3cee212d7672eb8460e",
+      "bytes": 3712,
+      "in_start_sha_tree": true,
+      "named_tests": [],
+      "large_markers": [
+        "2000",
+        "500",
+        "5000"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:os",
+        "node:path",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/ui-007/performance-sentinel.json",
+        "evidence/ui-007/performance-sentinel.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "7",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "007_UI_performance",
+      "prior_execution": "historical_3_paired_actions_5000_rect",
+      "next_reason": "freeze real006 comparator; current baseline is UI-only"
+    },
+    {
+      "path": "tests/ui-smoke-007.mjs",
+      "sha256": "56753cf89ebf84d4f0a3b0672556434d0b7ed459abe98212e2c8d76c1717ef8c",
+      "bytes": 10757,
+      "in_start_sha_tree": true,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:os",
+        "node:path",
+        "node:assert/strict"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "7",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "007_browser_functional",
+      "prior_execution": "historical_CI_run_37282999062_11_groups",
+      "next_reason": "candidate UI/storage/adopt/exports interaction"
+    },
+    {
+      "path": "tests/ui-state-005.mjs",
+      "sha256": "f04f5b6904388635b7dc6d5af2651333911fa6e35f8af3a01bc3ff8273af8356",
+      "bytes": 5789,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/ui-state-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device"
+    },
+    {
+      "path": "tests/ui-theme-007.test.mjs",
+      "sha256": "81756679be3117841e79dd1751028a1b4a07bdf75b45cfe12b08463da25baf3e",
+      "bytes": 1472,
+      "in_start_sha_tree": true,
+      "named_tests": [
+        "No credential/clock-driven fake trace completion",
+        "Only observed source and stage attestations change visible trace state",
+        "Unknown states do not imply success",
+        "Technical error is separated from useful user guidance",
+        "Output descriptions preserve existing editable/viewable meanings"
+      ],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "7",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "applicable_light_contract",
+      "prior_execution": "included_in_prior_47_Node_summary",
+      "prior_cases": 5,
+      "next_reason": "related fixes and integrated candidate need new SHA-bound outcome"
+    },
+    {
+      "path": "tests/vision-contract-005.test.mjs",
+      "sha256": "0019019830443a1b2150d87b08907be5627c45acdf463f28e24ff62faef5d909",
+      "bytes": 5763,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "structured JSON schema/image payload/prompt bbox/usage/stage clock",
+        "timeout even if fetch ignores AbortSignal; no retry",
+        "SAM timeout, GPU memory failure, auth failure stop with safe codes",
+        "incomplete Claude/refusal and oversized body are not candidates",
+        "multiple masks choose highest internal ranking; no score advertised as accuracy",
+        "mask ID/bbox/polygon/score contract rejects misalignment",
+        "trial gates human stages; unmeasured metrics stay null and logs exclude names",
+        "input size/signature/timeout and unknown category rejected before candidate"
+      ],
+      "large_markers": [
+        "500"
+      ],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "../server/vision-provider.mjs",
+        "../server/sam-contract.mjs",
+        "../server/photo-trial.mjs"
+      ],
+      "write_paths": [],
+      "executed_this_turn": false,
+      "harness_origin_version": "5",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "applicable_light_contract",
+      "prior_execution": "included_in_prior_47_Node_summary",
+      "prior_cases": 8,
+      "next_reason": "related fixes and integrated candidate need new SHA-bound outcome",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/vision-flow-003.mjs",
+      "sha256": "d412baeca6ae403d9d22228d155a6549ade03ba1c671d55307aafad2314c7c27",
+      "bytes": 7089,
+      "in_start_sha_tree": false,
+      "named_tests": [],
+      "large_markers": [],
+      "contract_markers": [
+        "vdraw-mobile-prototype-002",
+        "vdraw-mobile-prototype-003"
+      ],
+      "imports": [
+        "node:module",
+        "node:child_process",
+        "node:fs/promises",
+        "node:assert/strict"
+      ],
+      "write_paths": [
+        "evidence/vision-protocol-fixture.json",
+        "evidence/vision-flow-003-results.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "3",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "browser_functional_candidate_adaptation",
+      "prior_execution": "historical_only_not_in_prior_51",
+      "next_reason": "review old selectors/fixtures then bind to candidate; mock/photo boundary is not actual AI/device",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    },
+    {
+      "path": "tests/vision-provider.test.mjs",
+      "sha256": "6d326e1492796a55126d43776344e7c319e2dd864b6c22da3d277c5f5ca640ba",
+      "bytes": 5720,
+      "in_start_sha_tree": false,
+      "named_tests": [
+        "missing environment is UNCONNECTED; no network request",
+        "SAM credentials in URLs or insecure external endpoints rejected",
+        "consent required before any provider call",
+        "mock contracts complete actual stage transitions; no invented progress",
+        "401 stops at scene, no retry or SAM call, no response body/secrets exposed",
+        "timeout reported without retry",
+        "invalid provider JSON and SAM contract fail safely",
+        "geometry rejects unknown IDs, malformed polygons and invented units",
+        "candidate receipt, adoption and discard preserve manual page; fixture labelled",
+        "candidate receipt rejects wrong source and keeps existing document unchanged"
+      ],
+      "large_markers": [],
+      "contract_markers": [],
+      "imports": [
+        "node:test",
+        "node:assert/strict",
+        "node:fs/promises",
+        "../server/vision-provider.mjs",
+        "../web/src/vision.js",
+        "../web/src/core.js"
+      ],
+      "write_paths": [
+        "evidence/vision-protocol-fixture.json"
+      ],
+      "executed_this_turn": false,
+      "harness_origin_version": "unversioned_legacy",
+      "next_run_gate": "candidate_sha_and_independent_qa_fixed",
+      "scope": "requires source/harness/fixture binding; filename version alone is not runtime provenance",
+      "category": "applicable_light_contract",
+      "prior_execution": "included_in_prior_47_Node_summary",
+      "prior_cases": 10,
+      "next_reason": "related fixes and integrated candidate need new SHA-bound outcome",
+      "native_or_provider_claim": "mock_contract_not_real_OS_or_AI"
+    }
+  ],
+  "byte_duplicate_evidence_groups": [
+    {
+      "sha256": "2f9a0a7a91d27e7fb82c278e447470e5ccb46420dcd1b3d500f6d58d01d04cf2",
+      "paths": [
+        "evidence/APK-report-006.json",
+        "evidence/github-006/run-37192327082/006-11299676197/ci/APK-report.json",
+        "evidence/github-006/run-37192327082/006-11299865262/ci/APK-report.json"
+      ]
+    },
+    {
+      "sha256": "8a5ddaf88e89f3a22cf8b2be71778135291a53ed58f45e962cfd1e527713a74d",
+      "paths": [
+        "evidence/final-test-summary.json",
+        "evidence/forced-release-status.json"
+      ]
+    },
+    {
+      "sha256": "6785f11b43e17740210be5f6918f8bdb2749550fbe2bb3a9f7570f845ad45762",
+      "paths": [
+        "evidence/fixture-photo-trial-downloaded.json",
+        "evidence/fixture-photo-trial.json"
+      ]
+    },
+    {
+      "sha256": "fe6518f79a7ec182ebb5864afc289400e19a9a04e91361614cdfc3507181b047",
+      "paths": [
+        "evidence/github-006/run-37191983500/006-11298724589/android-environment.json",
+        "evidence/github-006/run-37191983500/006-11298724589/ci/build-result.log"
+      ]
+    },
+    {
+      "sha256": "50ec27824da6b4a32dffdb13d3a3fd0a5523f0f1f81a0b1d4bd43b11933fc15c",
+      "paths": [
+        "evidence/github-006/run-37191983500/006-11298724589/ci/APK-report.json",
+        "evidence/github-006/run-37191983500/006-11298779623/ci/APK-report.json"
+      ]
+    },
+    {
+      "sha256": "33d3152aca32d4d627e14c6c9146cbc3acd173bc64af5e584d4b77626508dbef",
+      "paths": [
+        "evidence/github-006/run-37191983500/006-11298724589/ci/native-assets.log",
+        "evidence/github-006/run-37192327082/006-11299676197/ci/native-assets.log",
+        "evidence/native-assets-006.json",
+        "evidence/native-assets-006.log"
+      ]
+    },
+    {
+      "sha256": "7408f53520cde7f1c2406a69630fa4be8917a94552c7bf7bf5db71f802706fce",
+      "paths": [
+        "evidence/github-006/run-37191983500/006-11298724589/ci/sdk.log",
+        "evidence/github-006/run-37192327082/006-11299676197/ci/sdk.log",
+        "evidence/ui-007/apk/ci/sdk.log"
+      ]
+    },
+    {
+      "sha256": "fb70c6b5680161063cddf21178222111d5221f04456e926012be9a3237bf923d",
+      "paths": [
+        "evidence/github-006/run-37191983500/006-11298822861/performance-final-006.json",
+        "evidence/performance-final-006.json"
+      ]
+    },
+    {
+      "sha256": "0389772eddd735ba1431c675853809f5ce3d3a9e9de5bd9eecddae06490b29f1",
+      "paths": [
+        "evidence/github-006/run-37191983500/006-11298822861/storage-extra-006-results.json",
+        "evidence/storage-extra-006-results.json"
+      ]
+    },
+    {
+      "sha256": "5f71e1d2709dfdb9adf7835104172436bb81172613c2b74df6cc8ceb49c7e4e7",
+      "paths": [
+        "evidence/github-006/run-37192327082/006-11299676197/android-environment.json",
+        "evidence/github-006/run-37192327082/006-11299676197/ci/build-result.log"
+      ]
+    },
+    {
+      "sha256": "5988bd80509b93c38cdf285208a4fa857910fb40b1b0a019fab0fbd0b2b720ca",
+      "paths": [
+        "evidence/github-006/run-37192327082/006-11299676197/ci/npm-ci.log",
+        "evidence/ui-007/apk/ci/npm.log"
+      ]
+    },
+    {
+      "sha256": "59ffcae6152d84c8f3e2920807fc454fa94f43b725de4a94b2769c1eefc0070f",
+      "paths": [
+        "evidence/github-006/run-37192493201/storage-safety-006-results.json",
+        "evidence/storage-safety-006-results.json",
+        "evidence/storage-safety-results.json"
+      ]
+    },
+    {
+      "sha256": "e0b29f39e684f28913179884c28edafeeaf9e9c602b683ac008a38cc9d60c07d",
+      "paths": [
+        "evidence/native-assets-005.json",
+        "evidence/native-assets.log"
+      ]
+    },
+    {
+      "sha256": "2b950b317893796636c87fafd9f1157612a8ad94ab0a5351ad838440932e08a4",
+      "paths": [
+        "evidence/output-structure.json",
+        "evidence/output-structure.log"
+      ]
+    },
+    {
+      "sha256": "552b3b1484f65fa8ee3227397966fd48763f3abd028c834d748bd607634dbb9e",
+      "paths": [
+        "evidence/performance-comparison.json",
+        "evidence/performance-comparison.log"
+      ]
+    },
+    {
+      "sha256": "d81debbd249a27ae79c1ebc9d3be96fcc47bd44ed8f681ac10397dee100a6a99",
+      "paths": [
+        "evidence/performance-core-006.json",
+        "evidence/performance-core-006.log"
+      ]
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "paths": [
+        "evidence/screenshots.log",
+        "evidence/storage-conflict.log",
+        "evidence/ui-007/final/performance.log",
+        "evidence/ui-007/final/smoke.log"
+      ]
+    },
+    {
+      "sha256": "4d4df6e152d8cfaa01af20a4829bcbd77825387625131607bef968a63ac79193",
+      "paths": [
+        "evidence/ui-007/UI-scope-check.json",
+        "evidence/ui-007/final/UI-scope-check.json"
+      ]
+    },
+    {
+      "sha256": "7185f73f8172c41134824b40ffaa52ae51eea050dce28185d452e3c5689c4fde",
+      "paths": [
+        "evidence/ui-007/apk/android-environment.json",
+        "evidence/ui-007/apk/ci/build.log"
+      ]
+    },
+    {
+      "sha256": "7626dcb6a46b06ae15a409b539b7e2dd32a684823945b52db442feec033873e7",
+      "paths": [
+        "evidence/vision-env-current.json",
+        "evidence/vision-provider-006.json"
+      ]
+    }
+  ],
+  "source_binding": {
+    "ci_manifest": {
+      "entries": 141,
+      "archive_sha256_matches": 141,
+      "archive_mismatches": [],
+      "git_blob_mismatches": []
+    },
+    "protected_manifest": {
+      "entries": 34,
+      "archive_sha256_matches": 34,
+      "archive_mismatches": [],
+      "git_blob_mismatches": []
+    }
+  },
+  "evidence_index": [
+    {
+      "path": "evidence/ui-007/final/UI-smoke-results.json",
+      "sha256": "159db2435307c77f936840a62d477ae6d87a3ccb8cb2a55b90559f13a5f279c2",
+      "bytes": 5208,
+      "new_execution": false
+    },
+    {
+      "path": "evidence/ui-007/final/performance-sentinel.json",
+      "sha256": "40f5b89ae292668c6fde79abdd7d1774b99647a34e7d1493aab645482a9fb2a3",
+      "bytes": 784,
+      "new_execution": false
+    },
+    {
+      "path": "evidence/ui-007/output-structure.json",
+      "sha256": "92eadb9d70fcb62cdf1b8e8c987b4b4210e0c24f9ba2bddafaf3cda6e9b114b6",
+      "bytes": 2078,
+      "new_execution": false
+    },
+    {
+      "path": "evidence/output-light-006.json",
+      "sha256": "a98c1d73916035dce62bc72226ea7b841ae5bfecdc889d232b1b11b8a0de0f97",
+      "bytes": 1863,
+      "new_execution": false
+    },
+    {
+      "path": "evidence/final-status-006.json",
+      "sha256": "fe09e05fd7f1209e454f905bc11f0e523c3642b0a801f7220f8a2d9a6e740b39",
+      "bytes": 1796,
+      "new_execution": false
+    },
+    {
+      "path": "evidence/final-test-summary.json",
+      "sha256": "8a5ddaf88e89f3a22cf8b2be71778135291a53ed58f45e962cfd1e527713a74d",
+      "bytes": 4340,
+      "new_execution": false
+    },
+    {
+      "path": "evidence/inherited-final-test-summary.json",
+      "sha256": "733db9b0181ea0bb7c4f16a91c0d77257bd7d608e305dafc6c865a2b48c87fc8",
+      "bytes": 1315,
+      "new_execution": false
+    }
+  ],
+  "past_performance_raw": {
+    "status": "PASS",
+    "scope": "UI-only 5000 sentinel, not full 500/2000/5000 retest or Android device",
+    "browser": "154.0.8037.57",
+    "cpuRate": 4,
+    "ratio": 0.9907144418454733,
+    "rows": [
+      {
+        "phase": "006",
+        "elements": 5000,
+        "firstDisplayMs": 368.3000000000029,
+        "colorActionMs": [
+          202.18779400000017,
+          159.01185799999985,
+          171.39432799999986
+        ],
+        "medianColorMs": 171.39432799999986,
+        "stageArea": 242190
+      },
+      {
+        "phase": "007",
+        "elements": 5000,
+        "firstDisplayMs": 325.5,
+        "colorActionMs": [
+          181.29967599999964,
+          156.97144000000026,
+          169.80283599999984
+        ],
+        "medianColorMs": 169.80283599999984,
+        "stageArea": 260056.875
+      }
+    ],
+    "errors": []
+  },
+  "past_smoke_raw": {
+    "status": "PASS",
+    "kind": "real Chromium UI with synthetic input; no physical device or real AI",
+    "browser": "154.0.8037.57",
+    "rows": [
+      {
+        "name": "launch/new/trace existing boundary",
+        "status": "PASS",
+        "realAI": false
+      },
+      {
+        "name": "new blank through unchanged command",
+        "status": "PASS"
+      },
+      {
+        "name": "line/text/dimension placement",
+        "status": "PASS"
+      },
+      {
+        "name": "Undo/Redo/save/reload through unchanged storage",
+        "status": "PASS"
+      },
+      {
+        "name": "candidate highlight is UI-only; adopt then correction",
+        "status": "PASS",
+        "kind": "synthetic sample"
+      },
+      {
+        "name": "PPTX/DXF/PDF via refreshed export UI",
+        "status": "PASS"
+      },
+      {
+        "name": "unsupported browser sharing safe message",
+        "status": "PASS",
+        "kind": "forced unavailable boundary",
+        "OSShare": "NOT_RUN"
+      },
+      {
+        "name": "shared file handoff boundary",
+        "status": "PASS",
+        "kind": "mock Web Share; not OS sheet"
+      },
+      {
+        "name": "synthetic photo/image file input",
+        "status": "PASS",
+        "realPhoto": false
+      },
+      {
+        "name": "keyboard-sized viewport: value and confirm visible",
+        "status": "PASS",
+        "kind": "viewport simulation; OS keyboard NOT_RUN"
+      },
+      {
+        "name": "refreshed shell reloads offline",
+        "status": "PASS"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "before-home",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": null,
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "before-editor",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 0,
+          "y": 143,
+          "width": 390,
+          "height": 621,
+          "area": 242190
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "before-dimension",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 0,
+          "y": 143,
+          "width": 390,
+          "height": 621,
+          "area": 242190
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "before-export",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": null,
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-home",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": null,
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-editor",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 0,
+          "y": 107,
+          "width": 390,
+          "height": 666.8125,
+          "area": 260056.875
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-dimension",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": {
+          "x": 0,
+          "y": 107,
+          "width": 390,
+          "height": 666.8125,
+          "area": 260056.875
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-export",
+        "viewport": [
+          390,
+          844
+        ],
+        "stage": null,
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-editor-320",
+        "viewport": [
+          320,
+          640
+        ],
+        "stage": {
+          "x": 0,
+          "y": 107,
+          "width": 320,
+          "height": 462.8125,
+          "area": 148100
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-dimension-320",
+        "viewport": [
+          320,
+          640
+        ],
+        "stage": {
+          "x": 0,
+          "y": 107,
+          "width": 320,
+          "height": 462.8125,
+          "area": 148100
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-editor-360",
+        "viewport": [
+          360,
+          740
+        ],
+        "stage": {
+          "x": 0,
+          "y": 107,
+          "width": 360,
+          "height": 562.8125,
+          "area": 202612.5
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-dimension-360",
+        "viewport": [
+          360,
+          740
+        ],
+        "stage": {
+          "x": 0,
+          "y": 107,
+          "width": 360,
+          "height": 562.8125,
+          "area": 202612.5
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-editor-844",
+        "viewport": [
+          844,
+          390
+        ],
+        "stage": {
+          "x": 0,
+          "y": 100.5,
+          "width": 844,
+          "height": 227.3125,
+          "area": 191851.75
+        },
+        "overflow": false,
+        "bad": []
+      },
+      {
+        "label": "after-dimension-844",
+        "viewport": [
+          844,
+          390
+        ],
+        "stage": {
+          "x": 0,
+          "y": 100.5,
+          "width": 844,
+          "height": 227.3125,
+          "area": 191851.75
+        },
+        "overflow": false,
+        "bad": []
+      }
+    ],
+    "downloads": [
+      {
+        "format": "pptx",
+        "file": "evidence/ui-007/UI-smoke-007.pptx",
+        "bytes": 52025
+      },
+      {
+        "format": "dxf",
+        "file": "evidence/ui-007/UI-smoke-007.dxf",
+        "bytes": 1158
+      },
+      {
+        "format": "pdf",
+        "file": "evidence/ui-007/UI-smoke-007.pdf",
+        "bytes": 16373
+      }
+    ],
+    "errors": []
+  },
+  "past_output_structure": {
+    "status": "PASS",
+    "scope": "light inspection of files generated through 007 UI; no Office/PPTX rendering",
+    "PPTX": {
+      "status": "PASS",
+      "ZIP_CRC": "PASS",
+      "slides": 2,
+      "objects": {
+        "shape": 5,
+        "line": 2,
+        "picture": 0
+      },
+      "texts": [
+        "新しい文字",
+        "2400 mm（手入力・対象のみ）"
+      ],
+      "colors": [
+        "394C63",
+        "C8D7BF",
+        "FFFFFF"
+      ],
+      "textFill": [
+        {
+          "text": "新しい文字",
+          "transparentBackground": true,
+          "outlineHasNoOpaqueFill": true,
+          "outlineXML": "<ns0:ln xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"0\" /></ns0:srgbClr></ns0:solidFill></ns0:ln>"
+        },
+        {
+          "text": "2400 mm（手入力・対象のみ）",
+          "transparentBackground": true,
+          "outlineHasNoOpaqueFill": true,
+          "outlineXML": "<ns0:ln xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" />"
+        }
+      ],
+      "flattenedSinglePicture": false,
+      "UISelectionOverlayPresent": false,
+      "externalRender": "NOT_RUN",
+      "POWERPOINT_REAL_APP": "NOT_RUN"
+    },
+    "DXF": {
+      "status": "PASS",
+      "entities": {
+        "LINE": 2,
+        "TEXT": 2,
+        "LWPOLYLINE": 1
+      },
+      "layers": [
+        "P1_drawing_C9",
+        "P2_drawing_C8"
+      ],
+      "INSUNITS": 0,
+      "scale": "UNSCALED",
+      "absentCOREEntities": "CIRCLE / ARC / MTEXT / SPLINE: no applicable smoke object; no claim of retest",
+      "JW_CAD_REAL_APP": "NOT_RUN"
+    },
+    "PDF": {
+      "status": "PASS",
+      "pages": 2,
+      "render": "NOT_RUN"
+    },
+    "files": {
+      "UI-smoke-007.pptx": {
+        "bytes": 52025,
+        "sha256": "cf5daf32dd411fb91482c005fb7ab97514bbd5004709c4b3839def445b1fd371"
+      },
+      "UI-smoke-007.dxf": {
+        "bytes": 1158,
+        "sha256": "57011f2e5f2e25c49a08763b629fe7b6f59eb629bcf75e7e8901ed0f9eff27d1"
+      },
+      "UI-smoke-007.pdf": {
+        "bytes": 16373,
+        "sha256": "efadb5535c871c0947a1e1f813eebfbb6c07f391d3fcfaa12f63cb9ac36162e1"
+      }
+    }
+  }
+}
