@@ -1,5 +1,6 @@
 import {span,start,end,take} from './perf.js';
 import {TrialRecorder} from './trial-recorder.js';
+import {ExportJobs} from './export-jobs.js';
 import {exportCopy,safeNotice,noticeKind,traceSteps,enterSheet,leaveSheet,focusDimension,exportBusy} from './ui-theme.js';
 import {project,sample,element,pageOf,newPage,clone,uid,classes,bounds,translate} from './core.js';
 import {Editor} from './commands.js';import {LocalStore} from './storage.js';import {VisionJobs} from './vision.js';
@@ -8,7 +9,7 @@ import {importFile} from './importers.js';import {exportFile,formats} from './ex
 import {initShell,isNative,nativeHealth} from './shell.js';
 const app=document.querySelector('#app'),portal=document.querySelector('#portal'),store=new LocalStore(),vision=new VisionJobs();
 let editor=null,screen='home',projects=[],selected=null,mode='select',viewMode='drawing',format='pptx',includePhoto=false,includeOriginal=false,savedRevision=-1,saveState='unsaved',panel=null,candidate=null,search='',busy=false;
-let elementNodes=new Map();let reviewTarget=null;
+let elementNodes=new Map();let reviewTarget=null;const exportJobs=new ExportJobs();
 let trial=null,pendingTrial=null,restoredTrialReport=null;const historyWarnings=new Set();
 let gestureBusy=false;
 let toastTimer,suppressBackdropUntil=0,autosaveTimer,swRegistration,installPrompt,drawKey=null,listIds=null,listOffset=0,lastOpenedId=null;
@@ -66,10 +67,20 @@ function candidateSheet(){const c=candidate;reviewTarget=null;sheet('候補を�
 async function measuredExport(d,f,options){const owner=trial?.projectId===d.id&&['pptx','dxf'].includes(f)?trial:null,stage=f.toUpperCase();if(owner)owner.start(stage);try{const blob=await exportFile(d,f,options);owner?.finish(stage);if(owner)try{await store.transaction('readwrite',x=>x.put(owner.report(),'vision-trial-'+d.id),'meta');}catch{owner.recordPersistenceError='EVIDENCE_SAVE_FAILED';}return blob;}catch(e){owner?.finish(stage,'FAILED','EXPORT_FAILED');throw e;}}
 function diagnostics(){const report=trial?.report()||restoredTrialReport;sheet('Vision Diagnostics',`<p>実Claude / SAM：未接続。実写真推論の成功実績はありません。</p><p>保存済み試験記録：${report?'あり':'なし'}。モデル・時刻・件数だけを記録し、写真・名称・接続先・秘密情報は含めません。</p>${report?btn('trial-download','試験記録を保存','file','secondary full'):''}${trial?`<label>見落とし対象数<input id="trial-missed" type="number" min="0" value="0"></label><label>誤分類対象数<input id="trial-misclassified" type="number" min="0" value="0"></label><label>誤形状対象数<input id="trial-shapes" type="number" min="0" value="0"></label><label><input id="trial-attest" type="checkbox">写真と候補を本人が確認しました</label>${btn('trial-assess','目視確認を記録','check','secondary full')}`:''}<p>実機、モデルload、CUDA、checkpointは未確認。模擬試験を実AI成功に数えません。</p>`,'','vision-diagnostics');}
 function exportScreen(){document.querySelector('#toast').style.display='none';screen='export';app.innerHTML=`<main class="screen export-screen"><div class="navline">${btn('edit','','back','icon-button','aria-label="図面へ戻る"')}<div><span class="eyebrow">EXPORT DRAWING</span><h1>書き出し</h1></div></div><div class="export-layout"><div class="export-preview">${drawingSvg(p(),src(),{sourceVisible:includePhoto})}<h2>${esc(doc().title)}</h2><p class="muted small">${doc().pages.length}ページ · 図面座標</p><p class="warning compact">未校正の図面。寸法は入力した対象に限定されます。</p></div><div><h2 class="export-heading">用途に合わせて選ぶ</h2><div class="export-grid">${formats.map(f=>{const copy=exportCopy[f.id]||[f.title,f.note];return `<button class="format ${f.id===format?'selected':''}" data-action="format" data-format="${f.id}" aria-pressed="${f.id===format}"><span class="format-code">${f.ext}</span><span class="format-copy"><strong>${copy[0]}</strong><span class="muted">${copy[1]}</span></span><span class="selection-indicator" aria-hidden="true">${f.id===format?icon('check'):''}</span></button>`}).join('')}</div><details class="detail-section export-options"><summary>写真の添付・バックアップ設定</summary><div class="stack"><label class="checklabel"><input id="include-photo" type="checkbox" ${includePhoto?'checked':''}>元写真を添付（作業用画像）</label><p class="small muted">作業用PNGには位置情報などを含めません。</p>${format==='json'?`<label class="checklabel"><input id="include-original" type="checkbox" ${includeOriginal?'checked':''}>原本もバックアップに含める</label><p class="warning compact">原本には顧客情報・位置情報が含まれる場合があります。</p>`:''}</div></details><div class="export-actions"><p class="export-status small muted" role="status">形式を選んで保存・共有</p><div class="export-action-buttons">${btn('download','ファイルを保存','export','primary full')}${btn('share','共有','share','secondary')}</div></div>${doc().exports.length?`<details class="detail-section"><summary>この図面の出力履歴</summary>${doc().exports.slice().reverse().map(e=>`<div class="history"><strong>${esc(e.format.toUpperCase())}</strong><span>${e.status==='downloaded'?'ダウンロード開始':e.status==='share-requested'?'共有画面へ受渡し':'共有完了'}</span><p class="muted small">${new Date(e.at).toLocaleString('ja-JP')}</p></div>`).join('')}</details>`:''}</div></div></main>`;
- document.querySelector('#include-photo').onchange=e=>{includePhoto=e.target.checked;exportScreen();};const io=document.querySelector('#include-original');if(io)io.onchange=e=>{includeOriginal=e.target.checked;};}
-async function output(share){if(busy)return;busy=true;exportBusy(true);try{toast('ファイルを作成中');const snapshot=clone(doc()),blob=await measuredExport(snapshot,format,{includePhoto,includeOriginal}),name=doc().title.replace(/[\\/:*?"<>|]/g,'_')+'.'+format;
- const result=await downloadOrShare(blob,name,share);doc().exports.push({id:uid(),format,status:result,at:new Date().toISOString(),revision:doc().revision,includePhoto,includeOriginal:format==='json'&&includeOriginal});doc().revision++;markDirty();const ok=await save();exportScreen();toast(ok?'ファイルを作成し、履歴を端末に保存しました':'ファイルは作成しましたが、履歴の端末保存に失敗しました');
- }catch(e){toast(e.name==='AbortError'?'共有をキャンセルしました':'出力失敗：'+safeNotice(e.message));}finally{busy=false;exportBusy(false);}}
+ document.querySelector('#include-photo').onchange=e=>{includePhoto=e.target.checked;exportScreen();};const io=document.querySelector('#include-original');if(io)io.onchange=e=>{includeOriginal=e.target.checked;};exportBusy(!!exportJobs.active);}
+async function output(share){if(busy||exportJobs.active)return;const job=exportJobs.begin({owner:editor,document:doc(),format,options:{includePhoto,includeOriginal},share}),s=job.snapshot;busy=true;exportBusy(true);
+ const owns=()=>exportJobs.owns(job,editor,doc()),cancel=()=>toast('図面が切り替わったか変更されたため、今回の出力を中止しました。現在の図面から再実行してください');
+ try{toast('ファイルを作成中');const blob=await measuredExport(s.document,s.format,s.options);
+  if(!owns()){cancel();return;}if(blob.type!==s.mime)throw Error('出力形式とファイル内容が一致しません');
+  const result=await downloadOrShare(blob,s.name,s.share);
+  if(!owns()){toast('ファイルは共有・保存へ渡しましたが、図面が変更されたため出力履歴を追加しませんでした');return;}
+  const entry=exportJobs.history(job,result);doc().exports.push(entry);doc().revision++;markDirty();const ok=await save(true);
+  if(editor!==job.owner)return;if(screen==='export')exportScreen();
+  const delivered=result==='share-requested'?'共有画面へ渡しました':result==='downloaded'?'ダウンロードを開始しました':'共有しました';
+  toast(ok?delivered+'。出力履歴を端末に保存しました':delivered+'が、出力履歴の端末保存に失敗しました');
+ }catch(e){toast(e.name==='AbortError'?'共有をキャンセルしました':'出力失敗：'+safeNotice(e.message));}
+ finally{if(exportJobs.release(job)){busy=false;exportBusy(false);}}}
+
 function materials(editing=false){const options=[['机','rect','家具','#D8BEA0'],['椅子','rect','家具','#BACFC7'],['植栽','ellipse','植栽','#A9C293'],['設備','rect','設備','#BFD6E4'],['車','rect','車','#D5E3EF'],['汎用図形','polygon','汎用図形','#D5E3EF']];
  const content=options.map(([name,kind,category,color])=>`<button class="option" data-action="insert-material" data-name="${name}" data-kind="${kind}" data-class="${category}" data-color="${color}">${icon('box')}<span><strong>${name}</strong><span class="muted">編集可能な汎用記号</span></span></button>`).join('');
  if(editing)sheet('素材を配置',content);else{screen='materials';app.innerHTML=`<main class="screen stack"><h1>素材</h1><p class="muted">図面編集画面から配置できます。記号は対象に合わせて修正してください。</p>${options.map(([name,kind,c,col])=>`<div class="card row">${icon('box')}<span>${name} · ${c}</span></div>`).join('')}</main>${nav('materials')}`;}}
