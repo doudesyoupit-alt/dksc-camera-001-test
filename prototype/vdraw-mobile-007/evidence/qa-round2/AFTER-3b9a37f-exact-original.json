@@ -1,0 +1,146 @@
+{
+  "phase": "AFTER_EXACT_ORIGINAL_HARNESS",
+  "candidateCommit": "3b9a37f146c728e65a8998b6f5e21edeb6c37313",
+  "harnessSha256": "50e708ab8b3b50f0e1025d9cc92660a0d857e7fb74ab3271e96ee922c766a61a",
+  "sameHarnessAsBefore": true,
+  "counts": {
+    "tests": 31,
+    "pass": 26,
+    "fail": 5,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "cases": [
+    {
+      "name": "ENGINE external JSON original huge angle terminates safely",
+      "status": "PASS"
+    },
+    {
+      "name": "ENGINE external JSON large finite non-progress angle terminates safely",
+      "status": "PASS"
+    },
+    {
+      "name": "ENGINE raw bypass Infinity terminates or rejects",
+      "status": "FAIL"
+    },
+    {
+      "name": "ENGINE raw bypass negative Infinity terminates or rejects",
+      "status": "FAIL"
+    },
+    {
+      "name": "ENGINE raw bypass NaN terminates or rejects",
+      "status": "FAIL"
+    },
+    {
+      "name": "ENGINE raw bypass raw huge finite terminates or rejects",
+      "status": "FAIL"
+    },
+    {
+      "name": "ENGINE raw bypass raw large finite terminates or rejects",
+      "status": "FAIL"
+    },
+    {
+      "name": "ENGINE normal/multiturn 0→180 yields 49 finite bounded points",
+      "status": "PASS"
+    },
+    {
+      "name": "ENGINE normal/multiturn 0→720 yields 49 finite bounded points",
+      "status": "PASS"
+    },
+    {
+      "name": "ENGINE normal/multiturn 720→0 yields 49 finite bounded points",
+      "status": "PASS"
+    },
+    {
+      "name": "ENGINE normal/multiturn 180→0 yields 49 finite bounded points",
+      "status": "PASS"
+    },
+    {
+      "name": "INPUT original 2000x1000 source: actual preview and adoption preserve normalized geometry",
+      "status": "PASS"
+    },
+    {
+      "name": "INPUT receive preserves authoritative coordinateSpace and reference frame across JSON persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "INPUT source switch rejects preview/adoption atomically",
+      "status": "PASS"
+    },
+    {
+      "name": "INPUT same source on different active page rejects preview/adoption atomically",
+      "status": "PASS"
+    },
+    {
+      "name": "INPUT same-size replacement image rejects stale candidate atomically",
+      "status": "PASS"
+    },
+    {
+      "name": "INPUT source image pageNumber change rejects stale candidate atomically",
+      "status": "PASS"
+    },
+    {
+      "name": "INPUT unknown coordinateSpace is rejected before candidate acceptance",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT pptx: format/options changes cannot relabel bytes or history",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT dxf: format/options changes cannot relabel bytes or history",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT pdf: format/options changes cannot relabel bytes or history",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT deferred A→B cannot deliver under B name or touch B history",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT deferred A→B→A new session cannot resurrect stale generation",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT edit during generation keeps newest geometry and cancels stale snapshot",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT direct metadata mutation without revision still invalidates stale job",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT owner changes after OS handoff: no history on B and no old A restoration",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT owner changes during save: stale success cannot overwrite B screen or notify as B success",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT repeated concurrent clicks launch only one generation and one history",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT failed generation releases busy gate for a later job",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT wrong MIME is rejected before delivery/history",
+      "status": "PASS"
+    },
+    {
+      "name": "OUTPUT attempted out-of-order B job cannot overlap A; later B job keeps B identity",
+      "status": "PASS"
+    }
+  ],
+  "rawFailureAssessment": "The five raw arc tests demand 49 finite points or an exception. Candidate production arcPoints returns [] immediately for invalid arcs. No hang or NaN points were observed. Empty array is a safe rejection representation; test assertion is too narrow to classify these failures as remaining P1. Original exact-harness result is preserved pending acceptance-contract clarification.",
+  "originalFourP1Conditions": "PASS within bounded software test scope",
+  "physicalAndroid": "NOT_RUN",
+  "browserUI": "NOT_RUN",
+  "realAI": "NOT_RUN",
+  "fullRegression": "NOT_RUN",
+  "APK": "NOT_RUN"
+}
