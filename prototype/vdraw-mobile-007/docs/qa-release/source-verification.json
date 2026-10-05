@@ -1,0 +1,22 @@
+{
+  "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "verifiedBlobCount": 213,
+  "mismatches": [],
+  "notLocallyMaterialized": [
+    "docs/INTEGRATION-COLLECTION-20261006.md",
+    "docs/PERFORMANCE-REGRESSION-20261005.md",
+    "docs/PERFORMANCE-REGRESSION-EVIDENCE-20261005.json",
+    "docs/collection-20261006/android-initial-audit.md",
+    "docs/collection-20261006/collection-review-20261006.json",
+    "docs/collection-20261006/engine-initial-audit.txt",
+    "docs/collection-20261006/input-trace-initial-audit.txt",
+    "docs/collection-20261006/ledger.json",
+    "docs/collection-20261006/output-share-initial-audit.md",
+    "docs/collection-20261006/test-inventory.json",
+    "docs/collection-20261006/ui-qa-summary.txt",
+    "docs/round1/INTEGRATION-P1-ROUND1-20261006.md",
+    "docs/round1/integration-round1-ledger.json",
+    "docs/round1/integration-round1-test-results.json"
+  ],
+  "runtimeScopeComplete": true
+}
