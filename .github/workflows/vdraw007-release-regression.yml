@@ -1,0 +1,63 @@
+name: VDRAW 007 Release Regression Only
+on:
+  push:
+    branches: [work/vdraw007-regression-environment-20261006]
+    paths:
+      - '.github/workflows/vdraw007-release-regression.yml'
+      - 'prototype/vdraw-mobile-007/scripts/run-regression-round1.py'
+permissions:
+  contents: read
+concurrency:
+  group: vdraw007-release-regression-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  full-regression:
+    if: github.ref == 'refs/heads/work/vdraw007-regression-environment-20261006'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+        working-directory: prototype/vdraw-mobile-007
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_CHROMIUM: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Protect 006 and all existing tests
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:prototype/vdraw-mobile-006)" = 47cabdf70e9aebf7c64a1e028e85c476df32a169
+          git diff --exit-code 70f9b5be972573906328e5d72b0318473ff5fa1c -- tests web server native android
+          python3 scripts/check-regression-assets-round1.py
+      - name: Install locked dependencies and inspection libraries
+        run: |
+          set -euo pipefail
+          timeout -k 5s 180s npm ci --no-audit --no-fund
+          timeout -k 5s 180s python3 -m pip install -r tests/requirements-inspect.txt
+          test -x "$VDRAW_CHROMIUM"
+          "$VDRAW_CHROMIUM" --version
+          echo "CODEX_PRIMARY_RUNTIME_NODE_MODULES=$PWD/node_modules" >> "$GITHUB_ENV"
+      - name: Execute all 46 entries with browser and generated export inspectors
+        run: |
+          set -euo pipefail
+          python3 scripts/run-regression-round1.py --profile full --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/vdraw007-full-${{ github.run_id }}"
+      - name: Preserve actual outputs and logs on success or failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: VDRAW-007-release-regression-${{ github.run_id }}-${{ github.sha }}
+          path: ${{ runner.temp }}/vdraw007-full-${{ github.run_id }}
+          if-no-files-found: error
+          retention-days: 14
