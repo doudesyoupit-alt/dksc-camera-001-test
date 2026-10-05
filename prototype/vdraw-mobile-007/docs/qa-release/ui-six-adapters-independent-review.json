@@ -1,0 +1,63 @@
+{
+  "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "rows": [
+    {
+      "original": "product.mjs",
+      "adapter": "product-007-adapter-v3.mjs",
+      "inverseByteExact": true,
+      "assertCalls": 25,
+      "adapterSHA256": "942c447e845edc2de5e520dad76d389c080a42f3b834c617e088d689677515cc",
+      "status": "APPROVED_TEST_ONLY_VERSION_FLOW_ADAPTER",
+      "behaviorPASS": "PENDING_CI_ACTUAL_LOG_REVIEW"
+    },
+    {
+      "original": "render-export-004.mjs",
+      "adapter": "render-export-004-007-adapter.mjs",
+      "inverseByteExact": true,
+      "assertCalls": 9,
+      "adapterSHA256": "451aa5cd9daa61fb352086bed7312eb3a501844deaf8a48a16e61ebdbc597847",
+      "status": "APPROVED_TEST_ONLY_VERSION_FLOW_ADAPTER",
+      "behaviorPASS": "PENDING_CI_ACTUAL_LOG_REVIEW"
+    },
+    {
+      "original": "photo-pipeline-005.mjs",
+      "adapter": "photo-pipeline-005-007-adapter.mjs",
+      "inverseByteExact": true,
+      "assertCalls": 18,
+      "adapterSHA256": "3bf8e46999828c7536182c1bba12eb2995bef001256e9c38c878999a9f8929a9",
+      "status": "APPROVED_TEST_ONLY_VERSION_FLOW_ADAPTER",
+      "behaviorPASS": "PENDING_CI_ACTUAL_LOG_REVIEW"
+    },
+    {
+      "original": "output-quality-005.mjs",
+      "adapter": "output-quality-005-007-adapter.mjs",
+      "inverseByteExact": true,
+      "assertCalls": 2,
+      "adapterSHA256": "d7a1fa9fa869972def8e7d72828365e78c53b4446a73ffbde8d2de7f7b2b691f",
+      "status": "APPROVED_TEST_ONLY_VERSION_FLOW_ADAPTER",
+      "behaviorPASS": "PENDING_CI_ACTUAL_LOG_REVIEW"
+    },
+    {
+      "original": "ui-state-005.mjs",
+      "adapter": "ui-state-005-007-adapter-v3.mjs",
+      "inverseByteExact": true,
+      "assertCalls": 16,
+      "adapterSHA256": "fbee6c1bf3710a321db412b2c47cd8e25e7c0f5f4e70f7818c5c4570b0807c42",
+      "status": "APPROVED_TEST_ONLY_VERSION_FLOW_ADAPTER",
+      "behaviorPASS": "PENDING_CI_ACTUAL_LOG_REVIEW"
+    },
+    {
+      "original": "vision-flow-003.mjs",
+      "adapter": "vision-flow-003-007-adapter.mjs",
+      "inverseByteExact": true,
+      "assertCalls": 15,
+      "adapterSHA256": "6e8621bfce49e31e2b105e7f21c620a29c9188eee3192c561c13f10a4921fcc7",
+      "status": "APPROVED_TEST_ONLY_VERSION_FLOW_ADAPTER",
+      "behaviorPASS": false
+    }
+  ],
+  "notes": [
+    "Vision adapter retains real postadoption P1 failure; approval concerns only version copy andnamespace changes, not testPASS",
+    "Original assertions/data/thresholds complete after inverseeditbyteproof"
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "source007Sha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "source006": "immutable37webblob-manifest-verified tree; see QA true006-reference/identity.json",
+  "browser": "Chromium153 local executable /workspace/scratch/ddb88d17eefa/chromium",
+  "viewport": "390x844 plus original per-test viewport variations",
+  "originalTestsPreserved": true,
+  "originalAssertionsRetained": true,
+  "actualDevice": false,
+  "realAI": false,
+  "comparison": [
+    {
+      "testEvidence": "product-results.json",
+      "phases": {
+        "006": {
+          "status": "PASS",
+          "pass": 16,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "f617706192e88be913f31f5f1a8f34de48dc5bee2e9dcc3f13acd3304617d37c",
+          "localEvidencePath": "release-blocker/ui-adapters/before006/evidence/product-results.json",
+          "failure": null
+        },
+        "007": {
+          "status": "PASS",
+          "pass": 16,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "00fc73fcea9c96b6745b7f1c9638f8d03084793b3a3ef82bad5f2b4ac131761c",
+          "localEvidencePath": "release-blocker/ui-adapters/project/evidence/product-results.json",
+          "failure": null
+        }
+      }
+    },
+    {
+      "testEvidence": "render-export-results.json",
+      "phases": {
+        "006": {
+          "status": "PASS",
+          "pass": 6,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "4287fa87bc23a99f0e22e123a96d351f90aa27fadc87cb217d93eb4c7718129a",
+          "localEvidencePath": "release-blocker/ui-adapters/before006/evidence/render-export-results.json",
+          "failure": null
+        },
+        "007": {
+          "status": "PASS",
+          "pass": 6,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "b51e2cb344961bd44edf821d4efd5775898ad011ffd6a9d566aec89455edc29a",
+          "localEvidencePath": "release-blocker/ui-adapters/project/evidence/render-export-results.json",
+          "failure": null
+        }
+      }
+    },
+    {
+      "testEvidence": "photo-pipeline-results.json",
+      "phases": {
+        "006": {
+          "status": "PASS",
+          "pass": 7,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "b39423908ba08035eb5d8a96ba975754c508ebf4a93a4c640f4ed84b03c73958",
+          "localEvidencePath": "release-blocker/ui-adapters/before006/evidence/photo-pipeline-results.json",
+          "failure": null
+        },
+        "007": {
+          "status": "PASS",
+          "pass": 7,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "b39423908ba08035eb5d8a96ba975754c508ebf4a93a4c640f4ed84b03c73958",
+          "localEvidencePath": "release-blocker/ui-adapters/project/evidence/photo-pipeline-results.json",
+          "failure": null
+        }
+      }
+    },
+    {
+      "testEvidence": "output-quality-results.json",
+      "phases": {
+        "006": {
+          "status": "PASS",
+          "pass": 3,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "9096e4232bdc56e2353eba75a9850af8ee48acb01f64b25fab385a3c51339fb9",
+          "localEvidencePath": "release-blocker/ui-adapters/before006/evidence/output-quality-results.json",
+          "failure": null
+        },
+        "007": {
+          "status": "PASS",
+          "pass": 3,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "9096e4232bdc56e2353eba75a9850af8ee48acb01f64b25fab385a3c51339fb9",
+          "localEvidencePath": "release-blocker/ui-adapters/project/evidence/output-quality-results.json",
+          "failure": null
+        }
+      }
+    },
+    {
+      "testEvidence": "ui-state-results.json",
+      "phases": {
+        "006": {
+          "status": "PASS",
+          "pass": 11,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "a9d502353db02c0b95ebc1aed251d8215c4abbebc2b941412fa5e6fb3c81ed48",
+          "localEvidencePath": "release-blocker/ui-adapters/before006/evidence/ui-state-results.json",
+          "failure": null
+        },
+        "007": {
+          "status": "PASS",
+          "pass": 11,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "2edb53fa28feb652cec3812b0bb868aa56f2b96969e199d7e27903c6320c9545",
+          "localEvidencePath": "release-blocker/ui-adapters/project/evidence/ui-state-results.json",
+          "failure": null
+        }
+      }
+    },
+    {
+      "testEvidence": "vision-flow-003-results.json",
+      "phases": {
+        "006": {
+          "status": "PASS",
+          "pass": 11,
+          "fail": false,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "5f4c559f8cbef4289ab3348ff7e6a0136cd0d6001497f40b9e0e8a78e7fbe3c7",
+          "localEvidencePath": "release-blocker/ui-adapters/before006/evidence/vision-flow-003-results.json",
+          "failure": null
+        },
+        "007": {
+          "status": "FAIL",
+          "pass": 7,
+          "fail": 1,
+          "skip": 0,
+          "errors": [],
+          "consoleErrors": [],
+          "evidenceSha256": "e2eea5bff8e57633671c96d9e2ba204e4ca9f79deeb7363257560203b957315c",
+          "localEvidencePath": "release-blocker/ui-adapters/project/evidence/vision-flow-003-results.json",
+          "failure": [
+            {
+              "status": "FAIL",
+              "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=discard-candidate]')\u001b[22m\n\n    at /workspace/scratch/0b6a431d47bd/release-blocker/ui-adapters/project/tests/vision-flow-003-007-adapter.mjs:16:216"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "remainingP1": "INPUT_CANDIDATE_POST_ADOPTION_PREVIEW_BLOCKED: original binding source page differs from adopted active page; candidate preview prevents stored candidate reopening/discard UI. No page-switch workaround added."
+}

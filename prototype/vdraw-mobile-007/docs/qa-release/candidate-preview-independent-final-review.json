@@ -1,0 +1,71 @@
+{
+  "schema": "vdraw-independent-candidate-preview-qa/1",
+  "issue": "INPUT_CANDIDATE_POST_ADOPTION_PREVIEW_BLOCKED",
+  "severityBefore": "P1",
+  "status": "RESOLVED_INDEPENDENTLY_VERIFIED",
+  "acceptedCommit": "de4a29dfe70340746dcb43be9c1837e99aa900af",
+  "productionGitBlobChecks": {
+    "web/src/app.js": "5a7fbb572cd7d62b3d91fc849cca71bee2eaaa27",
+    "web/src/vision.js": "37be20846f9694cfd023c0194a32cd75cf6312fd"
+  },
+  "browser": "Chromium153.0.8010.0",
+  "sameBrowserHarnessSHA256": "6be24873dc4d1c85cfdac8f7a674a6084283b6375473457f0519d11cdc7d5c95",
+  "existing31HarnessSHA256": "c18515bde6f5b8ab7e92c3f9c56ef53fcbe21ba68c19c57c8750dc865d297e48",
+  "runs": [
+    {
+      "phase": "BEFORE",
+      "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+      "counts": {
+        "tests": 3,
+        "pass": 0,
+        "fail": 3,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSHA256": "e59e5c05e92918680705d9a772da5572d40029eb8c0e7e5df585f3dfbf0c1cb8"
+    },
+    {
+      "phase": "AFTER",
+      "sourceSha": "de4a29dfe70340746dcb43be9c1837e99aa900af",
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSHA256": "f7ea2e20f0208efcc8cc1f658042309fc959887fa0f6dbcd76e0743486a70cbb"
+    },
+    {
+      "phase": "EXISTING_31_AFTER",
+      "sourceSha": "de4a29dfe70340746dcb43be9c1837e99aa900af",
+      "counts": {
+        "tests": 31,
+        "pass": 31,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSHA256": "b8ec6ec6fc8dc743b037b45f9e616f1728f8d7e2b443b36397523d5b74e3e457"
+    }
+  ],
+  "UIFullVisionFlow": {
+    "sourceSha": "de4a29dfe70340746dcb43be9c1837e99aa900af",
+    "status": "PASS",
+    "checkCount": 11,
+    "errors": [],
+    "runCopyChange": "loopbackport4183\u21924283only",
+    "scope": "mockprotocol; preserves originalpage, adoptedcolorUndoRedo/save-reload, PPTXDXFJSON, postadoptiondiscard, offline, DB006 protection"
+  },
+  "contracts": [
+    "Readonly savedcandidatepreview never switches currentpage or modifies geometry",
+    "Stale source andmalformed savedcandidate show safe discard while adoption still rejects",
+    "Wrongsource/page/frame guard existing31 remainsPASS"
+  ],
+  "currentKnownProductP0": 0,
+  "currentKnownProductP1": 0,
+  "releaseGate": "Full regression/signing still required; noAPKacceptance claim"
+}

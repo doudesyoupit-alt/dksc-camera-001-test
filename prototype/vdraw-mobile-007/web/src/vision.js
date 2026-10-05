@@ -24,16 +24,16 @@ function sourceFingerprint(source){
  let a=2166136261,b=3335557771;for(let i=0;i<text.length;i++){const n=text.charCodeAt(i);a=Math.imul(a^n,16777619);b=Math.imul(b^n,2246822519);}
  return text.length+':'+(a>>>0).toString(16)+':'+(b>>>0).toString(16);
 }
-function currentSource(d){const page=pageOf(d),source=d.sources.find(s=>s.id===page.sourceId);if(page.sourceId&&!source)throw frameError();return {page,source};}
-function binding(d){
- const {page,source}=currentSource(d);let image;
+function currentSource(d,page=pageOf(d)){const source=d.sources.find(s=>s.id===page.sourceId);if(page.sourceId&&!source)throw frameError();return {page,source};}
+function binding(d,page=pageOf(d)){
+ const {source}=currentSource(d,page);let image;
  if(source?.workImage)image=pngDimensions(source.workImage);
  else if(!source||source.kind==='sample')image=canvasFrame(page.canvas);
  else throw frameError();
  return {documentId:d.id,pageId:page.id,sourceId:page.sourceId,sourcePageNumber:source?.pageNumber??null,sourceFingerprint:sourceFingerprint(source),sourceWidth:image.width,sourceHeight:image.height};
 }
-function candidateContract(d,c){
- const frame=namedFrame(c),actual=binding(d),saved=c.sourceBinding;
+function candidateContract(d,c,page=pageOf(d)){
+ const frame=namedFrame(c),actual=binding(d,page),saved=c.sourceBinding;
  if(c.sourceId!==actual.sourceId||!saved||saved.documentId!==actual.documentId||saved.pageId!==actual.pageId||saved.sourceId!==actual.sourceId||saved.sourcePageNumber!==actual.sourcePageNumber||saved.sourceFingerprint!==actual.sourceFingerprint||c.sourceWidth!==actual.sourceWidth||c.sourceHeight!==actual.sourceHeight||saved.sourceWidth!==c.sourceWidth||saved.sourceHeight!==c.sourceHeight)throw frameError();
  const referenceImageTransform=contain(c.sourceWidth,c.sourceHeight,frame);
  if(!c.referenceImageTransform||['fit','scale','offsetX','offsetY'].some(k=>c.referenceImageTransform[k]!==referenceImageTransform[k]))throw frameError();
@@ -75,8 +75,13 @@ export class VisionJobs {
   candidateContract(d,c);this.state='SAMPLE_READY';return c;
  }
  preview(d,c){
-  const {frame}=candidateContract(d,c),{source}=currentSource(d);
-  return {page:{...pageOf(d),canvas:frame,elements:clone(c.elements)},source};
+  // Only an unchanged saved candidate may resolve its original page for review.
+  // Adoption still validates against the active page, below.
+  const saved=d.candidates.filter(x=>x.id===c?.id),pages=d.pages.filter(p=>p.id===c?.sourceBinding?.pageId);
+  const stored=saved.length===1&&JSON.stringify(saved[0])===JSON.stringify(c);
+  if(stored&&pages.length!==1)throw frameError();
+  const page=stored?pages[0]:pageOf(d),{frame}=candidateContract(d,c,page),{source}=currentSource(d,page);
+  return {page:{...clone(page),canvas:frame,elements:clone(c.elements)},source};
  }
  adopt(d,c){
   if(c.kind==='provider-candidate'&&c.review?.status!=='reviewed')throw Error('候補を確認してから採用してください');

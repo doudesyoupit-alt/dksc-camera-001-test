@@ -1,0 +1,18 @@
+{
+  "apkName": "VDRAW-MOBILE-007-debug.apk",
+  "bytes": 13141918,
+  "sha256": "89350a7e6d8471ba3bbe983dfaeefba477d6ad31519f1036105da5cf9af71d09",
+  "v2Verification": "PASS",
+  "signers": [
+    {
+      "certificateSHA256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855",
+      "signatureAlgorithms": [
+        259
+      ],
+      "signedDataSignature": "PASS",
+      "contentDigest": "PASS",
+      "publicKeyMatch": "PASS"
+    }
+  ],
+  "apksignerVerification": "NOT_RUN"
+}

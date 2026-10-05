@@ -1,4 +1,4 @@
-const CACHE='vdraw-mobile-shell-007-round1-v2';
+const CACHE='vdraw-mobile-shell-007-release-v3';
 const FILES=['./','index.html','style.css','theme-007.css','manifest.webmanifest','assets/icon.svg','assets/icon-192.png','assets/icon-512.png','assets/icon-maskable.png','assets/NotoSansJP.ttf',...['app','core','commands','storage','render','device','vision','exporters','importers','icons','shell','native-runtime','perf','history-codec','trial-recorder','trial-event','native-io','ui-theme','export-jobs'].map(n=>'src/'+n+'.js'),...['jszip.min.js','pptxgen.bundle.js','pdf-lib.min.js','pdf.mjs','pdf.worker.mjs','native-bridge.js'].map(n=>'vendor/'+n)];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('message',e=>{if(e.data?.type==='ACTIVATE_UPDATE')self.skipWaiting();});

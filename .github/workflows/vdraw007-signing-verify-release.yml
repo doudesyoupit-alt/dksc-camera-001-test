@@ -1,0 +1,45 @@
+name: VDRAW 007 Existing APK Signing Verification
+on:
+  push:
+    branches: [work/vdraw007-signing-release-20261006]
+    paths:
+      - '.github/workflows/vdraw007-signing-verify-release.yml'
+      - 'prototype/vdraw-mobile-007/docs/release-signing/verify-baseline-apk-ci.py'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: vdraw007-existing-apk-signature
+  cancel-in-progress: false
+jobs:
+  verify-existing-apk:
+    if: github.repository == 'doudesyoupit-alt/dksc-camera-001-test' && github.ref == 'refs/heads/work/vdraw007-signing-release-20261006'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Verify fixed baseline run and artifact metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 prototype/vdraw-mobile-007/docs/release-signing/verify-baseline-apk-ci.py metadata --output signing-evidence
+      - name: Download only the pre-existing baseline APK artifact
+        uses: actions/download-artifact@v7
+        with:
+          artifact-ids: '11333531784'
+          repository: doudesyoupit-alt/dksc-camera-001-test
+          run-id: '37283743856'
+          github-token: ${{ github.token }}
+          path: baseline-apk
+      - name: Official read-only APK signature and manifest verification
+        run: python3 prototype/vdraw-mobile-007/docs/release-signing/verify-baseline-apk-ci.py verify --download baseline-apk --output signing-evidence
+      - name: Preserve only public verification evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: VDRAW007-existing-APK-signature-${{ github.run_id }}
+          path: signing-evidence
+          if-no-files-found: error
+          retention-days: 14

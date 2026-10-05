@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "candidates": [
+    {
+      "text": "文字",
+      "inSheet": false,
+      "inToolbar": true
+    },
+    {
+      "text": "文字",
+      "inSheet": true,
+      "inToolbar": false
+    }
+  ],
+  "correctUserFlowScope": ".sheet [data-action=insert][data-kind=text]",
+  "textAddedAndSaved": true,
+  "classification": "INHERITED_HARNESS_SELECTOR_AMBIGUITY",
+  "productP1": false,
+  "errors": []
+}

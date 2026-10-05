@@ -1,0 +1,127 @@
+{
+  "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "adapters": [
+    {
+      "original": "product.mjs",
+      "adapter": "product-007-adapter-v3.mjs",
+      "inverseEditByteExact": true,
+      "assertCallsBefore": 25,
+      "assertCallsAfter": 25,
+      "originalSha256": "0df77d0b1813b2d6ccb2b5dce1c481e2633e9f34968cf8bc2c2b6a76088892aa",
+      "adapterSha256": "942c447e845edc2de5e520dad76d389c080a42f3b834c617e088d689677515cc",
+      "edits": [
+        {
+          "before": "await page.locator('#object-width').fill('7');",
+          "after": "await page.locator('details').filter({has:page.locator('#object-width')}).locator('summary').click();await page.locator('#object-width').fill('7');"
+        },
+        {
+          "before": "page.locator('[data-action=insert][data-kind=text]')",
+          "after": "page.locator('.sheet [data-action=insert][data-kind=text]')"
+        },
+        {
+          "before": "page.locator('[data-action=insert][data-kind=line]')",
+          "after": "page.locator('.sheet [data-action=insert][data-kind=line]')"
+        },
+        {
+          "before": "await click('photo');",
+          "after": "await page.locator('.sheet button[data-action=photo]').click();"
+        }
+      ]
+    },
+    {
+      "original": "render-export-004.mjs",
+      "adapter": "render-export-004-007-adapter.mjs",
+      "inverseEditByteExact": true,
+      "assertCallsBefore": 9,
+      "assertCallsAfter": 9,
+      "originalSha256": "6aa5b7049e118fc925f57cb80fc5aebcd50d97dcaf9a04a4a6f818d75a8d356f",
+      "adapterSha256": "451aa5cd9daa61fb352086bed7312eb3a501844deaf8a48a16e61ebdbc597847",
+      "edits": [
+        {
+          "before": "await page.locator('#object-stroke').fill('#775544');",
+          "after": "await page.locator('details').filter({has:page.locator('#object-stroke')}).locator('summary').click();await page.locator('#object-stroke').fill('#775544');"
+        }
+      ]
+    },
+    {
+      "original": "photo-pipeline-005.mjs",
+      "adapter": "photo-pipeline-005-007-adapter.mjs",
+      "inverseEditByteExact": true,
+      "assertCallsBefore": 18,
+      "assertCallsAfter": 18,
+      "originalSha256": "c505fa25537bc7b6239af8943ca0e85375574422d1a122c13eff8ea3e6c3928c",
+      "adapterSha256": "3bf8e46999828c7536182c1bba12eb2995bef001256e9c38c878999a9f8929a9",
+      "edits": [
+        {
+          "before": "await page.locator('#object-class').selectOption('設備');",
+          "after": "await page.locator('details').filter({has:page.locator('#object-class')}).locator('summary').click();await page.locator('#object-class').selectOption('設備');"
+        }
+      ]
+    },
+    {
+      "original": "output-quality-005.mjs",
+      "adapter": "output-quality-005-007-adapter.mjs",
+      "inverseEditByteExact": true,
+      "assertCallsBefore": 2,
+      "assertCallsAfter": 2,
+      "originalSha256": "7ea7d95be3c931e441528e8db94252b6033e0b410a69d714d6594a3a51a02cce",
+      "adapterSha256": "d7a1fa9fa869972def8e7d72828365e78c53b4446a73ffbde8d2de7f7b2b691f",
+      "edits": [
+        {
+          "before": "page.locator('[data-action=dismiss]').click()",
+          "after": "page.locator('.sheet-actions [data-action=dismiss]').click()"
+        }
+      ]
+    },
+    {
+      "original": "ui-state-005.mjs",
+      "adapter": "ui-state-005-007-adapter-v3.mjs",
+      "inverseEditByteExact": true,
+      "assertCallsBefore": 16,
+      "assertCallsAfter": 16,
+      "originalSha256": "f04f5b6904388635b7dc6d5af2651333911fa6e35f8af3a01bc3ff8273af8356",
+      "adapterSha256": "fbee6c1bf3710a321db412b2c47cd8e25e7c0f5f4e70f7818c5c4570b0807c42",
+      "edits": [
+        {
+          "before": "/案件を読み込み中/",
+          "after": "/図面を読み込み中/"
+        },
+        {
+          "before": "hasText:'端末に保存中'",
+          "after": "hasText:'保存中…'"
+        },
+        {
+          "before": "/端末に保存済み/",
+          "after": "/保存済み/"
+        },
+        {
+          "before": "page.locator('[data-action=dismiss]').click()",
+          "after": "page.locator('.sheet-head [data-action=dismiss]').click()"
+        },
+        {
+          "before": "await page.locator('[data-action=candidate-sample]').click();",
+          "after": "await page.locator('.sheet-actions [data-action=dismiss]').click();await page.locator('[data-action=display]').click();await page.locator('[data-action=candidate-sample]').click();"
+        }
+      ]
+    },
+    {
+      "original": "vision-flow-003.mjs",
+      "adapter": "vision-flow-003-007-adapter.mjs",
+      "inverseEditByteExact": true,
+      "assertCallsBefore": 15,
+      "assertCallsAfter": 15,
+      "originalSha256": "d412baeca6ae403d9d22228d155a6549ade03ba1c671d55307aafad2314c7c27",
+      "adapterSha256": "6e8621bfce49e31e2b105e7f21c620a29c9188eee3192c561c13f10a4921fcc7",
+      "edits": [
+        {
+          "before": "getByText('接続手順の模擬データ · 実AI結果ではありません',{exact:true})",
+          "after": "getByText('接続手順の模擬データ',{exact:true})"
+        },
+        {
+          "before": "domains.dbs.includes('vdraw-mobile-prototype-003')",
+          "after": "domains.dbs.includes('vdraw-mobile-prototype-006')"
+        }
+      ]
+    }
+  ]
+}

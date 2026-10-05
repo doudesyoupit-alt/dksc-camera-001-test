@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "baselineRun": 37283743856,
+  "baselineHEAD": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+  "artifactId": 11333531784,
+  "artifactDigest": "sha256:e10050c500528020ec3b5280b7bbc76eba037723c902fe63f8d5b8ababe6a56c",
+  "apkName": "VDRAW-MOBILE-007-debug.apk",
+  "apkSHA256": "89350a7e6d8471ba3bbe983dfaeefba477d6ad31519f1036105da5cf9af71d09",
+  "applicationId": "jp.dksc.vdraw.prototype007",
+  "versionCode": 7,
+  "versionName": "0.7.0",
+  "certificateSHA256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855",
+  "officialApksignerVerification": "PASS",
+  "verifiedAPKSignatureSchemeV2": true,
+  "actualManifestVerification": "PASS",
+  "apksignerPath": "/usr/local/lib/android/sdk/build-tools/35.0.0/apksigner",
+  "verificationRun": "37342418509",
+  "verificationHEAD": "3b68541bb44c02098e4a428d9127427a23ff48ae",
+  "newAPKGenerated": false,
+  "privateKeyRecovered": false,
+  "installedDeviceIdentity": "NOT_VERIFIED",
+  "updateCompatibility": "BLOCKED"
+}
