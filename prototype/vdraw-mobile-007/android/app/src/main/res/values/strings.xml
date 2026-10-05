@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">VDRAW Mobile 007</string>
+    <string name="title_activity_main">VDRAW Mobile 007</string>
+    <string name="package_name">jp.dksc.vdraw.prototype007</string>
+    <string name="custom_url_scheme">jp.dksc.vdraw.prototype007</string>
+</resources>

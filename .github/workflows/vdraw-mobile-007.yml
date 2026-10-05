@@ -1,0 +1,122 @@
+name: VDRAW Mobile 007 UI Validation and Debug APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [validation]
+    paths:
+      - 'prototype/vdraw-mobile-007/**'
+      - '.github/workflows/vdraw-mobile-007.yml'
+permissions:
+  contents: read
+concurrency:
+  group: vdraw-mobile-007-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  ui-smoke:
+    if: github.ref == 'refs/heads/validation' && github.repository == 'doudesyoupit-alt/dksc-camera-001-test' && !contains(github.event.head_commit.message, '[apk]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    defaults:
+      run:
+        working-directory: prototype/vdraw-mobile-007
+        shell: bash
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_CHROMIUM: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v7
+        timeout-minutes: 2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        timeout-minutes: 2
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install locked dependencies
+        run: |
+          mkdir -p evidence/ui-007
+          timeout -k 5s 120s npm ci --no-audit --no-fund
+      - name: Confirm UI-only scope and truthful states
+        run: |
+          timeout -k 5s 60s python3 scripts/check-ui-scope.py
+          timeout -k 5s 60s node --test tests/ui-theme-007.test.mjs > evidence/ui-007/theme-test.log
+      - name: Limited UI smoke and before-after screenshots
+        run: timeout -k 5s 120s node tests/ui-smoke-007.mjs > evidence/ui-007/smoke.log 2>&1
+      - name: Single 5000 UI performance sentinel
+        if: always()
+        run: timeout -k 5s 120s node tests/ui-performance-007.mjs > evidence/ui-007/performance.log 2>&1
+      - name: Preserve UI evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        timeout-minutes: 2
+        with:
+          name: VDRAW-MOBILE-007-UI-${{ github.run_id }}
+          path: prototype/vdraw-mobile-007/evidence/ui-007
+          if-no-files-found: error
+          retention-days: 14
+  debug-apk:
+    # Explicit [apk] maintenance commit only after the UI evidence is reviewed.
+    if: github.ref == 'refs/heads/validation' && github.repository == 'doudesyoupit-alt/dksc-camera-001-test' && contains(github.event.head_commit.message, '[apk]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: prototype/vdraw-mobile-007
+        shell: bash
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_RUN_ID: ${{ github.run_id }}
+      VDRAW_COMMIT_SHA: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v7
+        timeout-minutes: 2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        timeout-minutes: 2
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-java@v6
+        timeout-minutes: 2
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+          cache-dependency-path: prototype/vdraw-mobile-007/android/gradle/wrapper/gradle-wrapper.properties
+      - name: Use Actions SDK and locked web/native project
+        run: |
+          mkdir -p evidence/ci
+          timeout -k 5s 120s "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0' > evidence/ci/sdk.log 2>&1
+          timeout -k 5s 120s npm ci --no-audit --no-fund > evidence/ci/npm.log 2>&1
+          timeout -k 5s 120s npm run android:sync > evidence/ci/sync.log 2>&1
+      - name: Bounded debug build and real APK inspection
+        run: |
+          timeout -k 5s 60s python3 scripts/check-ui-scope.py
+          timeout -k 5s 180s python3 scripts/build-debug.py > evidence/ci/build.log 2>&1
+          timeout -k 5s 120s python3 scripts/check-apk.py evidence/VDRAW-MOBILE-007-debug.apk --output evidence/ci/APK-report.json
+      - uses: actions/upload-artifact@v7
+        if: success()
+        timeout-minutes: 2
+        with:
+          name: VDRAW-MOBILE-007-debug-${{ github.run_id }}
+          path: |
+            prototype/vdraw-mobile-007/evidence/VDRAW-MOBILE-007-debug.apk
+            prototype/vdraw-mobile-007/evidence/APK-SHA256.txt
+            prototype/vdraw-mobile-007/evidence/ci/APK-report.json
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@v7
+        if: always()
+        timeout-minutes: 2
+        with:
+          name: VDRAW-MOBILE-007-build-logs-${{ github.run_id }}
+          path: |
+            prototype/vdraw-mobile-007/evidence/ci
+            prototype/vdraw-mobile-007/evidence/android-build.log
+            prototype/vdraw-mobile-007/evidence/android-environment.json
+          if-no-files-found: warn
+          retention-days: 14

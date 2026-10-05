@@ -1,0 +1,3 @@
+// API-supported schema; semantic/bounds/count checks still run locally.
+import {classes} from '../web/src/core.js';
+export const sceneSchema={type:'object',additionalProperties:false,properties:{schema:{type:'string',enum:['vdraw-vision-provider/1']},objects:{type:'array',items:{type:'object',additionalProperties:false,properties:{id:{type:'string'},name:{type:'string'},category:{type:'string',enum:classes},color:{type:'string'},bbox:{type:['array','null'],items:{type:'number'},description:'Approximate [left,top,right,bottom] in drawing-1200x800; null if uncertain.'}},required:['id','name','category','color','bbox']}}},required:['schema','objects']};

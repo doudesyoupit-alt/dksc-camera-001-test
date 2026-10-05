@@ -1,0 +1,22 @@
+{
+  "appId": "jp.dksc.vdraw.prototype007",
+  "appName": "VDRAW Mobile 007",
+  "webDir": "web",
+  "android": {
+    "allowMixedContent": false
+  },
+  "ios": {
+    "contentInset": "automatic"
+  },
+  "plugins": {
+    "Keyboard": {
+      "resize": "native",
+      "resizeOnFullScreen": true
+    },
+    "SplashScreen": {
+      "launchAutoHide": false,
+      "backgroundColor": "#F6F7F9",
+      "showSpinner": false
+    }
+  }
+}
