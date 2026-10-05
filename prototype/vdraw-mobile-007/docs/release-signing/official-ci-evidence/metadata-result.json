@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "baselineRun": 37283743856,
+  "baselineHEAD": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+  "artifactId": 11333531784,
+  "artifactName": "VDRAW-MOBILE-007-debug-37283743856",
+  "artifactDigest": "sha256:e10050c500528020ec3b5280b7bbc76eba037723c902fe63f8d5b8ababe6a56c"
+}
