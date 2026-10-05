@@ -1,0 +1,682 @@
+{
+  "repo": "doudesyoupit-alt/dksc-camera-001-test",
+  "sourceSHA": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "runInventory": [
+    {
+      "run": 37283743856,
+      "artifacts": [
+        {
+          "id": 11333696470,
+          "name": "VDRAW-MOBILE-007-build-logs-37283743856",
+          "bytes": 8158,
+          "digest": "sha256:6bd13c1641c7808b85b4851e7f09fd8dd20ec7ed860ef6de733927cec7cbb490",
+          "expired": false
+        },
+        {
+          "id": 11333531784,
+          "name": "VDRAW-MOBILE-007-debug-37283743856",
+          "bytes": 11798658,
+          "digest": "sha256:e10050c500528020ec3b5280b7bbc76eba037723c902fe63f8d5b8ababe6a56c",
+          "expired": false
+        }
+      ],
+      "jobs": [
+        {
+          "id": 111677615053,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111677616807,
+          "name": "ui-smoke",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "run": 37282999062,
+      "artifacts": [
+        {
+          "id": 11332734797,
+          "name": "VDRAW-MOBILE-007-UI-37282999062",
+          "bytes": 955147,
+          "digest": "sha256:526ab4f03383089b7004b6ab4592f5ff24d236664bd8993ccb7b11664cd7c3db",
+          "expired": false
+        }
+      ],
+      "jobs": [
+        {
+          "id": 111675208413,
+          "name": "ui-smoke",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111675209841,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "run": 37282504162,
+      "artifacts": [
+        {
+          "id": 11331979299,
+          "name": "VDRAW-MOBILE-007-UI-37282504162",
+          "bytes": 769833,
+          "digest": "sha256:4c99f5db1579b5540985804cb6d3cf59736aa55fde4a3a7d106aa241b95acd89",
+          "expired": false
+        }
+      ],
+      "jobs": [
+        {
+          "id": 111673611249,
+          "name": "ui-smoke",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 111673612772,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "run": 37192493201,
+      "artifacts": [
+        {
+          "id": 11298928483,
+          "name": "VDRAW-MOBILE-006-performance-37192493201",
+          "bytes": 545,
+          "digest": "sha256:fcc9a95218ab98d553152d69ad20273328650c429cfd5250bea3d015724102ac",
+          "expired": false
+        }
+      ],
+      "jobs": [
+        {
+          "id": 111407445177,
+          "name": "final-performance",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111407445903,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "run": 37192327082,
+      "artifacts": [
+        {
+          "id": 11299865262,
+          "name": "VDRAW-MOBILE-006-debug-37192327082",
+          "bytes": 11789304,
+          "digest": "sha256:c4022b1559bd182fa3d2218b44f7d60c6a85ae21c086e812ca7bb6792776d29c",
+          "expired": false
+        },
+        {
+          "id": 11299676197,
+          "name": "VDRAW-MOBILE-006-build-logs-37192327082",
+          "bytes": 8779,
+          "digest": "sha256:55ba9a70729152a533c932ab4d29bf113405af03451626742750809f12bf495f",
+          "expired": false
+        }
+      ],
+      "jobs": [
+        {
+          "id": 111406955450,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111406955571,
+          "name": "final-performance",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run": 37191983500,
+      "artifacts": [
+        {
+          "id": 11298822861,
+          "name": "VDRAW-MOBILE-006-performance-37191983500",
+          "bytes": 300118,
+          "digest": "sha256:04bf3fc5da81cf128acde93108df567d2055d3228122e0bf9f9ba36d6ad7f94c",
+          "expired": false
+        },
+        {
+          "id": 11298779623,
+          "name": "VDRAW-MOBILE-006-debug-37191983500",
+          "bytes": 11789309,
+          "digest": "sha256:9f29b9cf43aa603d9d8056fcdc410179b3a7a7c07c4d34450b05da75fb8f74fd",
+          "expired": false
+        },
+        {
+          "id": 11298724589,
+          "name": "VDRAW-MOBILE-006-build-logs-37191983500",
+          "bytes": 8853,
+          "digest": "sha256:36b7cfddfae859cc3aae5197965db5309102cfe107d79f6802de2bc172c50d84",
+          "expired": false
+        }
+      ],
+      "jobs": [
+        {
+          "id": 111405934711,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111405934854,
+          "name": "final-performance",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run": 37191416974,
+      "artifacts": [],
+      "jobs": [
+        {
+          "id": 111404215981,
+          "name": "debug-apk",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "historyScans": [
+    {
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "treeSHA": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "count": 424,
+      "truncated": false,
+      "candidates": [
+        {
+          "path": ".github/workflows",
+          "sha": "03a5a4cc0728f36867696f61c4b57d704ed33eca",
+          "type": "tree"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-006-debug.yml",
+          "sha": "37bd330985b02dd2c18e4dcccca2fd174a085efd",
+          "type": "blob"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-007.yml",
+          "sha": "20a7d450e6ebd6e90a5957a0a81fd54bff4967c9",
+          "type": "blob"
+        }
+      ]
+    },
+    {
+      "sha": "e9a56b9f65ee4679ec83cc97cf67365d89f05e82",
+      "treeSHA": "e9a56b9f65ee4679ec83cc97cf67365d89f05e82",
+      "count": 423,
+      "truncated": false,
+      "candidates": [
+        {
+          "path": ".github/workflows",
+          "sha": "03a5a4cc0728f36867696f61c4b57d704ed33eca",
+          "type": "tree"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-006-debug.yml",
+          "sha": "37bd330985b02dd2c18e4dcccca2fd174a085efd",
+          "type": "blob"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-007.yml",
+          "sha": "20a7d450e6ebd6e90a5957a0a81fd54bff4967c9",
+          "type": "blob"
+        }
+      ]
+    },
+    {
+      "sha": "c6abcaa613245fb655a4456dddca74f59636023b",
+      "treeSHA": "c6abcaa613245fb655a4456dddca74f59636023b",
+      "count": 423,
+      "truncated": false,
+      "candidates": [
+        {
+          "path": ".github/workflows",
+          "sha": "03a5a4cc0728f36867696f61c4b57d704ed33eca",
+          "type": "tree"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-006-debug.yml",
+          "sha": "37bd330985b02dd2c18e4dcccca2fd174a085efd",
+          "type": "blob"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-007.yml",
+          "sha": "20a7d450e6ebd6e90a5957a0a81fd54bff4967c9",
+          "type": "blob"
+        }
+      ]
+    },
+    {
+      "sha": "ce9f1b13be120725ff45c07d3a4ab1e1631944d9",
+      "treeSHA": "ce9f1b13be120725ff45c07d3a4ab1e1631944d9",
+      "count": 219,
+      "truncated": false,
+      "candidates": [
+        {
+          "path": ".github/workflows",
+          "sha": "c960219886dbd9f8cbbae7a428b7d39d84132d1e",
+          "type": "tree"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-006-debug.yml",
+          "sha": "37bd330985b02dd2c18e4dcccca2fd174a085efd",
+          "type": "blob"
+        }
+      ]
+    },
+    {
+      "sha": "6fb3e3faf5a052891ea2d03288aedc032b6ed7cd",
+      "treeSHA": "6fb3e3faf5a052891ea2d03288aedc032b6ed7cd",
+      "count": 219,
+      "truncated": false,
+      "candidates": [
+        {
+          "path": ".github/workflows",
+          "sha": "7051e72f6f13fcc799c8b1071750d221e93ea960",
+          "type": "tree"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-006-debug.yml",
+          "sha": "e5ddc553908d620811072a208f5df1230886f68d",
+          "type": "blob"
+        }
+      ]
+    },
+    {
+      "sha": "1a57949e74195a33fa3f65c4e1650163bdfba35f",
+      "treeSHA": "1a57949e74195a33fa3f65c4e1650163bdfba35f",
+      "count": 219,
+      "truncated": false,
+      "candidates": [
+        {
+          "path": ".github/workflows",
+          "sha": "6f7e417cfeca02c6cd730c5a3440ec51bf26582f",
+          "type": "tree"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-006-debug.yml",
+          "sha": "3c4f2ca0f8b09bdcc2cf4216c32e6618db50deda",
+          "type": "blob"
+        }
+      ]
+    },
+    {
+      "sha": "3082d1e260a6aed177037b356fc83ceee3184928",
+      "treeSHA": "3082d1e260a6aed177037b356fc83ceee3184928",
+      "count": 19,
+      "truncated": false,
+      "candidates": [
+        {
+          "path": ".github/workflows",
+          "sha": "5e5a42a9c12b895f5848e497a670730994405eff",
+          "type": "tree"
+        },
+        {
+          "path": ".github/workflows/vdraw-mobile-006-debug.yml",
+          "sha": "b58faf8b878d0a2f71de8a789f9b1560d5191aba",
+          "type": "blob"
+        }
+      ]
+    },
+    {
+      "sha": "1e6f357c64bfbc3f40aac360f8e300a3ce4aa894",
+      "treeSHA": "1e6f357c64bfbc3f40aac360f8e300a3ce4aa894",
+      "count": 16,
+      "truncated": false,
+      "candidates": []
+    },
+    {
+      "sha": "4c6581fe2a6cf3a8a379f993aa433ba009f40043",
+      "treeSHA": "4c6581fe2a6cf3a8a379f993aa433ba009f40043",
+      "count": 14,
+      "truncated": false,
+      "candidates": []
+    },
+    {
+      "sha": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+      "treeSHA": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+      "count": 14,
+      "truncated": false,
+      "candidates": []
+    },
+    {
+      "sha": "914006831c825dc2c132a182b365dab20f856549",
+      "treeSHA": "914006831c825dc2c132a182b365dab20f856549",
+      "count": 5,
+      "truncated": false,
+      "candidates": []
+    },
+    {
+      "sha": "d763efbde09d938ffd7e4859ea4e90bdcce7a876",
+      "treeSHA": "d763efbde09d938ffd7e4859ea4e90bdcce7a876",
+      "count": 1,
+      "truncated": false,
+      "candidates": []
+    },
+    {
+      "sha": "a1464c1abbf27bba5d8fc04b94165fbe7a32fe84",
+      "count": 439,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "9c1dcdf8d87e32a9f0d86996c210a8a4b7ebb2fc",
+      "count": 436,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "43a8635c1bb9e52847b00e6a98a732395dec5269",
+      "count": 426,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "c8cffe8950ed39faa2efa9842ac26f8b753516c2",
+      "count": 439,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "d0cc49833482855469e341ca557a68a68d4f4c45",
+      "count": 440,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "1e3dd26184fa967fbf6798cb749b3705c64297dd",
+      "count": 432,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "ebd9b82fb51a62f10f270e5e99c8c8474bbcc565",
+      "count": 425,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+      "count": 514,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "25825894400b18fe7567dd4bbd07ae4331ae1168",
+      "count": 511,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "d8dc98cc5409a0fdacc10d53b9c53d9cdd461a6a",
+      "count": 509,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "15d223faa98cd97ae53a72b4daa13b5ffd681624",
+      "count": 447,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "3b52e79da711bfbae45d8892dd039206543d9525",
+      "count": 499,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "3b9a37f146c728e65a8998b6f5e21edeb6c37313",
+      "count": 445,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "03610a3e6f8ab59bb74c5366724fd0528c65f494",
+      "count": 491,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "c29be9cc82a1269998bd133c15772e7bf848bb3a",
+      "count": 444,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "e59d0275f6a256ea3ec62e6d12973b71541d7e43",
+      "count": 441,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "bee62890df11e85016c1887ea965215f06acb727",
+      "count": 442,
+      "truncated": false,
+      "keyCandidates": []
+    },
+    {
+      "sha": "50730045d4979b68b06cc9b2afb18f36baf72e0f",
+      "count": 439,
+      "truncated": false,
+      "keyCandidates": []
+    }
+  ],
+  "cacheAPIRead": "UNSUPPORTED_ENDPOINT",
+  "artifactCollectionAPIRead": "UNSUPPORTED_ENDPOINT",
+  "releases": [],
+  "setupJavaCachePaths": [
+    "~/.gradle/caches",
+    "~/.gradle/wrapper"
+  ],
+  "setupJavaPinLog": [
+    "2026-10-05T08:27:31.0005055Z Download action repository 'actions/setup-node@v7' (SHA:820762786026740c76f36085b0efc47a31fe5020)",
+    "2026-10-05T08:27:31.1313006Z Download action repository 'actions/setup-java@v6' (SHA:de7274f081f381c8f8158605e0321c36c376e2e6)"
+  ],
+  "selectedCacheLog": [
+    "2026-10-05T08:27:30.4284489Z Hosted Compute Agent",
+    "2026-10-05T08:27:32.1686652Z Temporarily overriding HOME='/home/runner/work/_temp/352761d1-9c1f-4194-8b58-a2b1bf41dd28' before making global git config changes",
+    "2026-10-05T08:27:33.8001493Z   package-manager-cache: false",
+    "2026-10-05T08:27:33.9499033Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64",
+    "2026-10-05T08:27:34.4931763Z   cache: gradle",
+    "2026-10-05T08:27:34.4932263Z   cache-dependency-path: prototype/vdraw-mobile-007/android/gradle/wrapper/gradle-wrapper.properties",
+    "2026-10-05T08:27:34.4935534Z   cache-read-only: false",
+    "2026-10-05T08:27:34.6636643Z Resolved Java 21.0.12+1 from tool-cache",
+    "2026-10-05T08:27:34.6643462Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:27:35.0208357Z gradle-wrapper cache is not found",
+    "2026-10-05T08:27:39.5719896Z Cache Size: ~391 MB (410431389 B)",
+    "2026-10-05T08:27:39.5857035Z [command]/usr/bin/tar -xf /home/runner/work/_temp/1c2791cb-4a4a-4097-aee5-76e201075245/cache.tzst -P -C /home/runner/work/dksc-camera-001-test/dksc-camera-001-test --use-compress-program unzstd",
+    "2026-10-05T08:27:41.3470601Z Cache restored successfully",
+    "2026-10-05T08:27:41.3652394Z Cache restored from key: setup-java-Linux-x64-gradle-8a4c9b50470ce6f49609e70db580c99f6df5570dbe20f31b2dbec9c49f61d857",
+    "2026-10-05T08:27:41.3841888Z \u001b[36;1mtimeout -k 5s 120s \"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager\" 'platforms;android-36' 'build-tools;35.0.0' > evidence/ci/sdk.log 2>&1\u001b[0m",
+    "2026-10-05T08:27:41.4218507Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:27:41.4219308Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:27:56.0081265Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:27:56.0081874Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:29:21.5394515Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:29:21.5395010Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:29:24.0879610Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:29:24.0880112Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64",
+    "2026-10-05T08:29:25.6274049Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/dksc-camera-001-test/dksc-camera-001-test --files-from manifest.txt --use-compress-program zstdmt",
+    "2026-10-05T08:29:30.2625505Z gradle-wrapper cache saved with the key: setup-java-Linux-x64-gradle-wrapper-01000838bbd0a01b9676df37caa5ba23d8d09268c6091a5581dbc33be004dfea",
+    "2026-10-05T08:29:30.2627867Z Cache hit occurred on the primary key setup-java-Linux-x64-gradle-8a4c9b50470ce6f49609e70db580c99f6df5570dbe20f31b2dbec9c49f61d857, not saving cache.",
+    "2026-10-05T08:29:30.5210770Z Temporarily overriding HOME='/home/runner/work/_temp/8c652440-1ade-4d7a-bce4-0c2fd79727cc' before making global git config changes"
+  ],
+  "keyStatus": "NOT_RECOVERED",
+  "installedSignatureStatus": "NOT_VERIFIED",
+  "updateCompatibility": "BLOCKED",
+  "workflowHistory": [
+    {
+      "sha": "37bd330985b02dd2c18e4dcccca2fd174a085efd",
+      "keys": [
+        "content"
+      ],
+      "signingLines": [
+        "    runs-on: ubuntu-24.04",
+        "          cache-dependency-path: prototype/vdraw-mobile-006/android/gradle/wrapper/gradle-wrapper.properties",
+        "    runs-on: ubuntu-24.04"
+      ],
+      "uses": [
+        "        uses: actions/checkout@v7",
+        "        uses: actions/setup-node@v7",
+        "        uses: actions/setup-java@v6",
+        "        uses: actions/upload-artifact@v7",
+        "        uses: actions/upload-artifact@v7",
+        "      - uses: actions/checkout@v7",
+        "      - uses: actions/setup-node@v7",
+        "        uses: actions/upload-artifact@v7"
+      ]
+    },
+    {
+      "sha": "20a7d450e6ebd6e90a5957a0a81fd54bff4967c9",
+      "keys": [
+        "content"
+      ],
+      "signingLines": [
+        "    runs-on: ubuntu-24.04",
+        "    runs-on: ubuntu-24.04",
+        "          cache-dependency-path: prototype/vdraw-mobile-007/android/gradle/wrapper/gradle-wrapper.properties"
+      ],
+      "uses": [
+        "      - uses: actions/checkout@v7",
+        "      - uses: actions/setup-node@v7",
+        "        uses: actions/upload-artifact@v7",
+        "      - uses: actions/checkout@v7",
+        "      - uses: actions/setup-node@v7",
+        "      - uses: actions/setup-java@v6",
+        "      - uses: actions/upload-artifact@v7",
+        "      - uses: actions/upload-artifact@v7"
+      ]
+    },
+    {
+      "sha": "e5ddc553908d620811072a208f5df1230886f68d",
+      "keys": [
+        "content"
+      ],
+      "signingLines": [
+        "    runs-on: ubuntu-24.04",
+        "          cache-dependency-path: prototype/vdraw-mobile-006/android/gradle/wrapper/gradle-wrapper.properties",
+        "    runs-on: ubuntu-24.04"
+      ],
+      "uses": [
+        "        uses: actions/checkout@v7",
+        "        uses: actions/setup-node@v7",
+        "        uses: actions/setup-java@v6",
+        "        uses: actions/upload-artifact@v7",
+        "        uses: actions/upload-artifact@v7",
+        "      - uses: actions/checkout@v7",
+        "      - uses: actions/setup-node@v7",
+        "        uses: actions/upload-artifact@v7"
+      ]
+    },
+    {
+      "sha": "3c4f2ca0f8b09bdcc2cf4216c32e6618db50deda",
+      "keys": [
+        "content"
+      ],
+      "signingLines": [
+        "    runs-on: ubuntu-24.04",
+        "          cache-dependency-path: prototype/vdraw-mobile-006/android/gradle/wrapper/gradle-wrapper.properties",
+        "    runs-on: ubuntu-24.04"
+      ],
+      "uses": [
+        "        uses: actions/checkout@v7",
+        "        uses: actions/setup-node@v7",
+        "        uses: actions/setup-java@v6",
+        "        uses: actions/upload-artifact@v7",
+        "        uses: actions/upload-artifact@v7",
+        "      - uses: actions/checkout@v7",
+        "      - uses: actions/setup-node@v7",
+        "        uses: actions/upload-artifact@v7"
+      ]
+    },
+    {
+      "sha": "b58faf8b878d0a2f71de8a789f9b1560d5191aba",
+      "keys": [
+        "content"
+      ],
+      "signingLines": [
+        "    runs-on: ubuntu-24.04",
+        "          cache-dependency-path: prototype/vdraw-mobile-006/android/gradle/wrapper/gradle-wrapper.properties"
+      ],
+      "uses": [
+        "        uses: actions/checkout@v7",
+        "        uses: actions/setup-node@v7",
+        "        uses: actions/setup-java@v6",
+        "        uses: actions/upload-artifact@v7",
+        "        uses: actions/upload-artifact@v7"
+      ]
+    }
+  ],
+  "runnerEvidence": [
+    "\ufeff2026-10-05T08:27:30.4255103Z Current runner version: '2.337.0'",
+    "2026-10-05T08:27:30.4284489Z Hosted Compute Agent",
+    "2026-10-05T08:29:30.6416611Z Cleaning up orphan processes"
+  ],
+  "setupJavaPinnedSourceURL": "https://github.com/actions/setup-java/blob/de7274f081f381c8f8158605e0321c36c376e2e6/src/cache.ts",
+  "scope": {
+    "branchesAtSnapshot": 20,
+    "branchUniqueHeads": 13,
+    "reachableUniqueCommits": 30,
+    "historicalWorkflowVersions": 5,
+    "runCount": 9,
+    "nonPageRuns": 7
+  },
+  "privateKeyUnavailableIsGlobalProof": false,
+  "materializationAttempts": [
+    {
+      "selection": "015038",
+      "attempt": 1,
+      "result": "HTTP_502"
+    },
+    {
+      "selection": "015038",
+      "attempt": 2,
+      "result": "HTTP_502"
+    },
+    {
+      "selection": "038",
+      "attempt": 1,
+      "result": "HTTP_502"
+    }
+  ],
+  "artifactCount": 10,
+  "baselineArtifact": {
+    "runID": 37283743856,
+    "artifactID": 11333696470,
+    "digest": "sha256:6bd13c1641c7808b85b4851e7f09fd8dd20ec7ed860ef6de733927cec7cbb490",
+    "memberCount": 7,
+    "keyEntries": 0
+  },
+  "apkPublicCertificate": {
+    "sha256": "89350a7e6d8471ba3bbe983dfaeefba477d6ad31519f1036105da5cf9af71d09",
+    "certificateSHA256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855",
+    "appId": "jp.dksc.vdraw.prototype007",
+    "versionCode": 7,
+    "versionName": "0.7.0"
+  },
+  "cacheSourceUsedPin": "de7274f081f381c8f8158605e0321c36c376e2e6"
+}

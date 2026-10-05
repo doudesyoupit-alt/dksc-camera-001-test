@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "exactVisibleMockLabel": "接続手順の模擬データ",
+  "persistedCandidateKind": "protocol-fixture",
+  "elementOrigin": "protocol-fixture",
+  "coordinateSpace": "drawing-1200x800",
+  "sourceWidth": 1200,
+  "sourceHeight": 800,
+  "originalPagePreserved": true,
+  "externalRequests": [],
+  "errors": [],
+  "classification": "INHERITED_HARNESS_COPY_CHANGE",
+  "productP1": false
+}

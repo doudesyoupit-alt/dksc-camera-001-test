@@ -1,0 +1,41 @@
+{
+  "artifactID": 11333696470,
+  "sha256": "6bd13c1641c7808b85b4851e7f09fd8dd20ec7ed860ef6de733927cec7cbb490",
+  "members": [
+    {
+      "path": "ci/APK-report.json",
+      "bytes": 1848,
+      "sha256": "b757d85dcfb66eebb57884acb8896e76872e79d9a46ba0283adc7c7c51d0fae2"
+    },
+    {
+      "path": "ci/npm.log",
+      "bytes": 543,
+      "sha256": "5988bd80509b93c38cdf285208a4fa857910fb40b1b0a019fab0fbd0b2b720ca"
+    },
+    {
+      "path": "ci/build.log",
+      "bytes": 4769,
+      "sha256": "7185f73f8172c41134824b40ffaa52ae51eea050dce28185d452e3c5689c4fde"
+    },
+    {
+      "path": "ci/sdk.log",
+      "bytes": 1136,
+      "sha256": "7408f53520cde7f1c2406a69630fa4be8917a94552c7bf7bf5db71f802706fce"
+    },
+    {
+      "path": "ci/sync.log",
+      "bytes": 878,
+      "sha256": "c2051ebb4abe7b11f0aea339827b59a5048fc489994723226e593456e20def91"
+    },
+    {
+      "path": "android-build.log",
+      "bytes": 22247,
+      "sha256": "f9f54fb86089dc7f4d1330386e2ec0bc8560a94161b59a257e11828ccfa5c38b"
+    },
+    {
+      "path": "android-environment.json",
+      "bytes": 4769,
+      "sha256": "7185f73f8172c41134824b40ffaa52ae51eea050dce28185d452e3c5689c4fde"
+    }
+  ]
+}

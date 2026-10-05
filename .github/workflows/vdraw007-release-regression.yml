@@ -28,6 +28,7 @@ jobs:
           ref: ${{ github.sha }}
           fetch-depth: 0
           persist-credentials: false
+          clean: false
       - uses: actions/setup-node@v7
         with:
           node-version: '24'
@@ -39,8 +40,8 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git rev-parse HEAD:prototype/vdraw-mobile-006)" = 47cabdf70e9aebf7c64a1e028e85c476df32a169
-          git diff --exit-code 70f9b5be972573906328e5d72b0318473ff5fa1c -- web server native android
-          git diff --exit-code 70f9b5be972573906328e5d72b0318473ff5fa1c -- tests ':!tests/regression-manifest-round1.json' ':!tests/gestures-update-release.mjs'
+          git diff --exit-code b2f9351b6418f2b552d95b96132650a297ea0afe -- web server native android
+          git diff --exit-code --diff-filter=MDT b2f9351b6418f2b552d95b96132650a297ea0afe -- tests ':!tests/regression-manifest-round1.json'
           python3 scripts/check-regression-assets-round1.py
       - name: Install locked dependencies and inspection libraries
         run: |
@@ -49,17 +50,25 @@ jobs:
           timeout -k 5s 180s python3 -m pip install -r tests/requirements-inspect.txt
           test -x "$VDRAW_CHROMIUM"
           "$VDRAW_CHROMIUM" --version
-          echo "CODEX_PRIMARY_RUNTIME_NODE_MODULES=$PWD/node_modules" >> "$GITHUB_ENV"
-      - name: Execute all 47 entries with browser and generated export inspectors
+          timeout -k 5s 180s npm install --prefix "$RUNNER_TEMP/vdraw-regression-tools" --ignore-scripts --no-audit --no-fund playwright@1.62.1 jszip@3.10.1
+          echo "CODEX_PRIMARY_RUNTIME_NODE_MODULES=$RUNNER_TEMP/vdraw-regression-tools/node_modules" >> "$GITHUB_ENV"
+          echo "VDRAW_BASELINE_006_ROOT=$GITHUB_WORKSPACE/prototype/vdraw-mobile-006" >> "$GITHUB_ENV"
+      - name: Synchronize Android assets without building an APK
         run: |
           set -euo pipefail
           npm run android:sync
-          python3 scripts/run-regression-round1.py --include-native-assets --profile full --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/vdraw007-full-${{ github.run_id }}"
+          git diff --exit-code HEAD -- web server native android/app/src/main/java android/app/build.gradle capacitor.config.json package-lock.json
+      - name: Targeted regression before the full gate
+        run: python3 scripts/run-regression-round1.py --profile limited --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/vdraw007-limited-${{ github.run_id }}"
+      - name: Execute all release regression gates with browser and generated export inspectors
+        run: python3 scripts/run-regression-round1.py --include-native-assets --profile full --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/vdraw007-full-${{ github.run_id }}"
       - name: Preserve actual outputs and logs on success or failure
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: VDRAW-007-release-regression-${{ github.run_id }}-${{ github.sha }}
-          path: ${{ runner.temp }}/vdraw007-full-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/vdraw007-limited-${{ github.run_id }}
+            ${{ runner.temp }}/vdraw007-full-${{ github.run_id }}
           if-no-files-found: error
           retention-days: 14

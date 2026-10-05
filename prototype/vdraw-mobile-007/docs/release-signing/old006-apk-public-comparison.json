@@ -1,0 +1,25 @@
+{
+  "artifactID": 11299865262,
+  "members": [
+    {
+      "path": "VDRAW-MOBILE-006-debug.apk",
+      "size": 13131150
+    },
+    {
+      "path": "APK-SHA256.txt",
+      "size": 93
+    },
+    {
+      "path": "ci/APK-report.json",
+      "size": 1804
+    }
+  ],
+  "apk": {
+    "bytes": 13131150,
+    "sha256": "c93a2ab12641b89ed84ec90d1d1b2c7349c3de4b0d9865b5cd6dcaaa0866f0e3",
+    "certSHA256": "564c1834c46e2df209cadb6e4c8920633cd019e44ac4ee4e0170ddde18e45398",
+    "certSubject": "C=US,O=Android,CN=Android Debug",
+    "notBefore": "2026-10-04T09:30:57+00:00",
+    "notAfter": "2056-09-26T09:30:57+00:00"
+  }
+}
