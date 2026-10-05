@@ -1,7 +1,7 @@
 // Presentation only. No project, geometry, persistence or provider mutation.
 export const stateLabel={NOT_RUN:'未実行',BLOCKED:'未接続',RUNNING:'処理中',PASS:'完了',SUCCEEDED:'完了',COMPLETED:'完了',FAILED:'失敗',CANCELLED:'中止'};
 export const exportCopy={pptx:['PowerPoint','あとから図形・文字を編集する'],dxf:['DXF','CADで編集する'],pdf:['PDF','閲覧・共有する'],png:['PNG','画像として共有する'],svg:['SVG','ベクター画像として使う'],json:['案件バックアップ','ページ・図形・履歴の復旧用'],xlsx:['Excel','対象一覧を確認する']};
-export function safeNotice(value){const text=String(value??'');return /(?:TypeError|ReferenceError|SyntaxError|stack|Unexpected|undefined|Failed to fetch|ENOENT|https?:\/\/|endpoint|JSON\.parse)/i.test(text)?'操作を完了できませんでした。入力を確認し、もう一度お試しください。':text;}
+export function safeNotice(value){const text=String(value??'');if(/Permission denied|NotAllowed|not allowed/i.test(text))return '端末がこの操作を許可していません。ファイル保存を選ぶか、端末の設定を確認してください。';return /(?:TypeError|ReferenceError|SyntaxError|stack|Unexpected|undefined|Failed to fetch|ENOENT|https?:\/\/|endpoint|JSON\.parse)/i.test(text)?'操作を完了できませんでした。入力を確認し、もう一度お試しください。':text;}
 export function noticeKind(text){return /失敗|できません|不正|不足|破損/.test(text)?'error':/未接続|未校正|確認|キャンセル/.test(text)?'warning':/保存しました|完了|作成しました/.test(text)?'success':'info';}
 export function traceSteps(source,vision,report){
  const stages=report?.stages||[],find=(names)=>stages.find(s=>names.includes(s.stage));
@@ -9,7 +9,7 @@ export function traceSteps(source,vision,report){
  return map.map(([label,names],i)=>{const stage=find(names);let status=stage?.status||'NOT_RUN';if(!stage&&i===0&&source?.workImage)status='PASS';if(!stage&&i===1&&vision?.state==='BLOCKED')status='BLOCKED';return {label,status:stateLabel[status]?status:'NOT_RUN',text:stateLabel[status]||'未実行'};});
 }
 let returnFocus=null;
-export function enterSheet(modal){returnFocus=document.activeElement;document.querySelector('#app').inert=modal;requestAnimationFrame(()=>document.querySelector('.sheet [data-action=dismiss]')?.focus({preventScroll:true}));}
+export function enterSheet(modal){returnFocus=document.activeElement;document.querySelector('#app').inert=modal;if(modal)requestAnimationFrame(()=>document.querySelector('.sheet [data-action=dismiss]')?.focus({preventScroll:true}));}
 export function leaveSheet(){document.querySelector('#app').inert=false;if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});returnFocus=null;}
 export function syncViewport(){const v=window.visualViewport;document.documentElement.style.setProperty('--keyboard-offset',Math.max(0,window.innerHeight-(v?.height||window.innerHeight)-(v?.offsetTop||0))+'px');}
 export function focusDimension(){requestAnimationFrame(()=>{const n=document.querySelector('#dimension-value');n?.focus({preventScroll:true});n?.scrollIntoView({block:'nearest'});});}
