@@ -1,0 +1,46 @@
+{
+  "sourceCheckpoint": "b2f9351b6418f2b552d95b96132650a297ea0afe",
+  "adapterSourceHead": "4d798ed2ebf3d1ec14a5831ee55abcb19b018f80",
+  "originalCi": "37345005037",
+  "ciOriginalPwaErrors": [
+    "in-incognito"
+  ],
+  "classification": "Browser environment private-context restriction; no product P1 demonstrated",
+  "adapterInverseIndependentByteExact": true,
+  "assertCallsOriginal": 25,
+  "assertCallsAdapter": 25,
+  "installationErrorsLengthAssertionUnchanged": true,
+  "actualLocalBrowser": "Chromium153.0.8010.0 fresh normal persistent profile",
+  "actualLocalFullChecks": 16,
+  "actualPwaErrors": [],
+  "errors": 0,
+  "consoleErrors": 0,
+  "actualDevices": 0,
+  "realAI": 0,
+  "Chrome154CI": "PENDING",
+  "boundedIndependent": {
+    "actualTests": 4,
+    "pass": 4,
+    "fail": 0,
+    "skip": 0,
+    "adapterSHA256": "9d3d1c7ef1073bddc54162d8f4d6da44d1da640cfd120aca695e18feb70613bf",
+    "bounds": {
+      "timeout": 0.4,
+      "elapsedMaximum": 3,
+      "pollAttempts": 20,
+      "pollInterval": 0.02
+    },
+    "negativeControls": [
+      "existing PID ENOENT rethrows",
+      "PermissionError rethrows",
+      "other OSError rethrows",
+      "malformed stat rejects",
+      "live S is false",
+      "real surviving child causes original failure message"
+    ],
+    "zombieOrGoneAcceptedOnly": true,
+    "adapterSourceHead": "df7c9522b2e6b8c98a377aafdf1887f9d03f4664"
+  },
+  "ci3FailureEvidenceRetained": true,
+  "finalFullAcceptance": "PENDING"
+}

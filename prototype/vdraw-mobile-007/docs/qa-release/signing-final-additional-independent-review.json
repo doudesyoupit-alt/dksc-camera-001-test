@@ -1,0 +1,17 @@
+{
+  "signingHead": "525a1cd1eb6c3eccc3353f97b6d0e74e059843eb",
+  "delta": "2 new documents only; no production, workflow, key or APK modifications",
+  "officialBaselineProofRun": "37342418509",
+  "officialBaselineSignature": "PASS",
+  "privateKey": "NOT_RECOVERED",
+  "installedDeviceIdentity": "NOT_VERIFIED",
+  "updateCompatibility": "BLOCKED",
+  "unreadArchives": [
+    "007UI CHECKPOINT ZIP HTTP502",
+    "006 ZIP HTTP502"
+  ],
+  "unreadArchivesUsedAsKeyAbsenceProof": false,
+  "newAPKGenerated": 0,
+  "actualDeviceMutations": 0,
+  "sameCertificateDoesNotProvePrivateKeyAvailability": true
+}
