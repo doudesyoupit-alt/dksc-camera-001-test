@@ -1,0 +1,220 @@
+{
+  "role": "Independent QA collection review",
+  "label": "20261006",
+  "source": "/workspace/scratch/0b6a431d47bd/source-007/VDRAW-MOBILE-007",
+  "reportedRemoteBaselineCommit": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+  "reportedIntegrationBranch": "work/vdraw007-integration-20261006",
+  "remoteBranchHeads": "Parent-provided; not independently re-queried by this QA task",
+  "freshGitBlobChecks": [
+    {
+      "file": "core.js",
+      "gitBlob": "ad5f8d07a0d7a5d4d8e44840660be91844dcae78",
+      "expected": "ad5f8d07a0d7a5d4d8e44840660be91844dcae78",
+      "status": "PASS"
+    },
+    {
+      "file": "vision.js",
+      "gitBlob": "194d25ce1d40490b3f700e2329abe71d3189c6ce",
+      "expected": "194d25ce1d40490b3f700e2329abe71d3189c6ce",
+      "status": "PASS"
+    },
+    {
+      "file": "app.js",
+      "gitBlob": "b52d2cee3eabcad7a95e4c8f82fc8c133bd6c8b0",
+      "expected": "b52d2cee3eabcad7a95e4c8f82fc8c133bd6c8b0",
+      "status": "PASS"
+    }
+  ],
+  "priorEvidenceReads": [
+    {
+      "file": "engine-001-independent.json",
+      "id": "ENGINE-001",
+      "parse": "PASS",
+      "scope": "prior observation, not fresh execution"
+    },
+    {
+      "file": "input-001-independent.json",
+      "id": "INPUT-001",
+      "parse": "PASS",
+      "scope": "prior observation, not fresh execution"
+    },
+    {
+      "file": "output-001-independent.json",
+      "id": "OUTPUT-001",
+      "parse": "PASS",
+      "scope": "prior observation, not fresh execution"
+    },
+    {
+      "file": "export-owner-race-independent.json",
+      "id": "EXPORT_OWNER_RACE",
+      "parse": "PASS",
+      "scope": "prior observation, not fresh execution"
+    }
+  ],
+  "freshBoundedBehaviorReproductions": [
+    {
+      "id": "ENGINE-001",
+      "timedOut": true,
+      "timeoutSeconds": 2,
+      "stdout": "NORMAL_CONTROL_PASS\nJSON_ACCEPTED\nRENDER_ENTERED\n",
+      "normalControl": "PASS",
+      "freshReproduction": "CONFIRMED",
+      "elapsedSeconds": 2.005008526997699
+    },
+    {
+      "id": "OUTPUT-001",
+      "freshReproduction": "CONFIRMED",
+      "scope": "Exact unchanged output/exportBusy functions; deferred exporter; mocked OS boundary and controlled UI/document state",
+      "calls": [
+        {
+          "stage": "generate",
+          "owner": "A",
+          "format": "pptx",
+          "options": {
+            "includePhoto": false,
+            "includeOriginal": false
+          }
+        },
+        {
+          "stage": "handoff",
+          "name": "案件A.pdf",
+          "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+        },
+        {
+          "stage": "save",
+          "owner": "A"
+        }
+      ],
+      "a": {
+        "id": "A",
+        "title": "案件A",
+        "revision": 2,
+        "exports": [
+          {
+            "id": "record",
+            "format": "pdf",
+            "status": "downloaded",
+            "at": "2026-10-05T15:21:23.367Z",
+            "revision": 1,
+            "includePhoto": true,
+            "includeOriginal": false
+          }
+        ]
+      },
+      "b": {
+        "id": "B",
+        "title": "案件B",
+        "revision": 17,
+        "exports": []
+      },
+      "realBrowser": "NOT_RUN",
+      "realDevice": "NOT_RUN"
+    },
+    {
+      "id": "EXPORT_OWNER_RACE",
+      "freshReproduction": "CONFIRMED",
+      "scope": "Exact unchanged output/exportBusy functions; deferred exporter; mocked OS boundary and controlled UI/document state",
+      "calls": [
+        {
+          "stage": "generate",
+          "owner": "A",
+          "format": "pptx",
+          "options": {
+            "includePhoto": false,
+            "includeOriginal": false
+          }
+        },
+        {
+          "stage": "handoff",
+          "name": "案件B.pptx",
+          "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+        },
+        {
+          "stage": "save",
+          "owner": "B"
+        }
+      ],
+      "a": {
+        "id": "A",
+        "title": "案件A",
+        "revision": 1,
+        "exports": []
+      },
+      "b": {
+        "id": "B",
+        "title": "案件B",
+        "revision": 18,
+        "exports": [
+          {
+            "id": "record",
+            "format": "pptx",
+            "status": "downloaded",
+            "at": "2026-10-05T15:21:23.368Z",
+            "revision": 17,
+            "includePhoto": false,
+            "includeOriginal": false
+          }
+        ]
+      },
+      "realBrowser": "NOT_RUN",
+      "realDevice": "NOT_RUN"
+    },
+    {
+      "id": "INPUT-001",
+      "freshReproduction": "CONFIRMED",
+      "scope": "Synthetic protocol-fixture; actual VisionJobs.receive/adopt and extracted candidatePreview",
+      "discardedCoordinateSpace": true,
+      "before": [
+        0.3,
+        0.4
+      ],
+      "after": [
+        0.5,
+        0.5
+      ],
+      "realAI": "BLOCKED",
+      "realBrowser": "NOT_RUN",
+      "realDevice": "NOT_RUN"
+    }
+  ],
+  "counts": {
+    "baselineBlobChecks": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "targetedProductBehaviorChecks": {
+      "total": 4,
+      "PASS": 0,
+      "FAIL": 4,
+      "skip": 0
+    },
+    "normalArcControl": {
+      "PASS": 1,
+      "FAIL": 0
+    },
+    "harnessExecution": "Assertions confirmed observed faults; successful harness exit does not mean product PASS",
+    "fullRegression": "NOT_RUN",
+    "prior45NodeTests": "Prior task results only; not rerun in this review"
+  },
+  "severity": {
+    "P0AdditionalConfirmed": 0,
+    "P1StillUnfixed": [
+      "ENGINE-001",
+      "INPUT-001",
+      "OUTPUT-001",
+      "EXPORT_OWNER_RACE"
+    ],
+    "P1AdditionalConfirmed": 0,
+    "note": "Four issue records; OUTPUT-001/EXPORT_OWNER_RACE may share one repair work item. No geometry loss or P0 independently demonstrated."
+  },
+  "completed": "Limited source/evidence collection review and bounded reproductions",
+  "sourceWrites": 0,
+  "branchChanges": 0,
+  "APKBuild": "NOT_RUN / held",
+  "AndroidRealDevice": "NOT_RUN",
+  "UIBrowser": "NOT_RUN",
+  "fullRegression": "NOT_RUN",
+  "remoteUIQAOriginalReports": "Not available; conversation summaries not treated as completion evidence",
+  "decision": "APK generation hold and validation promotion hold are justified: executable application sources still match defective baseline and all four bounded checks still fail. Documentation-only performance commit cannot repair these behavior paths.",
+  "releaseOrAcceptance": "NOT_APPROVED; real-device PASS or full acceptance cannot be claimed"
+}

@@ -1,0 +1,409 @@
+{
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "baseline": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+  "integration_branch": "work/vdraw007-integration-20261006",
+  "decision": "BLOCKED_NO_RUNTIME_FIXES_NO_NEW_APK",
+  "branches": [
+    {
+      "owner": "UI / UX",
+      "branch": "work/vdraw007-ui-ux-20261005",
+      "head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "commits_since_base": [],
+      "changed_files": [],
+      "added_tests": [],
+      "report_status": "summary_only",
+      "unresolved": [
+        "OUTPUT-001",
+        "EXPORT_OWNER_RACE",
+        "busy再描画候補",
+        "P2候補"
+      ]
+    },
+    {
+      "owner": "Engine",
+      "branch": "work/vdraw007-engine-20261005",
+      "head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "commits_since_base": [],
+      "changed_files": [],
+      "added_tests": [],
+      "report_status": "full_report",
+      "unresolved": [
+        "ENGINE-001"
+      ]
+    },
+    {
+      "owner": "Input / Trace",
+      "branch": "work/vdraw007-input-trace-20261005",
+      "head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "commits_since_base": [],
+      "changed_files": [],
+      "added_tests": [],
+      "report_status": "full_report",
+      "unresolved": [
+        "INPUT-001",
+        "realAI BLOCKED"
+      ]
+    },
+    {
+      "owner": "Output / Share",
+      "branch": "work/vdraw007-output-share-20261005",
+      "head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "commits_since_base": [],
+      "changed_files": [],
+      "added_tests": [],
+      "report_status": "full_report",
+      "unresolved": [
+        "OUTPUT-001",
+        "EXPORT_OWNER_RACE"
+      ]
+    },
+    {
+      "owner": "Android",
+      "branch": "work/vdraw007-android-20261005",
+      "head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "commits_since_base": [],
+      "changed_files": [],
+      "added_tests": [],
+      "report_status": "full_report",
+      "unresolved": [
+        "AND-SIGN-01",
+        "AND-SHARE/BACK/LIFE/CAM candidates"
+      ]
+    },
+    {
+      "owner": "独立QA / Debug",
+      "branch": "work/vdraw007-qa-debug-20261005",
+      "head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "commits_since_base": [],
+      "changed_files": [],
+      "added_tests": [],
+      "report_status": "summary_only",
+      "unresolved": [
+        "4 confirmed P1",
+        "full regression NOT_RUN"
+      ]
+    },
+    {
+      "owner": "Performance / Regression",
+      "branch": "work/vdraw007-performance-20261005",
+      "head": "43a8635c1bb9e52847b00e6a98a732395dec5269",
+      "commits_since_base": [
+        "43a8635c1bb9e52847b00e6a98a732395dec5269"
+      ],
+      "changed_files": [
+        "prototype/vdraw-mobile-007/docs/PERFORMANCE-REGRESSION-20261005.md",
+        "prototype/vdraw-mobile-007/docs/PERFORMANCE-REGRESSION-EVIDENCE-20261005.json"
+      ],
+      "added_tests": [],
+      "report_status": "full_report",
+      "unresolved": [
+        "PERF-REG-001",
+        "PERF-REG-002",
+        "PERF-REG-003",
+        "PERF-REG-004"
+      ]
+    }
+  ],
+  "accepted_commits": [
+    {
+      "sha": "43a8635c1bb9e52847b00e6a98a732395dec5269",
+      "scope": "documentation only"
+    }
+  ],
+  "rejected_commits": [],
+  "source_blob_identity": {
+    "core": "ad5f8d07a0d7a5d4d8e44840660be91844dcae78",
+    "vision": "194d25ce1d40490b3f700e2329abe71d3189c6ce",
+    "app": "b52d2cee3eabcad7a95e4c8f82fc8c133bd6c8b0"
+  },
+  "protected006_tree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+  "test_inventory": {
+    "git_files": [
+      "baseline006-ui/app.js",
+      "baseline006-ui/icons.js",
+      "baseline006-ui/index.html",
+      "baseline006-ui/style.css",
+      "baseline006-ui/sw.js",
+      "ui-performance-007.mjs",
+      "ui-smoke-007.mjs",
+      "ui-theme-007.test.mjs"
+    ],
+    "archive_files": [
+      "baseline005/commands.js",
+      "baseline005/core.js",
+      "baseline005/history-codec.js",
+      "baseline005/perf.js",
+      "baseline006-ui/app.js",
+      "baseline006-ui/icons.js",
+      "baseline006-ui/index.html",
+      "baseline006-ui/style.css",
+      "baseline006-ui/sw.js",
+      "bounded-process-005.py",
+      "changes-006.test.mjs",
+      "clone-profile-005.mjs",
+      "command-update-004.test.mjs",
+      "core.test.mjs",
+      "gestures-004.mjs",
+      "gestures-update.mjs",
+      "history-codec-005.test.mjs",
+      "inspect-protocol-003.py",
+      "inspect_outputs.py",
+      "native-assets-003.py",
+      "native-assets-004.py",
+      "native-assets-005.py",
+      "native-assets-006.py",
+      "native-io-005.test.mjs",
+      "native-shell.test.mjs",
+      "output-inspect-004.py",
+      "output-quality-005.mjs",
+      "output-regression.mjs",
+      "output-structure-005.py",
+      "performance-003.mjs",
+      "performance-004.mjs",
+      "performance-005.mjs",
+      "performance-core-006.mjs",
+      "performance-final-006.mjs",
+      "performance.mjs",
+      "photo-pipeline-005.mjs",
+      "product.mjs",
+      "recovery-input.mjs",
+      "render-export-004.mjs",
+      "requirements-inspect.txt",
+      "save-gesture-003.mjs",
+      "screenshots-005.mjs",
+      "segment-probe-005.mjs",
+      "storage-conflict.mjs",
+      "storage-extra-005.mjs",
+      "storage-extra-006.mjs",
+      "storage-safety-004.mjs",
+      "storage-safety-006.mjs",
+      "ui-performance-007.mjs",
+      "ui-smoke-007.mjs",
+      "ui-state-005.mjs",
+      "ui-theme-007.test.mjs",
+      "vision-contract-005.test.mjs",
+      "vision-flow-003.mjs",
+      "vision-provider.test.mjs"
+    ],
+    "missing_direct": [
+      "bounded-process-005.py",
+      "changes-006.test.mjs",
+      "clone-profile-005.mjs",
+      "command-update-004.test.mjs",
+      "core.test.mjs",
+      "gestures-004.mjs",
+      "gestures-update.mjs",
+      "history-codec-005.test.mjs",
+      "inspect-protocol-003.py",
+      "inspect_outputs.py",
+      "native-assets-003.py",
+      "native-assets-004.py",
+      "native-assets-005.py",
+      "native-assets-006.py",
+      "native-io-005.test.mjs",
+      "native-shell.test.mjs",
+      "output-inspect-004.py",
+      "output-quality-005.mjs",
+      "output-regression.mjs",
+      "output-structure-005.py",
+      "performance-003.mjs",
+      "performance-004.mjs",
+      "performance-005.mjs",
+      "performance-core-006.mjs",
+      "performance-final-006.mjs",
+      "performance.mjs",
+      "photo-pipeline-005.mjs",
+      "product.mjs",
+      "recovery-input.mjs",
+      "render-export-004.mjs",
+      "requirements-inspect.txt",
+      "save-gesture-003.mjs",
+      "screenshots-005.mjs",
+      "segment-probe-005.mjs",
+      "storage-conflict.mjs",
+      "storage-extra-005.mjs",
+      "storage-extra-006.mjs",
+      "storage-safety-004.mjs",
+      "storage-safety-006.mjs",
+      "ui-state-005.mjs",
+      "vision-contract-005.test.mjs",
+      "vision-flow-003.mjs",
+      "vision-provider.test.mjs"
+    ],
+    "missing_nested_support": [
+      "baseline005/commands.js",
+      "baseline005/core.js",
+      "baseline005/history-codec.js",
+      "baseline005/perf.js"
+    ],
+    "source_zip_sha256": "3d91a85c663bde84ceee89fcfa2192fb443c83ace43f1f154e0e329f1b475e46",
+    "missing_test_entries": [
+      "bounded-process-005.py",
+      "changes-006.test.mjs",
+      "clone-profile-005.mjs",
+      "command-update-004.test.mjs",
+      "core.test.mjs",
+      "gestures-004.mjs",
+      "gestures-update.mjs",
+      "history-codec-005.test.mjs",
+      "inspect-protocol-003.py",
+      "inspect_outputs.py",
+      "native-assets-003.py",
+      "native-assets-004.py",
+      "native-assets-005.py",
+      "native-assets-006.py",
+      "native-io-005.test.mjs",
+      "native-shell.test.mjs",
+      "output-inspect-004.py",
+      "output-quality-005.mjs",
+      "output-regression.mjs",
+      "output-structure-005.py",
+      "performance-003.mjs",
+      "performance-004.mjs",
+      "performance-005.mjs",
+      "performance-core-006.mjs",
+      "performance-final-006.mjs",
+      "performance.mjs",
+      "photo-pipeline-005.mjs",
+      "product.mjs",
+      "recovery-input.mjs",
+      "render-export-004.mjs",
+      "save-gesture-003.mjs",
+      "screenshots-005.mjs",
+      "segment-probe-005.mjs",
+      "storage-conflict.mjs",
+      "storage-extra-005.mjs",
+      "storage-extra-006.mjs",
+      "storage-safety-004.mjs",
+      "storage-safety-006.mjs",
+      "ui-state-005.mjs",
+      "vision-contract-005.test.mjs",
+      "vision-flow-003.mjs",
+      "vision-provider.test.mjs"
+    ]
+  },
+  "tests": {
+    "fresh_full_regression": "NOT_RUN",
+    "prior_limited": {
+      "pass": 51,
+      "fail": 0,
+      "skip": 0,
+      "date": "2026-10-05",
+      "scope": "not full regression"
+    },
+    "fresh_qa": {
+      "source_identity": {
+        "pass": 3,
+        "fail": 0
+      },
+      "defect_acceptance": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "normal_arc_control": {
+        "pass": 1
+      },
+      "full_regression": "NOT_RUN",
+      "report": "collection-review-20261006.json"
+    }
+  },
+  "severity": {
+    "confirmed_P0": 0,
+    "confirmed_P1": [
+      "ENGINE-001",
+      "INPUT-001",
+      "OUTPUT-001",
+      "EXPORT_OWNER_RACE"
+    ],
+    "P2": "unconfirmed candidates"
+  },
+  "apk": {
+    "new": "NOT_GENERATED",
+    "old": {
+      "name": "VDRAW-MOBILE-007-debug.apk",
+      "branch": "validation",
+      "head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+      "workflow_run": 37283743856,
+      "sha256": "89350a7e6d8471ba3bbe983dfaeefba477d6ad31519f1036105da5cf9af71d09",
+      "applicationId": "jp.dksc.vdraw.prototype007",
+      "versionCode": 7,
+      "versionName": "0.7.0"
+    },
+    "signing_key": "UNCONFIRMED_UPDATE_BLOCKER"
+  },
+  "protected_refs_before": [
+    {
+      "name": "VDRAW-MOBILE-007-UI-CHECKPOINT",
+      "sha": "e9a56b9f65ee4679ec83cc97cf67365d89f05e82"
+    },
+    {
+      "name": "VDRAW-MOBILE-007",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "main",
+      "sha": "1181c0aeef3a152435cf005583d09a15f209bd0d"
+    },
+    {
+      "name": "validation",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "work/vdraw007-android-20261005",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "work/vdraw007-engine-20261005",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "work/vdraw007-input-trace-20261005",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "work/vdraw007-integration-20261005",
+      "sha": "1e3dd26184fa967fbf6798cb749b3705c64297dd"
+    },
+    {
+      "name": "work/vdraw007-output-share-20261005",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "work/vdraw007-performance-20261005",
+      "sha": "43a8635c1bb9e52847b00e6a98a732395dec5269"
+    },
+    {
+      "name": "work/vdraw007-qa-debug-20261005",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "work/vdraw007-ui-ux-20261005",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    }
+  ],
+  "report_sources": [
+    {
+      "file": "VDRAW-007-ENGINE-INITIAL-AUDIT-20261005.txt",
+      "ref": "libfile_406a8802da7c81919b6a722f57d4baba",
+      "copy": "engine-initial-audit.txt"
+    },
+    {
+      "file": "VDRAW-MOBILE-007-output-share-audit-20261005.md",
+      "ref": "libfile_6c88b60965e88191a0662d71502ec9e9",
+      "copy": "output-share-initial-audit.md"
+    },
+    {
+      "file": "VDRAW-MOBILE-007_INPUT-TRACE_AUDIT-20261005.txt",
+      "ref": "libfile_36d9ebaaab488191a4a55595cbd0e764",
+      "copy": "input-trace-initial-audit.txt"
+    },
+    {
+      "file": "VDRAW-MOBILE-007-Android-Audit-Acceptance.md",
+      "ref": "libfile_0f238855f8dc8191b1274ff4f91528d3",
+      "copy": "android-initial-audit.md"
+    }
+  ],
+  "ui_qa_provenance": "personal-context conversation retrieval, secondary summaries only; new full Work originals not recovered",
+  "next_device_check": "existing installed 007: 新しい図面→白紙→編集画面表示"
+}

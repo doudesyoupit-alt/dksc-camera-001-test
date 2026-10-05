@@ -1,0 +1,146 @@
+VDRAW MOBILE 007｜入力・トレース 初回監査報告
+対象指示日：2026-10-05 JST
+判定：読み取り監査と修正方針整理を完了。INPUT-001はP1・未修正。入力全体の受入は未完了。
+
+1. 基準・保全
+repository：doudesyoupit-alt/dksc-camera-001-test
+担当branch：work/vdraw007-input-trace-20261005
+確認HEAD：1ec046fc1582803cf49716dcfa3330b06c21714f
+Git ref直接照会で一致。開始基準とのcompareはidentical、ahead/behind 0、変更ファイル0。
+正常基準006、対象007。ローカルcheckoutは存在せず、認証済みGitHub読取で固定SHAの必要ファイルだけを取得した。ローカルgitのbranchを確認したとは主張しない。
+AGENTS.mdは再帰treeに存在しない。
+GitHub書込0、コード修正0、APKビルド0、実AI通信0、画像デコード0、006変更0。禁止されたreset/rebase/clean/削除/checkpoint上書き/テスト削除/skip追加は行っていない。
+担当対象のimporters.js、vision.js、device.js、render.js、vision-provider.mjs、sam-contract.mjsは、同じHEAD内の006/007でGit blob SHAが一致。INPUT-001は006継承経路であり、007 UI改修による退行とは断定しない。
+
+2. 読んだ証跡と今回の検証範囲
+総括branchのprototype/vdraw-mobile-007/docs/INTEGRATION-20261005.mdと同docs/integration-evidence-20261005/input-001-independent.jsonを直接読んだ。担当branchへmergeしていない。
+今回、固定SHAのcore/vision/render/provider/SAM/schema/appの取得コピー7件はGit blob SHA一致を確認。
+実VisionJobs.receive/adopt、candidateFromGeometry、実app.jsから抽出したcandidatePreviewをNodeで軽量実行。画像は合成の原本識別文字列のみでworkImage=null。実AI・実写真・DOMブラウザ・Android・IndexedDBを含まない。
+初回ハーネスは末尾の補助確認でconstへの代入により停止。ハーネスを訂正した再実行は正常終了。これは製品テストのFAILとして集計せず、全回帰PASSとも扱わない。
+再現結果：
+・入力canvas 2000×1000
+・candidate coordinateSpace=drawing-1200x800、rectのx=600/y=400
+・receive後coordinateSpaceはundefined
+・preview viewBox=2000×1000、相対位置=(0.3,0.4)
+・adopt canvas=1200×800、図形座標はそのまま、相対位置=(0.5,0.5)
+・原ページJSON、sources JSONは採用前後一致
+・JSON stringify/parse後もcanvas/図形を保持し、不一致も残る
+追加確認：
+・provider側candidateFromGeometryはdrawing-1200x800を返す
+・receiveは未知coordinateSpace、coordinateSpace欠落の両方を受理する
+・provider-candidateは未review採用を拒否。protocol-fixtureは同じengine review gateを要求しない
+・status({})はUNCONNECTED。実環境の認証・実推論状態を検査したものではない
+
+3. 入力別の実装／未確認
+写真・画像：
+importFileで原本Data URLをsources.originalに保持し、sanitizeImageで作業用PNGを分離。createImageBitmapのfrom-image指定、48MP制限、長辺最大2000px、縦横比を保つ縮小。ページcanvasは作業用画像の幅高さ。image/*またはjpg/jpeg/png/webp/bmpの拡張子を許可。
+未確認：実端末EXIF方向、対応コーデック、PNG metadata、48MP画像の実メモリ、入力取消・再選択・同一画像再選択、失敗後の案件保持。48MP検査はbitmap作成後であり、デコード前のメモリ上限保証ではない。
+
+カメラ：
+Webはfile撮影入力、NativeはcapturePhoto→nativeIO→importFile。撮影後は同じ画像処理へ流れる。
+未確認：Android権限、OS復帰、process death、取消、restoredPhoto経路。Android担当の責任。今回実カメラ未実行。
+
+PDF：
+原本PDF Data URLを最初のsourceに保持。20ページ上限。全ページを順次描画し、scale=min(2,1600/長辺)で作業用PNG化、整数ceilのcanvas寸法を使用。各PDFページsourceは新ID・pageNumber・nativeText・workImageを持ち、original=null。各図面ページはそのsourceIdを参照。
+選択は読込前のページ指定ではなく、全ページ取込後の「案件・ページ」一覧。PDF nativeTextのtransformはPDF座標、PNGはviewport変換後の上から下の座標であり、文字を候補図形へ利用する場合は明示変換が必要。現状はPDFベクター編集取込・AI再推定未接続。
+未確認：ページ2以降/異なるサイズ/回転ページ、20→21境界、破損/暗号化PDF、実端末メモリ、画面途中の取消。
+原本保持の注意：ページsourceにparentSourceId等の原本PDFへの明示リンクはない。sourceIdからそのページ画像は特定できるが、複数PDF/バックアップ等を含む一般契約として原本との対応が明示されたとは言えない。
+
+PPTX／JSON（入力契約の補足）：
+PPTXは構造から基本図形・文字・単純多角形を取込、50スライド上限、展開後100MB制限。画像/グループ/回転/複雑図形は未対応を警告。今回実行なし。
+案件JSONはvalidate後、新案件IDとタイトルに変更して復元。既存候補には座標情報の必須検査がなく、今回の座標問題を自動補正しない。
+
+Vision：
+UI draft()はBLOCKEDで外部送信しない。operation-sampleは合成図形。protocol-fixtureは接続契約の合成データ。real-providersのラベルは結果ファイル申告であり、今回実推論を確認した意味ではない。
+Nodeのprivate CLI/providerコードは存在するが、常駐認証済みジョブサービスのUI接続は未実装。PNG/JPEG 6MB、署名、同意、30秒既定timeout、no retry、候補100件、点2000件等の境界がある。ブラウザ結果JSONは5MB制限。実Claude/SAM接続・実写真精度は未確認。
+
+4. 現行座標契約と原因
+入力ページ：作業用画像pixel、左上原点、x右/y下。未校正の図面座標で実寸ではない。
+provider：drawing-1200x800固定。scene bbox、SAM prompts/masks/geometry/candidateも同じ固定範囲。
+receive：element属性をallowlistで複製する一方、coordinateSpace・参照画像変換・元ページIDを保持しない。座標系の未知/欠落を拒否しない。
+preview：現在選択中のp().canvas、現在ページのsrc()を利用し、candidate.sourceIdに固定しない。
+adopt：newPageの既定1200×800へ図形を複製。原ページを維持するが確認時のcanvasを引き継がない。
+保存：doc全体をclone/validate/checksum付きでIndexedDBへ保存する設計。座標の意味を検査・修復する契約はない。
+出力：SVG/PNG/PDFはdrawingSvgの参照画像をxMidYMid meetで配置。PPTXは作業用画像をページwidth/heightに指定して配置するため、縦横比の異なるsource/pageでSVGと同じ配置が保証されない。DXFは画像を持たず、y反転と複数ページの横offsetを行う。
+原因は座標metadata脱落＋preview/adoptのcanvas不一致。さらにproviderが非3:2入力を固定座標へどう対応付けるか（contain/引伸ばし）の明示契約がない。coordinateSpaceを1項目足すだけでは完成しない。
+
+5. 最小修正案（設計のみ・未実装）
+基本方針：既存providerの1200×800契約を維持し、候補の確認と採用を同一の候補canvasで扱う。元の入力ページを1200×800へ変更しない。
+
+A. vision.js：
+receiveでcoordinateSpaceをvalidateし保持。固定provider候補は左上原点/y下の1200×800と明示。候補にsourceId、sourcePageId、candidateCanvas、referenceImageTransformを保持し、preview/adoptで使用。
+未知/欠落座標を推測して受理しない。既存候補の座標系が証明できない場合は再確認が必要として採用を止め、既存案件を無断変換しない。
+operation-sampleは生成元ページのcanvasを固定して保持し、provider固定座標とは分ける。
+adoptはcandidateCanvasを複製し、sourceIdを固定。現在ページの変更に左右されない。参照先が欠落/不整合ならページ追加前に拒否する。
+100候補、図形境界、有限値等の既存制限を保持。rectだけでなくpolygon/line/ellipse/arc/textにも同じ座標契約を適用する。
+
+B. importers.js／画像処理境界：
+sourceの作業用width/heightと、原本→方向補正→縮小の座標来歴を記録。PDF pageNumberとparentSourceIdを明示し、ページ別sourceから原本を辿れるようにする。原本データを変更しない。
+providerに渡す画像をcontainで1200×800に配置する案を固定：
+s=min(1200/W,800/H)
+tx=(1200-sW)/2、ty=(800-sH)/2
+画像の点(u,v)→候補の点(su+tx,sv+ty)
+全画像の引伸ばしや、候補だけ別係数での変換を避ける。例：2000×1000ならs=.6、tx=0、ty=100。候補の(600,400)は原画像の(1000,500)に相当する。
+作業用PNGの元サイズを保持し、provider用のpadding/resizeを派生画像として区別する。既存結果のcontain契約が不明なら自動変換しない。
+これは外部サービスの実装が合意すべき契約であり、現在のproviderへ写真を投げるだけでは実証にならない。
+
+C. provider：
+送信画像とscene/SAM座標が同一frameであることを検査。candidate/resultへframe寸法と参照画像変換を返す。未知frameを拒否し、模擬/実推論のexecutionKindとprovenanceを維持。
+実接続と写真精度は別工程。今回接続・再試行なし。
+
+D. 共通参照画像配置：
+同じs/tx/tyをプレビュー・編集表示・SVG/PNG/PDF・PPTXで利用する。PPTXではページ全域への画像引伸ばしをやめ、同じcontain矩形をslide座標へ換算する。DXFでは画像なしの図形座標をy反転/offsetの逆換算で比較する。
+
+6. 総括へ返すCROSS_TEAM_ISSUE／担当境界
+CROSS_TEAM_ISSUE INPUT-001-UI：
+app.js candidatePreviewは候補のcanvasとcandidate.sourceIdを使う必要がある。candidate-open/ページ切替で現在ページの画像を参照しない。app.jsは本担当で変更しない。UI担当＋総括が編集順序を管理。
+CROSS_TEAM_ISSUE INPUT-001-ENGINE：
+adopt後ページのcanvas/参照画像配置metadataをschema保存・復元・Undo/Redoで保持すること、異常値を受理しないことをエンジン担当へ確認。core/commands/storage/renderは本担当で変更しない。
+CROSS_TEAM_ISSUE INPUT-001-EXPORT：
+PPTXとSVG/PDFの参照画像contain配置を統一。出力担当がexporters.jsの所有者固定の既存修正と競合を管理。今回PPTX実出力は未実行。
+CROSS_TEAM_ISSUE INPUT-SOURCE-LIFECYCLE：
+Nativeカメラ/OS picker/Back/権限/復帰/取消はAndroid担当。入力処理は戻り値のfile/null/error契約を提示する。
+補足：receiveがactive source一致を要求する一方、保存候補を開くpreview/adoptには同等のsource/page固定がない。今回別画像表示の実ブラウザ再現は行っておらず、追加不具合確定数に加算しない。
+protocol-fixtureだけreview gateを要求しない点も境界確認事項。UI採用ボタンはreviewを記録するが、エンジン直接呼出の仕様は総括/QAへ照会する。
+
+7. 必要試験と合否条件（設計・今回未実行）
+全て新規合成案件、隔離origin/端末sandboxで行い、006実データを書込まない。
+
+T01 座標metadata：
+既知frameをreceive→候補保存→再読込→preview→adoptまで保持。未知/欠落/負寸法/非有限/範囲外を拒否し、既存ページ・source・candidateを変更しない。
+
+T02 画像比率：
+横長2000×1000、縦長1000×2000、非3:2の1600×900、正方形1000×1000、基準1200×800。
+四隅・中心・内部のmarkerとrect/line/polygon/ellipse/arc/textを使い、合意したcontain変換で画像上の同一点を指すこと。丸は不等方変換で楕円化しない。EXIF90/180/270度は別の実画像試験。
+
+T03 PDF：
+1ページ、複数ページ、サイズ混在、回転、ページ1/2/末尾選択。選択sourceId/pageNumber/原本parentを確認し、別ページへの候補採用を拒否または正しいsourceで表示する。原本PDF byte SHAが入出力・保存再読込で不変。PDF text→viewport変換は利用を開始する場合に別検査。
+
+T04 取消・再選択：
+picker取消、同一ファイル再選択、A読込中にB選択、PDF読込失敗、候補確認中の案件/ページ切替。最終採用・表示・保存先が選択したsource/jobに一致し、古い完了通知でBを上書きしない。入力遅延はdeferred模擬で先に確認し、実OSはAndroid担当。
+
+T05 読込上限：
+30MBの直前/境界/超過、48MP境界、PDF20/21、Vision JSON5MB、provider6MB、候補100/101、polygon2000/2001。大容量実デコードは初回実行せず、軽量のsize/pageCount/点数模擬で拒否条件を確認。例外時に原案件が維持され、busyが解除される。
+
+T06 preview/adopt/export：
+同じcandidateCanvasとreferenceImageTransformを用いて、確認前後の正規化座標が一致。
+SVG・PPTXはページ/slide/画像paddingを逆換算し、誤差は丸め1px相当以内。PNG/PDFは画像markerとの重なり1px相当を目安に検証し、文字のフォント描画差を図形座標差と混同しない。
+DXFはページoffsetとy反転を逆換算してgeometryを比較。画像添付は評価対象外。
+
+T07 原ページ・原本保持／保存：
+採用は新ページ追加のみ。元ページのelements/canvas/calibration、sources.original byte SHA、作業用画像SHAを比較する。座標metadataを含む候補と採用ページをJSON・LocalStore保存→再起動→loadで一致させる。JSON roundtripだけを端末保存PASSと扱わない。Undo/Redo後も同じsource/座標frameを保持。
+
+T08 provider区分：
+合成scene/SAM応答でframe・bbox・geometry・provenance・拒否・no retryを確認できる。operation-sample、protocol-fixture、real-providersを別集計。合成試験では実写真の見落とし・誤分類・形状精度、実API認証/費用/timeout、実端末カメラの合格を主張しない。
+
+受入ゲート：
+INPUT-001の軽量再現で位置差が解消し、非3:2/縦長でも同じ参照画像変換となること。
+原ページ/原本保持、候補source binding、保存・再読込、関連出力一致を独立QAで確認。
+実AI未接続は未接続として残し、入力契約のPASSと実写真精度のPASSを分ける。
+修正前の既存51回帰等は今回の新試験のPASSとして転記・合算しない。関連回帰と独立QA、総括の統合ゲートを経るまでvalidationへ反映しない。
+
+8. 総括向け結論
+INPUT-001：P1、再現確認済み、未修正。
+最小方針：候補frameとsource bindingを保持し、preview/adoptを同一candidateCanvasに統一。参照画像のcontain変換を固定し、PPTXを含む出力へ共有する。
+必要な共同作業：入力/トレースの契約修正、UIのapp.js接点、エンジンの保存契約確認、出力の画像配置、AndroidのOS操作受入。
+本初回指示の完了条件（入力別実装/未確認、座標契約、原因、担当境界、合否条件）は本報告で満たす。修正着手・実AI接続・実機合格・総括への外部送信は行っていない。

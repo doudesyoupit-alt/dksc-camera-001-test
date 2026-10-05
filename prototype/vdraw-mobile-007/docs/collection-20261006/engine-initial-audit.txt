@@ -1,0 +1,335 @@
+VDRAW MOBILE 007｜図面編集エンジン 初回監査・修正方針
+記録日：2026-10-05 JST
+状態：初回監査完了／ENGINE-001未修正／実機受入未完了
+
+1. 対象と変更実績
+repository：doudesyoupit-alt/dksc-camera-001-test
+専用branch：work/vdraw007-engine-20261005
+開始時・終了時確認HEAD：
+1ec046fc1582803cf49716dcfa3330b06c21714f
+指定開始HEADと一致。branch更新、commit、push、mergeは実施していない。
+main照会：1181c0aeef3a152435cf005583d09a15f209bd0d
+validation照会：1ec046fc1582803cf49716dcfa3330b06c21714f
+
+作業環境にcheckoutは存在しなかったため、GitHubの読み取りAPIでbranchを解決し、
+上記SHAへ固定してコードを取得した。ローカルgit履歴・checkout済みbranchとは主張しない。
+実行用コピー12ファイルはGit blob SHAを照合して12/12一致。
+既存リポジトリコード修正0、006変更0、APK生成0、全面再試験0。
+reset/rebase/git clean、成果削除、checkpoint上書き、テスト削除、skip追加は実施していない。
+
+参照：
+・総括branchのprototype/vdraw-mobile-007/docs/INTEGRATION-20261005.md
+・同docs/integration-evidence-20261005/engine-001-independent.json
+・同docs/integration-evidence-20261005/qa-initial-audit.json
+総括branchを自branchへmergeしていない。
+checkpoint SHAは総括記録から継承：
+007：1ec046fc1582803cf49716dcfa3330b06c21714f
+007 UI：e9a56b9f65ee4679ec83cc97cf67365d89f05e82
+同名tagの直接照会は404だったため、checkpointをtagとして存在確認できたとはしない。
+checkpointの実体種別／全原本保護manifestの再照合は未確認。
+
+2. 006保護対象と今回の証明範囲
+開始SHAのGit treeはtruncated=false。
+006と007の担当5ファイルは以下のGit blobが完全一致：
+core.js           ad5f8d07a0d7a5d4d8e44840660be91844dcae78
+commands.js       510a05e0643099eb84c0d6f117d812e55c126e9e
+history-codec.js  80ca264c41030d9911308afcb907e74d703f7b4d
+storage.js        6115e6b09d6dbfac019bbd1ff82690e8783512d2
+render.js         1ed98b27d73ea85d2c67573579ba92488cc0abbc
+
+ENGINE-001は006からの継承不具合。正常基準006を変更して修復する方針ではない。
+保護対象：
+・prototype/vdraw-mobile-006/のコード、manifest、案件実データ、原本成果
+・既存checkpoint、main、validation、既存テスト
+・案件schema vdraw-mobile/1、version=1、id／revision／page／source契約
+・storage schema /2・/3、IndexedDB version=1、DB名vdraw-mobile-prototype-006
+・保存snapshot、checksum、既存record破損時の上書き拒否、同時更新検出
+・Undo/Redo上限・履歴圧縮codec・既存復旧コピー仕様
+006/007のWeb DB名は同一。次工程のWeb試験は別originと合成案件を使う。
+Androidは総括記録上、別package/sandbox。今回実機を確認していない。
+5ファイル一致は全006原本・全manifestの再検証を意味しない。
+
+3. 関連コードと責任境界
+行番号は固定HEADのファイル基準。
+prototype/vdraw-mobile-007/web/src/
+・core.js:17–35 validate、27 円弧角度の有限値検査、44 arcPoints
+・commands.js:4 案件／任意履歴検証、7–22 変更前検証・snapshot、26–27 Undo/Redo
+・history-codec.js:4 形式制限、5–13 圧縮と任意履歴容量制限、16–27 展開の上限制御
+・storage.js:10–15 checksumと案件検証、16 同期snapshot、17–21 破損拒否・CAS・checkpoint
+・storage.js:24 loadSession、27–28 checkpoint復旧／コピー
+・render.js:4 shape(arc)、12 drawingSvg、16 hit(arc)がarcPointsを呼ぶ
+
+境界の読取確認：
+・importers.js:6 外部JSONをJSON.parse→validate→新IDへ変更して返す
+・app.js:109 通常円弧挿入は0→180度。今回異常値を通常操作で作成したとはしない
+・app.js:51 保存、52 loadSession→Editor→edit、53 begin→edit、141 外部ファイル読込
+・app.js:170–173 visibility/pagehide/native suspend時の保存
+・exporters.js：SVG/PNG/PDFはdrawingSvg、PPTXはarcPointsを使用。DXFは独自の角度変換
+
+4. ENGINE-001：P1、独立再現確認済み、未修正
+元コード：
+const start=e.startAngle*Math.PI/180,end=e.endAngle*Math.PI/180;
+let span=end-start;
+while(span<=0)span+=2*Math.PI;
+
+入力の有限性だけでは、その後の演算・反復の有限時間性を保証できない。
+原因A：
+1e308はNumber.isFiniteで受理される。
+1e308*Math.PIはInfinityへoverflowし、start=Infinity、span=-Infinity。
+-Infinityに2πを足しても-Infinityのままなのでwhileが終了しない。
+原因B：
+1e20→0ではラジアン差そのものは有限だが、負の巨大値のULPが2πより大きくなる。
+span+2π===spanとなり、反復が進まない。
+従って「Infinityを防ぐ」「演算順を変える」だけの修正は不足。
+さらに、値が変化する範囲でも負の多回転角は反復数が入力に依存し、長時間停止し得る。
+
+今回の再現環境：
+Node v24.19.0、Git blob一致した元importFile＋core＋drawingSvgを使用。
+JSONのFileを実importFileへ渡し、import後にdrawingSvgを呼んだ。
+依存native-bridgeも原コードを取得。JSON経路でOS機能は使用していない。
+各ケースを別subprocessで実行、親processが2秒timeout後に終了させる。
+ブラウザDOM・Android実機・実IndexedDBでの検証ではない。
+
+実行結果：
+通常対照 0→180：0.081603秒、描画return、49点、全座標有限。
+ENGINE-001 1e308→0：JSON受理・描画入口のログ後、2.005181秒でtimeout。
+追加原因確認 1e20→0：JSON受理・描画入口のログ後、2.005662秒でtimeout。
+既存独立証跡の「通常49点／外部JSON受理後に2秒停止」と一致。
+これは通常対照1件と不具合再現2件。全体PASS、修正完了、FAIL 0とは扱わない。
+既存20件PASSは今回再実行しておらず、当該問題の解消証明にしない。
+
+分類：
+P1＝外部入力から同期描画が戻らず主要操作を停止させる。
+描画停止からUI主thread停止へ及ぶ経路は静的に確認。実ブラウザ停止は今回未実行。
+P0のデータ破壊・既存案件破壊は今回未実証。未確認領域を含むP0ゼロ保証はしない。
+
+5. 最小修正案（設計のみ、未実装・未検証）
+主変更は007のcore.js/arcPointsに限定し、修正用テストを追加する。
+commands/history-codec/storage/renderの保存・履歴契約は変更しない。
+validateの許容角度に新しい上限を無断導入しない。
+
+推奨手順：
+a. arcPointsの入口でも角度の有限性を確認する。直接呼出しの非有限値は明示エラーにする。
+b. 元のstartAngle/endAngleを保存上は維持し、描画時だけ開始角を360度剰余へ縮約する。
+c. 度単位でdelta=endAngle-startAngleを計算する。
+d. 正の有限deltaは多回転を含めて維持する。ラジアン変換は(delta/180)*Math.PIとする。
+e. 正のdeltaがoverflowした場合は、両端を先に/180して差を取り、最後に*Math.PIとする。
+   有限角度を度→ラジアンへ縮小してから差を取るため±Number.MAX_VALUEでも有限にできる。
+f. delta<=0はdelta%360を取り、結果<=0なら360を一度だけ足す。
+   負のdeltaがoverflowした場合は、端点の剰余同士の差から同じ処理をする。
+   等角／非正の360度整数倍は1周とする。
+g. 49点を維持し、補間はsweepRad*(i/48)とする。
+   sweepRad*i/48の順では巨大な正角でも中間overflowするため避ける。
+h. 角度に依存したwhileを置かず、計算回数を固定する。
+
+互換性：
+・0→180、負角、360度跨ぎ、0→0、0→360は旧表示の意味を維持する。
+・正の多回転0→720は2周を維持する。
+  全角度を一律0–360へ正規化する案は720度等を1周に変えてしまうため採用しない。
+・180→0は+180、0→-90は+270、0→-360／-720は+360という旧方向契約を維持する。
+・度単位計算と開始角縮約により浮動小数点の最終桁は変化し得る。
+  通常域は旧49点との座標許容差で比較し、byte一致は合格条件にしない。
+・極端な有限値はIEEE-754の入力自体に精度限界がある。
+  新たに有限時間で描画できても、人間の意図した極大角の精密形状を保証するものではない。
+・既存record、raw角度、checksum、schema、revision、DB名、保存履歴の移行は行わない。
+・49点での巨大多回転描画は従来同様に精密な曲線ではない。精度改善を今回へ混入しない。
+・幾何座標／半径自体の極端値によるoverflowは別範囲。角度修正で全幾何の安全を保証しない。
+
+6. 必要テストと合否条件（未実行の設計）
+T01 白紙・線：
+project→Editor→線追加→SVG→保存再読込。線位置、id、数、page、revisionが期待どおり。
+T02 図形：
+四角・楕円・多角形・円弧の描画／選択／移動。通常形状の点列とhit結果を保持。
+T03 寸法・文字：
+日本語／改行／XML特殊文字、未入力寸法、正の手入力寸法。
+dimensionのscope=selected-edge-only、doesNotCalibratePage=trueと未校正状態を保存復元で維持。
+T04 Undo/Redo：
+追加→修正→Undo→Redo、Undo後の追加でredo消去、revision単調増加、無変更時履歴追加なし。
+保存再開後は既存history()の最新10件契約を基準に確認。80件無制限復元は要求しない。
+T05 snapshot：
+save呼出直後にlive docとhistoryを変更し、保存recordが呼出時内容で固定されていること。
+遅延保存・連続保存・別案件保存・旧checksumによる競合拒否も確認する。
+T06 破損：
+checksum不一致、非対応schema、JSON不正、角度非有限、重複ID、無効polygon、
+履歴base64／bytes不正、展開超過。既存record/checkpointが上書きされないこと。
+Editorの任意履歴破損時破棄とstorageの圧縮履歴破損時エラーは既存挙動を分けて確認。
+T07 保存復元：
+storage /2・/3、history=null、圧縮API非対応fallback、checkpoint→復旧コピー。
+raw角度・document構造を変更せず保存再読込できること。
+T08 終了後復元：
+別originの新規合成007案件で保存完了を確認→ページ終了→同origin再読込。
+Androidでは新規007案件保存→終了→再起動→同案件。線／寸法／文字と保存済み状態を確認。
+保存未完了で強制終了した場合は別ケースとし、完了済み保存の合否に混ぜない。
+T09 円弧通常角：
+0→180、180→0、350→10、-90→90、0→-90。
+0→180は右端から下側を通り左端へ、-90→90は上端から右側を通り下端へ。
+旧49点との通常座標誤差<=1e-9（通常座標・通常半径のfixture）を基準にする。
+端点、進行方向、点数、SVGとhitの一致を確認。
+T10 等角・全周・多回転：
+0→0、0→360、360→0、0→-360、0→-720、0→720、-720→0。
+0→720の2周を維持し、正と非正deltaの既存差を検証する。
+T11 極端な有限値：
+1e20→0、1e308→0、0→1e308、-1e308→1e308、逆方向、
+±Number.MAX_VALUEの両方向、等しい巨大角、極小差の角度。
+通常x/y/w/hで全49点が有限、SVGにNaN/Infinityがない、hitが戻ること。
+T12 外部JSON→描画と復元：
+実importFile→Editor→drawingSvg→hitを各異常fixtureで確認。
+checksumが正しい極端角recordのloadSession→描画も別途確認する。
+角度そのものを保存時に書き換えて解消したように見せない。
+
+停止fixtureは全て隔離process＋2秒wall-clock上限。
+timeoutはFAIL／停止再現として記録し、skipや正常PASSに変換しない。
+修正前の危険ケースをブラウザmain threadや既存案件で無制限実行しない。
+通常性能の測定と2秒停止検出を混同しない。
+
+修正完了ゲート：
+・危険角度全ケースが2秒以内に正常returnし、有限49点を生成
+・通常／負角／等角／全周／720度の契約を維持
+・外部JSONと保存復元経路で同じ結果
+・関連テストFAIL 0、skip 0、006保護差分なし
+・独立QAが別途再検証
+本初回はこのゲート未達。validationへの反映は不可。
+全回帰／APK／実機受入は総括の次工程で扱う。
+
+7. CROSS_TEAM_ISSUE（総括返却事項、他領域は未変更）
+CT-ENGINE-OUTPUT：
+arcPointsを共有するPPTXとSVG/PNG/PDFへ修正の影響が及ぶ。
+出力担当は通常／負角／全周／720度で表示と実出力を比較する必要がある。
+DXFは独自に(360-angle)%360を使用し、負の剰余や全周の表現差があり得る。
+既存差／今回差を区別し、全周や多回転をDXFでどう表現するかを出力担当と総括で整理する。
+今回DXF不具合の実再現・P分類確定はしていない。
+
+CT-ENGINE-INPUT：
+外部JSONのfinite受理が問題を露出するが、importersの責任だけで修正しない。
+保存復元／直接描画にも通る共通arcPointsで停止を防ぐ。
+INPUT-001のcoordinateSpace脱落は別問題。今回の角度修正で解消したとは扱わない。
+入力担当の候補座標契約に変更が必要なら総括を通じて調整する。
+
+CT-ENGINE-UI：
+同期drawingSvgとhitが同じ停止関数を呼ぶため、UIのbusy表示では回避できない。
+begin/open/Undo/Redo後の描画と選択が有限時間で戻るか、QA／UIが独立確認する。
+通常円弧挿入0→180と、外部異常角の試験結果を分ける。
+
+CT-ENGINE-EXPORT-OWNER：
+総括で確認済みEXPORT_OWNER_RACEの出力履歴／revision所有者問題は出力担当主責任。
+commands/storageの全面変更で吸収しない。別案件のsave所有者契約を必要時に確認する。
+
+8. 未確認と引継ぎ
+・修正は未着手。最小案を実装して通ったとは主張しない。
+・既存20件、関連回帰、全回帰は今回未実行。
+・実IndexedDBでの保存／破損復旧／終了後復元は未実行。
+・Android操作、アプリ終了後再読込、OS共有、実Office/CADは未実行。
+・checkpoint実体種別、006全原本manifestの最新全面照合は未確認。
+・UI操作から異常角を作れるか、全出力への実影響は未確認。
+・現時点の結論：ENGINE-001 P1継続。原因2経路を特定し、互換性を維持する定数回処理案と試験条件を提出。
+
+9. 根拠URL
+https://github.com/doudesyoupit-alt/dksc-camera-001-test/tree/work/vdraw007-engine-20261005
+https://github.com/doudesyoupit-alt/dksc-camera-001-test/blob/1ec046fc1582803cf49716dcfa3330b06c21714f/prototype/vdraw-mobile-007/web/src/core.js
+https://github.com/doudesyoupit-alt/dksc-camera-001-test/blob/work/vdraw007-integration-20261005/prototype/vdraw-mobile-007/docs/INTEGRATION-20261005.md
+https://github.com/doudesyoupit-alt/dksc-camera-001-test/blob/work/vdraw007-integration-20261005/prototype/vdraw-mobile-007/docs/integration-evidence-20261005/engine-001-independent.json
+
+
+
+10. 今回の隔離再現証跡・再実行用スクリプト
+{
+  "scope": "Node v24.19.0; Git blob matched original importer+core+render; no DOM or Android device; isolated 2s child-process per case",
+  "cases": [
+    {
+      "case": "normal_control",
+      "startAngle": "0",
+      "endAngle": "180",
+      "timeoutSeconds": 2,
+      "timedOut": false,
+      "returncode": 0,
+      "stdout": "EXTERNAL_JSON_ACCEPTED\nENTER_RENDER\n{\"svgReturned\":true,\"points\":49,\"finite\":true}\n",
+      "stderr": "",
+      "elapsedSeconds": 0.081603
+    },
+    {
+      "case": "ENGINE-001",
+      "startAngle": "1e308",
+      "endAngle": "0",
+      "timeoutSeconds": 2,
+      "timedOut": true,
+      "stdout": "EXTERNAL_JSON_ACCEPTED\nENTER_RENDER\n",
+      "stderr": "",
+      "elapsedSeconds": 2.005181
+    },
+    {
+      "case": "finite_stagnation",
+      "startAngle": "1e20",
+      "endAngle": "0",
+      "timeoutSeconds": 2,
+      "timedOut": true,
+      "stdout": "EXTERNAL_JSON_ACCEPTED\nENTER_RENDER\n",
+      "stderr": "",
+      "elapsedSeconds": 2.005662
+    }
+  ],
+  "scriptTemplate": "import {project,element,arcPoints} from './web/src/core.js';\nimport {importFile} from './web/src/importers.js';\nimport {drawingSvg} from './web/src/render.js';\nconst d=project('ENGINE-001 isolated audit');\nd.pages[0].elements.push(element('arc','audit',{x:100,y:100,w:160,h:160,fill:'none',startAngle:__A__,endAngle:__B__}));\nconst file=new File([JSON.stringify(d)],'engine-001.json',{type:'application/json'});\nconst imported=await importFile(file);\nconsole.log('EXTERNAL_JSON_ACCEPTED');\nconsole.log('ENTER_RENDER');\nconst svg=drawingSvg(imported.pages[0]);\nconst points=arcPoints(imported.pages[0].elements[0]);\nconsole.log(JSON.stringify({svgReturned:svg.startsWith('<svg'),points:points.length,finite:points.flat().every(Number.isFinite)}));\n"
+}
+
+11. 読取コピーGit blob照合
+[
+  {
+    "path": "web/src/core.js",
+    "gitBlob": "ad5f8d07a0d7a5d4d8e44840660be91844dcae78",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/commands.js",
+    "gitBlob": "510a05e0643099eb84c0d6f117d812e55c126e9e",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/history-codec.js",
+    "gitBlob": "80ca264c41030d9911308afcb907e74d703f7b4d",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/storage.js",
+    "gitBlob": "6115e6b09d6dbfac019bbd1ff82690e8783512d2",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/render.js",
+    "gitBlob": "1ed98b27d73ea85d2c67573579ba92488cc0abbc",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/perf.js",
+    "gitBlob": "83af8439a0204e6c94d513ae1700dfc7b768eaef",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/importers.js",
+    "gitBlob": "33fe27ec3d1f33647967892d386b2c7148b7b84c",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/device.js",
+    "gitBlob": "e2dd4f08ce5aaa7cd6aaf1841b6894ecfc20a5c6",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/shell.js",
+    "gitBlob": "ece64a3215632b3c5b727e0fb143cccc9e7bf850",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/native-io.js",
+    "gitBlob": "86f1e88aa4d3f214711690745413a96b5d317eb4",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/src/native-runtime.js",
+    "gitBlob": "89281de15e57851aee9c97f21404fe2982e1330c",
+    "matchesGitHub": true
+  },
+  {
+    "path": "web/vendor/native-bridge.js",
+    "gitBlob": "01d55d41a32205902fd5634d86058abd04e9724c",
+    "matchesGitHub": true
+  }
+]

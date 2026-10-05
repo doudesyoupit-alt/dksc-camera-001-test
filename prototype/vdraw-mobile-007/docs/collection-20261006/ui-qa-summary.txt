@@ -1,0 +1,6 @@
+UI/QA今回Work原本は未回収。以下は会話検索による二次要約で、成果完了/機能PASSの証拠にしない。
+
+UI（2026-10-05T14:55:58Z）：基準HEAD一致、code/branch/test変更0。OUTPUT-001とEXPORT_OWNER_RACE未解決。busy再描画P1候補、移動/選択表示・focus復帰・文字拡大P2候補。今回実UI/Android未確認。
+QA（2026-10-05T14:54:20Z）：初回監査BLOCKED、確定P1 4件残存。編集/保存/出力/入力/実機の今回試験NOT_RUN。原本を別途取得したとは主張しない。
+
+総括が独立QAへ今回追加依頼した限定実挙動はcollection-review-20261006.jsonで別記する。
