@@ -68,6 +68,7 @@ for e in entries:
   python_cases=[int(n) for n in re.findall(r'^Ran (\d+) tests?',log_text,re.M)]
   row['caseCount']=sum(python_cases)
   if not row['caseCount']:row.update(status='FAIL',reason='NO_PYTHON_TEST_CASES_EXECUTED')
+ if e.get('expectedCaseCount') is not None and row.get('caseCount')!=e['expectedCaseCount']:row.update(status='FAIL',reason='EXPECTED_CASE_COUNT_MISMATCH')
  # Inspect every fresh browser diagnostic, including exit-zero FAIL reporters.
  if e['kind']=='browser':
   for q in (work/'evidence').rglob('*.json'):

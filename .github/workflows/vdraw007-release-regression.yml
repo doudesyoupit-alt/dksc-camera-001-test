@@ -41,7 +41,7 @@ jobs:
           set -euo pipefail
           test "$(git rev-parse HEAD:prototype/vdraw-mobile-006)" = 47cabdf70e9aebf7c64a1e028e85c476df32a169
           git diff --exit-code b2f9351b6418f2b552d95b96132650a297ea0afe -- web server native android
-          git diff --exit-code --diff-filter=MDT b2f9351b6418f2b552d95b96132650a297ea0afe -- tests ':!tests/regression-manifest-round1.json'
+          git diff --no-renames --exit-code --diff-filter=MDT b2f9351b6418f2b552d95b96132650a297ea0afe -- tests ':!tests/regression-manifest-round1.json'
           python3 scripts/check-regression-assets-round1.py
       - name: Install locked dependencies and inspection libraries
         run: |
