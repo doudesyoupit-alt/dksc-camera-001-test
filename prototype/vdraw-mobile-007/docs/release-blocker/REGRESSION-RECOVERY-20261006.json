@@ -1,0 +1,1253 @@
+{
+  "schema": "vdraw-release-ci-recovery/1",
+  "testedBranch": "work/vdraw007-regression-environment-20261006",
+  "testedHead": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+  "runtimeCheckpoint": "b2f9351b6418f2b552d95b96132650a297ea0afe",
+  "workflowRun": 37347164239,
+  "job": 111888511462,
+  "artifact": {
+    "id": 11361790491,
+    "bytes": 25854598,
+    "sha256": "ee3e7cd4f05fae0478e27da619dbd9f3b637faded6853445540a8021f758401d"
+  },
+  "limited": {
+    "pass": 18,
+    "fail": 0,
+    "blocked": 0,
+    "skip": 0,
+    "actualCases": 180,
+    "summarySha256": "dff779075105319bd95a3b05ca774e7192a80500256d6df88c03fb712f4c53be"
+  },
+  "full": {
+    "pass": 52,
+    "fail": 0,
+    "blocked": 0,
+    "skip": 0,
+    "actualCases": 183,
+    "suiteComplete": true,
+    "summarySha256": "818d344a70867a7c0a47d63b3519bb89cfaf36dc4a2aeb418dd5ef92274902c3",
+    "verdictSnapshotCount": 27
+  },
+  "archiveAssets": {
+    "verified": 55,
+    "archiveExecutableEntries": 45,
+    "assertionsEdited": 0,
+    "removed": 0,
+    "newSkip": 0
+  },
+  "protection": {
+    "006SubtreeSha": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "protectedRuntimeAndCheckpointTestBlobs": 195,
+    "blobMismatches": 0,
+    "007TestFilesCheckpoint": 75,
+    "007TestFilesTested": 81,
+    "scope": "007/tests recursive blobs; not executed case count; manifest metadata excepted from equality gate"
+  },
+  "ownersAdopted": [
+    "4d798ed2ebf3d1ec14a5831ee55abcb19b018f80",
+    "df7c9522b2e6b8c98a377aafdf1887f9d03f4664"
+  ],
+  "beforeActualRuns": [
+    {
+      "run": 37340878779,
+      "pass": 31,
+      "fail": 8,
+      "blocked": 7,
+      "skip": 0
+    },
+    {
+      "run": 37341421976,
+      "state": "CONFIGURATION_FAILED_NOT_RUN"
+    },
+    {
+      "run": 37345005037,
+      "pass": 47,
+      "fail": 2,
+      "blocked": 3,
+      "skip": 0
+    }
+  ],
+  "first29Blocked": [
+    {
+      "originalBlockedId": "product.mjs",
+      "originalPath": "tests/product.mjs",
+      "currentId": "product-007-adapter-v4.mjs",
+      "currentPath": "tests/product-007-adapter-v4.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/product-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "2ac6d12b7fe1fd9f69f42912b85886b527605ada53320804ce9db91ef2362540",
+      "verdicts": [
+        {
+          "file": "product-007-adapter-v4.mjs--product-results.json",
+          "sha256": "acd9537048eb6c4a44300a74ef9a8b52df86e95cb3c6896bcf48615edc16925a"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "output-regression.mjs",
+      "originalPath": "tests/output-regression.mjs",
+      "currentId": "output-regression.mjs",
+      "currentPath": "tests/output-regression.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/output-regression-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "aff9b91abe985749a369963fc5df78b41e28be77eec55a3cd028b00624f12171",
+      "verdicts": [
+        {
+          "file": "output-regression.mjs--output-regression-results.json",
+          "sha256": "75fc226228d46cd5441d5ba6b3c95ef98073b89139b97730f369c0533b2bb66d"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "recovery-input.mjs",
+      "originalPath": "tests/recovery-input.mjs",
+      "currentId": "recovery-input.mjs",
+      "currentPath": "tests/recovery-input.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/recovery-input-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "655d8dca6fab89a35f24bc1aa0cdf3352c12f31197121f7806c2b3651afe61f5",
+      "verdicts": [
+        {
+          "file": "recovery-input.mjs--recovery-input-results.json",
+          "sha256": "9358ac62fc6c5619162589d3636a57f9283a9de3f6de6eda898feeaec06dd3a8"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "vision-flow-003.mjs",
+      "originalPath": "tests/vision-flow-003.mjs",
+      "currentId": "vision-flow-003-007-adapter.mjs",
+      "currentPath": "tests/vision-flow-003-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/vision-flow-003-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "8dd9ea6ce77d551133a333d1578fc1ea8513ea33d5a440ec1c3a9d2f66714d52",
+      "verdicts": [
+        {
+          "file": "vision-flow-003-007-adapter.mjs--vision-flow-003-results.json",
+          "sha256": "17a6cf853c9fd2092e1acf222c09b141a33b73761d68fb78181a3b150c71bc92"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "inspect-protocol-003.py",
+      "originalPath": "tests/inspect-protocol-003.py",
+      "currentId": "inspect-protocol-003.py",
+      "currentPath": "tests/inspect-protocol-003.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS",
+      "logSha256": "a585566ca003c639970a6592589797c781028f1cd8b40fb7d0d2ed52a58c778e",
+      "verdicts": []
+    },
+    {
+      "originalBlockedId": "photo-pipeline-005.mjs",
+      "originalPath": "tests/photo-pipeline-005.mjs",
+      "currentId": "photo-pipeline-005-007-adapter.mjs",
+      "currentPath": "tests/photo-pipeline-005-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/photo-pipeline-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "b2ccb76ef24ce09ca035c51494eb2d79d1064186a0b9949d1462fbc0e9fa2f7b",
+      "verdicts": [
+        {
+          "file": "photo-pipeline-005-007-adapter.mjs--photo-pipeline-results.json",
+          "sha256": "b39423908ba08035eb5d8a96ba975754c508ebf4a93a4c640f4ed84b03c73958"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "output-quality-005.mjs",
+      "originalPath": "tests/output-quality-005.mjs",
+      "currentId": "output-quality-005-007-adapter.mjs",
+      "currentPath": "tests/output-quality-005-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/output-quality-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "714491b1cf8875cf89c8ec06cb45a375308aa83ed5def41cbaa09ba9d38104ca",
+      "verdicts": [
+        {
+          "file": "output-quality-005-007-adapter.mjs--output-quality-results.json",
+          "sha256": "9096e4232bdc56e2353eba75a9850af8ee48acb01f64b25fab385a3c51339fb9"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "output-structure-005.py",
+      "originalPath": "tests/output-structure-005.py",
+      "currentId": "output-structure-005.py",
+      "currentPath": "tests/output-structure-005.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS",
+      "logSha256": "3b7c769db32f272edb0f7daaef5a0a0c24faee4af0daca120ca6ca17e22ea755",
+      "verdicts": []
+    },
+    {
+      "originalBlockedId": "inspect_outputs.py",
+      "originalPath": "tests/inspect_outputs.py",
+      "currentId": "inspect_outputs.py",
+      "currentPath": "tests/inspect_outputs.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS",
+      "logSha256": "e8113ec721820c026308161d69b8c06a3ac9ad3dbcef6a61b46c57529510409f",
+      "verdicts": []
+    },
+    {
+      "originalBlockedId": "render-export-004.mjs",
+      "originalPath": "tests/render-export-004.mjs",
+      "currentId": "render-export-004-007-adapter.mjs",
+      "currentPath": "tests/render-export-004-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/render-export-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "132acfef3931cb9cbfd0ce4b3e86e5745e243f220a0cbb0b7eb954467eaceda6",
+      "verdicts": [
+        {
+          "file": "render-export-004-007-adapter.mjs--render-export-results.json",
+          "sha256": "b51e2cb344961bd44edf821d4efd5775898ad011ffd6a9d566aec89455edc29a"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "output-inspect-004.py",
+      "originalPath": "tests/output-inspect-004.py",
+      "currentId": "output-inspect-004.py",
+      "currentPath": "tests/output-inspect-004.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS",
+      "logSha256": "c3fd7c3e59640188b5d075f5c06c069f8d9f0e7cfe1afef9b2a6b0b913659ce0",
+      "verdicts": []
+    },
+    {
+      "originalBlockedId": "gestures-004.mjs",
+      "originalPath": "tests/gestures-004.mjs",
+      "currentId": "gestures-004.mjs",
+      "currentPath": "tests/gestures-004.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/gestures-004-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "2b55668e3aac57b5b2db2bc52c73b47300e87d109ca4ef6f14f8d9063c62c2e7",
+      "verdicts": [
+        {
+          "file": "gestures-004.mjs--gestures-004-results.json",
+          "sha256": "12d57902bad2c3e6176b058abfb968c5923c06e1cf6cdcd74629b118d31b9354"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "gestures-update-007.mjs",
+      "originalPath": "tests/gestures-update-007.mjs",
+      "currentId": "gestures-update-release.mjs",
+      "currentPath": "tests/gestures-update-release.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/gestures-update-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "7db17d2cef0c394e227f4c4801395558341251687607270d9c631a1e2c7adda6",
+      "verdicts": [
+        {
+          "file": "gestures-update-release.mjs--gestures-update-results.json",
+          "sha256": "e56ddc69a29ec59e32f685f7607c29e186973bfc2b3a298ceeba566b65edb940"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "save-gesture-003.mjs",
+      "originalPath": "tests/save-gesture-003.mjs",
+      "currentId": "save-gesture-003.mjs",
+      "currentPath": "tests/save-gesture-003.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/save-gesture-003-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "2a4fba602468fe6a926caaa59f2d3c1088896cabecb752fe96f07b5453be8319",
+      "verdicts": [
+        {
+          "file": "save-gesture-003.mjs--save-gesture-003-results.json",
+          "sha256": "499242127df51304f8593ce2e273cb1e37e93c252cbd226527a863fff333b65d"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "storage-conflict.mjs",
+      "originalPath": "tests/storage-conflict.mjs",
+      "currentId": "storage-conflict.mjs",
+      "currentPath": "tests/storage-conflict.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-conflict-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "64e66503ff72930ef78f0827ebe3f986d25a1a1159a608513b70cb60c1a74151",
+      "verdicts": [
+        {
+          "file": "storage-conflict.mjs--storage-conflict-results.json",
+          "sha256": "cf27969f8f05a547b32c5f97340be8d06b5a1385373a9f8d86a94c60a401c546"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "storage-safety-004.mjs",
+      "originalPath": "tests/storage-safety-004.mjs",
+      "currentId": "storage-safety-004.mjs",
+      "currentPath": "tests/storage-safety-004.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-safety-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "c257efded621d2265c46addf9db17fc25f9d259575170b6ce33e51b35ca07556",
+      "verdicts": [
+        {
+          "file": "storage-safety-004.mjs--storage-safety-results.json",
+          "sha256": "59ffcae6152d84c8f3e2920807fc454fa94f43b725de4a94b2769c1eefc0070f"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "storage-safety-006.mjs",
+      "originalPath": "tests/storage-safety-006.mjs",
+      "currentId": "storage-safety-006.mjs",
+      "currentPath": "tests/storage-safety-006.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-safety-006-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "c257efded621d2265c46addf9db17fc25f9d259575170b6ce33e51b35ca07556",
+      "verdicts": [
+        {
+          "file": "storage-safety-006.mjs--storage-safety-006-results.json",
+          "sha256": "59ffcae6152d84c8f3e2920807fc454fa94f43b725de4a94b2769c1eefc0070f"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "storage-extra-006.mjs",
+      "originalPath": "tests/storage-extra-006.mjs",
+      "currentId": "storage-extra-006.mjs",
+      "currentPath": "tests/storage-extra-006.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-extra-006-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "ac8fe4cf12df40ec7044ce9e03392cee8fb4882ef3edd8e7b0a5662a066938a7",
+      "verdicts": [
+        {
+          "file": "storage-extra-006.mjs--storage-extra-006-results.json",
+          "sha256": "0389772eddd735ba1431c675853809f5ce3d3a9e9de5bd9eecddae06490b29f1"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "ui-state-005.mjs",
+      "originalPath": "tests/ui-state-005.mjs",
+      "currentId": "ui-state-005-007-adapter-v3.mjs",
+      "currentPath": "tests/ui-state-005-007-adapter-v3.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/ui-state-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "dd60ddb929087f14dc7b6a57f3d1e16c59b054cb342f5411d2c7d91ef1d41d16",
+      "verdicts": [
+        {
+          "file": "ui-state-005-007-adapter-v3.mjs--ui-state-results.json",
+          "sha256": "2edb53fa28feb652cec3812b0bb868aa56f2b96969e199d7e27903c6320c9545"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "ui-smoke-007.mjs",
+      "originalPath": "tests/ui-smoke-007.mjs",
+      "currentId": "ui-smoke-007.mjs",
+      "currentPath": "tests/ui-smoke-007.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/ui-007/UI-smoke-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "ui-smoke-007.mjs--UI-smoke-results.json",
+          "sha256": "f65a6bd5daefba43b288aa5b7b9c6c276154d1b5e13ef847e3fdf6acd95e72e7"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "screenshots-005.mjs",
+      "originalPath": "tests/screenshots-005.mjs",
+      "currentId": "screenshots-005.mjs",
+      "currentPath": "tests/screenshots-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/screenshots.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "screenshots-005.mjs--screenshots.json",
+          "sha256": "53a29bcf871ea90d37299483f05051123f7bea67faf29dda64c5dbbcc694b7ac"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "performance.mjs",
+      "originalPath": "tests/performance.mjs",
+      "currentId": "performance.mjs",
+      "currentPath": "tests/performance.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "fb80653bf230de0faf3055d43d32fbdbabccef54bd96c958c676d48db7d21111",
+      "verdicts": [
+        {
+          "file": "performance.mjs--performance-results.json",
+          "sha256": "871fa5a220c16962e5055ed3c38f80beee413e38b1cef00a2bb8cc282ccf3bf0"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "performance-003.mjs",
+      "originalPath": "tests/performance-003.mjs",
+      "currentId": "performance-003.mjs",
+      "currentPath": "tests/performance-003.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-003-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "2196240551ec3ea019dfd4b75e6582485261b0986e7fa3caf47617cb5ec51244",
+      "verdicts": [
+        {
+          "file": "performance-003.mjs--performance-003-results.json",
+          "sha256": "9ce5d26fddef50cc4c841ea206bc809408538410dce77a44a497139cb68dc21a"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "performance-004.mjs",
+      "originalPath": "tests/performance-004.mjs",
+      "currentId": "performance-004.mjs",
+      "currentPath": "tests/performance-004.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-after-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "0144abd8a3b8f2ad107a5a674e07d08de7505632a70b6b506a6efd6da5320b96",
+      "verdicts": [
+        {
+          "file": "performance-004.mjs--performance-after-results.json",
+          "sha256": "817f69e2c7dee02c3d0d26c7b61d1bf96cc7542c6e4997465e0387ae1a071503"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "performance-005.mjs",
+      "originalPath": "tests/performance-005.mjs",
+      "currentId": "performance-005.mjs",
+      "currentPath": "tests/performance-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-after-results.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "a9abce16f2ba042d6a84132cef2b6e4ce97c0880c452b97af28963bb883c3777",
+      "verdicts": [
+        {
+          "file": "performance-005.mjs--performance-after-results.json",
+          "sha256": "71764e75502b51c735f4d400e595cd9e6cc92e05e88257b53f93eabd79beba5b"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "performance-final-006.mjs",
+      "originalPath": "tests/performance-final-006.mjs",
+      "currentId": "performance-final-006-reference.mjs",
+      "currentPath": "tests/performance-final-006-reference.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-final-006-reference.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "performance-final-006-reference.mjs--performance-final-006-reference.json",
+          "sha256": "84169718038df678bb0c181e1ba56fc50b419a57d02d3877ce572d608b683f81"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "ui-performance-007.mjs",
+      "originalPath": "tests/ui-performance-007.mjs",
+      "currentId": "ui-performance-007.mjs",
+      "currentPath": "tests/ui-performance-007.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/ui-007/performance-sentinel.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "ui-performance-007.mjs--performance-sentinel.json",
+          "sha256": "d46915da821d852eb2fc559d9712f52ec1ace0cadcf8cd53f7a4d4bfd86a36db"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "clone-profile-005.mjs",
+      "originalPath": "tests/clone-profile-005.mjs",
+      "currentId": "clone-profile-005.mjs",
+      "currentPath": "tests/clone-profile-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/clone-profile.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "3963ff110c4f8d3a6c8fe2e9ddc8d26dbaa48c541c13581013d64d505ffb6185",
+      "verdicts": [
+        {
+          "file": "clone-profile-005.mjs--clone-profile.json",
+          "sha256": "6d4ff9a8b23ae2caa050255396c3497c93361357675d072d53cf9d43cd99f9a7"
+        }
+      ]
+    },
+    {
+      "originalBlockedId": "segment-probe-005.mjs",
+      "originalPath": "tests/segment-probe-005.mjs",
+      "currentId": "segment-probe-005.mjs",
+      "currentPath": "tests/segment-probe-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/segment-probe.json"
+      ],
+      "finalStatus": "PASS",
+      "logSha256": "dfb16c6463ab7d61aa9d1a6d473bd1293c8bbd41fdaae074fa4252703d269b7d",
+      "verdicts": [
+        {
+          "file": "segment-probe-005.mjs--segment-probe.json",
+          "sha256": "b0e402eb87f5b61e24ad2c40cd2846033c7cefa6ad65c5ddfbc9d8ac247ef301"
+        }
+      ]
+    }
+  ],
+  "all52Gates": [
+    {
+      "id": "core.test.mjs",
+      "status": "PASS",
+      "caseCount": 8,
+      "skip": 0,
+      "durationSeconds": 0.165,
+      "logSha256": "06297f74a88d004a6106a50a09873acb9b3df774fff7a25e7e36c176dd951fde",
+      "verdicts": []
+    },
+    {
+      "id": "command-update-004.test.mjs",
+      "status": "PASS",
+      "caseCount": 4,
+      "skip": 0,
+      "durationSeconds": 0.716,
+      "logSha256": "cacf0690db50694e60fd58c72cd3a85da2708345219ccc173de9b191ee2ffe0e",
+      "verdicts": []
+    },
+    {
+      "id": "history-codec-005.test.mjs",
+      "status": "PASS",
+      "caseCount": 4,
+      "skip": 0,
+      "durationSeconds": 0.165,
+      "logSha256": "052a441673c4ebb9b3c721e3412b0c4865c8347143410fd0d7c7fdacabec5e9b",
+      "verdicts": []
+    },
+    {
+      "id": "changes-006.test.mjs",
+      "status": "PASS",
+      "caseCount": 4,
+      "skip": 0,
+      "durationSeconds": 0.215,
+      "logSha256": "a67d6955bae61df886a4eac1ab64d45dafae3cd4c27632186752a67e3389b17c",
+      "verdicts": []
+    },
+    {
+      "id": "native-shell.test.mjs",
+      "status": "PASS",
+      "caseCount": 7,
+      "skip": 0,
+      "durationSeconds": 0.114,
+      "logSha256": "1e67c49e3e88ed5d274152551e2ec231535e70505e0b744151bf706344282196",
+      "verdicts": []
+    },
+    {
+      "id": "native-io-005.test.mjs",
+      "status": "PASS",
+      "caseCount": 5,
+      "skip": 0,
+      "durationSeconds": 0.114,
+      "logSha256": "be2a17c03b88e0d6e0697411fbca49d2450901bf5ef0adced5083f15781c9598",
+      "verdicts": []
+    },
+    {
+      "id": "vision-contract-005.test.mjs",
+      "status": "PASS",
+      "caseCount": 8,
+      "skip": 0,
+      "durationSeconds": 0.215,
+      "logSha256": "1b47131168752eb788a40aaefc8d620e14a94f8a554553dc613a34cd6cd6459b",
+      "verdicts": []
+    },
+    {
+      "id": "vision-provider.test.mjs",
+      "status": "PASS",
+      "caseCount": 10,
+      "skip": 0,
+      "durationSeconds": 0.215,
+      "logSha256": "da951c18ad1db7ff8220ba55aa8537ddfc1bc0aea97c179921bdf610ff05a112",
+      "verdicts": []
+    },
+    {
+      "id": "ui-theme-007.test.mjs",
+      "status": "PASS",
+      "caseCount": 5,
+      "skip": 0,
+      "durationSeconds": 0.114,
+      "logSha256": "885e1ae45dbd565f14d2310436ba35deb9fee1ff32e9609d291b3e1330f809dd",
+      "verdicts": []
+    },
+    {
+      "id": "bounded-process-005-race-safe.py",
+      "status": "PASS",
+      "caseCount": 4,
+      "skip": 0,
+      "durationSeconds": 0.515,
+      "logSha256": "b86051f2a6a6a94b9b50409584b1b56bea6a62a68499c2071e09987b676d7b0b",
+      "verdicts": []
+    },
+    {
+      "id": "native-assets-007.py",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 0.064,
+      "logSha256": "3705af5b6596a44ab9b9f1ca531153a464790e6238fe67a4ceb518d80bc238a4",
+      "verdicts": []
+    },
+    {
+      "id": "performance-core-006.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 0.722,
+      "logSha256": "27bc87a2914c3034c5cac2f7d0368bec1c3ba2b133a1085a9783b201a857691f",
+      "verdicts": []
+    },
+    {
+      "id": "product-007-adapter-v4.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 22.532,
+      "logSha256": "2ac6d12b7fe1fd9f69f42912b85886b527605ada53320804ce9db91ef2362540",
+      "verdicts": [
+        {
+          "file": "product-007-adapter-v4.mjs--product-results.json",
+          "sha256": "acd9537048eb6c4a44300a74ef9a8b52df86e95cb3c6896bcf48615edc16925a"
+        }
+      ]
+    },
+    {
+      "id": "output-regression.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 1.924,
+      "logSha256": "aff9b91abe985749a369963fc5df78b41e28be77eec55a3cd028b00624f12171",
+      "verdicts": [
+        {
+          "file": "output-regression.mjs--output-regression-results.json",
+          "sha256": "75fc226228d46cd5441d5ba6b3c95ef98073b89139b97730f369c0533b2bb66d"
+        }
+      ]
+    },
+    {
+      "id": "recovery-input.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 2.679,
+      "logSha256": "655d8dca6fab89a35f24bc1aa0cdf3352c12f31197121f7806c2b3651afe61f5",
+      "verdicts": [
+        {
+          "file": "recovery-input.mjs--recovery-input-results.json",
+          "sha256": "9358ac62fc6c5619162589d3636a57f9283a9de3f6de6eda898feeaec06dd3a8"
+        }
+      ]
+    },
+    {
+      "id": "vision-flow-003-007-adapter.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 4.181,
+      "logSha256": "8dd9ea6ce77d551133a333d1578fc1ea8513ea33d5a440ec1c3a9d2f66714d52",
+      "verdicts": [
+        {
+          "file": "vision-flow-003-007-adapter.mjs--vision-flow-003-results.json",
+          "sha256": "17a6cf853c9fd2092e1acf222c09b141a33b73761d68fb78181a3b150c71bc92"
+        }
+      ]
+    },
+    {
+      "id": "inspect-protocol-003.py",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 0.515,
+      "logSha256": "a585566ca003c639970a6592589797c781028f1cd8b40fb7d0d2ed52a58c778e",
+      "verdicts": []
+    },
+    {
+      "id": "photo-pipeline-005-007-adapter.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 4.33,
+      "logSha256": "b2ccb76ef24ce09ca035c51494eb2d79d1064186a0b9949d1462fbc0e9fa2f7b",
+      "verdicts": [
+        {
+          "file": "photo-pipeline-005-007-adapter.mjs--photo-pipeline-results.json",
+          "sha256": "b39423908ba08035eb5d8a96ba975754c508ebf4a93a4c640f4ed84b03c73958"
+        }
+      ]
+    },
+    {
+      "id": "output-quality-005-007-adapter.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 1.973,
+      "logSha256": "714491b1cf8875cf89c8ec06cb45a375308aa83ed5def41cbaa09ba9d38104ca",
+      "verdicts": [
+        {
+          "file": "output-quality-005-007-adapter.mjs--output-quality-results.json",
+          "sha256": "9096e4232bdc56e2353eba75a9850af8ee48acb01f64b25fab385a3c51339fb9"
+        }
+      ]
+    },
+    {
+      "id": "output-structure-005.py",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 0.366,
+      "logSha256": "3b7c769db32f272edb0f7daaef5a0a0c24faee4af0daca120ca6ca17e22ea755",
+      "verdicts": []
+    },
+    {
+      "id": "inspect_outputs.py",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 0.515,
+      "logSha256": "e8113ec721820c026308161d69b8c06a3ac9ad3dbcef6a61b46c57529510409f",
+      "verdicts": []
+    },
+    {
+      "id": "render-export-004-007-adapter.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 3.181,
+      "logSha256": "132acfef3931cb9cbfd0ce4b3e86e5745e243f220a0cbb0b7eb954467eaceda6",
+      "verdicts": [
+        {
+          "file": "render-export-004-007-adapter.mjs--render-export-results.json",
+          "sha256": "b51e2cb344961bd44edf821d4efd5775898ad011ffd6a9d566aec89455edc29a"
+        }
+      ]
+    },
+    {
+      "id": "output-inspect-004.py",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 0.365,
+      "logSha256": "c3fd7c3e59640188b5d075f5c06c069f8d9f0e7cfe1afef9b2a6b0b913659ce0",
+      "verdicts": []
+    },
+    {
+      "id": "gestures-004.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 2.775,
+      "logSha256": "2b55668e3aac57b5b2db2bc52c73b47300e87d109ca4ef6f14f8d9063c62c2e7",
+      "verdicts": [
+        {
+          "file": "gestures-004.mjs--gestures-004-results.json",
+          "sha256": "12d57902bad2c3e6176b058abfb968c5923c06e1cf6cdcd74629b118d31b9354"
+        }
+      ]
+    },
+    {
+      "id": "gestures-update-release.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 6.184,
+      "logSha256": "7db17d2cef0c394e227f4c4801395558341251687607270d9c631a1e2c7adda6",
+      "verdicts": [
+        {
+          "file": "gestures-update-release.mjs--gestures-update-results.json",
+          "sha256": "e56ddc69a29ec59e32f685f7607c29e186973bfc2b3a298ceeba566b65edb940"
+        }
+      ]
+    },
+    {
+      "id": "save-gesture-003.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 3.577,
+      "logSha256": "2a4fba602468fe6a926caaa59f2d3c1088896cabecb752fe96f07b5453be8319",
+      "verdicts": [
+        {
+          "file": "save-gesture-003.mjs--save-gesture-003-results.json",
+          "sha256": "499242127df51304f8593ce2e273cb1e37e93c252cbd226527a863fff333b65d"
+        }
+      ]
+    },
+    {
+      "id": "storage-conflict.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 1.423,
+      "logSha256": "64e66503ff72930ef78f0827ebe3f986d25a1a1159a608513b70cb60c1a74151",
+      "verdicts": [
+        {
+          "file": "storage-conflict.mjs--storage-conflict-results.json",
+          "sha256": "cf27969f8f05a547b32c5f97340be8d06b5a1385373a9f8d86a94c60a401c546"
+        }
+      ]
+    },
+    {
+      "id": "storage-safety-004.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 2.828,
+      "logSha256": "c257efded621d2265c46addf9db17fc25f9d259575170b6ce33e51b35ca07556",
+      "verdicts": [
+        {
+          "file": "storage-safety-004.mjs--storage-safety-results.json",
+          "sha256": "59ffcae6152d84c8f3e2920807fc454fa94f43b725de4a94b2769c1eefc0070f"
+        }
+      ]
+    },
+    {
+      "id": "storage-safety-006.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 2.827,
+      "logSha256": "c257efded621d2265c46addf9db17fc25f9d259575170b6ce33e51b35ca07556",
+      "verdicts": [
+        {
+          "file": "storage-safety-006.mjs--storage-safety-006-results.json",
+          "sha256": "59ffcae6152d84c8f3e2920807fc454fa94f43b725de4a94b2769c1eefc0070f"
+        }
+      ]
+    },
+    {
+      "id": "storage-extra-006.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 2.076,
+      "logSha256": "ac8fe4cf12df40ec7044ce9e03392cee8fb4882ef3edd8e7b0a5662a066938a7",
+      "verdicts": [
+        {
+          "file": "storage-extra-006.mjs--storage-extra-006-results.json",
+          "sha256": "0389772eddd735ba1431c675853809f5ce3d3a9e9de5bd9eecddae06490b29f1"
+        }
+      ]
+    },
+    {
+      "id": "ui-state-005-007-adapter-v3.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 5.783,
+      "logSha256": "dd60ddb929087f14dc7b6a57f3d1e16c59b054cb342f5411d2c7d91ef1d41d16",
+      "verdicts": [
+        {
+          "file": "ui-state-005-007-adapter-v3.mjs--ui-state-results.json",
+          "sha256": "2edb53fa28feb652cec3812b0bb868aa56f2b96969e199d7e27903c6320c9545"
+        }
+      ]
+    },
+    {
+      "id": "ui-smoke-007.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 8.4,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "ui-smoke-007.mjs--UI-smoke-results.json",
+          "sha256": "f65a6bd5daefba43b288aa5b7b9c6c276154d1b5e13ef847e3fdf6acd95e72e7"
+        }
+      ]
+    },
+    {
+      "id": "screenshots-005.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 1.622,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "screenshots-005.mjs--screenshots.json",
+          "sha256": "53a29bcf871ea90d37299483f05051123f7bea67faf29dda64c5dbbcc694b7ac"
+        }
+      ]
+    },
+    {
+      "id": "performance.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 5.89,
+      "logSha256": "fb80653bf230de0faf3055d43d32fbdbabccef54bd96c958c676d48db7d21111",
+      "verdicts": [
+        {
+          "file": "performance.mjs--performance-results.json",
+          "sha256": "871fa5a220c16962e5055ed3c38f80beee413e38b1cef00a2bb8cc282ccf3bf0"
+        }
+      ]
+    },
+    {
+      "id": "performance-003.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 62.507,
+      "logSha256": "2196240551ec3ea019dfd4b75e6582485261b0986e7fa3caf47617cb5ec51244",
+      "verdicts": [
+        {
+          "file": "performance-003.mjs--performance-003-results.json",
+          "sha256": "9ce5d26fddef50cc4c841ea206bc809408538410dce77a44a497139cb68dc21a"
+        }
+      ]
+    },
+    {
+      "id": "performance-004.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 63.158,
+      "logSha256": "0144abd8a3b8f2ad107a5a674e07d08de7505632a70b6b506a6efd6da5320b96",
+      "verdicts": [
+        {
+          "file": "performance-004.mjs--performance-after-results.json",
+          "sha256": "817f69e2c7dee02c3d0d26c7b61d1bf96cc7542c6e4997465e0387ae1a071503"
+        }
+      ]
+    },
+    {
+      "id": "performance-005.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 66.93,
+      "logSha256": "a9abce16f2ba042d6a84132cef2b6e4ce97c0880c452b97af28963bb883c3777",
+      "verdicts": [
+        {
+          "file": "performance-005.mjs--performance-after-results.json",
+          "sha256": "71764e75502b51c735f4d400e595cd9e6cc92e05e88257b53f93eabd79beba5b"
+        }
+      ]
+    },
+    {
+      "id": "performance-final-006-reference.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 14.408,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "performance-final-006-reference.mjs--performance-final-006-reference.json",
+          "sha256": "84169718038df678bb0c181e1ba56fc50b419a57d02d3877ce572d608b683f81"
+        }
+      ]
+    },
+    {
+      "id": "ui-performance-007.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 5.086,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "ui-performance-007.mjs--performance-sentinel.json",
+          "sha256": "d46915da821d852eb2fc559d9712f52ec1ace0cadcf8cd53f7a4d4bfd86a36db"
+        }
+      ]
+    },
+    {
+      "id": "clone-profile-005.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 1.821,
+      "logSha256": "3963ff110c4f8d3a6c8fe2e9ddc8d26dbaa48c541c13581013d64d505ffb6185",
+      "verdicts": [
+        {
+          "file": "clone-profile-005.mjs--clone-profile.json",
+          "sha256": "6d4ff9a8b23ae2caa050255396c3497c93361357675d072d53cf9d43cd99f9a7"
+        }
+      ]
+    },
+    {
+      "id": "segment-probe-005.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 1.728,
+      "logSha256": "dfb16c6463ab7d61aa9d1a6d473bd1293c8bbd41fdaae074fa4252703d269b7d",
+      "verdicts": [
+        {
+          "file": "segment-probe-005.mjs--segment-probe.json",
+          "sha256": "b0e402eb87f5b61e24ad2c40cd2846033c7cefa6ad65c5ddfbc9d8ac247ef301"
+        }
+      ]
+    },
+    {
+      "id": "ui-performance-true006-release.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 5.034,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdicts": [
+        {
+          "file": "ui-performance-true006-release.mjs--performance-true006-release.json",
+          "sha256": "2f526c2200e9a84e91c8771557064d9aec403f6276fd7de0b4ecc700d86e327b"
+        }
+      ]
+    },
+    {
+      "id": "candidate-preview-flow.mjs",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 5.535,
+      "logSha256": "97fb5ebd3c27d801e5da8f4fb19d553be9707d30b186f151e725de94dfa3fe91",
+      "verdicts": [
+        {
+          "file": "candidate-preview-flow.mjs--candidate-preview-flow.json",
+          "sha256": "dcdbd9317336ae29f0162a80e52299e01cb4324d457dda0bfba4289938fb6925"
+        }
+      ]
+    },
+    {
+      "id": "qa-release-candidate-preview.mjs",
+      "status": "PASS",
+      "caseCount": 3,
+      "skip": 0,
+      "durationSeconds": 7.844,
+      "logSha256": "634337c79b1ad547ea0fc8b9a6feef5d4a552d1a1e04de581403184ed42cbe53",
+      "verdicts": []
+    },
+    {
+      "id": "candidate-preview-regression.test.mjs",
+      "status": "PASS",
+      "caseCount": 8,
+      "skip": 0,
+      "durationSeconds": 0.114,
+      "logSha256": "f272171fb0995740f0ca863d5fc5e64f123ed1b43e8b702cc4d74ac07fa2ae30",
+      "verdicts": []
+    },
+    {
+      "id": "engine-001-regression.test.mjs",
+      "status": "PASS",
+      "caseCount": 27,
+      "skip": 0,
+      "durationSeconds": 0.265,
+      "logSha256": "a4ca63310770d1f2c011971aaaae902cdddb2865b08b0768fcf3e173354a1a45",
+      "verdicts": []
+    },
+    {
+      "id": "input-001-regression.test.mjs",
+      "status": "PASS",
+      "caseCount": 26,
+      "skip": 0,
+      "durationSeconds": 0.164,
+      "logSha256": "f6f3177ea9daf7a5d2e8c0b6c332939c27619a6886b9a804507d278f0fdbbdfc",
+      "verdicts": []
+    },
+    {
+      "id": "integration-offline-release.test.mjs",
+      "status": "PASS",
+      "caseCount": 1,
+      "skip": 0,
+      "durationSeconds": 0.114,
+      "logSha256": "d9d1afab25b274258046cf7f2e20c4e6e859815206c0f8a5f410c3814407b4b8",
+      "verdicts": []
+    },
+    {
+      "id": "integration-offline-round1.test.mjs",
+      "status": "PASS",
+      "caseCount": 1,
+      "skip": 0,
+      "durationSeconds": 0.214,
+      "logSha256": "9dd00798dafe64fb24dc66018663f67e721e6e3fb21f4f8e2cc66b40dcd2fe66",
+      "verdicts": []
+    },
+    {
+      "id": "output-race-regression.test.mjs",
+      "status": "PASS",
+      "caseCount": 27,
+      "skip": 0,
+      "durationSeconds": 0.315,
+      "logSha256": "a62c84b5deb7d1864282d748d7c5559fa68e157f1f5842052e739b7966730eea",
+      "verdicts": []
+    },
+    {
+      "id": "qa-round2-independent.test.mjs",
+      "status": "PASS",
+      "caseCount": 31,
+      "skip": 0,
+      "durationSeconds": 0.465,
+      "logSha256": "cc3bf2d0e81999ae19b3e1d1f8424a3f6d08c3e64d8340de81d06e0aa4a88638",
+      "verdicts": []
+    },
+    {
+      "id": "native-assets-007-parity",
+      "status": "PASS",
+      "caseCount": null,
+      "skip": 0,
+      "durationSeconds": 0.114,
+      "logSha256": "f1e89d09847a1f29d9738567b3249c13210090e5173374cecf44e3368cacadec",
+      "verdicts": []
+    }
+  ],
+  "ordinaryProfilePwa": {
+    "browser": "154.0.8037.57",
+    "groups": 16,
+    "installabilityErrors": [],
+    "errors": [],
+    "consoleErrors": []
+  },
+  "generatedOutputInspections": [
+    {
+      "file": "002-output-structure.json",
+      "sha256": "4ecc9beb91cddf8f0e1b0e19975a810884f2d2dc8d4de9e7b730992224d95ef4",
+      "status": "PASS components"
+    },
+    {
+      "file": "protocol-output-inspection.json",
+      "sha256": "a585566ca003c639970a6592589797c781028f1cd8b40fb7d0d2ed52a58c778e",
+      "status": "PASS"
+    },
+    {
+      "file": "output-inspection.json",
+      "sha256": "c3fd7c3e59640188b5d075f5c06c069f8d9f0e7cfe1afef9b2a6b0b913659ce0",
+      "status": "PASS"
+    },
+    {
+      "file": "output-structure.json",
+      "sha256": "3b7c769db32f272edb0f7daaef5a0a0c24faee4af0daca120ca6ca17e22ea755",
+      "status": "PASS_SUPPORTED_CORE"
+    }
+  ],
+  "true006Vs007Performance": {
+    "browser": "154.0.8037.57",
+    "ratio": 1.052188126366691,
+    "rows": [
+      {
+        "phase": "006",
+        "elements": 5000,
+        "firstDisplayMs": 373.5,
+        "colorActionMs": [
+          193.71756600000003,
+          151.23043399999983,
+          152.57087300000012
+        ],
+        "medianColorMs": 152.57087300000012,
+        "stageArea": 242190
+      },
+      {
+        "phase": "007",
+        "elements": 5000,
+        "firstDisplayMs": 341,
+        "colorActionMs": [
+          166.14837399999988,
+          141.66839100000016,
+          160.5332610000005
+        ],
+        "medianColorMs": 160.5332610000005,
+        "stageArea": 260056.875
+      }
+    ],
+    "verified006WebBlobs": 37,
+    "unchangedThresholds": {
+      "colorRatioMax": 1.3,
+      "firstDisplayMultiplier": 1.35,
+      "firstDisplayAllowanceMs": 100
+    }
+  },
+  "historicalPerformanceScope": "performance-final-006-reference: actual immutable006 shell and phase005 four-module fixtures; historical006 proof only, not007runtime. Separate current003/004/005 and actual006-versus007 sentinel establish release-runtime performance.",
+  "acceptanceScope": "Software harnesses and synchronized Android asset parity only. No Android device, signing compatibility, real AI, Microsoft PowerPoint/JwCad app opening or APK acceptance claim. APK not built.",
+  "artifactSourceScope": {
+    "repositoryProtectedBlobsExact": 195,
+    "artifactRuntimeBlobsComparedByQA": 121,
+    "artifactSourceByteExact": 115,
+    "uploadHiddenExcluded": {
+      "gitignore": 2,
+      "gitkeep": 2
+    },
+    "nativeSyncGeneratedDifferences": {
+      "android/app/src/main/assets/capacitor.config.json": "JSON object identical; tabs serialization only",
+      "android/capacitor.settings.gradle": "exactly8 ../../VDRAW-MOBILE-002/node_modules/ → ../node_modules/ generated current-checkout dependency paths"
+    },
+    "androidWebAssetsExactParity": 40,
+    "wholeArtifactByteExactToRepositoryClaim": false
+  }
+}
