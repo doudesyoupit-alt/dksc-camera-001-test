@@ -1,0 +1,321 @@
+{
+  "sourceSha": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+  "originalBLOCKED": 29,
+  "finalPASS": 29,
+  "finalFAIL": 0,
+  "finalBLOCKED": 0,
+  "finalSkip": 0,
+  "mapping": [
+    {
+      "originalBlockedId": "product.mjs",
+      "originalPath": "tests/product.mjs",
+      "currentId": "product-007-adapter-v4.mjs",
+      "currentPath": "tests/product-007-adapter-v4.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/product-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "output-regression.mjs",
+      "originalPath": "tests/output-regression.mjs",
+      "currentId": "output-regression.mjs",
+      "currentPath": "tests/output-regression.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/output-regression-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "recovery-input.mjs",
+      "originalPath": "tests/recovery-input.mjs",
+      "currentId": "recovery-input.mjs",
+      "currentPath": "tests/recovery-input.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/recovery-input-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "vision-flow-003.mjs",
+      "originalPath": "tests/vision-flow-003.mjs",
+      "currentId": "vision-flow-003-007-adapter.mjs",
+      "currentPath": "tests/vision-flow-003-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/vision-flow-003-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "inspect-protocol-003.py",
+      "originalPath": "tests/inspect-protocol-003.py",
+      "currentId": "inspect-protocol-003.py",
+      "currentPath": "tests/inspect-protocol-003.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "photo-pipeline-005.mjs",
+      "originalPath": "tests/photo-pipeline-005.mjs",
+      "currentId": "photo-pipeline-005-007-adapter.mjs",
+      "currentPath": "tests/photo-pipeline-005-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/photo-pipeline-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "output-quality-005.mjs",
+      "originalPath": "tests/output-quality-005.mjs",
+      "currentId": "output-quality-005-007-adapter.mjs",
+      "currentPath": "tests/output-quality-005-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/output-quality-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "output-structure-005.py",
+      "originalPath": "tests/output-structure-005.py",
+      "currentId": "output-structure-005.py",
+      "currentPath": "tests/output-structure-005.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "inspect_outputs.py",
+      "originalPath": "tests/inspect_outputs.py",
+      "currentId": "inspect_outputs.py",
+      "currentPath": "tests/inspect_outputs.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "render-export-004.mjs",
+      "originalPath": "tests/render-export-004.mjs",
+      "currentId": "render-export-004-007-adapter.mjs",
+      "currentPath": "tests/render-export-004-007-adapter.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/render-export-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "output-inspect-004.py",
+      "originalPath": "tests/output-inspect-004.py",
+      "currentId": "output-inspect-004.py",
+      "currentPath": "tests/output-inspect-004.py",
+      "scope": null,
+      "requiredVerdicts": [],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "gestures-004.mjs",
+      "originalPath": "tests/gestures-004.mjs",
+      "currentId": "gestures-004.mjs",
+      "currentPath": "tests/gestures-004.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/gestures-004-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "gestures-update-007.mjs",
+      "originalPath": "tests/gestures-update-007.mjs",
+      "currentId": "gestures-update-release.mjs",
+      "currentPath": "tests/gestures-update-release.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/gestures-update-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "save-gesture-003.mjs",
+      "originalPath": "tests/save-gesture-003.mjs",
+      "currentId": "save-gesture-003.mjs",
+      "currentPath": "tests/save-gesture-003.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/save-gesture-003-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "storage-conflict.mjs",
+      "originalPath": "tests/storage-conflict.mjs",
+      "currentId": "storage-conflict.mjs",
+      "currentPath": "tests/storage-conflict.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-conflict-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "storage-safety-004.mjs",
+      "originalPath": "tests/storage-safety-004.mjs",
+      "currentId": "storage-safety-004.mjs",
+      "currentPath": "tests/storage-safety-004.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-safety-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "storage-safety-006.mjs",
+      "originalPath": "tests/storage-safety-006.mjs",
+      "currentId": "storage-safety-006.mjs",
+      "currentPath": "tests/storage-safety-006.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-safety-006-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "storage-extra-006.mjs",
+      "originalPath": "tests/storage-extra-006.mjs",
+      "currentId": "storage-extra-006.mjs",
+      "currentPath": "tests/storage-extra-006.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/storage-extra-006-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "ui-state-005.mjs",
+      "originalPath": "tests/ui-state-005.mjs",
+      "currentId": "ui-state-005-007-adapter-v3.mjs",
+      "currentPath": "tests/ui-state-005-007-adapter-v3.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/ui-state-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "ui-smoke-007.mjs",
+      "originalPath": "tests/ui-smoke-007.mjs",
+      "currentId": "ui-smoke-007.mjs",
+      "currentPath": "tests/ui-smoke-007.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/ui-007/UI-smoke-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "screenshots-005.mjs",
+      "originalPath": "tests/screenshots-005.mjs",
+      "currentId": "screenshots-005.mjs",
+      "currentPath": "tests/screenshots-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/screenshots.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "performance.mjs",
+      "originalPath": "tests/performance.mjs",
+      "currentId": "performance.mjs",
+      "currentPath": "tests/performance.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "performance-003.mjs",
+      "originalPath": "tests/performance-003.mjs",
+      "currentId": "performance-003.mjs",
+      "currentPath": "tests/performance-003.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-003-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "performance-004.mjs",
+      "originalPath": "tests/performance-004.mjs",
+      "currentId": "performance-004.mjs",
+      "currentPath": "tests/performance-004.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-after-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "performance-005.mjs",
+      "originalPath": "tests/performance-005.mjs",
+      "currentId": "performance-005.mjs",
+      "currentPath": "tests/performance-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-after-results.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "performance-final-006.mjs",
+      "originalPath": "tests/performance-final-006.mjs",
+      "currentId": "performance-final-006-reference.mjs",
+      "currentPath": "tests/performance-final-006-reference.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/performance-final-006-reference.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "ui-performance-007.mjs",
+      "originalPath": "tests/ui-performance-007.mjs",
+      "currentId": "ui-performance-007.mjs",
+      "currentPath": "tests/ui-performance-007.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/ui-007/performance-sentinel.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "clone-profile-005.mjs",
+      "originalPath": "tests/clone-profile-005.mjs",
+      "currentId": "clone-profile-005.mjs",
+      "currentPath": "tests/clone-profile-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/clone-profile.json"
+      ],
+      "finalStatus": "PASS"
+    },
+    {
+      "originalBlockedId": "segment-probe-005.mjs",
+      "originalPath": "tests/segment-probe-005.mjs",
+      "currentId": "segment-probe-005.mjs",
+      "currentPath": "tests/segment-probe-005.mjs",
+      "scope": null,
+      "requiredVerdicts": [
+        "evidence/segment-probe.json"
+      ],
+      "finalStatus": "PASS"
+    }
+  ]
+}

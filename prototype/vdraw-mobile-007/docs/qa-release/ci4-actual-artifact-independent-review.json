@@ -1,0 +1,124 @@
+{
+  "sourceSha": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+  "profiles": {
+    "limited": {
+      "pass": 18,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "TAPCases": 176,
+      "PythonCases": 4
+    },
+    "full": {
+      "pass": 52,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "TAPCases": 179,
+      "PythonCases": 4
+    }
+  },
+  "actualDevices": 0,
+  "realAI": 0,
+  "fullEntries": 52,
+  "freshVerdictSnapshots": 27,
+  "fullProductChecks": 16,
+  "PWAErrors": [],
+  "sevenOutputFiles": {
+    "pptx": {
+      "bytes": 56540,
+      "sha256": "1e9814c152d14fbeaa83960400168e4f2494c55dfe43d76b7dd4d545ef0c4fab"
+    },
+    "xlsx": {
+      "bytes": 7023,
+      "sha256": "92e4af1a93181c256dec1b5edd1ed077243215fdf73364f60cccbc48c0d30502"
+    },
+    "dxf": {
+      "bytes": 2488,
+      "sha256": "1b5a946d94bf9625059689f8aebfc659eab09c4e9a2549c3faab13eb0ce6a0bb"
+    },
+    "pdf": {
+      "bytes": 24747,
+      "sha256": "58a42e11b0a442d91d6be552eb4bc2a950def84054cd2ea2ac9051556e78d83f"
+    },
+    "json": {
+      "bytes": 10932,
+      "sha256": "c5a5072d0a330939aea4ddbed21dcf55ae2a649bb5a297f16a043070a5a95b14"
+    },
+    "png": {
+      "bytes": 35075,
+      "sha256": "43370fa83681bc252d21771ae7bf0f715b4d09881d3ea5975872a99464702617"
+    },
+    "svg": {
+      "bytes": 7607654,
+      "sha256": "90bb24b9043b8d806fc3c822a91321fef50ef323b0ae8b2e2cd863546095fdb7"
+    }
+  },
+  "softwareAcceptance": "PASS; Android device acceptance NOT_RUN",
+  "signingUpdateCompatibility": "BLOCKED; private key and installed identity not proven",
+  "runId": 37347164239,
+  "jobId": 111888511462,
+  "artifactId": 11361790491,
+  "artifactBytes": 25854598,
+  "artifactSHA256": "ee3e7cd4f05fae0478e27da619dbd9f3b637faded6853445540a8021f758401d",
+  "extractedMembersIndependentlyByteExact": 735,
+  "jobStepsAllSuccess": true,
+  "APKGenerated": 0,
+  "P0": 0,
+  "P1": 0,
+  "P2": "UNCONFIRMED",
+  "beforeFailuresRetained": [
+    "CI3 bounded /proc read race",
+    "CI3 product private-context installability restriction",
+    "candidate preview BEFORE70f 3FAIL"
+  ],
+  "inspectionFileHashesMatch": 12,
+  "actualPPTXSlidesXMLParsed": 8,
+  "nativeAssetParity": "PASS exact40assets; not APK/device proof",
+  "true006Performance": {
+    "status": "PASS",
+    "scope": "Actual immutable 006 web baseline (37 verified Git blobs) versus integrated007; unchanged 5000-element UI thresholds; not Android device",
+    "browser": "154.0.8037.57",
+    "cpuRate": 4,
+    "ratio": 1.052188126366691,
+    "rows": [
+      {
+        "phase": "006",
+        "elements": 5000,
+        "firstDisplayMs": 373.5,
+        "colorActionMs": [
+          193.71756600000003,
+          151.23043399999983,
+          152.57087300000012
+        ],
+        "medianColorMs": 152.57087300000012,
+        "stageArea": 242190
+      },
+      {
+        "phase": "007",
+        "elements": 5000,
+        "firstDisplayMs": 341,
+        "colorActionMs": [
+          166.14837399999988,
+          141.66839100000016,
+          160.5332610000005
+        ],
+        "medianColorMs": 160.5332610000005,
+        "stageArea": 260056.875
+      }
+    ],
+    "errors": []
+  },
+  "independentOriginalP1Cases": 31,
+  "independentCandidatePreviewCases": 3,
+  "actualArtifactRuntime": {
+    "byteExactGitBlobs": 115,
+    "uploadDefaultHiddenOmissions": 4,
+    "capacitorSyncGeneratedFiles": {
+      "android/app/src/main/assets/capacitor.config.json": "JSON semantic equality; whitespace only",
+      "android/capacitor.settings.gradle": "Only generated dependency root ../../VDRAW-MOBILE-002/node_modules -> ../node_modules"
+    },
+    "generatedFilesAreGitSourceChanges": false,
+    "nativeCompileOrSigningProof": false
+  }
+}

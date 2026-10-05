@@ -1,0 +1,17 @@
+# 署名ゲートの最終追加調査と実機証拠1項目
+
+基準APKの公式apksigner・aapt検証はrun37342418509でPASSし、独立QAも直接CIログと取得artifactを照合した。残るUPDATE_COMPATIBLEの不足証拠は既存秘密鍵の所在・再利用証明と、現在installed007の実APK identityである。
+
+追加再確認: このworkspaceのadb実行コマンドは未検出、/dev/bus/usbは存在しない。build-debug.pyとAndroid Gradle設定を再読取し、ANDROID_USER_HOME/ANDROID_SDK_HOME/GRADLE_USER_HOMEへdebug鍵を保全する独自指定、固定signingConfig、storeFile、鍵復元処理は確認できない。公開証明書のみから秘密鍵を復元できるとは扱わない。秘密鍵が他所にも存在しない、または永久に回収不能だとは断言しない。
+
+未読だった保存候補2 ZIPを現リクエスト用の正規helperで個別再試行した。VDRAW-MOBILE-007-UI-CHECKPOINT.zip（selection015）、VDRAW-MOBILE-006.zip（selection038）は双方HTTP502で取得できなかった。旧失敗記録を保持し、今回結果も別ファイルへ記録した。許可された経路を迂回して取得していない。2 ZIPの内容は依然未読なので鍵不存在の根拠には含めない。
+
+実機証拠の次の1操作候補:
+
+**「現在端末にインストールされている007から抽出したAPKを、1ファイル添付してください。」**
+
+このAPKを受け取れればAPK SHA、実manifestのapplicationId/versionCode/versionName、公開署名certificateを1ファイルから確認できる。基準配布APKの再添付や標準Settings画面スクリーンショットは、現在installed007の署名certificateの証拠として代用しない。APK抽出手段が端末にあることはまだ確認できていないため、複数操作や新しいツールの導入を先に要求しない。添付が現在installedアプリからの抽出であることについてはユーザーが示す由来を証跡化する。
+
+実機APKの添付だけで既存秘密鍵の不足は解消しない。添付後もprivateKey NOT_RECOVEREDなら新APK生成は禁止を維持する。署名一致を確認したことと、同一署名による次APKを生成できることを分けて判定する。
+
+端末操作、install/uninstall、data削除、鍵生成、署名、APK buildは今回0。変更は公開報告・取得失敗結果だけであり、main/validation/006/旧成果を変更していない。

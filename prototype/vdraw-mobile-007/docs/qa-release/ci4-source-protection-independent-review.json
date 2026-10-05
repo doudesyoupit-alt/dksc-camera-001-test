@@ -1,0 +1,36 @@
+{
+  "sourceSha": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+  "approvedRuntimeBase": "b2f9351b6418f2b552d95b96132650a297ea0afe",
+  "runtimeCount": 121,
+  "old70fTestAssets": 64,
+  "changedProtected": [],
+  "baseline006tree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+  "protectedRefs": [
+    {
+      "name": "VDRAW-MOBILE-007-UI-CHECKPOINT",
+      "sha": "e9a56b9f65ee4679ec83cc97cf67365d89f05e82"
+    },
+    {
+      "name": "VDRAW-MOBILE-007",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "main",
+      "sha": "1181c0aeef3a152435cf005583d09a15f209bd0d"
+    },
+    {
+      "name": "validation",
+      "sha": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+    },
+    {
+      "name": "work/vdraw007-integration-20261006",
+      "sha": "9c1dcdf8d87e32a9f0d86996c210a8a4b7ebb2fc"
+    },
+    {
+      "name": "work/vdraw007-integration-round1-20261006",
+      "sha": "70f9b5be972573906328e5d72b0318473ff5fa1c"
+    }
+  ],
+  "authorizedManifestOnlyModified": true,
+  "originalExecutableAndFixtureAssets": 63
+}
