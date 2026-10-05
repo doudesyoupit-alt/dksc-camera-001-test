@@ -1,0 +1,22 @@
+{
+  "artifactKind": "existing-apk-read-only",
+  "apkBytes": 13141918,
+  "apkSha256": "89350a7e6d8471ba3bbe983dfaeefba477d6ad31519f1036105da5cf9af71d09",
+  "manifest": {
+    "package": "jp.dksc.vdraw.prototype007",
+    "versionCode": 7,
+    "versionName": "0.7.0"
+  },
+  "v2CertificateSha256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855",
+  "certificateSubject": "C=US,O=Android,CN=Android Debug",
+  "certificateNotBefore": "2026-10-05T08:29:16+00:00",
+  "certificateNotAfter": "2056-09-27T08:29:16+00:00",
+  "signingBlockIds": [
+    "0x7109871a",
+    "0x42726577"
+  ],
+  "fullApksignerVerification": "NOT_RUN",
+  "installedDeviceMetadata": "NOT_VERIFIED",
+  "privateKeyRecovered": false,
+  "nextApkBuilt": false
+}
