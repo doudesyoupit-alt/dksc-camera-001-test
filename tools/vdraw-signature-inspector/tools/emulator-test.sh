@@ -8,8 +8,30 @@ adb install inspector-delivery/VDRAW-SIGNATURE-CHECK-1.0.0.apk
 adb install inspector-delivery/inspector-test.apk
 adb shell am instrument -w -e expect baseline jp.dksc.vdraw.signatureinspector.test/jp.dksc.vdraw.signatureinspector.InspectorInstrumentation > inspector-os-evidence/baseline.log
 cat inspector-os-evidence/baseline.log
-adb shell am start -n jp.dksc.vdraw.signatureinspector/.MainActivity
-adb shell input tap 240 272
+adb shell am start -W -n jp.dksc.vdraw.signatureinspector/.MainActivity
+adb shell uiautomator dump /sdcard/inspector-before.xml
+adb pull /sdcard/inspector-before.xml inspector-os-evidence/before.xml
+read -r tap_x tap_y < <(python3 - <<'PY'
+import re
+import xml.etree.ElementTree as ET
+root = ET.parse('inspector-os-evidence/before.xml').getroot()
+nodes = [n for n in root.iter('node') if n.get('text') == '007の署名を確認']
+assert len(nodes) == 1 and nodes[0].get('clickable') == 'true' and nodes[0].get('enabled') == 'true'
+left, top, right, bottom = map(int, re.findall(r'\d+', nodes[0].get('bounds')))
+assert right > left and bottom > top
+print((left+right)//2, (top+bottom)//2)
+PY
+)
+adb shell input tap "$tap_x" "$tap_y"
+adb shell uiautomator dump /sdcard/inspector-after.xml
+adb pull /sdcard/inspector-after.xml inspector-os-evidence/after.xml
+python3 - <<'PY'
+import xml.etree.ElementTree as ET
+root = ET.parse('inspector-os-evidence/after.xml').getroot()
+text = '\n'.join(n.get('text','') for n in root.iter('node'))
+assert '基準007と一致' in text, text
+assert 'c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855' in text.replace('\n',''), text
+PY
 adb exec-out screencap -p > inspector-os-evidence/inspector-screen.png
 # Missing-package negative test on emulator only. Never touches the user's installed007.
 adb uninstall jp.dksc.vdraw.prototype007
@@ -28,6 +50,7 @@ for mode in ['baseline', 'missing']:
 Path('inspector-os-evidence/acceptance.json').write_text(json.dumps({
     'status': 'PASS', 'apiLevel': int(sys.argv[1]), 'baselineInstalledMetadata': 'PASS',
     'realCheckButton': 'PASS', 'missingPackageNegative': 'PASS',
+    'screenCoordinateTapAndVisibleResult': 'PASS',
     'userDeviceTest': 'NOT_RUN', 'userDeviceDataChanged': False,
     'existingVDRAWUpdateCompatibility': 'BLOCKED'
 }, indent=2) + '\n')
