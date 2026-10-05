@@ -1,0 +1,18 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'jp.dksc.vdraw.signatureinspector'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'jp.dksc.vdraw.signatureinspector'
+        minSdk 28
+        targetSdk 36
+        versionCode 1
+        versionName '1.0.0'
+        testInstrumentationRunner 'jp.dksc.vdraw.signatureinspector.InspectorInstrumentation'
+    }
+    // Inspection-only APK: standard debug signing, completely separate from VDRAW.
+    buildTypes { debug { debuggable false } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    lint { abortOnError true; checkReleaseBuilds true }
+}
+dependencies { testImplementation 'junit:junit:4.13.2' }
