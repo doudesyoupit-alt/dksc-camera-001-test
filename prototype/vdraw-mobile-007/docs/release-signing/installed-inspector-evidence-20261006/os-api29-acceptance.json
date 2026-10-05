@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "apiLevel": 29,
+  "baselineInstalledMetadata": "PASS",
+  "realCheckButton": "PASS",
+  "missingPackageNegative": "PASS",
+  "screenCoordinateTapAndVisibleResult": "PASS",
+  "userDeviceTest": "NOT_RUN",
+  "userDeviceDataChanged": false,
+  "existingVDRAWUpdateCompatibility": "BLOCKED"
+}

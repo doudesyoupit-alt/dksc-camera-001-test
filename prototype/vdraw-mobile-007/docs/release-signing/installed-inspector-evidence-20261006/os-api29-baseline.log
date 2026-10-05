@@ -1,0 +1,5 @@
+INSTRUMENTATION_RESULT: mode=baseline
+INSTRUMENTATION_RESULT: osPackageManager=PASS versionName/versionCode/current signing certificate
+INSTRUMENTATION_RESULT: status=PASS
+INSTRUMENTATION_RESULT: uiButton=PASS
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,24 @@
+{
+  "sourceSafetyAudit": "PASS",
+  "permissions": [],
+  "scopedQuery": "jp.dksc.vdraw.prototype007",
+  "status": "PASS",
+  "applicationId": "jp.dksc.vdraw.signatureinspector",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "apkSHA256": "6c06ae35dc4bce517e89920c443fdc8caf7e0e88405a5d0cf5b0d54405f0ae10",
+  "apkBytes": 17184,
+  "certificateSHA256": "3e2602248aa6c0aa4001cfb3d6a061b16b6444e8ae1edc94ad4d58ca1d108414",
+  "officialApksigner": "PASS",
+  "unitTests": {
+    "pass": 8,
+    "fail": 0,
+    "skip": 0
+  },
+  "buildHEAD": "4f9f2e3863b99537e66c45a3569055e8bb827e46",
+  "runId": "37386649378",
+  "signingMode": "isolated standard Android debug signing; not VDRAW permanent signing",
+  "installedUserDeviceIdentity": "NOT_VERIFIED",
+  "existingVDRAWUpdateCompatibility": "BLOCKED",
+  "existingPrivateKeyRecovered": false
+}
