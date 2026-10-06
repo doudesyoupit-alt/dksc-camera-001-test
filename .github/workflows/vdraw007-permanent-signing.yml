@@ -128,6 +128,7 @@ jobs:
           mkdir -p evidence/permanent-config
           python3 tests/permanent-signing-contract.py > evidence/permanent-config/contract.log 2>&1
           python3 tests/permanent-signing-transport.py > evidence/permanent-config/transport.log 2>&1
+          python3 tests/permanent-signing-diagnosis.py > evidence/permanent-config/diagnosis.log 2>&1
           timeout -k 5s 180s npm ci --no-audit --no-fund
           npm run android:sync
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0'
@@ -191,11 +192,11 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p evidence/fixed-apks
-          gradle -p android --no-daemon -PvdrawPermanentSigning=true -PvdrawVersionCode=8 -PvdrawVersionName=0.8.0 :app:assembleRelease :app:assembleReleaseAndroidTest
+          python3 scripts/permanent-signing.py build --version-code 8 --version-name 0.8.0 --output evidence/permanent-public/build-A.json
           cp android/app/build/outputs/apk/release/app-release.apk evidence/fixed-apks/VDRAW-MOBILE-008-fixed.apk
           cp android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk evidence/fixed-apks/update-test.apk
           python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-008-fixed.apk --version-code 8 --version-name 0.8.0 --output evidence/fixed-apks/A.json
-          gradle -p android --no-daemon -PvdrawPermanentSigning=true -PvdrawVersionCode=9 -PvdrawVersionName=0.8.1 :app:assembleRelease
+          python3 scripts/permanent-signing.py build --version-code 9 --version-name 0.8.1 --output evidence/permanent-public/build-B.json
           cp android/app/build/outputs/apk/release/app-release.apk evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk
           python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk --version-code 9 --version-name 0.8.1 --output evidence/fixed-apks/B.json
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs evidence/fixed-apks/update-test.apk > evidence/permanent-public/update-test-public-cert.log
