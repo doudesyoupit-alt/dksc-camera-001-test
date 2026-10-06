@@ -37,7 +37,7 @@
       "metadataReachedTransport": true
     }
   ],
-  "verdict": "PREPARATION_PASS_CI_PENDING",
+  "verdict": "PREPARATION_QA_PASS_REAL_PHOTO_PHASE_HOLD",
   "severity": "NO_OPEN_EVALUATOR_BLOCKER",
   "findings": [
     "Self-declared real-photo/real-providers flags plus fabricated hashes/200 network entries can claim ten real AI photos without any AI execution. ProductReleaseAllowed remains false, but counters/formal metrics are false evidence.",
@@ -69,5 +69,19 @@
       "actualNetworkRequests": 0,
       "reason": "CANONICAL_METADATA_FORBIDDEN"
     }
-  ]
+  ],
+  "ciFinal": {
+    "HEAD": "02d7013f786bd3279e4c7b8f7466de06e5fd088f",
+    "run": 37413546000,
+    "artifactSHA256": "efbbf4d5f66540a4d9f43232a92e1a6523c2b480beffcb320c893a53ee480879",
+    "newSafetyTests": 52,
+    "existingContractTests": 54,
+    "FAIL": 0,
+    "skip": 0,
+    "formalPhotos": 0,
+    "formalAI": 0,
+    "formalMetrics": "ALL_NULL",
+    "PHOTO_PPTX_001": "REPRODUCED_P1_OPEN",
+    "SAFDeviceAcceptance": "OPEN"
+  }
 }
