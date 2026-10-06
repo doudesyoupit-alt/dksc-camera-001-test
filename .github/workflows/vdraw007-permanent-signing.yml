@@ -1,0 +1,286 @@
+name: VDRAW Permanent Signing Migration
+on:
+  push:
+    branches: [work/vdraw007-signing-release-20261006]
+    paths:
+      - '.github/workflows/vdraw007-permanent-signing.yml'
+      - 'prototype/vdraw-mobile-007/android/app/build.gradle'
+      - 'prototype/vdraw-mobile-007/android/app/permanent-signing.gradle'
+      - 'prototype/vdraw-mobile-007/android/app/src/androidTest/java/jp/dksc/vdraw/prototype007/PermanentUpdateInstrumentation.java'
+      - 'prototype/vdraw-mobile-007/scripts/permanent-*'
+      - 'prototype/vdraw-mobile-007/tests/permanent-*'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: vdraw007-permanent-signing
+  cancel-in-progress: false
+jobs:
+  full-regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+        working-directory: prototype/vdraw-mobile-007
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_CHROMIUM: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          clean: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Protect 006 and all existing tests
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:prototype/vdraw-mobile-006)" = 47cabdf70e9aebf7c64a1e028e85c476df32a169
+          git diff --exit-code d77c524e49ff8835670b016551f007f6c171bb63 -- web server native android ':!android/app/build.gradle' ':!android/app/permanent-signing.gradle' ':!android/app/src/androidTest/java/jp/dksc/vdraw/prototype007/PermanentUpdateInstrumentation.java'
+          git diff --no-renames --exit-code --diff-filter=MDT d77c524e49ff8835670b016551f007f6c171bb63 -- tests ':!tests/regression-manifest-round1.json'
+          python3 scripts/check-regression-assets-round1.py
+      - name: Install locked dependencies and inspection libraries
+        run: |
+          set -euo pipefail
+          timeout -k 5s 180s npm ci --no-audit --no-fund
+          timeout -k 5s 180s python3 -m pip install -r tests/requirements-inspect.txt
+          test -x "$VDRAW_CHROMIUM"
+          "$VDRAW_CHROMIUM" --version
+          timeout -k 5s 180s npm install --prefix "$RUNNER_TEMP/vdraw-regression-tools" --ignore-scripts --no-audit --no-fund playwright@1.62.1 jszip@3.10.1
+          echo "CODEX_PRIMARY_RUNTIME_NODE_MODULES=$RUNNER_TEMP/vdraw-regression-tools/node_modules" >> "$GITHUB_ENV"
+          echo "VDRAW_BASELINE_006_ROOT=$GITHUB_WORKSPACE/prototype/vdraw-mobile-006" >> "$GITHUB_ENV"
+      - name: Synchronize Android assets without building an APK
+        run: |
+          set -euo pipefail
+          npm run android:sync
+          git diff --exit-code HEAD -- web server native android/app/src/main/java android/app/build.gradle capacitor.config.json package-lock.json
+      - name: Targeted regression before the full gate
+        run: python3 scripts/run-regression-round1.py --profile limited --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/vdraw007-limited-${{ github.run_id }}"
+      - name: Execute all release regression gates with browser and generated export inspectors
+        run: python3 scripts/run-regression-round1.py --include-native-assets --profile full --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/vdraw007-full-${{ github.run_id }}"
+      - name: Preserve actual outputs and logs on success or failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: VDRAW-007-release-regression-${{ github.run_id }}-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/vdraw007-limited-${{ github.run_id }}
+            ${{ runner.temp }}/vdraw007-full-${{ github.run_id }}
+          if-no-files-found: error
+          retention-days: 14
+  signing-readiness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          clean: false
+      - name: Secrets readiness; fail closed without printing values
+        env:
+          VDRAW_SIGNING_KEYSTORE_B64: ${{ secrets.VDRAW_SIGNING_KEYSTORE_B64 }}
+          VDRAW_SIGNING_STORE_PASSWORD: ${{ secrets.VDRAW_SIGNING_STORE_PASSWORD }}
+          VDRAW_SIGNING_KEY_ALIAS: ${{ secrets.VDRAW_SIGNING_KEY_ALIAS }}
+          VDRAW_SIGNING_KEY_PASSWORD: ${{ secrets.VDRAW_SIGNING_KEY_PASSWORD }}
+          VDRAW_SIGNING_CERT_SHA256: ${{ secrets.VDRAW_SIGNING_CERT_SHA256 }}
+        run: python3 prototype/vdraw-mobile-007/scripts/permanent-signing.py readiness --output signing-readiness/readiness.json
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: VDRAW-permanent-signing-readiness-${{ github.run_id }}
+          path: signing-readiness
+          if-no-files-found: error
+          retention-days: 30
+  signing-config-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: prototype/vdraw-mobile-007
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          clean: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
+      - name: Validate signing decisions and prepare Gradle without generating keys or APKs
+        run: |
+          mkdir -p evidence/permanent-config
+          python3 tests/permanent-signing-contract.py > evidence/permanent-config/contract.log 2>&1
+          timeout -k 5s 180s npm ci --no-audit --no-fund
+          npm run android:sync
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0'
+          gradle -p android --no-daemon :app:tasks --all > evidence/permanent-config/gradle-config.log 2>&1
+          gradle -p android --no-daemon :app:compileDebugAndroidTestJavaWithJavac > evidence/permanent-config/instrumentation-compile.log 2>&1
+      - name: Prove release cannot use a generated debug key or missing secrets
+        run: |
+          set -euo pipefail
+          if gradle -p android --no-daemon :app:assembleRelease --dry-run > evidence/permanent-config/no-permanent.log 2>&1; then exit 1; fi
+          rg 'VDRAW_RELEASE_BLOCKED_NO_PERMANENT_SIGNING' evidence/permanent-config/no-permanent.log
+          if gradle -p android --no-daemon -PvdrawPermanentSigning=true -PvdrawVersionCode=8 -PvdrawVersionName=0.8.0 :app:tasks > evidence/permanent-config/missing-secrets.log 2>&1; then exit 1; fi
+          rg 'VDRAW_PERMANENT_SIGNING_ENV_MISSING' evidence/permanent-config/missing-secrets.log
+          test -z "$(find android/app/build -name '*.apk' -print 2>/dev/null)"
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: VDRAW-permanent-signing-config-${{ github.run_id }}
+          path: prototype/vdraw-mobile-007/evidence/permanent-config
+          if-no-files-found: error
+          retention-days: 30
+  fixed-apk-pair:
+    needs: [signing-readiness, signing-config-check, full-regression]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_SIGNING_KEYSTORE_B64: ${{ secrets.VDRAW_SIGNING_KEYSTORE_B64 }}
+      VDRAW_SIGNING_STORE_PASSWORD: ${{ secrets.VDRAW_SIGNING_STORE_PASSWORD }}
+      VDRAW_SIGNING_KEY_ALIAS: ${{ secrets.VDRAW_SIGNING_KEY_ALIAS }}
+      VDRAW_SIGNING_KEY_PASSWORD: ${{ secrets.VDRAW_SIGNING_KEY_PASSWORD }}
+      VDRAW_SIGNING_CERT_SHA256: ${{ secrets.VDRAW_SIGNING_CERT_SHA256 }}
+    defaults:
+      run:
+        working-directory: prototype/vdraw-mobile-007
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          clean: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
+          cache-disabled: true
+      - name: Restore pinned permanent key into private temporary directory
+        run: python3 scripts/permanent-signing.py prepare --output evidence/permanent-public/restoration.json
+      - name: Prepare locked web/native sources
+        run: |
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0'
+          timeout -k 5s 180s npm ci --no-audit --no-fund
+          npm run android:sync
+      - name: Build fixed-signed A8 and B9 and check actual APK metadata
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/fixed-apks
+          gradle -p android --no-daemon -PvdrawPermanentSigning=true -PvdrawVersionCode=8 -PvdrawVersionName=0.8.0 :app:assembleRelease :app:assembleReleaseAndroidTest
+          cp android/app/build/outputs/apk/release/app-release.apk evidence/fixed-apks/VDRAW-MOBILE-008-fixed.apk
+          cp android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk evidence/fixed-apks/update-test.apk
+          python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-008-fixed.apk --version-code 8 --version-name 0.8.0 --output evidence/fixed-apks/A.json
+          gradle -p android --no-daemon -PvdrawPermanentSigning=true -PvdrawVersionCode=9 -PvdrawVersionName=0.8.1 :app:assembleRelease
+          cp android/app/build/outputs/apk/release/app-release.apk evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk
+          python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk --version-code 9 --version-name 0.8.1 --output evidence/fixed-apks/B.json
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs evidence/fixed-apks/update-test.apk > evidence/permanent-public/update-test-public-cert.log
+          python3 - <<'PY'
+          import json,re
+          from pathlib import Path
+          a=json.loads(Path('evidence/fixed-apks/A.json').read_text());b=json.loads(Path('evidence/fixed-apks/B.json').read_text())
+          assert a['certificateSHA256']==b['certificateSHA256'] and b['versionCode']>a['versionCode']>=8
+          t=Path('evidence/permanent-public/update-test-public-cert.log').read_text()
+          assert re.findall(r'Signer #\d+ certificate SHA-256 digest: ([0-9a-f]+)',t)==[a['certificateSHA256']]
+          PY
+      - name: Remove restored private key material
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import os,shutil
+          from pathlib import Path
+          if os.environ.get('VDRAW_SIGNING_KEYSTORE_PATH'):
+              p=Path(os.environ['VDRAW_SIGNING_KEYSTORE_PATH']).resolve().parent
+              assert p.parent==Path(os.environ['RUNNER_TEMP']).resolve() and p.name.startswith('vdraw007-private-signing-')
+              shutil.rmtree(p)
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: VDRAW-fixed-pair-${{ github.run_id }}
+          path: prototype/vdraw-mobile-007/evidence/fixed-apks
+          if-no-files-found: error
+          retention-days: 30
+  update-verification:
+    needs: fixed-apk-pair
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          clean: false
+      - uses: actions/download-artifact@v7
+        with:
+          name: VDRAW-fixed-pair-${{ github.run_id }}
+          path: fixed-apks
+      - name: Enable disposable hosted emulator
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          script: bash prototype/vdraw-mobile-007/scripts/permanent-update-emulator.sh
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: VDRAW-fixed-update-evidence-${{ github.run_id }}
+          path: signing-update-evidence
+          if-no-files-found: error
+          retention-days: 30
+  accepted-delivery:
+    needs: [signing-readiness, signing-config-check, full-regression, fixed-apk-pair, update-verification]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: VDRAW-fixed-pair-${{ github.run_id }}
+          path: delivery
+      - uses: actions/download-artifact@v7
+        with:
+          name: VDRAW-fixed-update-evidence-${{ github.run_id }}
+          path: delivery/update-evidence
+      - name: Publish only accepted APKs and public evidence
+        run: |
+          rm delivery/update-test.apk
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('delivery/update-evidence/acceptance.json').read_text())
+          assert result['status']=='PASS' and result['updateWithoutUninstall']=='PASS' and result['actualProductProjectPreservation']=='PASS'
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: VDRAW-permanent-signed-ACCEPTED-${{ github.run_id }}-${{ github.sha }}
+          path: delivery
+          if-no-files-found: error
+          retention-days: 30

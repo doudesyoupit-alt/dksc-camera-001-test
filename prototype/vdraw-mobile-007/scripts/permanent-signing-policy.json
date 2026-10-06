@@ -1,0 +1,21 @@
+{
+  "schema": "vdraw-permanent-signing-policy/1",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "applicationId": "jp.dksc.vdraw.prototype007",
+  "certificateSha256": null,
+  "provisioningStatus": "AWAITING_SECURE_SECRETS_WRITE_ROUTE",
+  "legacyCertificateSha256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855",
+  "installedLegacyIdentity": "VERIFIED_USER_REPORTED_20261006",
+  "legacyPrivateKey": "NOT_RECOVERED_SEARCH_CLOSED",
+  "legacyToPermanentUpdateCompatibility": "NOT_PROVEN",
+  "apkA": {
+    "versionCode": 8,
+    "versionName": "0.8.0"
+  },
+  "apkB": {
+    "versionCode": 9,
+    "versionName": "0.8.1"
+  },
+  "approvedSoftwareCheckpoint": "d77c524e49ff8835670b016551f007f6c171bb63",
+  "keyPreservationReceipt": null
+}

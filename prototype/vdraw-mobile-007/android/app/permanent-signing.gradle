@@ -1,0 +1,37 @@
+// VDRAW release signing is explicit and has no debug-key fallback.
+def permanent = providers.gradleProperty('vdrawPermanentSigning').orNull == 'true'
+if (permanent) {
+    def required = ['VDRAW_SIGNING_KEYSTORE_PATH', 'VDRAW_SIGNING_STORE_PASSWORD', 'VDRAW_SIGNING_KEY_ALIAS', 'VDRAW_SIGNING_KEY_PASSWORD']
+    if (required.any { !System.getenv(it) }) throw new GradleException('VDRAW_PERMANENT_SIGNING_ENV_MISSING')
+    def code = providers.gradleProperty('vdrawVersionCode').orNull
+    def name = providers.gradleProperty('vdrawVersionName').orNull
+    if (!code || !(code ==~ /[0-9]+/) || code.toLong() < 8 || code.toLong() > 2100000000L || !name || !(name ==~ /[0-9]+\.[0-9]+\.[0-9]+/)) {
+        throw new GradleException('VDRAW_RELEASE_VERSION_REQUIRED')
+    }
+    def keyFile = new File(System.getenv('VDRAW_SIGNING_KEYSTORE_PATH'))
+    def repositoryRoot = new File(rootProject.projectDir, '../../..').canonicalFile
+    if (!keyFile.isFile() || keyFile.canonicalFile.toPath().startsWith(repositoryRoot.toPath())) throw new GradleException('VDRAW_SIGNING_KEY_MUST_BE_OUTSIDE_REPOSITORY')
+    android {
+        signingConfigs {
+            vdrawPermanent {
+                storeFile keyFile
+                storeType 'PKCS12'
+                storePassword System.getenv('VDRAW_SIGNING_STORE_PASSWORD')
+                keyAlias System.getenv('VDRAW_SIGNING_KEY_ALIAS')
+                keyPassword System.getenv('VDRAW_SIGNING_KEY_PASSWORD')
+            }
+        }
+        defaultConfig {
+            versionCode code.toInteger()
+            versionName name
+            testInstrumentationRunner 'jp.dksc.vdraw.prototype007.PermanentUpdateInstrumentation'
+        }
+        buildTypes.release.signingConfig = signingConfigs.vdrawPermanent
+        testBuildType 'release'
+    }
+}
+gradle.taskGraph.whenReady { graph ->
+    if (!permanent && graph.allTasks.any { it.project == project && it.name.toLowerCase().contains('release') }) {
+        throw new GradleException('VDRAW_RELEASE_BLOCKED_NO_PERMANENT_SIGNING')
+    }
+}
