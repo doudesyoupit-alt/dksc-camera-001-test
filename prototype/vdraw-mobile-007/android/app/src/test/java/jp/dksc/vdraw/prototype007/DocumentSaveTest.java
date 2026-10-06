@@ -11,7 +11,6 @@ import com.getcapacitor.PluginCall;
 import java.io.*;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
-import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,7 +40,7 @@ public class DocumentSaveTest {
         assertFalse(intent.hasExtra(Intent.EXTRA_STREAM));
     }
     @Test public void rejectsBadFilenameAndMime() {
-        for (String name : new String[]{"", "..", "a/b", "a\\b", "a\nb"}) {
+        for (String name : new String[]{"", "..", "a/b", "a\\b", "a\nb", "a\nb\nc"}) {
             assertThrows(IllegalArgumentException.class, () -> DocumentSaver.createIntent(name, "application/pdf"));
         }
         assertThrows(IllegalArgumentException.class, () -> DocumentSaver.createIntent("a.pdf", "invalid"));
@@ -78,13 +77,14 @@ public class DocumentSaveTest {
         assertThrows(IOException.class, () -> DocumentSaver.write(context, source, Uri.fromFile(source)));
     }
     static class Call extends PluginCall {
-        String code; boolean resolved;
+        String code; boolean resolved; JSObject response;
         Call(JSObject data) { super(null, "DocumentSave", "test", "save", data); }
         @Override public void reject(String message, String code) { this.code=code; }
-        @Override public void resolve(JSObject result) { resolved=true; }
+        @Override public void resolve(JSObject result) { resolved=true; response=result; }
     }
     class Plugin extends DocumentSavePlugin {
         Intent launched; String callback;
+        @Override protected void executeWrite(Runnable write) { write.run(); }
         @Override public Context getContext() { return context; }
         @Override public void startActivityForResult(PluginCall call, Intent intent, String callback) {
             this.launched=intent; this.callback=callback;
@@ -108,6 +108,26 @@ public class DocumentSaveTest {
         Call duplicate=call(); plugin.save(duplicate); assertEquals("DOCUMENT_SAVE_BUSY", duplicate.code);
         finish(plugin, first, new ActivityResult(Activity.RESULT_CANCELED, null));
         assertEquals("DOCUMENT_SAVE_CANCELLED", first.code); assertFalse(first.resolved);
+        Call next=call(); plugin.save(next); assertNull(next.code);
+    }
+    @Test public void successfulCallbackResolvesAfterProviderClose() throws Exception {
+        Plugin plugin=new Plugin(); Call first=call(); plugin.save(first);
+        class Sink extends ByteArrayOutputStream { boolean closed; public void close() { closed=true; } }
+        Sink sink=new Sink(); ShadowContentResolver.registerOutputStream(destination, sink);
+        finish(plugin, first, new ActivityResult(Activity.RESULT_OK, new Intent().setData(destination)));
+        assertTrue(sink.closed); assertTrue(first.resolved); assertNull(first.code);
+        assertEquals("saved", first.response.getString("status"));
+        assertEquals(source.length(), first.response.getLong("bytes").longValue());
+        assertArrayEquals(Files.readAllBytes(source.toPath()), sink.toByteArray());
+        Call next=call(); plugin.save(next); assertNull(next.code);
+    }
+    @Test public void failedCallbackRejectsWithoutSuccessAndReleasesBusy() throws Exception {
+        Plugin plugin=new Plugin(); Call first=call(); plugin.save(first);
+        ShadowContentResolver.registerOutputStream(destination, new ByteArrayOutputStream() {
+            public void close() throws IOException { throw new IOException("provider failed to close"); }
+        });
+        finish(plugin, first, new ActivityResult(Activity.RESULT_OK, new Intent().setData(destination)));
+        assertEquals("DOCUMENT_SAVE_FAILED", first.code); assertFalse(first.resolved);
         Call next=call(); plugin.save(next); assertNull(next.code);
     }
     @Test public void missingResultUriRejectsAndReleasesBusy() throws Exception {

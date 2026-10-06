@@ -23,7 +23,7 @@ final class DocumentSaver {
     }
 
     static Intent createIntent(String name, String mime) {
-        if (name == null || name.isEmpty() || name.equals(".") || name.equals("..") || name.matches(".*[\\\\/\\x00-\\x1f].*")) {
+        if (name == null || name.isEmpty() || name.equals(".") || name.equals("..") || name.chars().anyMatch(c -> c == '/' || c == '\\' || c < 32)) {
             throw new IllegalArgumentException("Invalid filename");
         }
         if (mime == null || !mime.matches("[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+")) {

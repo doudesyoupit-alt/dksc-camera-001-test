@@ -32,6 +32,8 @@ public class DocumentSavePlugin extends Plugin {
         }
     }
 
+    protected void executeWrite(Runnable write) { getBridge().execute(write); }
+
     @ActivityCallback
     private void documentCreated(PluginCall call, ActivityResult result) {
         if (call == null) { active.set(false); return; }
@@ -47,7 +49,7 @@ public class DocumentSavePlugin extends Plugin {
             return;
         }
         // Provider I/O runs on Capacitor's worker, away from the UI thread.
-        getBridge().execute(() -> {
+        executeWrite(() -> {
             try {
                 File source = DocumentSaver.source(getContext(), call.getString("sourceUri"));
                 long bytes = DocumentSaver.write(getContext(), source, data.getData());
