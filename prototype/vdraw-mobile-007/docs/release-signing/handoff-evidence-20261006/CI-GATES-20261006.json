@@ -1,0 +1,100 @@
+{
+  "schema": "vdraw-signing-handoff-ci/1",
+  "status": "HANDOFF_READY",
+  "workflowRun": 37395898195,
+  "testedSourceHEAD": "b6cf3613e866260700897c4efd94ac54b68b9b06",
+  "gates": {
+    "limited": {
+      "sourceSha": "b6cf3613e866260700897c4efd94ac54b68b9b06",
+      "profile": "limited",
+      "suiteComplete": false,
+      "pass": 18,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "caseCount": 180
+    },
+    "full": {
+      "sourceSha": "b6cf3613e866260700897c4efd94ac54b68b9b06",
+      "profile": "full",
+      "suiteComplete": true,
+      "pass": 52,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "caseCount": 183
+    },
+    "signingConfig": {
+      "contractCaseCount": 10,
+      "compile": "PASS",
+      "failClosedGuards": "PASS"
+    }
+  },
+  "jobs": [
+    {
+      "id": 112051639771,
+      "name": "signing-config-check",
+      "conclusion": "success"
+    },
+    {
+      "id": 112051639942,
+      "name": "signing-readiness",
+      "conclusion": "failure"
+    },
+    {
+      "id": 112051639950,
+      "name": "full-regression",
+      "conclusion": "success"
+    },
+    {
+      "id": 112053472748,
+      "name": "fixed-apk-pair",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 112053473651,
+      "name": "accepted-delivery",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 112053473661,
+      "name": "update-verification",
+      "conclusion": "skipped"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11383174035,
+      "name": "VDRAW-007-release-regression-37395898195-b6cf3613e866260700897c4efd94ac54b68b9b06",
+      "digest": "sha256:32c22b21a5616bfbef6b0622ae4d96d13afb1c83ef354685c3012bda9fdb030b"
+    },
+    {
+      "id": 11382953305,
+      "name": "VDRAW-permanent-signing-readiness-37395898195",
+      "digest": "sha256:a4e34b43a64aa757759eb591ccbefde0f4602ceb2699b06ff701a9ce7fc0bd60"
+    },
+    {
+      "id": 11382713520,
+      "name": "VDRAW-permanent-signing-config-37395898195",
+      "digest": "sha256:c579f86d9bfa4edac41c315c47cad374114623574ce0746f755c6d0a85503630"
+    }
+  ],
+  "readiness": {
+    "status": "BLOCKED_EXPECTED",
+    "reason": "OWNER_SECRETS_REGISTRATION_PENDING",
+    "publicCertificatePinConfigured": true,
+    "fixedApkBuildAuthorized": false
+  },
+  "permanentKeyCount": 1,
+  "preparedFiveInputsRestoration": "PASS",
+  "durableHandoffRecovery": "PASS",
+  "publicCommitSecretValueScan": "PASS",
+  "privateMaterialInActionsArtifacts": false,
+  "apkA": "NOT_GENERATED",
+  "apkB": "NOT_GENERATED",
+  "userDeviceTouched": false,
+  "protection006": "PASS",
+  "mainChanged": false,
+  "validationChanged": false,
+  "nextUserAction": "REGISTER_FIVE_REPOSITORY_SECRETS"
+}
