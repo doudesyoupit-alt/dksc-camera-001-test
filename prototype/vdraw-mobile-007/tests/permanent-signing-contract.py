@@ -12,6 +12,7 @@ class SigningContract(unittest.TestCase):
     def setUp(self):
         self.pin = 'a' * 64
         self.policy = {'certificateSha256': self.pin, 'legacyCertificateSha256': 'b' * 64,
+            'provisioningStatus': 'READY_FOR_FIXED_APK_VALIDATION',
             'keyPreservationReceipt': {'recoveryVerification': 'PASS', 'encryptedArchiveSha256': 'c' * 64, 'vaultReference': 'synthetic-vault-reference'}}
         self.env = {name: 'synthetic-private-value' for name in m.SECRET_NAMES}
         self.env['VDRAW_SIGNING_CERT_SHA256'] = self.pin
@@ -47,5 +48,11 @@ class SigningContract(unittest.TestCase):
         for receipt in [None, {}, {'recoveryVerification': 'FAIL'}, {'recoveryVerification': 'PASS', 'encryptedArchiveSha256': 'bad', 'vaultReference': 'synthetic'}]:
             self.policy['keyPreservationReceipt'] = receipt
             self.assertEqual(m.readiness(self.policy, self.env)['status'], 'BLOCKED')
+    def test_preparation_phase_blocks_apk_even_if_secrets_present(self):
+        for status in [None, 'HANDOFF_PREPARED_AWAITING_OWNER_SECRETS_REGISTRATION', 'AWAITING_SECURE_SECRETS_WRITE_ROUTE']:
+            self.policy['provisioningStatus'] = status
+            result = m.readiness(self.policy, self.env)
+            self.assertEqual(result['status'], 'BLOCKED')
+            self.assertFalse(result['fixedApkBuildAuthorized'])
 
 if __name__ == '__main__': unittest.main()

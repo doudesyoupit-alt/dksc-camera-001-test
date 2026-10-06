@@ -27,9 +27,11 @@ def readiness(policy, env):
     preserved = (receipt.get('recoveryVerification') == 'PASS' and
                  bool(re.fullmatch('[0-9a-f]{64}', str(receipt.get('encryptedArchiveSha256', '')))) and
                  bool(receipt.get('vaultReference')))
-    ready = not missing and matches and preserved
+    build_authorized = policy.get('provisioningStatus') == 'READY_FOR_FIXED_APK_VALIDATION'
+    ready = not missing and matches and preserved and build_authorized
     return {'status': 'PASS' if ready else 'BLOCKED', 'missingSecretNames': missing,
             'publicCertificatePinConfigured': pin_ok, 'secretCertificatePinMatches': bool(matches),
+            'fixedApkBuildAuthorized': build_authorized,
             'privateKeyPreserved': 'PROVISIONING_RECEIPT_PRESENT' if preserved else 'NOT_VERIFIED',
             'legacyToPermanentUpdateCompatibility': 'NOT_PROVEN',
             'userDeviceDataChanged': False}

@@ -2,8 +2,8 @@
   "schema": "vdraw-permanent-signing-policy/1",
   "repository": "doudesyoupit-alt/dksc-camera-001-test",
   "applicationId": "jp.dksc.vdraw.prototype007",
-  "certificateSha256": null,
-  "provisioningStatus": "AWAITING_SECURE_SECRETS_WRITE_ROUTE",
+  "certificateSha256": "186ad92e96316b7a2a247c092fd3d83a94fa7a89ea406859a93b057c329a2d8d",
+  "provisioningStatus": "HANDOFF_PREPARED_AWAITING_OWNER_SECRETS_REGISTRATION",
   "legacyCertificateSha256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855",
   "installedLegacyIdentity": "VERIFIED_USER_REPORTED_20261006",
   "legacyPrivateKey": "NOT_RECOVERED_SEARCH_CLOSED",
@@ -17,5 +17,13 @@
     "versionName": "0.8.1"
   },
   "approvedSoftwareCheckpoint": "d77c524e49ff8835670b016551f007f6c171bb63",
-  "keyPreservationReceipt": null
+  "keyPreservationReceipt": {
+    "vaultReference": "PRIVATE_OWNER_HANDOFF_20261006",
+    "encryptedArchiveSha256": "41ae94fb829de376f6686f1eda50f3ebfd64e166f3a73672d1e0fee5c2d9633b",
+    "encryptedArchiveFormat": "PKCS12",
+    "handoffArchiveSha256": "0b9cea910059dc248fc8342fab0b328ff7c8ab2cb43f8882e9656b46a1586428",
+    "recoveryVerification": "PASS",
+    "recoveryScope": "OWNER_PRIVATE_PERSISTENT_HANDOFF_ROUND_TRIP_WITH_KEYTOOL_AND_PRIVATE_KEY_SIGN_VERIFY",
+    "externalOfflineBackup": "OWNER_CUSTODY_INSTRUCTIONS_INCLUDED"
+  }
 }
