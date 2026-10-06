@@ -1,0 +1,103 @@
+name: VDRAW SAVE-001 Validation
+on:
+  push:
+    branches: [work/vdraw007-save001-20261006]
+permissions:
+  contents: read
+concurrency:
+  group: vdraw007-save001-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  native-save:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: prototype/vdraw-mobile-007
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          clean: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - name: Protect 006, exporter, and existing tests
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:prototype/vdraw-mobile-006)" = 47cabdf70e9aebf7c64a1e028e85c476df32a169
+          git diff --exit-code 05419f2f670c38e95a51ea7dc38ec25ed1005d88 -- web/src/exporters.js
+          git diff --no-renames --exit-code --diff-filter=MDT 05419f2f670c38e95a51ea7dc38ec25ed1005d88 -- tests
+      - name: Install and synchronize native bridge
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+          npm run android:sync
+          python3 tests/native-assets-007.py --check-assets
+      - name: Save/share routing and owner race regression
+        run: node --test tests/save001.test.mjs tests/native-io-005.test.mjs tests/native-shell.test.mjs tests/output-race-regression.test.mjs
+      - name: Compile Android plugin and exercise SAF provider writes
+        run: |
+          set -euo pipefail
+          cd android
+          bash gradlew :app:testDebugUnitTest --no-daemon --console=plain
+      - name: Preserve native reports and generated bridge
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: SAVE001-native-${{ github.sha }}
+          path: |
+            prototype/vdraw-mobile-007/android/app/build/test-results
+            prototype/vdraw-mobile-007/android/app/build/reports/tests
+            prototype/vdraw-mobile-007/web/vendor/native-bridge.js
+          if-no-files-found: error
+  full-regression:
+    needs: native-save
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: prototype/vdraw-mobile-007
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_CHROMIUM: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          clean: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install regression dependencies and synchronize assets
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+          python3 -m pip install -r tests/requirements-inspect.txt
+          npm install --prefix "$RUNNER_TEMP/vdraw-regression-tools" --ignore-scripts --no-audit --no-fund playwright@1.62.1 jszip@3.10.1
+          echo "CODEX_PRIMARY_RUNTIME_NODE_MODULES=$RUNNER_TEMP/vdraw-regression-tools/node_modules" >> "$GITHUB_ENV"
+          echo "VDRAW_BASELINE_006_ROOT=$GITHUB_WORKSPACE/prototype/vdraw-mobile-006" >> "$GITHUB_ENV"
+          npm run android:sync
+      - name: Full release regression
+        run: python3 scripts/run-regression-round1.py --include-native-assets --profile full --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/save001-full"
+      - name: Preserve regression evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: SAVE001-regression-${{ github.sha }}
+          path: ${{ runner.temp }}/save001-full
+          if-no-files-found: error

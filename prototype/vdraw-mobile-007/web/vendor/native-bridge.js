@@ -4,3 +4,6 @@ var Le=Object.defineProperty;var _=(n,e,t)=>()=>{if(t)throw t[0];try{return n&&(
 @capacitor/core/dist/index.js:
   (*! Capacitor: https://capacitorjs.com/ - MIT License *)
 */
+
+
+var save001Document=g("DocumentSave");export{save001Document as DocumentSave};

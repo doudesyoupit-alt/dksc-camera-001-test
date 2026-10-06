@@ -15,6 +15,7 @@ export class ExportJobs {
   this.active=job;return job;
  }
  owns(job,owner,document){return this.active===job&&job.owner===owner&&job.document===document&&job.snapshot.projectId===document?.id&&job.snapshot.revision===document?.revision&&job.signature===JSON.stringify(document);}
- history(job,status){if(!['downloaded','shared','share-requested'].includes(status))throw Error('共有・保存結果を確認できません');const s=job.snapshot;return {...s.options,id:s.id,jobId:s.id,projectId:s.projectId,format:s.format,fileName:s.name,extension:s.extension,mime:s.mime,status,at:s.at,revision:s.revision};}
+ history(job,status){if(!['saved','downloaded','shared','share-requested'].includes(status))throw Error('共有・保存結果を確認できません');const s=job.snapshot;return {...s.options,id:s.id,jobId:s.id,projectId:s.projectId,format:s.format,fileName:s.name,extension:s.extension,mime:s.mime,status,at:s.at,revision:s.revision};}
  release(job){if(this.active!==job)return false;this.active=null;return true;}
 }
+
