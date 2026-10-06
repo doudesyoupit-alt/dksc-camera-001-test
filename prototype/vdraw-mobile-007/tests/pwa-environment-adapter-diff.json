@@ -1,0 +1,30 @@
+{
+  "sourceSha": "57e0351c3aa4b1469bb116e68e8daf9286907f9c",
+  "original": "tests/product-007-adapter-v3.mjs",
+  "adapter": "tests/product-007-adapter-v4.mjs",
+  "originalSha256": "942c447e845edc2de5e520dad76d389c080a42f3b834c617e088d689677515cc",
+  "adapterSha256": "a76c50a767f104b9369d31eada89f82da7d4c222a1795b15b9c857a4c96d7a50",
+  "inverseByteExact": true,
+  "assertCallsBefore": 25,
+  "assertCallsAfter": 25,
+  "edits": [
+    {
+      "before": "browser=await chromium.launch({headless:true,executablePath:process.env.VDRAW_CHROMIUM||'/tmp/chromium',args:['--no-sandbox']});context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,acceptDownloads:true});",
+      "after": "context=await chromium.launchPersistentContext(await fs.mkdtemp('/tmp/vdraw007-pwa-profile-'),{headless:true,executablePath:process.env.VDRAW_CHROMIUM||'/tmp/chromium',args:['--no-sandbox'],viewport:{width:390,height:844},hasTouch:true,acceptDownloads:true});browser=context.browser();"
+    },
+    {
+      "before": "await browser?.close();",
+      "after": "await context?.close();"
+    }
+  ],
+  "originalPwaAssertionUnchanged": true,
+  "oldCiRun": "37345005037",
+  "oldPwaEvidence": {
+    "installabilityErrors": [
+      {
+        "errorId": "in-incognito",
+        "errorArguments": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "schema": "vdraw-release-blocker-checkpoint/1",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "startCheckpoint": {
+    "branch": "work/vdraw007-integration-round1-20261006",
+    "head": "70f9b5be972573906328e5d72b0318473ff5fa1c"
+  },
+  "approvedCheckpoint": {
+    "branch": "work/vdraw007-release-blockers-20261006",
+    "head": "b2f9351b6418f2b552d95b96132650a297ea0afe",
+    "immutable": true
+  },
+  "testedSource": {
+    "branch": "work/vdraw007-regression-environment-20261006",
+    "head": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+    "runId": 37347164239
+  },
+  "priorFailedRuns": [
+    {
+      "runId": 37340878779,
+      "pass": 31,
+      "fail": 8,
+      "blocked": 7,
+      "skip": 0
+    },
+    {
+      "runId": 37341421976,
+      "suiteExecuted": false,
+      "reason": "asset precheck mapping failure"
+    },
+    {
+      "runId": 37345005037,
+      "pass": 47,
+      "fail": 2,
+      "blocked": 3,
+      "skip": 0
+    }
+  ],
+  "signing": {
+    "status": "BLOCKED",
+    "officialExistingApkVerifyRun": 37342418509,
+    "officialVerifyPass": true,
+    "baselineApkRun": 37283743856,
+    "baselineHead": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "baselineApkSha256": "89350a7e6d8471ba3bbe983dfaeefba477d6ad31519f1036105da5cf9af71d09",
+    "applicationId": "jp.dksc.vdraw.prototype007",
+    "versionCode": 7,
+    "versionName": "0.7.0",
+    "certificateSha256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855",
+    "privateKey": "NOT_RECOVERED",
+    "installedApkIdentity": "NOT_VERIFIED",
+    "newApkGenerated": false,
+    "unreadArchives": 2,
+    "unreadReason": "HTTP502 via supported route; no absence inference"
+  },
+  "boundaries": {
+    "mainModified": false,
+    "validationModified": false,
+    "oldCheckpointsMoved": false,
+    "uninstall": false,
+    "dataDeletion": false,
+    "keysGenerated": false
+  },
+  "nextDeviceEvidence": "One APK file extracted from currently installed 007; original installer or Settings screenshot is insufficient for installed certificate identity.",
+  "caveat": "Installed APK identity does not recover private key; UPDATE_COMPATIBLE remains blocked until both gates are proven. Browser/fixtures are not real AI or Android device acceptance.",
+  "checkpointBranch": "work/vdraw007-release-checkpoint-20261006",
+  "checkpointCommitIdentity": "Git commit containing this document; branch ref records its exact HEAD.",
+  "releaseDecision": "HOLD_NO_NEW_APK",
+  "softwareGate": "PASS",
+  "P0": 0,
+  "P1": 0,
+  "P2": "UNCONFIRMED",
+  "physicalAcceptance": "NOT_RUN",
+  "actualCi": {
+    "limited": {
+      "sourceSha": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+      "profile": "limited",
+      "suiteComplete": false,
+      "pass": 18,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "caseCount": 180,
+      "summarySha256": "dff779075105319bd95a3b05ca774e7192a80500256d6df88c03fb712f4c53be",
+      "entryCount": 18
+    },
+    "full": {
+      "sourceSha": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+      "profile": "full",
+      "suiteComplete": true,
+      "pass": 52,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "caseCount": 183,
+      "summarySha256": "818d344a70867a7c0a47d63b3519bb89cfaf36dc4a2aeb418dd5ef92274902c3",
+      "entryCount": 52
+    },
+    "verdictSnapshotCount": 27,
+    "productionSha256": {
+      "web/src/app.js": "001947949538a28d99b9c7807b45483c2c30681e18f8986ce1130e1abff93fe5",
+      "web/src/vision.js": "d918e467f25fdfea31c7312b6ee145ec400b01dd39bc2d7cc48a52536cb459bb",
+      "web/sw.js": "3c784de85f9fd5c547c786e8680d013c299aae7bfc918f191b96f1912a38e7bd"
+    },
+    "rootReviewedOutputInspectors": [
+      "inspect_outputs.py",
+      "output-structure-005.py",
+      "output-inspect-004.py"
+    ]
+  },
+  "artifact": {
+    "id": 11361790491,
+    "bytes": 25854598,
+    "sha256": "ee3e7cd4f05fae0478e27da619dbd9f3b637faded6853445540a8021f758401d"
+  },
+  "qaApprovalHead": "1f699d70013e7ce0b4bf5bcca22bdfe5f6cfdc45",
+  "regressionEvidenceHead": "743767ab7659e36d5b9076d9e2ccb1d0e3ae6358",
+  "adoptedOwnerHeads": {
+    "input": "de4a29dfe70340746dcb43be9c1837e99aa900af",
+    "ui": "217dbada8368b1f29b9e236c4e0f15eb2e8c3936",
+    "signing": "525a1cd1eb6c3eccc3353f97b6d0e74e059843eb",
+    "fixtures": "148a1cd5afb61aaee93dc98a4343a3512771d59c",
+    "qa_before_final": "17ebe976e807f9127cef602e65a3eb8fee0162a4",
+    "ui_pwa": "4d798ed2ebf3d1ec14a5831ee55abcb19b018f80",
+    "bounded": "df7c9522b2e6b8c98a377aafdf1887f9d03f4664",
+    "qa_final": "1f699d70013e7ce0b4bf5bcca22bdfe5f6cfdc45"
+  },
+  "protection": {
+    "baseline": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+    "sourceSha": "e1292b62499701c8fe2558f9c76d334dcfb5ef8e",
+    "oldTestCount": 64,
+    "currentTestCount": 81,
+    "existingTestDelta": [
+      {
+        "path": "prototype/vdraw-mobile-007/tests/regression-manifest-round1.json",
+        "old": "e491c397d632833f5cab143e90c7c49b95c1cfb7",
+        "new": "ec0e965de303369572219374b66075941813ac3b"
+      }
+    ],
+    "productionDeltaFromApprovedCheckpoint": [],
+    "subtree006": "47cabdf70e9aebf7c64a1e028e85c476df32a169"
+  },
+  "protectedRefs": {
+    "verifiedOriginalRefCount": 20,
+    "changed": [],
+    "approvedCheckpoint": "b2f9351b6418f2b552d95b96132650a297ea0afe"
+  },
+  "initialBlockedTrace": {
+    "initial": 29,
+    "finalPass": 29,
+    "finalFail": 0,
+    "finalBlocked": 0,
+    "finalSkip": 0,
+    "independentEvidence": "docs/qa-release/initial-29-independent-final-trace.json"
+  },
+  "artifactRuntimeScope": {
+    "matchedGitBlobs": 115,
+    "hiddenFilesExcludedByUpload": 4,
+    "capacitorGeneratedFiles": 2,
+    "generatedMeaning": "JSON semantic equality; 8 dependency path replacements only. Git runtime121 blobs protected separately."
+  },
+  "outputEvidenceScope": "Product-stage snapshot and suite-final output are distinct: output-regression intentionally re-exports same names. Final file SHA256 values describe post-regression files.",
+  "newApkMetadata": {
+    "branch": null,
+    "head": null,
+    "runId": null,
+    "name": null,
+    "sha256": null,
+    "applicationId": null,
+    "versionCode": null,
+    "versionName": null,
+    "certificateSha256": null
+  }
+}

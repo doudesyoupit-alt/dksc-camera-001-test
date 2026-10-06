@@ -1,0 +1,80 @@
+{
+  "schema": "vdraw-independent-release-qa/1",
+  "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "status": "RELEASE_BLOCKED_PENDING_CI_SIGNING",
+  "p1HarnessSha256": "c18515bde6f5b8ab7e92c3f9c56ef53fcbe21ba68c19c57c8750dc865d297e48",
+  "independentLatestAfterCounts": {
+    "tests": 31,
+    "pass": 31,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "independentLatestAfterLogSha256": "ce804a01ad0eefd34c237890f87205051b459e88731bf8f901177ad8f5ab188a",
+  "sourceVerification": {
+    "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+    "verifiedBlobCount": 213,
+    "mismatches": [],
+    "notLocallyMaterialized": [
+      "docs/INTEGRATION-COLLECTION-20261006.md",
+      "docs/PERFORMANCE-REGRESSION-20261005.md",
+      "docs/PERFORMANCE-REGRESSION-EVIDENCE-20261005.json",
+      "docs/collection-20261006/android-initial-audit.md",
+      "docs/collection-20261006/collection-review-20261006.json",
+      "docs/collection-20261006/engine-initial-audit.txt",
+      "docs/collection-20261006/input-trace-initial-audit.txt",
+      "docs/collection-20261006/ledger.json",
+      "docs/collection-20261006/output-share-initial-audit.md",
+      "docs/collection-20261006/test-inventory.json",
+      "docs/collection-20261006/ui-qa-summary.txt",
+      "docs/round1/INTEGRATION-P1-ROUND1-20261006.md",
+      "docs/round1/integration-round1-ledger.json",
+      "docs/round1/integration-round1-test-results.json"
+    ],
+    "runtimeScopeComplete": true
+  },
+  "originalAssets": {
+    "count": 55,
+    "executables": 45,
+    "identity": "PASS",
+    "deleted": 0,
+    "assertionsChanged": 0
+  },
+  "true006Reference": {
+    "subtreeSha": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "webBlobsIndependentlyVerified": 37,
+    "status": "PASS_SOURCE_IDENTITY_ONLY"
+  },
+  "mappingReview": [
+    {
+      "mapping": "storage-extra-005→006",
+      "verdict": "EQUIVALENT_ASSERTIONS",
+      "difference": "DB005 namespace→actual006; runtime require/browser location; report name/display005→006 only"
+    },
+    {
+      "mapping": "native-assets-003/004/005/006→007",
+      "verdict": "CONDITIONAL",
+      "required": "CI synchronize assets and execute --check-assets; default source-only replacement omits legacy required parity"
+    },
+    {
+      "mapping": "gestures-update→007",
+      "verdict": "RETURNED_FOR_ADAPTER_FIX",
+      "required": "current SW namespace007-round1-v2 dynamic extraction; original007-v1 substitution now no-op; retain every assertion"
+    }
+  ],
+  "runnerReview": {
+    "verdict": "RETURNED_FOR_STRICT_RESULTS",
+    "issues": [
+      "skip summary hardcoded0 lacks actualTAP/Python/browser evidence parsing",
+      "only2 browser verdictFiles declared; require all fresh expected diagnostic outputs and failures/error arrays",
+      "CI17PASS/29BLOCKED cannot be accepted without actualbrowser/inspector execution",
+      "ui-performance true006 clone uses candidate CORE; separate true00637blob baseline needed for exactcomparison"
+    ]
+  },
+  "newConfirmedProductP0": 0,
+  "newConfirmedProductP1": 0,
+  "ciResults": "PENDING",
+  "signing": "PENDING_SEPARATE_AUDIT",
+  "APK": "PROHIBITED"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "sourceSha": "70f9b5be972573906328e5d72b0318473ff5fa1c",
+  "browser": "153.0.8010.0",
+  "before": {
+    "visible": false,
+    "detailsOpen": false,
+    "summary": "分類・線・重なり"
+  },
+  "afterSummaryClickWidthVisible": true,
+  "strokeWidthAfterSaveAndReload": 7,
+  "classification": "INHERITED_HARNESS_USER_FLOW_MISMATCH",
+  "normalUserAction": "open visible 分類・線・重なり summary before width edit",
+  "productP1": false,
+  "errors": []
+}

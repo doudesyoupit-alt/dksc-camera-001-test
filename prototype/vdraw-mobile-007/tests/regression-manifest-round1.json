@@ -412,8 +412,40 @@
       "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
     },
     "tests/gestures-update.mjs": {
-      "replacement": "tests/gestures-update-007.mjs",
-      "reason": "002 PWA namespace hardcoded;007 copy retains every assertion and substitutes only SW version/cache namespace."
+      "replacement": "tests/gestures-update-release.mjs",
+      "reason": "All original gesture/save/PWA assertions retained; current source CACHE namespace explicitly derived rather than stale 007-v1 string."
+    },
+    "tests/performance-final-006.mjs": {
+      "replacement": "tests/performance-final-006-reference.mjs",
+      "reason": "Legacy006reference comparison must use immutable006 shell, not integrated007render with005core fixture."
+    },
+    "tests/product.mjs": {
+      "replacement": "tests/product-007-adapter-v4.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/render-export-004.mjs": {
+      "replacement": "tests/render-export-004-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/photo-pipeline-005.mjs": {
+      "replacement": "tests/photo-pipeline-005-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/output-quality-005.mjs": {
+      "replacement": "tests/output-quality-005-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/ui-state-005.mjs": {
+      "replacement": "tests/ui-state-005-007-adapter-v3.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/vision-flow-003.mjs": {
+      "replacement": "tests/vision-flow-003-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/bounded-process-005.py": {
+      "replacement": "tests/bounded-process-005-race-safe.py",
+      "reason": "The original4 boundedprocess assertions are retained; true/proc ENOENT after exists means same terminated-child condition, without TOCTOU test error."
     }
   },
   "entries": [
@@ -561,10 +593,27 @@
         "tests/bounded-process-005.py"
       ],
       "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "bounded child process"
+      ],
+      "replacement": "tests/bounded-process-005-race-safe.py",
+      "reason": "The original4 boundedprocess assertions are retained; true/proc ENOENT after exists means same terminated-child condition, without TOCTOU test error."
+    },
+    {
+      "id": "bounded-process-005-race-safe.py",
+      "path": "tests/bounded-process-005-race-safe.py",
+      "kind": "python-unit",
+      "command": [
+        "python3",
+        "tests/bounded-process-005-race-safe.py"
+      ],
+      "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "bounded child process"
-      ]
+      ],
+      "expectedCaseCount": 4
     },
     {
       "id": "native-assets-007.py",
@@ -603,9 +652,31 @@
         "tests/product.mjs"
       ],
       "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/product-results.json"
+      ],
+      "replacement": "tests/product-007-adapter-v4.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    {
+      "id": "product-007-adapter-v4.mjs",
+      "path": "tests/product-007-adapter-v4.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/product-007-adapter-v4.mjs"
+      ],
+      "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/product-results.json"
       ]
     },
     {
@@ -622,7 +693,10 @@
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
       ],
       "dependencies": [
-        "product.mjs"
+        "product-007-adapter-v4.mjs"
+      ],
+      "verdictFiles": [
+        "evidence/output-regression-results.json"
       ]
     },
     {
@@ -640,6 +714,9 @@
       ],
       "dependencies": [
         "output-regression.mjs"
+      ],
+      "verdictFiles": [
+        "evidence/recovery-input-results.json"
       ]
     },
     {
@@ -651,9 +728,37 @@
         "tests/vision-flow-003.mjs"
       ],
       "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/vision-flow-003-results.json"
+      ],
+      "dependencies": [
+        "vision-provider.test.mjs"
+      ],
+      "replacement": "tests/vision-flow-003-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    {
+      "id": "vision-flow-003-007-adapter.mjs",
+      "path": "tests/vision-flow-003-007-adapter.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/vision-flow-003-007-adapter.mjs"
+      ],
+      "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/vision-flow-003-results.json"
+      ],
+      "dependencies": [
+        "vision-provider.test.mjs"
       ]
     },
     {
@@ -670,7 +775,7 @@
         "generated file structure"
       ],
       "dependencies": [
-        "vision-flow-003.mjs"
+        "vision-flow-003-007-adapter.mjs"
       ]
     },
     {
@@ -682,9 +787,31 @@
         "tests/photo-pipeline-005.mjs"
       ],
       "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/photo-pipeline-results.json"
+      ],
+      "replacement": "tests/photo-pipeline-005-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    {
+      "id": "photo-pipeline-005-007-adapter.mjs",
+      "path": "tests/photo-pipeline-005-007-adapter.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/photo-pipeline-005-007-adapter.mjs"
+      ],
+      "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/photo-pipeline-results.json"
       ]
     },
     {
@@ -696,9 +823,31 @@
         "tests/output-quality-005.mjs"
       ],
       "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/output-quality-results.json"
+      ],
+      "replacement": "tests/output-quality-005-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    {
+      "id": "output-quality-005-007-adapter.mjs",
+      "path": "tests/output-quality-005-007-adapter.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/output-quality-005-007-adapter.mjs"
+      ],
+      "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/output-quality-results.json"
       ]
     },
     {
@@ -715,8 +864,8 @@
         "generated file structure"
       ],
       "dependencies": [
-        "photo-pipeline-005.mjs",
-        "output-quality-005.mjs"
+        "photo-pipeline-005-007-adapter.mjs",
+        "output-quality-005-007-adapter.mjs"
       ]
     },
     {
@@ -733,7 +882,7 @@
         "generated file structure"
       ],
       "dependencies": [
-        "product.mjs",
+        "product-007-adapter-v4.mjs",
         "output-regression.mjs"
       ]
     },
@@ -746,9 +895,31 @@
         "tests/render-export-004.mjs"
       ],
       "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/render-export-results.json"
+      ],
+      "replacement": "tests/render-export-004-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    {
+      "id": "render-export-004-007-adapter.mjs",
+      "path": "tests/render-export-004-007-adapter.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/render-export-004-007-adapter.mjs"
+      ],
+      "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/render-export-results.json"
       ]
     },
     {
@@ -765,7 +936,7 @@
         "generated file structure"
       ],
       "dependencies": [
-        "render-export-004.mjs"
+        "render-export-004-007-adapter.mjs"
       ]
     },
     {
@@ -780,20 +951,26 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/gestures-004-results.json"
       ]
     },
     {
-      "id": "gestures-update-007.mjs",
-      "path": "tests/gestures-update-007.mjs",
+      "id": "gestures-update-release.mjs",
+      "path": "tests/gestures-update-release.mjs",
       "kind": "browser",
       "command": [
         "node",
-        "tests/gestures-update-007.mjs"
+        "tests/gestures-update-release.mjs"
       ],
       "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/gestures-update-results.json"
       ]
     },
     {
@@ -808,6 +985,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/save-gesture-003-results.json"
       ]
     },
     {
@@ -822,6 +1002,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-conflict-results.json"
       ]
     },
     {
@@ -836,6 +1019,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-safety-results.json"
       ]
     },
     {
@@ -850,6 +1036,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-safety-006-results.json"
       ]
     },
     {
@@ -864,6 +1053,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/storage-extra-006-results.json"
       ]
     },
     {
@@ -875,9 +1067,31 @@
         "tests/ui-state-005.mjs"
       ],
       "timeoutSeconds": 180,
+      "applicability": "historical-mapped",
+      "coverage": [
+        "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/ui-state-results.json"
+      ],
+      "replacement": "tests/ui-state-005-007-adapter-v3.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    {
+      "id": "ui-state-005-007-adapter-v3.mjs",
+      "path": "tests/ui-state-005-007-adapter-v3.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/ui-state-005-007-adapter-v3.mjs"
+      ],
+      "timeoutSeconds": 180,
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/ui-state-results.json"
       ]
     },
     {
@@ -893,7 +1107,10 @@
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
       ],
-      "limitation": "UI-only comparison and synthetic fixtures; independent fixed-origin actual candidate smoke required for P1 acceptance."
+      "limitation": "UI-only comparison and synthetic fixtures; independent fixed-origin actual candidate smoke required for P1 acceptance.",
+      "verdictFiles": [
+        "evidence/ui-007/UI-smoke-results.json"
+      ]
     },
     {
       "id": "screenshots-005.mjs",
@@ -909,7 +1126,10 @@
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
       ],
       "dependencies": [
-        "photo-pipeline-005.mjs"
+        "photo-pipeline-005-007-adapter.mjs"
+      ],
+      "verdictFiles": [
+        "evidence/screenshots.json"
       ]
     },
     {
@@ -924,6 +1144,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-results.json"
       ]
     },
     {
@@ -938,6 +1161,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-003-results.json"
       ]
     },
     {
@@ -952,6 +1178,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-after-results.json"
       ]
     },
     {
@@ -966,6 +1195,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/performance-after-results.json"
       ]
     },
     {
@@ -977,14 +1209,34 @@
         "tests/performance-final-006.mjs"
       ],
       "timeoutSeconds": 300,
-      "applicability": "current",
+      "applicability": "historical-mapped",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
       ],
       "verdictFiles": [
         "evidence/performance-final-006.json"
       ],
-      "limitation": "Common candidate UI/storage with005 vs candidate engine; phase006 is legacy label, never true006 baseline after logic changes."
+      "limitation": "Common candidate UI/storage with005 vs candidate engine; phase006 is legacy label, never true006 baseline after logic changes.",
+      "replacement": "tests/performance-final-006-reference.mjs",
+      "reason": "Legacy006reference comparison must use immutable006 shell, not integrated007render with005core fixture."
+    },
+    {
+      "id": "performance-final-006-reference.mjs",
+      "path": "tests/performance-final-006-reference.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/performance-final-006-reference.mjs"
+      ],
+      "timeoutSeconds": 300,
+      "applicability": "current",
+      "coverage": [
+        "Historical006reference only; sameoriginal6measurements, NOT current007runtime"
+      ],
+      "verdictFiles": [
+        "evidence/performance-final-006-reference.json"
+      ],
+      "limitation": "Historical scope: exact37blob immutable006 shell/storage with original0054modulefixtures versus006; original6 measurements retained. Not current007runtime proof; current007 has separate performance and true006comparison gates."
     },
     {
       "id": "ui-performance-007.mjs",
@@ -1016,6 +1268,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/clone-profile.json"
       ]
     },
     {
@@ -1030,6 +1285,9 @@
       "applicability": "current",
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
+      ],
+      "verdictFiles": [
+        "evidence/segment-probe.json"
       ]
     },
     {
@@ -1045,7 +1303,7 @@
       "coverage": [
         "browser storage/input/output/gesture/UI/performance as asserted in original harness"
       ],
-      "replacement": "tests/gestures-update-007.mjs",
+      "replacement": "tests/gestures-update-release.mjs",
       "reason": "002 PWA namespace hardcoded;007 copy retains every assertion and substitutes only SW version/cache namespace."
     },
     {
@@ -1127,12 +1385,65 @@
       ],
       "replacement": "tests/storage-extra-006.mjs",
       "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
+    },
+    {
+      "id": "ui-performance-true006-release.mjs",
+      "path": "tests/ui-performance-true006-release.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/ui-performance-true006-release.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "coverage": [
+        "true006 verified37blob baseline versus007 same5000UI thresholds"
+      ],
+      "verdictFiles": [
+        "evidence/ui-007/performance-true006-release.json"
+      ]
+    },
+    {
+      "id": "candidate-preview-flow.mjs",
+      "path": "tests/candidate-preview-flow.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "tests/candidate-preview-flow.mjs"
+      ],
+      "timeoutSeconds": 120,
+      "applicability": "current",
+      "coverage": [
+        "INPUT_CANDIDATE_POST_ADOPTION_PREVIEW_BLOCKED realbrowser save/reload/view/rejection/discard"
+      ],
+      "verdictFiles": [
+        "evidence/candidate-preview-flow.json"
+      ]
+    },
+    {
+      "id": "qa-release-candidate-preview.mjs",
+      "path": "tests/qa-release-candidate-preview.mjs",
+      "kind": "browser",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-release-candidate-preview.mjs"
+      ],
+      "timeoutSeconds": 180,
+      "applicability": "current",
+      "dependencies": [
+        "vision-provider.test.mjs"
+      ],
+      "coverage": [
+        "independentQA portable actualbrowser3case adopted/stale/malformed savedcandidate discard safety"
+      ],
+      "expectedCaseCount": 3
     }
   ],
   "executionContract": {
     "runOn": "integrated candidate SHA only after target tests and independentQA",
     "sourceAssertions": "archive entries and baseline fixtures remain byte identical",
-    "fullGate": "all current entries PASS; six historical targets explicitly mapped to assertions retained in current targets; any missing browser/dependency FAIL/BLOCKED forbids acceptance;skip0 is not proof of suite completion",
+    "fullGate": "all current entries PASS; every historical version target explicitly maps to retained assertions; any missing browser/dependency or false/missing/stale evidence FAIL/BLOCKED forbids acceptance; measured skip/todo/cancelled must be0",
     "newTests": "runner also discovers all *.test.mjs not in manifest",
     "exclusions": [
       "generated logs/evidence/APKs/exported files/node_modules/temp run copies"
@@ -1147,9 +1458,10 @@
     ]
   },
   "environment": {
-    "browser": "BLOCKED: no executable;normal Playwright install returned0MiB invalid ZIP",
+    "browser": "AVAILABLE: CI run37340878779 real Chrome154.0.8037.57; local Chromium153.0.8010.0 found; original empty /tmp/chromium preserved and never used",
     "node": "available",
-    "pythonInspectorPackages": "ezdxf/openpyxl/fitz installed"
+    "pythonInspectorPackages": "ezdxf/openpyxl/fitz installed",
+    "ciDependencies": "application npmci unchangedlock; isolated tools playwright1.62.1/jszip3.10.1; Python inspection requirements pinned"
   },
   "true006Reference": {
     "subtreeSha": "47cabdf70e9aebf7c64a1e028e85c476df32a169",

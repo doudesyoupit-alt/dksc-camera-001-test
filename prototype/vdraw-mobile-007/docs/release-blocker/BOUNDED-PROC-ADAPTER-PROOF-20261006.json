@@ -1,0 +1,41 @@
+{
+  "sourceBase": "57e0351c3aa4b1469bb116e68e8daf9286907f9c",
+  "actualAdapterSuite": {
+    "pass": 4,
+    "fail": 0,
+    "skip": 0
+  },
+  "originalRaceReproduction": "FAIL_FileNotFoundError",
+  "adapterRaceReproduction": "PASS_disappearance_accepted",
+  "negativeChecks": {
+    "missingStatButPIDExists": "REJECTED_FileNotFoundError",
+    "permissionError": "REJECTED_PermissionError",
+    "otherIOError": "REJECTED_OSError",
+    "malformedStat": "REJECTED_IndexError",
+    "livingSyntheticState": "REJECTED_not_exited",
+    "livingActualChild": "REJECTED_original_failure_message",
+    "zombieState": "ACCEPTED_same_as_original"
+  },
+  "boundsPreserved": {
+    "runBoundedTimeoutSeconds": 0.4,
+    "wholeOperationMaximumSeconds": 3,
+    "pollAttempts": 20,
+    "pollIntervalSeconds": 0.02
+  },
+  "rawTestSha256": "88e4b72883afae131949a8027e980cfb094a25fa5275b1406272609ad05adac7",
+  "productionSha256": "e47de980610b02e3174afa94bac686c35fc4defa8548197d0cd2d26c38cfb4ee",
+  "adapterSha256": "9d3d1c7ef1073bddc54162d8f4d6da44d1da640cfd120aca695e18feb70613bf",
+  "actualCasesLogSha256": "bfd6e55b41ad40676bceeabdcaca3a353083b88961fa055f9472a360d08cb265",
+  "logsOrOutputsAddedToGit": false,
+  "changesToRawOrProduction": false,
+  "independentQA": {
+    "reviewer": "/root/qa_release",
+    "status": "APPROVED",
+    "actualPass": 4,
+    "actualFail": 0,
+    "actualSkip": 0,
+    "negativeProbe": "independent vanished/existing PID, permission, IO, parse, live actual child and zombie checks confirmed",
+    "adapterSha256": "9d3d1c7ef1073bddc54162d8f4d6da44d1da640cfd120aca695e18feb70613bf",
+    "qaEvidenceOwnerBranch": "work/vdraw007-qa-release-20261006"
+  }
+}

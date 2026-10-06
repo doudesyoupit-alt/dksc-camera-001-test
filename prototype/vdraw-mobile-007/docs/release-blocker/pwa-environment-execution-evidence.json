@@ -1,0 +1,35 @@
+{
+  "sourceSha": "57e0351c3aa4b1469bb116e68e8daf9286907f9c",
+  "adapter": "product-007-adapter-v4.mjs",
+  "environment": "fresh ordinary persistent browser profile; incognito context replaced, no ignored installability errors",
+  "before": {
+    "runId": "37345005037",
+    "browser": "Chrome154",
+    "profile": "non-persistent newContext (incognito)",
+    "pwa": {
+      "installabilityErrors": [
+        {
+          "errorId": "in-incognito",
+          "errorArguments": []
+        }
+      ]
+    },
+    "result": "FAIL"
+  },
+  "afterLocal": {
+    "browser": "Chromium153",
+    "profile": "launchPersistentContext with fresh mkdtemp directory",
+    "result": "PASS",
+    "pass": 16,
+    "fail": 0,
+    "skip": 0,
+    "errors": [],
+    "consoleErrors": [],
+    "pwa": {
+      "installabilityErrors": []
+    },
+    "productEvidenceSha256": "00fc73fcea9c96b6745b7f1c9638f8d03084793b3a3ef82bad5f2b4ac131761c"
+  },
+  "sameChrome154After": "PENDING strict full CI; local153 success does not substitute for CI154 proof",
+  "originalPwaZeroErrorAssertionRetained": true
+}

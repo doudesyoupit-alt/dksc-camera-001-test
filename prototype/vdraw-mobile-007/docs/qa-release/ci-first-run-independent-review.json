@@ -1,0 +1,190 @@
+{
+  "status": "FULL_REGRESSION_NOT_PASS",
+  "runId": 37340878779,
+  "sourceSha": "00c684ba2d6edb0a713e8e22b7a6e5023da0536d",
+  "counts": {
+    "PASS": 31,
+    "FAIL": 8,
+    "BLOCKED": 7
+  },
+  "skipActuallyVerifiedFromLogs": 0,
+  "entryInventory": 46,
+  "nodeTotalCases": 167,
+  "nodeRows": [
+    {
+      "id": "core.test.mjs",
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "0e07c61ec87fcb98f5b7f53a04b0f7faf332116d8ff30197be2e4b9378dc393c"
+    },
+    {
+      "id": "command-update-004.test.mjs",
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "74bd995d2e6c03ef1cd988fc73641a24bd31a319c6077b0733936428253ef4eb"
+    },
+    {
+      "id": "history-codec-005.test.mjs",
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "54872dbe084d27d5b5477d1b8d248faecf89feeac560aadae477f4a7adc56939"
+    },
+    {
+      "id": "changes-006.test.mjs",
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "79fa5d24e1b48b0ff2c5256c951a7de83ed2d8e84a5dc7b0ce52f10f976c2c23"
+    },
+    {
+      "id": "native-shell.test.mjs",
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "4daed926fe0db39b0e3dabb698849716ad55fd5d7483cd6d90a235ec620ff9f8"
+    },
+    {
+      "id": "native-io-005.test.mjs",
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "9d934ef07e5a3872b34a2fd44992deabcc41f69710482d37d896eff217f260b2"
+    },
+    {
+      "id": "vision-contract-005.test.mjs",
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "dbb00d3b3bd3d267bc6d02e84e9c237e2874c669fc5d66d9ec5785b8552fe3c8"
+    },
+    {
+      "id": "vision-provider.test.mjs",
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "eb550470a794cd181f758e3e4e260bd2ec962365563eb644c42c690745e82bc2"
+    },
+    {
+      "id": "ui-theme-007.test.mjs",
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "475d82de0d9fb7133f58f99f4f40b8e914cf4700bcd58b88b761ac4ae21ad51c"
+    },
+    {
+      "id": "engine-001-regression.test.mjs",
+      "counts": {
+        "tests": 27,
+        "pass": 27,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "06040bb6969499d87e9183ab24515bbc5a7bfa798d8c341daf49ff61b2f1d7f1"
+    },
+    {
+      "id": "input-001-regression.test.mjs",
+      "counts": {
+        "tests": 26,
+        "pass": 26,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "29361454eac288854a24df875438391c981489b27fdf550f5ffbd3ad9e840364"
+    },
+    {
+      "id": "integration-offline-round1.test.mjs",
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "0ce6c6f9d46725123041b5b7dab86df24a2c129455782d88312a3cc92343bb17"
+    },
+    {
+      "id": "output-race-regression.test.mjs",
+      "counts": {
+        "tests": 27,
+        "pass": 27,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "dc994a58d724263170a1b79225802ffbf2d423b17e72efb7973b93f8517f624b"
+    },
+    {
+      "id": "qa-round2-independent.test.mjs",
+      "counts": {
+        "tests": 31,
+        "pass": 31,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "8287a91a8c193e6a825969e6c1a23c0937640e75f611cde055eb8d2768b0a064"
+    }
+  ],
+  "notes": [
+    "8 actual browser harness failures preserved, not counted as product P1 until independentclassification",
+    "7 dependencyBLOCKED not SKIP",
+    "nativeexactassetparity not yet included in this run",
+    "strict runner successor required for fullsignoff"
+  ],
+  "softwareP1Latest31Independent": "PASS"
+}
