@@ -45,6 +45,7 @@ jobs:
           set -euo pipefail
           npm ci --no-audit --no-fund
           npm run android:sync
+          git diff --exit-code HEAD -- web/vendor/native-bridge.js
           python3 tests/native-assets-007.py --check-assets
       - name: Save/share routing and owner race regression
         run: node --test tests/save001.test.mjs tests/native-io-005.test.mjs tests/native-shell.test.mjs tests/output-race-regression.test.mjs

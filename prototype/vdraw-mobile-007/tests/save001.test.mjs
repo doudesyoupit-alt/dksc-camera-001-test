@@ -106,3 +106,9 @@ for(const change of ['owner','revision','geometry'])test(`picker pending ${chang
  h.done.resolve();await pending;assert.equal(h.owner.doc.exports.length,0);assert.equal(h.c.doc().exports.length,0);
  assert.equal(h.events.filter(e=>e[0]==='persist').length,0);assert.equal(h.jobs.active,null);
 });
+
+test('committed native bundle exposes the registered DocumentSave proxy',async()=>{
+ const bridge=await import('../web/vendor/native-bridge.js');
+ assert.equal(typeof bridge.DocumentSave?.save,'function');
+ assert.equal(typeof bridge.Share.share,'function');
+});
