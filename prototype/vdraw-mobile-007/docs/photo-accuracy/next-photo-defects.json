@@ -1,0 +1,21 @@
+{
+  "schema": "vdraw-next-photo-phase-defects/1",
+  "baselineAcceptedSoftwareHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "baselineHistoricalP0": 0,
+  "baselineHistoricalP1": 0,
+  "currentPhotoPhaseP0": 0,
+  "currentPhotoPhaseP1": 1,
+  "issues": [
+    {
+      "id": "PHOTO-PPTX-001",
+      "severity": "P1",
+      "status": "OPEN_REPRODUCED",
+      "trigger": "includePhoto=true、非3:2写真、採用後1200x800ページ",
+      "problem": "PPTX写真がページcanvas全域へstretchされ、containで描かれるpreview/Overlayとの位置対応を壊す。",
+      "reproduction": "tests/photo-pptx-audit.mjs: 実PPTXを生成しnativeOOXML画像extentを検査。合成40x80写真のため実写真精度証拠には計上しない。",
+      "releaseGate": "NEXT_PHOTO_RELEASE_HOLD",
+      "fixStatus": "NOT_IMPLEMENTED_PENDING_SAVE001_DEVICE_ACCEPTANCE",
+      "productSourceModified": false
+    }
+  ]
+}

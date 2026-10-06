@@ -1,0 +1,73 @@
+{
+  "scope": "SYNTHETIC_INDEPENDENT_OFFLINE_COUNTEREXAMPLES_ONLY",
+  "realPhotoCount": 0,
+  "actualNetworkRequests": 0,
+  "checks": [
+    {
+      "id": "FORGED_TEN_REAL_AI",
+      "status": "REPRODUCED",
+      "actualRealPhotos": 0,
+      "actualAIRequests": 0,
+      "reportRealPhotoTotal": 10,
+      "reportRealAIPhotoCount": 10,
+      "formalObjectRecall": 1,
+      "productReleaseAllowed": false,
+      "reportStatus": "BLOCKED"
+    },
+    {
+      "id": "OVERLAY_SOURCE_BACKGROUND",
+      "status": "PASS",
+      "backgroundPixelEqual": true,
+      "overlayDimensionsEqual": true
+    },
+    {
+      "id": "PARTIAL_HOLDOUT_DENOMINATOR",
+      "status": "REPRODUCED",
+      "denominatorPhotos": 8,
+      "measuredPhotos": 7,
+      "objectRecallCoverage": 7,
+      "formalObjectRecall": 1,
+      "criticalMisses": null
+    },
+    {
+      "id": "CANONICAL_METADATA_TRANSPORT",
+      "status": "REPRODUCED",
+      "actualNetworkRequests": 0,
+      "mockedTransportCalls": 1,
+      "metadataReachedTransport": true
+    }
+  ],
+  "verdict": "PREPARATION_PASS_CI_PENDING",
+  "severity": "NO_OPEN_EVALUATOR_BLOCKER",
+  "findings": [
+    "Self-declared real-photo/real-providers flags plus fabricated hashes/200 network entries can claim ten real AI photos without any AI execution. ProductReleaseAllowed remains false, but counters/formal metrics are false evidence.",
+    "Formal averages exclude missing holdout metric values except critical sums, producing perfect objectRecall despite blocked holdout case. Keep all formal metrics null unless complete trusted holdout or publish explicitly conditional pilot statistics.",
+    "Runner accepts PNG text metadata and forwards those bytes to the transport. Canonical validation must reject EXIF/text/ICC metadata or regenerate verified clean bytes before any real provider send."
+  ],
+  "reverification": [
+    {
+      "id": "FORGED_TEN_REAL_AI",
+      "status": "RESOLVED_PASS",
+      "actualPhotos": 0,
+      "actualNetwork": 0,
+      "formalRealPhotos": 0,
+      "formalAIPhotos": 0,
+      "claimedRecords": 10,
+      "allFormalMetricsNull": true
+    },
+    {
+      "id": "PARTIAL_HOLDOUT_DENOMINATOR",
+      "status": "RESOLVED_PASS",
+      "registeredDenominator": 10,
+      "claimedProviderRecords": 9,
+      "allFormalMetricsNull": true
+    },
+    {
+      "id": "CANONICAL_METADATA_TRANSPORT",
+      "status": "RESOLVED_PASS",
+      "mockedTransportCalls": 0,
+      "actualNetworkRequests": 0,
+      "reason": "CANONICAL_METADATA_FORBIDDEN"
+    }
+  ]
+}

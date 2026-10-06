@@ -1,0 +1,157 @@
+{
+  "schema": "vdraw-photo-pilot-plan/1",
+  "status": "PLANNED_NOT_ACQUIRED",
+  "actualPhotoCount": 0,
+  "slots": [
+    {
+      "slotId": "P01",
+      "plannedSubjects": [
+        "分電盤",
+        "壁面",
+        "ボックス",
+        "施工前"
+      ],
+      "plannedConditions": [
+        "正面",
+        "近距離",
+        "縦長"
+      ],
+      "plannedDifficulty": "Easy",
+      "plannedSplit": "development",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P02",
+      "plannedSubjects": [
+        "EV充電器",
+        "壁面",
+        "配管",
+        "施工後"
+      ],
+      "plannedConditions": [
+        "正面",
+        "近距離",
+        "横長"
+      ],
+      "plannedDifficulty": "Easy",
+      "plannedSplit": "development",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P03",
+      "plannedSubjects": [
+        "電線管",
+        "壁面",
+        "ボックス"
+      ],
+      "plannedConditions": [
+        "斜め",
+        "影",
+        "背景複雑"
+      ],
+      "plannedDifficulty": "Normal",
+      "plannedSplit": "development",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P04",
+      "plannedSubjects": [
+        "建物外観",
+        "施工前"
+      ],
+      "plannedConditions": [
+        "遠距離",
+        "横長"
+      ],
+      "plannedDifficulty": "Normal",
+      "plannedSplit": "development",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P05",
+      "plannedSubjects": [
+        "設備機器",
+        "ボックス",
+        "施工後"
+      ],
+      "plannedConditions": [
+        "近距離",
+        "一部遮蔽"
+      ],
+      "plannedDifficulty": "Normal",
+      "plannedSplit": "development",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P06",
+      "plannedSubjects": [
+        "手書き"
+      ],
+      "plannedConditions": [
+        "正面",
+        "回転"
+      ],
+      "plannedDifficulty": "Normal",
+      "plannedSplit": "development",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P07",
+      "plannedSubjects": [
+        "既存図面"
+      ],
+      "plannedConditions": [
+        "正面",
+        "横長"
+      ],
+      "plannedDifficulty": "Hard",
+      "plannedSplit": "validation",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P08",
+      "plannedSubjects": [
+        "EV充電器",
+        "設備機器"
+      ],
+      "plannedConditions": [
+        "暗所",
+        "斜め"
+      ],
+      "plannedDifficulty": "Hard",
+      "plannedSplit": "validation",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P09",
+      "plannedSubjects": [
+        "分電盤",
+        "電線管"
+      ],
+      "plannedConditions": [
+        "逆光",
+        "一部遮蔽"
+      ],
+      "plannedDifficulty": "Hard",
+      "plannedSplit": "blind-holdout",
+      "countsAsRealPhoto": false
+    },
+    {
+      "slotId": "P10",
+      "plannedSubjects": [
+        "設備機器",
+        "配管",
+        "施工後"
+      ],
+      "plannedConditions": [
+        "EXIF回転",
+        "縦長",
+        "影"
+      ],
+      "plannedDifficulty": "Extreme",
+      "plannedSplit": "blind-holdout",
+      "countsAsRealPhoto": false
+    }
+  ],
+  "note": "12対象を複数対象写真で含む10slot案。難度/分割は受領・注釈前に固定。実ファイルなしのslotを写真枚数に算入しない。"
+}

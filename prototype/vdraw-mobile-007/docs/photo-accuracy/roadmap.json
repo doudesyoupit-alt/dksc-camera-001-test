@@ -1,0 +1,162 @@
+{
+  "schema": "vdraw-photo100-roadmap/1",
+  "targetPracticalAccuracyPercent": 100,
+  "majorFalsePassTarget": 0,
+  "productCompletionPercent": null,
+  "phases": [
+    {
+      "step": 1,
+      "objective": "0.8.2実機受入",
+      "status": "OPEN_USER_DEVICE_EVIDENCE_REQUIRED"
+    },
+    {
+      "step": 2,
+      "objective": "製品KPI再定義",
+      "status": "POLICY_FIXED"
+    },
+    {
+      "step": 3,
+      "objective": "100%目標固定",
+      "status": "POLICY_FIXED"
+    },
+    {
+      "step": 4,
+      "objective": "パイプライン棚卸し",
+      "status": "AUDITED"
+    },
+    {
+      "step": 5,
+      "objective": "実AI接続確定",
+      "status": "AUDITED"
+    },
+    {
+      "step": 6,
+      "objective": "Camera Quality Gate",
+      "status": "PLANNED"
+    },
+    {
+      "step": 7,
+      "objective": "Golden3split/4difficulty",
+      "status": "PREPARATION_IMPLEMENTED"
+    },
+    {
+      "step": 8,
+      "objective": "10枚故障探索",
+      "status": "BLOCKED_INPUTS"
+    },
+    {
+      "step": 9,
+      "objective": "写真別指標",
+      "status": "PREPARATION_IMPLEMENTED"
+    },
+    {
+      "step": 10,
+      "objective": "元写真Overlay",
+      "status": "PREPARATION_IMPLEMENTED"
+    },
+    {
+      "step": 11,
+      "objective": "INPUT001座標契約",
+      "status": "PLANNED"
+    },
+    {
+      "step": 12,
+      "objective": "根拠付き校正",
+      "status": "PLANNED"
+    },
+    {
+      "step": 13,
+      "objective": "Perspective/Lens補正",
+      "status": "PLANNED"
+    },
+    {
+      "step": 14,
+      "objective": "複数写真統合",
+      "status": "PLANNED"
+    },
+    {
+      "step": 15,
+      "objective": "不確実性伝播",
+      "status": "PLANNED"
+    },
+    {
+      "step": 16,
+      "objective": "GeometryValidation",
+      "status": "PLANNED"
+    },
+    {
+      "step": 17,
+      "objective": "SceneGraph",
+      "status": "PLANNED"
+    },
+    {
+      "step": 18,
+      "objective": "人間修正コスト",
+      "status": "PREPARATION_IMPLEMENTED"
+    },
+    {
+      "step": 19,
+      "objective": "差分資産化/非送信",
+      "status": "PLANNED"
+    },
+    {
+      "step": 20,
+      "objective": "Failure原因別修正/QA",
+      "status": "PLANNED"
+    },
+    {
+      "step": 21,
+      "objective": "50枚評価",
+      "status": "PLANNED"
+    },
+    {
+      "step": 22,
+      "objective": "100→数百",
+      "status": "PLANNED"
+    },
+    {
+      "step": 23,
+      "objective": "モデル変更全Golden回帰",
+      "status": "PLANNED"
+    },
+    {
+      "step": 24,
+      "objective": "PPTX/DXF実編集",
+      "status": "PLANNED"
+    },
+    {
+      "step": 25,
+      "objective": "RoundTrip",
+      "status": "PLANNED"
+    },
+    {
+      "step": 26,
+      "objective": "複数端末",
+      "status": "PLANNED"
+    },
+    {
+      "step": 27,
+      "objective": "ReleaseHardGate",
+      "status": "PLANNED"
+    },
+    {
+      "step": 28,
+      "objective": "実機必要操作のみ",
+      "status": "PLANNED"
+    },
+    {
+      "step": 29,
+      "objective": "総括自走",
+      "status": "POLICY_FIXED"
+    },
+    {
+      "step": 30,
+      "objective": "正式KPI先行報告",
+      "status": "POLICY_FIXED"
+    }
+  ],
+  "nextProductionPhaseAllowed": false,
+  "nextOfflinePreparationAllowed": true,
+  "firstRealPhotoTrialStatus": "BLOCKED_PHOTOS_GT_PROVIDER_UNAVAILABLE",
+  "targetNotLowered": true
+}

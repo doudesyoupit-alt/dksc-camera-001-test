@@ -1,0 +1,959 @@
+{
+  "schema": "vdraw-photo-pipeline-audit/1",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "baselineHead": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "auditedAt": "2026-10-06T04:07:35.725034+00:00",
+  "method": "read-only source and existing evidence audit; four public Git blob SHA values independently fetched and matched local bytes; no image/provider transmission; no product mutation",
+  "sourceRoot": "/workspace/scratch/61eba1ae6939/save001-ci/full-final/project",
+  "sourceVerifiedBlobHashes": {
+    "prototype/vdraw-mobile-007/web/src/vision.js": "37be20846f9694cfd023c0194a32cd75cf6312fd",
+    "prototype/vdraw-mobile-007/web/src/importers.js": "33fe27ec3d1f33647967892d386b2c7148b7b84c",
+    "prototype/vdraw-mobile-007/server/vision-provider.mjs": "be08b2c2c7b50e58870354d88df7e5355357c12e",
+    "prototype/vdraw-mobile-007/web/src/exporters.js": "712b837480bee2865bd37b5a82fac8b9864b8b47"
+  },
+  "classificationDefinition": {
+    "REAL": "real mechanism exists, not an accuracy or provider-connection assertion",
+    "MOCK": "injected fake provider response",
+    "FIXTURE": "synthetic or deterministic test asset, regression only",
+    "HEURISTIC": "deterministic conversion/ranking without validated model inference",
+    "NOT_IMPLEMENTED": "no implemented path for the stated capability in product runtime"
+  },
+  "providerConfigurationExistenceOnly": {
+    "ANTHROPIC_API_KEY": false,
+    "CLAUDE_MODEL": false,
+    "SAM_PROVIDER_URL": false,
+    "SAM_PROVIDER_TOKEN": false
+  },
+  "providerConfigurationScope": "this execution environment only; no GitHub secret retrieval or conclusion about other deployment environments",
+  "verifiedRealInferenceEvidenceCount": 0,
+  "verifiedRealPhotoInputCount": 0,
+  "officialAccuracy": {
+    "status": "NOT_MEASURED",
+    "reason": "No authorized real-photo Golden manifest, ground-truth annotations, or real provider connection evidence"
+  },
+  "pipeline": [
+    {
+      "stage": "Camera",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "Native Capacitor Camera / web capture input → importFile。撮影と認識品質評価は別。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/native-io.js",
+          "lines": [
+            4,
+            4
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/device.js",
+          "lines": [
+            11,
+            14
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            95,
+            95
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/index.html",
+          "lines": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Image Quality",
+      "productRuntimeClassification": "NOT_IMPLEMENTED",
+      "availableComponentClassification": "NOT_IMPLEMENTED",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "48MP上限、長辺2000pxへのPNG変換のみ。Blur/glare/darkness/occlusion/retake判定なし。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/device.js",
+          "lines": [
+            11,
+            12
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            51,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Scene Understanding",
+      "productRuntimeClassification": "NOT_IMPLEMENTED",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "finding": "Node private Claude adapter は実API送信コードあり。製品UIはUNCONNECTED/BLOCKED、接続実績なし。テストはfetch注入MOCK。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            57,
+            60
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            48,
+            62
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/vision-provider.test.mjs",
+          "lines": [
+            4,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Detection",
+      "productRuntimeClassification": "NOT_IMPLEMENTED",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "finding": "独立detectorはなくClaude scene.objectsのカテゴリと概略bbox。実推論の検出Precision/Recallは未測定。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/server/scene-schema.mjs",
+          "lines": [
+            3,
+            3
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            59,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Segmentation",
+      "productRuntimeClassification": "NOT_IMPLEMENTED",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "finding": "私用SAM wrapperへのHTTP契約はあり。model/checkpoint/CUDA実装・稼働証跡なし。rankMasksは最高score mask選択。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            63,
+            65
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/sam-contract.mjs",
+          "lines": [
+            1,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "OCR",
+      "productRuntimeClassification": "NOT_IMPLEMENTED",
+      "availableComponentClassification": "NOT_IMPLEMENTED",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "写真OCR専用経路なし。PDFのnativeText抽出はREAL構造読み取りで写真OCRではない。SAM geometry text型受入はOCR実装を意味しない。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/importers.js",
+          "lines": [
+            12,
+            15
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/scene-schema.mjs",
+          "lines": [
+            3,
+            3
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            26,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Line Detection",
+      "productRuntimeClassification": "NOT_IMPLEMENTED",
+      "availableComponentClassification": "NOT_IMPLEMENTED",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "手動line図形と外部geometry line型はあるが画像からの専用Line検出なし。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            26,
+            31
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/core.js",
+          "lines": [
+            5,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Geometry Fitting",
+      "productRuntimeClassification": "HEURISTIC",
+      "availableComponentClassification": "HEURISTIC",
+      "existingEvidenceClassification": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "finding": "SAM提供polygon/bboxをローカルallowlistでeditable elementへ変換。primitive fitting/自動校正/画像から幾何推定の専用実装なし。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/server/sam-contract.mjs",
+          "lines": [
+            13,
+            15
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            21,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "coordinateSpace Conversion",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "named drawing frame、PNG実寸sourceBinding、contain referenceImageTransform、uniform scale+offsetを固定。試験はsynthetic PNG header/fixture。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            2,
+            55
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/input-001-regression.test.mjs",
+          "lines": [
+            9,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Candidate",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "result JSON手動受信、source/page/bounds照合、pending候補。operation-sampleとprotocol-fixtureラベル別。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            61,
+            75
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            151,
+            151
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Adopt",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "reviewed必要、atomic新規ページ採用、元図面保持。UI採用押下がreviewedを付与。Overlay閲覧は必須でない。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            86,
+            94
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            136,
+            136
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Editor",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "基本図形/文字/円弧/多角形と編集Undo/Redo。object rotation・scene graphなし。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/core.js",
+          "lines": [
+            5,
+            23
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/commands.js",
+          "lines": [
+            3,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Save / Reload",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "IndexedDB、SHA256 checksum、CAS、checkpoint、履歴で保存復元。候補sourceBindingはJSON保存される。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/storage.js",
+          "lines": [
+            8,
+            28
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            52,
+            54
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/input-001-regression.test.mjs",
+          "lines": [
+            22,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "PPTX",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "editable OOXML図形/文字、polygon/arc custom geometry生成。構造検査はfixture。PowerPoint実アプリ/実写真忠実度なし。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/exporters.js",
+          "lines": [
+            9,
+            29
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/output-structure-005.py",
+          "lines": [
+            8,
+            27
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/output-structure-005.py",
+          "lines": [
+            35,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "DXF",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "native entityの単位なしDXF生成、ezdxf audit fixture。製品DXF importなし、Jw_cad未実行。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/exporters.js",
+          "lines": [
+            31,
+            47
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/importers.js",
+          "lines": [
+            36,
+            36
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/output-structure-005.py",
+          "lines": [
+            28,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "PDF",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "閲覧用ラスタPDF、editable CAD/vector roundtripではない。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/exporters.js",
+          "lines": [
+            59,
+            59
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/importers.js",
+          "lines": [
+            13,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "Overlay",
+      "productRuntimeClassification": "REAL",
+      "availableComponentClassification": "REAL",
+      "existingEvidenceClassification": [
+        "FIXTURE"
+      ],
+      "finding": "元作業PNGと図形をcontainでSVG重ね表示。定量IoU/位置角度輪郭スコアなし、adopt必須チェックなし。",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/render.js",
+          "lines": [
+            12,
+            12
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            33,
+            34
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            65,
+            66
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            133,
+            136
+          ]
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "PHOTO-001",
+      "code": "REAL_AI_NOT_CONNECTED",
+      "description": "製品UIのdraftは毎回BLOCKED。私用Node adapter存在を製品の実AI接続PASSへ読み替え不可。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            57,
+            60
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            15,
+            15
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/serve.py",
+          "lines": [
+            1,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-002",
+      "code": "REAL_PHOTO_ACCURACY_UNMEASURED",
+      "description": "既存photo-pipeline証跡realAI=false、realPhotoInputs=0。12工程SUCCESSはsynthetic+mockの接続/編集回帰であり認識精度でない。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/tests/photo-pipeline-005-007-adapter.mjs",
+          "lines": [
+            7,
+            13
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/photo-pipeline-005-007-adapter.mjs",
+          "lines": [
+            19,
+            22
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/evidence/photo-pipeline-results.json",
+          "lines": [
+            33,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-003",
+      "code": "CAMERA_QUALITY_GATE_MISSING",
+      "description": "取り込み/画像サイズ制限と品質判定を区別する必要あり。撮影画像の劣化理由・撮り直し案内・品質判定KPI未実装。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/device.js",
+          "lines": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-004",
+      "code": "UNCERTAINTY_CONTRACT_MISSING",
+      "description": "scene schemaはid/name/category/color/bboxのみ、stage別confidence/statusなし。未知対象は保持されるがKNOWN/UNCERTAIN/OCCLUDED等伝播なし。UNKNOWN→CONFIRMED自動昇格は発見なし（CONFIRMED型自体なし）。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/server/scene-schema.mjs",
+          "lines": [
+            3,
+            3
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            34,
+            34
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            67,
+            69
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-005",
+      "code": "REAL_PROVENANCE_SELF_DECLARATION",
+      "description": "executionKindはインポートJSONの自己申告。モデル接続レシート/暗号署名/送信原画像hash照合なし。candidate sourceFingerprintは受信時の現sourceから生成する変更検知で、実AI/元入力の証明ではない。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            21,
+            25
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            46,
+            50
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            62,
+            70
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/trial-recorder.js",
+          "lines": [
+            40,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-006",
+      "code": "CANDIDATE_PROVENANCE_DROPPED",
+      "description": "providerがcandidate.provenance model/samModel/usageを付与するがVisionJobs.receiveのreceivedにはコピーされない。外部resultのrecordは診断ledgerへ一部伝達されるが候補自体のprovenanceなし。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            67,
+            67
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            69,
+            69
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/trial-recorder.js",
+          "lines": [
+            9,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-007",
+      "code": "OVERLAY_NOT_REQUIRED",
+      "description": "candidatePreview初期view=drawing。採用ボタン押下がreviewedを記録し、写真/Overlayを実際に確認したことを必須にしない。操作成功は一致精度のPASSではない。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            65,
+            66
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            133,
+            136
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-008",
+      "code": "PPTX_PHOTO_ASPECT_MISMATCH",
+      "description": "PPTX includePhotoは写真をpage.canvas全域へ直接伸長。採用後の固定1200x800ページで非3:2写真があるとSVG containとの差が生じる。例1000x2000写真→SVG x=400,w=400,h=800だがPPTX背景photo x=0,w=1200,h=800相当。実写真未実行だがコード上の条件と変換差は確認済。既存構造試験はpic0のみ。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            45,
+            55
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/vision.js",
+          "lines": [
+            89,
+            90
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/render.js",
+          "lines": [
+            12,
+            12
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/exporters.js",
+          "lines": [
+            11,
+            12
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/output-structure-005.py",
+          "lines": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-009",
+      "code": "EXIF_AND_PERSPECTIVE_NOT_EVALUATED",
+      "description": "createImageBitmap from-imageとNative correctOrientationに頼るEXIF正規化は存在するが実EXIF fixture/レンズ/回転/端末別精度検証なし。Homography/Perspective/lens distortion補正なし。AIには斜め対象を直角化しないpromptのみ。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/device.js",
+          "lines": [
+            11,
+            11
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/native-io.js",
+          "lines": [
+            4,
+            4
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            59,
+            59
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/input-001-regression.test.mjs",
+          "lines": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-010",
+      "code": "SCALE_CALIBRATION_NOT_IMPLEMENTED",
+      "description": "page UNSCALED、AI候補UNSCALED固定とallowlistによるmodel calibration排除は保護済。UI実測mmは対象辺のみMANUAL/doesNotCalibratePage。CALIBRATED/provenance各方式未実装。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/core.js",
+          "lines": [
+            17,
+            17
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            27,
+            34
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/app.js",
+          "lines": [
+            123,
+            123
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/exporters.js",
+          "lines": [
+            35,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-011",
+      "code": "GEOMETRY_AND_SCENE_GRAPH_GATES_MISSING",
+      "description": "bounds/有限値/型/polygon点数/円弧円形の形式検査は存在するが、自己交差/duplicate/微小線/接続/平行/直角/接線/関係graph検証なし。SAM scoreは最高順位選択にのみ使用しconfidenceは出力から失われる。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/core.js",
+          "lines": [
+            25,
+            43
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/vision-provider.mjs",
+          "lines": [
+            25,
+            33
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/sam-contract.mjs",
+          "lines": [
+            9,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-012",
+      "code": "ROUND_TRIP_INCOMPLETE",
+      "description": "PPTX基本型importはあるがrotation/group/画像/非閉路arc等未対応。DXF製品importなし。PPTX/DXF生成→再読込→再編集→再出力の写真単位忠実度KPIなし。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/importers.js",
+          "lines": [
+            24,
+            36
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/recovery-input.mjs",
+          "lines": [
+            5,
+            5
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/tests/output-structure-005.py",
+          "lines": [
+            35,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-013",
+      "code": "HUMAN_CORRECTION_LEDGER_PARTIAL",
+      "description": "counts/color/shape/classと作業時間を集計するが座標/文字/色/形状before-after構造差分の永続記録なし。operatorActionCountはadoptも含む。無修正はfirstEdit=null時にcorrectionTimeMs=nullで0ms断定不可。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/trial-recorder.js",
+          "lines": [
+            31,
+            40
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/commands.js",
+          "lines": [
+            9,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PHOTO-014",
+      "code": "MULTIVIEW_AND_GOLDEN_NOT_REGISTERED",
+      "description": "複数source/pagesは資料保持であり同一対象multi-view identity統合ではない。Development/Validation/Blind split、difficulty/対象/条件annotation、実写真hash認可台帳なし。",
+      "releaseGateImplication": "Required before photo-accuracy release claim; not a claim that previous SAVE-001 release failed",
+      "references": [
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/core.js",
+          "lines": [
+            20,
+            20
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/web/src/importers.js",
+          "lines": [
+            7,
+            15
+          ]
+        },
+        {
+          "file": "prototype/vdraw-mobile-007/server/photo-trial.mjs",
+          "lines": [
+            9,
+            12
+          ]
+        }
+      ]
+    }
+  ],
+  "nextPhaseReadiness": "READY_FOR_OFFLINE_EVALUATION_ENVIRONMENT; BLOCKED_FOR_REAL_AI_10_PHOTO_EVALUATION",
+  "requiredEvidence": [
+    "0.8.2 user SAF chooser one-action physical acceptance; cannot infer from CI",
+    "Authorized real-photo input assets with provenance/ground truth and Development/Validation/Blind split",
+    "Authenticated private real provider runtime and explicit external-transfer/cost approval recorded per input",
+    "Overlay + per-photo metrics + uncertainty + scale + editable export/roundtrip evaluation"
+  ],
+  "constraintsPreserved": {
+    "mainUntouched": true,
+    "validationUntouched": true,
+    "006Untouched": true,
+    "signingBranchUntouched": true,
+    "secretsReadOrPrinted": false,
+    "externalImageTransmission": false,
+    "productCodeChanged": false
+  }
+}

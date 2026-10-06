@@ -1,0 +1,12 @@
+{
+  "schema": "vdraw-photo-golden/1",
+  "datasetId": "vdraw-field-pilot-20261006-v1",
+  "snapshotStatus": "DRAFT",
+  "photos": [],
+  "plannedPhotoCount": 10,
+  "planFile": "pilot-plan.json",
+  "formalAccuracyBasis": "FROZEN_BLIND_HOLDOUT_ONLY",
+  "originalsCommitted": false,
+  "autoExternalTransfer": false,
+  "autoLearning": false
+}

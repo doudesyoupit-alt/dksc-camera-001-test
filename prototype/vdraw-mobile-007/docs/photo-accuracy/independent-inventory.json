@@ -1,0 +1,1084 @@
+{
+  "schema": "vdraw-photo100-independent-inventory/1",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "releaseHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "softwareQACheckpoint": "5a6a760c7ece23fda764b1f3f6d2fa1f0dd09737",
+  "SAFDeviceAcceptance": "OPEN_HOLD_PENDING_USER_EVIDENCE",
+  "repositoryScope": {
+    "recursiveTreeComplete": true,
+    "blobCount": 498,
+    "imageFiles": 63,
+    "realConstructionPhotos": 0,
+    "classification": "All 63 committed image files are root/web icons or Android launcher/splash resources. No committed scene photograph, Golden dataset, split manifest, or ground-truth photo annotation found."
+  },
+  "ciArtifactScope": {
+    "path": "/workspace/scratch/61eba1ae6939/save001-ci/full-final/project",
+    "imageCount": 103,
+    "classificationCounts": {
+      "icon": 23,
+      "splash-resource": 11,
+      "test-screenshot": 66,
+      "synthetic-fixture": 1,
+      "generated-raster-export": 1,
+      "generated-vector-export": 1
+    },
+    "realPhotoInputsVerified": 0,
+    "realAIInferenceRunsVerified": 0,
+    "localImages": [
+      {
+        "path": "android/app/src/main/assets/public/assets/icon-192.png",
+        "sha256": "141665bf77f49b2bdccbc65a89c1315bf4cf00ec3c8fbc1479e41708b78e1506",
+        "bytes": 1303,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/assets/public/assets/icon-512.png",
+        "sha256": "938db75fc9360cc3590edcf5397140a9d1d5121e81846f70f89fbe27b23c6fa0",
+        "bytes": 3578,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/assets/public/assets/icon-maskable.png",
+        "sha256": "938db75fc9360cc3590edcf5397140a9d1d5121e81846f70f89fbe27b23c6fa0",
+        "bytes": 3578,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/assets/public/assets/icon.svg",
+        "sha256": "95bb749247a9829726eee54fbd9b2a0ba24c780ace10a9e15caf19ae2ddf0cf2",
+        "bytes": 281,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable/splash.png",
+        "sha256": "1d3e2ebf99237da789f0c92d32085fb2279f6c7256f897b4a9ca0a1c4ac5b0ce",
+        "bytes": 4411,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-land-hdpi/splash.png",
+        "sha256": "4ea2f231264acdb22f7e1c0873af01b316dd5863c6403e3d000f607406f51d69",
+        "bytes": 6973,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-land-mdpi/splash.png",
+        "sha256": "1d3e2ebf99237da789f0c92d32085fb2279f6c7256f897b4a9ca0a1c4ac5b0ce",
+        "bytes": 4411,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-land-xhdpi/splash.png",
+        "sha256": "1e5f3a342ec28fe2f69119508a5077d51cbb30b181f2a9dfd36aa63f0e39f3d7",
+        "bytes": 11224,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-land-xxhdpi/splash.png",
+        "sha256": "cca7f8fb8d3012147f6967f9e6861e4fb670f338bb0cab3079fd8746e0033a4a",
+        "bytes": 15909,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-land-xxxhdpi/splash.png",
+        "sha256": "721b4bffafa01e608f0d855e0909f2fd3eb977365eeecf1c2df4cfc1d9d4ca6b",
+        "bytes": 22345,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-port-hdpi/splash.png",
+        "sha256": "babc529bf916b4a53fe7ea708d4dedc3cc1242daf1babdc53a88cd8bbb220d25",
+        "bytes": 7669,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-port-mdpi/splash.png",
+        "sha256": "ad98953f8acb178f37339c74e7145b6d4f9374506d3023a333ae244edcf27409",
+        "bytes": 4674,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-port-xhdpi/splash.png",
+        "sha256": "22e0a89d6d589f6a3993fa9cb83704649e70df45dc879e0777f5cdd19085599b",
+        "bytes": 12524,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-port-xxhdpi/splash.png",
+        "sha256": "2d26f2c6d9cd1c47766fb3a3761f848297d01f81890e95a592352fadc4cb64bf",
+        "bytes": 17142,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/drawable-port-xxxhdpi/splash.png",
+        "sha256": "6d619329c81876b6168dbaa612f916a49ad721a23858649a828ebd75a483623f",
+        "bytes": 23615,
+        "class": "splash-resource",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "sha256": "528a99cdca3555bbbd53d889ca6acb592a205f0b38ae10745906390cb29d1d3f",
+        "bytes": 2603,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+        "sha256": "410438d4e28db08b2af03bf5b88774f3e63277baa49db034f3856190070c18f7",
+        "bytes": 5976,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+        "sha256": "528a99cdca3555bbbd53d889ca6acb592a205f0b38ae10745906390cb29d1d3f",
+        "bytes": 2603,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "sha256": "25506f6e2678fa17cd37d64b72424f9249d102493deb564f9fb1df623f414886",
+        "bytes": 1754,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+        "sha256": "0bebf18e04a7b4c93c92d9639ccb74d1c070036761ae0d1f2bc3b280d113eca5",
+        "bytes": 3955,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+        "sha256": "25506f6e2678fa17cd37d64b72424f9249d102493deb564f9fb1df623f414886",
+        "bytes": 1754,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "sha256": "df869f6a9409443d095b45c6b461801642accebd52abb607964a62a6518988a7",
+        "bytes": 3518,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+        "sha256": "f47a0a9f13f6400c8f0aa74a5ad0652f37e33df91b1872f840e5b76f2d1154a7",
+        "bytes": 7950,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+        "sha256": "df869f6a9409443d095b45c6b461801642accebd52abb607964a62a6518988a7",
+        "bytes": 3518,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "sha256": "3f5d4a033133909f023ba3e308fa49ed565adfafde865d657739784717d3c873",
+        "bytes": 5187,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+        "sha256": "b0db77c1b5a803afa4fe2b0e44342360a74a5fa63d2f5159908660cc6246a3f4",
+        "bytes": 12055,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+        "sha256": "3f5d4a033133909f023ba3e308fa49ed565adfafde865d657739784717d3c873",
+        "bytes": 5187,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "sha256": "92be92661a94dbbfea774b7ab9592ce8f4666a4b8598d01602e6ef0437fe09bf",
+        "bytes": 7070,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+        "sha256": "0fed0e155c86709e2b28ba48d2003d284442c34cf22164c0b109272ce0b34ad3",
+        "bytes": 16602,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+        "sha256": "92be92661a94dbbfea774b7ab9592ce8f4666a4b8598d01602e6ef0437fe09bf",
+        "bytes": 7070,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/01-home-clean.png",
+        "sha256": "97a1fe366bf35cdcdc2daa254df564d1df1fe5a76667abced7cfaa7dcf2ed767",
+        "bytes": 52706,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/gestures-update-007.mjs",
+          "tests/gestures-004.mjs",
+          "tests/gestures-update.mjs",
+          "tests/gestures-update-release.mjs"
+        ]
+      },
+      {
+        "path": "evidence/01-home-multiple.png",
+        "sha256": "9f9b9046d6fed1a6a97941b009f9f7682a0bde7ec03d208dc22957fe75507708",
+        "bytes": 54839,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/product.mjs",
+          "tests/product-007-adapter-v4.mjs",
+          "tests/product-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/01-home.png",
+        "sha256": "becf41f0739a376585e806f362297053482ceefb071691bf9221f533ecce0e03",
+        "bytes": 55117,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/product.mjs",
+          "tests/product-007-adapter-v4.mjs",
+          "tests/product-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/02-editor-clean.png",
+        "sha256": "d4a500d7549ae9f59488cf7f81407c4326012c81e27a2f8ebe514e0bee62d317",
+        "bytes": 28206,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/gestures-update-007.mjs",
+          "tests/gestures-004.mjs",
+          "tests/gestures-update.mjs",
+          "tests/gestures-update-release.mjs"
+        ]
+      },
+      {
+        "path": "evidence/02-editor.png",
+        "sha256": "3a4cd9e5dd3b89ff1a5d0d6a8565566f237603735c48244c95fcef91d738cc15",
+        "bytes": 28960,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/product.mjs",
+          "tests/product-007-adapter-v4.mjs",
+          "tests/product-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/03-export-clean.png",
+        "sha256": "f589fa35d21214eff62d2ea595c26881e31e05f57e218f5f4609f39239ceecba",
+        "bytes": 46682,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/gestures-update-007.mjs",
+          "tests/gestures-004.mjs",
+          "tests/gestures-update.mjs",
+          "tests/gestures-update-release.mjs"
+        ]
+      },
+      {
+        "path": "evidence/03-export.png",
+        "sha256": "829323c905e2d6f95b20baee28dc6f3b9e4c064cdb46bed0dd17118e92f26347",
+        "bytes": 47144,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/product.mjs",
+          "tests/product-007-adapter-v4.mjs",
+          "tests/product-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/candidate-003-390.png",
+        "sha256": "3c2977fbdb1d6ea6b18727f068d9dab8f062bd05484fa9a757bbae16c19476f4",
+        "bytes": 86308,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/vision-flow-003-007-adapter.mjs",
+          "tests/vision-flow-003.mjs"
+        ]
+      },
+      {
+        "path": "evidence/candidate-005-390.png",
+        "sha256": "8fcbc6f66431686630617206d283c00aca1fff3037065a4b3c35be0978012cb8",
+        "bytes": 92807,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/photo-pipeline-005-007-adapter.mjs",
+          "tests/photo-pipeline-005.mjs"
+        ]
+      },
+      {
+        "path": "evidence/developer-003-390.png",
+        "sha256": "3ae3c38580f34c5b03f14a3caf492fd00cf293bbd125c37a78b6d8d5a1b95a91",
+        "bytes": 112210,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/vision-flow-003-007-adapter.mjs",
+          "tests/vision-flow-003.mjs"
+        ]
+      },
+      {
+        "path": "evidence/editor-003-390.png",
+        "sha256": "befa9a5cf6e9dd6782cb5bf7e1a2a0d1eb5ba61330e0cc9e9cf8969975034756",
+        "bytes": 26235,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/vision-flow-003-007-adapter.mjs",
+          "tests/vision-flow-003.mjs"
+        ]
+      },
+      {
+        "path": "evidence/editor-004-390.png",
+        "sha256": "50bd97a9fb203f112c986c04f6809dc705210d5d9330590ef4a0d59617f70502",
+        "bytes": 30387,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/render-export-004.mjs",
+          "tests/render-export-004-007-adapter.mjs"
+        ]
+      },
+      {
+        "path": "evidence/editor-005-390.png",
+        "sha256": "10de3e26bab559b81e36d479be87a9d397c15730a87ee7c78f69adaa389f2981",
+        "bytes": 27913,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/photo-pipeline-005-007-adapter.mjs",
+          "tests/screenshots-005.mjs",
+          "tests/photo-pipeline-005.mjs"
+        ]
+      },
+      {
+        "path": "evidence/editor-1440x900.png",
+        "sha256": "579e66d2423e5534d533f1968e967b166735e87d97ae8a8d5e4877b45dc36cb8",
+        "bytes": 40299,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/editor-320x740.png",
+        "sha256": "1cb2363a349bfefbc5c0c3df786bf199c0a4b6da1f7d4e40535a99b8b5e6a1ea",
+        "bytes": 24422,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/editor-360x800.png",
+        "sha256": "f3def012c6347b93ec6fbf954698bbac749cc957321f05d3d23d4957da6737db",
+        "bytes": 26555,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/editor-375x812.png",
+        "sha256": "363bb6e1321072506b921232d662d58ffaa664cf1d8f350f3bc8d6d4c0182cee",
+        "bytes": 26731,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/editor-390x844.png",
+        "sha256": "d6eb0f0f4345b1287de83dca7c0a1946b27a1a3f1060687ca24150ab8bd1a9d6",
+        "bytes": 26894,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/editor-430x932.png",
+        "sha256": "f329d6cfa1b8b4cf5503dc48700a17b8f76886ca9334df2a9de4553de35e33c2",
+        "bytes": 27192,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/editor-844x390.png",
+        "sha256": "be4bb42b4185b76466a607b9e24a3905753ac91cbe7e87feb2d3cca53c13b861",
+        "bytes": 28411,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/export-003-390.png",
+        "sha256": "063372a7f15c7e5430c9dd397358f3d38c072c75e4bb440b33b20629e958a0cb",
+        "bytes": 46415,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/vision-flow-003-007-adapter.mjs",
+          "tests/vision-flow-003.mjs"
+        ]
+      },
+      {
+        "path": "evidence/export-004-390.png",
+        "sha256": "b08ebf1462effb7b740e327542c6f808776aeb10bb672088179211bc9a3556ae",
+        "bytes": 47887,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/render-export-004.mjs",
+          "tests/render-export-004-007-adapter.mjs"
+        ]
+      },
+      {
+        "path": "evidence/export-005-390.png",
+        "sha256": "53ed1fe63c2a7d41b5d50ab40565279ab08f9519438c8f3fb33e3500f7a3be67",
+        "bytes": 45948,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/photo-pipeline-005-007-adapter.mjs",
+          "tests/screenshots-005.mjs",
+          "tests/photo-pipeline-005.mjs"
+        ]
+      },
+      {
+        "path": "evidence/home-003-390.png",
+        "sha256": "becf41f0739a376585e806f362297053482ceefb071691bf9221f533ecce0e03",
+        "bytes": 55117,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/vision-flow-003-007-adapter.mjs",
+          "tests/vision-flow-003.mjs"
+        ]
+      },
+      {
+        "path": "evidence/home-004-390.png",
+        "sha256": "7c84f070012d5d9eb206b700ab7d0fdc71ccd61422270789889e8c5feb20b20e",
+        "bytes": 53649,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/render-export-004.mjs",
+          "tests/render-export-004-007-adapter.mjs"
+        ]
+      },
+      {
+        "path": "evidence/home-005-390.png",
+        "sha256": "8ec2fd72d969606595516775e901310ba657583dbd4cde2dbab226d00c692c21",
+        "bytes": 50640,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/photo-pipeline-005-007-adapter.mjs",
+          "tests/screenshots-005.mjs",
+          "tests/photo-pipeline-005.mjs"
+        ]
+      },
+      {
+        "path": "evidence/input-clean.png",
+        "sha256": "bd8a79beb26a2c384e4ded35c25f672a8d53c9aea0b2b89d4964f0533740e458",
+        "bytes": 79628,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/gestures-update-007.mjs",
+          "tests/gestures-004.mjs",
+          "tests/gestures-update.mjs",
+          "tests/gestures-update-release.mjs"
+        ]
+      },
+      {
+        "path": "evidence/keyboard-height-simulation.png",
+        "sha256": "08e8633584b300089d18c251da13e74abc343b9addaa84cd5a12f048a9848b23",
+        "bytes": 29657,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/product.mjs",
+          "tests/product-007-adapter-v4.mjs",
+          "tests/product-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/large-text-320.png",
+        "sha256": "27abad1ee2ccf26a160815c1baff0f295f137c1bba0cd321af5aff031fa600d0",
+        "bytes": 34276,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/product.mjs",
+          "tests/product-007-adapter-v4.mjs",
+          "tests/product-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/materials-clean.png",
+        "sha256": "e2eb4babd60f77381e2523aa30e96115562b0cf542b4cb7d6a6777dbd074c5d1",
+        "bytes": 35780,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/gestures-update-007.mjs",
+          "tests/gestures-004.mjs",
+          "tests/gestures-update.mjs",
+          "tests/gestures-update-release.mjs"
+        ]
+      },
+      {
+        "path": "evidence/object-panel.png",
+        "sha256": "b7adf410d06a880ed30cac01eb683cd5e5088519055e376a9aa07d20709107ee",
+        "bytes": 39551,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/product.mjs",
+          "tests/product-007-adapter-v4.mjs",
+          "tests/product-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/performance-005-final-390.png",
+        "sha256": "5ec93131c70673461447c77038c51f71b9506ea23c80cf0213a7a50e719d8e57",
+        "bytes": 151500,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/performance-006-final-390.png",
+        "sha256": "5ec93131c70673461447c77038c51f71b9506ea23c80cf0213a7a50e719d8e57",
+        "bytes": 151500,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/settings-clean.png",
+        "sha256": "77409aa46ea4bc23be22db2aebb888fba97bde1d65f4f34449746655c8da5425",
+        "bytes": 61779,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/gestures-update-007.mjs",
+          "tests/gestures-004.mjs",
+          "tests/gestures-update.mjs",
+          "tests/gestures-update-release.mjs"
+        ]
+      },
+      {
+        "path": "evidence/state-ai-blocked.png",
+        "sha256": "b25214ecccf4f692938d2170a4ea3d2d314ea4c77d95bf03002a5e8d8d3a535c",
+        "bytes": 59338,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/ui-state-005.mjs",
+          "tests/ui-state-005-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/state-offline.png",
+        "sha256": "5f99168878b949af7bd2d5693116753916db44211b1c91e61963855a50f437ff",
+        "bytes": 30406,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/ui-state-005.mjs",
+          "tests/ui-state-005-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/state-panel-320.png",
+        "sha256": "983f970e60f022f3a3569f4338dcb8c0bad6a2fe0c7b06d729cbb377e715e31a",
+        "bytes": 32950,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/state-panel-390.png",
+        "sha256": "8a767ee214d90895142dc38fc917c08926b1ec2ed8eaff5e8ef6ba7b64a24db4",
+        "bytes": 39043,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/state-panel-430.png",
+        "sha256": "83401a97b6d847366c86d83558d7481d4c27f6f95435fad5bf549b299ee4c057",
+        "bytes": 40861,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/state-panel-keyboard-viewport-simulation.png",
+        "sha256": "1d115df51d4cead59fc04596a34d33bce1897742cf58b9750805cc43b96850e2",
+        "bytes": 31625,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/state-panel-landscape.png",
+        "sha256": "4c6ebaa43531446822754b43c03239a9896dda36809376a35fafcf914a54fd1f",
+        "bytes": 41235,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/state-panel-pc.png",
+        "sha256": "6078e25d6e7c4c332ce045bfbc9724189687bed81d8f1ab551658c0010336685",
+        "bytes": 71710,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/state-save-failed.png",
+        "sha256": "25ec89305e4183129f0ba0db52d83ad211d4c13a1137c5d5347fae041e5df028",
+        "bytes": 36281,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/ui-state-005.mjs",
+          "tests/ui-state-005-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/state-saving.png",
+        "sha256": "aaaa4c5630fe5937a48eaba8a6e8e466c5da0756a49c924c8b5e8792598537ec",
+        "bytes": 26544,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/ui-state-005.mjs",
+          "tests/ui-state-005-007-adapter-v3.mjs"
+        ]
+      },
+      {
+        "path": "evidence/synthetic-input.png",
+        "sha256": "f03082981230c186118aad92b31349a8c4793138c2696e9fd5b49a94e5a78f07",
+        "bytes": 21990,
+        "class": "synthetic-fixture",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": [
+          "tests/photo-pipeline-005-007-adapter.mjs",
+          "tests/photo-pipeline-005.mjs"
+        ]
+      },
+      {
+        "path": "evidence/ui-007/after-Candidate.png",
+        "sha256": "ddc1bb6482ab23edae11690c44e0c35ee8a181fd4c0067d3e51e821e26714777",
+        "bytes": 52241,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Dimension-320.png",
+        "sha256": "cf904790a491d118cc9b87a218556ca5bc50264f9a3e5ddcc8f8ee5c327e2511",
+        "bytes": 35989,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Dimension-360.png",
+        "sha256": "76c8d7e70ab76992cd8a8934e3524fa885eb2cc401fd29ca975246f5227660e5",
+        "bytes": 37329,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Dimension-844.png",
+        "sha256": "6f49b2ddce021a7e5ff23656e14ac23b0740468e6e926783a19779d3c9b59326",
+        "bytes": 38968,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Dimension.png",
+        "sha256": "2691be3e9d5b59d7a0e085ff0f37547192cc4d7f9a57cc0a86dc92b1d4d0cc6f",
+        "bytes": 40250,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Editor-320.png",
+        "sha256": "80a8a366fde3e54fb4d4b4576be648a1f8dbb161deefbcd21aa953ee7b013ebe",
+        "bytes": 24422,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Editor-360.png",
+        "sha256": "9233e105ab8dd60fce85fb30d3a7f668a1ce1d67ab4e66cbadcd9ebaf33df66a",
+        "bytes": 25412,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Editor-844.png",
+        "sha256": "71dff8255247d33e52c7fa73e38566ed51c689c9e29b9e1c8d85221c65adff3e",
+        "bytes": 25062,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Editor.png",
+        "sha256": "12ff7c70f5b5778b9db20e1368f2ae6eaf05f21f9d751c04b2fe2d5ddf919e3a",
+        "bytes": 28675,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Error.png",
+        "sha256": "c001d4bea301b43a464945d67bffd7635393aafe65ee446a3a4f7e7d102f3f7c",
+        "bytes": 40045,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Export.png",
+        "sha256": "be81779673af70e6dcfdefe53883fd0b6e38381092992863f5ae03a059e36900",
+        "bytes": 49281,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Home.png",
+        "sha256": "3057f5f7068be4a3c4e97805f26e2ebbf448073fb758bea9eaf5f950890ff4a0",
+        "bytes": 54376,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Import.png",
+        "sha256": "9f09a441ac62b7517c7a4660d637baf9735169d6d1053711ae13a10cdb4a67b9",
+        "bytes": 64304,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Keyboard-viewport-simulation.png",
+        "sha256": "3d20ce181e4e7125eb68770d413d8fa776e734e503a40b4b6e62de84a0fe82df",
+        "bytes": 22700,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/after-Trace.png",
+        "sha256": "72058a55e103589428e6594327dc481418d7db4a347b52fac650bf7474a96aae",
+        "bytes": 50222,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/before-Dimension.png",
+        "sha256": "37415aef43f0b110fa772a2dbaa4aa00a0d75551de6d971a6bac29450bd8971d",
+        "bytes": 56013,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/before-Editor.png",
+        "sha256": "f54b5987c24545addc4fda7f6d0585febd64495cf9ba6f0dbfbfab7d30d57d94",
+        "bytes": 30204,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/before-Error.png",
+        "sha256": "a975c3a656d1f1bf300b371925367c2103fb0dd2825d287327b435d1639f68a6",
+        "bytes": 52341,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/before-Export.png",
+        "sha256": "e9ba60cc50c74ce045f28b486b785fdbdf7b119100ffd3d62c423d4180b4825c",
+        "bytes": 62052,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/before-Home.png",
+        "sha256": "f3615b743b5ebde4e49ebb62b064579fdd976f0cb57c28ce25c7c4ea320a9933",
+        "bytes": 53859,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/before-Import.png",
+        "sha256": "04c61fbc76592d8350f481749a933aec61c4f9de2d19a7804d7acdb3673078b3",
+        "bytes": 59415,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-007/before-Trace.png",
+        "sha256": "7a5e9cde97ebf5c5524ecd347ba858235c9e801e5111027820e6b1aad18e2979",
+        "bytes": 64507,
+        "class": "test-screenshot",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-output.png",
+        "sha256": "43370fa83681bc252d21771ae7bf0f715b4d09881d3ea5975872a99464702617",
+        "bytes": 35075,
+        "class": "generated-raster-export",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "evidence/ui-output.svg",
+        "sha256": "90bb24b9043b8d806fc3c822a91321fef50ef323b0ae8b2e2cd863546095fdb7",
+        "bytes": 7607654,
+        "class": "generated-vector-export",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "web/assets/icon-192.png",
+        "sha256": "141665bf77f49b2bdccbc65a89c1315bf4cf00ec3c8fbc1479e41708b78e1506",
+        "bytes": 1303,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "web/assets/icon-512.png",
+        "sha256": "938db75fc9360cc3590edcf5397140a9d1d5121e81846f70f89fbe27b23c6fa0",
+        "bytes": 3578,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "web/assets/icon-maskable.png",
+        "sha256": "938db75fc9360cc3590edcf5397140a9d1d5121e81846f70f89fbe27b23c6fa0",
+        "bytes": 3578,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      },
+      {
+        "path": "web/assets/icon.svg",
+        "sha256": "95bb749247a9829726eee54fbd9b2a0ba24c780ace10a9e15caf19ae2ddf0cf2",
+        "bytes": 281,
+        "class": "icon",
+        "countsAsRealPhoto": false,
+        "generatorReferenceFiles": []
+      }
+    ],
+    "byteDuplicateGroups": [
+      [
+        "android/app/src/main/assets/public/assets/icon-192.png",
+        "web/assets/icon-192.png"
+      ],
+      [
+        "android/app/src/main/assets/public/assets/icon-512.png",
+        "android/app/src/main/assets/public/assets/icon-maskable.png",
+        "web/assets/icon-512.png",
+        "web/assets/icon-maskable.png"
+      ],
+      [
+        "android/app/src/main/assets/public/assets/icon.svg",
+        "web/assets/icon.svg"
+      ],
+      [
+        "android/app/src/main/res/drawable/splash.png",
+        "android/app/src/main/res/drawable-land-mdpi/splash.png"
+      ],
+      [
+        "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+      ],
+      [
+        "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+      ],
+      [
+        "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+      ],
+      [
+        "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+      ],
+      [
+        "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+      ],
+      [
+        "evidence/01-home.png",
+        "evidence/home-003-390.png"
+      ],
+      [
+        "evidence/performance-005-final-390.png",
+        "evidence/performance-006-final-390.png"
+      ]
+    ]
+  },
+  "existingEvidence": [
+    {
+      "path": "tests/photo-pipeline-005-007-adapter.mjs:7-12",
+      "facts": "HTML canvas fillRect input; injected mock Claude/SAM fetch; protocol-fixture/synthetic-fixture"
+    },
+    {
+      "path": "evidence/photo-pipeline-results.json",
+      "facts": "realAI=false; realPhotoInputs=0; 7 functional checks PASS"
+    },
+    {
+      "path": "evidence/fixture-photo-trial.json",
+      "facts": "12 pipeline stages, mock model identifiers, protocol-fixture/synthetic-fixture; measuredOnRealPhoto=false"
+    },
+    {
+      "path": "web/src/vision.js:60",
+      "facts": "draft() throws BLOCKED AI-not-connected; imported candidate path exists separately"
+    }
+  ],
+  "usableRealPhotosAvailable": 0,
+  "tenRealPhotosAvailable": false,
+  "notSearched": [
+    "Unrelated Library images",
+    "User screenshots outside this project",
+    "External photo collections"
+  ],
+  "noExternalPhotoTransfer": true,
+  "accuracyVerdict": "BLOCKED_NOT_MEASURED",
+  "fixtureVerdict": "FUNCTIONAL_CONTRACT_ONLY_NO_ACCURACY_CREDIT",
+  "gateGaps": [
+    {
+      "id": "DATASET-REAL",
+      "gap": "No ten consented real construction photographs or source-byte SHA256/rights record."
+    },
+    {
+      "id": "SPLIT-LEAKAGE",
+      "gap": "No Development/Validation/BlindHoldout freeze; deduplicate same source/near-duplicate crop or capture-session groups across splits. Ten photos are pilot scale, insufficient for reliable four-difficulty-by-three-split accuracy claims."
+    },
+    {
+      "id": "GROUND-TRUTH",
+      "gap": "No human-approved GT polygons/class/visibility/ignore regions/reference dimensions with annotator, timestamp and immutable photo+GT hashes. Occluded geometry must not be invented."
+    },
+    {
+      "id": "DIFFICULTY-COVERAGE",
+      "gap": "No pre-assigned Easy/Normal/Hard/Extreme criteria, target object classes, perspective/occlusion/blur/glare/low-light strata, denominators or per-stratum floors."
+    },
+    {
+      "id": "REAL-AI-PROVENANCE",
+      "gap": "Existing real-providers/real-photo/measuredOnRealPhoto fields are self declarations. Bind actual input hash, model/checkpoint/prompt/config/source version, actual provider receipt and execution audit; exclude fixture/mocked trials."
+    },
+    {
+      "id": "UNKNOWN-ABUSE",
+      "gap": "UNKNOWN must remain permitted for uncertain objects but counted against known-GT classification recall and reported with abstention/coverage; no dropping misses/unknowns from denominators or counting abstention as recognition success."
+    },
+    {
+      "id": "METRIC-GATE",
+      "gap": "Define object matching/IoU/boundary error/class precision-recall/missed-critical-object rate/topology/dimension calibration, per-difficulty thresholds, complete-sample enforcement, null-as-unmeasured, and worst-case hard fails. Segmentation ranking scores are not accuracy."
+    },
+    {
+      "id": "CORRECTION-COST",
+      "gap": "Measure human correction actions/time and final diagram validity on real photos, with an independent manual drawing baseline; retain long-tail/worst-case results and label zero versus unmeasured. Existing fixture correction counts prove ledger behavior only."
+    },
+    {
+      "id": "EXPORT-USEFULNESS",
+      "gap": "Evaluate editability, labels/layers, dimensions after confirmed scale calibration, and actual PPTX/DXF field-use acceptance on real scenes; export generation success alone is not diagram fidelity."
+    },
+    {
+      "id": "RELEASE-AUTHORITY",
+      "gap": "Hard gate must reject missing samples/GT/unapproved transfer/fixture evidence/split leakage/changed holdout/provider receipt mismatch and unmeasured metrics; human final acceptance retained. No 100% universal promise."
+    }
+  ]
+}
