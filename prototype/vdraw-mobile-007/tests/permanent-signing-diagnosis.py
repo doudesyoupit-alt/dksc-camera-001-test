@@ -150,17 +150,7 @@ class SigningDiagnosis(unittest.TestCase):
                 self.assertEqual(result.stderr, b'')
                 return result
             with patch.object(m.subprocess, 'run', side_effect=execute):
-                with self.assertRaisesRegex(m.SigningFailure, '^PRIVATE_KEY_CHECK_FAILED
-        for error in [ValueError('PRIVATE_SENTINEL'), RuntimeError('PRIVATE_SENTINEL'),
-                subprocess.TimeoutExpired(['PRIVATE_SENTINEL'], 60,
-                    output=b'PRIVATE_SENTINEL', stderr=b'PRIVATE_SENTINEL')]:
-            report = m.failure_report(error)
-            self.assertNotIn('PRIVATE_SENTINEL', json.dumps(report))
-            self.assertEqual(report['reason'], 'SIGNING_OPERATION_FAILED')
-
-if __name__ == '__main__':
-    unittest.main()
-):
+                with self.assertRaisesRegex(m.SigningFailure, '^PRIVATE_KEY_CHECK_FAILED$'):
                     m.key_password_check(env)
             self.assertEqual(list(Path(directory).iterdir()), [])
 
