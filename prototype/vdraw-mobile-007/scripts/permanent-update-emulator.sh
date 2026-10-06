@@ -3,7 +3,7 @@ set -euo pipefail
 mkdir -p signing-update-evidence
 certificate_sha="$(python3 -c 'import json;print(json.load(open("fixed-apks/A.json"))["certificateSHA256"])')"
 adb install fixed-apks/VDRAW-MOBILE-008-fixed.apk
-adb install fixed-apks/update-test.apk
+adb install -t fixed-apks/update-test.apk
 adb shell am instrument -w -e stage A -e versionCode 8 -e certificateSha256 "$certificate_sha" jp.dksc.vdraw.prototype007.test/jp.dksc.vdraw.prototype007.PermanentUpdateInstrumentation > signing-update-evidence/A.log
 python3 - <<'PY'
 from pathlib import Path

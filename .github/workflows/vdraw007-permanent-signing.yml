@@ -136,9 +136,9 @@ jobs:
         run: |
           set -euo pipefail
           if gradle -p android --no-daemon :app:assembleRelease --dry-run > evidence/permanent-config/no-permanent.log 2>&1; then exit 1; fi
-          rg 'VDRAW_RELEASE_BLOCKED_NO_PERMANENT_SIGNING' evidence/permanent-config/no-permanent.log
+          python3 -c "from pathlib import Path; assert 'VDRAW_RELEASE_BLOCKED_NO_PERMANENT_SIGNING' in Path('evidence/permanent-config/no-permanent.log').read_text()"
           if gradle -p android --no-daemon -PvdrawPermanentSigning=true -PvdrawVersionCode=8 -PvdrawVersionName=0.8.0 :app:tasks > evidence/permanent-config/missing-secrets.log 2>&1; then exit 1; fi
-          rg 'VDRAW_PERMANENT_SIGNING_ENV_MISSING' evidence/permanent-config/missing-secrets.log
+          python3 -c "from pathlib import Path; assert 'VDRAW_PERMANENT_SIGNING_ENV_MISSING' in Path('evidence/permanent-config/missing-secrets.log').read_text()"
           test -z "$(find android/app/build -name '*.apk' -print 2>/dev/null)"
       - uses: actions/upload-artifact@v7
         if: always()

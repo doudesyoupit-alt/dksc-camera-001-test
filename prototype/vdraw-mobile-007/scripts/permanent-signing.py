@@ -42,7 +42,7 @@ def safe_command(args):
 def prepare(policy, env):
     require(readiness(policy, env)['status'] == 'PASS', 'SIGNING_SECRETS_OR_PUBLIC_PIN_NOT_READY')
     run_temp = Path(env['RUNNER_TEMP']).resolve()
-    require(run_temp.is_dir() and not run_temp.is_relative_to(ROOT.resolve()), 'PRIVATE_DIRECTORY_MUST_BE_OUTSIDE_REPOSITORY')
+    require(run_temp.is_dir() and not run_temp.is_relative_to(ROOT.resolve().parent.parent), 'PRIVATE_DIRECTORY_MUST_BE_OUTSIDE_REPOSITORY')
     raw = base64.b64decode(env['VDRAW_SIGNING_KEYSTORE_B64'], validate=True)
     require(0 < len(raw) <= 24000, 'KEYSTORE_SIZE_INVALID')
     # Private keys never enter the repository, artifacts, caches or command-line password arguments.
