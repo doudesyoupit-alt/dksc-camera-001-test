@@ -1,6 +1,7 @@
 package jp.dksc.vdraw.prototype007;
 
 import static org.junit.Assert.*;
+import static org.robolectric.Shadows.shadowOf;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +18,6 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowContentResolver;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28, manifest = Config.NONE)
@@ -60,17 +60,17 @@ public class DocumentSaveTest {
         Files.write(source.toPath(), payload);
         class Sink extends ByteArrayOutputStream { boolean closed; public void close() { closed=true; } }
         Sink sink = new Sink();
-        ShadowContentResolver.registerOutputStream(destination, sink);
+        shadowOf(context.getContentResolver()).registerOutputStream(destination, sink);
         assertEquals(payload.length, DocumentSaver.write(context, source, destination));
         assertArrayEquals(payload, sink.toByteArray());
         assertTrue(sink.closed);
     }
     @Test public void providerWriteOrCloseFailureCannotReturnSuccess() {
-        ShadowContentResolver.registerOutputStream(destination, new OutputStream() {
+        shadowOf(context.getContentResolver()).registerOutputStream(destination, new OutputStream() {
             public void write(int b) throws IOException { throw new IOException("provider write failed"); }
         });
         assertThrows(IOException.class, () -> DocumentSaver.write(context, source, destination));
-        ShadowContentResolver.registerOutputStream(destination, new ByteArrayOutputStream() {
+        shadowOf(context.getContentResolver()).registerOutputStream(destination, new ByteArrayOutputStream() {
             public void close() throws IOException { throw new IOException("provider close failed"); }
         });
         assertThrows(IOException.class, () -> DocumentSaver.write(context, source, destination));
@@ -113,17 +113,17 @@ public class DocumentSaveTest {
     @Test public void successfulCallbackResolvesAfterProviderClose() throws Exception {
         Plugin plugin=new Plugin(); Call first=call(); plugin.save(first);
         class Sink extends ByteArrayOutputStream { boolean closed; public void close() { closed=true; } }
-        Sink sink=new Sink(); ShadowContentResolver.registerOutputStream(destination, sink);
+        Sink sink=new Sink(); shadowOf(context.getContentResolver()).registerOutputStream(destination, sink);
         finish(plugin, first, new ActivityResult(Activity.RESULT_OK, new Intent().setData(destination)));
         assertTrue(sink.closed); assertTrue(first.resolved); assertNull(first.code);
         assertEquals("saved", first.response.getString("status"));
-        assertEquals(source.length(), first.response.getLong("bytes").longValue());
+        assertEquals(source.length(), first.response.getLong("bytes"));
         assertArrayEquals(Files.readAllBytes(source.toPath()), sink.toByteArray());
         Call next=call(); plugin.save(next); assertNull(next.code);
     }
     @Test public void failedCallbackRejectsWithoutSuccessAndReleasesBusy() throws Exception {
         Plugin plugin=new Plugin(); Call first=call(); plugin.save(first);
-        ShadowContentResolver.registerOutputStream(destination, new ByteArrayOutputStream() {
+        shadowOf(context.getContentResolver()).registerOutputStream(destination, new ByteArrayOutputStream() {
             public void close() throws IOException { throw new IOException("provider failed to close"); }
         });
         finish(plugin, first, new ActivityResult(Activity.RESULT_OK, new Intent().setData(destination)));
