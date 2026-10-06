@@ -1,0 +1,961 @@
+{
+  "schema": "vdraw-regression-run/1",
+  "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+  "profile": "full",
+  "suiteComplete": true,
+  "pass": 52,
+  "fail": 0,
+  "blocked": 0,
+  "skip": 0,
+  "durationSeconds": 309.106,
+  "rawEntryCount": 45,
+  "mappedHistoricalEntries": {
+    "tests/native-assets-003.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype003/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/native-assets-004.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype004/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/native-assets-005.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype005/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/native-assets-006.py": {
+      "replacement": "tests/native-assets-007.py",
+      "reason": "Original asserts historical prototype006/SW namespace;007 checker preserves same lifecycle/config contract and optional exact asset parity."
+    },
+    "tests/storage-extra-005.mjs": {
+      "replacement": "tests/storage-extra-006.mjs",
+      "reason": "005 copy differs only obsolete DB namespace, launcher require fallback, output filename; normalized assertions and ownership cases match006. Current007 storage intentionally uses006 DB contract."
+    },
+    "tests/gestures-update.mjs": {
+      "replacement": "tests/gestures-update-release.mjs",
+      "reason": "All original gesture/save/PWA assertions retained; current source CACHE namespace explicitly derived rather than stale 007-v1 string."
+    },
+    "tests/performance-final-006.mjs": {
+      "replacement": "tests/performance-final-006-reference.mjs",
+      "reason": "Legacy006reference comparison must use immutable006 shell, not integrated007render with005core fixture."
+    },
+    "tests/product.mjs": {
+      "replacement": "tests/product-007-adapter-v4.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/render-export-004.mjs": {
+      "replacement": "tests/render-export-004-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/photo-pipeline-005.mjs": {
+      "replacement": "tests/photo-pipeline-005-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/output-quality-005.mjs": {
+      "replacement": "tests/output-quality-005-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/ui-state-005.mjs": {
+      "replacement": "tests/ui-state-005-007-adapter-v3.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/vision-flow-003.mjs": {
+      "replacement": "tests/vision-flow-003-007-adapter.mjs",
+      "reason": "All original assertions retained; explicit007UI disclosure or current namespace/visible label mapping, independentQA approved."
+    },
+    "tests/bounded-process-005.py": {
+      "replacement": "tests/bounded-process-005-race-safe.py",
+      "reason": "The original4 boundedprocess assertions are retained; true/proc ENOENT after exists means same terminated-child condition, without TOCTOU test error."
+    }
+  },
+  "newEntryDiscovery": true,
+  "runCopyTransforms": [
+    {
+      "path": "tests/ui-state-005-007-adapter-v3.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/storage-extra-005.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/photo-pipeline-005.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/screenshots-005.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/photo-pipeline-005-007-adapter.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/output-quality-005.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/segment-probe-005.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/ui-state-005.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/clone-profile-005.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    },
+    {
+      "path": "tests/output-quality-005-007-adapter.mjs",
+      "onlyChange": "fixed /tmp/chromium launch literal -> VDRAW_CHROMIUM environment"
+    }
+  ],
+  "rows": [
+    {
+      "id": "core.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/core.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.114,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/core.test.mjs.log",
+      "skip": 0,
+      "caseCount": 8
+    },
+    {
+      "id": "command-update-004.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/command-update-004.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.668,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/command-update-004.test.mjs.log",
+      "skip": 0,
+      "caseCount": 4
+    },
+    {
+      "id": "history-codec-005.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/history-codec-005.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.164,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/history-codec-005.test.mjs.log",
+      "skip": 0,
+      "caseCount": 4
+    },
+    {
+      "id": "changes-006.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/changes-006.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.165,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/changes-006.test.mjs.log",
+      "skip": 0,
+      "caseCount": 4
+    },
+    {
+      "id": "native-shell.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/native-shell.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.114,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/native-shell.test.mjs.log",
+      "skip": 0,
+      "caseCount": 7
+    },
+    {
+      "id": "native-io-005.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/native-io-005.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.114,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/native-io-005.test.mjs.log",
+      "skip": 0,
+      "caseCount": 5
+    },
+    {
+      "id": "vision-contract-005.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/vision-contract-005.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.215,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/vision-contract-005.test.mjs.log",
+      "skip": 0,
+      "caseCount": 8
+    },
+    {
+      "id": "vision-provider.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/vision-provider.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.215,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/vision-provider.test.mjs.log",
+      "skip": 0,
+      "caseCount": 10
+    },
+    {
+      "id": "ui-theme-007.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/ui-theme-007.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.115,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/ui-theme-007.test.mjs.log",
+      "skip": 0,
+      "caseCount": 5
+    },
+    {
+      "id": "bounded-process-005-race-safe.py",
+      "command": [
+        "python3",
+        "tests/bounded-process-005-race-safe.py"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.515,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/bounded-process-005-race-safe.py.log",
+      "skip": 0,
+      "caseCount": 4
+    },
+    {
+      "id": "native-assets-007.py",
+      "command": [
+        "python3",
+        "tests/native-assets-007.py"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.064,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/native-assets-007.py.log",
+      "skip": 0
+    },
+    {
+      "id": "performance-core-006.mjs",
+      "command": [
+        "node",
+        "tests/performance-core-006.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.716,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/performance-core-006.mjs.log",
+      "skip": 0
+    },
+    {
+      "id": "product-007-adapter-v4.mjs",
+      "command": [
+        "node",
+        "tests/product-007-adapter-v4.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 15.107,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/product-007-adapter-v4.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/product-007-adapter-v4.mjs--product-results.json"
+      ]
+    },
+    {
+      "id": "output-regression.mjs",
+      "command": [
+        "node",
+        "tests/output-regression.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 1.823,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/output-regression.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/output-regression.mjs--output-regression-results.json"
+      ]
+    },
+    {
+      "id": "recovery-input.mjs",
+      "command": [
+        "node",
+        "tests/recovery-input.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 2.831,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/recovery-input.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/recovery-input.mjs--recovery-input-results.json"
+      ]
+    },
+    {
+      "id": "vision-flow-003-007-adapter.mjs",
+      "command": [
+        "node",
+        "tests/vision-flow-003-007-adapter.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 4.028,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/vision-flow-003-007-adapter.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/vision-flow-003-007-adapter.mjs--vision-flow-003-results.json"
+      ]
+    },
+    {
+      "id": "inspect-protocol-003.py",
+      "command": [
+        "python3",
+        "tests/inspect-protocol-003.py"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.416,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/inspect-protocol-003.py.log",
+      "skip": 0
+    },
+    {
+      "id": "photo-pipeline-005-007-adapter.mjs",
+      "command": [
+        "node",
+        "tests/photo-pipeline-005-007-adapter.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 4.227,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/photo-pipeline-005-007-adapter.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/photo-pipeline-005-007-adapter.mjs--photo-pipeline-results.json"
+      ]
+    },
+    {
+      "id": "output-quality-005-007-adapter.mjs",
+      "command": [
+        "node",
+        "tests/output-quality-005-007-adapter.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 1.922,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/output-quality-005-007-adapter.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/output-quality-005-007-adapter.mjs--output-quality-results.json"
+      ]
+    },
+    {
+      "id": "output-structure-005.py",
+      "command": [
+        "python3",
+        "tests/output-structure-005.py"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.366,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/output-structure-005.py.log",
+      "skip": 0
+    },
+    {
+      "id": "inspect_outputs.py",
+      "command": [
+        "python3",
+        "tests/inspect_outputs.py"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.515,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/inspect_outputs.py.log",
+      "skip": 0
+    },
+    {
+      "id": "render-export-004-007-adapter.mjs",
+      "command": [
+        "node",
+        "tests/render-export-004-007-adapter.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 3.082,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/render-export-004-007-adapter.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/render-export-004-007-adapter.mjs--render-export-results.json"
+      ]
+    },
+    {
+      "id": "output-inspect-004.py",
+      "command": [
+        "python3",
+        "tests/output-inspect-004.py"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.366,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/output-inspect-004.py.log",
+      "skip": 0
+    },
+    {
+      "id": "gestures-004.mjs",
+      "command": [
+        "node",
+        "tests/gestures-004.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 2.724,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/gestures-004.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/gestures-004.mjs--gestures-004-results.json"
+      ]
+    },
+    {
+      "id": "gestures-update-release.mjs",
+      "command": [
+        "node",
+        "tests/gestures-update-release.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 6.136,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/gestures-update-release.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/gestures-update-release.mjs--gestures-update-results.json"
+      ]
+    },
+    {
+      "id": "save-gesture-003.mjs",
+      "command": [
+        "node",
+        "tests/save-gesture-003.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 3.526,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/save-gesture-003.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/save-gesture-003.mjs--save-gesture-003-results.json"
+      ]
+    },
+    {
+      "id": "storage-conflict.mjs",
+      "command": [
+        "node",
+        "tests/storage-conflict.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 1.373,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/storage-conflict.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/storage-conflict.mjs--storage-conflict-results.json"
+      ]
+    },
+    {
+      "id": "storage-safety-004.mjs",
+      "command": [
+        "node",
+        "tests/storage-safety-004.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 2.778,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/storage-safety-004.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/storage-safety-004.mjs--storage-safety-results.json"
+      ]
+    },
+    {
+      "id": "storage-safety-006.mjs",
+      "command": [
+        "node",
+        "tests/storage-safety-006.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 2.774,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/storage-safety-006.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/storage-safety-006.mjs--storage-safety-006-results.json"
+      ]
+    },
+    {
+      "id": "storage-extra-006.mjs",
+      "command": [
+        "node",
+        "tests/storage-extra-006.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 2.076,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/storage-extra-006.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/storage-extra-006.mjs--storage-extra-006-results.json"
+      ]
+    },
+    {
+      "id": "ui-state-005-007-adapter-v3.mjs",
+      "command": [
+        "node",
+        "tests/ui-state-005-007-adapter-v3.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 5.73,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/ui-state-005-007-adapter-v3.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/ui-state-005-007-adapter-v3.mjs--ui-state-results.json"
+      ]
+    },
+    {
+      "id": "ui-smoke-007.mjs",
+      "command": [
+        "node",
+        "tests/ui-smoke-007.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 8.347,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/ui-smoke-007.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/ui-smoke-007.mjs--UI-smoke-results.json"
+      ]
+    },
+    {
+      "id": "screenshots-005.mjs",
+      "command": [
+        "node",
+        "tests/screenshots-005.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 1.573,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/screenshots-005.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/screenshots-005.mjs--screenshots.json"
+      ]
+    },
+    {
+      "id": "performance.mjs",
+      "command": [
+        "node",
+        "tests/performance.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 5.831,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/performance.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/performance.mjs--performance-results.json"
+      ]
+    },
+    {
+      "id": "performance-003.mjs",
+      "command": [
+        "node",
+        "tests/performance-003.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 60.841,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/performance-003.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/performance-003.mjs--performance-003-results.json"
+      ]
+    },
+    {
+      "id": "performance-004.mjs",
+      "command": [
+        "node",
+        "tests/performance-004.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 61.689,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/performance-004.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/performance-004.mjs--performance-after-results.json"
+      ]
+    },
+    {
+      "id": "performance-005.mjs",
+      "command": [
+        "node",
+        "tests/performance-005.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 64.098,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/performance-005.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/performance-005.mjs--performance-after-results.json"
+      ]
+    },
+    {
+      "id": "performance-final-006-reference.mjs",
+      "command": [
+        "node",
+        "tests/performance-final-006-reference.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 13.817,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/performance-final-006-reference.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/performance-final-006-reference.mjs--performance-final-006-reference.json"
+      ]
+    },
+    {
+      "id": "ui-performance-007.mjs",
+      "command": [
+        "node",
+        "tests/ui-performance-007.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 4.786,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/ui-performance-007.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/ui-performance-007.mjs--performance-sentinel.json"
+      ]
+    },
+    {
+      "id": "clone-profile-005.mjs",
+      "command": [
+        "node",
+        "tests/clone-profile-005.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 1.773,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/clone-profile-005.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/clone-profile-005.mjs--clone-profile.json"
+      ]
+    },
+    {
+      "id": "segment-probe-005.mjs",
+      "command": [
+        "node",
+        "tests/segment-probe-005.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 1.673,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/segment-probe-005.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/segment-probe-005.mjs--segment-probe.json"
+      ]
+    },
+    {
+      "id": "ui-performance-true006-release.mjs",
+      "command": [
+        "node",
+        "tests/ui-performance-true006-release.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 4.833,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/ui-performance-true006-release.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/ui-performance-true006-release.mjs--performance-true006-release.json"
+      ]
+    },
+    {
+      "id": "candidate-preview-flow.mjs",
+      "command": [
+        "node",
+        "tests/candidate-preview-flow.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 5.429,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/candidate-preview-flow.mjs.log",
+      "skip": 0,
+      "verdictSnapshots": [
+        "/home/runner/work/_temp/vdraw007-full-37394074765/verdicts/candidate-preview-flow.mjs--candidate-preview-flow.json"
+      ]
+    },
+    {
+      "id": "qa-release-candidate-preview.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-release-candidate-preview.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 7.646,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/qa-release-candidate-preview.mjs.log",
+      "skip": 0,
+      "caseCount": 3
+    },
+    {
+      "id": "candidate-preview-regression.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/candidate-preview-regression.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.114,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/candidate-preview-regression.test.mjs.log",
+      "skip": 0,
+      "caseCount": 8
+    },
+    {
+      "id": "engine-001-regression.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/engine-001-regression.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.265,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/engine-001-regression.test.mjs.log",
+      "skip": 0,
+      "caseCount": 27
+    },
+    {
+      "id": "input-001-regression.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/input-001-regression.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.164,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/input-001-regression.test.mjs.log",
+      "skip": 0,
+      "caseCount": 26
+    },
+    {
+      "id": "integration-offline-release.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/integration-offline-release.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.114,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/integration-offline-release.test.mjs.log",
+      "skip": 0,
+      "caseCount": 1
+    },
+    {
+      "id": "integration-offline-round1.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/integration-offline-round1.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.214,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/integration-offline-round1.test.mjs.log",
+      "skip": 0,
+      "caseCount": 1
+    },
+    {
+      "id": "output-race-regression.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/output-race-regression.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.315,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/output-race-regression.test.mjs.log",
+      "skip": 0,
+      "caseCount": 27
+    },
+    {
+      "id": "qa-round2-independent.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-round2-independent.test.mjs"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.465,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/qa-round2-independent.test.mjs.log",
+      "skip": 0,
+      "caseCount": 31
+    },
+    {
+      "id": "native-assets-007-parity",
+      "command": [
+        "python3",
+        "tests/native-assets-007.py",
+        "--check-assets"
+      ],
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationSeconds": 0.064,
+      "log": "/home/runner/work/_temp/vdraw007-full-37394074765/logs/native-assets-007-parity.log",
+      "skip": 0
+    }
+  ],
+  "scope": "Software harnesses only; no Android device or signing proof. PASS is not full acceptance without separate QA/P0/P1/006/signing gates."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "BLOCKED",
+  "missingSecretNames": [
+    "VDRAW_SIGNING_KEYSTORE_B64",
+    "VDRAW_SIGNING_STORE_PASSWORD",
+    "VDRAW_SIGNING_KEY_ALIAS",
+    "VDRAW_SIGNING_KEY_PASSWORD",
+    "VDRAW_SIGNING_CERT_SHA256"
+  ],
+  "publicCertificatePinConfigured": false,
+  "secretCertificatePinMatches": false,
+  "privateKeyPreserved": "NOT_VERIFIED",
+  "legacyToPermanentUpdateCompatibility": "NOT_PROVEN",
+  "userDeviceDataChanged": false
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "vdraw-permanent-signing-migration/1",
+  "date": "2026-10-06",
+  "status": "BLOCKED",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "branch": "work/vdraw007-signing-release-20261006",
+  "testedSourceHEAD": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+  "softwareCheckpoint": "d77c524e49ff8835670b016551f007f6c171bb63",
+  "workflowRun": 37394074765,
+  "workflowConclusion": "failure",
+  "currentInstalledIdentity": {
+    "source": "OWNER_REAL_DEVICE_REPORT_20261006",
+    "status": "VERIFIED_USER_REPORTED",
+    "package": "jp.dksc.vdraw.prototype007",
+    "versionCode": 7,
+    "versionName": "0.7.0",
+    "certificateSha256": "c10b89c8b61d4d295de1717d23d593dffd5231d5d33828e5924c42d1e2843855"
+  },
+  "oldPrivateKey": "NOT_RECOVERED_SEARCH_CLOSED",
+  "legacyToPermanentUpdateCompatibility": "NOT_PROVEN",
+  "permanentKeyPreservation": "BLOCKED_NOT_GENERATED",
+  "githubSecrets": "BLOCKED_NOT_AVAILABLE_TO_CI",
+  "blocker": "CONNECTED_GITHUB_TOOLSET_EXCLUDES_SECRETS_WRITE_AND_NO_AUTHENTICATED_CLI",
+  "fixedSigningConfig": {
+    "implementation": "COMMITTED",
+    "negativeGuardChecks": "PASS",
+    "contractCaseCount": 9,
+    "instrumentationCompilation": "PASS",
+    "positivePermanentKeyBuild": "NOT_RUN"
+  },
+  "plannedAPKs": [
+    {
+      "name": "A",
+      "package": "jp.dksc.vdraw.prototype007",
+      "versionCode": 8,
+      "versionName": "0.8.0",
+      "status": "NOT_GENERATED",
+      "apkSha256": null,
+      "certificateSha256": null,
+      "workflowRun": null,
+      "sourceHEAD": null
+    },
+    {
+      "name": "B",
+      "package": "jp.dksc.vdraw.prototype007",
+      "versionCode": 9,
+      "versionName": "0.8.1",
+      "status": "NOT_GENERATED",
+      "apkSha256": null,
+      "certificateSha256": null,
+      "workflowRun": null,
+      "sourceHEAD": null
+    }
+  ],
+  "fixedAToBUpdate": "NOT_RUN",
+  "regression": [
+    {
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "limited",
+      "suiteComplete": false,
+      "pass": 18,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "durationSeconds": 4.278,
+      "caseCount": 180
+    },
+    {
+      "sourceSha": "29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "profile": "full",
+      "suiteComplete": true,
+      "pass": 52,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "durationSeconds": 309.106,
+      "caseCount": 183
+    }
+  ],
+  "softwareIssueCounts": {
+    "P0": 0,
+    "P1": 0,
+    "source": "APPROVED_SOFTWARE_CHECKPOINT",
+    "migrationAcceptance": "BLOCKED"
+  },
+  "protection": {
+    "subtree006": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "status006": "PASS",
+    "mainHEAD": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+    "validationHEAD": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "priorDocumentationBlobs44": "UNCHANGED",
+    "userDeviceTouched": false,
+    "userDeviceDataChanged": false
+  },
+  "jobs": [
+    {
+      "id": 112045851847,
+      "name": "full-regression",
+      "conclusion": "success"
+    },
+    {
+      "id": 112045852071,
+      "name": "signing-readiness",
+      "conclusion": "failure"
+    },
+    {
+      "id": 112045852246,
+      "name": "signing-config-check",
+      "conclusion": "success"
+    },
+    {
+      "id": 112047487484,
+      "name": "fixed-apk-pair",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 112047487571,
+      "name": "update-verification",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 112047487697,
+      "name": "accepted-delivery",
+      "conclusion": "skipped"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11383245060,
+      "name": "VDRAW-permanent-signing-config-37394074765",
+      "digest": "sha256:c07e36f8a3534ec593a96000993d4b1ddd027d5d4f49dc7af3631a560a53b0d5"
+    },
+    {
+      "id": 11382436712,
+      "name": "VDRAW-007-release-regression-37394074765-29ed6d3913bf7ffe4d670b582473c4aed3e83d14",
+      "digest": "sha256:1f6fcc914133704155488fa32558b3eb6755d4b551f49ca426651302df53dcd0"
+    },
+    {
+      "id": 11381874843,
+      "name": "VDRAW-permanent-signing-readiness-37394074765",
+      "digest": "sha256:2da3a2f8935e5ab61f1044353accfc7321645be13970bfb9080b6b73f7be6adb"
+    }
+  ],
+  "deviceNextStep": "WITHHELD_UNTIL_FIXED_APK_ACCEPTANCE",
+  "requiredCapability": "TRUSTED_SECRETS_WRITE_ROUTE_AND_DURABLE_KEY_CUSTODY"
+}
