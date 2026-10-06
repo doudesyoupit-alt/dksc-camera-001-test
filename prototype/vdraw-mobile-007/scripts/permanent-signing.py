@@ -102,11 +102,11 @@ public class VDRAWKeyCheck {
         require(result.returncode == 0, 'PRIVATE_KEY_CHECK_FAILED')
 
 def build_release(env, version_code, version_name):
-    require(version_code in (8, 9) and version_name == {8: '0.8.0', 9: '0.8.1'}[version_code],
+    require(version_code in (8, 9, 10) and version_name == {8: '0.8.0', 9: '0.8.1', 10: '0.8.2'}[version_code],
             'APK_BUILD_VERSION_INVALID')
     key_password_check(env)
     tasks = [':app:assembleRelease']
-    if version_code == 8:
+    if version_code in (8, 10):
         tasks.append(':app:assembleReleaseAndroidTest')
     # Never forward raw Gradle stdout/stderr, which can include the secret alias.
     result = subprocess.run(['gradle', '-p', 'android', '--no-daemon',
@@ -188,3 +188,4 @@ if __name__ == '__main__':
     a.output.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result))
     raise SystemExit(0 if result['status'] == 'PASS' else 2)
+

@@ -12,6 +12,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: vdraw007-permanent-signing
   cancel-in-progress: false
@@ -44,7 +45,9 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git rev-parse HEAD:prototype/vdraw-mobile-006)" = 47cabdf70e9aebf7c64a1e028e85c476df32a169
-          git diff --exit-code d77c524e49ff8835670b016551f007f6c171bb63 -- web server native android ':!android/app/build.gradle' ':!android/app/permanent-signing.gradle' ':!android/app/src/androidTest/java/jp/dksc/vdraw/prototype007/PermanentUpdateInstrumentation.java'
+          approved_checkpoint="$(python3 -c 'import json;print(json.load(open("scripts/permanent-signing-policy.json"))["approvedSoftwareCheckpoint"])')"
+          test "$approved_checkpoint" = 5a6a760c7ece23fda764b1f3f6d2fa1f0dd09737
+          git diff --exit-code "$approved_checkpoint" -- web server native android
           git diff --no-renames --exit-code --diff-filter=MDT d77c524e49ff8835670b016551f007f6c171bb63 -- tests ':!tests/regression-manifest-round1.json'
           python3 scripts/check-regression-assets-round1.py
       - name: Install locked dependencies and inspection libraries
@@ -129,11 +132,14 @@ jobs:
           python3 tests/permanent-signing-contract.py > evidence/permanent-config/contract.log 2>&1
           python3 tests/permanent-signing-transport.py > evidence/permanent-config/transport.log 2>&1
           python3 tests/permanent-signing-diagnosis.py > evidence/permanent-config/diagnosis.log 2>&1
+          python3 tests/permanent-save001-release.py > evidence/permanent-config/save001-release.log 2>&1
           timeout -k 5s 180s npm ci --no-audit --no-fund
           npm run android:sync
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0'
           gradle -p android --no-daemon :app:tasks --all > evidence/permanent-config/gradle-config.log 2>&1
           gradle -p android --no-daemon :app:compileDebugAndroidTestJavaWithJavac > evidence/permanent-config/instrumentation-compile.log 2>&1
+          gradle -p android --no-daemon :app:testDebugUnitTest > evidence/permanent-config/save001-native.log 2>&1
+          cp android/app/build/test-results/testDebugUnitTest/TEST-jp.dksc.vdraw.prototype007.DocumentSaveTest.xml evidence/permanent-config/DocumentSaveTest.xml
       - name: Prove release cannot use a generated debug key or missing secrets
         run: |
           set -euo pipefail
@@ -188,26 +194,45 @@ jobs:
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0'
           timeout -k 5s 180s npm ci --no-audit --no-fund
           npm run android:sync
-      - name: Build fixed-signed A8 and B9 and check actual APK metadata
+      - uses: actions/download-artifact@v7
+        with:
+          name: VDRAW-permanent-signed-ACCEPTED-37399112615-1aa73b3cf665e99f3353f094764d8fdf970badef
+          run-id: 37399112615
+          github-token: ${{ github.token }}
+          path: accepted-081-baseline
+      - name: Use accepted 0.8.1 baseline and build fixed-signed 0.8.2
         run: |
           set -euo pipefail
           mkdir -p evidence/fixed-apks
-          python3 scripts/permanent-signing.py build --version-code 8 --version-name 0.8.0 --output evidence/permanent-public/build-A.json
-          cp android/app/build/outputs/apk/release/app-release.apk evidence/fixed-apks/VDRAW-MOBILE-008-fixed.apk
+          cp "$GITHUB_WORKSPACE/accepted-081-baseline/VDRAW-MOBILE-009-fixed.apk" evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk
+          python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk --version-code 9 --version-name 0.8.1 --output evidence/fixed-apks/A.json
+          python3 - <<'PY_BASELINE'
+          import json,os
+          from pathlib import Path
+          policy=json.loads(Path('scripts/permanent-signing-policy.json').read_text())['save001Release']
+          a=json.loads(Path('evidence/fixed-apks/A.json').read_text())
+          original=json.loads((Path(os.environ['GITHUB_WORKSPACE'])/'accepted-081-baseline/B.json').read_text())
+          assert a['apkSHA256']==original['apkSHA256']==policy['baselineApkSHA256']
+          assert original['sourceHEAD']==policy['baselineSourceHEAD'] and original['workflowRun']==str(policy['baselineAcceptedWorkflowRun'])
+          a['verificationHEAD']=os.environ['GITHUB_SHA']
+          a['sourceHEAD']=original['sourceHEAD']
+          a['baselineAcceptedWorkflowRun']=policy['baselineAcceptedWorkflowRun']
+          Path('evidence/fixed-apks/A.json').write_text(json.dumps(a,indent=2)+'\n')
+          PY_BASELINE
+          python3 scripts/permanent-signing.py build --version-code 10 --version-name 0.8.2 --output evidence/permanent-public/build-082.json
+          cp android/app/build/outputs/apk/release/app-release.apk evidence/fixed-apks/VDRAW-MOBILE-010-fixed.apk
           cp android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk evidence/fixed-apks/update-test.apk
-          python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-008-fixed.apk --version-code 8 --version-name 0.8.0 --output evidence/fixed-apks/A.json
-          python3 scripts/permanent-signing.py build --version-code 9 --version-name 0.8.1 --output evidence/permanent-public/build-B.json
-          cp android/app/build/outputs/apk/release/app-release.apk evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk
-          python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-009-fixed.apk --version-code 9 --version-name 0.8.1 --output evidence/fixed-apks/B.json
+          python3 scripts/permanent-signing.py verify --apk evidence/fixed-apks/VDRAW-MOBILE-010-fixed.apk --version-code 10 --version-name 0.8.2 --output evidence/fixed-apks/B.json
+          python3 scripts/permanent-save001-release.py content --apk evidence/fixed-apks/VDRAW-MOBILE-010-fixed.apk --output evidence/fixed-apks/save001-content.json
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs evidence/fixed-apks/update-test.apk > evidence/permanent-public/update-test-public-cert.log
-          python3 - <<'PY'
+          python3 - <<'PY_CERT'
           import json,re
           from pathlib import Path
           a=json.loads(Path('evidence/fixed-apks/A.json').read_text());b=json.loads(Path('evidence/fixed-apks/B.json').read_text())
-          assert a['certificateSHA256']==b['certificateSHA256'] and b['versionCode']>a['versionCode']>=8
+          assert a['certificateSHA256']==b['certificateSHA256'] and a['versionCode']==9 and b['versionCode']==10
           t=Path('evidence/permanent-public/update-test-public-cert.log').read_text()
           assert re.findall(r'Signer #\d+ certificate SHA-256 digest: ([0-9a-f]+)',t)==[a['certificateSHA256']]
-          PY
+          PY_CERT
       - name: Remove restored private key material
         if: always()
         run: |
@@ -250,7 +275,7 @@ jobs:
           arch: x86_64
           target: google_apis
           disable-animations: true
-          script: bash prototype/vdraw-mobile-007/scripts/permanent-update-emulator.sh
+          script: bash prototype/vdraw-mobile-007/scripts/permanent-save001-update-emulator.sh
       - uses: actions/upload-artifact@v7
         if: always()
         with:
@@ -271,18 +296,42 @@ jobs:
         with:
           name: VDRAW-fixed-update-evidence-${{ github.run_id }}
           path: delivery/update-evidence
-      - name: Publish only accepted APKs and public evidence
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          clean: false
+          path: accepted-source
+      - uses: actions/download-artifact@v7
+        with:
+          name: VDRAW-007-release-regression-${{ github.run_id }}-${{ github.sha }}
+          path: accepted-regression
+      - uses: actions/download-artifact@v7
+        with:
+          name: VDRAW-permanent-signing-config-${{ github.run_id }}
+          path: accepted-config
+      - uses: actions/download-artifact@v7
+        with:
+          name: VDRAW-permanent-signing-readiness-${{ github.run_id }}
+          path: accepted-readiness
+      - name: Publish only accepted 0.8.2 APK and public evidence
         run: |
-          rm delivery/update-test.apk
-          python3 - <<'PY'
-          import json
+          set -euo pipefail
+          cp accepted-regression/vdraw007-full-${{ github.run_id }}/summary.json delivery/regression-summary.json
+          cp accepted-config/DocumentSaveTest.xml delivery/DocumentSaveTest.xml
+          cp accepted-readiness/readiness.json delivery/readiness.json
+          python3 accepted-source/prototype/vdraw-mobile-007/scripts/permanent-save001-release.py accept --directory delivery --output delivery/ACCEPTED.json
+          python3 - <<'PY_DELIVERY'
           from pathlib import Path
-          result=json.loads(Path('delivery/update-evidence/acceptance.json').read_text())
-          assert result['status']=='PASS' and result['updateWithoutUninstall']=='PASS' and result['actualProductProjectPreservation']=='PASS'
-          PY
+          # Only redundant baseline/test artifacts are removed from this disposable delivery staging directory.
+          for name in ['update-test.apk','VDRAW-MOBILE-009-fixed.apk']:
+              Path('delivery',name).unlink()
+          Path('delivery/INSTALL.txt').write_text('VDRAW MOBILE 0.8.2 / versionCode 10\n0.8.1を削除せず、このAPKを上書きインストールしてください。\n確認は1項目だけ：「ファイルを保存」→Android保存先選択が開くこと。\n共有ボタンの追加確認は不要です。\n',encoding='utf-8')
+          PY_DELIVERY
       - uses: actions/upload-artifact@v7
         with:
-          name: VDRAW-permanent-signed-ACCEPTED-${{ github.run_id }}-${{ github.sha }}
+          name: VDRAW-MOBILE-010-fixed-ACCEPTED-${{ github.run_id }}-${{ github.sha }}
           path: delivery
           if-no-files-found: error
           retention-days: 30
+

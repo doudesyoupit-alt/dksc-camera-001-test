@@ -16,7 +16,7 @@
     "versionCode": 9,
     "versionName": "0.8.1"
   },
-  "approvedSoftwareCheckpoint": "d77c524e49ff8835670b016551f007f6c171bb63",
+  "approvedSoftwareCheckpoint": "5a6a760c7ece23fda764b1f3f6d2fa1f0dd09737",
   "keyPreservationReceipt": {
     "vaultReference": "PRIVATE_OWNER_HANDOFF_20261006",
     "encryptedArchiveSha256": "41ae94fb829de376f6686f1eda50f3ebfd64e166f3a73672d1e0fee5c2d9633b",
@@ -25,5 +25,16 @@
     "recoveryVerification": "PASS",
     "recoveryScope": "OWNER_PRIVATE_PERSISTENT_HANDOFF_ROUND_TRIP_WITH_KEYTOOL_AND_PRIVATE_KEY_SIGN_VERIFY",
     "externalOfflineBackup": "OWNER_CUSTODY_INSTRUCTIONS_INCLUDED"
+  },
+  "save001Release": {
+    "versionCode": 10,
+    "versionName": "0.8.2",
+    "save001Checkpoint": "5a6a760c7ece23fda764b1f3f6d2fa1f0dd09737",
+    "baselineVersionCode": 9,
+    "baselineVersionName": "0.8.1",
+    "baselineSourceHEAD": "1aa73b3cf665e99f3353f094764d8fdf970badef",
+    "baselineAcceptedWorkflowRun": 37399112615,
+    "baselineArtifactName": "VDRAW-permanent-signed-ACCEPTED-37399112615-1aa73b3cf665e99f3353f094764d8fdf970badef",
+    "baselineApkSHA256": "841c8a04c6035bf4aba3116b470ce4f34166c844ebe9a0097917b18afad27fb4"
   }
 }
