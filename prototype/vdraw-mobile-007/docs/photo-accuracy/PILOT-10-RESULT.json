@@ -1,0 +1,2489 @@
+{
+  "schema": "vdraw-photo-accuracy-report/1",
+  "status": "BLOCKED",
+  "productReleaseAllowed": false,
+  "productCompletionPercent": null,
+  "targetPracticalAccuracyPercent": 100,
+  "majorFalsePassTarget": 0,
+  "registeredPhotoCount": 10,
+  "realPhotoTotal": 10,
+  "realAIPhotoCount": 0,
+  "claimedPhotoRecords": 0,
+  "claimedProviderRecords": 0,
+  "formalEvidenceAuthority": "NOT_IMPLEMENTED",
+  "difficultyCounts": {
+    "Easy": 1,
+    "Normal": 4,
+    "Hard": 5,
+    "Extreme": 0
+  },
+  "registeredDifficultyCounts": {
+    "Easy": 1,
+    "Normal": 4,
+    "Hard": 5,
+    "Extreme": 0
+  },
+  "splitCounts": {
+    "development": 6,
+    "validation": 2,
+    "blind-holdout": 2
+  },
+  "registeredSplitCounts": {
+    "development": 6,
+    "validation": 2,
+    "blind-holdout": 2
+  },
+  "formalAccuracyBasis": "FROZEN_BLIND_HOLDOUT_WITH_INDEPENDENT_PROVENANCE_AUTHORITY",
+  "formalMeasuredPhotos": 0,
+  "formalDenominatorPhotos": 2,
+  "acquiredHoldoutCoverage": 2,
+  "registeredHoldoutDenominator": 2,
+  "denominatorRule": "All real holdout photos, including blocked/UNKNOWN/rejected, remain in the success denominator; missing metrics stay null.",
+  "formalMetrics": {
+    "objectRecall": null,
+    "objectPrecision": null,
+    "iou": null,
+    "positionErrorPx": null,
+    "angleErrorDeg": null,
+    "contourErrorPx": null,
+    "shapeMatchRate": null,
+    "ocrAccuracy": null,
+    "dimensionErrorMm": null,
+    "unknownAppropriateness": null,
+    "criticalMisses": null,
+    "criticalMisrecognitions": null,
+    "zeroCorrectionCompletionRate": null,
+    "meanCorrectionCount": null,
+    "meanCorrectionTimeSeconds": null,
+    "pptxFidelity": null,
+    "dxfFidelity": null,
+    "roundTripSuccessRate": null,
+    "deviceSuccessRates": null,
+    "realPhotoToUsableDrawingSuccessRate": null,
+    "cameraQualityAccuracy": null
+  },
+  "measurementCoverageByMetric": {
+    "objectRecall": 0,
+    "objectPrecision": 0,
+    "iou": 0,
+    "positionErrorPx": 0,
+    "angleErrorDeg": 0,
+    "contourErrorPx": 0,
+    "shapeMatchRate": 0,
+    "ocrAccuracy": 0,
+    "dimensionErrorMm": 0,
+    "unknownAppropriateness": 0,
+    "criticalMisses": 0,
+    "criticalMisrecognitions": 0,
+    "zeroCorrectionCompletionRate": 0,
+    "meanCorrectionCount": 0,
+    "meanCorrectionTimeSeconds": 0,
+    "pptxFidelity": 0,
+    "dxfFidelity": 0,
+    "roundTripSuccessRate": 0,
+    "deviceSuccessRates": 0,
+    "realPhotoToUsableDrawingSuccessRate": 0,
+    "cameraQualityAccuracy": 0
+  },
+  "diagnosticCoverageByMetric": {
+    "objectRecall": 0,
+    "objectPrecision": 0,
+    "iou": 0,
+    "positionErrorPx": 0,
+    "angleErrorDeg": 0,
+    "contourErrorPx": 0,
+    "shapeMatchRate": 0,
+    "ocrAccuracy": 0,
+    "dimensionErrorMm": 0,
+    "unknownAppropriateness": 0,
+    "criticalMisses": 0,
+    "criticalMisrecognitions": 0,
+    "zeroCorrectionCompletionRate": 0,
+    "meanCorrectionCount": 0,
+    "meanCorrectionTimeSeconds": 0,
+    "pptxFidelity": 0,
+    "dxfFidelity": 0,
+    "roundTripSuccessRate": 0,
+    "deviceSuccessRates": 0,
+    "realPhotoToUsableDrawingSuccessRate": 0,
+    "cameraQualityAccuracy": 0
+  },
+  "realProviderConfigPresence": {
+    "ANTHROPIC_API_KEY": false,
+    "CLAUDE_MODEL": false,
+    "SAM_PROVIDER_URL": false,
+    "SAM_PROVIDER_TOKEN": false
+  },
+  "actualNetworkRequestsThisCommand": 0,
+  "sourceReleaseHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "benchmarkImplementationHEAD": "WORKING_TREE_UNCOMMITTED",
+  "save001DeviceAcceptance": "CLOSED",
+  "rows": [
+    {
+      "photoId": "NET-001",
+      "sourceSHA256": "c8dceb3e493d088f632396d6fe464eb5e52984395c0ea7405b9eea2bb20a7e44",
+      "split": "development",
+      "difficulty": "Normal",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 268.0824760993939,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 119.341518188912,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 119.341518188912,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 194,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1314,
+              "heightPx": 1600,
+              "shortEdgePx": 1314,
+              "pixelCount": 2102400
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 119.341518188912,
+          "lumaStdDev": 54.66111256206181,
+          "p05Luma": 10,
+          "p95Luma": 204,
+          "laplacianVariance": 268.0824760993939,
+          "analysisWidthPx": 841,
+          "analysisHeightPx": 1024
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.291448,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-002",
+      "sourceSHA256": "04bc50f9182725ee94344510253855922d2aec89cb3da1a31476e8b76007e400",
+      "split": "development",
+      "difficulty": "Hard",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 2669.2422922877176,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 111.63862843360765,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 111.63862843360765,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 211,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1600,
+              "heightPx": 878,
+              "shortEdgePx": 878,
+              "pixelCount": 1404800
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 111.63862843360765,
+          "lumaStdDev": 66.80927093651987,
+          "p05Luma": 11,
+          "p95Luma": 222,
+          "laplacianVariance": 2669.2422922877176,
+          "analysisWidthPx": 1024,
+          "analysisHeightPx": 562
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.204519,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-003",
+      "sourceSHA256": "38473425f525cfb149d9c63712a8ce06df32a3b6042670d412942c5eaa315c66",
+      "split": "development",
+      "difficulty": "Normal",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 2136.95131427084,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 118.72810490926106,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 118.72810490926106,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 194,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1600,
+              "heightPx": 1200,
+              "shortEdgePx": 1200,
+              "pixelCount": 1920000
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 118.72810490926106,
+          "lumaStdDev": 64.62205722474826,
+          "p05Luma": 18,
+          "p95Luma": 212,
+          "laplacianVariance": 2136.95131427084,
+          "analysisWidthPx": 1024,
+          "analysisHeightPx": 768
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.264695,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-004",
+      "sourceSHA256": "1a9853d4bf9b7174891d4721ab6bc827b889ea8b95d31344f891d9d0bdae2a22",
+      "split": "development",
+      "difficulty": "Hard",
+      "status": "BLOCKED",
+      "failureStage": "Camera Quality",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "RETAKE_REQUIRED",
+        "heuristicGate": "RETAKE_REQUIRED",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [
+          "INSUFFICIENT_PIXEL_RESOLUTION"
+        ],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 1939.8778123918216,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 147.60801164215687,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 147.60801164215687,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 210,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 510,
+              "heightPx": 640,
+              "shortEdgePx": 510,
+              "pixelCount": 326400
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": "INSUFFICIENT_PIXEL_RESOLUTION"
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 147.60801164215687,
+          "lumaStdDev": 65.39304178861472,
+          "p05Luma": 23,
+          "p95Luma": 233,
+          "laplacianVariance": 1939.8778123918216,
+          "analysisWidthPx": 510,
+          "analysisHeightPx": 640
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "RETAKE_REQUIRED",
+          "method": "HEURISTIC",
+          "reasonCodes": [
+            "INSUFFICIENT_PIXEL_RESOLUTION"
+          ],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.095254,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-005",
+      "sourceSHA256": "83c5ed0515126898750563fff6693d58589952f0a9989c242586b19989b7220e",
+      "split": "development",
+      "difficulty": "Normal",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 980.3951640289941,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 115.16296895345052,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 115.16296895345052,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 171,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1600,
+              "heightPx": 1200,
+              "shortEdgePx": 1200,
+              "pixelCount": 1920000
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 115.16296895345052,
+          "lumaStdDev": 58.99104212250078,
+          "p05Luma": 21,
+          "p95Luma": 192,
+          "laplacianVariance": 980.3951640289941,
+          "analysisWidthPx": 1024,
+          "analysisHeightPx": 768
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.26582,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-006",
+      "sourceSHA256": "55d616ba6f6a07c1b0031fd1d1bea121f2b8f0a70e047100a11d581f648ababc",
+      "split": "development",
+      "difficulty": "Normal",
+      "status": "BLOCKED",
+      "failureStage": "Camera Quality",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "RETAKE_REQUIRED",
+        "heuristicGate": "RETAKE_REQUIRED",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [
+          "LOW_EDGE_DETAIL_HEURISTIC"
+        ],
+        "checks": {
+          "blur": {
+            "status": "FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 56.85357242039424,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": "LOW_EDGE_DETAIL_HEURISTIC"
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 189.672971089681,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 189.672971089681,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 97,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1600,
+              "heightPx": 1200,
+              "shortEdgePx": 1200,
+              "pixelCount": 1920000
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 189.672971089681,
+          "lumaStdDev": 36.86774801279143,
+          "p05Luma": 125,
+          "p95Luma": 222,
+          "laplacianVariance": 56.85357242039424,
+          "analysisWidthPx": 1024,
+          "analysisHeightPx": 768
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "RETAKE_REQUIRED",
+          "method": "HEURISTIC",
+          "reasonCodes": [
+            "LOW_EDGE_DETAIL_HEURISTIC"
+          ],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.253911,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-007",
+      "sourceSHA256": "bb54113e3b03a68d14efe9a68346afa8b876c666ec027e3712141a164b1c3b70",
+      "split": "validation",
+      "difficulty": "Hard",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 650.7294032879344,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 118.02793248494466,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 118.02793248494466,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 162,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1200,
+              "heightPx": 1600,
+              "shortEdgePx": 1200,
+              "pixelCount": 1920000
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 118.02793248494466,
+          "lumaStdDev": 48.846987677007014,
+          "p05Luma": 26,
+          "p95Luma": 188,
+          "laplacianVariance": 650.7294032879344,
+          "analysisWidthPx": 768,
+          "analysisHeightPx": 1024
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.26578,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-008",
+      "sourceSHA256": "fda4e65e23b68fbe151382453f8097ae58d9a21117255557eb021cf40a433439",
+      "split": "validation",
+      "difficulty": "Hard",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 2001.2212243712745,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 127.64261627197266,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 127.64261627197266,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 208,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1200,
+              "heightPx": 1600,
+              "shortEdgePx": 1200,
+              "pixelCount": 1920000
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 127.64261627197266,
+          "lumaStdDev": 73.66522161678209,
+          "p05Luma": 28,
+          "p95Luma": 236,
+          "laplacianVariance": 2001.2212243712745,
+          "analysisWidthPx": 768,
+          "analysisHeightPx": 1024
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.268414,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-009",
+      "sourceSHA256": "3dd602062b1c7c693173eb2d37ef0d885b908226d57a9525f137d594fabaee5e",
+      "split": "blind-holdout",
+      "difficulty": "Easy",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 3645.889196942804,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 142.46308771769205,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 142.46308771769205,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 187,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1600,
+              "heightPx": 1200,
+              "shortEdgePx": 1200,
+              "pixelCount": 1920000
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 142.46308771769205,
+          "lumaStdDev": 66.65074932627603,
+          "p05Luma": 33,
+          "p95Luma": 220,
+          "laplacianVariance": 3645.889196942804,
+          "analysisWidthPx": 1024,
+          "analysisHeightPx": 768
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.324905,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    },
+    {
+      "photoId": "NET-010",
+      "sourceSHA256": "d78d0aec93634a7f3571d9962f6534ff9d0dde3ed11a35479ddd1d308769f058",
+      "split": "blind-holdout",
+      "difficulty": "Hard",
+      "status": "BLOCKED",
+      "failureStage": "Scene",
+      "quality": {
+        "schema": "vdraw-photo-quality/1",
+        "status": "NEEDS_REVIEW",
+        "heuristicGate": "NO_HEURISTIC_RETAKE_TRIGGER",
+        "executionKind": "OFFLINE_PIXEL_HEURISTIC",
+        "productionCameraIntegration": "NOT_CONNECTED",
+        "thresholdCalibration": "PROVISIONAL_NOT_CALIBRATED_ON_HUMAN_GROUND_TRUTH",
+        "reasonCodes": [],
+        "checks": {
+          "blur": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "laplacianVariance",
+            "value": 1556.096705054643,
+            "comparison": "below",
+            "threshold": 60.0,
+            "reasonCode": null
+          },
+          "dark": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 118.04561860380117,
+            "comparison": "below",
+            "threshold": 45.0,
+            "reasonCode": null
+          },
+          "bright": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "meanLuma",
+            "value": 118.04561860380117,
+            "comparison": "above",
+            "threshold": 220.0,
+            "reasonCode": null
+          },
+          "lowcontrast": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "p95MinusP05Luma",
+            "value": 195,
+            "comparison": "below",
+            "threshold": 40.0,
+            "reasonCode": null
+          },
+          "insufficientresolution": {
+            "status": "NOT_FLAGGED",
+            "method": "PIXEL_HEURISTIC",
+            "metric": "orientedPixelDimensions",
+            "value": {
+              "widthPx": 1600,
+              "heightPx": 1068,
+              "shortEdgePx": 1068,
+              "pixelCount": 1708800
+            },
+            "comparison": "shortEdgeBelow OR pixelCountBelow",
+            "threshold": {
+              "shortEdgePx": 480,
+              "pixelCount": 500000
+            },
+            "reasonCode": null
+          },
+          "glare": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "far": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "occlusion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          },
+          "motion": {
+            "status": "NOT_MEASURED",
+            "decision": "NEEDS_REVIEW",
+            "reasonCode": "NO_VALIDATED_MEASUREMENT_METHOD"
+          }
+        },
+        "measurements": {
+          "meanLuma": 118.04561860380117,
+          "lumaStdDev": 63.438598804265396,
+          "p05Luma": 19,
+          "p95Luma": 214,
+          "laplacianVariance": 1556.096705054643,
+          "analysisWidthPx": 1024,
+          "analysisHeightPx": 684
+        },
+        "thresholds": {
+          "darkMeanLumaBelow": 45.0,
+          "brightMeanLumaAbove": 220.0,
+          "lowContrastP95MinusP05Below": 40.0,
+          "blurLaplacianVarianceBelow": 60.0,
+          "minimumShortEdgePx": 480,
+          "minimumPixelCount": 500000,
+          "analysisMaximumEdgePx": 1024,
+          "maximumInputPixelCount": 20000000
+        },
+        "processing": {
+          "orientation": "EXIF_TRANSPOSE",
+          "alphaBackground": "WHITE",
+          "luminance": "PIL_RGB_TO_L",
+          "resampling": "LANCZOS_MAX_EDGE_1024",
+          "laplacian": "FOUR_NEIGHBOUR_INTERIOR_POPULATION_VARIANCE"
+        },
+        "metrics": {
+          "precision": {
+            "status": "NOT_MEASURED",
+            "value": null
+          },
+          "recall": {
+            "status": "NOT_MEASURED",
+            "value": null
+          }
+        },
+        "accuracyReasonCode": "HUMAN_GROUND_TRUTH_NOT_PROVIDED",
+        "limitations": [
+          "Pixel heuristics do not establish semantic photo suitability.",
+          "Low edge detail can reflect smooth content rather than optical blur.",
+          "Distance, glare, occlusion and motion require independent review."
+        ]
+      },
+      "stages": {
+        "Camera Quality": {
+          "status": "NEEDS_REVIEW",
+          "method": "HEURISTIC",
+          "reasonCodes": [],
+          "accuracy": "NOT_MEASURED"
+        },
+        "Scene": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_PROVIDER_NOT_CONNECTED"
+        },
+        "Detection": {
+          "status": "BLOCKED",
+          "reason": "REAL_SCENE_INFERENCE_NOT_EXECUTED"
+        },
+        "Segmentation": {
+          "status": "BLOCKED",
+          "implementation": "PARTIAL_PRIVATE_ADAPTER",
+          "reason": "REAL_SEGMENTATION_PROVIDER_NOT_CONNECTED"
+        },
+        "OCR": {
+          "status": "NOT_IMPLEMENTED",
+          "reason": "NO_PRODUCT_OCR_PROVIDER"
+        },
+        "Geometry": {
+          "status": "BLOCKED",
+          "implementation": "HEURISTIC_PARTIAL",
+          "reason": "NO_REAL_AI_CANDIDATE"
+        },
+        "Coordinate": {
+          "status": "CONTRACT_REGRESSION_ONLY",
+          "photoCandidate": "NOT_MEASURED"
+        },
+        "Scale": {
+          "status": "UNSCALED",
+          "provenance": null,
+          "measurementRequired": true,
+          "generatedPhysicalDimensions": false
+        },
+        "Overlay": {
+          "status": "NOT_EXECUTED",
+          "reason": "NO_REAL_AI_GEOMETRY_TO_OVERLAY"
+        },
+        "Export": {
+          "status": "PHOTO_PLACEMENT_ASSAY_ONLY",
+          "recognitionFidelity": "NOT_MEASURED",
+          "realAppAcceptance": "NOT_MEASURED"
+        }
+      },
+      "metrics": {
+        "objectRecall": null,
+        "objectPrecision": null,
+        "iou": null,
+        "positionErrorPx": null,
+        "angleErrorDeg": null,
+        "contourErrorPx": null,
+        "shapeMatchRate": null,
+        "ocrAccuracy": null,
+        "dimensionErrorMm": null,
+        "unknownAppropriateness": null,
+        "criticalMisses": null,
+        "criticalMisrecognitions": null,
+        "zeroCorrectionCompletionRate": null,
+        "meanCorrectionCount": null,
+        "meanCorrectionTimeSeconds": null,
+        "pptxFidelity": null,
+        "dxfFidelity": null,
+        "roundTripSuccessRate": null,
+        "deviceSuccessRates": null,
+        "realPhotoToUsableDrawingSuccessRate": null,
+        "cameraQualityAccuracy": null
+      },
+      "missedCount": null,
+      "falseDetectionCount": null,
+      "misclassificationCount": null,
+      "zeroCorrectionCompletion": null,
+      "humanCorrectionCount": null,
+      "humanCorrectionTimeSeconds": null,
+      "aiProcessingTimeSeconds": null,
+      "qualityProcessingTimeSeconds": 0.304696,
+      "upstreamStatusPropagation": "NO_AUTO_CONFIRMATION",
+      "humanCorrectionLedger": {
+        "status": "NOT_AVAILABLE",
+        "externalTransfer": false,
+        "autoLearning": false,
+        "allowedTypes": [
+          "classification",
+          "contour",
+          "position",
+          "color",
+          "text",
+          "shape"
+        ]
+      },
+      "groundTruthStatus": "NOT_ANNOTATED",
+      "formalMetricStatus": "NOT_MEASURED"
+    }
+  ],
+  "currentPhotoPhaseDefects": {
+    "P0": 0,
+    "P1": 0,
+    "openIssues": []
+  },
+  "releaseBlockers": [
+    "GOLDEN_SNAPSHOT_NOT_FROZEN",
+    "HOLDOUT_NOT_FULLY_MEASURED",
+    "HUMAN_GROUND_TRUTH_MISSING",
+    "OCR_NOT_IMPLEMENTED",
+    "OVERLAY_RECOGNITION_NOT_EVALUATED",
+    "PRODUCT_CAMERA_QUALITY_GATE_NOT_CONNECTED",
+    "REAL_AI_TRIAL_NOT_EXECUTED",
+    "REAL_APP_EXPORT_AND_ROUND_TRIP_UNMEASURED",
+    "REAL_PROVIDER_CONFIG_UNAVAILABLE_IN_THIS_ENVIRONMENT",
+    "TRUSTED_GT_PROVIDER_AUTHORITY_UNIMPLEMENTED"
+  ],
+  "regressionEvidence": {
+    "fullRegression": "BASELINE_53_PASS",
+    "fail": 0,
+    "blocked": 0,
+    "skip": 0,
+    "accuracyEvidence": false,
+    "sourceReleaseHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+    "P0": 0,
+    "P1": 0,
+    "scope": "Accepted 0.8.2 software gates; real-photo product readiness is BLOCKED."
+  },
+  "trialStatus": "TEN_REAL_PHOTOS_QUALITY_EXECUTED_RECOGNITION_BLOCKED",
+  "qualityGateCounts": {
+    "RETAKE_REQUIRED": 2,
+    "NEEDS_REVIEW": 8,
+    "BLOCKED": 0
+  },
+  "failureStageCounts": {
+    "Camera Quality": 2,
+    "Scene": 8,
+    "Detection": 0,
+    "Segmentation": 0,
+    "OCR": 0,
+    "Geometry": 0,
+    "Coordinate": 0,
+    "Scale": 0,
+    "Overlay": 0,
+    "Export": 0
+  },
+  "realAIBlocker": "NO_EXECUTABLE_PRODUCT_AI_AND_SEGMENTATION_CONNECTION_IN_THIS_ENVIRONMENT",
+  "expansionDecision": "HOLD_AT_10_UNTIL_REAL_AI_AND_GROUND_TRUTH"
+}

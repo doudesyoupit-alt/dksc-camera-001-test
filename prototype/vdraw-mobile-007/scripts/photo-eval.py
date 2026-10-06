@@ -20,7 +20,7 @@ DIFFICULTIES = ['Easy', 'Normal', 'Hard', 'Extreme']
 SPLITS = ['development', 'validation', 'blind-holdout']
 PROVIDER_VARS = ['ANTHROPIC_API_KEY', 'CLAUDE_MODEL', 'SAM_PROVIDER_URL', 'SAM_PROVIDER_TOKEN']
 STAGES = ['Camera Quality', 'Scene', 'Detection', 'Segmentation', 'OCR', 'Geometry',
-          'Coordinate', 'Scale', 'Adopt', 'Save', 'Export']
+          'Coordinate', 'Scale', 'Overlay', 'Adopt', 'Save', 'Export']
 
 def require(ok, code):
     if not ok:
@@ -212,13 +212,58 @@ def evaluate_photo(root, photo, output):
         row['releaseBlockers'].append(code)
     return row
 
+def pinned_holdout_denominator(manifest):
+    registry_path = Path(__file__).parent.parent / 'docs/photo-accuracy/internet-source-registry.json'
+    if not registry_path.exists():
+        return 0
+    registry = json.loads(registry_path.read_text())
+    if manifest.get('datasetId') != registry.get('datasetId'):
+        return 0
+    # Retain every pinned holdout, even if omitted, missing, rejected or UNKNOWN.
+    return sum(p['split'] == 'blind-holdout' for p in registry['photos'])
+
+def verified_internet_inventory(manifest, root):
+    # Integration-reviewed public source inventory, pinned in repository. This
+    # attests acquisition bytes only; never a human GT or real-provider response.
+    registry_path = Path(__file__).parent.parent / 'docs/photo-accuracy/internet-source-registry.json'
+    if not registry_path.exists():
+        return []
+    registry = json.loads(registry_path.read_text())
+    if manifest.get('datasetId') != registry.get('datasetId'):
+        return []
+    pinned = {p['id']: p for p in registry['photos']}
+    verified = []
+    for p in manifest['photos']:
+        expected = pinned.get(p['id'])
+        if not expected:
+            continue
+        fields = ['sourceURL', 'sourceRevisionURL', 'license', 'licenseURL', 'author',
+                  'originalSHA256', 'canonicalSHA256', 'category', 'split', 'difficulty', 'captureGroup']
+        if not all(p.get(k) == expected.get(k) for k in fields):
+            continue
+        try:
+            original = safe_path(root, p['originalPath'])
+            canonical = safe_path(root, p['canonicalPath'])
+            if digest(original) != expected['originalSHA256'] or digest(canonical) != expected['canonicalSHA256']:
+                continue
+            if hashlib.sha1(original.read_bytes()).hexdigest() != expected['sourceSHA1']:
+                continue
+            with Image.open(canonical) as image:
+                if image.format != 'PNG' or list(image.size) != expected['canonicalSize']:
+                    continue
+            verified.append(p)
+        except (OSError, ValueError, KeyError):
+            continue
+    return verified
+
 def report(manifest, root, output, execute_evaluation=False):
     validate_manifest(manifest)
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     photos = manifest['photos']
     counts = {d: sum(p['difficulty'] == d for p in photos) for d in DIFFICULTIES}
-    blockers = ['SAVE001_DEVICE_ACCEPTANCE_PENDING', 'TRUSTED_PHOTO_GT_PROVIDER_AUTHORITY_UNIMPLEMENTED', 'PHOTO_PPTX_001_OPEN']
+    acquired = verified_internet_inventory(manifest, root)
+    blockers = ['TRUSTED_GT_PROVIDER_AUTHORITY_UNIMPLEMENTED']
     if not photos:
         blockers += ['REAL_PHOTOS_MISSING', 'HUMAN_GROUND_TRUTH_MISSING', 'BLIND_HOLDOUT_MISSING']
     if manifest['snapshotStatus'] != 'FROZEN':
@@ -241,32 +286,32 @@ def report(manifest, root, output, execute_evaluation=False):
     r = {'schema': 'vdraw-photo-accuracy-report/1', 'status': 'BLOCKED',
          'productReleaseAllowed': False, 'productCompletionPercent': None,
          'targetPracticalAccuracyPercent': 100, 'majorFalsePassTarget': 0,
-         'registeredPhotoCount': len(photos), 'realPhotoTotal': 0, 'realAIPhotoCount': 0,
+         'registeredPhotoCount': len(photos), 'realPhotoTotal': len(acquired), 'realAIPhotoCount': 0,
          'claimedPhotoRecords': sum(row['declaredPhotoRecordConsistent'] for row in rows),
          'claimedProviderRecords': len(claimed), 'formalEvidenceAuthority': 'NOT_IMPLEMENTED',
-         'difficultyCounts': {d: 0 for d in DIFFICULTIES}, 'registeredDifficultyCounts': counts,
-         'splitCounts': {s: 0 for s in SPLITS}, 'registeredSplitCounts': {s: sum(p['split'] == s for p in photos) for s in SPLITS},
+         'difficultyCounts': {d: sum(p['difficulty'] == d for p in acquired) for d in DIFFICULTIES}, 'registeredDifficultyCounts': counts,
+         'splitCounts': {s: sum(p['split'] == s for p in acquired) for s in SPLITS}, 'registeredSplitCounts': {s: sum(p['split'] == s for p in photos) for s in SPLITS},
          'formalAccuracyBasis': 'FROZEN_BLIND_HOLDOUT_WITH_INDEPENDENT_PROVENANCE_AUTHORITY',
-         'formalMeasuredPhotos': 0, 'formalDenominatorPhotos': 0, 'registeredHoldoutDenominator': holdout_count,
+         'formalMeasuredPhotos': 0, 'formalDenominatorPhotos': pinned_holdout_denominator(manifest), 'acquiredHoldoutCoverage': sum(p['split'] == 'blind-holdout' for p in acquired), 'registeredHoldoutDenominator': holdout_count,
          'denominatorRule': 'All real holdout photos, including blocked/UNKNOWN/rejected, remain in the success denominator; missing metrics stay null.',
          'formalMetrics': metrics, 'measurementCoverageByMetric': {k: 0 for k in METRICS},
          'diagnosticCoverageByMetric': {k: sum(finite(row['metrics'].get(k)) for row in rows) for k in METRICS},
          'realProviderConfigPresence': present, 'actualNetworkRequestsThisCommand': 0,
          'sourceReleaseHEAD': BASE, 'benchmarkImplementationHEAD': os.environ.get('GITHUB_SHA', 'WORKING_TREE_UNCOMMITTED'),
-         'save001DeviceAcceptance': 'OPEN_PENDING_USER_EVIDENCE', 'rows': rows,
-         'currentPhotoPhaseDefects': {'P0': 0, 'P1': 1, 'openIssues': ['PHOTO-PPTX-001']},
+         'save001DeviceAcceptance': 'CLOSED', 'rows': rows,
+         'currentPhotoPhaseDefects': {'P0': 0, 'P1': 0, 'openIssues': []},
          'releaseBlockers': sorted(set(blockers + [c for row in rows for c in row['releaseBlockers']])),
          'regressionEvidence': {'fullRegression': 'BASELINE_53_PASS', 'fail': 0, 'blocked': 0, 'skip': 0,
                                 'accuracyEvidence': False, 'sourceReleaseHEAD': BASE, 'P0': 0, 'P1': 0,
                                 'scope': 'Accepted 0.8.2 software gates; real-photo product readiness is BLOCKED.'}}
     (output / 'accuracy-report.json').write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n')
     labels = [('実写真総数', r['realPhotoTotal']), ('実AI使用枚数', r['realAIPhotoCount']),
-              ('難易度別枚数', counts)] + [(key, value) for key, value in metrics.items()]
+              ('難易度別枚数', r['difficultyCounts'])] + [(key, value) for key, value in metrics.items()]
     text = '| 実写真精度KPI | 今回の測定 |\n|---|---|\n'
     text += ''.join('| ' + name + ' | ' + ('未測定' if value is None else json.dumps(value, ensure_ascii=False)) + ' |\n' for name, value in labels)
     text += '\n実写真第一次試験: BLOCKED。製品完成率は算出しません。\n\n'
     text += '自動回帰: 基準0.8.2で53 PASS / FAIL 0 / BLOCKED 0 / skip 0。写真精度の合格証拠ではありません。\n'
-    text += 'P0/P1: 0.8.2既存受入範囲は0/0。新規写真出力P1 PHOTO-PPTX-001は1件OPEN。006保護はCIの変更範囲guardで別途確認。\n'
+    text += 'P0/P1: 0.8.2既存受入範囲は0/0。PHOTO-PPTX-001修正済み。006保護はCIの変更範囲guardで別途確認。\n'
     text += '\nRelease停止理由: ' + ', '.join(r['releaseBlockers']) + '\n'
     (output / 'accuracy-summary.md').write_text(text)
     return r

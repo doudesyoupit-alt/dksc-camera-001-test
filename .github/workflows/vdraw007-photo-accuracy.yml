@@ -1,13 +1,14 @@
-name: VDRAW Photo Accuracy Preparation
+name: VDRAW Photo Accuracy Integration
 on:
   push:
     branches: [work/vdraw007-photo-accuracy-20261006]
     paths:
       - 'prototype/vdraw-mobile-007/docs/photo-accuracy/**'
-      - 'prototype/vdraw-mobile-007/scripts/photo-eval*'
+      - 'prototype/vdraw-mobile-007/scripts/photo-*'
       - 'prototype/vdraw-mobile-007/server/photo-eval-provider.mjs'
-      - 'prototype/vdraw-mobile-007/tests/photo-eval*'
-      - 'prototype/vdraw-mobile-007/tests/photo-pptx-audit.mjs'
+      - 'prototype/vdraw-mobile-007/tests/photo-*'
+      - 'prototype/vdraw-mobile-007/web/src/exporters.js'
+      - 'prototype/vdraw-mobile-007/android/app/src/main/assets/public/src/exporters.js'
       - '.github/workflows/vdraw007-photo-accuracy.yml'
   workflow_dispatch:
 permissions:
@@ -16,10 +17,10 @@ concurrency:
   group: vdraw-photo-evaluation-${{ github.ref }}
   cancel-in-progress: false
 jobs:
-  evaluation-preparation:
+  photo-integration:
     if: github.ref == 'refs/heads/work/vdraw007-photo-accuracy-20261006'
     runs-on: ubuntu-24.04
-    timeout-minutes: 8
+    timeout-minutes: 20
     defaults:
       run:
         working-directory: prototype/vdraw-mobile-007
@@ -30,6 +31,7 @@ jobs:
           ref: ${{ github.sha }}
           fetch-depth: 0
           persist-credentials: false
+          clean: false
       - uses: actions/setup-node@v7
         with:
           node-version: '24'
@@ -37,55 +39,131 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Protect accepted product, existing tests, signing and 006
+      - name: Protect existing product, signing, tests and 006; allow only authorized photo changes
         run: |
           mkdir -p evidence/photo-accuracy
           python3 - <<'PY'
-          import subprocess
+          import subprocess,hashlib,json
+          from pathlib import Path
           baseline='15bf3371bec3f7d1e4090e7198a850c5636baf3f'
           pin='47cabdf70e9aebf7c64a1e028e85c476df32a169'
           assert subprocess.check_output(['git','rev-parse','HEAD:prototype/vdraw-mobile-006'],text=True).strip()==pin
+          modules={'prototype/vdraw-mobile-007/web/src/exporters.js','prototype/vdraw-mobile-007/android/app/src/main/assets/public/src/exporters.js'}
           allowed={'.github/workflows/vdraw007-photo-accuracy.yml',
           'prototype/vdraw-mobile-007/scripts/photo-eval.py','prototype/vdraw-mobile-007/scripts/photo-eval-metrics.py',
           'prototype/vdraw-mobile-007/scripts/photo-eval-requirements.txt','prototype/vdraw-mobile-007/server/photo-eval-provider.mjs',
+          'prototype/vdraw-mobile-007/scripts/photo-golden-acquire.py','prototype/vdraw-mobile-007/scripts/photo-pilot.py',
+          'prototype/vdraw-mobile-007/scripts/photo-pptx-pilot.mjs','prototype/vdraw-mobile-007/scripts/photo-quality.py',
           'prototype/vdraw-mobile-007/tests/photo-eval.test.py','prototype/vdraw-mobile-007/tests/photo-eval-metrics.test.py',
           'prototype/vdraw-mobile-007/tests/photo-eval-provider.test.mjs','prototype/vdraw-mobile-007/tests/photo-eval-png-fixture.json',
-          'prototype/vdraw-mobile-007/tests/photo-pptx-audit.mjs'}
+          'prototype/vdraw-mobile-007/tests/photo-pptx-audit.mjs','prototype/vdraw-mobile-007/tests/photo-pptx-contain.test.mjs',
+          'prototype/vdraw-mobile-007/tests/photo-quality.test.py','prototype/vdraw-mobile-007/tests/photo-internet-safety.test.py'}|modules
           changes=subprocess.check_output(['git','diff','--name-only',baseline,'HEAD'],text=True).splitlines()
           assert all(p in allowed or p.startswith('prototype/vdraw-mobile-007/docs/photo-accuracy/') for p in changes)
-          assert not subprocess.check_output(['git','diff','--name-only','--diff-filter=DM',baseline,'HEAD'],text=True).strip()
-          print('006 / accepted web-native-android / signing / old tests: PROTECTED_PASS')
+          assert not subprocess.check_output(['git','diff','--name-only','--diff-filter=DTR',baseline,'HEAD'],text=True).strip()
+          assert Path('web/src/exporters.js').read_bytes()==Path('android/app/src/main/assets/public/src/exporters.js').read_bytes()
+          assert hashlib.sha256(Path('tests/photo-pptx-audit.mjs').read_bytes()).hexdigest()=='95d86e3da0eb97365a030c840a3a915b8769a7c918cf7ac2a4b710bd8953b4c3'
+          result={'status':'PASS','006Tree':pin,'signingUnchanged':True,'oldTestsProtected':True,'authorizedProductChanges':sorted(modules),'androidWebExporterParity':True,'historicalDefectProbePreserved':True,'sourceHEAD':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()}
+          Path('evidence/photo-accuracy/source-protection.json').write_text(json.dumps(result,indent=2)+'\n')
+          print('006 / signing / existing tests: PROTECTED_PASS; PHOTO-PPTX source changes authorized')
           PY
       - name: Install pinned evaluation-only dependency
         run: timeout -k 5s 120s python3 -m pip install --disable-pip-version-check -r scripts/photo-eval-requirements.txt
-      - name: Evaluate synthetic safety probes; not photo recognition accuracy
+      - name: Safety and contract regression; no photo accuracy credit
         run: |
           timeout -k 5s 90s python3 tests/photo-eval.test.py > evidence/photo-accuracy/safety-tests.log 2>&1
           timeout -k 5s 90s python3 tests/photo-eval-metrics.test.py > evidence/photo-accuracy/metrics-tests.log 2>&1
+          timeout -k 5s 90s python3 tests/photo-quality.test.py > evidence/photo-accuracy/quality-tests.log 2>&1
           timeout -k 5s 90s node --test tests/photo-eval-provider.test.mjs > evidence/photo-accuracy/provider-tests.log 2>&1
           timeout -k 5s 90s node --test tests/vision-provider.test.mjs tests/input-001-regression.test.mjs tests/save001.test.mjs > evidence/photo-accuracy/existing-contract-tests.log 2>&1
-          timeout -k 5s 60s node tests/photo-pptx-audit.mjs > evidence/photo-accuracy/photo-pptx-defect-probe.json
-      - name: Emit truthful first-trial readiness; zero network and no accuracy PASS
+          timeout -k 5s 90s node --test tests/photo-pptx-contain.test.mjs > evidence/photo-accuracy/photo-pptx-contain-tests.log 2>&1
+      - name: Real provider configuration presence only; no image transfer, values or raw errors
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ secrets.CLAUDE_MODEL }}
+          SAM_PROVIDER_URL: ${{ secrets.SAM_PROVIDER_URL }}
+          SAM_PROVIDER_TOKEN: ${{ secrets.SAM_PROVIDER_TOKEN }}
+        run: timeout -k 5s 30s node server/photo-eval-provider.mjs > evidence/photo-accuracy/provider-preflight.json
+      - name: Acquire ten licensed public camera photos; source byte pins fail closed
         run: |
-          timeout -k 5s 30s node server/photo-eval-provider.mjs > evidence/photo-accuracy/provider-preflight.json
-          timeout -k 5s 30s python3 scripts/photo-eval.py preflight --manifest docs/photo-accuracy/golden-manifest.json --output evidence/photo-accuracy > evidence/photo-accuracy/preflight.log
+          timeout -k 5s 720s python3 scripts/photo-golden-acquire.py --seed docs/photo-accuracy/internet-pilot-seed.json --output evidence/photo-pilot > evidence/photo-accuracy/acquisition.log
+          timeout -k 5s 90s python3 tests/photo-internet-safety.test.py > evidence/photo-accuracy/internet-safety-tests.log 2>&1
+          timeout -k 5s 90s python3 scripts/photo-pilot.py --manifest docs/photo-accuracy/golden-manifest.json --dataset-root evidence/photo-pilot --output evidence/photo-accuracy > evidence/photo-accuracy/pilot.log
+          timeout -k 5s 180s node scripts/photo-pptx-pilot.mjs --dataset-root evidence/photo-pilot --output evidence/photo-accuracy/export-assay.json > evidence/photo-accuracy/pptx-assay.log
           python3 - <<'PY'
           import json
           from pathlib import Path
-          p=Path('evidence/photo-accuracy/accuracy-report.json')
-          r=json.loads(p.read_text())
+          r=json.loads(Path('evidence/photo-accuracy/accuracy-report.json').read_text())
+          a=json.loads(Path('evidence/photo-accuracy/export-assay.json').read_text())
           assert r['status']=='BLOCKED' and r['productReleaseAllowed'] is False
-          assert r['realPhotoTotal']==r['realAIPhotoCount']==r['actualNetworkRequestsThisCommand']==0
-          assert all(v is None for v in r['formalMetrics'].values())
-          assert r['save001DeviceAcceptance']=='OPEN_PENDING_USER_EVIDENCE'
-          print('Evaluation preparation complete; real-photo trial BLOCKED, accuracy NOT_MEASURED')
+          assert r['realPhotoTotal']==10 and r['realAIPhotoCount']==r['actualNetworkRequestsThisCommand']==0
+          assert r['formalDenominatorPhotos']==2 and all(v is None for v in r['formalMetrics'].values())
+          assert r['save001DeviceAcceptance']=='CLOSED' and r['currentPhotoPhaseDefects']['P1']==0
+          assert len(r['rows'])==10 and a['pass']==10 and a['fail']==a['skip']==0
+          print('10 actual licensed photos acquired; real-AI recognition BLOCKED; all formal accuracy NOT_MEASURED')
           PY
           cat evidence/photo-accuracy/accuracy-summary.md >> "$GITHUB_STEP_SUMMARY"
-      - name: Preserve public preparation evidence only
+      - name: Preserve public evidence; originals remain pinned and reproducible
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: VDRAW-photo-accuracy-preparation-${{ github.run_id }}-${{ github.sha }}
-          path: prototype/vdraw-mobile-007/evidence/photo-accuracy
+          name: VDRAW-photo-integration-${{ github.run_id }}-${{ github.sha }}
+          path: |
+            prototype/vdraw-mobile-007/evidence/photo-accuracy
+            prototype/vdraw-mobile-007/evidence/photo-pilot/source-evidence
+            prototype/vdraw-mobile-007/evidence/photo-pilot/golden-manifest.json
+          if-no-files-found: error
+          retention-days: 90
+  full-regression:
+    if: github.ref == 'refs/heads/work/vdraw007-photo-accuracy-20261006'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+        working-directory: prototype/vdraw-mobile-007
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      VDRAW_CHROMIUM: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          clean: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Protect historical harness and 006
+        run: |
+          test "$(git rev-parse HEAD:prototype/vdraw-mobile-006)" = 47cabdf70e9aebf7c64a1e028e85c476df32a169
+          git diff --no-renames --exit-code --diff-filter=MDT d77c524e49ff8835670b016551f007f6c171bb63 -- tests ':!tests/regression-manifest-round1.json'
+          python3 scripts/check-regression-assets-round1.py
+      - name: Install locked browser and inspection dependencies
+        run: |
+          timeout -k 5s 180s npm ci --no-audit --no-fund
+          timeout -k 5s 180s python3 -m pip install -r tests/requirements-inspect.txt -r scripts/photo-eval-requirements.txt
+          test -x "$VDRAW_CHROMIUM"
+          timeout -k 5s 180s npm install --prefix "$RUNNER_TEMP/vdraw-regression-tools" --ignore-scripts --no-audit --no-fund playwright@1.62.1 jszip@3.10.1
+          echo "CODEX_PRIMARY_RUNTIME_NODE_MODULES=$RUNNER_TEMP/vdraw-regression-tools/node_modules" >> "$GITHUB_ENV"
+          echo "VDRAW_BASELINE_006_ROOT=$GITHUB_WORKSPACE/prototype/vdraw-mobile-006" >> "$GITHUB_ENV"
+      - name: Synchronize and verify product Android asset parity without signing or APK generation
+        run: |
+          npm run android:sync
+          git diff --exit-code HEAD -- web server native android/app/src/main/java android/app/build.gradle capacitor.config.json package-lock.json
+          python3 tests/native-assets-007.py --check-assets
+      - name: All historical software gates and newly discovered node contracts
+        run: python3 scripts/run-regression-round1.py --include-native-assets --profile full --source-sha "${{ github.sha }}" --output-root "$RUNNER_TEMP/vdraw-photo-full-${{ github.run_id }}"
+      - name: Preserve full regression evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: VDRAW-photo-full-regression-${{ github.run_id }}-${{ github.sha }}
+          path: ${{ runner.temp }}/vdraw-photo-full-${{ github.run_id }}
           if-no-files-found: error
           retention-days: 30

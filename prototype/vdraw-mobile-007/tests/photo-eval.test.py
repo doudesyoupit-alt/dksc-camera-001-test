@@ -33,7 +33,8 @@ class EvaluatorSafety(unittest.TestCase):
             self.assertEqual((r['realPhotoTotal'], r['realAIPhotoCount']), (0, 0))
             self.assertEqual(r['actualNetworkRequestsThisCommand'], 0)
             self.assertFalse(r['regressionEvidence']['accuracyEvidence'])
-            self.assertIn('SAVE001_DEVICE_ACCEPTANCE_PENDING', r['releaseBlockers'])
+            self.assertNotIn('SAVE001_DEVICE_ACCEPTANCE_PENDING', r['releaseBlockers'])
+            self.assertEqual(r['save001DeviceAcceptance'], 'CLOSED')
 
     def test_fixture_rejected(self):
         p = photo(); p['inputKind'] = 'synthetic-fixture'

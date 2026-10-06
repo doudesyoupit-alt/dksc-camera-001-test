@@ -1,7 +1,7 @@
 {
   "schema": "vdraw-save001-device-acceptance/1",
-  "status": "OPEN_PENDING_USER_EVIDENCE",
-  "currentDeviceVersion": "0.8.1",
+  "status": "CLOSED",
+  "currentDeviceVersion": "0.8.2",
   "acceptedDeliveryVersion": "0.8.2",
   "versionCode": 10,
   "releaseHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
@@ -9,9 +9,11 @@
   "certificateSHA256": "186ad92e96316b7a2a247c092fd3d83a94fa7a89ea406859a93b057c329a2d8d",
   "acceptedWorkflowRun": 37409871705,
   "acceptedArtifactId": 11389560025,
-  "userStatement": "まだ確認していない",
+  "userStatement": "0.8.2実機で「ファイルを保存」→ Android SAF保存先選択をユーザーが実確認済み",
   "singleRequiredCheck": "ファイルを保存 → Android SAF保存先選択が開く",
   "uninstallAllowed": false,
   "extraShareCheckRequired": false,
-  "closed": false
+  "closed": true,
+  "evidenceSource": "EXPLICIT_USER_ACCEPTANCE_2026-10-06",
+  "reconfirmationRequired": false
 }

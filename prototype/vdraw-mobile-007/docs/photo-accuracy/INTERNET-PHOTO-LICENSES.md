@@ -1,0 +1,28 @@
+# Internet pilot photographs — source and image licenses
+
+These 10 existing camera photographs form a DRAFT failure-discovery set, not a frozen scored Golden Set. No synthetic rendering or recognition result is counted.
+
+- NET-001 — Junction box.jpg; Achim Hering; https://commons.wikimedia.org/wiki/File%3AJunction_box.jpg; source revision https://commons.wikimedia.org/w/index.php?oldid=956849123; Public domain (https://commons.wikimedia.org/wiki/Template:PD-self). Original SHA256: c8dceb3e493d088f632396d6fe464eb5e52984395c0ea7405b9eea2bb20a7e44.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain Public domain.
+- NET-002 — Electric car charging station.jpg; Fortunate4now; https://commons.wikimedia.org/wiki/File%3AElectric_car_charging_station.jpg; source revision https://commons.wikimedia.org/w/index.php?oldid=1227275884; CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en). Original SHA256: 04bc50f9182725ee94344510253855922d2aec89cb3da1a31476e8b76007e400.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC0.
+- NET-003 — EV CHARGING POINT.jpg; Phi2528; https://commons.wikimedia.org/wiki/File%3AEV_CHARGING_POINT.jpg; source revision https://commons.wikimedia.org/w/index.php?oldid=1128158701; CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en). Original SHA256: 38473425f525cfb149d9c63712a8ce06df32a3b6042670d412942c5eaa315c66.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC0.
+- NET-004 — UKDistributionBoard.JPG; The original uploader was Ali@gwc.org.uk at English Wikipedia.; https://commons.wikimedia.org/wiki/File%3AUKDistributionBoard.JPG; source revision https://commons.wikimedia.org/w/index.php?oldid=1042791220; CC BY-SA 2.5 (https://creativecommons.org/licenses/by-sa/2.5). Original SHA256: 1a9853d4bf9b7174891d4721ab6bc827b889ea8b95d31344f891d9d0bdae2a22.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC BY-SA 2.5.
+- NET-005 — Residential distribution board.jpg; Project Kei; https://commons.wikimedia.org/wiki/File%3AResidential_distribution_board.jpg; source revision https://commons.wikimedia.org/w/index.php?oldid=469041777; CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Original SHA256: 83c5ed0515126898750563fff6693d58589952f0a9989c242586b19989b7220e.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC BY-SA 4.0.
+- NET-006 — Outdoor wiring.JPG; Dmitry G; https://commons.wikimedia.org/wiki/File%3AOutdoor_wiring.JPG; source revision https://commons.wikimedia.org/w/index.php?oldid=1266812858; CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Original SHA256: 55d616ba6f6a07c1b0031fd1d1bea121f2b8f0a70e047100a11d581f648ababc.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC BY-SA 3.0.
+- NET-007 — Main distribution board under construction.JPG; Fully designed and constructed by Dmitry G; https://commons.wikimedia.org/wiki/File%3AMain_distribution_board_under_construction.JPG; source revision https://commons.wikimedia.org/w/index.php?oldid=1267321248; CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Original SHA256: bb54113e3b03a68d14efe9a68346afa8b876c666ec027e3712141a164b1c3b70.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC BY-SA 3.0.
+- NET-008 — Air conditioner.jpg; Clariter1990; https://commons.wikimedia.org/wiki/File%3AAir_conditioner.jpg; source revision https://commons.wikimedia.org/w/index.php?oldid=1035775708; CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en). Original SHA256: fda4e65e23b68fbe151382453f8097ae58d9a21117255557eb021cf40a433439.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC0.
+- NET-009 — Surfaces exterior wall closeup view.JPG; Tomwsulcer; https://commons.wikimedia.org/wiki/File%3ASurfaces_exterior_wall_closeup_view.JPG; source revision https://commons.wikimedia.org/w/index.php?oldid=1219762943; CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en). Original SHA256: 3dd602062b1c7c693173eb2d37ef0d885b908226d57a9525f137d594fabaee5e.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC0.
+- NET-010 — Water pipe system in a construction site showing pipes and connections.jpg; Shixart1985; https://commons.wikimedia.org/wiki/File%3AWater_pipe_system_in_a_construction_site_showing_pipes_and_connections.jpg; source revision https://commons.wikimedia.org/w/index.php?oldid=1271342196; CC BY 2.0 (https://creativecommons.org/licenses/by/2.0). Original SHA256: d78d0aec93634a7f3571d9962f6534ff9d0dde3ed11a35479ddd1d308769f058.
+  Changes: EXIF orientation applied, RGB conversion, max-edge 1600 resize, metadata stripped; original retained. Derivatives retain CC BY 2.0.
+
+NET-006 original Commons revision image was already brightness/contrast enhanced and white-balance corrected by Marekich in 2012; original work by Dmitry G.
+
+Image licenses are per image and remain separate from code licensing. Source metadata is Wikimedia Commons CC0 structured data; descriptive source text retains Commons CC BY-SA terms. No author endorsement is implied. External AI transfer and automatic learning remain disabled.

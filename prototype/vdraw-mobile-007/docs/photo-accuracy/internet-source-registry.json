@@ -1,7 +1,8 @@
 {
-  "schema": "vdraw-photo-golden/1",
+  "schema": "vdraw-public-photo-source-registry/1",
   "datasetId": "vdraw-internet-pilot-20261006-v1",
-  "snapshotStatus": "DRAFT",
+  "authorityScope": "INTEGRATION_REVIEWED_PUBLIC_SOURCE_BYTES_ONLY_NOT_HUMAN_GT_OR_PROVIDER_INFERENCE",
+  "acquisitionMethod": "LIVE_COMMONS_API_AND_ORIGINAL_JPEG_FETCH_SHA1_BOUND",
   "photos": [
     {
       "id": "NET-001",
@@ -561,13 +562,5 @@
       "autoLearning": false,
       "sourceLimitations": []
     }
-  ],
-  "plannedPhotoCount": 10,
-  "formalAccuracyBasis": "FROZEN_BLIND_HOLDOUT_ONLY",
-  "originalsCommitted": false,
-  "autoExternalTransfer": false,
-  "autoLearning": false,
-  "blindHoldoutStatus": "NOT_FROZEN_NO_GROUND_TRUTH",
-  "acquisitionAuthority": "ACTUAL_COMMONS_DOWNLOAD_WITH_SOURCE_SHA1_AND_SHA256",
-  "intendedUse": "FAILURE_DISCOVERY_ONLY"
+  ]
 }

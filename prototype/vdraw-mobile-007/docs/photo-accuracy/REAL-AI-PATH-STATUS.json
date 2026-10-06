@@ -1,0 +1,88 @@
+{
+  "schema": "vdraw-real-ai-path-status/1",
+  "stages": [
+    {
+      "stage": "Scene",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "REAL_TRANSPORT_CODE",
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "Private Node Claude HTTP transport/schema validation exists; product draft never invokes it; no real inference evidence."
+    },
+    {
+      "stage": "Detection",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "Claude scene category/bbox contract only; no independent image detector and no measured real-photo precision/recall."
+    },
+    {
+      "stage": "Segmentation",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "REAL_TRANSPORT_CODE",
+        "HEURISTIC",
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "HTTP wrapper contract only; no SAM inference/checkpoints in repo. rankMasks selects highest supplied score per object; contract fixtures are not real model evidence."
+    },
+    {
+      "stage": "OCR",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "NOT_IMPLEMENTED",
+      "implementationClassification": [
+        "NOT_IMPLEMENTED"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "No dedicated photo OCR. Native PDF text extraction and accepting geometry kind text do not implement OCR."
+    },
+    {
+      "stage": "Geometry",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "HEURISTIC",
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "Deterministic supplied geometry allowlist -> editable shapes. No image-derived physical scale, perspective fit or scene graph reconstruction."
+    }
+  ],
+  "realAIPhotoCount": 0,
+  "productRuntimeConnected": false,
+  "actualProviderConfiguration": "CI_SAFE_PREFLIGHT_REQUIRED",
+  "noSecretValuesLogged": true,
+  "measuredAccuracy": "NOT_MEASURED"
+}

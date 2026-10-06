@@ -1,0 +1,321 @@
+{
+  "schema": "vdraw-next-phase-independent-qa/1",
+  "auditStatus": "LOCAL_INDEPENDENT_QA_PASS_FORMAL_ACCURACY_HOLD_FINAL_CI_PENDING",
+  "baselineHEAD": "f2fefee33377d41be22dc417356d5140e1fbbfca",
+  "branch": "work/vdraw007-photo-accuracy-20261006",
+  "checkedAt": "2026-10-06T04:45:29.941933+00:00",
+  "scope": "Independent read-only audit; own report only",
+  "snapshotHEADExactMatch": "FINAL_CI_PENDING",
+  "save001": {
+    "status": "CLOSED",
+    "authority": "User physical 0.8.2 SAF confirmation relayed by integration owner; no re-question"
+  },
+  "stages": [
+    {
+      "stage": "Scene",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "REAL_TRANSPORT_CODE",
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "Private Node Claude HTTP transport/schema validation exists; product draft never invokes it; no real inference evidence."
+    },
+    {
+      "stage": "Detection",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "Claude scene category/bbox contract only; no independent image detector and no measured real-photo precision/recall."
+    },
+    {
+      "stage": "Segmentation",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "REAL_TRANSPORT_CODE",
+        "HEURISTIC",
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "HTTP wrapper contract only; no SAM inference/checkpoints in repo. rankMasks selects highest supplied score per object; contract fixtures are not real model evidence."
+    },
+    {
+      "stage": "OCR",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "NOT_IMPLEMENTED",
+      "implementationClassification": [
+        "NOT_IMPLEMENTED"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "No dedicated photo OCR. Native PDF text extraction and accepting geometry kind text do not implement OCR."
+    },
+    {
+      "stage": "Geometry",
+      "productRuntime": "NOT_IMPLEMENTED",
+      "availableCapability": "PARTIAL",
+      "implementationClassification": [
+        "HEURISTIC",
+        "MOCK",
+        "FIXTURE"
+      ],
+      "observedTestEvidence": [
+        "MOCK",
+        "FIXTURE"
+      ],
+      "realInferenceEvidence": "NOT_PROVEN",
+      "reason": "Deterministic supplied geometry allowlist -> editable shapes. No image-derived physical scale, perspective fit or scene graph reconstruction."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "web/src/vision.js",
+      "sha256": "d918e467f25fdfea31c7312b6ee145ec400b01dd39bc2d7cc48a52536cb459bb"
+    },
+    {
+      "path": "server/vision-provider.mjs",
+      "sha256": "3a1575e78f64f46f6e27dcb3368ce9bd95c59fc3cf68a18a470739f3b8eab8be"
+    },
+    {
+      "path": "server/sam-contract.mjs",
+      "sha256": "dc6d32b2de16ba842c485c36bdbbbd59ba33017036b0bb07901b448a9015ac16"
+    },
+    {
+      "path": "server/photo-eval-provider.mjs",
+      "sha256": "9bd3b77563e8762d9522612aa3ad04fc25bc01059a0f5a5356f741e256e57f0f"
+    },
+    {
+      "path": "scripts/photo-eval.py",
+      "sha256": "74741e6e2f219eadf38b516deeeaca0943ca6f327c5f4b780480684ca9001faa"
+    },
+    {
+      "path": "tests/vision-provider.test.mjs",
+      "sha256": "6d326e1492796a55126d43776344e7c319e2dd864b6c22da3d277c5f5ca640ba"
+    },
+    {
+      "path": "tests/photo-eval-provider.test.mjs",
+      "sha256": "6f93786ab5d8f9a57dc3c4a0d23140fbef1ff71f5f475a2cc27cdc42bd5315ec"
+    }
+  ],
+  "realAIBoundaries": {
+    "configurationReadinessIsInference": false,
+    "HTTPContractFixturesAreInference": false,
+    "formalEvidenceAuthority": "NOT_IMPLEMENTED",
+    "formalPhotoCount": 10,
+    "formalRealAIPhotoCount": 0,
+    "formalMetrics": "NULL_UNTIL_TRUSTED_AUTHORITY",
+    "offlineTestsCanProveAccuracy": false,
+    "formalPhotoCountScope": "Independently verified acquired public-source photographs only; no recognition accuracy inference"
+  },
+  "pendingChecks": [
+    "Final exact HEAD source/006/protected signing diff guards and full-regression CI",
+    "Formal phase remains HOLD pending actual model runs, trusted human GT, frozen blind holdout"
+  ],
+  "localSnapshotNotes": [
+    "Local docs currently contain old SAVE001 OPEN status; current user confirmation takes precedence. Await current baseline source sync."
+  ],
+  "changesOutsideOwnReport": 0,
+  "networkAIRequests": 0,
+  "secretsAccessed": 0,
+  "photoPPTXFix": {
+    "status": "LOCAL_LIMITED_INDEPENDENT_PASS",
+    "sourceSHA256": "9b6ce6d50d373dfed80bdc853e301fe867faf0e7adaa49775207209b74347632",
+    "rerunTests": {
+      "newContain": 6,
+      "input001": 26,
+      "outputOwnerRace": 27,
+      "pass": 59,
+      "fail": 0,
+      "skip": 0
+    },
+    "independentActualOOXMLProbes": {
+      "cases": 8,
+      "imageSourceSizes": [
+        [
+          17,
+          53
+        ],
+        [
+          137,
+          11
+        ],
+        [
+          41,
+          41
+        ],
+        [
+          12,
+          99
+        ],
+        [
+          100,
+          31
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          53,
+          17
+        ],
+        [
+          40,
+          80
+        ]
+      ],
+      "containToleranceEMU": 1,
+      "originalPNGBytesExact": true,
+      "sourceStateMutation": false,
+      "editableShapeTypes": [
+        "rect",
+        "ellipse",
+        "line",
+        "text"
+      ],
+      "shapeXMLPhotoOnOffIdenticalAfterNumericIdNormalization": true
+    },
+    "previousFailureProbeUnchangedSHA256": "95d86e3da0eb97365a030c840a3a915b8769a7c918cf7ac2a4b710bd8953b4c3",
+    "scopeLimitations": [
+      "Full regression/006 exact HEAD CI pending",
+      "Microsoft PowerPoint application not run",
+      "Real AI recognition accuracy not measured"
+    ],
+    "realPhotos": 0,
+    "realAIRequests": 0,
+    "realPublicPhotoContainerAssay": {
+      "files": 10,
+      "slidesContainPASS": 20,
+      "sourcePNGBytesExact": true,
+      "syntheticRegistrationRectanglesPASS": 10,
+      "coordinateToleranceEMU": 1,
+      "realAIPhotoCount": 0,
+      "officeApplicationAcceptance": "NOT_RUN",
+      "recognitionAccuracyEvidence": false
+    },
+    "nativeAssetParity": "LOCAL_BYTE_EQUAL"
+  },
+  "publicPhotoInventory": {
+    "status": "INDEPENDENT_LOCAL_PASS",
+    "datasetId": "vdraw-internet-pilot-20261006-v1",
+    "count": 10,
+    "actualPhotographsVisuallyReviewed": 10,
+    "imageType": "JPEG camera photographs; one annotated photo; one sideways/watermarked photo",
+    "originalAndCanonicalDuplicates": 0,
+    "sourceEvidenceSHA256Bound": true,
+    "sourceMetadataLicenseRevisionURLBound": true,
+    "originalSHA1SHA256SizeBound": true,
+    "allCanonicalPNGRGBFullyDecodedMetadataEmpty": true,
+    "splitCounts": {
+      "development": 6,
+      "validation": 2,
+      "blind-holdout": 2
+    },
+    "difficultyCounts": {
+      "Normal": 4,
+      "Hard": 5,
+      "Easy": 1
+    },
+    "difficultyStatus": "PROVISIONAL_PRE_INFERENCE",
+    "groundTruthCount": 0,
+    "formalBlindHoldoutStatus": "NOT_FROZEN_NO_GROUND_TRUTH",
+    "notes": {
+      "NET-001": "Photograph has burned-in semantic labels and red arrows; unsuitable for unlabeled formal blind recognition score",
+      "NET-008": "Photograph sideways with watermark; orientation needs independent review"
+    },
+    "licensedSourceRegistrySHA256": "cd9d3e7bccdbf116b8524f0b9ce8bfb23e32e9cc45bafc6aa4aa194400ff5b8f",
+    "sourceCaveatsRecordedInSeedRegistryManifest": true
+  },
+  "qualityIndependentQA": {
+    "status": "LIMITED_PASS",
+    "classification": "HEURISTIC_PARTIAL",
+    "tests13PASS": true,
+    "actualPhotosRecomputedAndRecordsExact": 10,
+    "retakeRequired": 2,
+    "needsReview": 8,
+    "productionCameraGate": "NOT_CONNECTED",
+    "validatedQualityAccuracy": null,
+    "glareFarOcclusionMotion": "NOT_MEASURED"
+  },
+  "denominatorCounterexample": {
+    "initialResult": "RETURNED_FOR_FIX",
+    "failure": "Missing canonical holdout reduced formal denominator 2 to 1",
+    "fixed": "PASS",
+    "independentProbes": [
+      "missing canonical",
+      "full manifest removal",
+      "UNKNOWN claim"
+    ],
+    "fixedPinnedDenominator": 2,
+    "acquiredCoverage": [
+      1,
+      1,
+      2
+    ],
+    "formalMetrics": "ALL_NULL"
+  },
+  "newSyntheticBoundaryTests": {
+    "evaluation": 21,
+    "metrics": 20,
+    "provider": 11,
+    "quality": 13,
+    "total": 72,
+    "pass": 72,
+    "fail": 0,
+    "internetInventory": 7
+  },
+  "workflowIndependentQA": {
+    "status": "READ_ONLY_PASS",
+    "exactSourceSHACheckout": true,
+    "readOnlyPermissions": true,
+    "006TreePin": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "existingTestsAndSigningGuard": true,
+    "androidSyncParityGuard": true,
+    "secretsOnlyPreflightWithNoValuesPrinted": true,
+    "publicPhotoAcquisitionPinnedBytesNoAIRequests": true,
+    "readinessSuccessDoesNotPromoteAccuracy": true,
+    "formalMetricsRemainNullGate": true
+  },
+  "localVerdict": {
+    "implementationLimitedQA": "PASS",
+    "publicPhotoAcquisitionQA": "PASS",
+    "photoQualityAssay": "HEURISTIC_ONLY_PASS",
+    "formalAccuracy": "HOLD_NOT_MEASURED",
+    "realPhotoTotal": 10,
+    "realAIPhotoCount": 0,
+    "humanGroundTruthCount": 0,
+    "PPTXPlacementDefect": "LIMITED_FIXED_PASS",
+    "SAVE001": "CLOSED",
+    "remainingBlockers": [
+      "Real product Scene/Segmentation connection/inference unavailable",
+      "OCR not implemented",
+      "Human-confirmed GT and frozen blind holdout absent",
+      "Trusted GT/provider formal authority not implemented",
+      "Practical dimensions/perspective/Office app roundtrip not measured"
+    ],
+    "exactHEADFullCI": "PENDING"
+  }
+}

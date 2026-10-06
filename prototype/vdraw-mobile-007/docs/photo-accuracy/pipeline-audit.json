@@ -955,5 +955,11 @@
     "secretsReadOrPrinted": false,
     "externalImageTransmission": false,
     "productCodeChanged": false
-  }
+  },
+  "snapshotScope": "HISTORICAL_PRE_PHOTO100_NEXT_PHASE_AUDIT",
+  "supersededStatusFiles": [
+    "INTEGRATION-STATUS.json",
+    "REAL-AI-PATH-STATUS.json",
+    "PILOT-10-RESULT.json"
+  ]
 }

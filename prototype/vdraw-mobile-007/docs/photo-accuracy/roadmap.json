@@ -7,7 +7,7 @@
     {
       "step": 1,
       "objective": "0.8.2実機受入",
-      "status": "OPEN_USER_DEVICE_EVIDENCE_REQUIRED"
+      "status": "CLOSED_USER_DEVICE_ACCEPTED"
     },
     {
       "step": 2,
@@ -32,7 +32,7 @@
     {
       "step": 6,
       "objective": "Camera Quality Gate",
-      "status": "PLANNED"
+      "status": "OFFLINE_HEURISTIC_IMPLEMENTED_PRODUCT_CAMERA_NOT_CONNECTED"
     },
     {
       "step": 7,
@@ -42,7 +42,7 @@
     {
       "step": 8,
       "objective": "10枚故障探索",
-      "status": "BLOCKED_INPUTS"
+      "status": "TEN_INTERNET_PHOTOS_ACQUIRED_QUALITY_AND_EXPORT_ASSAY_DONE_REAL_AI_BLOCKED"
     },
     {
       "step": 9,
@@ -157,6 +157,19 @@
   ],
   "nextProductionPhaseAllowed": false,
   "nextOfflinePreparationAllowed": true,
-  "firstRealPhotoTrialStatus": "BLOCKED_PHOTOS_GT_PROVIDER_UNAVAILABLE",
-  "targetNotLowered": true
+  "firstRealPhotoTrialStatus": "QUALITY_EVALUATED_10_RECOGNITION_BLOCKED",
+  "targetNotLowered": true,
+  "save001DeviceAcceptance": "CLOSED",
+  "expansionPolicy": {
+    "sequence": [
+      10,
+      100,
+      "300-500",
+      "1000+ as needed"
+    ],
+    "noSameConditionInflation": true,
+    "weaknessHardExtremePriority": true,
+    "fieldFitDKSCPhotosFinal": "20-50",
+    "currentDecision": "HOLD_AT_10_UNTIL_REAL_AI_AND_TRUSTED_GT"
+  }
 }

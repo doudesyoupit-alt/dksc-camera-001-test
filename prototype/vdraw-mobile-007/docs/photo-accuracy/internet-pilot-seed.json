@@ -1,0 +1,143 @@
+{
+  "schema": "vdraw-internet-photo-seed/1",
+  "purpose": "LICENSE_CHECKED_ACQUISITION_AND_FAILURE_DISCOVERY",
+  "photos": [
+    {
+      "id": "NET-001",
+      "file": "Junction box.jpg",
+      "license": "Public domain",
+      "category": "box/conduit/installation",
+      "difficulty": "Normal",
+      "split": "development",
+      "captureGroup": "achim-junction-20070527",
+      "pinnedOriginalSHA256": "c8dceb3e493d088f632396d6fe464eb5e52984395c0ea7405b9eea2bb20a7e44",
+      "pinnedCanonicalSHA256": "f561c8d0c9013e2a9711a6d8e328a8bef32e7067b5a01142031f4effb6b03352",
+      "sourceLimitations": [
+        "SOURCE_PHOTO_CONTAINS_BAKED_IN_LABELS_AND_RED_ARROW",
+        "NOT_RAW_FIELD_CAPTURE"
+      ]
+    },
+    {
+      "id": "NET-002",
+      "file": "Electric car charging station.jpg",
+      "license": "CC0",
+      "category": "EV charger/outdoor/building",
+      "difficulty": "Hard",
+      "split": "development",
+      "captureGroup": "buffalo-20130818",
+      "pinnedOriginalSHA256": "04bc50f9182725ee94344510253855922d2aec89cb3da1a31476e8b76007e400",
+      "pinnedCanonicalSHA256": "d126caff4ad05f7920cd69fd51135654ea169ea4f9fded2e0d82ec9926c96bb6",
+      "sourceLimitations": []
+    },
+    {
+      "id": "NET-003",
+      "file": "EV CHARGING POINT.jpg",
+      "license": "CC0",
+      "category": "EV charger/Japan/signage",
+      "difficulty": "Normal",
+      "split": "development",
+      "captureGroup": "makinohara-20111021",
+      "pinnedOriginalSHA256": "38473425f525cfb149d9c63712a8ce06df32a3b6042670d412942c5eaa315c66",
+      "pinnedCanonicalSHA256": "413bfeebe1e4ee2056347a0fb97336770f0d79329ba190c6c7b4882cc12a0390",
+      "sourceLimitations": []
+    },
+    {
+      "id": "NET-004",
+      "file": "UKDistributionBoard.JPG",
+      "license": "CC BY-SA 2.5",
+      "category": "distribution board/low resolution",
+      "difficulty": "Hard",
+      "split": "development",
+      "captureGroup": "UK-board-2004",
+      "pinnedOriginalSHA256": "1a9853d4bf9b7174891d4721ab6bc827b889ea8b95d31344f891d9d0bdae2a22",
+      "pinnedCanonicalSHA256": "af0f00a98328a7c9bac060db031cd5539fb20e281b1c38af60d5af191dbe3b88",
+      "sourceLimitations": []
+    },
+    {
+      "id": "NET-005",
+      "file": "Residential distribution board.jpg",
+      "license": "CC BY-SA 4.0",
+      "category": "distribution board/Japan/text",
+      "difficulty": "Normal",
+      "split": "development",
+      "captureGroup": "japan-board-20200923",
+      "pinnedOriginalSHA256": "83c5ed0515126898750563fff6693d58589952f0a9989c242586b19989b7220e",
+      "pinnedCanonicalSHA256": "e26d092ed1dce1ec42750b65176ab2f4ffe3364856f55f4693c3d20d499ff601",
+      "sourceLimitations": []
+    },
+    {
+      "id": "NET-006",
+      "file": "Outdoor wiring.JPG",
+      "license": "CC BY-SA 3.0",
+      "category": "conduit/box/wall/exterior",
+      "difficulty": "Normal",
+      "split": "development",
+      "captureGroup": "dmitry-outdoor-2010",
+      "pinnedOriginalSHA256": "55d616ba6f6a07c1b0031fd1d1bea121f2b8f0a70e047100a11d581f648ababc",
+      "pinnedCanonicalSHA256": "9c5d2b753ce285612de572df7e652af5cc9e05201736c73f7f47030073a9adbc",
+      "sourceLimitations": [
+        "SOURCE_IMAGE_PREVIOUSLY_BRIGHTNESS_CONTRAST_WHITE_BALANCE_CORRECTED_BY_MAREKICH_2012"
+      ]
+    },
+    {
+      "id": "NET-007",
+      "file": "Main distribution board under construction.JPG",
+      "license": "CC BY-SA 3.0",
+      "category": "distribution board/under construction/occlusion",
+      "difficulty": "Hard",
+      "split": "validation",
+      "captureGroup": "dmitry-panel-2010",
+      "pinnedOriginalSHA256": "bb54113e3b03a68d14efe9a68346afa8b876c666ec027e3712141a164b1c3b70",
+      "pinnedCanonicalSHA256": "d367c3671fd96d98988474341c321d8d9e0a4279ec593b6714cadefd88cb76b3",
+      "sourceLimitations": []
+    },
+    {
+      "id": "NET-008",
+      "file": "Air conditioner.jpg",
+      "license": "CC0",
+      "category": "equipment/outdoor wall",
+      "difficulty": "Hard",
+      "split": "validation",
+      "captureGroup": "AC-20240702",
+      "pinnedOriginalSHA256": "fda4e65e23b68fbe151382453f8097ae58d9a21117255557eb021cf40a433439",
+      "pinnedCanonicalSHA256": "7d33e910db45845c5ed2099f349b23b0289e6a8f2d4817872af01e302fcdd389",
+      "sourceLimitations": [
+        "SOURCE_PHOTO_ORIENTATION_REQUIRES_REVIEW",
+        "SOURCE_WATERMARK_PRESENT"
+      ]
+    },
+    {
+      "id": "NET-009",
+      "file": "Surfaces exterior wall closeup view.JPG",
+      "license": "CC0",
+      "category": "wall/facade",
+      "difficulty": "Easy",
+      "split": "blind-holdout",
+      "captureGroup": "wall-20130924",
+      "pinnedOriginalSHA256": "3dd602062b1c7c693173eb2d37ef0d885b908226d57a9525f137d594fabaee5e",
+      "pinnedCanonicalSHA256": "70458085cfa86c9fc1495756ff151c2e22e5998d541dc750e3c701428130c9ed",
+      "sourceLimitations": []
+    },
+    {
+      "id": "NET-010",
+      "file": "Water pipe system in a construction site showing pipes and connections.jpg",
+      "license": "CC BY 2.0",
+      "category": "pipe/construction/site",
+      "difficulty": "Hard",
+      "split": "blind-holdout",
+      "captureGroup": "pipe-20210621",
+      "pinnedOriginalSHA256": "d78d0aec93634a7f3571d9962f6534ff9d0dde3ed11a35479ddd1d308769f058",
+      "pinnedCanonicalSHA256": "3f616cfceac405df7c4d58ee5f8478d002ddf36e2ff6c887a08057f910911f21",
+      "sourceLimitations": []
+    }
+  ],
+  "difficultyAssignment": "PROVISIONAL_SOURCE_DESCRIPTION_BEFORE_INFERENCE",
+  "coverageGaps": [
+    "Extreme",
+    "backlight",
+    "EXIF rotated field capture",
+    "handwriting",
+    "existing drawing photographed",
+    "before/after matched pairs"
+  ]
+}

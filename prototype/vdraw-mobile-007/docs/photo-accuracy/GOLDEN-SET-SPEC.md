@@ -1,7 +1,7 @@
 # 実写真→実用図面評価契約 v1
 
 基準製品: `15bf3371bec3f7d1e4090e7198a850c5636baf3f` / 0.8.2 / versionCode 10。
-0.8.2配布物はACCEPTED。SAVE-001実機受入はOPEN。ユーザー確認前にCLOSEDへ変更しない。
+0.8.2配布物はACCEPTED。SAVE-001実機受入は今回のユーザー確認を根拠にCLOSED。再確認要求はしない。
 本branchは監査・評価準備のみ。製品アプリ、署名、Secrets、006は変更しない。
 
 ## 最上位目標と報告
@@ -18,7 +18,7 @@
 認可済みの施工実写真だけを正式資産にする。UI画面・アイコン・出力図面・合成画像は除外。
 Development/Validation/Blind Holdoutを固定し、原写真SHAと正規化PNG SHA双方の重複を拒否。同じ撮影対象・現場・連写・別crop・再圧縮はcaptureGroupを共有し、splitを跨がせない。別ファイル名での水増しを禁止。似た写真の検出は人間確認も必須。
 Easy/Normal/Hard/Extremeは推論前に決める。10枚は故障探索pilotであり母集団精度の証明ではない。Easyだけの結果で全体を主張しない。
-初期10枚の割当はpilot-plan.json。12対象を複数対象写真で包含する計画。10枚へ届いたかは実ファイル・GTを検証後に数える。計画slotは実写真枚数へ含めない。
+旧現場写真計画はpilot-plan.jsonに保全。現在の取得済10枚はinternet-pilot-seed.json／golden-manifest.json。原JPEG、source hash、ライセンス、canonical bytesを検証後に取得枚数を数える。写真の取得数と人間正解注釈数は分離する。Extreme・暗所・逆光・手書き等の不足は明示し、10枚到達を網羅性の合格としない。
 50→100→数百は基本Failure修正後。Holdout失敗を修正に使った場合は既知Validationへ移し、別の未閲覧Holdoutを確保しversionを更新。平均値だけでなく写真単位の悪化でreleaseを停止する。
 
 ## 認可と安全な実プロバイダ経路
@@ -27,7 +27,7 @@ Easy/Normal/Hard/Extremeは推論前に決める。10枚は故障探索pilotで�
 写真利用・外部送信・費用の認可を写真単位で明示する。既存の署名5Secretsとは別の私用provider設定を環境から読む。秘密値はブラウザ/repo/log/artifactに保存しない。読み取り診断は存在booleanとmissing名のみ。
 server/photo-eval-provider.mjsは既存Claude→SAM adapterを再利用。明示的--execute-real-aiと写真単位同意が揃った時だけ実fetch。自動再試行・採用・学習・補正差分の外部送信なし。GTはproviderに送らない。redirectは拒否。候補hash、写真hash、model、実network呼出し・stage・応答statusを記録。
 実行証跡はLOCAL_RUNNER_RECORDED_NOT_PROVIDER_ATTESTEDであり暗号学的provider証明ではない。executionKind文字列だけの自己申告を正式精度証拠にしない。runner/test権限を分離しCI run・コードhashと原成果をQAが照合する。
-この準備versionでは信頼したcapture/GT本人証跡と認証済み実行成果を照合するauthorityは未実装。実写真総数/実AI枚数は正式には0、formalMetricsは全てnullを維持する。JSON自己申告とhash整合はclaimedPhotoRecords/claimedProviderRecordsと写真単位diagnosticsだけに記録する。合成10枚を手書きの200応答証跡で実AIへ昇格できない。authority実装後も全Holdout完測と指標別coverageが揃うまで正式平均を出さない。
+ネット写真の取得枚数はIntegrationで独立確認したinternet-source-registry.jsonの固定source／license／author／hash／split／difficultyと実JPEG／canonical PNGが一致した場合だけ数える。現在取得10枚。人間GT本人証跡と認証済み実推論authorityは未実装のため、実AI枚数0、formalMetricsは全てnullを維持する。JSON自己申告とhash整合はclaimedPhotoRecords/claimedProviderRecordsと写真単位diagnosticsだけに記録する。合成10枚を手書きの200応答証跡で実AIへ昇格できない。authority実装後も全Holdout完測と指標別coverageが揃うまで正式平均を出さない。
 canonical PNGは外部送信前にIHDR/IDAT/IENDのみを許容しCRC・RGB8・非interlace・最大1600・zlib decode長とscanline filterを検査。EXIF/text/ICC等metadata入りを拒否。手動quality確認は自動Camera Quality Gateの代替として製品合格へ計上しない。runnerはmanualQualityApproved=trueを必須とし、1写真1run lockを送信前に作成。失敗時も自動再試行しない。
 この環境の4設定は未設定。接続済みと主張しない。認可画像・正解GTがない状態で実推論しない。
 
@@ -48,6 +48,8 @@ reviewはphoto/推論/Overlay hash、overlayReviewed、correctionCount/correctio
 
 ## Release Hard Gate
 
-SAVE-001実機未受入、実UI AI未接続、品質gate未実装、重大見逃し/誤分類/False PASS、根拠なし実寸、座標破壊、重大Round-trip破損、人間Overlay未確認、未測定の重要指標はreleaseを停止。
+実UI AI未接続、品質gate本番未接続、重大見逃し/誤分類/False PASS、根拠なし実寸、座標破壊、重大Round-trip破損、人間Overlay未確認、未測定の重要指標はreleaseを停止。
 評価環境は測定結果を出すが新APKを承認しない。正式成功率の分母は全認可済みHoldout写真。拒否/UNKNOWN/未処理を除外しない。モデル/Prompt/OCR/Geometry/Coordinate変更時は全Goldenを再実行し写真単位diffをQAする。
-次工程: 0.8.2 SAF一項目確認→実写真/正解GT/実providerの確保→pilot10枚→原因別修正・独立QA→50枚。AI側で可能な監査と試験をユーザーへ返さない。
+次工程: 実providerと正解GT／品質確認の確保→取得済pilot10枚の実認識→原因別修正・独立QA→100枚→300〜500枚→必要に応じ1000枚以上。最終現場適合はDKSC実現場20〜50枚。AI側で可能な監査と試験をユーザーへ返さない。
+
+ネット写真固有の焼き込み注釈・watermark・向き・既存色調補正はsourceLimitationsに保持。現在holdoutは候補2枚で未凍結。source/license確認だけを行ったQAを、人間正解図形やHuman Reviewへ転用しない。

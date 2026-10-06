@@ -1,3 +1,5 @@
+> この文書は前工程の監査スナップショットです。現在のSAVE-001=CLOSED、写真取得10／実AI0、PPTX修正はINTEGRATION-STATUS.json／REAL-AI-PATH-STATUS.json／PILOT-10-RESULT.jsonを参照。旧入力0枚の記録は履歴として保持。
+
 # VDRAW 実写真→編集可能図面パイプライン読取監査
 
 基準 HEAD：`15bf3371bec3f7d1e4090e7198a850c5636baf3f`。既存成果は変更していません。監査はコードと既存証跡の確認のみです。
