@@ -127,6 +127,7 @@ jobs:
         run: |
           mkdir -p evidence/permanent-config
           python3 tests/permanent-signing-contract.py > evidence/permanent-config/contract.log 2>&1
+          python3 tests/permanent-signing-transport.py > evidence/permanent-config/transport.log 2>&1
           timeout -k 5s 180s npm ci --no-audit --no-fund
           npm run android:sync
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;35.0.0'

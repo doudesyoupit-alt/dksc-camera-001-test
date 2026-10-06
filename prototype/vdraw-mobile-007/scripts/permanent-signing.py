@@ -1,6 +1,7 @@
 """Release-only secret restoration and public APK evidence. No secret values are logged."""
 import argparse
 import base64
+import binascii
 import hashlib
 import json
 import os
@@ -14,9 +15,13 @@ ROOT = Path(__file__).resolve().parents[1]
 POLICY = Path(__file__).with_name('permanent-signing-policy.json')
 SECRET_NAMES = ('VDRAW_SIGNING_KEYSTORE_B64', 'VDRAW_SIGNING_STORE_PASSWORD', 'VDRAW_SIGNING_KEY_ALIAS', 'VDRAW_SIGNING_KEY_PASSWORD', 'VDRAW_SIGNING_CERT_SHA256')
 
+class SigningFailure(ValueError):
+    """Only constant internal reason codes; never pass tool output or secret values."""
+
+
 def require(condition, reason):
     if not condition:
-        raise ValueError(reason)
+        raise SigningFailure(reason)
 
 def readiness(policy, env):
     missing = [name for name in SECRET_NAMES if not env.get(name)]
@@ -45,8 +50,13 @@ def prepare(policy, env):
     require(readiness(policy, env)['status'] == 'PASS', 'SIGNING_SECRETS_OR_PUBLIC_PIN_NOT_READY')
     run_temp = Path(env['RUNNER_TEMP']).resolve()
     require(run_temp.is_dir() and not run_temp.is_relative_to(ROOT.resolve().parent.parent), 'PRIVATE_DIRECTORY_MUST_BE_OUTSIDE_REPOSITORY')
-    raw = base64.b64decode(env['VDRAW_SIGNING_KEYSTORE_B64'], validate=True)
+    # Repository Secret entry may preserve ASCII whitespace from the Base64 handoff.
+    # Normalize only transport whitespace; keep strict decoding and authenticate bytes.
+    encoded = re.sub(r'[ \t\r\n\f\v]', '', env['VDRAW_SIGNING_KEYSTORE_B64'])
+    raw = base64.b64decode(encoded, validate=True)
     require(0 < len(raw) <= 24000, 'KEYSTORE_SIZE_INVALID')
+    require(hashlib.sha256(raw).hexdigest() == policy['keyPreservationReceipt']['encryptedArchiveSha256'],
+            'KEYSTORE_BYTES_PIN_MISMATCH')
     # Private keys never enter the repository, artifacts, caches or command-line password arguments.
     directory = Path(tempfile.mkdtemp(prefix='vdraw007-private-signing-', dir=run_temp))
     os.chmod(directory, 0o700)
@@ -94,7 +104,8 @@ if __name__ == '__main__':
         result = readiness(policy, os.environ) if a.mode == 'readiness' else prepare(policy, os.environ) if a.mode == 'prepare' else verify_apk(policy, a.apk, a.version_code, a.version_name)
     except Exception as error:
         # Exception messages from key parsing or tools may include sensitive inputs; do not echo them.
-        result = {'status': 'BLOCKED', 'reason': 'SIGNING_OPERATION_FAILED', 'errorType': type(error).__name__, 'privateKeyLogged': False}
+        reason = error.args[0] if isinstance(error, SigningFailure) else 'SIGNING_BASE64_INVALID' if isinstance(error, binascii.Error) else 'SIGNING_OPERATION_FAILED'
+        result = {'status': 'BLOCKED', 'reason': reason, 'errorType': type(error).__name__, 'privateKeyLogged': False}
     a.output.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result))
     raise SystemExit(0 if result['status'] == 'PASS' else 2)
