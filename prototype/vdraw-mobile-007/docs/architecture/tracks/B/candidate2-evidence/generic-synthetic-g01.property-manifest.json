@@ -1,0 +1,230 @@
+[
+  {
+    "inventoryId": "source-2-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+    "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+    "fields": [
+      {
+        "field": "stroke",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+      },
+      {
+        "field": "fill",
+        "state": "EXPLICIT",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": "ABCDEF",
+        "present": true,
+        "value": "#ABCDEF",
+        "encoding": "HEX_RGB",
+        "reason": null
+      },
+      {
+        "field": "width",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/@w",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_WIDTH"
+      },
+      {
+        "field": "dash",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_DASH"
+      },
+      {
+        "field": "opacity",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+      }
+    ]
+  },
+  {
+    "inventoryId": "source-3-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+    "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+    "fields": [
+      {
+        "field": "stroke",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+      },
+      {
+        "field": "fill",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+      },
+      {
+        "field": "width",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/@w",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_WIDTH"
+      },
+      {
+        "field": "dash",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:prstDash/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_DASH"
+      },
+      {
+        "field": "opacity",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+      }
+    ]
+  },
+  {
+    "inventoryId": "source-4-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+    "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+    "fields": [
+      {
+        "field": "stroke",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+      },
+      {
+        "field": "fill",
+        "state": "EXPLICIT",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": "ABCDEF",
+        "present": true,
+        "value": "#ABCDEF",
+        "encoding": "HEX_RGB",
+        "reason": null
+      },
+      {
+        "field": "width",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/@w",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_WIDTH"
+      },
+      {
+        "field": "dash",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:prstDash/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_DASH"
+      },
+      {
+        "field": "opacity",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+      }
+    ]
+  },
+  {
+    "inventoryId": "source-8-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]",
+    "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+    "fields": [
+      {
+        "field": "stroke",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+      },
+      {
+        "field": "fill",
+        "state": "EXPLICIT",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+        "sourceRawLexeme": "ABCDEF",
+        "present": true,
+        "value": "#ABCDEF",
+        "encoding": "HEX_RGB",
+        "reason": null
+      },
+      {
+        "field": "width",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/@w",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_WIDTH"
+      },
+      {
+        "field": "dash",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_NATIVE_DASH"
+      },
+      {
+        "field": "opacity",
+        "state": "UNRESOLVED",
+        "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+        "sourceRawLexeme": null,
+        "present": false,
+        "value": null,
+        "encoding": "UNRESOLVED",
+        "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+      }
+    ]
+  }
+]

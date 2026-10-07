@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: unknown appearance keeps known native EMU geometry as represented candidate.2
+ok 1 - unknown appearance keeps known native EMU geometry as represented candidate.2
+  ---
+  duration_ms: 52.166074
+  type: 'test'
+  ...
+# Subtest: direct paint/width/alpha property mappings preserve actual native paths/lexemes
+ok 2 - direct paint/width/alpha property mappings preserve actual native paths/lexemes
+  ---
+  duration_ms: 13.660709
+  type: 'test'
+  ...
+# Subtest: native solid lexeme is unresolved encoding, never invented DASH_JSON []
+ok 3 - native solid lexeme is unresolved encoding, never invented DASH_JSON []
+  ---
+  duration_ms: 10.633792
+  type: 'test'
+  ...
+# Subtest: explicit noFill is distinguished from unknown null paint
+ok 4 - explicit noFill is distinguished from unknown null paint
+  ---
+  duration_ms: 22.06678
+  type: 'test'
+  ...
+# Subtest: known RGB with absent alpha does not resolve opacity to 1
+ok 5 - known RGB with absent alpha does not resolve opacity to 1
+  ---
+  duration_ms: 10.932472
+  type: 'test'
+  ...
+# Subtest: missing native width does not resolve to 0
+ok 6 - missing native width does not resolve to 0
+  ---
+  duration_ms: 6.403046
+  type: 'test'
+  ...
+# Subtest: native signed/padded width lexeme stays raw source; NUMBER encoding cannot claim it explicit
+ok 7 - native signed/padded width lexeme stays raw source; NUMBER encoding cannot claim it explicit
+  ---
+  duration_ms: 7.149348
+  type: 'test'
+  ...
+# Subtest: inherited/theme transformed color remains unresolved without arbitrary black
+ok 8 - inherited/theme transformed color remains unresolved without arbitrary black
+  ---
+  duration_ms: 5.724551
+  type: 'test'
+  ...
+# Subtest: different direct paint alpha cannot be flattened to one opacity
+ok 9 - different direct paint alpha cannot be flattened to one opacity
+  ---
+  duration_ms: 6.558077
+  type: 'test'
+  ...
+# Subtest: candidate.2 rejects fabricated unresolved width default
+ok 10 - candidate.2 rejects fabricated unresolved width default
+  ---
+  duration_ms: 10.28922
+  type: 'test'
+  ...
+# Subtest: candidate.2 rejects fabricated unresolved dash default
+ok 11 - candidate.2 rejects fabricated unresolved dash default
+  ---
+  duration_ms: 7.492666
+  type: 'test'
+  ...
+# Subtest: candidate.2 rejects fabricated unresolved opacity default
+ok 12 - candidate.2 rejects fabricated unresolved opacity default
+  ---
+  duration_ms: 6.606557
+  type: 'test'
+  ...
+# Subtest: candidate.2 rejects FULL readiness for unknown appearance even with accounted geometry
+ok 13 - candidate.2 rejects FULL readiness for unknown appearance even with accounted geometry
+  ---
+  duration_ms: 6.103045
+  type: 'test'
+  ...
+# Subtest: open custom path semantic units corrected and never represented as native EMU
+ok 14 - open custom path semantic units corrected and never represented as native EMU
+  ---
+  duration_ms: 7.520312
+  type: 'test'
+  ...
+# Subtest: closed custom path semantic units corrected and never represented as native EMU
+ok 15 - closed custom path semantic units corrected and never represented as native EMU
+  ---
+  duration_ms: 7.166332
+  type: 'test'
+  ...
+# Subtest: rectangle four vertices and group chain retained with unknown appearance
+ok 16 - rectangle four vertices and group chain retained with unknown appearance
+  ---
+  duration_ms: 12.399578
+  type: 'test'
+  ...
+# Subtest: text run/paragraph/br/source lexemes persist without font/anchor guesses
+ok 17 - text run/paragraph/br/source lexemes persist without font/anchor guesses
+  ---
+  duration_ms: 11.135601
+  type: 'test'
+  ...
+# Subtest: hidden/background policies still block while all denominators remain visible
+ok 18 - hidden/background policies still block while all denominators remain visible
+  ---
+  duration_ms: 5.995727
+  type: 'test'
+  ...
+# Subtest: source-frame EMU/MM roles, CAD y-up and UNSCALED remain explicit per page
+ok 19 - source-frame EMU/MM roles, CAD y-up and UNSCALED remain explicit per page
+  ---
+  duration_ms: 8.748893
+  type: 'test'
+  ...
+# Subtest: G source generic-synthetic-g01: exact raw accounting plus nonzero known geometry
+ok 20 - G source generic-synthetic-g01: exact raw accounting plus nonzero known geometry
+  ---
+  duration_ms: 12.329224
+  type: 'test'
+  ...
+# Subtest: G source generic-synthetic-g02-nested: exact raw accounting plus nonzero known geometry
+ok 21 - G source generic-synthetic-g02-nested: exact raw accounting plus nonzero known geometry
+  ---
+  duration_ms: 12.106999
+  type: 'test'
+  ...
+# Subtest: G source native-vdraw-n01: exact raw accounting plus nonzero known geometry
+ok 22 - G source native-vdraw-n01: exact raw accounting plus nonzero known geometry
+  ---
+  duration_ms: 18.946944
+  type: 'test'
+  ...
+# Subtest: G source synthetic-g03-expanded: exact raw accounting plus nonzero known geometry
+ok 23 - G source synthetic-g03-expanded: exact raw accounting plus nonzero known geometry
+  ---
+  duration_ms: 23.706605
+  type: 'test'
+  ...
+# Subtest: pinned contract identities match authorized candidate.2
+ok 24 - pinned contract identities match authorized candidate.2
+  ---
+  duration_ms: 0.756451
+  type: 'test'
+  ...
+# Subtest: rotation metadata preserves source shape declaration CW/DEG/local pivot independently of composed group basis
+ok 25 - rotation metadata preserves source shape declaration CW/DEG/local pivot independently of composed group basis
+  ---
+  duration_ms: 6.54786
+  type: 'test'
+  ...
+# Subtest: absent source rotation differs from explicitly declared zero in preserved source metadata
+ok 26 - absent source rotation differs from explicitly declared zero in preserved source metadata
+  ---
+  duration_ms: 9.824924
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 454.854302
