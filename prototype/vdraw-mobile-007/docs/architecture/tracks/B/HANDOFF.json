@@ -1,0 +1,97 @@
+{
+  "schema": "vdraw-work-handoff/1",
+  "marker": "[WORK_HANDOFF_V1]",
+  "instruction_id": "VDRAW-4ROUTE-B-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "B",
+  "branch": "work/vdraw-pptx-jwcad-v1",
+  "expected_base_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "head": null,
+  "head_resolution": "Read containing GitHub commit or latest branch HEAD at review; commit self-reference is intentionally not fabricated.",
+  "source_branch": "work/vdraw007-photo-accuracy-20261006",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "release_head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "status": "INITIAL_AUDIT_COMPLETE",
+  "implementation_status": "NOT_STARTED",
+  "IR_contract_status": "PROVISIONAL",
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/INITIAL-AUDIT-V1.md",
+      "git_blob_sha": "909bf7f511c5a11c7ce59e409c8ca8b52934fee1"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/importers.js",
+      "ref": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "git_blob_sha": "33fe27ec3d1f33647967892d386b2c7148b7b84c"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/exporters.js",
+      "ref": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "git_blob_sha": "7e50082bc18da5c6167709f7c6f699cc44b7f591"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/core.js",
+      "ref": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "git_blob_sha": "396deedd7062f2ceb89bc20bc3e850132ab2f194"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/DRAWING-IR-INITIAL-CONTRACT-V1.md",
+      "git_blob_sha": "d712b439a119ac9fe17ed4fa69b67589fc84839c"
+    }
+  ],
+  "test": {
+    "existing_evidence": {
+      "run_id": 37416413246,
+      "head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+      "workflow_conclusion": "success",
+      "suite_counts": {
+        "pass": 55,
+        "fail": 0,
+        "blocked": 0,
+        "skip": 0
+      },
+      "counts_source": "Coordinator BASELINE-V1; aggregate not rerun in Track B",
+      "scope": "existing regression; not Phase1 Jw_cad acceptance"
+    },
+    "new_tests": "NOT_RUN",
+    "fixtures": "PLAN_ONLY_NOT_CREATED",
+    "Jw_cad": "UNMEASURED",
+    "round_trip": "NOT_RUN",
+    "practical_accuracy": "NOT_MEASURED"
+  },
+  "protection": {
+    "changed_scope": "docs/architecture/tracks/B only",
+    "006_tree_sha": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "fixed_signing": "UNCHANGED",
+    "SAVE_001": "EXISTING_HUMAN_CLOSED_NO_RECONFIRMATION",
+    "APK": "NOT_GENERATED",
+    "main": "NOT_CHANGED",
+    "validation": "NOT_CHANGED",
+    "product_source": "NOT_CHANGED",
+    "old_tests": "NOT_CHANGED"
+  },
+  "product_phase_gate": "HOLD",
+  "Human_Gate": {
+    "docs_only": "NO_ADDITIONAL_GATE",
+    "product_adoption": "HOLD_HUMAN_FINAL_JUDGMENT"
+  },
+  "findings": [
+    "EMU normalized to display1200; native frame absent",
+    "Parent group transform not resolved while descendant sp can be imported",
+    "Text runs joined by newline; text+shape uses mutually exclusive branch",
+    "Connector cxnSp absent from inventory and aggregate unsupported count",
+    "DXF canvas coordinates with INSUNITS=0; real Jw_cad compatibility not measured"
+  ],
+  "blocker": [
+    "IR schema/version/hash PROVISIONAL",
+    "Native inventory/source-bound per-object ledger not implemented",
+    "Dedicated mm DXF backend not implemented",
+    "Jw_cad edit/save/round-trip evidence required",
+    "Acceptance tolerance not finalized"
+  ],
+  "next_action": {
+    "id": "B-IMPL-001",
+    "task": "Isolated native OOXML inventory reader under routes/pptx preserving EMU, group transforms, text structure and source-bound unsupported ledger; minimal fixtures only; no DXF/UI/shared changes",
+    "depends_on": "Coordinator subsequent dispatch; final IR adapter waits for Track A fixed schema/hash"
+  }
+}

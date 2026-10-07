@@ -1,0 +1,361 @@
+{
+  "schema": "vdraw-architecture-baseline-evidence/1",
+  "checkedDate": "2026-10-07",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "sourceBranch": "work/vdraw007-photo-accuracy-20261006",
+  "sourceHead": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "architectureBaselineCommit": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "releaseBranch": "work/vdraw007-signing-release-20261006",
+  "releaseHead": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "githubReads": {
+    "branches": [
+      {
+        "branch": "VDRAW-MOBILE-007-UI-CHECKPOINT",
+        "head": "e9a56b9f65ee4679ec83cc97cf67365d89f05e82"
+      },
+      {
+        "branch": "VDRAW-MOBILE-007",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "main",
+        "head": "1181c0aeef3a152435cf005583d09a15f209bd0d"
+      },
+      {
+        "branch": "validation",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "work/vdraw007-android-20261005",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "work/vdraw007-bounded-proc-adapter-20261006",
+        "head": "df7c9522b2e6b8c98a377aafdf1887f9d03f4664"
+      },
+      {
+        "branch": "work/vdraw007-engine-20261005",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "work/vdraw007-fix-candidate-preview-20261006",
+        "head": "de4a29dfe70340746dcb43be9c1837e99aa900af"
+      },
+      {
+        "branch": "work/vdraw007-fix-engine-001-20261006",
+        "head": "a1464c1abbf27bba5d8fc04b94165fbe7a32fe84"
+      },
+      {
+        "branch": "work/vdraw007-fix-input-001-20261006",
+        "head": "c8cffe8950ed39faa2efa9842ac26f8b753516c2"
+      },
+      {
+        "branch": "work/vdraw007-fix-output-race-20261006",
+        "head": "d0cc49833482855469e341ca557a68a68d4f4c45"
+      },
+      {
+        "branch": "work/vdraw007-input-trace-20261005",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "work/vdraw007-integration-20261005",
+        "head": "1e3dd26184fa967fbf6798cb749b3705c64297dd"
+      },
+      {
+        "branch": "work/vdraw007-integration-20261006",
+        "head": "9c1dcdf8d87e32a9f0d86996c210a8a4b7ebb2fc"
+      },
+      {
+        "branch": "work/vdraw007-integration-round1-20261006",
+        "head": "70f9b5be972573906328e5d72b0318473ff5fa1c"
+      },
+      {
+        "branch": "work/vdraw007-output-share-20261005",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "work/vdraw007-performance-20261005",
+        "head": "43a8635c1bb9e52847b00e6a98a732395dec5269"
+      },
+      {
+        "branch": "work/vdraw007-photo-accuracy-20261006",
+        "head": "6c0facb34757a54ed37d08d94505129b0341ad66"
+      },
+      {
+        "branch": "work/vdraw007-qa-debug-20261005",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "work/vdraw007-qa-release-20261006",
+        "head": "1f699d70013e7ce0b4bf5bcca22bdfe5f6cfdc45"
+      },
+      {
+        "branch": "work/vdraw007-qa-round2-20261006",
+        "head": "15d223faa98cd97ae53a72b4daa13b5ffd681624"
+      },
+      {
+        "branch": "work/vdraw007-regression-assets-round1-20261006",
+        "head": "03610a3e6f8ab59bb74c5366724fd0528c65f494"
+      },
+      {
+        "branch": "work/vdraw007-regression-environment-20261006",
+        "head": "743767ab7659e36d5b9076d9e2ccb1d0e3ae6358"
+      },
+      {
+        "branch": "work/vdraw007-regression-fixtures-20261006",
+        "head": "148a1cd5afb61aaee93dc98a4343a3512771d59c"
+      },
+      {
+        "branch": "work/vdraw007-release-blockers-20261006",
+        "head": "b2f9351b6418f2b552d95b96132650a297ea0afe"
+      },
+      {
+        "branch": "work/vdraw007-release-checkpoint-20261006",
+        "head": "d77c524e49ff8835670b016551f007f6c171bb63"
+      },
+      {
+        "branch": "work/vdraw007-save001-20261006",
+        "head": "5a6a760c7ece23fda764b1f3f6d2fa1f0dd09737"
+      },
+      {
+        "branch": "work/vdraw007-signing-audit-round1-20261006",
+        "head": "50730045d4979b68b06cc9b2afb18f36baf72e0f"
+      },
+      {
+        "branch": "work/vdraw007-signing-release-20261006",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw007-ui-pwa-environment-20261006",
+        "head": "4d798ed2ebf3d1ec14a5831ee55abcb19b018f80"
+      },
+      {
+        "branch": "work/vdraw007-ui-regression-adapters-20261006",
+        "head": "217dbada8368b1f29b9e236c4e0f15eb2e8c3936"
+      },
+      {
+        "branch": "work/vdraw007-ui-ux-20261005",
+        "head": "1ec046fc1582803cf49716dcfa3330b06c21714f"
+      },
+      {
+        "branch": "work/vdraw100-audit-metrics",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-device-matrix",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-dimension-calibration",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-geometry",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-golden-regression",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-golden-set",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-independent-qa",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-integration",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-object-ocr",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-photo-to-drawing",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      },
+      {
+        "branch": "work/vdraw100-unknown-guidance",
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f"
+      }
+    ],
+    "treeTruncated": false,
+    "AGENTS": []
+  },
+  "ci": {
+    "dev": {
+      "run": 37416413246,
+      "head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+      "conclusion": "success",
+      "suites": {
+        "pass": 55,
+        "fail": 0,
+        "blocked": 0,
+        "skip": 0,
+        "unit": "suite",
+        "suiteComplete": true
+      }
+    },
+    "release": {
+      "run": 37409871705,
+      "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+      "conclusion": "success"
+    },
+    "newRunPerformed": false
+  },
+  "protection": {
+    "subtree006": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "developmentEqualsRelease": true,
+    "fixedSigningSourceUnchanged": true,
+    "signingSecretsRead": false,
+    "save001": {
+      "schema": "vdraw-save001-device-acceptance/1",
+      "status": "CLOSED",
+      "currentDeviceVersion": "0.8.2",
+      "acceptedDeliveryVersion": "0.8.2",
+      "versionCode": 10,
+      "releaseHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+      "apkSHA256": "d3e43458ebb448cebf759bc26671c23c20639382bf15868a5eed8ef0d1c765ce",
+      "certificateSHA256": "186ad92e96316b7a2a247c092fd3d83a94fa7a89ea406859a93b057c329a2d8d",
+      "acceptedWorkflowRun": 37409871705,
+      "acceptedArtifactId": 11389560025,
+      "userStatement": "0.8.2実機で「ファイルを保存」→ Android SAF保存先選択をユーザーが実確認済み",
+      "singleRequiredCheck": "ファイルを保存 → Android SAF保存先選択が開く",
+      "uninstallAllowed": false,
+      "extraShareCheckRequired": false,
+      "closed": true,
+      "evidenceSource": "EXPLICIT_USER_ACCEPTANCE_2026-10-06",
+      "reconfirmationRequired": false
+    },
+    "protectedBranchesUnmodified": true
+  },
+  "photoIssue": {
+    "schema": "vdraw-next-photo-phase-defects/1",
+    "baselineAcceptedSoftwareHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+    "baselineHistoricalP0": 0,
+    "baselineHistoricalP1": 0,
+    "currentPhotoPhaseP0": 0,
+    "currentPhotoPhaseP1": 0,
+    "issues": [
+      {
+        "id": "PHOTO-PPTX-001",
+        "severity": "P1",
+        "status": "CLOSED_INDEPENDENT_QA_PASS",
+        "trigger": "includePhoto=true、非3:2写真、採用後1200x800ページ",
+        "problem": "PPTX写真がページcanvas全域へstretchされ、containで描かれるpreview/Overlayとの位置対応を壊す。",
+        "reproduction": "tests/photo-pptx-audit.mjs: 実PPTXを生成しnativeOOXML画像extentを検査。合成40x80写真のため実写真精度証拠には計上しない。",
+        "releaseGate": "NEXT_PHOTO_RELEASE_HOLD",
+        "fixStatus": "CONTAIN_FROM_ACTUAL_SANITIZED_PNG",
+        "productSourceModified": true,
+        "limitedRegression": {
+          "passed": 59,
+          "fail": 0,
+          "skip": 0
+        },
+        "independentQA": "PASS",
+        "additionalQAActualOOXMLCases": 8,
+        "oldDefectProbe": "PRESERVED_HISTORICAL_ONLY",
+        "androidWebAssetParity": "EXACT"
+      }
+    ]
+  },
+  "photoState": {
+    "schema": "vdraw-photo100-integration-status/2",
+    "baselineHEAD": "f2fefee33377d41be22dc417356d5140e1fbbfca",
+    "productReleaseHEAD": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+    "branch": "work/vdraw007-photo-accuracy-20261006",
+    "save001DeviceAcceptance": "CLOSED",
+    "PHOTO-PPTX-001": "CLOSED_INDEPENDENT_QA_PASS",
+    "implementationIndependentQA": "PASS",
+    "currentCIStatus": "EXACT_COMMIT_WORKFLOW_ATTESTATION_IS_AUTHORITATIVE",
+    "newSyntheticSafetyTests": 65,
+    "publicPhotoInventoryAntiFalsePassTests": 7,
+    "existingContractTests": 54,
+    "newPPTXContainTests": 6,
+    "actualPublicPhotoPPTXPlacementCases": 10,
+    "testFailures": 0,
+    "testBlocked": 0,
+    "testSkip": 0,
+    "recognitionTrialBlockedPhotos": 10,
+    "realPhotoTotal": 10,
+    "realAIPhotoCount": 0,
+    "difficultyCounts": {
+      "Easy": 1,
+      "Normal": 4,
+      "Hard": 5,
+      "Extreme": 0
+    },
+    "difficultyAssignment": "PROVISIONAL_PRE_INFERENCE",
+    "splitCounts": {
+      "development": 6,
+      "validation": 2,
+      "blind-holdout": 2
+    },
+    "blindHoldoutStatus": "NOT_FROZEN_NO_GROUND_TRUTH",
+    "allFormalMetrics": "NOT_MEASURED",
+    "cameraQuality": "OFFLINE_HEURISTIC_ONLY",
+    "cameraQualityDecisionCounts": {
+      "RETAKE_REQUIRED": 2,
+      "NEEDS_REVIEW": 8
+    },
+    "productCameraGate": "NOT_CONNECTED",
+    "firstRealPhotoTrial": "QUALITY_EXECUTED_RECOGNITION_BLOCKED",
+    "photoPhaseP0": 0,
+    "photoPhaseP1": 0,
+    "006Protection": "TREE_PIN_GUARDED_IN_CI",
+    "fixedSigning": "UNCHANGED",
+    "productSourceChanges": [
+      "web/src/exporters.js",
+      "android/app/src/main/assets/public/src/exporters.js"
+    ],
+    "externalAIPhotoTransfers": 0,
+    "autoLearning": false,
+    "productCompletionPercent": null,
+    "practicalAccuracyTargetPercent": 100,
+    "nextProductionPhaseAllowed": false,
+    "nextOfflinePreparationAllowed": true,
+    "expansionDecision": "HOLD_AT_10",
+    "remainingNeeds": [
+      "working real Scene and Segmentation provider connection",
+      "product VisionJobs connection",
+      "human-confirmed ground truth with trusted provenance",
+      "quality gate calibration and product camera wiring",
+      "frozen blind holdout and Extreme coverage",
+      "real AI geometry Overlay and correction cost",
+      "real Office/CAD export fidelity and round-trip"
+    ],
+    "singleNextUserOperation": null
+  },
+  "sourceFiles": [
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/core.js",
+      "blobSha": "396deedd7062f2ceb89bc20bc3e850132ab2f194"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/importers.js",
+      "blobSha": "33fe27ec3d1f33647967892d386b2c7148b7b84c"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/exporters.js",
+      "blobSha": "7e50082bc18da5c6167709f7c6f699cc44b7f591"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/vision.js",
+      "blobSha": "37be20846f9694cfd023c0194a32cd75cf6312fd"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/scripts/photo-quality.py",
+      "blobSha": "2254e1761c8b65dc0cec0c1fcf77a44bd3a3fe5d"
+    }
+  ],
+  "gate": {
+    "phase1": "HOLD",
+    "jwcad": "NOT_MEASURED",
+    "IR": "PROVISIONAL",
+    "productIntegration": false,
+    "newAppCode": false
+  }
+}

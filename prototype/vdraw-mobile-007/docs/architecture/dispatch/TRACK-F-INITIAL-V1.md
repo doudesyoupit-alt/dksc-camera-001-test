@@ -11,7 +11,7 @@ execution_scope: Wave1 initial audit/contract/test plan only
 Human Gate: product adoption HOLD; no Human approval substitution
 
 開始時にGitHubから自branch/HEAD、source branch/HEAD、architecture docs、Evidence/test/006/SAVE-001/signing/issuesを再取得する。
-expected_headは同階層DISPATCH-MANIFEST.jsonのTrack entryの値を正とする。進行済みなら新HEAD/HANDOFFを確認して重複実行しない。差異を上書きしない。
+expected_headは総括branch work/vdraw-four-route-coordinator-v1 の prototype/vdraw-mobile-007/docs/architecture/dispatch/DISPATCH-MANIFEST.jsonのTrack entryの値を正とする。進行済みなら新HEAD/HANDOFFを確認して重複実行しない。差異を上書きしない。
 共通文書: docs/architecture/BASELINE-V1.md、DRAWING-IR-INITIAL-CONTRACT-V1.md、PHASE1-ACCEPTANCE-V1.md。
 
 担当:
@@ -47,3 +47,5 @@ product_phase_gate: HOLD
 Human Gate: <必要/不要と対象scope>
 blocker: <observed only>
 next_action: <single bounded action>
+
+受付順: instruction_idの完了receipt/HANDOFFを先に確認。完了済みなら再実行せず終了。この初回IDはWAVE1完了。後続実装は別instruction_idを必要とする。

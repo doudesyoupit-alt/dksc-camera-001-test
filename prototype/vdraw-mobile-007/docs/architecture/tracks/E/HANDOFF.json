@@ -1,0 +1,70 @@
+{
+  "format": "WORK_HANDOFF_V1",
+  "instruction_id": "VDRAW-4ROUTE-E-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "E",
+  "branch": "work/vdraw-camera-quality-guide-v1",
+  "expected_base_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "head": null,
+  "headResolution": "RESOLVE_FROM_CONTAINING_COMMIT_BRANCH_HEAD; commit SHA cannot be self-embedded",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "status": "INITIAL_READ_AUDIT_COMPLETE",
+  "implementation": "NOT_STARTED",
+  "contractStatus": "PROVISIONAL",
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/E/INITIAL-AUDIT-V1.md",
+      "hashResolution": "Git blob at containing commit"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/scripts/photo-quality.py",
+      "gitBlob": "2254e1761c8b65dc0cec0c1fcf77a44bd3a3fe5d"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/tests/photo-quality.test.py",
+      "gitBlob": "7ef1f725df3bcdaecbfec645212f7fde9f2ca192"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/photo-accuracy/INTEGRATION-STATUS.json",
+      "gitBlob": "43df36a7df1ddfeccc40623bd7ad5a85ae31507c"
+    }
+  ],
+  "test": {
+    "existingEvidence": "BASELINE-V1: 55 suites PASS; synthetic/photo placement scope only",
+    "newRun": "NOT_RUN_DOCS_ONLY",
+    "realQualityMetrics": "NOT_MEASURED",
+    "existingQualityDecisionCounts": {
+      "RETAKE_REQUIRED": 2,
+      "NEEDS_REVIEW": 8
+    }
+  },
+  "protection": {
+    "subtree006": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "fixedSigning": "UNCHANGED_BY_SCOPE",
+    "save001": "CLOSED_EXISTING_HUMAN_ACCEPTANCE",
+    "changedPathsScope": "docs/architecture/tracks/E only"
+  },
+  "product_phase_gate": "HOLD",
+  "HumanGate": {
+    "initialDocumentation": "NO_NEW_APPROVAL_REQUIRED",
+    "productAdoption": "HOLD_HUMAN_FINAL_JUDGMENT_REQUIRED",
+    "cameraNativeChanges": "OUT_OF_SCOPE"
+  },
+  "blocker": [
+    "PRODUCT_CAMERA_NOT_CONNECTED",
+    "QUALITY_THRESHOLDS_PROVISIONAL",
+    "QUALITY_HUMAN_GT_NOT_FROZEN",
+    "QUALITY_HOLDOUT_NOT_FROZEN",
+    "GLARE_FAR_OCCLUSION_MOTION_NOT_MEASURED",
+    "IR_FORMAL_SCHEMA_PENDING"
+  ],
+  "next_action": "After Track A contract version/hash is fixed: isolated quality report-to-route review/action adapter preserving provisional thresholds and NOT_MEASURED; no shared/native/UI or threshold adoption",
+  "requirementsRetakeRecall": {
+    "status": "NOT_MEASURED",
+    "value": null
+  },
+  "unnecessaryRetakeRate": {
+    "status": "NOT_MEASURED",
+    "value": null
+  }
+}

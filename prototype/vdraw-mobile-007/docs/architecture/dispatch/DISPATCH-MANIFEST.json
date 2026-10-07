@@ -3,7 +3,7 @@
   "architectureBaselineCommit": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
   "sourceHead": "6c0facb34757a54ed37d08d94505129b0341ad66",
   "coordinatorBranch": "work/vdraw-four-route-coordinator-v1",
-  "status": "WAVE1_DISPATCH_READY",
+  "status": "WAVE1_COMPLETE_SCOPE_ONLY",
   "productGate": "HOLD",
   "IRContract": "PROVISIONAL",
   "executionScope": "audit/contract/test plan only",
@@ -17,7 +17,9 @@
       "task": "initial-contract-review",
       "instruction_id": "VDRAW-4ROUTE-A-INITIAL-20261007-V1",
       "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
-      "status": "READY_TO_DISPATCH"
+      "receipt_status": "COMPLETED_DO_NOT_RERUN",
+      "latest_saved_head": "b023fdc1a0dacd1d9280db3af2b3ad4da17f3609",
+      "status": "INITIAL_AUDIT_PLAN_COMPLETE"
     },
     {
       "key": "B",
@@ -28,7 +30,9 @@
       "task": "pptx-phase1-audit",
       "instruction_id": "VDRAW-4ROUTE-B-INITIAL-20261007-V1",
       "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
-      "status": "READY_TO_DISPATCH"
+      "receipt_status": "COMPLETED_DO_NOT_RERUN",
+      "latest_saved_head": "595cb93a6b7f797cffcbcbc9caf858e695c5e932",
+      "status": "INITIAL_AUDIT_PLAN_COMPLETE"
     },
     {
       "key": "C",
@@ -39,7 +43,9 @@
       "task": "pdf-route-audit",
       "instruction_id": "VDRAW-4ROUTE-C-INITIAL-20261007-V1",
       "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
-      "status": "READY_TO_DISPATCH"
+      "receipt_status": "COMPLETED_DO_NOT_RERUN",
+      "latest_saved_head": "da04782922dd48524366d8b564efc5f2ec512ff0",
+      "status": "INITIAL_AUDIT_PLAN_COMPLETE"
     },
     {
       "key": "D",
@@ -50,7 +56,9 @@
       "task": "paper-route-audit",
       "instruction_id": "VDRAW-4ROUTE-D-INITIAL-20261007-V1",
       "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
-      "status": "READY_TO_DISPATCH"
+      "receipt_status": "COMPLETED_DO_NOT_RERUN",
+      "latest_saved_head": "1708d4015e51285e763f58394f9e5921c4bef081",
+      "status": "INITIAL_AUDIT_PLAN_COMPLETE"
     },
     {
       "key": "E",
@@ -61,7 +69,9 @@
       "task": "camera-quality-audit",
       "instruction_id": "VDRAW-4ROUTE-E-INITIAL-20261007-V1",
       "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
-      "status": "READY_TO_DISPATCH"
+      "receipt_status": "COMPLETED_DO_NOT_RERUN",
+      "latest_saved_head": "a15bbe1e8ad9a156937d41e4bbcddfc738be0bdb",
+      "status": "INITIAL_AUDIT_PLAN_COMPLETE"
     },
     {
       "key": "F",
@@ -72,7 +82,9 @@
       "task": "photo-route-audit",
       "instruction_id": "VDRAW-4ROUTE-F-INITIAL-20261007-V1",
       "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
-      "status": "READY_TO_DISPATCH"
+      "receipt_status": "COMPLETED_DO_NOT_RERUN",
+      "latest_saved_head": "d95810dca2a4ad427e40cb561734fdcb2ac8ae94",
+      "status": "INITIAL_AUDIT_PLAN_COMPLETE"
     },
     {
       "key": "G",
@@ -83,7 +95,19 @@
       "task": "independent-phase1-qa-plan",
       "instruction_id": "VDRAW-4ROUTE-G-INITIAL-20261007-V1",
       "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
-      "status": "READY_TO_DISPATCH"
+      "receipt_status": "COMPLETED_DO_NOT_RERUN",
+      "latest_saved_head": "07eaa6a66930e4caa9d417d965e5eeda583a28cf",
+      "status": "INITIAL_AUDIT_PLAN_COMPLETE"
     }
-  ]
+  ],
+  "completedInstructions": [
+    "VDRAW-4ROUTE-A-INITIAL-20261007-V1",
+    "VDRAW-4ROUTE-B-INITIAL-20261007-V1",
+    "VDRAW-4ROUTE-C-INITIAL-20261007-V1",
+    "VDRAW-4ROUTE-D-INITIAL-20261007-V1",
+    "VDRAW-4ROUTE-E-INITIAL-20261007-V1",
+    "VDRAW-4ROUTE-F-INITIAL-20261007-V1",
+    "VDRAW-4ROUTE-G-INITIAL-20261007-V1"
+  ],
+  "rerunRule": "Read instruction receipt/HANDOFF before execution. All initial instruction_ids are completed; a restart must not repeat audits/collection/inference. A later implementation requires a distinct instruction_id and freshly checked expected_head."
 }

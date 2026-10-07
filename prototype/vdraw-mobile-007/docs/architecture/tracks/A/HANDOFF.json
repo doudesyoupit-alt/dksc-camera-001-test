@@ -1,0 +1,69 @@
+{
+  "marker": "[WORK_HANDOFF_V1]",
+  "schema": "vdraw-four-route-handoff/1",
+  "instruction_id": "VDRAW-4ROUTE-A-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "A",
+  "branch": "work/vdraw-drawing-ir-v1",
+  "expected_base_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "head": null,
+  "head_resolution": "Resolve immutable owning commit of this HANDOFF.json. Self-containing commit SHA cannot be embedded into itself; Coordinator must fetch branch HEAD and this blob at that SHA.",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "architecture_baseline": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "status": "INITIAL_AUDIT_AND_PLAN_COMPLETE_SCOPE_ONLY",
+  "contract_status": "PROVISIONAL",
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/INITIAL-AUDIT-V1.md",
+      "sha256": "761ed1e2281ff5c3b568f98a9cb344424e0364c228fc1192bcca1d4ce6d40622"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/DRAWING-IR-INITIAL-CONTRACT-V1.md",
+      "role": "UNCHANGED_INITIAL_SHARED_CONTRACT"
+    }
+  ],
+  "test": {
+    "new_run": "NOT_RUN",
+    "schema_implementation": "NOT_IMPLEMENTED",
+    "actual_jwcad": "NOT_RUN",
+    "existing_source_ci": {
+      "run_id": 37416413246,
+      "status": "success",
+      "role": "REUSED_HISTORICAL_EVIDENCE_ONLY"
+    },
+    "existing_release_ci": {
+      "run_id": 37409871705,
+      "status": "success",
+      "role": "REUSED_HISTORICAL_EVIDENCE_ONLY"
+    }
+  },
+  "protection": {
+    "code_changes": false,
+    "product_integration": false,
+    "apk_generated": false,
+    "shared_contract_changed": false,
+    "protected_branches_changed": false,
+    "source_006_tree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "release_006_tree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "SAVE_001": "CLOSED_REUSED",
+    "signing": "UNCHANGED_NO_SECRET_READ",
+    "golden_and_tests": "NO_CHANGE"
+  },
+  "product_phase_gate": "HOLD",
+  "Human_Gate": {
+    "authorized_scope": "DOCS_ONLY_REVIEW_NO_ADDITIONAL_APPROVAL_NEEDED",
+    "product_adoption": "HOLD_HUMAN_FINAL_JUDGMENT",
+    "human_approval_substitution": false
+  },
+  "blocker": [
+    "Shared IR schema/version/hash and explicit frame/calibration/target-ledger structures not frozen",
+    "Unit-role scale coverage and object-part conservation semantics need Coordinator B/G review",
+    "IR-to-mm DXF target backend not present in reviewed baseline",
+    "Actual Jw_cad open/edit/save/Round-trip Evidence absent; G reports no Jw_cad in current Linux workspace; user PC uninvestigated"
+  ],
+  "next_action": "Coordinator reviews refinements with B/G, then dispatch A isolated shared schema/semantic-validation/unit-frame-ledger test implementation; no Editor/UI/migration/product integration.",
+  "changed_paths": [
+    "prototype/vdraw-mobile-007/docs/architecture/tracks/A/INITIAL-AUDIT-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/tracks/A/HANDOFF.json"
+  ]
+}

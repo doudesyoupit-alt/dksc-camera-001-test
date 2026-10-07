@@ -1,0 +1,83 @@
+{
+  "marker": "[WORK_HANDOFF_V1]",
+  "schema": "vdraw-work-handoff/1",
+  "instruction_id": "VDRAW-4ROUTE-C-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "C",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "branch": "work/vdraw-pdf-jwcad-v1",
+  "expected_base_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "start_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "head": "RESOLVE_FROM_BRANCH_REF",
+  "headResolution": "Coordinator must read latest GitHub branch ref and verify commit contains this HANDOFF; self-referential commit SHA cannot be embedded in the same commit.",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "status": "INITIAL_AUDIT_COMPLETE",
+  "execution_scope": "READ_ONLY_AUDIT_AND_TEST_PLAN",
+  "evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/C/INITIAL-AUDIT-V1.md",
+      "sha256": "591849962f4a07acad36b54cc9e8aa8d8234ede3461888778b5de3e4ba24d384"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/DRAWING-IR-INITIAL-CONTRACT-V1.md",
+      "git_blob_sha": "d712b439a119ac9fe17ed4fa69b67589fc84839c",
+      "status": "PROVISIONAL"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/src/importers.js",
+      "git_blob_sha": "33fe27ec3d1f33647967892d386b2c7148b7b84c"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/web/vendor/pdf.mjs",
+      "git_blob_sha": "18ef923aca905c9897db648c146923ea2630f206",
+      "version": "5.6.205"
+    }
+  ],
+  "test": {
+    "newRun": "NOT_RUN",
+    "implementation": "NOT_RUN",
+    "existingEvidence": "Coordinator baseline exact source CI run37416413246:55 suite PASS/FAIL0/BLOCKED0/skip0; historical only, not PDF route acceptance.",
+    "pdfCAD": "NOT_RUN",
+    "jwcad": "NOT_RUN",
+    "realAccuracy": "NOT_MEASURED"
+  },
+  "product_phase_gate": "HOLD",
+  "IRContract": "PROVISIONAL",
+  "human_gate": {
+    "requiredForAudit": false,
+    "requiredForProductAdoption": true,
+    "substitution": false
+  },
+  "protectedChanges": 0,
+  "codeChanges": 0,
+  "APKGenerated": false,
+  "AIRequests": 0,
+  "blocker": [
+    {
+      "code": "IR_PROVISIONAL",
+      "scope": "PDF IR connection",
+      "detail": "A schema/unitRole/curve/page-source-binding contract not frozen."
+    },
+    {
+      "code": "PDF_NATIVE_RUNTIME_NOT_IMPLEMENTED",
+      "scope": "new PDF CAD route",
+      "detail": "Existing importer retains raster reference and native text but no vector/frame persistence."
+    },
+    {
+      "code": "WORKER_READ_EVIDENCE_MISSING",
+      "scope": "This read audit via current GitHub connector",
+      "detail": "pdf.worker.mjs exists, blob049a23c3e6d54fd17cb5844d8da3834d4944dd2a. Contents full and range returned empty. Not a claim that PDF.js lacks capability."
+    },
+    {
+      "code": "RENDER_PATH_MUTATION_UNVERIFIED",
+      "scope": "new native operator snapshot",
+      "detail": "Bundled constructPath mutates packed numeric path to Path2D during rendering; not reproduced on real PDF this turn."
+    },
+    {
+      "code": "PDF_GOLDEN_MM_DXF_JWCAD_NOT_VERIFIED",
+      "scope": "Phase2 acceptance",
+      "detail": "No real PDF CAD/Jw_cad run performed."
+    }
+  ],
+  "next_action": "Only after subsequent dispatch: isolated read-only native inventory/frame extractor PoC, snapshot operators before render, retain userUnit/rotate/view/full text and unknown-op ledger. Exclude IR connection, OCR, DXF, geometry guessing, product integration. Resolve worker/raw MediaBox/CropBox read Evidence or retain UNKNOWN."
+}

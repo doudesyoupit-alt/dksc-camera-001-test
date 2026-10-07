@@ -1,0 +1,73 @@
+{
+  "marker": "[WORK_HANDOFF_V1]",
+  "schema": "vdraw-work-handoff/1",
+  "instruction_id": "VDRAW-4ROUTE-F-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "F",
+  "branch": "work/vdraw-photo-editable-pptx-v2",
+  "expected_base_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "architecture_baseline": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "head": null,
+  "head_resolution": "Resolve the GitHub commit containing this HANDOFF.json and the branch ref after save; self-embedded commit SHA is not asserted.",
+  "status": "AUDIT_COMPLETE_PLAN_ONLY",
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/F/INITIAL-AUDIT-V1.md",
+      "git_blob_sha": "d86e3c05ed67da6c395ea8be96f67908bead42af"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/photo-accuracy/golden-manifest.json",
+      "git_blob_sha": "2c9e78ad6175020a660424c1ea9072f53ef3a462"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/photo-accuracy/INTEGRATION-STATUS.json",
+      "git_blob_sha": "43df36a7df1ddfeccc40623bd7ad5a85ae31507c"
+    }
+  ],
+  "test": {
+    "existing_evidence": "Inherited exact-source baseline CI 37416413246, 55 suites PASS; not rerun; not recognition accuracy.",
+    "new_tests": "NOT_RUN",
+    "source_snapshot_blob_verification": "Four source files match baseline Git tree",
+    "real_photo_container_assay": "Existing ten cases PASS_COORDINATE_ASSAY_ONLY; real AI 0; formal recognition metrics null",
+    "office_application": "NOT_RUN"
+  },
+  "product_phase_gate": "HOLD_PHASE5_UNTIL_PHASE1_AND_SUBSEQUENT_PHASE_GATES",
+  "Human_Gate": {
+    "audit_save": "NOT_REQUIRED_WITHIN_AUTHORIZED_SCOPE",
+    "product_adoption": "HOLD",
+    "approval_substitution": false
+  },
+  "blocker": [
+    "Track A formal IR version/hash not frozen",
+    "Track E quality contract provisional; product camera gate not connected",
+    "Image-derived geometry/product recognition not established",
+    "Human ground truth absent and blind holdout not frozen",
+    "Canonical/product importer parity unproven",
+    "Real Office editable round-trip not run",
+    "All formal photo accuracy metrics unmeasured"
+  ],
+  "next_action": "After Track A schema freezes and coordinator dispatches: isolated source-to-IR adapter for existing manual/fixture geometry, preserving pixel-native source/hash/transform/UNSCALED and unsupported ledger. No inference or product integration.",
+  "changes": {
+    "allowed_paths": [
+      "prototype/vdraw-mobile-007/docs/architecture/tracks/F/INITIAL-AUDIT-V1.md",
+      "prototype/vdraw-mobile-007/docs/architecture/tracks/F/HANDOFF.json"
+    ],
+    "product_source": 0,
+    "protected_branches": 0,
+    "golden_changes": 0,
+    "provider_calls": 0,
+    "external_photo_transfers": 0,
+    "new_photo_acquisition": 0,
+    "new_tests": 0,
+    "skips_added": 0,
+    "APK_builds": 0
+  },
+  "protection": {
+    "subtree_006": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "SAVE_001": "CLOSED_PRESERVED",
+    "PHOTO_PPTX_001": "CLOSED_INDEPENDENT_QA_PASS_PRESERVED",
+    "fixed_signing": "UNCHANGED_SECRETS_NOT_ACCESSED",
+    "IR": "PROVISIONAL_NO_PRIVATE_SCHEMA"
+  }
+}

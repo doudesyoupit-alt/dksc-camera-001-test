@@ -1,0 +1,103 @@
+{
+  "marker": "[WORK_HANDOFF_V1]",
+  "schema": "vdraw-coordinator-handoff/1",
+  "instruction_id": "VDRAW-4ROUTE-COORDINATOR-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "branch": "work/vdraw-four-route-coordinator-v1",
+  "head": null,
+  "headResolution": "Read commit containing this file and current branch ref; final verified head is returned to Human.",
+  "expected_base_head": "615ec928dc880e1fbbec6f1c2702ed5c8c253476",
+  "sourceHead": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "architectureBaseline": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "status": "INITIAL_COORDINATOR_SCOPE_COMPLETE",
+  "evidence": [
+    "prototype/vdraw-mobile-007/docs/architecture/BASELINE-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/DRAWING-IR-INITIAL-CONTRACT-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/PHASE1-ACCEPTANCE-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/DEPENDENCY-MAP-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/CROSS-TRACK-REVIEW-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/BASELINE-EVIDENCE-V1.json",
+    "prototype/vdraw-mobile-007/docs/architecture/INITIAL-ACCEPTANCE-V1.json",
+    "prototype/vdraw-mobile-007/docs/architecture/INITIAL-REPORT-V1.md"
+  ],
+  "tracks": [
+    {
+      "track": "A",
+      "branch": "work/vdraw-drawing-ir-v1",
+      "head": "b023fdc1a0dacd1d9280db3af2b3ad4da17f3609",
+      "reportBlob": "0868389ae4f8c276ca623c6889510498487dd6f9",
+      "handoffBlob": "ec49ae7950d4ae949b41847a619aa2033c02f25f"
+    },
+    {
+      "track": "B",
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "head": "595cb93a6b7f797cffcbcbc9caf858e695c5e932",
+      "reportBlob": "909bf7f511c5a11c7ce59e409c8ca8b52934fee1",
+      "handoffBlob": "8417033c2e614e590dcac3df1b040cb3963ac687"
+    },
+    {
+      "track": "C",
+      "branch": "work/vdraw-pdf-jwcad-v1",
+      "head": "da04782922dd48524366d8b564efc5f2ec512ff0",
+      "reportBlob": "5fa8043a35fe976f4bb30671be6f73d3551f2dae",
+      "handoffBlob": "08c8e17e17b722224866b9a5a6e52b747cd0c03f"
+    },
+    {
+      "track": "D",
+      "branch": "work/vdraw-paper-camera-jwcad-v1",
+      "head": "1708d4015e51285e763f58394f9e5921c4bef081",
+      "reportBlob": "5f7d02a85844f200a3151803e5f89b773e140f66",
+      "handoffBlob": "5196f2eed30c8c9269fddaf8b42bd4101fd8ac75"
+    },
+    {
+      "track": "E",
+      "branch": "work/vdraw-camera-quality-guide-v1",
+      "head": "a15bbe1e8ad9a156937d41e4bbcddfc738be0bdb",
+      "reportBlob": "37a376ea1853c2ab05f4b74f16c6fef0b474c2a7",
+      "handoffBlob": "766a710ddbc6f356e1898a4ed67a09404f4fe916"
+    },
+    {
+      "track": "F",
+      "branch": "work/vdraw-photo-editable-pptx-v2",
+      "head": "d95810dca2a4ad427e40cb561734fdcb2ac8ae94",
+      "reportBlob": "d86e3c05ed67da6c395ea8be96f67908bead42af",
+      "handoffBlob": "3203ab99e0fd475e6dd52a85275eb98d1bb99d45"
+    },
+    {
+      "track": "G",
+      "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+      "head": "07eaa6a66930e4caa9d417d965e5eeda583a28cf",
+      "reportBlob": "b01d302ab4f55418dde42187337d4ca4d692515f",
+      "handoffBlob": "7b68a3100d754f3ea948762798caddefdb08ae0e"
+    }
+  ],
+  "test": {
+    "newProductTests": "NOT_RUN",
+    "existingCI": {
+      "run": 37416413246,
+      "pass": 55,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "denominatorUnit": "suite"
+    },
+    "Jw_cad": "NOT_RUN",
+    "realPhotoAccuracy": "NOT_MEASURED"
+  },
+  "productPhaseGate": "HOLD",
+  "IR": "PROVISIONAL",
+  "HumanGate": {
+    "initialDocumentation": "AUTHORIZED_SCOPE_COMPLETE",
+    "productAdoption": "HOLD_HUMAN_FINAL_JUDGMENT",
+    "approvalSubstitution": false
+  },
+  "blocker": [
+    "IR_VERSION_SCHEMA_HASH_PROVISIONAL",
+    "NATIVE_OOXML_INVENTORY_AND_LOSS_LEDGER_NOT_IMPLEMENTED",
+    "MM_DXF_BACKEND_NOT_IMPLEMENTED",
+    "PHASE1_TOLERANCE_NOT_FROZEN",
+    "REAL_JWCAD_OPEN_EDIT_SAVE_ROUNDTRIP_EVIDENCE_REQUIRED",
+    "REAL_PPTX_APP_EDITABLE_ROUNDTRIP_EVIDENCE_REQUIRED"
+  ],
+  "nextAction": "Continue with new instruction_ids and refreshed heads for A shared schema/validator, B native OOXML inventory, G independent Golden. No initial audit repetition, product integration or APK in this handoff."
+}
