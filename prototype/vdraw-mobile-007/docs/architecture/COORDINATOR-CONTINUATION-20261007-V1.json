@@ -1,0 +1,75 @@
+{
+  "schema": "vdraw-coordinator-continuation/1",
+  "instruction_id": "VDRAW-COORDINATOR-PHASE1-CONTINUE-20261007-V1",
+  "parent_head": "002daf4a74e1070b5094c4b5f5132e683133c06c",
+  "status": "CHECKPOINT_REACQUIRED_NEXT_BOUNDED_DISPATCH_READY",
+  "tracks": {
+    "A": {
+      "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+      "previous_blobs_preserved": 559,
+      "existing_blob_differences": 0,
+      "handoff_blob": "db64a209ea7cc81739258267aed34ba6a438766b"
+    },
+    "B": {
+      "head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+      "previous_blobs_preserved": 559,
+      "existing_blob_differences": 0,
+      "handoff_blob": "79085ad36beee0118eea4e61997e365c62baa98d"
+    },
+    "G": {
+      "head": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+      "previous_blobs_preserved": 559,
+      "existing_blob_differences": 0,
+      "handoff_blob": "23ebdf5672f05180dcfa17bcb182e3866a143642"
+    }
+  },
+  "IR": {
+    "branch": "work/vdraw-drawing-ir-v1",
+    "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+    "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+    "schema_sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+    "validator_sha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "wire_contractStatus": "CANDIDATE",
+    "scope": "IMMUTABLE_CANDIDATE_FOR_ISOLATED_PHASE1_ONLY"
+  },
+  "existing_evidence": "Round2 saved tests and independent QA reused; no rerun; hashes and trees reverified this turn",
+  "saved_test_counts": {
+    "A_named": 86,
+    "B_named": 34,
+    "G_named": 60,
+    "G_source_checks": 391,
+    "fail": 0,
+    "skip": 0
+  },
+  "phase1_product_gate": "HOLD",
+  "next_stage": [
+    "B isolated adapter",
+    "G independent source→IR Gate",
+    "bounded mm DXF backend + G numerical oracle after adapter Gate",
+    "actual Jw_cad Open/Edit/Save/Round-trip then Human judgment"
+  ],
+  "constraints": [
+    "No main/validation/release/006/signing/SAVE001 changes or re-confirmation",
+    "No reset --hard, rebase, git clean, deletes, overwritten checkpoints, old Golden/test removal or new skips",
+    "No legacy importer/exporter/editor/storage/UI changes; no APK; no AI API; C/D/E/F held",
+    "Preserve original source XML/EMU/identity/part ledger and all previous evidence",
+    "No Human approval substitution; actual Jw_cad and product Gate HOLD",
+    "Re-fetch expected branch HEAD and immutable dependencies; mismatch -> BLOCKED, never force",
+    "Completed Round2 tests reused; only necessary new/change-related checks, no redevelopment"
+  ],
+  "dispatches": [
+    {
+      "instruction_id": "VDRAW-PHASE1-B-ADAPTER-20261007-V1",
+      "path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-B-ROUND3-ADAPTER-V1.md",
+      "expected_head": "d5de55e43a8a0b848a2fe676488bda346bf1a356"
+    },
+    {
+      "instruction_id": "VDRAW-PHASE1-G-ADAPTER-QA-20261007-V1",
+      "path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-G-ROUND3-ADAPTER-QA-V1.md",
+      "expected_head": "7835d3588fdb53131a113e9fb1fba797d28c6a89"
+    }
+  ],
+  "downstream_backend_status": "WAIT_SOURCE_TO_IR_GATE",
+  "real_jwcad": "NOT_RUN",
+  "specialist_delivery": "REPOSITORY_DISPATCH_SAVED_RUNTIME_DELIVERY_PENDING"
+}
