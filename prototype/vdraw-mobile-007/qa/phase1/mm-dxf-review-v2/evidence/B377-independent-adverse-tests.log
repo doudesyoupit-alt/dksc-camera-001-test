@@ -1,0 +1,42 @@
+test_actual_application_false_pass (__main__.FixedBackendAdverse.test_actual_application_false_pass) ... ok
+test_actual_mm_value_not_hash_only (__main__.FixedBackendAdverse.test_actual_mm_value_not_hash_only) ... ok
+test_closed_polygon_became_open (__main__.FixedBackendAdverse.test_closed_polygon_became_open) ... ok
+test_fake_full_readiness (__main__.FixedBackendAdverse.test_fake_full_readiness) ... ok
+test_false_REAL_WORLD (__main__.FixedBackendAdverse.test_false_REAL_WORLD) ... ok
+test_false_UNIT_MM_marker (__main__.FixedBackendAdverse.test_false_UNIT_MM_marker) ... ok
+test_false_calibration_scale (__main__.FixedBackendAdverse.test_false_calibration_scale) ... ok
+test_fixed_nonzero_geometry (__main__.FixedBackendAdverse.test_fixed_nonzero_geometry) ... ok
+test_font_property_loss_missing (__main__.FixedBackendAdverse.test_font_property_loss_missing) ... ok
+test_global_inventory_omission (__main__.FixedBackendAdverse.test_global_inventory_omission) ... ok
+test_malformed_odd_group_pair (__main__.FixedBackendAdverse.test_malformed_odd_group_pair) ... ok
+test_missing_eof (__main__.FixedBackendAdverse.test_missing_eof) ... ok
+test_missing_ordered_corner (__main__.FixedBackendAdverse.test_missing_ordered_corner) ... ok
+test_missing_raw_vertex_mapping (__main__.FixedBackendAdverse.test_missing_raw_vertex_mapping) ... ok
+test_native_alpha_zero_known_finding (__main__.FixedBackendAdverse.test_native_alpha_zero_known_finding) ... ok
+test_newer_insunits_header_does_not_prove_mm (__main__.FixedBackendAdverse.test_newer_insunits_header_does_not_prove_mm) ... ok
+test_page_global_inventory_omission (__main__.FixedBackendAdverse.test_page_global_inventory_omission) ... ok
+test_page_merge (__main__.FixedBackendAdverse.test_page_merge) ... ok
+test_page_wrong_partition_filename_hash (__main__.FixedBackendAdverse.test_page_wrong_partition_filename_hash) ... ok
+test_polyline_flag_fraction_reject (__main__.FixedBackendAdverse.test_polyline_flag_fraction_reject) ... ok
+test_property_loss_row_omission (__main__.FixedBackendAdverse.test_property_loss_row_omission) ... ok
+test_raw_source_hash (__main__.FixedBackendAdverse.test_raw_source_hash) ... ok
+test_raw_vertex_index (__main__.FixedBackendAdverse.test_raw_vertex_index) ... ok
+test_raw_vertex_logical_owner (__main__.FixedBackendAdverse.test_raw_vertex_logical_owner) ... ok
+test_source_color_retained_false_claim (__main__.FixedBackendAdverse.test_source_color_retained_false_claim) ... ok
+test_source_color_value_forged (__main__.FixedBackendAdverse.test_source_color_value_forged) ... ok
+test_source_hidden_disclosure_forged (__main__.FixedBackendAdverse.test_source_hidden_disclosure_forged) ... ok
+test_source_opacity_missing_evidence (__main__.FixedBackendAdverse.test_source_opacity_missing_evidence) ... ok
+test_source_raw_xml_omitted (__main__.FixedBackendAdverse.test_source_raw_xml_omitted) ... ok
+test_source_text_payload_forged (__main__.FixedBackendAdverse.test_source_text_payload_forged) ... ok
+test_synthetic_display_source_appearance_forgery (__main__.FixedBackendAdverse.test_synthetic_display_source_appearance_forgery) ... ok
+test_type_global_mapping_forged (__main__.FixedBackendAdverse.test_type_global_mapping_forged) ... ok
+test_unsupported_ledger_omission (__main__.FixedBackendAdverse.test_unsupported_ledger_omission) ... ok
+test_wrong_circle_radius (__main__.FixedBackendAdverse.test_wrong_circle_radius) ... ok
+test_wrong_group_code (__main__.FixedBackendAdverse.test_wrong_group_code) ... ok
+test_wrong_raw_source_binding (__main__.FixedBackendAdverse.test_wrong_raw_source_binding) ... ok
+test_wrong_y_reflection (__main__.FixedBackendAdverse.test_wrong_y_reflection) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.657s
+
+OK

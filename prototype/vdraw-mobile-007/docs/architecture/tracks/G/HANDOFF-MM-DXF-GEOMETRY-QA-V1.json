@@ -1,0 +1,94 @@
+{
+  "format": "WORK_HANDOFF_V1",
+  "schema": "vdraw-G-mm-dxf-independent-handoff/1",
+  "instruction_id": "VDRAW-PHASE1-G-MM-DXF-GEOMETRY-QA-V1",
+  "track": "G",
+  "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+  "head": null,
+  "head_resolution": "Resolve immutable containing commit; no circular self-SHA",
+  "expected_base_head": "3641ea71d438d5cdf85af1f664761b4ab77cdc1f",
+  "dispatchHEAD": "35e4af831af7424aa213e25712c499eaf86f7c4c",
+  "status": "FIXED_B377_NUMERIC_GEOMETRY_QA_COMPLETE_ONE_VISIBILITY_METADATA_FAIL",
+  "pins": {
+    "BBackendHEAD": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+    "BBackendSHA256": "72dc0251ca4f218c16c02b6b6d79216393a5827a7ee132b2deddf4e7022733b9",
+    "B2HEAD": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "A2HEAD": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "schemaSHA256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "validatorSHA256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "GOriginalOracleHEAD": "a5583a3fa6b9e4ed305eee803fa0c5c0ca8d379f",
+    "GNumericCheckerHEAD": "3641ea71d438d5cdf85af1f664761b4ab77cdc1f"
+  },
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/EVIDENCE-MM-DXF-GEOMETRY-QA-V1.json",
+      "sha256": "8800f6e5507494a803302e90e66938dfc3f0c5ebfda3dd0184a71f5bc4f43151"
+    }
+  ],
+  "tests": {
+    "newNamedPass": 88,
+    "newNamedFail": 0,
+    "skip": 0,
+    "groups": {
+      "preOutputIndependent": 43,
+      "actualResultAdverse": 37,
+      "writerContractDeterminism": 8
+    },
+    "savedEvaluatedIRValidated": 6,
+    "comparisonPass": 8717,
+    "comparisonFail": 1,
+    "oldEntireSuitesRerun": false,
+    "knownProducerFailureDetectionCountedAsAdversePASS": true
+  },
+  "denominators": {
+    "semanticObjects": 44,
+    "semanticComponents": 47,
+    "sourceGeometry": 32,
+    "sourceText": 8,
+    "IRGeometry": 23,
+    "targetLogical": 22,
+    "targetRaw": 82,
+    "uniqueInventory": 121,
+    "pageGlobalInventoryRows": 163,
+    "propertyLossRows": 121,
+    "propertyLossFields": 726,
+    "pageFiles": 7
+  },
+  "findings": [
+    {
+      "id": "DXF-REVIEW-VISIBILITY-001",
+      "status": "OPEN_FAIL_METADATA_DISCLOSURE",
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-review-visibility-finding-v1.json",
+      "sha256": "dc7ebbc9257f4966295b191bba8a7cee0a02e9698aa0ef9189a6ef6db092618b"
+    }
+  ],
+  "gates": {
+    "boundedGeometryNumeric": "PASS_22_LOGICAL_82_RAW_AGAINST_ORIGINAL_SOURCE",
+    "boundedBackendReadiness": "NO_OPEN_FINDING",
+    "appearanceFidelity": "NOT_RETAINED_NOT_QUALIFIED",
+    "completeSourceGeometryRetention": "PARTIAL_22_OF_32",
+    "textRetention": "NONE_0_OF_8",
+    "automaticImportUnitMetadata": "UNIT_HEADER_METADATA_UNAVAILABLE",
+    "realJwCad": "NOT_RUN",
+    "productPhase1": "HOLD"
+  },
+  "recommendation": "NO_BOUNDED_BACKEND_ADOPTION_UNTIL_VISIBILITY_METADATA_FINDING_CLOSED_WITH_NEW_FIXED_EVIDENCE",
+  "nextAction": "Append-only B visibility policy correction/new fixed HEAD, then limited independent delta QA. Preserve B377 and G FAIL. Coordinator integration/Phase Gate; actual Jw known-mm Open/Edit/Save/round-trip and appearance/text/custom Golden still required for product.",
+  "productGate": "HOLD",
+  "Human_Gate": {
+    "isolatedQA": "AUTHORIZED_SAVED_DISPATCH",
+    "product": "HOLD",
+    "substitution": false
+  },
+  "protection": {
+    "appendOnly": true,
+    "expectedOldGitBlobs": 686,
+    "oldGoldenTruthCheckerReportsChanged": false,
+    "AorBSourceChanged": false,
+    "mainValidation006SigningChanged": false,
+    "SAVE001": "CLOSED_REUSED",
+    "CDEF": false,
+    "APK": false,
+    "AIrequests": 0
+  }
+}

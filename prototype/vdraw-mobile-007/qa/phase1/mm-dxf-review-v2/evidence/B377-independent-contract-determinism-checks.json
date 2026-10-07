@@ -1,0 +1,102 @@
+{
+  "schema": "vdraw-G-fixed-B377-contract-determinism-checks/1",
+  "fixedWriterHEAD": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+  "IRDocumentsValidated": 6,
+  "newNamedTests": 8,
+  "oldSuitesRerun": false,
+  "checks": [
+    {
+      "name": "native-vdraw-n01-evaluated-IR",
+      "scope": "FIXED_SAVED_IR_CONTRACT_ONLY",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "generic-synthetic-g01-evaluated-IR",
+      "scope": "FIXED_SAVED_IR_CONTRACT_ONLY",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "generic-synthetic-g02-nested-evaluated-IR",
+      "scope": "FIXED_SAVED_IR_CONTRACT_ONLY",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "synthetic-g03-expanded-evaluated-IR",
+      "scope": "FIXED_SAVED_IR_CONTRACT_ONLY",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "explicit-paint-width-alpha-witness-evaluated-IR",
+      "scope": "FIXED_SAVED_IR_CONTRACT_ONLY",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "synthetic-g04-property-witness-evaluated-IR",
+      "scope": "FIXED_SAVED_IR_CONTRACT_ONLY",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "input-request-fake-FULL",
+      "expectedCode": "REVIEW_FULL_OR_PRODUCT_READINESS_FORBIDDEN",
+      "actualCode": "REVIEW_FULL_OR_PRODUCT_READINESS_FORBIDDEN",
+      "status": "PASS",
+      "scope": "NEW_FOCUSED_WRITER_INPUT_ADVERSE"
+    },
+    {
+      "name": "input-product-promoted",
+      "expectedCode": "INPUT_GATE_PROMOTION_FORBIDDEN",
+      "actualCode": "INPUT_GATE_PROMOTION_FORBIDDEN",
+      "status": "PASS",
+      "scope": "NEW_FOCUSED_WRITER_INPUT_ADVERSE"
+    },
+    {
+      "name": "input-real-world-scale-forgery",
+      "expectedCode": "REAL_WORLD_OR_CALIBRATION_OUT_OF_SCOPE",
+      "actualCode": "REAL_WORLD_OR_CALIBRATION_OUT_OF_SCOPE",
+      "status": "PASS",
+      "scope": "NEW_FOCUSED_WRITER_INPUT_ADVERSE"
+    },
+    {
+      "name": "input-nonfinite-coordinate",
+      "expectedCode": "UNSAFE_OUTPUT_COORDINATE",
+      "actualCode": "UNSAFE_OUTPUT_COORDINATE",
+      "status": "PASS",
+      "scope": "NEW_FOCUSED_WRITER_INPUT_ADVERSE"
+    },
+    {
+      "name": "input-unreviewed-transform-scope",
+      "expectedCode": "UNREVIEWED_TRANSFORM_SCOPE",
+      "actualCode": "UNREVIEWED_TRANSFORM_SCOPE",
+      "status": "PASS",
+      "scope": "NEW_FOCUSED_WRITER_INPUT_ADVERSE"
+    },
+    {
+      "name": "input-source-hash-forgery",
+      "expectedCode": "SOURCE_HASH_BINDING_MISMATCH",
+      "actualCode": "SOURCE_HASH_BINDING_MISMATCH",
+      "status": "PASS",
+      "scope": "NEW_FOCUSED_WRITER_INPUT_ADVERSE"
+    },
+    {
+      "name": "new-G04-focused-determinism-no-source-mutation",
+      "scope": "NEW_G_REVIEW_GUARD_ONLY",
+      "status": "PASS"
+    },
+    {
+      "name": "new-G04-deterministic-output-matches-fixed-bytes",
+      "scope": "NEW_G_REVIEW_GUARD_ONLY",
+      "status": "PASS"
+    }
+  ],
+  "pass": 14,
+  "fail": 0,
+  "appearanceFindingScopeSeparate": true,
+  "productGate": "HOLD",
+  "actualJw": "NOT_RUN"
+}

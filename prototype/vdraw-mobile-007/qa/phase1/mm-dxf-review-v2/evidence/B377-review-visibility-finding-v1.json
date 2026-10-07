@@ -1,0 +1,41 @@
+{
+  "id": "DXF-REVIEW-VISIBILITY-001",
+  "status": "OPEN_FAIL_METADATA_DISCLOSURE",
+  "scope": "SOURCE_GEOMETRY_APPEARANCE_POLICY_VISIBILITY_OVERRIDE_METADATA_ONLY",
+  "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]",
+  "inventoryId": "source-5-part-0",
+  "sourceHash": "20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2",
+  "originalPropertyTruthHEAD": "6e9fdbfe7fe09cb3e6739923a248d9c67d44fd43",
+  "originalPropertyTruthSHA256": "476ea2719e4e262f5481c4fa8dde926709a0b51ce1e308fb3eddfced730ef17b",
+  "originalOpacity": {
+    "state": "EXPLICIT",
+    "value": 0.0,
+    "encoding": "OOXML_ALPHA_100000",
+    "rawLexeme": "0",
+    "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+    "allPaintAlphas": [
+      {
+        "field": "fill",
+        "rawLexeme": "0",
+        "value": 0.0,
+        "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+      },
+      {
+        "field": "stroke",
+        "rawLexeme": "0",
+        "value": 0.0,
+        "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:ln/a:solidFill/a:srgbClr/a:alpha/@val"
+      }
+    ]
+  },
+  "fixedBBackendHEAD": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+  "fixedLossLedger": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/native-vdraw-n01.loss-ledger.json",
+  "actualReviewVisibilityOverride": false,
+  "expectedReviewVisibilityOverride": true,
+  "reason": "Original geometry paints have explicit alpha=0; generated review foreground/CONTINUOUS output drops that opacity and draws an outline under a visible review policy. The per-component reviewVisibilityOverride flag falsely says false. Source opacity NOT_RETAINED is honest but does not make the contradictory flag correct. No actual-app visibility measurement is claimed.",
+  "numericalGeometry": "PASS_SEPARATE_SCOPE",
+  "sourceAppearanceRetention": "NOT_RETAINED",
+  "requiredCorrection": "Append new metadata/module/evidence version preserving all B377 bytes; explicitly flag known alpha-zero source geometry visibility override as well as explicit noFill cases, with source reason. Independently recheck corrected fixed HEAD; do not silently reinterpret old false flag.",
+  "productGate": "HOLD",
+  "actualJw": "NOT_RUN"
+}

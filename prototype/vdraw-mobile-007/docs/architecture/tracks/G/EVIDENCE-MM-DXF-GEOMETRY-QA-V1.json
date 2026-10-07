@@ -1,0 +1,296 @@
+{
+  "schema": "vdraw-G-mm-dxf-geometry-independent-evidence/1",
+  "instruction_id": "VDRAW-PHASE1-G-MM-DXF-GEOMETRY-QA-V1",
+  "dispatchHEAD": "35e4af831af7424aa213e25712c499eaf86f7c4c",
+  "expected_save_parent": "3641ea71d438d5cdf85af1f664761b4ab77cdc1f",
+  "pins": {
+    "BBackendHEAD": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+    "BBackendSHA256": "72dc0251ca4f218c16c02b6b6d79216393a5827a7ee132b2deddf4e7022733b9",
+    "B2HEAD": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "A2HEAD": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "schemaSHA256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "validatorSHA256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "GOriginalOracleHEAD": "a5583a3fa6b9e4ed305eee803fa0c5c0ca8d379f",
+    "GNumericCheckerHEAD": "3641ea71d438d5cdf85af1f664761b4ab77cdc1f"
+  },
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-independent-adverse-tests.log",
+      "sha256": "d808268af1b3835080aebfac01e5d6eff2fe47e40be9306942051315d5ff6843",
+      "bytes": 3775
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-independent-comparison-summary.json",
+      "sha256": "c7cbeb3cec9d3416af8c40bf7fb65fc83f65c3892ff754662b018d4f033911b7",
+      "bytes": 2449
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-independent-contract-determinism-checks.json",
+      "sha256": "8b36885a9b99ae6fa83570367854b6018064b5dd6f29c90434859d515aff5399",
+      "bytes": 3052
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-review-visibility-finding-v1.json",
+      "sha256": "dc7ebbc9257f4966295b191bba8a7cee0a02e9698aa0ef9189a6ef6db092618b",
+      "bytes": 2378
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/explicit-paint-width-alpha-witness.B377-independent-compare.json",
+      "sha256": "7479fc6343444c3f337683505f216c4c3f65d8636e48d2fe279e626c234d201a",
+      "bytes": 98660
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/generic-synthetic-g01.B377-independent-compare.json",
+      "sha256": "6d156af7d6eabec32a8e560043c54b6186c37e953b42f96865d57297061d7b00",
+      "bytes": 418761
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/generic-synthetic-g02-nested.B377-independent-compare.json",
+      "sha256": "8b6831b3601f17c819ec91d359b6c8344d62badb6c3545d05ac133ff6a03cd09",
+      "bytes": 398406
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/native-vdraw-n01.B377-independent-compare.json",
+      "sha256": "81f562db5384c31493776503a8a41907d4c165a602ae51413d6d9982505eded9",
+      "bytes": 438733
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/synthetic-g03-expanded.B377-independent-compare.json",
+      "sha256": "8a7a21570479cf094936da7ece6ada79f38cbec75163778e57adb43b273d4bc7",
+      "bytes": 804427
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/synthetic-g04-property-witness.B377-independent-compare.json",
+      "sha256": "2c5c5854ac43bdeb776759fdc473631881afb7958cdfce9aad71c914647f964c",
+      "bytes": 215384
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/check_fixed_backend_v1_contract.mjs",
+      "sha256": "4632afb21f22e4634fd19393941d729c07859cf2b5295baf66a2a9540957d949",
+      "bytes": 3403
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/evaluate_fixed_backend_v1.py",
+      "sha256": "6336ae0a6cbaeab657fda9d85dbd8ed2795b37ef6330efc63caaebc8e3e3e1f1",
+      "bytes": 16056
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/run_fixed_backend_v1_qa.py",
+      "sha256": "87874ccb0667db2ae80d60cc87d765bbf1d3cd1992d2a6e496203923a47abe0a",
+      "bytes": 1978
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/test_fixed_backend_v1_adverse.py",
+      "sha256": "9370ffc9b8039fee659becf485e197dea92de5bca9dd8af315739d00582f7b74",
+      "bytes": 7366
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/MM-DXF-GEOMETRY-QA-REPORT-V1.md",
+      "sha256": "8bdabc164f5ee39015a51a7680445f663b97c9c4610793100c6be5660e1b6f88",
+      "bytes": 6901
+    }
+  ],
+  "authentication": {
+    "newGitBlobFilesExact": 40,
+    "EvidenceExactSHA256BytesGitblob": 38,
+    "B2OldBlobsPreserved": 639,
+    "BNewPaths": 40
+  },
+  "tests": {
+    "newNamedPass": 88,
+    "newNamedFail": 0,
+    "skip": 0,
+    "groups": {
+      "preOutputIndependent": 43,
+      "actualResultAdverse": 37,
+      "writerContractDeterminism": 8
+    },
+    "savedEvaluatedIRValidated": 6,
+    "comparisonPass": 8717,
+    "comparisonFail": 1,
+    "oldEntireSuitesRerun": false,
+    "knownProducerFailureDetectionCountedAsAdversePASS": true
+  },
+  "packages": [
+    {
+      "package": "native-vdraw-n01",
+      "pass": 1469,
+      "fail": 1,
+      "originalSourceObjects": 6,
+      "originalSourceComponents": 8,
+      "sourceGeometry": 6,
+      "sourceText": 2,
+      "IRGeometry": 6,
+      "IRInventory": 16,
+      "targetLogical": 5,
+      "targetRaw": 20,
+      "propertyLossRows": 16,
+      "propertyLossRecords": 96,
+      "pageInventoryRows": 16,
+      "boundedReadiness": "NO_OPEN_FINDING"
+    },
+    {
+      "package": "generic-synthetic-g01",
+      "pass": 1599,
+      "fail": 0,
+      "originalSourceObjects": 9,
+      "originalSourceComponents": 9,
+      "sourceGeometry": 5,
+      "sourceText": 1,
+      "IRGeometry": 4,
+      "IRInventory": 24,
+      "targetLogical": 4,
+      "targetRaw": 14,
+      "propertyLossRows": 24,
+      "propertyLossRecords": 144,
+      "pageInventoryRows": 24,
+      "boundedReadiness": "YES"
+    },
+    {
+      "package": "generic-synthetic-g02-nested",
+      "pass": 1568,
+      "fail": 0,
+      "originalSourceObjects": 10,
+      "originalSourceComponents": 9,
+      "sourceGeometry": 5,
+      "sourceText": 1,
+      "IRGeometry": 3,
+      "IRInventory": 27,
+      "targetLogical": 3,
+      "targetRaw": 8,
+      "propertyLossRows": 27,
+      "propertyLossRecords": 162,
+      "pageInventoryRows": 27,
+      "boundedReadiness": "YES"
+    },
+    {
+      "package": "synthetic-g03-expanded",
+      "pass": 2855,
+      "fail": 0,
+      "originalSourceObjects": 15,
+      "originalSourceComponents": 17,
+      "sourceGeometry": 12,
+      "sourceText": 4,
+      "IRGeometry": 6,
+      "IRInventory": 42,
+      "targetLogical": 6,
+      "targetRaw": 21,
+      "propertyLossRows": 42,
+      "propertyLossRecords": 252,
+      "pageInventoryRows": 84,
+      "boundedReadiness": "YES"
+    },
+    {
+      "package": "explicit-paint-width-alpha-witness",
+      "pass": 407,
+      "fail": 0,
+      "originalSourceObjects": 1,
+      "originalSourceComponents": 1,
+      "sourceGeometry": 1,
+      "sourceText": 0,
+      "IRGeometry": 1,
+      "IRInventory": 4,
+      "targetLogical": 1,
+      "targetRaw": 6,
+      "propertyLossRows": 4,
+      "propertyLossRecords": 24,
+      "pageInventoryRows": 4,
+      "boundedReadiness": "YES"
+    },
+    {
+      "package": "synthetic-g04-property-witness",
+      "pass": 819,
+      "fail": 0,
+      "originalSourceObjects": 3,
+      "originalSourceComponents": 3,
+      "sourceGeometry": 3,
+      "sourceText": 0,
+      "IRGeometry": 3,
+      "IRInventory": 8,
+      "targetLogical": 3,
+      "targetRaw": 13,
+      "propertyLossRows": 8,
+      "propertyLossRecords": 48,
+      "pageInventoryRows": 8,
+      "boundedReadiness": "YES"
+    }
+  ],
+  "denominators": {
+    "semanticObjects": 44,
+    "semanticComponents": 47,
+    "sourceGeometry": 32,
+    "sourceText": 8,
+    "IRGeometry": 23,
+    "targetLogical": 22,
+    "targetRaw": 82,
+    "uniqueInventory": 121,
+    "pageGlobalInventoryRows": 163,
+    "propertyLossRows": 121,
+    "propertyLossFields": 726,
+    "pageFiles": 7
+  },
+  "findings": [
+    {
+      "id": "DXF-REVIEW-VISIBILITY-001",
+      "status": "OPEN_FAIL_METADATA_DISCLOSURE",
+      "scope": "SOURCE_GEOMETRY_APPEARANCE_POLICY_VISIBILITY_OVERRIDE_METADATA_ONLY",
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]",
+      "inventoryId": "source-5-part-0",
+      "sourceHash": "20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2",
+      "originalPropertyTruthHEAD": "6e9fdbfe7fe09cb3e6739923a248d9c67d44fd43",
+      "originalPropertyTruthSHA256": "476ea2719e4e262f5481c4fa8dde926709a0b51ce1e308fb3eddfced730ef17b",
+      "originalOpacity": {
+        "state": "EXPLICIT",
+        "value": 0.0,
+        "encoding": "OOXML_ALPHA_100000",
+        "rawLexeme": "0",
+        "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+        "allPaintAlphas": [
+          {
+            "field": "fill",
+            "rawLexeme": "0",
+            "value": 0.0,
+            "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+          },
+          {
+            "field": "stroke",
+            "rawLexeme": "0",
+            "value": 0.0,
+            "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:ln/a:solidFill/a:srgbClr/a:alpha/@val"
+          }
+        ]
+      },
+      "fixedBBackendHEAD": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+      "fixedLossLedger": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/native-vdraw-n01.loss-ledger.json",
+      "actualReviewVisibilityOverride": false,
+      "expectedReviewVisibilityOverride": true,
+      "reason": "Original geometry paints have explicit alpha=0; generated review foreground/CONTINUOUS output drops that opacity and draws an outline under a visible review policy. The per-component reviewVisibilityOverride flag falsely says false. Source opacity NOT_RETAINED is honest but does not make the contradictory flag correct. No actual-app visibility measurement is claimed.",
+      "numericalGeometry": "PASS_SEPARATE_SCOPE",
+      "sourceAppearanceRetention": "NOT_RETAINED",
+      "requiredCorrection": "Append new metadata/module/evidence version preserving all B377 bytes; explicitly flag known alpha-zero source geometry visibility override as well as explicit noFill cases, with source reason. Independently recheck corrected fixed HEAD; do not silently reinterpret old false flag.",
+      "productGate": "HOLD",
+      "actualJw": "NOT_RUN"
+    }
+  ],
+  "gates": {
+    "boundedGeometryNumeric": "PASS_22_LOGICAL_82_RAW_AGAINST_ORIGINAL_SOURCE",
+    "boundedBackendReadiness": "NO_OPEN_FINDING",
+    "appearanceFidelity": "NOT_RETAINED_NOT_QUALIFIED",
+    "completeSourceGeometryRetention": "PARTIAL_22_OF_32",
+    "textRetention": "NONE_0_OF_8",
+    "automaticImportUnitMetadata": "UNIT_HEADER_METADATA_UNAVAILABLE",
+    "realJwCad": "NOT_RUN",
+    "productPhase1": "HOLD"
+  },
+  "protection": {
+    "appendOnly": true,
+    "expectedOldGitBlobs": 686,
+    "oldGoldenTruthCheckerReportsChanged": false,
+    "AorBSourceChanged": false,
+    "mainValidation006SigningChanged": false,
+    "SAVE001": "CLOSED_REUSED",
+    "CDEF": false,
+    "APK": false,
+    "AIrequests": 0
+  }
+}
