@@ -1,0 +1,56 @@
+{
+  "schema": "vdraw-round3-prefrozen-truth-manifest/1",
+  "status": "TRUTH_FIXED_BEFORE_ADAPTER_OUTPUT",
+  "fixtureClassification": "SYNTHETIC_RAW_XML_NOT_EXTERNAL_APP",
+  "externalGenericAppGolden": 0,
+  "BAdapterSeen": false,
+  "sourceObjects": 15,
+  "components": 17,
+  "backgrounds": 1,
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/MM-DXF-ORACLE-INTERFACE-V1.md",
+      "sha256": "83e8668ee10e335ab8eb81214cf201e0853c41f533aa860148c59da800eb1e10",
+      "bytes": 2850
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/source-truth-tests.log",
+      "sha256": "a7cd1af66ab4d3b64325be2852de2ac2a819ff723347180ad4e3d50d0e21bc00",
+      "bytes": 3011
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/fixtures/synthetic-g03-design-truth.json",
+      "sha256": "421a293c4813db9e246e1798f41bc80dbd8319668977857b95bab93802d1b42f",
+      "bytes": 1544
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/fixtures/synthetic-g03-expanded.pptx",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "bytes": 4176
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/fixtures/synthetic-g03-source-truth.json",
+      "sha256": "34e97b32321b6009bdbbdf6fd4977520c2164b19f6b0d88ec17e6f1565cf8df0",
+      "bytes": 66224
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/generate_round3.py",
+      "sha256": "a061bfd40c26e90d66d8da919da55d0c5291e6bc6964e26b5b3fa90e5e59000b",
+      "bytes": 6924
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/source_truth.py",
+      "sha256": "4ba7a36494173ebf8c04767789cbc2f7134af5457748573db113b723e55df8e8",
+      "bytes": 3054
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/test_source_truth.py",
+      "sha256": "946cd791a83a228c3634deba61512e878c113473554cbfacf1779b5f2db5836b",
+      "bytes": 5116
+    }
+  ],
+  "namedTests": 31,
+  "fail": 0,
+  "skip": 0,
+  "productGate": "HOLD"
+}

@@ -1,0 +1,36 @@
+test_359_degree_not_zero (test_source_truth.SourceTruthTests.test_359_degree_not_zero) ... ok
+test_angles (test_source_truth.SourceTruthTests.test_angles) ... ok
+test_arc_geometry_and_text_denominator (test_source_truth.SourceTruthTests.test_arc_geometry_and_text_denominator) ... ok
+test_background_separate (test_source_truth.SourceTruthTests.test_background_separate) ... ok
+test_closed_path (test_source_truth.SourceTruthTests.test_closed_path) ... ok
+test_curve_geometry_retained (test_source_truth.SourceTruthTests.test_curve_geometry_retained) ... ok
+test_erased_ledger_reason_rejected (test_source_truth.SourceTruthTests.test_erased_ledger_reason_rejected) ... ok
+test_erased_text_rejected (test_source_truth.SourceTruthTests.test_erased_text_rejected) ... ok
+test_fake_calibration_rejected (test_source_truth.SourceTruthTests.test_fake_calibration_rejected) ... ok
+test_fixture_sha (test_source_truth.SourceTruthTests.test_fixture_sha) ... ok
+test_flip_negative_direction (test_source_truth.SourceTruthTests.test_flip_negative_direction) ... ok
+test_label_only_unit_rejected (test_source_truth.SourceTruthTests.test_label_only_unit_rejected) ... ok
+test_negative_offset (test_source_truth.SourceTruthTests.test_negative_offset) ... ok
+test_nested_hand_basis (test_source_truth.SourceTruthTests.test_nested_hand_basis) ... ok
+test_nested_hand_origin (test_source_truth.SourceTruthTests.test_nested_hand_origin) ... ok
+test_ninety_degree_basis (test_source_truth.SourceTruthTests.test_ninety_degree_basis) ... ok
+test_open_endpoints_mm (test_source_truth.SourceTruthTests.test_open_endpoints_mm) ... ok
+test_open_path (test_source_truth.SourceTruthTests.test_open_path) ... ok
+test_order_not_filename (test_source_truth.SourceTruthTests.test_order_not_filename) ... ok
+test_physical_unit (test_source_truth.SourceTruthTests.test_physical_unit) ... ok
+test_product_held (test_source_truth.SourceTruthTests.test_product_held) ... ok
+test_raw_theme_not_resolved (test_source_truth.SourceTruthTests.test_raw_theme_not_resolved) ... ok
+test_real_world_unscaled (test_source_truth.SourceTruthTests.test_real_world_unscaled) ... ok
+test_same_count_wrong_position_rejected (test_source_truth.SourceTruthTests.test_same_count_wrong_position_rejected) ... ok
+test_source_components (test_source_truth.SourceTruthTests.test_source_components) ... ok
+test_text_exact_structure (test_source_truth.SourceTruthTests.test_text_exact_structure) ... ok
+test_theme_master_dependency (test_source_truth.SourceTruthTests.test_theme_master_dependency) ... ok
+test_triangle_preset (test_source_truth.SourceTruthTests.test_triangle_preset) ... ok
+test_truth_replay (test_source_truth.SourceTruthTests.test_truth_replay) ... ok
+test_unknown_loss_rejected (test_source_truth.SourceTruthTests.test_unknown_loss_rejected) ... ok
+test_unknown_object_component (test_source_truth.SourceTruthTests.test_unknown_object_component) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.012s
+
+OK

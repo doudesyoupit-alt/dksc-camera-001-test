@@ -1,0 +1,2493 @@
+{
+  "schema": "vdraw-round3-independent-source-truth/1",
+  "sourceHash": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+  "sourceSizeEmu": [
+    7200000,
+    5400000
+  ],
+  "sourceUnit": "EMU",
+  "layoutMm": [
+    200.0,
+    150.0
+  ],
+  "realWorldScaleStatus": "UNSCALED",
+  "sourceObjects": [
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[2]",
+      "nativeId": "2",
+      "name": "s2",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": null,
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": null,
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"2\" name=\"s2\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:custGeom><ns1:avLst /><ns1:gdLst /><ns1:ahLst /><ns1:cxnLst /><ns1:rect l=\"0\" t=\"0\" r=\"r\" b=\"b\" /><ns1:pathLst><ns1:path w=\"300\" h=\"200\"><ns1:moveTo><ns1:pt x=\"0\" y=\"0\" /></ns1:moveTo><ns1:lnTo><ns1:pt x=\"300\" y=\"0\" /></ns1:lnTo><ns1:lnTo><ns1:pt x=\"120\" y=\"200\" /></ns1:lnTo></ns1:path></ns1:pathLst></ns1:custGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": "<ns0:custGeom xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:avLst /><ns0:gdLst /><ns0:ahLst /><ns0:cxnLst /><ns0:rect l=\"0\" t=\"0\" r=\"r\" b=\"b\" /><ns0:pathLst><ns0:path w=\"300\" h=\"200\"><ns0:moveTo><ns0:pt x=\"0\" y=\"0\" /></ns0:moveTo><ns0:lnTo><ns0:pt x=\"300\" y=\"0\" /></ns0:lnTo><ns0:lnTo><ns0:pt x=\"120\" y=\"200\" /></ns0:lnTo></ns0:path></ns0:pathLst></ns0:custGeom>",
+      "geometryPaths": [
+        {
+          "commands": [
+            "moveTo",
+            "lnTo",
+            "lnTo"
+          ],
+          "verticesPathUnits": [
+            [
+              0,
+              0
+            ],
+            [
+              300,
+              0
+            ],
+            [
+              120,
+              200
+            ]
+          ],
+          "extentPathUnits": [
+            300,
+            200
+          ],
+          "closed": false,
+          "unsupported": false,
+          "globalVerticesEmu": [
+            [
+              -36000.0,
+              72000.0
+            ],
+            [
+              72000.0,
+              72000.0
+            ],
+            [
+              7200.0,
+              144000.0
+            ]
+          ],
+          "globalVerticesMm": [
+            [
+              -1.0,
+              2.0
+            ],
+            [
+              2.0,
+              2.0
+            ],
+            [
+              0.2,
+              4.0
+            ]
+          ]
+        }
+      ],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+          "nativeId": "2",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[2]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[3]",
+      "nativeId": "3",
+      "name": "s3",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": null,
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": null,
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"3\" name=\"s3\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:custGeom><ns1:avLst /><ns1:gdLst /><ns1:ahLst /><ns1:cxnLst /><ns1:rect l=\"0\" t=\"0\" r=\"r\" b=\"b\" /><ns1:pathLst><ns1:path w=\"300\" h=\"200\"><ns1:moveTo><ns1:pt x=\"0\" y=\"0\" /></ns1:moveTo><ns1:lnTo><ns1:pt x=\"300\" y=\"0\" /></ns1:lnTo><ns1:lnTo><ns1:pt x=\"120\" y=\"200\" /></ns1:lnTo><ns1:close /></ns1:path></ns1:pathLst></ns1:custGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": "<ns0:custGeom xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:avLst /><ns0:gdLst /><ns0:ahLst /><ns0:cxnLst /><ns0:rect l=\"0\" t=\"0\" r=\"r\" b=\"b\" /><ns0:pathLst><ns0:path w=\"300\" h=\"200\"><ns0:moveTo><ns0:pt x=\"0\" y=\"0\" /></ns0:moveTo><ns0:lnTo><ns0:pt x=\"300\" y=\"0\" /></ns0:lnTo><ns0:lnTo><ns0:pt x=\"120\" y=\"200\" /></ns0:lnTo><ns0:close /></ns0:path></ns0:pathLst></ns0:custGeom>",
+      "geometryPaths": [
+        {
+          "commands": [
+            "moveTo",
+            "lnTo",
+            "lnTo",
+            "close"
+          ],
+          "verticesPathUnits": [
+            [
+              0,
+              0
+            ],
+            [
+              300,
+              0
+            ],
+            [
+              120,
+              200
+            ]
+          ],
+          "extentPathUnits": [
+            300,
+            200
+          ],
+          "closed": true,
+          "unsupported": false,
+          "globalVerticesEmu": [
+            [
+              -36000.0,
+              72000.0
+            ],
+            [
+              72000.0,
+              72000.0
+            ],
+            [
+              7200.0,
+              144000.0
+            ]
+          ],
+          "globalVerticesMm": [
+            [
+              -1.0,
+              2.0
+            ],
+            [
+              2.0,
+              2.0
+            ],
+            [
+              0.2,
+              4.0
+            ]
+          ]
+        }
+      ],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[2]/geometry",
+          "nativeId": "3",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[3]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[4]",
+      "nativeId": "4",
+      "name": "s4",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "triangle",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "triangle",
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"4\" name=\"s4\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"triangle\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[3]/geometry",
+          "nativeId": "4",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[4]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[5]",
+      "nativeId": "5",
+      "name": "s5",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "rot": 0,
+        "flipH": true,
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "line",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "line",
+          "xfrm": {
+            "rot": 0,
+            "flipH": true,
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          -1.0,
+          0.0,
+          72000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"5\" name=\"s5\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm rot=\"0\" flipH=\"1\"><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"line\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          2.0,
+          2.0
+        ],
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.0,
+          4.0
+        ],
+        [
+          2.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          -108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[4]/geometry",
+          "nativeId": "5",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[5]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[6]",
+      "nativeId": "6",
+      "name": "s6",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "rot": 5400000,
+        "flipH": true,
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "line",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "line",
+          "xfrm": {
+            "rot": 5400000,
+            "flipH": true,
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          -6.123233995736766e-17,
+          -1.0,
+          54000.0
+        ],
+        [
+          -1.0,
+          6.123233995736766e-17,
+          162000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -18000.000000000007,
+        54000.0,
+        72000.0,
+        108000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"6\" name=\"s6\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm rot=\"5400000\" flipH=\"1\"><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"line\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          54000.0,
+          162000.0
+        ],
+        [
+          53999.99999999999,
+          54000.0
+        ],
+        [
+          -18000.000000000007,
+          54000.00000000001
+        ],
+        [
+          -18000.0,
+          162000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          1.5,
+          4.5
+        ],
+        [
+          1.4999999999999998,
+          1.5
+        ],
+        [
+          -0.5000000000000002,
+          1.5000000000000002
+        ],
+        [
+          -0.5,
+          4.5
+        ]
+      ],
+      "basisEmu": [
+        [
+          -7.275957614183426e-12,
+          -108000.0
+        ],
+        [
+          -72000.0,
+          0.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[5]/geometry",
+          "nativeId": "6",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[6]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[7]",
+      "nativeId": "7",
+      "name": "s7",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "rot": 21540000,
+        "flipH": true,
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "line",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "line",
+          "xfrm": {
+            "rot": 21540000,
+            "flipH": true,
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          -0.9998476951563913,
+          0.01745240643728445,
+          71363.4889067029
+        ],
+        [
+          0.01745240643728445,
+          0.9998476951563913,
+          71063.05302675656
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36620.06217018736,
+        71063.05302675656,
+        109240.12434037474,
+        73873.8939464869
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"7\" name=\"s7\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm rot=\"21540000\" flipH=\"1\"><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"line\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          71363.4889067029,
+          71063.05302675656
+        ],
+        [
+          -36620.06217018736,
+          72947.91292198328
+        ],
+        [
+          -35363.48890670288,
+          144936.94697324347
+        ],
+        [
+          72620.06217018738,
+          143052.08707801672
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          1.9823191362973027,
+          1.9739736951876823
+        ],
+        [
+          -1.017223949171871,
+          2.026330914499536
+        ],
+        [
+          -0.9823191362973022,
+          4.026026304812318
+        ],
+        [
+          2.0172239491718713,
+          3.973669085500464
+        ]
+      ],
+      "basisEmu": [
+        [
+          -107983.55107689026,
+          1884.8598952267203
+        ],
+        [
+          1256.5732634844753,
+          71989.03405126015
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[6]/geometry",
+          "nativeId": "7",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[7]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[8]",
+      "nativeId": "8",
+      "name": "s8",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "arc",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "arc",
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        },
+        {
+          "kind": "text",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"8\" name=\"s8\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"arc\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr><ns0:txBody><ns1:bodyPr /><ns1:lstStyle /><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>電源 A</ns1:t></ns1:r><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>＋B</ns1:t></ns1:r><ns1:br /><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>行2</ns1:t></ns1:r></ns1:p><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>次段落</ns1:t></ns1:r></ns1:p></ns0:txBody></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[7]/geometry",
+          "nativeId": "8",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        },
+        {
+          "kind": "text",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[7]/text",
+          "nativeId": "8",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[8]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[9]",
+      "nativeId": "9",
+      "name": "s9",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": null,
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": null,
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        },
+        {
+          "kind": "text",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"9\" name=\"s9\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:custGeom><ns1:avLst /><ns1:gdLst /><ns1:ahLst /><ns1:cxnLst /><ns1:rect l=\"0\" t=\"0\" r=\"r\" b=\"b\" /><ns1:pathLst><ns1:path w=\"300\" h=\"200\"><ns1:moveTo><ns1:pt x=\"0\" y=\"0\" /></ns1:moveTo><ns1:lnTo><ns1:pt x=\"300\" y=\"0\" /></ns1:lnTo><ns1:lnTo><ns1:pt x=\"120\" y=\"200\" /></ns1:lnTo><ns1:cubicBezTo><ns1:pt x=\"0\" y=\"0\" /><ns1:pt x=\"100\" y=\"100\" /><ns1:pt x=\"200\" y=\"0\" /></ns1:cubicBezTo></ns1:path></ns1:pathLst></ns1:custGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr><ns0:txBody><ns1:bodyPr /><ns1:lstStyle /><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>電源 A</ns1:t></ns1:r><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>＋B</ns1:t></ns1:r><ns1:br /><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>行2</ns1:t></ns1:r></ns1:p><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>次段落</ns1:t></ns1:r></ns1:p></ns0:txBody></ns0:sp>",
+      "rawCustomGeometry": "<ns0:custGeom xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:avLst /><ns0:gdLst /><ns0:ahLst /><ns0:cxnLst /><ns0:rect l=\"0\" t=\"0\" r=\"r\" b=\"b\" /><ns0:pathLst><ns0:path w=\"300\" h=\"200\"><ns0:moveTo><ns0:pt x=\"0\" y=\"0\" /></ns0:moveTo><ns0:lnTo><ns0:pt x=\"300\" y=\"0\" /></ns0:lnTo><ns0:lnTo><ns0:pt x=\"120\" y=\"200\" /></ns0:lnTo><ns0:cubicBezTo><ns0:pt x=\"0\" y=\"0\" /><ns0:pt x=\"100\" y=\"100\" /><ns0:pt x=\"200\" y=\"0\" /></ns0:cubicBezTo></ns0:path></ns0:pathLst></ns0:custGeom>",
+      "geometryPaths": [
+        {
+          "commands": [
+            "moveTo",
+            "lnTo",
+            "lnTo",
+            "cubicBezTo"
+          ],
+          "verticesPathUnits": [
+            [
+              0,
+              0
+            ],
+            [
+              300,
+              0
+            ],
+            [
+              120,
+              200
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              100,
+              100
+            ],
+            [
+              200,
+              0
+            ]
+          ],
+          "extentPathUnits": [
+            300,
+            200
+          ],
+          "closed": false,
+          "unsupported": true,
+          "globalVerticesEmu": [],
+          "globalVerticesMm": []
+        }
+      ],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[8]/geometry",
+          "nativeId": "9",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        },
+        {
+          "kind": "text",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[8]/text",
+          "nativeId": "9",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[9]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[10]",
+      "nativeId": "10",
+      "name": "s10",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "rect",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "rect",
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        },
+        {
+          "kind": "text",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"10\" name=\"s10\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr><ns0:txBody><ns1:bodyPr /><ns1:lstStyle /><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>電源 A</ns1:t></ns1:r><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>＋B</ns1:t></ns1:r><ns1:br /><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>行2</ns1:t></ns1:r></ns1:p><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>次段落</ns1:t></ns1:r></ns1:p></ns0:txBody></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[9]/geometry",
+          "nativeId": "10",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        },
+        {
+          "kind": "text",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[9]/text",
+          "nativeId": "10",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[10]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "schemeClr",
+          "attributes": {
+            "val": "accent1"
+          },
+          "transforms": [
+            {
+              "kind": "tint",
+              "attributes": {
+                "val": "20000"
+              }
+            }
+          ]
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/sp[11]",
+      "nativeId": "11",
+      "name": "s11",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "rect",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "rect",
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"11\" name=\"s11\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:schemeClr val=\"accent1\"><ns1:tint val=\"20000\" /></ns1:schemeClr></ns1:solidFill></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[10]/geometry",
+          "nativeId": "11",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:futureObject[1]",
+      "style": [],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide1.xml",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xmlPath": "spTree/futureObject[12]",
+      "nativeId": "12",
+      "name": "future",
+      "kind": "futureObject",
+      "role": "DRAWABLE",
+      "xfrm": null,
+      "preset": null,
+      "parts": [
+        {
+          "kind": "unsupported",
+          "sourceType": "futureObject",
+          "disposition": "UNSUPPORTED",
+          "reason": "UNSUPPORTED_SOURCE_OBJECT",
+          "nextHumanAction": "Review immutable source object; export omitted only by explicit partial-export policy"
+        }
+      ],
+      "globalMatrix": null,
+      "globalBoxEmu": null,
+      "nativeXml": "<ns0:futureObject xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><ns0:cNvPr id=\"12\" name=\"future\" /></ns0:futureObject>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": null,
+      "orderedCornersMm": null,
+      "basisEmu": null,
+      "expectedComponents": [
+        {
+          "kind": "unsupported",
+          "path": "/p:sld/p:cSld/p:spTree/p:futureObject[1]/unsupported",
+          "nativeId": "12",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "style": [],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide2.xml",
+      "partHash": "db75d6aac56fce9b2f2cec5b5400806c4327804edd8b74863752fb6bc9ebf76a",
+      "xmlPath": "spTree/grpSp[2]",
+      "nativeId": "2",
+      "name": "g2",
+      "kind": "grpSp",
+      "role": "CONTAINER",
+      "xfrm": {
+        "flipV": true,
+        "x": -360000,
+        "y": 720000,
+        "cx": 720000,
+        "cy": 1080000,
+        "chX": 0,
+        "chY": 0,
+        "chCx": 360000,
+        "chCy": 360000
+      },
+      "preset": null,
+      "parts": [],
+      "globalMatrix": [
+        [
+          2.0,
+          0.0,
+          -360000.0
+        ],
+        [
+          0.0,
+          -3.0,
+          1800000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": null,
+      "nativeXml": "<ns0:grpSp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvGrpSpPr><ns0:cNvPr id=\"2\" name=\"g2\" /><ns0:cNvGrpSpPr /><ns0:nvPr /></ns0:nvGrpSpPr><ns0:grpSpPr><ns1:xfrm flipV=\"1\"><ns1:off x=\"-360000\" y=\"720000\" /><ns1:ext cx=\"720000\" cy=\"1080000\" /><ns1:chOff x=\"0\" y=\"0\" /><ns1:chExt cx=\"360000\" cy=\"360000\" /></ns1:xfrm></ns0:grpSpPr><ns0:grpSp><ns0:nvGrpSpPr><ns0:cNvPr id=\"3\" name=\"g3\" /><ns0:cNvGrpSpPr /><ns0:nvPr /></ns0:nvGrpSpPr><ns0:grpSpPr><ns1:xfrm rot=\"5400000\" flipV=\"1\"><ns1:off x=\"36000\" y=\"-72000\" /><ns1:ext cx=\"144000\" cy=\"72000\" /><ns1:chOff x=\"-36000\" y=\"0\" /><ns1:chExt cx=\"72000\" cy=\"72000\" /></ns1:xfrm></ns0:grpSpPr><ns0:sp><ns0:nvSpPr><ns0:cNvPr id=\"4\" name=\"s4\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-18000\" y=\"18000\" /><ns1:ext cx=\"36000\" cy=\"36000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp></ns0:grpSp></ns0:grpSp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -360000.0,
+          1800000.0
+        ],
+        [
+          1080000.0,
+          1800000.0
+        ],
+        [
+          1080000.0,
+          -1440000.0
+        ],
+        [
+          -360000.0,
+          -1440000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -10.0,
+          50.0
+        ],
+        [
+          30.0,
+          50.0
+        ],
+        [
+          30.0,
+          -40.0
+        ],
+        [
+          -10.0,
+          -40.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          1440000.0,
+          0.0
+        ],
+        [
+          0.0,
+          -3240000.0
+        ]
+      ],
+      "expectedComponents": []
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "style": [],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide2.xml",
+      "partHash": "db75d6aac56fce9b2f2cec5b5400806c4327804edd8b74863752fb6bc9ebf76a",
+      "xmlPath": "spTree/grpSp[2]/grpSp[2]",
+      "nativeId": "3",
+      "name": "g3",
+      "kind": "grpSp",
+      "role": "CONTAINER",
+      "xfrm": {
+        "rot": 5400000,
+        "flipV": true,
+        "x": 36000,
+        "y": -72000,
+        "cx": 144000,
+        "cy": 72000,
+        "chX": -36000,
+        "chY": 0,
+        "chCx": 72000,
+        "chCy": 72000
+      },
+      "preset": null,
+      "parts": [],
+      "globalMatrix": [
+        [
+          2.4492935982947064e-16,
+          2.0,
+          -216000.0
+        ],
+        [
+          -6.0,
+          1.8369701987210297e-16,
+          1908000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": null,
+      "nativeXml": "<ns0:grpSp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvGrpSpPr><ns0:cNvPr id=\"3\" name=\"g3\" /><ns0:cNvGrpSpPr /><ns0:nvPr /></ns0:nvGrpSpPr><ns0:grpSpPr><ns1:xfrm rot=\"5400000\" flipV=\"1\"><ns1:off x=\"36000\" y=\"-72000\" /><ns1:ext cx=\"144000\" cy=\"72000\" /><ns1:chOff x=\"-36000\" y=\"0\" /><ns1:chExt cx=\"72000\" cy=\"72000\" /></ns1:xfrm></ns0:grpSpPr><ns0:sp><ns0:nvSpPr><ns0:cNvPr id=\"4\" name=\"s4\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-18000\" y=\"18000\" /><ns1:ext cx=\"36000\" cy=\"36000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp></ns0:grpSp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -216000.0,
+          1908000.0
+        ],
+        [
+          -215999.99999999997,
+          1044000.0
+        ],
+        [
+          -71999.99999999997,
+          1044000.0
+        ],
+        [
+          -72000.0,
+          1908000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -6.0,
+          53.0
+        ],
+        [
+          -5.999999999999999,
+          29.0
+        ],
+        [
+          -1.9999999999999991,
+          29.0
+        ],
+        [
+          -2.0,
+          53.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          2.9103830456733704e-11,
+          -864000.0
+        ],
+        [
+          144000.0,
+          0.0
+        ]
+      ],
+      "expectedComponents": []
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide2.xml",
+      "partHash": "db75d6aac56fce9b2f2cec5b5400806c4327804edd8b74863752fb6bc9ebf76a",
+      "xmlPath": "spTree/grpSp[2]/grpSp[2]/sp[2]",
+      "nativeId": "4",
+      "name": "s4",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -18000,
+        "y": 18000,
+        "cx": 36000,
+        "cy": 36000
+      },
+      "preset": "rect",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "rect",
+          "xfrm": {
+            "x": -18000,
+            "y": 18000,
+            "cx": 36000,
+            "cy": 36000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          2.4492935982947064e-16,
+          2.0,
+          -180000.0
+        ],
+        [
+          -6.0,
+          1.8369701987210297e-16,
+          2016000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -180000.0,
+        1800000.0,
+        72000.00000000001,
+        216000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"4\" name=\"s4\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-18000\" y=\"18000\" /><ns1:ext cx=\"36000\" cy=\"36000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -180000.0,
+          2016000.0
+        ],
+        [
+          -180000.0,
+          1800000.0
+        ],
+        [
+          -107999.99999999999,
+          1800000.0
+        ],
+        [
+          -108000.0,
+          2016000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -5.0,
+          56.0
+        ],
+        [
+          -5.0,
+          50.0
+        ],
+        [
+          -2.9999999999999996,
+          50.0
+        ],
+        [
+          -3.0,
+          56.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          0.0,
+          -216000.0
+        ],
+        [
+          72000.0,
+          0.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/geometry",
+          "nativeId": "4",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    },
+    {
+      "canonicalXmlPath": "/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "style": [
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "123456"
+          },
+          "transforms": []
+        },
+        {
+          "scope": "p:spPr",
+          "colorType": "srgbClr",
+          "attributes": {
+            "val": "654321"
+          },
+          "transforms": []
+        }
+      ],
+      "styleResolution": "RAW_PRESERVED_THEME_INHERITANCE_UNRESOLVED",
+      "partPath": "ppt/slides/slide2.xml",
+      "partHash": "db75d6aac56fce9b2f2cec5b5400806c4327804edd8b74863752fb6bc9ebf76a",
+      "xmlPath": "spTree/sp[3]",
+      "nativeId": "5",
+      "name": "s5",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "xfrm": {
+        "x": -36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 72000
+      },
+      "preset": "rect",
+      "parts": [
+        {
+          "kind": "geometry",
+          "preset": "rect",
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "color": [
+            {
+              "val": "123456"
+            }
+          ],
+          "semantic": "UNKNOWN"
+        },
+        {
+          "kind": "text",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "xfrm": {
+            "x": -36000,
+            "y": 72000,
+            "cx": 108000,
+            "cy": 72000
+          },
+          "semantic": "UNKNOWN"
+        }
+      ],
+      "globalMatrix": [
+        [
+          1.0,
+          0.0,
+          -36000.0
+        ],
+        [
+          0.0,
+          1.0,
+          72000.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "globalBoxEmu": [
+        -36000.0,
+        72000.0,
+        108000.0,
+        72000.0
+      ],
+      "nativeXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"5\" name=\"s5\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"-36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"72000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"123456\" /></ns1:solidFill><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"654321\" /></ns1:solidFill></ns1:ln></ns0:spPr><ns0:txBody><ns1:bodyPr /><ns1:lstStyle /><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>電源 A</ns1:t></ns1:r><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>＋B</ns1:t></ns1:r><ns1:br /><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>行2</ns1:t></ns1:r></ns1:p><ns1:p><ns1:r><ns1:rPr sz=\"1200\" /><ns1:t>次段落</ns1:t></ns1:r></ns1:p></ns0:txBody></ns0:sp>",
+      "rawCustomGeometry": null,
+      "geometryPaths": [],
+      "orderedCornersEmu": [
+        [
+          -36000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          72000.0
+        ],
+        [
+          72000.0,
+          144000.0
+        ],
+        [
+          -36000.0,
+          144000.0
+        ]
+      ],
+      "orderedCornersMm": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          -1.0,
+          4.0
+        ]
+      ],
+      "basisEmu": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          72000.0
+        ]
+      ],
+      "expectedComponents": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+          "nativeId": "5",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        },
+        {
+          "kind": "text",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[1]/text",
+          "nativeId": "5",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "電源 A"
+                },
+                {
+                  "kind": "r",
+                  "text": "＋B"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "行2"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次段落"
+                }
+              ]
+            ],
+            "content": "電源 A＋B\n行2\n次段落"
+          },
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ]
+    }
+  ],
+  "presentationOrder": [
+    "ppt/slides/slide2.xml",
+    "ppt/slides/slide1.xml"
+  ],
+  "sourceSlides": [
+    {
+      "partPath": "ppt/slides/slide1.xml",
+      "presentationIndexes": [
+        1
+      ],
+      "orphan": false,
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0"
+    },
+    {
+      "partPath": "ppt/slides/slide2.xml",
+      "presentationIndexes": [
+        0
+      ],
+      "orphan": false,
+      "partHash": "db75d6aac56fce9b2f2cec5b5400806c4327804edd8b74863752fb6bc9ebf76a"
+    }
+  ],
+  "backgrounds": [
+    {
+      "partPath": "ppt/slides/slide1.xml",
+      "role": "BACKGROUND",
+      "partHash": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "xml": "<ns0:bg xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:bgPr><ns1:solidFill><ns1:schemeClr val=\"bg1\" /></ns1:solidFill></ns0:bgPr></ns0:bg>"
+    }
+  ],
+  "infrastructure": [
+    {
+      "partPath": "ppt/slides/slide1.xml",
+      "xmlPath": "spTree/nvGrpSpPr[0]",
+      "role": "INFRASTRUCTURE"
+    },
+    {
+      "partPath": "ppt/slides/slide1.xml",
+      "xmlPath": "spTree/grpSpPr[1]",
+      "role": "INFRASTRUCTURE"
+    },
+    {
+      "partPath": "ppt/slides/slide2.xml",
+      "xmlPath": "spTree/nvGrpSpPr[0]",
+      "role": "INFRASTRUCTURE"
+    },
+    {
+      "partPath": "ppt/slides/slide2.xml",
+      "xmlPath": "spTree/grpSpPr[1]",
+      "role": "INFRASTRUCTURE"
+    },
+    {
+      "partPath": "ppt/slides/slide2.xml",
+      "xmlPath": "spTree/grpSp[2]/nvGrpSpPr[0]",
+      "role": "INFRASTRUCTURE"
+    },
+    {
+      "partPath": "ppt/slides/slide2.xml",
+      "xmlPath": "spTree/grpSp[2]/grpSpPr[1]",
+      "role": "INFRASTRUCTURE"
+    },
+    {
+      "partPath": "ppt/slides/slide2.xml",
+      "xmlPath": "spTree/grpSp[2]/grpSp[2]/nvGrpSpPr[0]",
+      "role": "INFRASTRUCTURE"
+    },
+    {
+      "partPath": "ppt/slides/slide2.xml",
+      "xmlPath": "spTree/grpSp[2]/grpSp[2]/grpSpPr[1]",
+      "role": "INFRASTRUCTURE"
+    }
+  ],
+  "counts": {
+    "sourceObjects": 15,
+    "containers": 2,
+    "drawableObjects": 13,
+    "hiddenObjects": 0,
+    "backgrounds": 1,
+    "parts": 17,
+    "unsupportedParts": 1
+  },
+  "oracleStatus": "PRE_ADAPTER_TRUTH",
+  "realAppEvidence": "NOT_RUN",
+  "numericTolerance": {
+    "emu": 1e-07,
+    "layoutMm": 1e-10,
+    "scope": "arithmetic only; actual Jw_cad tolerance unset"
+  },
+  "partBytes": [
+    {
+      "path": "[Content_Types].xml",
+      "sha256": "d7343e92199fdee9922dd382239888990c3fef8bfc2f921a0d9a567a3c7b4bc7",
+      "bytes": 238
+    },
+    {
+      "path": "_rels/.rels",
+      "sha256": "3db9f3de9a98663342831b3c36f5989e82f70468f9754bbde94e064bd7021c09",
+      "bytes": 246
+    },
+    {
+      "path": "ppt/_rels/presentation.xml.rels",
+      "sha256": "91843a7747d684066791f92ee672c4448a001e23ef6ad0323bf94279b39b7442",
+      "bytes": 492
+    },
+    {
+      "path": "ppt/presentation.xml",
+      "sha256": "879b0f421c7f3f8beb42326caeffb04b708e58ce7cfdaf5892da0a527a2dbbe3",
+      "bytes": 299
+    },
+    {
+      "path": "ppt/slideLayouts/_rels/slideLayout1.xml.rels",
+      "sha256": "9d0e0bdc3ac1ff223ad25a0d96a35ae235535ec0b2f9959ba064cf836c570dad",
+      "bytes": 252
+    },
+    {
+      "path": "ppt/slideLayouts/slideLayout1.xml",
+      "sha256": "dc2c987c2495c2ffdc3bc389201ede4c3bf3f3d8394ca30dea96700b458968a8",
+      "bytes": 188
+    },
+    {
+      "path": "ppt/slideMasters/slideMaster1.xml",
+      "sha256": "a1506fea25526ff5d9ef7399853fc00363d54e5330ceed75157fcaa1f7ee8449",
+      "bytes": 405
+    },
+    {
+      "path": "ppt/slides/_rels/slide1.xml.rels",
+      "sha256": "38ae8863e7563a07f79648e94403ee296407bfa70f2e7adf843f738f12dfdf82",
+      "bytes": 252
+    },
+    {
+      "path": "ppt/slides/slide1.xml",
+      "sha256": "34ab095011ad7130d6b2c87ab2a51fe7c4a7e05aa6f50b44b00d4efc145a3de0",
+      "bytes": 5641
+    },
+    {
+      "path": "ppt/slides/slide2.xml",
+      "sha256": "db75d6aac56fce9b2f2cec5b5400806c4327804edd8b74863752fb6bc9ebf76a",
+      "bytes": 1909
+    },
+    {
+      "path": "ppt/theme/theme1.xml",
+      "sha256": "e1ffa79b924cea17dfd048102e8513328374c4b80b505e8fa00188cd5ae77eb7",
+      "bytes": 267
+    }
+  ],
+  "rawDependencyParts": [
+    {
+      "path": "ppt/slideLayouts/_rels/slideLayout1.xml.rels",
+      "xml": "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Id=\"rm\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster\" Target=\"../slideMasters/slideMaster1.xml\"/></Relationships>"
+    },
+    {
+      "path": "ppt/slideLayouts/slideLayout1.xml",
+      "xml": "<p:sldLayout xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:cSld><p:spTree/></p:cSld></p:sldLayout>"
+    },
+    {
+      "path": "ppt/slideMasters/slideMaster1.xml",
+      "xml": "<p:sldMaster xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:cSld><p:bg><p:bgPr><a:solidFill><a:srgbClr val=\"ABCDEF\"/></a:solidFill></p:bgPr></p:bg><p:spTree/></p:cSld><p:clrMap accent1=\"accent1\" bg1=\"lt1\"/><p:txStyles><p:bodyStyle><a:lvl1pPr><a:defRPr sz=\"1800\"/></a:lvl1pPr></p:bodyStyle></p:txStyles></p:sldMaster>"
+    },
+    {
+      "path": "ppt/theme/theme1.xml",
+      "xml": "<a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" name=\"synthetic\"><a:themeElements><a:clrScheme name=\"synthetic\"><a:accent1><a:srgbClr val=\"336699\"/></a:accent1><a:lt1><a:srgbClr val=\"FFFFFF\"/></a:lt1></a:clrScheme></a:themeElements></a:theme>"
+    }
+  ],
+  "denominators": {
+    "sourceObjects": 15,
+    "components": 17,
+    "backgrounds": 1,
+    "targetRepresented": "NOT_EVALUATED",
+    "unsupportedTarget": "NOT_EVALUATED"
+  },
+  "productGate": "HOLD"
+}

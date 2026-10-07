@@ -1,0 +1,95 @@
+{
+  "classification": "SYNTHETIC_RAW_XML_NOT_EXTERNAL_APP",
+  "externalAppGoldenCount": 0,
+  "realAppEvidence": "NOT_RUN",
+  "presentationOrder": [
+    "ppt/slides/slide2.xml",
+    "ppt/slides/slide1.xml"
+  ],
+  "sourceSizeEmu": [
+    7200000,
+    5400000
+  ],
+  "layoutMm": [
+    200,
+    150
+  ],
+  "scaleStatus": "UNSCALED",
+  "openCustomPath": {
+    "nativeId": "2",
+    "vertices": [
+      [
+        0,
+        0
+      ],
+      [
+        300,
+        0
+      ],
+      [
+        120,
+        200
+      ]
+    ],
+    "closed": false
+  },
+  "closedCustomPath": {
+    "nativeId": "3",
+    "vertices": [
+      [
+        0,
+        0
+      ],
+      [
+        300,
+        0
+      ],
+      [
+        120,
+        200
+      ]
+    ],
+    "closed": true
+  },
+  "anglesDeg": [
+    0,
+    90,
+    359
+  ],
+  "exactText": "電源 A＋B\n行2\n次段落",
+  "nestedBasisHandAlgebra": {
+    "part": "ppt/slides/slide2.xml",
+    "nativeId": "4",
+    "localOriginEmu": [
+      90000,
+      -72000
+    ],
+    "localBasisXEmu": [
+      0,
+      72000
+    ],
+    "localBasisYEmu": [
+      36000,
+      0
+    ],
+    "globalOriginEmu": [
+      -180000,
+      2016000
+    ],
+    "globalBasisXEmu": [
+      0,
+      -216000
+    ],
+    "globalBasisYEmu": [
+      72000,
+      0
+    ]
+  },
+  "policy": "directly resolved primitive eligible; raw scheme/theme/master inheritance remains unresolved and ledgered, never assume defaults",
+  "unsupported": [
+    "arc preset",
+    "cubic custom path",
+    "future object"
+  ],
+  "componentsIncludeGeometryAndText": true
+}
