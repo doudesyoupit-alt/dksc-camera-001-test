@@ -1,0 +1,207 @@
+{
+  "schema": "vdraw-coordinator-v2-takeover/1",
+  "instruction_id": "VDRAW-COORDINATOR-V2-EMERGENCY-TAKEOVER-20261008",
+  "repository": "doudesyoupit-alt/dksc-camera-001-test",
+  "coordinator_branch": "work/vdraw-four-route-coordinator-v2",
+  "parent_checkpoint": {
+    "branch": "work/vdraw-four-route-coordinator-v1",
+    "head": "35e4af831af7424aa213e25712c499eaf86f7c4c",
+    "access": "READ_ONLY"
+  },
+  "reacquisition": {
+    "authoritative": "AUTHENTICATED_GITHUB_FIXED_BYTES",
+    "expected_heads_match": true,
+    "evidence": [
+      {
+        "branch": "work/vdraw-drawing-ir-v1",
+        "head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/HANDOFF-ROUND3-STYLE-UNKNOWN-V1.json",
+        "git_blob_sha": "353b314ccdad3ce9b9c4e428e2b978caa75db252",
+        "sha256": "9d71befdd4110f6df1a8f07aa7eaa0f5680b3375ca49a3cf6884509b62306f27",
+        "bytes": 4278,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-drawing-ir-v1",
+        "head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/EVIDENCE-ROUND3-STYLE-UNKNOWN-V1.json",
+        "git_blob_sha": "90b754f22b2dd44989ef926cdbd68687d3e4c116",
+        "sha256": "15e50d32bed22208b3f620f79ac78f3f82a86a6fb40e997e31206e1fcb2da37a",
+        "bytes": 3487,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-drawing-ir-v1",
+        "head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/TEST-ROUND3-STYLE-UNKNOWN-V1.log",
+        "git_blob_sha": "323443374abf08a8ed4c91509c3270d9d55e6029",
+        "sha256": "551bb577896ee48add013a2d3e81f1323254a448706bfe5905c54df5451c88de",
+        "bytes": 3451,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-pptx-jwcad-v1",
+        "head": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/HANDOFF-MM-DXF-GEOMETRY-V1.json",
+        "git_blob_sha": "ef67b09570bb338bb237f874969d051ed9294472",
+        "sha256": "fa16153d9017b6b485745b4cd9227bb46e01c7f49aa52ae4f15c71b16649eca1",
+        "bytes": 13523,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-pptx-jwcad-v1",
+        "head": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/EVIDENCE-MM-DXF-GEOMETRY-V1.json",
+        "git_blob_sha": "0e90e2c275eea9d19c9a1fe72bd6a55dfabac3c4",
+        "sha256": "b3ff22496488a508ee2fc1926cbb93726a76e48bab4b9233d9935c6befffda21",
+        "bytes": 25707,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-pptx-jwcad-v1",
+        "head": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/mm-geometry-review.tap",
+        "git_blob_sha": "82b4384a8cec4c3867e0ea850c77b19f25a762b4",
+        "sha256": "cdb5f97621c84c316cde4145bf5f7a067d66fb7b270122485e964ef5a4895b07",
+        "bytes": 6839,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+        "head": "aa8ef74e572c95114489f75285f1d5c1d9b4de62",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/HANDOFF-MM-DXF-GEOMETRY-QA-V1.json",
+        "git_blob_sha": "6a188319fe1a0e3241452e36f8eba0a7e3244b55",
+        "sha256": "984f2ef3aadb6268746cecfb322adb56401fe792042df2419af0d7c5123f9452",
+        "bytes": 3674,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+        "head": "aa8ef74e572c95114489f75285f1d5c1d9b4de62",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/EVIDENCE-MM-DXF-GEOMETRY-QA-V1.json",
+        "git_blob_sha": "75843f5ff7d34ba099d130fd3403d94ba84dcea3",
+        "sha256": "8800f6e5507494a803302e90e66938dfc3f0c5ebfda3dd0184a71f5bc4f43151",
+        "bytes": 11328,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+        "head": "aa8ef74e572c95114489f75285f1d5c1d9b4de62",
+        "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/MM-DXF-GEOMETRY-QA-REPORT-V1.md",
+        "git_blob_sha": "001c35dafd64c5cb61c18e7cbb3f61df8b8ed965",
+        "sha256": "8bdabc164f5ee39015a51a7680445f663b97c9c4610793100c6be5660e1b6f88",
+        "bytes": 6901,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+        "head": "aa8ef74e572c95114489f75285f1d5c1d9b4de62",
+        "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-review-visibility-finding-v1.json",
+        "git_blob_sha": "1c9062e8ba101bc74c3fc12e6e002bf2c040d0e9",
+        "sha256": "dc7ebbc9257f4966295b191bba8a7cee0a02e9698aa0ef9189a6ef6db092618b",
+        "bytes": 2378,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+        "head": "aa8ef74e572c95114489f75285f1d5c1d9b4de62",
+        "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-independent-adverse-tests.log",
+        "git_blob_sha": "f3276d06187eea378464c60915cb64cae08174db",
+        "sha256": "d808268af1b3835080aebfac01e5d6eff2fe47e40be9306942051315d5ff6843",
+        "bytes": 3775,
+        "git_blob_verified": true
+      },
+      {
+        "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+        "head": "aa8ef74e572c95114489f75285f1d5c1d9b4de62",
+        "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/B377-independent-comparison-summary.json",
+        "git_blob_sha": "c1aa96eeee88ad974d4f1c9cb49fcea2802fb076",
+        "sha256": "c7cbeb3cec9d3416af8c40bf7fb65fc83f65c3892ff754662b018d4f033911b7",
+        "bytes": 2449,
+        "git_blob_verified": true
+      }
+    ],
+    "existing_suites_rerun": false
+  },
+  "checkpoints": {
+    "A": {
+      "branch": "work/vdraw-drawing-ir-v1",
+      "head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+      "IR": "vdraw-drawing-ir/1.0.0-candidate.2",
+      "candidate2_named_tests": {
+        "pass": 47,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    "B": {
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "head": "377afdc9c34e60a01a6cb0aebf33099875c9470c",
+      "new_named_tests": {
+        "pass": 33,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    "G": {
+      "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+      "head": "aa8ef74e572c95114489f75285f1d5c1d9b4de62",
+      "named_tests": {
+        "pass": 88,
+        "fail": 0,
+        "skip": 0
+      },
+      "comparison": {
+        "pass": 8717,
+        "fail": 1
+      },
+      "failure": "DXF-REVIEW-VISIBILITY-001"
+    }
+  },
+  "current_gates": {
+    "numericGeometry": "PASS_CARRIED_FORWARD_22_LOGICAL_82_RAW",
+    "boundedBackend": "HOLD_OPEN_VISIBILITY_FINDING",
+    "textRetention": "0_OF_8",
+    "sourceAppearance": "NOT_RETAINED_NOT_QUALIFIED",
+    "realWorldScale": "UNSCALED",
+    "unitHeader": "UNIT_HEADER_METADATA_UNAVAILABLE",
+    "actualJw": "NOT_RUN",
+    "phase1": "HOLD",
+    "CDEF": "HOLD"
+  },
+  "dispatch": {
+    "instruction_id": "VDRAW-V2-B-DXF-REVIEW-VISIBILITY-001-20261008-V1",
+    "target": "EXISTING_TRACK_B",
+    "path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-B-REVIEW-VISIBILITY-V2-V1.md",
+    "state": "ISSUED_IN_GITHUB",
+    "specialist_receipt": "NOT_OBSERVED",
+    "execution_started": "UNCONFIRMED",
+    "transport": "GITHUB_DISPATCH_FILE",
+    "automatic_delivery": "NO_VDRAW_SPECIALIST_AUTOMATION_FOUND_IN_CURRENT_AUTOMATION_INVENTORY",
+    "direct_existing_work_delivery": "NOT_AVAILABLE_IN_CURRENT_TOOLSET",
+    "G_dispatch": "NOT_ISSUED_PENDING_B_CORRECTED_FIXED_HEAD"
+  },
+  "next": [
+    "Collect new B HEAD/HANDOFF/Evidence/tests; preserve all B377 blobs; reject unrelated changes",
+    "Dispatch existing G limited delta QA after authenticating fixed corrected B HEAD and live G HEAD",
+    "Collect G fixed scoped closure; otherwise return B with new instruction_id",
+    "Text retention 0/8",
+    "Unit / known-length",
+    "Required source appearance: color / line width / dash",
+    "Verify availability of actual Jw environment before Human Gate; actual Open/Edit/Save",
+    "Round-trip"
+  ],
+  "protection": {
+    "oldCoordinatorReadOnly": true,
+    "mainValidationUnchanged": true,
+    "existingSpecialistsRecreated": false,
+    "existingResultsRerun": false,
+    "geometryBackendRewritten": false,
+    "save001Rechecked": false,
+    "humanApprovalSubstituted": false
+  },
+  "limitations": [
+    "GitHub dispatch persistence does not prove existing Track B receipt or execution. No receipt is fabricated.",
+    "Current local command lookup found no wine or wine64; this alone is not a complete actual-Jw environment availability decision; assess available execution surfaces at that future stage."
+  ]
+}
