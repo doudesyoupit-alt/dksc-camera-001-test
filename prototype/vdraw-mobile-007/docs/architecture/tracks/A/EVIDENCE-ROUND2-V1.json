@@ -1,0 +1,91 @@
+{
+  "schema": "vdraw-ir-candidate-evidence/1",
+  "instruction_id": "VDRAW-4ROUTE-A-ROUND2-20261007-V1",
+  "expected_base_head": "b023fdc1a0dacd1d9280db3af2b3ad4da17f3609",
+  "dispatch_commit": "5e1fabba4d2c640d67e780169c569d9284554ac9",
+  "IR_version": "vdraw-drawing-ir/1.0.0-candidate.1",
+  "schema_sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+  "contract_status": "FREEZE_CANDIDATE_PENDING_INDEPENDENT_REVIEW",
+  "execution": [
+    {
+      "command": "python prototype/vdraw-mobile-007/drawing-ir/build-schema.py",
+      "result": "SUCCESS",
+      "schema_hash_matches": true
+    },
+    {
+      "command": "node --check prototype/vdraw-mobile-007/drawing-ir/validate.mjs",
+      "result": "SUCCESS"
+    },
+    {
+      "command": "node --test prototype/vdraw-mobile-007/drawing-ir/tests/contract.test.mjs",
+      "result": "PASS",
+      "runtime": "Node v24.19.0",
+      "denominator": "86 named synthetic contract test cases (not assertions, practical precision or G tests)",
+      "tests": 86,
+      "suites": 0,
+      "pass": 86,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "cancelled": 0,
+      "todo": 0
+    }
+  ],
+  "resolved_during_development": [
+    "Initial 64-case run discovered arithmetic multiplication rounding and thrown validation on illegal EMU UserUnit; fixed without removing or skipping tests",
+    "Coordinator identified diagonal-only rect, anisotropic ellipse, homography region and calibration/source-frame trust gaps; validation and negative cases added"
+  ],
+  "artifacts": [
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/README.md",
+      "sha256": "d9bf72e84e6b7fc2c8ab2dd54dd48ba0c31ed16be3b6f7893d2b8a9371e4b798",
+      "bytes": 8849
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/build-schema.py",
+      "sha256": "ccc51f4f603b617fbc4618d5ac9cc02376e6064c417fe453e1375dd7931a797d",
+      "bytes": 6676
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/schema.json",
+      "sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+      "bytes": 35914
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/tests/contract.test.mjs",
+      "sha256": "b3301e1a1e4455023492715fd56e8a169b6b48d7c4790ae969e9c0683df71f96",
+      "bytes": 22109
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/tests/fixtures.mjs",
+      "sha256": "ccaf14832bd1b7e2bd063c680f30f79e298f90d4b5e92be35bdb702dbc94a079",
+      "bytes": 3953
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/validate.mjs",
+      "sha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+      "bytes": 25213
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/version.mjs",
+      "sha256": "6cdd8881fa04221151f2ad50b66a22de3df35ce6604df62a281a9c60cdd1f340",
+      "bytes": 205
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/TEST-ROUND2-V1.log",
+      "sha256": "888e8a7a773ab9cdd93ff5dbabf0931a72a8dfa0bd46d10c513c48d3054b4c53",
+      "bytes": 6077
+    }
+  ],
+  "practical_accuracy": "NOT_MEASURED",
+  "actual_JWCAD": "NOT_RUN",
+  "product_gate": "HOLD",
+  "protection": "Only new drawing-ir/ and new tracks/A Round2 artifacts added; original HANDOFF and all original blobs preserved by Git base tree",
+  "limitations": [
+    "IR cannot discover native source components missing from both input inventory and objects; reader plus independent source oracle required",
+    "Evidence URI/hash authenticity and Human validity are outside pure validator",
+    "Browser/Android/editor/native/mm DXF/Jw_cad integrations NOT_RUN",
+    "Curve skew/general perspective/text nonsimilarity rejected rather than approximated",
+    "Floating arithmetic consistency bound is not app physical acceptance tolerance"
+  ]
+}
