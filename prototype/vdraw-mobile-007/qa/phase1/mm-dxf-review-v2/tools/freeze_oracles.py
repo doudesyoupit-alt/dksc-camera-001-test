@@ -1,0 +1,8 @@
+"""Generate NEW original-source target truth before DXF implementation/results are opened."""
+import json,os,hashlib
+from pathlib import Path
+from original_source_dxf_oracle import build
+R=Path(__file__).resolve().parents[1];Q=R.parent/'b2-review';B=Path(os.environ['VDRAW_B2_EVIDENCE_ROOT']);names=['native-vdraw-n01','generic-synthetic-g01','generic-synthetic-g02-nested','synthetic-g03-expanded','explicit-paint-width-alpha-witness','synthetic-g04-property-witness'];summary=[]
+for n in names:
+ tp=Q/'fixtures'/(n+('.independent-source-property-truth.json' if n.startswith('explicit-') else '.property-unit-truth.json'));ap=(Q/'evidence' if n.startswith('synthetic-g04') else B)/(n+'.adapter-result.json');t=json.loads(tp.read_text());a=json.loads(ap.read_text());v=build(t,a['document']);v['pins']={'originalPropertyTruthSHA256':hashlib.sha256(tp.read_bytes()).hexdigest(),'qualifiedB2ResultSHA256':hashlib.sha256(ap.read_bytes()).hexdigest(),'B2HEAD':'2ad1c0a2c3537914d2d3a460b5843b542a6dc098'};(R/'fixtures'/(n+'.source-mm-dxf-truth.json')).write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n');summary.append({'package':n,'sourceObjects':v['sourceObjects'],'sourceComponents':v['sourceComponentsExcludingBackground'],'sourceGeometry':v['sourceGeometryDenominator'],'sourceText':v['sourceTextDenominator'],'IRGeometry':v['IRGeometryDenominator'],'logicalDXFExpected':v['targetLogicalEntityCount'],'rawDXFExpected':v['targetRawEntityRecordCount'],'pages':len(v['pages'])})
+(R/'evidence/pre-backend-original-oracle-summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary,indent=2))

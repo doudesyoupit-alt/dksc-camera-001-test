@@ -1,0 +1,82 @@
+{
+  "schema": "vdraw-G-pre-DXF-original-oracle-freeze/2",
+  "instruction_id": "VDRAW-PHASE1-G-MM-DXF-GEOMETRY-QA-V1",
+  "dispatchHEAD": "35e4af831af7424aa213e25712c499eaf86f7c4c",
+  "expectedGParent": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+  "BAdapterHEAD": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+  "BBackendOrOutputSeen": false,
+  "newNamedTests": 26,
+  "fail": 0,
+  "skip": 0,
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/ORACLE-CONTRACT-V2.md",
+      "sha256": "f38c13e56aa2b6260c7767e103f420340793c113dd629c1da846e962938ce3e6",
+      "bytes": 4055
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/pre-backend-oracle-parser-tests.log",
+      "sha256": "044b91d322a02ab0eedea62a0501f4f6a550833f46a0b6b9483faaa422877df2",
+      "bytes": 2739
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/pre-backend-original-oracle-summary.json",
+      "sha256": "8f2dd26ed2e8d311317efbba2daa642b77ecd1b6fa88f8d5d40320ffca3c3011",
+      "bytes": 1452
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/fixtures/explicit-paint-width-alpha-witness.source-mm-dxf-truth.json",
+      "sha256": "876cb377a4b97f8d3162e6463bc184c268eaab7190795185ae874b536aaabcbb",
+      "bytes": 12125
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/fixtures/generic-synthetic-g01.source-mm-dxf-truth.json",
+      "sha256": "c78bdad699165cc0801f17eec82734f3e3a80ce7993f238fac5a36d8a95ead48",
+      "bytes": 64655
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/fixtures/generic-synthetic-g02-nested.source-mm-dxf-truth.json",
+      "sha256": "285be868a7e7d1f97cb36db5480866166c78db2e2b4319b5bfa80f5ae761bc71",
+      "bytes": 68133
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/fixtures/native-vdraw-n01.source-mm-dxf-truth.json",
+      "sha256": "27812d08a131eb13efbcd84ab0f7927028d0b3603b31f8c2965485ebd20ca159",
+      "bytes": 58949
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/fixtures/synthetic-g03-expanded.source-mm-dxf-truth.json",
+      "sha256": "f017a135faacf2d9aa39068059fe62131636d7ed26987d8d2aaef1848a69434e",
+      "bytes": 127107
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/fixtures/synthetic-g04-property-witness.source-mm-dxf-truth.json",
+      "sha256": "b2d0352e8e27c6e09eef137d0a6ad263576beafe18681cfb6105624e94f3e4e5",
+      "bytes": 30045
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/ascii_dxf_parser.py",
+      "sha256": "cd063c302ee9b558b820cbd5697a5d7c7970934c153ae095dac2eef8ef2e3f72",
+      "bytes": 5000
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/freeze_oracles.py",
+      "sha256": "85f55294fd0012799083a19d6720c0029e005c69a34703558d021015c00a83d9",
+      "bytes": 1621
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/original_source_dxf_oracle.py",
+      "sha256": "094276136bee6a8207f9be322b3e779b3c25cf1a90e3c53de11be14b19bfe875",
+      "bytes": 3843
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/test_pre_backend_oracle.py",
+      "sha256": "50dbb0f5a9415ceb88bdbcc51cc87896f1d551cd77f92eca0391993b2de1a36e",
+      "bytes": 5315
+    }
+  ],
+  "coordinateProof": "ORIGINAL_EMU_DIV_36000_AND_ONCE_CAD_REFLECTION",
+  "geometryExpectedFromWriter": false,
+  "productGate": "HOLD",
+  "actualJw": "NOT_RUN"
+}

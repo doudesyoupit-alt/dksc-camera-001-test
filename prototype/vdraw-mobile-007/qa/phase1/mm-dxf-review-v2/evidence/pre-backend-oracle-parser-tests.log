@@ -1,0 +1,31 @@
+test_90degree_raw_source_math (__main__.PreBackendOracle.test_90degree_raw_source_math) ... ok
+test_ascii_review_comment_not_unit_proof (__main__.PreBackendOracle.test_ascii_review_comment_not_unit_proof) ... ok
+test_bad_code (__main__.PreBackendOracle.test_bad_code) ... ok
+test_custom_native_units_not_target (__main__.PreBackendOracle.test_custom_native_units_not_target) ... ok
+test_duplicate_raw_handle (__main__.PreBackendOracle.test_duplicate_raw_handle) ... ok
+test_ellipse_never_circle_or_poly_approximation (__main__.PreBackendOracle.test_ellipse_never_circle_or_poly_approximation) ... ok
+test_every_page_keeps_global_required_inventory (__main__.PreBackendOracle.test_every_page_keeps_global_required_inventory) ... ok
+test_layout_unscaled_not_calibration (__main__.PreBackendOracle.test_layout_unscaled_not_calibration) ... ok
+test_missing_eof (__main__.PreBackendOracle.test_missing_eof) ... ok
+test_newer_entity_not_qualified (__main__.PreBackendOracle.test_newer_entity_not_qualified) ... ok
+test_newer_header_not_qualified (__main__.PreBackendOracle.test_newer_header_not_qualified) ... ok
+test_no_unit_header_or_version_false_proof (__main__.PreBackendOracle.test_no_unit_header_or_version_false_proof) ... ok
+test_nonfinite (__main__.PreBackendOracle.test_nonfinite) ... ok
+test_odd_pairs (__main__.PreBackendOracle.test_odd_pairs) ... ok
+test_page_order_from_relationships (__main__.PreBackendOracle.test_page_order_from_relationships) ... ok
+test_page_split_not_overlay (__main__.PreBackendOracle.test_page_split_not_overlay) ... ok
+test_parser_does_not_infer_mm_from_AC1009 (__main__.PreBackendOracle.test_parser_does_not_infer_mm_from_AC1009) ... ok
+test_parser_synthetic_line (__main__.PreBackendOracle.test_parser_synthetic_line) ... ok
+test_polyline_raw_denominator (__main__.PreBackendOracle.test_polyline_raw_denominator) ... ok
+test_property_loss_dimensions (__main__.PreBackendOracle.test_property_loss_dimensions) ... ok
+test_rectangle_all_ordered_corners (__main__.PreBackendOracle.test_rectangle_all_ordered_corners) ... ok
+test_source_IR_target_denominators_distinct (__main__.PreBackendOracle.test_source_IR_target_denominators_distinct) ... ok
+test_source_denominators (__main__.PreBackendOracle.test_source_denominators) ... ok
+test_source_emu_unit_math_flip_not_double_reflect (__main__.PreBackendOracle.test_source_emu_unit_math_flip_not_double_reflect) ... ok
+test_source_geometry_independent_of_ir_value (__main__.PreBackendOracle.test_source_geometry_independent_of_ir_value) ... ok
+test_true_circle_original_center_radius (__main__.PreBackendOracle.test_true_circle_original_center_radius) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK

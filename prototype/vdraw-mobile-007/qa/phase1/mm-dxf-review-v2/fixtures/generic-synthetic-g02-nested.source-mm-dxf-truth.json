@@ -1,0 +1,2066 @@
+{
+  "schema": "vdraw-G-original-source-MM-DXF-oracle/2",
+  "sourceHash": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+  "sourceUnit": "EMU",
+  "coordinateUnit": "MM",
+  "unitRole": "LAYOUT",
+  "scaleStatus": "UNSCALED",
+  "yAxis": "UP",
+  "sourceObjects": 10,
+  "sourceComponentsExcludingBackground": 9,
+  "sourceGeometryDenominator": 5,
+  "sourceTextDenominator": 1,
+  "IRGeometryDenominator": 3,
+  "IRInventoryDenominator": 27,
+  "pages": [
+    {
+      "pageIndex": 0,
+      "sourcePart": "ppt/slides/slide1.xml",
+      "pageId": "page-0",
+      "sizeMM": [
+        200.0,
+        150.0
+      ],
+      "entities": [
+        {
+          "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+          "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+          "inventoryId": "source-2-part-0",
+          "IRObjectId": "source-2-part-0-object",
+          "sourceNativeId": "2",
+          "type": "POLYLINE",
+          "originalComputedGeometryMM": {
+            "kind": "polygon",
+            "points": [
+              [
+                10.0,
+                130.0
+              ],
+              [
+                30.0,
+                130.0
+              ],
+              [
+                30.0,
+                120.0
+              ],
+              [
+                10.0,
+                120.0
+              ]
+            ],
+            "closed": true
+          },
+          "rawRecordCount": 6,
+          "rawRecordTypes": [
+            "POLYLINE",
+            "VERTEX",
+            "VERTEX",
+            "VERTEX",
+            "VERTEX",
+            "SEQEND"
+          ],
+          "sourceProperties": {
+            "fill": {
+              "state": "EXPLICIT",
+              "value": "#ABCDEF",
+              "encoding": "HEX_RGB",
+              "rawLexeme": "ABCDEF",
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+              "xml": "<ns0:srgbClr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" val=\"ABCDEF\" />"
+            },
+            "stroke": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln",
+              "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+            },
+            "width": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/@w"
+            },
+            "dash": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "rawOOXMLLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+              "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+            },
+            "opacity": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr",
+              "allPaintAlphas": [
+                {
+                  "field": "fill",
+                  "rawLexeme": null,
+                  "value": null,
+                  "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+                }
+              ]
+            }
+          },
+          "appearanceRetained": false
+        },
+        {
+          "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+          "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry",
+          "inventoryId": "source-3-part-0",
+          "IRObjectId": "source-3-part-0-object",
+          "sourceNativeId": "3",
+          "type": "LINE",
+          "originalComputedGeometryMM": {
+            "kind": "line",
+            "start": [
+              38.1,
+              86.5
+            ],
+            "end": [
+              38.1,
+              111.9
+            ]
+          },
+          "rawRecordCount": 1,
+          "rawRecordTypes": [
+            "LINE"
+          ],
+          "sourceProperties": {
+            "fill": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr",
+              "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+            },
+            "stroke": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln",
+              "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+            },
+            "width": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/@w"
+            },
+            "dash": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "rawOOXMLLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:prstDash/@val",
+              "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+            },
+            "opacity": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr",
+              "allPaintAlphas": []
+            }
+          },
+          "appearanceRetained": false
+        },
+        {
+          "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+          "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry",
+          "inventoryId": "source-4-part-0",
+          "IRObjectId": "source-4-part-0-object",
+          "sourceNativeId": "4",
+          "type": "CIRCLE",
+          "originalComputedGeometryMM": {
+            "kind": "circle",
+            "center": [
+              15.0,
+              125.0
+            ],
+            "radius": 5.0
+          },
+          "rawRecordCount": 1,
+          "rawRecordTypes": [
+            "CIRCLE"
+          ],
+          "sourceProperties": {
+            "fill": {
+              "state": "EXPLICIT",
+              "value": "#ABCDEF",
+              "encoding": "HEX_RGB",
+              "rawLexeme": "ABCDEF",
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/@val",
+              "xml": "<ns0:srgbClr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" val=\"ABCDEF\" />"
+            },
+            "stroke": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln",
+              "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+            },
+            "width": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/@w"
+            },
+            "dash": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "rawOOXMLLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:prstDash/@val",
+              "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+            },
+            "opacity": {
+              "state": "UNRESOLVED",
+              "value": null,
+              "encoding": "UNRESOLVED",
+              "rawLexeme": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr",
+              "allPaintAlphas": [
+                {
+                  "field": "fill",
+                  "rawLexeme": null,
+                  "value": null,
+                  "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+                }
+              ]
+            }
+          },
+          "appearanceRetained": false
+        }
+      ],
+      "sourceKeysInOriginalOrder": [
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+        "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]"
+      ],
+      "logicalEntityCount": 3,
+      "rawEntityRecordCount": 8,
+      "otherPageInventoryIds": [],
+      "globalRequiredInventoryIds": [
+        "source-0",
+        "source-1",
+        "source-2",
+        "source-2-part-0",
+        "source-2-part-1",
+        "source-3",
+        "source-3-part-0",
+        "source-4",
+        "source-4-part-0",
+        "source-5",
+        "source-6",
+        "source-7",
+        "source-8",
+        "source-9",
+        "source-10",
+        "source-11",
+        "source-11-part-0",
+        "source-12",
+        "source-12-part-0",
+        "source-13",
+        "source-13-part-0",
+        "source-14",
+        "source-14-part-0",
+        "source-15",
+        "source-15-part-0",
+        "source-16",
+        "source-16-part-0"
+      ]
+    }
+  ],
+  "allInventory": [
+    {
+      "id": "source-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:nvGrpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-1",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-2",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "2",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-2-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "2",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-2-part-1",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "2",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/text"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT"
+    },
+    {
+      "id": "source-3",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "3",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-3-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "3",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-4",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "4",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-4-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "4",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-5",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "5",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/object"
+      },
+      "role": "CONTAINER",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-6",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:nvGrpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-7",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-8",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "11",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/object"
+      },
+      "role": "CONTAINER",
+      "parentId": "source-5",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-9",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:nvGrpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": "source-5",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-10",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:grpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": "source-5",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-11",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "6",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": "source-8",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-11-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "6",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": "source-8",
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "nextHumanAction": "Inspect preserved native XML and resolve APP_AFFINE_SEMANTICS_UNVERIFIED"
+    },
+    {
+      "id": "source-12",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "7",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-12-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "7",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/unknown"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN"
+    },
+    {
+      "id": "source-13",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "8",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-13-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "8",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/unknown"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN"
+    },
+    {
+      "id": "source-14",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-14-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/unknown"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN"
+    },
+    {
+      "id": "source-15",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "10",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/object"
+      },
+      "role": "HIDDEN",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED"
+    },
+    {
+      "id": "source-15-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "10",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/geometry"
+      },
+      "role": "HIDDEN",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED"
+    },
+    {
+      "id": "source-16",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]/object"
+      },
+      "role": "BACKGROUND",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "BACKGROUND_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve BACKGROUND_POLICY_REQUIRED"
+    },
+    {
+      "id": "source-16-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]/background"
+      },
+      "role": "BACKGROUND",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_BACKGROUND",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_BACKGROUND"
+    }
+  ],
+  "allSourceLedger": [
+    {
+      "inventoryId": "source-0",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-1",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-2",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-2-part-0",
+      "disposition": "REPRESENTED",
+      "objectIds": [
+        "source-2-part-0-object"
+      ],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-2-part-1",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-3",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-3-part-0",
+      "disposition": "REPRESENTED",
+      "objectIds": [
+        "source-3-part-0-object"
+      ],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-4",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-4-part-0",
+      "disposition": "REPRESENTED",
+      "objectIds": [
+        "source-4-part-0-object"
+      ],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-5",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-6",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-7",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-8",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-9",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-10",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-11",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-11-part-0",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "nextHumanAction": "Inspect preserved native XML and resolve APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-12",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-12-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-13",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-13-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-14",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-14-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-15",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-15-part-0",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-16",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "BACKGROUND_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve BACKGROUND_POLICY_REQUIRED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-16-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_BACKGROUND",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_BACKGROUND",
+      "policyEvidenceId": null
+    }
+  ],
+  "originalObjects": [
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "2",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "preset": "rect",
+      "rawXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"2\" name=\"shape-text\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"360000\" y=\"720000\" /><ns1:ext cx=\"720000\" cy=\"360000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"ABCDEF\" /></ns1:solidFill></ns0:spPr><ns0:txBody><ns1:bodyPr /><ns1:lstStyle /><ns1:p><ns1:r><ns1:rPr sz=\"2400\" /><ns1:t>分電盤</ns1:t></ns1:r><ns1:r><ns1:t>ABC</ns1:t></ns1:r><ns1:br /><ns1:r><ns1:t>1000</ns1:t></ns1:r></ns1:p><ns1:p><ns1:r><ns1:t>次行</ns1:t></ns1:r></ns1:p></ns0:txBody></ns0:sp>",
+      "components": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+          "nativeId": "2",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        },
+        {
+          "kind": "text",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[1]/text",
+          "nativeId": "2",
+          "text": {
+            "paragraphs": [
+              [
+                {
+                  "kind": "r",
+                  "text": "分電盤"
+                },
+                {
+                  "kind": "r",
+                  "text": "ABC"
+                },
+                {
+                  "kind": "break",
+                  "text": "\n"
+                },
+                {
+                  "kind": "r",
+                  "text": "1000"
+                }
+              ],
+              [
+                {
+                  "kind": "r",
+                  "text": "次行"
+                }
+              ]
+            ],
+            "content": "分電盤ABC\n1000\n次行"
+          },
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "EXPLICIT",
+          "value": "#ABCDEF",
+          "encoding": "HEX_RGB",
+          "rawLexeme": "ABCDEF",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "xml": "<ns0:srgbClr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" val=\"ABCDEF\" />"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr",
+          "allPaintAlphas": [
+            {
+              "field": "fill",
+              "rawLexeme": null,
+              "value": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+            }
+          ]
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          360000.0,
+          720000.0
+        ],
+        [
+          1080000.0,
+          720000.0
+        ],
+        [
+          1080000.0,
+          1080000.0
+        ],
+        [
+          360000.0,
+          1080000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          10.0,
+          20.0
+        ],
+        [
+          30.0,
+          20.0
+        ],
+        [
+          30.0,
+          30.0
+        ],
+        [
+          10.0,
+          30.0
+        ]
+      ],
+      "basisEMU": [
+        [
+          720000.0,
+          0.0
+        ],
+        [
+          0.0,
+          360000.0
+        ]
+      ],
+      "xfrm": {
+        "x": 360000,
+        "y": 720000,
+        "cx": 720000,
+        "cy": 360000
+      }
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "3",
+      "kind": "cxnSp",
+      "role": "DRAWABLE",
+      "preset": "line",
+      "rawXml": "<ns0:cxnSp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvCxnSpPr><ns0:cNvPr id=\"3\" name=\"connector\" /><ns0:cNvCxnSpPr /><ns0:nvPr /></ns0:nvCxnSpPr><ns0:spPr><ns1:xfrm rot=\"5400000\" flipH=\"1\"><ns1:off x=\"914400\" y=\"1828800\" /><ns1:ext cx=\"914400\" cy=\"0\" /></ns1:xfrm><ns1:prstGeom prst=\"line\"><ns1:avLst /></ns1:prstGeom></ns0:spPr></ns0:cxnSp>",
+      "components": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry",
+          "nativeId": "3",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr",
+          "allPaintAlphas": []
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          1371600.0,
+          2286000.0
+        ],
+        [
+          1371600.0,
+          1371600.0
+        ],
+        [
+          1371600.0,
+          1371600.0
+        ],
+        [
+          1371600.0,
+          2286000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          38.1,
+          63.5
+        ],
+        [
+          38.1,
+          38.1
+        ],
+        [
+          38.1,
+          38.1
+        ],
+        [
+          38.1,
+          63.5
+        ]
+      ],
+      "basisEMU": [
+        [
+          0.0,
+          -914400.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "xfrm": {
+        "rot": 5400000,
+        "flipH": true,
+        "x": 914400,
+        "y": 1828800,
+        "cx": 914400,
+        "cy": 0
+      }
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "4",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "preset": "ellipse",
+      "rawXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"4\" name=\"circle\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"360000\" y=\"720000\" /><ns1:ext cx=\"360000\" cy=\"360000\" /></ns1:xfrm><ns1:prstGeom prst=\"ellipse\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"ABCDEF\" /></ns1:solidFill></ns0:spPr></ns0:sp>",
+      "components": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[2]/geometry",
+          "nativeId": "4",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "EXPLICIT",
+          "value": "#ABCDEF",
+          "encoding": "HEX_RGB",
+          "rawLexeme": "ABCDEF",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "xml": "<ns0:srgbClr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" val=\"ABCDEF\" />"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr",
+          "allPaintAlphas": [
+            {
+              "field": "fill",
+              "rawLexeme": null,
+              "value": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+            }
+          ]
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          360000.0,
+          720000.0
+        ],
+        [
+          720000.0,
+          720000.0
+        ],
+        [
+          720000.0,
+          1080000.0
+        ],
+        [
+          360000.0,
+          1080000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          10.0,
+          20.0
+        ],
+        [
+          20.0,
+          20.0
+        ],
+        [
+          20.0,
+          30.0
+        ],
+        [
+          10.0,
+          30.0
+        ]
+      ],
+      "basisEMU": [
+        [
+          360000.0,
+          0.0
+        ],
+        [
+          0.0,
+          360000.0
+        ]
+      ],
+      "xfrm": {
+        "x": 360000,
+        "y": 720000,
+        "cx": 360000,
+        "cy": 360000
+      }
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "5",
+      "kind": "grpSp",
+      "role": "CONTAINER",
+      "preset": null,
+      "rawXml": "<ns0:grpSp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvGrpSpPr><ns0:cNvPr id=\"5\" name=\"group\" /><ns0:cNvGrpSpPr /><ns0:nvPr /></ns0:nvGrpSpPr><ns0:grpSpPr><ns1:xfrm><ns1:off x=\"360000\" y=\"720000\" /><ns1:ext cx=\"720000\" cy=\"1080000\" /><ns1:chOff x=\"0\" y=\"0\" /><ns1:chExt cx=\"360000\" cy=\"360000\" /></ns1:xfrm></ns0:grpSpPr><ns0:grpSp><ns0:nvGrpSpPr><ns0:cNvPr id=\"11\" name=\"nested-flip-rotate\" /><ns0:cNvGrpSpPr /><ns0:nvPr /></ns0:nvGrpSpPr><ns0:grpSpPr><ns1:xfrm rot=\"5400000\" flipH=\"1\"><ns1:off x=\"90000\" y=\"60000\" /><ns1:ext cx=\"180000\" cy=\"120000\" /><ns1:chOff x=\"0\" y=\"0\" /><ns1:chExt cx=\"180000\" cy=\"120000\" /></ns1:xfrm></ns0:grpSpPr><ns0:sp><ns0:nvSpPr><ns0:cNvPr id=\"6\" name=\"group-child\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"30000\" y=\"20000\" /><ns1:ext cx=\"60000\" cy=\"40000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"ABCDEF\" /></ns1:solidFill></ns0:spPr></ns0:sp></ns0:grpSp></ns0:grpSp>",
+      "components": [],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:spPr",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:spPr",
+          "allPaintAlphas": []
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          360000.0,
+          720000.0
+        ],
+        [
+          1800000.0,
+          720000.0
+        ],
+        [
+          1800000.0,
+          3960000.0
+        ],
+        [
+          360000.0,
+          3960000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          10.0,
+          20.0
+        ],
+        [
+          50.0,
+          20.0
+        ],
+        [
+          50.0,
+          110.0
+        ],
+        [
+          10.0,
+          110.0
+        ]
+      ],
+      "basisEMU": [
+        [
+          1440000.0,
+          0.0
+        ],
+        [
+          0.0,
+          3240000.0
+        ]
+      ],
+      "xfrm": {
+        "x": 360000,
+        "y": 720000,
+        "cx": 720000,
+        "cy": 1080000,
+        "chX": 0,
+        "chY": 0,
+        "chCx": 360000,
+        "chCy": 360000
+      }
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "11",
+      "kind": "grpSp",
+      "role": "CONTAINER",
+      "preset": null,
+      "rawXml": "<ns0:grpSp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvGrpSpPr><ns0:cNvPr id=\"11\" name=\"nested-flip-rotate\" /><ns0:cNvGrpSpPr /><ns0:nvPr /></ns0:nvGrpSpPr><ns0:grpSpPr><ns1:xfrm rot=\"5400000\" flipH=\"1\"><ns1:off x=\"90000\" y=\"60000\" /><ns1:ext cx=\"180000\" cy=\"120000\" /><ns1:chOff x=\"0\" y=\"0\" /><ns1:chExt cx=\"180000\" cy=\"120000\" /></ns1:xfrm></ns0:grpSpPr><ns0:sp><ns0:nvSpPr><ns0:cNvPr id=\"6\" name=\"group-child\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"30000\" y=\"20000\" /><ns1:ext cx=\"60000\" cy=\"40000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"ABCDEF\" /></ns1:solidFill></ns0:spPr></ns0:sp></ns0:grpSp>",
+      "components": [],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:spPr",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:spPr",
+          "allPaintAlphas": []
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          840000.0,
+          1350000.0
+        ],
+        [
+          840000.0,
+          810000.0
+        ],
+        [
+          600000.0,
+          810000.0
+        ],
+        [
+          600000.0,
+          1350000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          23.333333333333332,
+          37.5
+        ],
+        [
+          23.333333333333332,
+          22.5
+        ],
+        [
+          16.666666666666668,
+          22.5
+        ],
+        [
+          16.666666666666668,
+          37.5
+        ]
+      ],
+      "basisEMU": [
+        [
+          0.0,
+          -540000.0
+        ],
+        [
+          -240000.0,
+          0.0
+        ]
+      ],
+      "xfrm": {
+        "rot": 5400000,
+        "flipH": true,
+        "x": 90000,
+        "y": 60000,
+        "cx": 180000,
+        "cy": 120000,
+        "chX": 0,
+        "chY": 0,
+        "chCx": 180000,
+        "chCy": 120000
+      }
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "6",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "preset": "rect",
+      "rawXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"6\" name=\"group-child\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"30000\" y=\"20000\" /><ns1:ext cx=\"60000\" cy=\"40000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"ABCDEF\" /></ns1:solidFill></ns0:spPr></ns0:sp>",
+      "components": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/geometry",
+          "nativeId": "6",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "EXPLICIT",
+          "value": "#ABCDEF",
+          "encoding": "HEX_RGB",
+          "rawLexeme": "ABCDEF",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "xml": "<ns0:srgbClr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" val=\"ABCDEF\" />"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/p:spPr",
+          "allPaintAlphas": [
+            {
+              "field": "fill",
+              "rawLexeme": null,
+              "value": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+            }
+          ]
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          800000.0,
+          1260000.0
+        ],
+        [
+          800000.0,
+          1080000.0
+        ],
+        [
+          720000.0,
+          1080000.0
+        ],
+        [
+          720000.0,
+          1260000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          22.22222222222222,
+          35.0
+        ],
+        [
+          22.22222222222222,
+          30.0
+        ],
+        [
+          20.0,
+          30.0
+        ],
+        [
+          20.0,
+          35.0
+        ]
+      ],
+      "basisEMU": [
+        [
+          0.0,
+          -180000.0
+        ],
+        [
+          -80000.0,
+          0.0
+        ]
+      ],
+      "xfrm": {
+        "x": 30000,
+        "y": 20000,
+        "cx": 60000,
+        "cy": 40000
+      }
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "7",
+      "kind": "pic",
+      "role": "DRAWABLE",
+      "preset": null,
+      "rawXml": "<ns0:pic xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:ns2=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><ns0:nvPicPr><ns0:cNvPr id=\"7\" name=\"unsupported-picture\" /><ns0:cNvPicPr /><ns0:nvPr /></ns0:nvPicPr><ns0:blipFill><ns1:blip ns2:embed=\"rMissing\" /></ns0:blipFill><ns0:spPr><ns1:xfrm><ns1:off x=\"0\" y=\"0\" /><ns1:ext cx=\"360000\" cy=\"360000\" /></ns1:xfrm></ns0:spPr></ns0:pic>",
+      "components": [
+        {
+          "kind": "unsupported",
+          "path": "/p:sld/p:cSld/p:spTree/p:pic[1]/unsupported",
+          "nativeId": "7",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/p:spPr",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/p:spPr",
+          "allPaintAlphas": []
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          360000.0,
+          0.0
+        ],
+        [
+          360000.0,
+          360000.0
+        ],
+        [
+          0.0,
+          360000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0
+        ],
+        [
+          10.0,
+          10.0
+        ],
+        [
+          0.0,
+          10.0
+        ]
+      ],
+      "basisEMU": [
+        [
+          360000.0,
+          0.0
+        ],
+        [
+          0.0,
+          360000.0
+        ]
+      ],
+      "xfrm": {
+        "x": 0,
+        "y": 0,
+        "cx": 360000,
+        "cy": 360000
+      }
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "8",
+      "kind": "graphicFrame",
+      "role": "DRAWABLE",
+      "preset": null,
+      "rawXml": "<ns0:graphicFrame xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvGraphicFramePr><ns0:cNvPr id=\"8\" name=\"unsupported-table\" /><ns0:cNvGraphicFramePr /><ns0:nvPr /></ns0:nvGraphicFramePr><ns1:graphic><ns1:graphicData uri=\"table\" /></ns1:graphic></ns0:graphicFrame>",
+      "components": [
+        {
+          "kind": "unsupported",
+          "path": "/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/unsupported",
+          "nativeId": "8",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": null,
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/p:spPr",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/p:spPr",
+          "allPaintAlphas": []
+        }
+      },
+      "orderedCornersEMU": null,
+      "orderedCornersMM": null,
+      "basisEMU": null,
+      "xfrm": null
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "9",
+      "kind": "unknownShape",
+      "role": "DRAWABLE",
+      "preset": null,
+      "rawXml": "<ns0:unknownShape xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><ns0:cNvPr id=\"9\" name=\"future-object\" /></ns0:unknownShape>",
+      "components": [
+        {
+          "kind": "unsupported",
+          "path": "/p:sld/p:cSld/p:spTree/p:unknownShape[1]/unsupported",
+          "nativeId": "9",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": null,
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/p:spPr",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/p:spPr",
+          "allPaintAlphas": []
+        }
+      },
+      "orderedCornersEMU": null,
+      "orderedCornersMM": null,
+      "basisEMU": null,
+      "xfrm": null
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]",
+      "partHash": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "nativeId": "10",
+      "kind": "sp",
+      "role": "HIDDEN",
+      "preset": "rect",
+      "rawXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"10\" name=\"hidden-rect\" hidden=\"1\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"0\" y=\"0\" /><ns1:ext cx=\"360000\" cy=\"360000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"ABCDEF\" /></ns1:solidFill></ns0:spPr></ns0:sp>",
+      "components": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[3]/geometry",
+          "nativeId": "10",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "EXPLICIT",
+          "value": "#ABCDEF",
+          "encoding": "HEX_RGB",
+          "rawLexeme": "ABCDEF",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "xml": "<ns0:srgbClr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" val=\"ABCDEF\" />"
+        },
+        "stroke": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/p:spPr/a:ln",
+          "reason": "RAW_PAINT_NOT_DIRECT_RGB_OR_NOFILL"
+        },
+        "width": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/p:spPr",
+          "allPaintAlphas": [
+            {
+              "field": "fill",
+              "rawLexeme": null,
+              "value": null,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+            }
+          ]
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          360000.0,
+          0.0
+        ],
+        [
+          360000.0,
+          360000.0
+        ],
+        [
+          0.0,
+          360000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0
+        ],
+        [
+          10.0,
+          10.0
+        ],
+        [
+          0.0,
+          10.0
+        ]
+      ],
+      "basisEMU": [
+        [
+          360000.0,
+          0.0
+        ],
+        [
+          0.0,
+          360000.0
+        ]
+      ],
+      "xfrm": {
+        "x": 0,
+        "y": 0,
+        "cx": 360000,
+        "cy": 360000
+      }
+    }
+  ],
+  "requiredLossProperties": [
+    "type",
+    "geometry",
+    "text",
+    "color",
+    "stroke",
+    "fill",
+    "width",
+    "dash",
+    "opacity",
+    "font",
+    "sourceIdentity",
+    "unsupported",
+    "hidden",
+    "background",
+    "customPath",
+    "unitHeader"
+  ],
+  "targetDialect": "AC1009_BOUNDED_REVIEW_ONLY",
+  "unitHeaderStatus": "UNIT_HEADER_METADATA_UNAVAILABLE",
+  "headerMetadataProvesNumericUnits": false,
+  "actualJwCad": "NOT_RUN",
+  "productGate": "HOLD",
+  "appearanceFidelity": "NOT_QUALIFIED_SYNTHETIC_REVIEW_DISPLAY_ONLY",
+  "boundedAdapterQualificationHEAD": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+  "preBackendResultsSeen": false,
+  "targetLogicalEntityCount": 3,
+  "targetRawEntityRecordCount": 8,
+  "pins": {
+    "originalPropertyTruthSHA256": "9e6fadb901d6534512722fe3f3043753095436e46815f8fc13d66261620a798b",
+    "qualifiedB2ResultSHA256": "3fea22f167c76a983b5210f1c34e5f97ea8d56fc9b32f2e659b00ced2246b7e9",
+    "B2HEAD": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098"
+  }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "package": "native-vdraw-n01",
+    "sourceObjects": 6,
+    "sourceComponents": 8,
+    "sourceGeometry": 6,
+    "sourceText": 2,
+    "IRGeometry": 6,
+    "logicalDXFExpected": 5,
+    "rawDXFExpected": 20,
+    "pages": 1
+  },
+  {
+    "package": "generic-synthetic-g01",
+    "sourceObjects": 9,
+    "sourceComponents": 9,
+    "sourceGeometry": 5,
+    "sourceText": 1,
+    "IRGeometry": 4,
+    "logicalDXFExpected": 4,
+    "rawDXFExpected": 14,
+    "pages": 1
+  },
+  {
+    "package": "generic-synthetic-g02-nested",
+    "sourceObjects": 10,
+    "sourceComponents": 9,
+    "sourceGeometry": 5,
+    "sourceText": 1,
+    "IRGeometry": 3,
+    "logicalDXFExpected": 3,
+    "rawDXFExpected": 8,
+    "pages": 1
+  },
+  {
+    "package": "synthetic-g03-expanded",
+    "sourceObjects": 15,
+    "sourceComponents": 17,
+    "sourceGeometry": 12,
+    "sourceText": 4,
+    "IRGeometry": 6,
+    "logicalDXFExpected": 6,
+    "rawDXFExpected": 21,
+    "pages": 2
+  },
+  {
+    "package": "explicit-paint-width-alpha-witness",
+    "sourceObjects": 1,
+    "sourceComponents": 1,
+    "sourceGeometry": 1,
+    "sourceText": 0,
+    "IRGeometry": 1,
+    "logicalDXFExpected": 1,
+    "rawDXFExpected": 6,
+    "pages": 1
+  },
+  {
+    "package": "synthetic-g04-property-witness",
+    "sourceObjects": 3,
+    "sourceComponents": 3,
+    "sourceGeometry": 3,
+    "sourceText": 0,
+    "IRGeometry": 3,
+    "logicalDXFExpected": 3,
+    "rawDXFExpected": 13,
+    "pages": 1
+  }
+]
