@@ -1,0 +1,17 @@
+[WORK_DISPATCH_V1]
+# Track A continuation — candidate.2 minimal unknown-style representation
+instruction_id: VDRAW-PHASE1-A-STYLE-UNKNOWN-20261007-V1
+project: dksc-camera-001-test
+expected_branch: work/vdraw-drawing-ir-v1
+expected_head: 3e1f6892ff5c6b06644b07b8247ccd9053b978db
+
+Existing candidate.1 is immutable and stays pinned to schema 65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8 and validator 8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e. No redevelopment. Create a separate versioned candidate-2 directory under drawing-ir/ with new version/schema/validator/hash/new focused tests. Never edit prior candidate.1 files or Golden/tests.
+
+Observed blocker from B Round3: g03 source 15 objects /17 components plus reader infrastructure 8/background1 (reader24 objects /18 components), geometry denominator12, known geometry candidates8, represented IR objects0. Candidate.1 requires numeric width/opacity/dash and therefore unresolved appearance suppresses known geometry. New scope ONLY resolves this representation issue; do not infer OOXML defaults or implement text layout/DXF/UI.
+
+Allow known primitive geometry with explicitly UNRESOLVED style fields, retaining source reference and UNKNOWN status. Style width/dash/opacity may be null when unresolved; stroke/fill null must distinguish noFill from unknown via required per-field resolution states/provenance. Resolution for stroke/fill/width/dash/opacity must distinguish EXPLICIT / validated SPEC_DEFAULT / UNRESOLVED / NOT_APPLICABLE (define tight value/state rules). Preserve raw XML/lexemes in native source/evidence, never fabricate numeric/default values. Evidence IDs for known attributes and default policy must be explicit and validated; label-only provenance cannot prove correctness.
+Known geometry may be source REPRESENTED while unresolved properties stay flagged via object status/issues/property ledger. Do not narrow all-source geometry or text denominator. validateDrawingIR must reject export readiness FULL when any relevant unresolved/unsupported property exists; allow PARTIAL/HOLD accounting without faithful target PASS. Full target retention of geometry is distinct from appearance fidelity. Source semantic category/confidence/calibration/units must retain existing UNKNOWN/UNMEASURED/UNSCALED gates.
+
+Keep transform/unit/calibration/geometry algorithms exactly pinned unless a concrete defect requires separately reported correction. Text anchor/baseline/font remains unsupported/ledgered this round; no nullable text geometry broadening. Focused tests: known geometry+unknown style passes structure but remains HOLD; unresolved nonnull fake defaults rejected; noFill vs unknown distinct; omitted resolution/provenance rejected; known values without Evidence rejected; unresolved appearance forbids FULL; unchanged False PASS guards (source omission, calibration/unit/transform) stay effective. Test new candidate only as necessary; do not rerun completed candidate.1 production/regression work.
+
+Save candidate.2 HANDOFF/Evidence/hash/new test logs on existing A branch using expected-head lease. Report exact new file paths and containing fixed HEAD. G independently reviews before any candidate.2 pin/adoption. main/validation/006/signing/SAVE001/editor/storage/UI/APK/CDEF untouched. No reset/rebase/clean/removal/skip. Human final product HOLD. This is a bounded contract delta, not product acceptance.
