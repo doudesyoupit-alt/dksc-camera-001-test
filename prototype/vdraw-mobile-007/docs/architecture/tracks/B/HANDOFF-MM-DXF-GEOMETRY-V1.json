@@ -1,0 +1,369 @@
+{
+  "schema": "vdraw-track-b-mm-dxf-handoff/1",
+  "instructionId": "VDRAW-PHASE1-B-MM-DXF-GEOMETRY-V1",
+  "branch": "work/vdraw-pptx-jwcad-v1",
+  "pins": {
+    "dispatchHead": "35e4af831af7424aa213e25712c499eaf86f7c4c",
+    "expectedBHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "A2Head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "candidate2SchemaSha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "candidate2ValidatorSha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "G2QualificationHead": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+    "GPreOutputOracleAndComparatorHead": "3641ea71d438d5cdf85af1f664761b4ab77cdc1f"
+  },
+  "status": "ISOLATED_MM_DXF_GEOMETRY_REVIEW_READY_FOR_G",
+  "gates": {
+    "backendCandidate": "ISOLATED_MM_DXF_GEOMETRY_REVIEW_READY_FOR_G",
+    "export": "PARTIAL_HUMAN_CHECK_REQUIRED",
+    "product": "HOLD",
+    "actualJwCad": "NOT_RUN",
+    "fullFidelity": "NOT_ESTABLISHED",
+    "sourceAppearance": "NOT_RETAINED",
+    "automaticImportUnitMetadata": "UNIT_HEADER_METADATA_UNAVAILABLE",
+    "realWorldScale": "UNSCALED",
+    "independentGDXFQA": "PENDING"
+  },
+  "newTestResults": {
+    "command": "node --test routes/dxf/tests/mm-geometry-review.test.mjs",
+    "newNamedTests": 33,
+    "pass": 33,
+    "fail": 0,
+    "skip": 0,
+    "oldSuitesRerun": false,
+    "tap": {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/mm-geometry-review.tap",
+      "bytes": 6839,
+      "sha256": "cdb5f97621c84c316cde4145bf5f7a067d66fb7b270122485e964ef5a4895b07",
+      "git_blob_sha": "82b4384a8cec4c3867e0ea850c77b19f25a762b4"
+    },
+    "scope": "BACKEND_FOCUSED_ONLY; INDEPENDENT G SOURCE/OUTPUT QA PENDING"
+  },
+  "sixFixtureTotals": {
+    "allObjects": 71,
+    "allComponents": 50,
+    "allInventory": 121,
+    "geometry": 32,
+    "text": 8,
+    "IRGeometry": 23,
+    "pageFiles": 7,
+    "logicalEntities": 22,
+    "rawEntityRecords": 82,
+    "propertyLossInventoryRows": 121,
+    "propertyLossFields": 726,
+    "targetUnsupportedIREllipse": 1,
+    "textRetained": 0
+  },
+  "sourceSemantics": {
+    "originalSemanticObjects": 44,
+    "originalSemanticComponents": 47,
+    "fullInventoryCountsIncludeInfrastructureAndBackground": true,
+    "semanticCountsExcludeInfrastructureAndBackground": true,
+    "geometryDenominatorUnchanged": 32
+  },
+  "fixtures": [
+    {
+      "fixture": "generic-synthetic-g01",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "724723b57abbc436eb7b34cac6b4430af2ec897c85868df652939725aa7f3686",
+      "sourceDenominators": {
+        "allObjects": 14,
+        "allComponents": 10,
+        "allInventory": 24,
+        "geometry": 5,
+        "text": 1,
+        "IRGeometry": 4
+      },
+      "logicalEntityCount": 4,
+      "rawEntityRecordCount": 14,
+      "geometryRetainedCount": 4,
+      "excludedOrBlockedSourceInventory": 20,
+      "propertyLossInventoryRows": 24,
+      "propertyLossFields": 144,
+      "files": [
+        {
+          "filename": "vdraw-review-9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c-p001.dxf",
+          "sha256": "a4fff03d86fb42116ba089a50b0f300826010d7801e40c3d29c4d92609ff1cb6",
+          "bytes": 1490,
+          "pageId": "page-0",
+          "logicalEntityCount": 4,
+          "rawEntityRecordCount": 14,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "generic-synthetic-g02-nested",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "c17122d79cb36090c07dc72bef5a2ae627b7d5f5bc583a89a6d5f46ea827cfab",
+      "sourceDenominators": {
+        "allObjects": 17,
+        "allComponents": 10,
+        "allInventory": 27,
+        "geometry": 5,
+        "text": 1,
+        "IRGeometry": 3
+      },
+      "logicalEntityCount": 3,
+      "rawEntityRecordCount": 8,
+      "geometryRetainedCount": 3,
+      "excludedOrBlockedSourceInventory": 24,
+      "propertyLossInventoryRows": 27,
+      "propertyLossFields": 162,
+      "files": [
+        {
+          "filename": "vdraw-review-4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e-p001.dxf",
+          "sha256": "09fcc936721dfffa42bf215a4f5fb665cdaf35f374c11c2551df2a99b257506a",
+          "bytes": 1029,
+          "pageId": "page-0",
+          "logicalEntityCount": 3,
+          "rawEntityRecordCount": 8,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "native-vdraw-n01",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "ddffab6ae0662ec8a79e3490ba8bc5ad275266b04134aaff1ed56031ce666f03",
+      "sourceDenominators": {
+        "allObjects": 8,
+        "allComponents": 8,
+        "allInventory": 16,
+        "geometry": 6,
+        "text": 2,
+        "IRGeometry": 6
+      },
+      "logicalEntityCount": 5,
+      "rawEntityRecordCount": 20,
+      "geometryRetainedCount": 5,
+      "excludedOrBlockedSourceInventory": 11,
+      "propertyLossInventoryRows": 16,
+      "propertyLossFields": 96,
+      "files": [
+        {
+          "filename": "vdraw-review-20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2-p001.dxf",
+          "sha256": "7b524038db99e20c0b5bc2666a3722892650f8667136aef16e5c94d7612288a1",
+          "bytes": 2399,
+          "pageId": "page-0",
+          "logicalEntityCount": 5,
+          "rawEntityRecordCount": 20,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "synthetic-g03-expanded",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "57fcf94f7d1205361bc4111eac4172686f448479fd48eaf67505f90b973c1a57",
+      "sourceDenominators": {
+        "allObjects": 24,
+        "allComponents": 18,
+        "allInventory": 42,
+        "geometry": 12,
+        "text": 4,
+        "IRGeometry": 6
+      },
+      "logicalEntityCount": 6,
+      "rawEntityRecordCount": 21,
+      "geometryRetainedCount": 6,
+      "excludedOrBlockedSourceInventory": 36,
+      "propertyLossInventoryRows": 42,
+      "propertyLossFields": 252,
+      "files": [
+        {
+          "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p001.dxf",
+          "sha256": "ebba64b747a64882c052bc7ab2c42b4ef010f8bf0a681a6604fcf041af0793f0",
+          "bytes": 849,
+          "pageId": "page-0",
+          "logicalEntityCount": 1,
+          "rawEntityRecordCount": 6,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        },
+        {
+          "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+          "sha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+          "bytes": 1649,
+          "pageId": "page-1",
+          "logicalEntityCount": 5,
+          "rawEntityRecordCount": 15,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "explicit-paint-width-alpha-witness",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "01dfd16248b7de42ed9b2c63164354d2c432406a517273d1437844054d4811a7",
+      "sourceDenominators": {
+        "allObjects": 3,
+        "allComponents": 1,
+        "allInventory": 4,
+        "geometry": 1,
+        "text": 0,
+        "IRGeometry": 1
+      },
+      "logicalEntityCount": 1,
+      "rawEntityRecordCount": 6,
+      "geometryRetainedCount": 1,
+      "excludedOrBlockedSourceInventory": 3,
+      "propertyLossInventoryRows": 4,
+      "propertyLossFields": 24,
+      "files": [
+        {
+          "filename": "vdraw-review-9e78716fb9ec13708d93dadd3448dd18894bb6f5b5cedfbb490ac5a33bed0d52-p001.dxf",
+          "sha256": "0e94dbd0f2c4118d4ba01089658ace4b4b953cabf60511d957f4bfdf63aa5261",
+          "bytes": 855,
+          "pageId": "page-0",
+          "logicalEntityCount": 1,
+          "rawEntityRecordCount": 6,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "synthetic-g04-property-witness",
+      "sourceAdapterResultHead": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+      "inputEnvelopeSha256": "0d65b46b24f4b8a2fcd916155e7427b0fcc22f924e3e81a9d7541cc103b3975a",
+      "sourceDenominators": {
+        "allObjects": 5,
+        "allComponents": 3,
+        "allInventory": 8,
+        "geometry": 3,
+        "text": 0,
+        "IRGeometry": 3
+      },
+      "logicalEntityCount": 3,
+      "rawEntityRecordCount": 13,
+      "geometryRetainedCount": 3,
+      "excludedOrBlockedSourceInventory": 5,
+      "propertyLossInventoryRows": 8,
+      "propertyLossFields": 48,
+      "files": [
+        {
+          "filename": "vdraw-review-5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb-p001.dxf",
+          "sha256": "3597dfbf00785d4b2a50b3e5d833238bbe868a8e08b013d4b2af2049fbac6784",
+          "bytes": 1398,
+          "pageId": "page-0",
+          "logicalEntityCount": 3,
+          "rawEntityRecordCount": 13,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    }
+  ],
+  "unit": {
+    "physicalUnit": "MM",
+    "role": "LAYOUT",
+    "yAxis": "UP",
+    "scale": "UNSCALED",
+    "INSUNITS": "OMITTED",
+    "actualJwUnitGuarantee": false,
+    "drawingGeometryConvertedAgain": false
+  },
+  "module": "prototype/vdraw-mobile-007/routes/dxf/mm-geometry-review.mjs",
+  "README": "prototype/vdraw-mobile-007/routes/dxf/MM-GEOMETRY-REVIEW-V1.md",
+  "evidence": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/EVIDENCE-MM-DXF-GEOMETRY-V1.json",
+  "blockers": [
+    "Independent G actual-byte parsing/source comparison pending.",
+    "Actual Jw_cad Open/Edit/Save/Round-trip not performed.",
+    "Automatic import unit metadata omitted; actual Jw mm import/known-length verification required.",
+    "Text/font, source color/fill/width/dash/opacity and ellipse/arc are not retained in target; all remain explicit in ledgers.",
+    "Original custom-path coordinate frame, inherited/uncertain geometry and unsupported source parts remain blocked as in fixed B2."
+  ],
+  "preservation": {
+    "appendOnly": true,
+    "preexistingBlobCount": 639,
+    "oldReaderAdapterTestsEvidenceChanged": false,
+    "candidate2ContractChanged": false,
+    "protectedProductPathsChanged": false
+  },
+  "next": "G parses fixed actual ASCII bytes against its pre-output original-source oracle; product and actual Jw remain HOLD."
+}

@@ -1,0 +1,603 @@
+{
+  "schema": "vdraw-track-b-mm-dxf-evidence/1",
+  "pins": {
+    "dispatchHead": "35e4af831af7424aa213e25712c499eaf86f7c4c",
+    "expectedBHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "A2Head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "candidate2SchemaSha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "candidate2ValidatorSha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "G2QualificationHead": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+    "GPreOutputOracleAndComparatorHead": "3641ea71d438d5cdf85af1f664761b4ab77cdc1f"
+  },
+  "newTestResults": {
+    "command": "node --test routes/dxf/tests/mm-geometry-review.test.mjs",
+    "newNamedTests": 33,
+    "pass": 33,
+    "fail": 0,
+    "skip": 0,
+    "oldSuitesRerun": false,
+    "tap": {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/mm-geometry-review.tap",
+      "bytes": 6839,
+      "sha256": "cdb5f97621c84c316cde4145bf5f7a067d66fb7b270122485e964ef5a4895b07",
+      "git_blob_sha": "82b4384a8cec4c3867e0ea850c77b19f25a762b4"
+    },
+    "scope": "BACKEND_FOCUSED_ONLY; INDEPENDENT G SOURCE/OUTPUT QA PENDING"
+  },
+  "sixFixtureTotals": {
+    "allObjects": 71,
+    "allComponents": 50,
+    "allInventory": 121,
+    "geometry": 32,
+    "text": 8,
+    "IRGeometry": 23,
+    "pageFiles": 7,
+    "logicalEntities": 22,
+    "rawEntityRecords": 82,
+    "propertyLossInventoryRows": 121,
+    "propertyLossFields": 726,
+    "targetUnsupportedIREllipse": 1,
+    "textRetained": 0
+  },
+  "gates": {
+    "backendCandidate": "ISOLATED_MM_DXF_GEOMETRY_REVIEW_READY_FOR_G",
+    "export": "PARTIAL_HUMAN_CHECK_REQUIRED",
+    "product": "HOLD",
+    "actualJwCad": "NOT_RUN",
+    "fullFidelity": "NOT_ESTABLISHED",
+    "sourceAppearance": "NOT_RETAINED",
+    "automaticImportUnitMetadata": "UNIT_HEADER_METADATA_UNAVAILABLE",
+    "realWorldScale": "UNSCALED",
+    "independentGDXFQA": "PENDING"
+  },
+  "fixtures": [
+    {
+      "fixture": "generic-synthetic-g01",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "724723b57abbc436eb7b34cac6b4430af2ec897c85868df652939725aa7f3686",
+      "sourceDenominators": {
+        "allObjects": 14,
+        "allComponents": 10,
+        "allInventory": 24,
+        "geometry": 5,
+        "text": 1,
+        "IRGeometry": 4
+      },
+      "logicalEntityCount": 4,
+      "rawEntityRecordCount": 14,
+      "geometryRetainedCount": 4,
+      "excludedOrBlockedSourceInventory": 20,
+      "propertyLossInventoryRows": 24,
+      "propertyLossFields": 144,
+      "files": [
+        {
+          "filename": "vdraw-review-9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c-p001.dxf",
+          "sha256": "a4fff03d86fb42116ba089a50b0f300826010d7801e40c3d29c4d92609ff1cb6",
+          "bytes": 1490,
+          "pageId": "page-0",
+          "logicalEntityCount": 4,
+          "rawEntityRecordCount": 14,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "generic-synthetic-g02-nested",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "c17122d79cb36090c07dc72bef5a2ae627b7d5f5bc583a89a6d5f46ea827cfab",
+      "sourceDenominators": {
+        "allObjects": 17,
+        "allComponents": 10,
+        "allInventory": 27,
+        "geometry": 5,
+        "text": 1,
+        "IRGeometry": 3
+      },
+      "logicalEntityCount": 3,
+      "rawEntityRecordCount": 8,
+      "geometryRetainedCount": 3,
+      "excludedOrBlockedSourceInventory": 24,
+      "propertyLossInventoryRows": 27,
+      "propertyLossFields": 162,
+      "files": [
+        {
+          "filename": "vdraw-review-4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e-p001.dxf",
+          "sha256": "09fcc936721dfffa42bf215a4f5fb665cdaf35f374c11c2551df2a99b257506a",
+          "bytes": 1029,
+          "pageId": "page-0",
+          "logicalEntityCount": 3,
+          "rawEntityRecordCount": 8,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "native-vdraw-n01",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "ddffab6ae0662ec8a79e3490ba8bc5ad275266b04134aaff1ed56031ce666f03",
+      "sourceDenominators": {
+        "allObjects": 8,
+        "allComponents": 8,
+        "allInventory": 16,
+        "geometry": 6,
+        "text": 2,
+        "IRGeometry": 6
+      },
+      "logicalEntityCount": 5,
+      "rawEntityRecordCount": 20,
+      "geometryRetainedCount": 5,
+      "excludedOrBlockedSourceInventory": 11,
+      "propertyLossInventoryRows": 16,
+      "propertyLossFields": 96,
+      "files": [
+        {
+          "filename": "vdraw-review-20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2-p001.dxf",
+          "sha256": "7b524038db99e20c0b5bc2666a3722892650f8667136aef16e5c94d7612288a1",
+          "bytes": 2399,
+          "pageId": "page-0",
+          "logicalEntityCount": 5,
+          "rawEntityRecordCount": 20,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "synthetic-g03-expanded",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "57fcf94f7d1205361bc4111eac4172686f448479fd48eaf67505f90b973c1a57",
+      "sourceDenominators": {
+        "allObjects": 24,
+        "allComponents": 18,
+        "allInventory": 42,
+        "geometry": 12,
+        "text": 4,
+        "IRGeometry": 6
+      },
+      "logicalEntityCount": 6,
+      "rawEntityRecordCount": 21,
+      "geometryRetainedCount": 6,
+      "excludedOrBlockedSourceInventory": 36,
+      "propertyLossInventoryRows": 42,
+      "propertyLossFields": 252,
+      "files": [
+        {
+          "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p001.dxf",
+          "sha256": "ebba64b747a64882c052bc7ab2c42b4ef010f8bf0a681a6604fcf041af0793f0",
+          "bytes": 849,
+          "pageId": "page-0",
+          "logicalEntityCount": 1,
+          "rawEntityRecordCount": 6,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        },
+        {
+          "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+          "sha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+          "bytes": 1649,
+          "pageId": "page-1",
+          "logicalEntityCount": 5,
+          "rawEntityRecordCount": 15,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "explicit-paint-width-alpha-witness",
+      "sourceAdapterResultHead": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "inputEnvelopeSha256": "01dfd16248b7de42ed9b2c63164354d2c432406a517273d1437844054d4811a7",
+      "sourceDenominators": {
+        "allObjects": 3,
+        "allComponents": 1,
+        "allInventory": 4,
+        "geometry": 1,
+        "text": 0,
+        "IRGeometry": 1
+      },
+      "logicalEntityCount": 1,
+      "rawEntityRecordCount": 6,
+      "geometryRetainedCount": 1,
+      "excludedOrBlockedSourceInventory": 3,
+      "propertyLossInventoryRows": 4,
+      "propertyLossFields": 24,
+      "files": [
+        {
+          "filename": "vdraw-review-9e78716fb9ec13708d93dadd3448dd18894bb6f5b5cedfbb490ac5a33bed0d52-p001.dxf",
+          "sha256": "0e94dbd0f2c4118d4ba01089658ace4b4b953cabf60511d957f4bfdf63aa5261",
+          "bytes": 855,
+          "pageId": "page-0",
+          "logicalEntityCount": 1,
+          "rawEntityRecordCount": 6,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    },
+    {
+      "fixture": "synthetic-g04-property-witness",
+      "sourceAdapterResultHead": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+      "inputEnvelopeSha256": "0d65b46b24f4b8a2fcd916155e7427b0fcc22f924e3e81a9d7541cc103b3975a",
+      "sourceDenominators": {
+        "allObjects": 5,
+        "allComponents": 3,
+        "allInventory": 8,
+        "geometry": 3,
+        "text": 0,
+        "IRGeometry": 3
+      },
+      "logicalEntityCount": 3,
+      "rawEntityRecordCount": 13,
+      "geometryRetainedCount": 3,
+      "excludedOrBlockedSourceInventory": 5,
+      "propertyLossInventoryRows": 8,
+      "propertyLossFields": 48,
+      "files": [
+        {
+          "filename": "vdraw-review-5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb-p001.dxf",
+          "sha256": "3597dfbf00785d4b2a50b3e5d833238bbe868a8e08b013d4b2af2049fbac6784",
+          "bytes": 1398,
+          "pageId": "page-0",
+          "logicalEntityCount": 3,
+          "rawEntityRecordCount": 13,
+          "coordinatePhysicalUnit": "MM",
+          "coordinateUnitRole": "LAYOUT",
+          "yAxis": "UP",
+          "scaleStatus": "UNSCALED",
+          "unitHeaderMetadata": "UNAVAILABLE_INSUNITS_OMITTED"
+        }
+      ],
+      "evaluationValidation": {
+        "ok": true,
+        "errors": [],
+        "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+        "scope": "IR_CONTRACT_ONLY",
+        "productGate": "HOLD"
+      },
+      "exportStatus": "PARTIAL_HUMAN_CHECK_REQUIRED",
+      "productGate": "HOLD",
+      "actualJwCad": "NOT_RUN"
+    }
+  ],
+  "newDeliverableHashes": [
+    {
+      "path": "prototype/vdraw-mobile-007/routes/dxf/MM-GEOMETRY-REVIEW-V1.md",
+      "bytes": 4709,
+      "sha256": "96078ea93dea376a51098734a402bd45ff9aab43b121116938ffbcd0c400cae4",
+      "git_blob_sha": "63464bc4257dcbe3abb4889267e5ae475b4abc68"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/dxf/fixtures/synthetic-g04-property-witness.adapter-result.json",
+      "bytes": 83554,
+      "sha256": "4e004e1198856747c1638af0bd3b36e2ba5c3237255ee1d90958d3523594fffc",
+      "git_blob_sha": "46f70889cc48cf913144335de285a9f6506406d9"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/dxf/mm-geometry-review.mjs",
+      "bytes": 20233,
+      "sha256": "72dc0251ca4f218c16c02b6b6d79216393a5827a7ee132b2deddf4e7022733b9",
+      "git_blob_sha": "228a2ecddecb0a5d725b54480edaf6251df3a9b0"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/dxf/tests/capture-mm-dxf-evidence.mjs",
+      "bytes": 2661,
+      "sha256": "181716dc1ec89ce8235161e8870725e58f9377c9f2c66243d36d1a8de623241b",
+      "git_blob_sha": "d343761d5ed2571aa8fdabc9e6aca43e63a0dc6e"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/dxf/tests/mm-geometry-review.test.mjs",
+      "bytes": 15248,
+      "sha256": "d23b25185d6081b6585a024d3f8748a1dddd5398dbb3cce9f088b1f3498e546a",
+      "git_blob_sha": "3c500f43cbe5bc4368d7dfc0997fba309ba42dca"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/DXF-GEOMETRY-SUMMARY-V1.json",
+      "bytes": 9239,
+      "sha256": "1d70825741bcfe47bebab6d1f29dcd96d5a5649113fff3eeab64519153cd398c",
+      "git_blob_sha": "612b5d957a6e13865c3405211f49153f0e259cb8"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/explicit-paint-width-alpha-witness.evaluated-ir.json",
+      "bytes": 16799,
+      "sha256": "d49766a142585c03d9454ba4650f61c602e7be61b5166a236b3e5d19bf50d773",
+      "git_blob_sha": "a23b83fdb01e3f6a070e00d793f211c5459276bc"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/explicit-paint-width-alpha-witness.loss-ledger.json",
+      "bytes": 19995,
+      "sha256": "d62edbecc7a78e6c762dfe0437388baa395a9a26017bb8be1b887198ebd2a97a",
+      "git_blob_sha": "bb6f7f50b9b0ad99d386cd85cb4177f0a2335938"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/explicit-paint-width-alpha-witness.manifest.json",
+      "bytes": 41637,
+      "sha256": "3e97c6844301f82f1ccb024c806c4133075be5b9f038713b8a7a2c492e625e2e",
+      "git_blob_sha": "32720c98e010ea6f496cf17c48d711279563640f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/explicit-paint-width-alpha-witness.source-entity-map.json",
+      "bytes": 1034,
+      "sha256": "47ac749383657f5e2ac0210ee4cfff6a3a35865b4676be01f9629dc4da8ae14e",
+      "git_blob_sha": "9d8295aa5b50c3d7fb9c5a605180bfde214af989"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g01.evaluated-ir.json",
+      "bytes": 70023,
+      "sha256": "8e64d5af37150986875b310b8e7977d810656762d1d856ad83c6ece5acb66214",
+      "git_blob_sha": "43492278b12689d0d10b08a4bd0824253be42c43"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g01.loss-ledger.json",
+      "bytes": 116874,
+      "sha256": "f14a22372c4d600d3ee4c78c7a0d57bca756abd09a65db74cfdd4d86f6704772",
+      "git_blob_sha": "5f93abfab95ec583289e529c8d3992950be0dfb8"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g01.manifest.json",
+      "bytes": 206572,
+      "sha256": "cdb0e4521490dca97660287daeb0a7ea379cf4dae4454bc3560a57a07fb7d0e9",
+      "git_blob_sha": "ccbd8d1db4af367edf9f2974d1c2815b2486dda2"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g01.source-entity-map.json",
+      "bytes": 4001,
+      "sha256": "870db1b21b7e1540415a9901a9219d95446aa60447aabc7e715a432a127467d5",
+      "git_blob_sha": "22a9570d578f8abceac262c95939e09e28024529"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g02-nested.evaluated-ir.json",
+      "bytes": 63239,
+      "sha256": "429d3d5f7c86d6b1ef5d1125cbf857eb24f8c7c75b0ac1bdf6e58af5012c3b0d",
+      "git_blob_sha": "5228345031fdd55557664d00f9367f60f027773f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g02-nested.loss-ledger.json",
+      "bytes": 121878,
+      "sha256": "5d0198be31acae6793ef38fddfde478e47993e4a446e76c5cd58801ebab3251b",
+      "git_blob_sha": "41fe90f504e91f46403559f4e45c7fe6ccb80f2c"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g02-nested.manifest.json",
+      "bytes": 214238,
+      "sha256": "fb2291e33f3c3b70a236c0cc93beff69710812f9924d425de12e217543256cb9",
+      "git_blob_sha": "1e8267161e02c8614272335ed4ad58c0368e8f97"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/generic-synthetic-g02-nested.source-entity-map.json",
+      "bytes": 2959,
+      "sha256": "fedf0684a5a98a5a8fedf0898aa29ed35d73e80f521e7941583ed552f4485c52",
+      "git_blob_sha": "6d587232cc27a35267a5d6126f3c28d0d3c47a8d"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/mm-geometry-review.tap",
+      "bytes": 6839,
+      "sha256": "cdb5f97621c84c316cde4145bf5f7a067d66fb7b270122485e964ef5a4895b07",
+      "git_blob_sha": "82b4384a8cec4c3867e0ea850c77b19f25a762b4"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/native-vdraw-n01.evaluated-ir.json",
+      "bytes": 73146,
+      "sha256": "94ecb0688c0af2f9bf8e278167896a51ee4b4c303d9e2ccda808f27bdd64f42c",
+      "git_blob_sha": "66fff99e7f5287259e5d0d02839de8706d769b0e"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/native-vdraw-n01.loss-ledger.json",
+      "bytes": 116498,
+      "sha256": "1c0cc3ab723d58baf4902b9021f0274e055e4099390f8557c5b1474211320ad2",
+      "git_blob_sha": "511c24931b4cdd884af8718af8fa358f5da7077f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/native-vdraw-n01.manifest.json",
+      "bytes": 199472,
+      "sha256": "e5b21c71bef6fe0ed52e3689f38d4b6fbf3472ffefcb010a7b36a4772ec4b098",
+      "git_blob_sha": "79f2c5a8fd0eece9f2160d98de1551c399ce3b29"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/native-vdraw-n01.source-entity-map.json",
+      "bytes": 5014,
+      "sha256": "c49d726b4393730309195bccf18f53024aa9c629647cfcbc282866e9b97e74fa",
+      "git_blob_sha": "f80df9cb11c9b48a985e1b8012b99976cd30391d"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g03-expanded.evaluated-ir.json",
+      "bytes": 128106,
+      "sha256": "3ba104a341f4295aeaf43ba06aabcc3501672206ccc6338d23d58eb4c3bd0f60",
+      "git_blob_sha": "40486128fa31be0382d3d3ae4ada9d5eb8e88173"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g03-expanded.loss-ledger.json",
+      "bytes": 237274,
+      "sha256": "7094a8d20840309c4e02d94a7bb04a080e62ee1806804d52d7aa6f997ad19da2",
+      "git_blob_sha": "66cce096fbe0a74c8ff015fe29815821ee50be8f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g03-expanded.manifest.json",
+      "bytes": 421776,
+      "sha256": "e5b2bfef2a95f35682758313cc8a9c2f2225d8902a2f832ed3f0ce2970b570ce",
+      "git_blob_sha": "486de249ec07eaacd839ad0a1941942b59b2a646"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g03-expanded.source-entity-map.json",
+      "bytes": 5991,
+      "sha256": "e970471d756a061d2d41d476639e80d245c8258407c59304873e3ff71e2466b0",
+      "git_blob_sha": "f5eec8301d4b10bde2911bf84165d9507250474d"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g04-property-witness.evaluated-ir.json",
+      "bytes": 36717,
+      "sha256": "198ae1437a6e6fe1f45752201b040ae971ecb32d36397a0c4d60c5f463e83fe2",
+      "git_blob_sha": "ab5e0806f8c641e281bb7676162113fb696522e1"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g04-property-witness.loss-ledger.json",
+      "bytes": 46891,
+      "sha256": "e4256db3abb7c3119d2107e0be3c56ab31e746351d6b1b35159d069bd8bc4ac2",
+      "git_blob_sha": "3bb3d398280586eac2e47bc4478d7b946f01ae6f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g04-property-witness.manifest.json",
+      "bytes": 89896,
+      "sha256": "8a1d12b3ef18a3f2f13638ccc04c69fdae3ee308c83241a4b7587361a70c3b2d",
+      "git_blob_sha": "b98ff798aa7ff24723699f57b185db5659d3613d"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/synthetic-g04-property-witness.source-entity-map.json",
+      "bytes": 3024,
+      "sha256": "9aaf87ead946fc89de4040461fa3b673ce818c15dae79fda4d183c236d70a881",
+      "git_blob_sha": "34de235fd43d91a4120b8b920669cad06cc94e2e"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/vdraw-review-20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2-p001.dxf",
+      "bytes": 2399,
+      "sha256": "7b524038db99e20c0b5bc2666a3722892650f8667136aef16e5c94d7612288a1",
+      "git_blob_sha": "2f1ee89ea370c90f9859a3ad0b721691d8b23cec"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/vdraw-review-4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e-p001.dxf",
+      "bytes": 1029,
+      "sha256": "09fcc936721dfffa42bf215a4f5fb665cdaf35f374c11c2551df2a99b257506a",
+      "git_blob_sha": "956be256eed99bec0a99a75e74e4b3d8617fb19a"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/vdraw-review-5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb-p001.dxf",
+      "bytes": 1398,
+      "sha256": "3597dfbf00785d4b2a50b3e5d833238bbe868a8e08b013d4b2af2049fbac6784",
+      "git_blob_sha": "ac15e3de9d0cfb66b7cea624744b5b230032fb0f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p001.dxf",
+      "bytes": 849,
+      "sha256": "ebba64b747a64882c052bc7ab2c42b4ef010f8bf0a681a6604fcf041af0793f0",
+      "git_blob_sha": "8643b94bffe11b2f5b3ac55434eedf718ec6c864"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+      "bytes": 1649,
+      "sha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+      "git_blob_sha": "37e4e08c1f36d0f5374e4b5c48fb2c39f140c072"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/vdraw-review-9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c-p001.dxf",
+      "bytes": 1490,
+      "sha256": "a4fff03d86fb42116ba089a50b0f300826010d7801e40c3d29c4d92609ff1cb6",
+      "git_blob_sha": "92f2a053c7253feb157d3df9436549155386b8b3"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/mm-dxf-evidence/vdraw-review-9e78716fb9ec13708d93dadd3448dd18894bb6f5b5cedfbb490ac5a33bed0d52-p001.dxf",
+      "bytes": 855,
+      "sha256": "0e94dbd0f2c4118d4ba01089658ace4b4b953cabf60511d957f4bfdf63aa5261",
+      "git_blob_sha": "085e2560ed3a8685a6f7d81708b2f84a26d00632"
+    }
+  ],
+  "sourceRetention": {
+    "allGlobalInventoryRows": 121,
+    "propertyRows": 121,
+    "propertyFieldLossRecords": 726,
+    "fields": [
+      "strokeColor",
+      "fill",
+      "width",
+      "dash",
+      "opacity",
+      "font"
+    ],
+    "rawSourceXMLTextStyleIdentityInManifests": true,
+    "everyRawEntityHandleMapped": true,
+    "perPageOtherPageRowsReferenceSeparateFilenameAndSha256": true,
+    "sourceDeclarationRotationNotReapplied": true,
+    "generatedReviewDisplayPolicyHashed": true
+  },
+  "qualifiedG04ExactImport": {
+    "path": "prototype/vdraw-mobile-007/routes/dxf/fixtures/synthetic-g04-property-witness.adapter-result.json",
+    "bytes": 83554,
+    "sha256": "4e004e1198856747c1638af0bd3b36e2ba5c3237255ee1d90958d3523594fffc",
+    "git_blob_sha": "46f70889cc48cf913144335de285a9f6506406d9"
+  },
+  "blockers": [
+    "Independent G actual-byte parsing/source comparison pending.",
+    "Actual Jw_cad Open/Edit/Save/Round-trip not performed.",
+    "Automatic import unit metadata omitted; actual Jw mm import/known-length verification required.",
+    "Text/font, source color/fill/width/dash/opacity and ellipse/arc are not retained in target; all remain explicit in ledgers.",
+    "Original custom-path coordinate frame, inherited/uncertain geometry and unsupported source parts remain blocked as in fixed B2."
+  ],
+  "formatReferences": [
+    {
+      "url": "https://damassets.autodesk.net/content/dam/autodesk/www/developer-network/platform-technologies/autocad-dxf-archive/acad_r12_dxf.pdf",
+      "scope": "Entity groups: classic POLYLINE/VERTEX/SEQEND, closure flag, common entity fields and comments; not Jw application validation."
+    },
+    {
+      "url": "https://help.autodesk.com/cloudhelp/2021/ENU/AutoCAD-DXF/files/GUID-A85E8E67-27CD-4C59-BE61-4DC9FADBE74A.htm",
+      "scope": "Version/unit header distinction; no automatic unit guarantee."
+    }
+  ]
+}

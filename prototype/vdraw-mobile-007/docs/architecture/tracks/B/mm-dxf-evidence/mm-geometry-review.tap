@@ -1,0 +1,208 @@
+TAP version 13
+# Subtest: fixed source generic-synthetic-g01 produces nonzero geometry with fullsource/property ledger
+ok 1 - fixed source generic-synthetic-g01 produces nonzero geometry with fullsource/property ledger
+  ---
+  duration_ms: 34.482544
+  type: 'test'
+  ...
+# Subtest: fixed source generic-synthetic-g02-nested produces nonzero geometry with fullsource/property ledger
+ok 2 - fixed source generic-synthetic-g02-nested produces nonzero geometry with fullsource/property ledger
+  ---
+  duration_ms: 13.542397
+  type: 'test'
+  ...
+# Subtest: fixed source native-vdraw-n01 produces nonzero geometry with fullsource/property ledger
+ok 3 - fixed source native-vdraw-n01 produces nonzero geometry with fullsource/property ledger
+  ---
+  duration_ms: 18.481883
+  type: 'test'
+  ...
+# Subtest: fixed source synthetic-g03-expanded produces nonzero geometry with fullsource/property ledger
+ok 4 - fixed source synthetic-g03-expanded produces nonzero geometry with fullsource/property ledger
+  ---
+  duration_ms: 17.748979
+  type: 'test'
+  ...
+# Subtest: fixed source explicit-paint-width-alpha-witness produces nonzero geometry with fullsource/property ledger
+ok 5 - fixed source explicit-paint-width-alpha-witness produces nonzero geometry with fullsource/property ledger
+  ---
+  duration_ms: 8.351151
+  type: 'test'
+  ...
+# Subtest: independent direct witness four corners are raw EMU/36000 and exactly one CAD reflection
+ok 6 - independent direct witness four corners are raw EMU/36000 and exactly one CAD reflection
+  ---
+  duration_ms: 4.996841
+  type: 'test'
+  ...
+# Subtest: grouped/rotated polygons preserve ordered full corners from validated geometry
+ok 7 - grouped/rotated polygons preserve ordered full corners from validated geometry
+  ---
+  duration_ms: 15.540431
+  type: 'test'
+  ...
+# Subtest: circle primitive exports center/radius directly, with finite positive radius
+ok 8 - circle primitive exports center/radius directly, with finite positive radius
+  ---
+  duration_ms: 8.495024
+  type: 'test'
+  ...
+# Subtest: text/ellipse/custom/background/hidden remain explicit target unsupported or Human check
+ok 9 - text/ellipse/custom/background/hidden remain explicit target unsupported or Human check
+  ---
+  duration_ms: 41.551764
+  type: 'test'
+  ...
+# Subtest: every per-page evaluation retains global inventory and names other page file/hash
+ok 10 - every per-page evaluation retains global inventory and names other page file/hash
+  ---
+  duration_ms: 26.756755
+  type: 'test'
+  ...
+# Subtest: raw POLYLINE/VERTEX/SEQEND handles are all individually mapped to source component
+ok 11 - raw POLYLINE/VERTEX/SEQEND handles are all individually mapped to source component
+  ---
+  duration_ms: 19.080031
+  type: 'test'
+  ...
+# Subtest: generated review attributes never approximate actual source truecolor/width/dash/opacity
+ok 12 - generated review attributes never approximate actual source truecolor/width/dash/opacity
+  ---
+  duration_ms: 3.479453
+  type: 'test'
+  ...
+# Subtest: G04 explicit no-paint visibility override is policy-bound and differing alpha stays raw unresolved
+ok 13 - G04 explicit no-paint visibility override is policy-bound and differing alpha stays raw unresolved
+  ---
+  duration_ms: 4.254775
+  type: 'test'
+  ...
+# Subtest: deterministic ASCII DXF and safe stable file/handle identity do not rely on time/randomness
+ok 14 - deterministic ASCII DXF and safe stable file/handle identity do not rely on time/randomness
+  ---
+  duration_ms: 16.625886
+  type: 'test'
+  ...
+# Subtest: fail closed nonfinite coordinates
+ok 15 - fail closed nonfinite coordinates
+  ---
+  duration_ms: 1.581085
+  type: 'test'
+  ...
+# Subtest: fail closed unsafe coordinates
+ok 16 - fail closed unsafe coordinates
+  ---
+  duration_ms: 0.561292
+  type: 'test'
+  ...
+# Subtest: fail closed wrong target unit
+ok 17 - fail closed wrong target unit
+  ---
+  duration_ms: 0.972077
+  type: 'test'
+  ...
+# Subtest: fail closed wrong target axis
+ok 18 - fail closed wrong target axis
+  ---
+  duration_ms: 0.982236
+  type: 'test'
+  ...
+# Subtest: fail closed unknown transform scope
+ok 19 - fail closed unknown transform scope
+  ---
+  duration_ms: 1.040691
+  type: 'test'
+  ...
+# Subtest: fail closed calibrated claim
+ok 20 - fail closed calibrated claim
+  ---
+  duration_ms: 0.537948
+  type: 'test'
+  ...
+# Subtest: fail closed real world claim
+ok 21 - fail closed real world claim
+  ---
+  duration_ms: 0.525647
+  type: 'test'
+  ...
+# Subtest: fail closed existing FULL evaluation
+ok 22 - fail closed existing FULL evaluation
+  ---
+  duration_ms: 0.554714
+  type: 'test'
+  ...
+# Subtest: fail closed unit pin mismatch
+ok 23 - fail closed unit pin mismatch
+  ---
+  duration_ms: 0.433478
+  type: 'test'
+  ...
+# Subtest: fail closed source identity mismatch
+ok 24 - fail closed source identity mismatch
+  ---
+  duration_ms: 0.71971
+  type: 'test'
+  ...
+# Subtest: fail closed omitted global source item
+ok 25 - fail closed omitted global source item
+  ---
+  duration_ms: 0.975324
+  type: 'test'
+  ...
+# Subtest: fail closed promoted product gate
+ok 26 - fail closed promoted product gate
+  ---
+  duration_ms: 0.426255
+  type: 'test'
+  ...
+# Subtest: requested FULL or production readiness is rejected before output
+ok 27 - requested FULL or production readiness is rejected before output
+  ---
+  duration_ms: 1.241973
+  type: 'test'
+  ...
+# Subtest: source IR retained while export evaluations remain strictly PARTIAL/BLOCKED
+ok 28 - source IR retained while export evaluations remain strictly PARTIAL/BLOCKED
+  ---
+  duration_ms: 11.778484
+  type: 'test'
+  ...
+# Subtest: synthetic native-EMU open polyline contract produces flag0 and all ordered vertices
+ok 29 - synthetic native-EMU open polyline contract produces flag0 and all ordered vertices
+  ---
+  duration_ms: 2.831822
+  type: 'test'
+  ...
+# Subtest: synthetic odd-radius circle contract remains blocked if inconsistent with source transform
+ok 30 - synthetic odd-radius circle contract remains blocked if inconsistent with source transform
+  ---
+  duration_ms: 2.985024
+  type: 'test'
+  ...
+# Subtest: nonzero ellipse-only source produces explicit BLOCKED empty output rather than readiness PASS
+ok 31 - nonzero ellipse-only source produces explicit BLOCKED empty output rather than readiness PASS
+  ---
+  duration_ms: 8.550739
+  type: 'test'
+  ...
+# Subtest: duplicate/misordered source-page indexes cannot overlay output filenames
+ok 32 - duplicate/misordered source-page indexes cannot overlay output filenames
+  ---
+  duration_ms: 4.247717
+  type: 'test'
+  ...
+# Subtest: declared layout extent must match physical source slide EMU/36000
+ok 33 - declared layout extent must match physical source slide EMU/36000
+  ---
+  duration_ms: 1.19208
+  type: 'test'
+  ...
+1..33
+# tests 33
+# suites 0
+# pass 33
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 391.911788

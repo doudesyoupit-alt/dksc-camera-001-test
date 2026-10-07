@@ -1,0 +1,88 @@
+[
+  {
+    "id": "source-2-part-0-dxf-logical",
+    "inventoryId": "source-2-part-0",
+    "objectId": "source-2-part-0-object",
+    "entityType": "POLYLINE",
+    "sourceGeometryKind": "polygon",
+    "rawHandles": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "pageId": "page-0",
+      "nativeObjectId": "2",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e-p001.dxf",
+    "fileSha256": "09fcc936721dfffa42bf215a4f5fb665cdaf35f374c11c2551df2a99b257506a",
+    "pageId": "page-0"
+  },
+  {
+    "id": "source-3-part-0-dxf-logical",
+    "inventoryId": "source-3-part-0",
+    "objectId": "source-3-part-0-object",
+    "entityType": "LINE",
+    "sourceGeometryKind": "line",
+    "rawHandles": [
+      "106"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "pageId": "page-0",
+      "nativeObjectId": "3",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e-p001.dxf",
+    "fileSha256": "09fcc936721dfffa42bf215a4f5fb665cdaf35f374c11c2551df2a99b257506a",
+    "pageId": "page-0"
+  },
+  {
+    "id": "source-4-part-0-dxf-logical",
+    "inventoryId": "source-4-part-0",
+    "objectId": "source-4-part-0-object",
+    "entityType": "CIRCLE",
+    "sourceGeometryKind": "circle",
+    "rawHandles": [
+      "107"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "pageId": "page-0",
+      "nativeObjectId": "4",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e-p001.dxf",
+    "fileSha256": "09fcc936721dfffa42bf215a4f5fb665cdaf35f374c11c2551df2a99b257506a",
+    "pageId": "page-0"
+  }
+]

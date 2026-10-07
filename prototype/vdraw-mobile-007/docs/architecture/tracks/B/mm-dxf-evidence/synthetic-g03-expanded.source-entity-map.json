@@ -1,0 +1,179 @@
+[
+  {
+    "id": "source-9-part-0-dxf-logical",
+    "inventoryId": "source-9-part-0",
+    "objectId": "source-9-part-0-object",
+    "entityType": "POLYLINE",
+    "sourceGeometryKind": "polygon",
+    "rawHandles": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "pageId": "page-0",
+      "nativeObjectId": "5",
+      "partPath": "ppt/slides/slide2.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p001.dxf",
+    "fileSha256": "ebba64b747a64882c052bc7ab2c42b4ef010f8bf0a681a6604fcf041af0793f0",
+    "pageId": "page-0"
+  },
+  {
+    "id": "source-15-part-0-dxf-logical",
+    "inventoryId": "source-15-part-0",
+    "objectId": "source-15-part-0-object",
+    "entityType": "LINE",
+    "sourceGeometryKind": "line",
+    "rawHandles": [
+      "100"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "pageId": "page-1",
+      "nativeObjectId": "5",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/geometry"
+    },
+    "frameId": "page-1-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+    "fileSha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+    "pageId": "page-1"
+  },
+  {
+    "id": "source-16-part-0-dxf-logical",
+    "inventoryId": "source-16-part-0",
+    "objectId": "source-16-part-0-object",
+    "entityType": "LINE",
+    "sourceGeometryKind": "line",
+    "rawHandles": [
+      "101"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "pageId": "page-1",
+      "nativeObjectId": "6",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[5]/geometry"
+    },
+    "frameId": "page-1-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+    "fileSha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+    "pageId": "page-1"
+  },
+  {
+    "id": "source-17-part-0-dxf-logical",
+    "inventoryId": "source-17-part-0",
+    "objectId": "source-17-part-0-object",
+    "entityType": "LINE",
+    "sourceGeometryKind": "line",
+    "rawHandles": [
+      "102"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "pageId": "page-1",
+      "nativeObjectId": "7",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[6]/geometry"
+    },
+    "frameId": "page-1-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+    "fileSha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+    "pageId": "page-1"
+  },
+  {
+    "id": "source-20-part-0-dxf-logical",
+    "inventoryId": "source-20-part-0",
+    "objectId": "source-20-part-0-object",
+    "entityType": "POLYLINE",
+    "sourceGeometryKind": "polygon",
+    "rawHandles": [
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "pageId": "page-1",
+      "nativeObjectId": "10",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[9]/geometry"
+    },
+    "frameId": "page-1-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+    "fileSha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+    "pageId": "page-1"
+  },
+  {
+    "id": "source-21-part-0-dxf-logical",
+    "inventoryId": "source-21-part-0",
+    "objectId": "source-21-part-0-object",
+    "entityType": "POLYLINE",
+    "sourceGeometryKind": "polygon",
+    "rawHandles": [
+      "109",
+      "10A",
+      "10B",
+      "10C",
+      "10D",
+      "10E"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "pageId": "page-1",
+      "nativeObjectId": "11",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[10]/geometry"
+    },
+    "frameId": "page-1-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d-p002.dxf",
+    "fileSha256": "4d3629bfdd769df18ba709c7f0c858aff0a261e17eb6d02680277dc1a4b0d072",
+    "pageId": "page-1"
+  }
+]

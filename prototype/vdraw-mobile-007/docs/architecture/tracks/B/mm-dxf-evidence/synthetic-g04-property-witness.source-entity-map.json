@@ -1,0 +1,93 @@
+[
+  {
+    "id": "source-2-part-0-dxf-logical",
+    "inventoryId": "source-2-part-0",
+    "objectId": "source-2-part-0-object",
+    "entityType": "LINE",
+    "sourceGeometryKind": "line",
+    "rawHandles": [
+      "100"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb",
+      "pageId": "page-0",
+      "nativeObjectId": "2",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb-p001.dxf",
+    "fileSha256": "3597dfbf00785d4b2a50b3e5d833238bbe868a8e08b013d4b2af2049fbac6784",
+    "pageId": "page-0"
+  },
+  {
+    "id": "source-3-part-0-dxf-logical",
+    "inventoryId": "source-3-part-0",
+    "objectId": "source-3-part-0-object",
+    "entityType": "POLYLINE",
+    "sourceGeometryKind": "polygon",
+    "rawHandles": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb",
+      "pageId": "page-0",
+      "nativeObjectId": "3",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb-p001.dxf",
+    "fileSha256": "3597dfbf00785d4b2a50b3e5d833238bbe868a8e08b013d4b2af2049fbac6784",
+    "pageId": "page-0"
+  },
+  {
+    "id": "source-4-part-0-dxf-logical",
+    "inventoryId": "source-4-part-0",
+    "objectId": "source-4-part-0-object",
+    "entityType": "POLYLINE",
+    "sourceGeometryKind": "polygon",
+    "rawHandles": [
+      "107",
+      "108",
+      "109",
+      "10A",
+      "10B",
+      "10C"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb",
+      "pageId": "page-0",
+      "nativeObjectId": "4",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb-p001.dxf",
+    "fileSha256": "3597dfbf00785d4b2a50b3e5d833238bbe868a8e08b013d4b2af2049fbac6784",
+    "pageId": "page-0"
+  }
+]

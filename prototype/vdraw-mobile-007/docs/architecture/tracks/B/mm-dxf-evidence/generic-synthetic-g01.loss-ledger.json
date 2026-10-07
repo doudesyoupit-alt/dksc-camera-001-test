@@ -1,0 +1,3024 @@
+[
+  {
+    "inventoryId": "source-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:nvGrpSpPr[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:nvGrpSpPr[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-1",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSpPr[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSpPr[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-2",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourceResolution": null,
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": [
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {
+                "sz": "2400"
+              },
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": "<a:rPr sz=\"2400\"/>"
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ],
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ]
+        ],
+        "sourceResolution": null,
+        "nativeProperty": [
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {
+                "sz": "2400"
+              },
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": "<a:rPr sz=\"2400\"/>"
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ],
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ]
+        ],
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-2-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+    "sourceComponentKind": "geometry",
+    "logicalEntityIds": [
+      "source-2-part-0-dxf-logical"
+    ],
+    "sourceIRObjectId": "source-2-part-0-object",
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-2-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "2",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "stroke",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_STROKECOLOR",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": "#ABCDEF",
+        "sourceResolution": {
+          "state": "EXPLICIT",
+          "evidenceIds": [
+            "source-2-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "2",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": "ABCDEF",
+          "encoding": "HEX_RGB",
+          "reason": null,
+          "policyId": null
+        },
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": {
+          "field": "fill",
+          "state": "EXPLICIT",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": "ABCDEF",
+          "present": true,
+          "value": "#ABCDEF",
+          "encoding": "HEX_RGB",
+          "reason": null
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FILL",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-2-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "2",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/@w",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "width",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/@w",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_WIDTH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-2-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "2",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "dash",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_DASH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-2-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "2",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "opacity",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_OPACITY",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": [
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {
+                "sz": "2400"
+              },
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": "<a:rPr sz=\"2400\"/>"
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ],
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ]
+        ],
+        "sourceResolution": null,
+        "nativeProperty": [
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {
+                "sz": "2400"
+              },
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": "<a:rPr sz=\"2400\"/>"
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ],
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ]
+        ],
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FONT",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-2-part-1",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/text",
+    "sourceComponentKind": "text",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": {
+      "bodyProperties": {},
+      "paragraphs": [
+        {
+          "properties": {},
+          "items": [
+            {
+              "kind": "r",
+              "attributes": {},
+              "rawXml": "<a:r><a:rPr sz=\"2400\"/><a:t>分電盤</a:t></a:r>",
+              "runProperties": {
+                "sz": "2400"
+              },
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": "<a:rPr sz=\"2400\"/>"
+              },
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "text": "分電盤"
+            },
+            {
+              "kind": "r",
+              "attributes": {},
+              "rawXml": "<a:r><a:t>ABC</a:t></a:r>",
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              },
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "text": "ABC"
+            },
+            {
+              "kind": "br",
+              "attributes": {},
+              "rawXml": "<a:br/>",
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              },
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "text": "\n"
+            },
+            {
+              "kind": "r",
+              "attributes": {},
+              "rawXml": "<a:r><a:t>1000</a:t></a:r>",
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              },
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "text": "1000"
+            }
+          ]
+        },
+        {
+          "properties": {},
+          "items": [
+            {
+              "kind": "r",
+              "attributes": {},
+              "rawXml": "<a:r><a:t>次行</a:t></a:r>",
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              },
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "text": "次行"
+            }
+          ]
+        }
+      ],
+      "content": "分電盤ABC\n1000\n次行"
+    },
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourceResolution": null,
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": [
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {
+                "sz": "2400"
+              },
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": "<a:rPr sz=\"2400\"/>"
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ],
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ]
+        ],
+        "sourceResolution": null,
+        "nativeProperty": [
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {
+                "sz": "2400"
+              },
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": "<a:rPr sz=\"2400\"/>"
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            },
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ],
+          [
+            {
+              "fontLatin": {},
+              "fontEastAsian": {},
+              "runProperties": {},
+              "runStyle": {
+                "state": "PRESERVED_NOT_RESOLVED",
+                "rawXml": null
+              }
+            }
+          ]
+        ],
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-3",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": {
+          "kind": "unresolved",
+          "attributes": {}
+        },
+        "sourceResolution": null,
+        "nativeProperty": {
+          "kind": "unresolved",
+          "attributes": {}
+        },
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-3-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry",
+    "sourceComponentKind": "geometry",
+    "logicalEntityIds": [
+      "source-3-part-0-dxf-logical"
+    ],
+    "sourceIRObjectId": "source-3-part-0-object",
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-3-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "3",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "stroke",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_STROKECOLOR",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-3-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "3",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM",
+          "policyId": null
+        },
+        "nativeProperty": {
+          "kind": "unresolved",
+          "attributes": {}
+        },
+        "sourcePropertyClaim": {
+          "field": "fill",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FILL",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-3-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "3",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/@w",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "width",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/@w",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_WIDTH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-3-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "3",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "dash",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_DASH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-3-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "3",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "opacity",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/p:spPr",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_OPACITY",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FONT",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-4",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourceResolution": null,
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-4-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry",
+    "sourceComponentKind": "geometry",
+    "logicalEntityIds": [
+      "source-4-part-0-dxf-logical"
+    ],
+    "sourceIRObjectId": "source-4-part-0-object",
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-4-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "4",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "stroke",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_STROKECOLOR",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": "#ABCDEF",
+        "sourceResolution": {
+          "state": "EXPLICIT",
+          "evidenceIds": [
+            "source-4-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "4",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": "ABCDEF",
+          "encoding": "HEX_RGB",
+          "reason": null,
+          "policyId": null
+        },
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": {
+          "field": "fill",
+          "state": "EXPLICIT",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": "ABCDEF",
+          "present": true,
+          "value": "#ABCDEF",
+          "encoding": "HEX_RGB",
+          "reason": null
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FILL",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-4-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "4",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/@w",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "width",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/@w",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_WIDTH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-4-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "4",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:prstDash/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "dash",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:ln/a:prstDash/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_DASH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-4-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "4",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "opacity",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_OPACITY",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FONT",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-5",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-6",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:nvGrpSpPr[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:nvGrpSpPr[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-7",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSpPr[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSpPr[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-8",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourceResolution": null,
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-8-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/geometry",
+    "sourceComponentKind": "geometry",
+    "logicalEntityIds": [
+      "source-8-part-0-dxf-logical"
+    ],
+    "sourceIRObjectId": "source-8-part-0-object",
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-8-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "6",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "stroke",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_THEME_INHERITANCE_OR_COLOR_TRANSFORM"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_STROKECOLOR",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": "#ABCDEF",
+        "sourceResolution": {
+          "state": "EXPLICIT",
+          "evidenceIds": [
+            "source-8-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "6",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "rawLexeme": "ABCDEF",
+          "encoding": "HEX_RGB",
+          "reason": null,
+          "policyId": null
+        },
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": {
+          "field": "fill",
+          "state": "EXPLICIT",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/@val",
+          "sourceRawLexeme": "ABCDEF",
+          "present": true,
+          "value": "#ABCDEF",
+          "encoding": "HEX_RGB",
+          "reason": null
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FILL",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-8-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "6",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/@w",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "width",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/@w",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_WIDTH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_WIDTH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-8-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "6",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "dash",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_NATIVE_DASH"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_DASH",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": {
+          "state": "UNRESOLVED",
+          "evidenceIds": [
+            "source-8-part-0-style-source"
+          ],
+          "sourceBinding": {
+            "sourceAssetId": "pptx-source",
+            "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+            "pageId": "page-0",
+            "nativeObjectId": "6",
+            "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/geometry"
+          },
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+          "rawLexeme": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY",
+          "policyId": null
+        },
+        "nativeProperty": null,
+        "sourcePropertyClaim": {
+          "field": "opacity",
+          "state": "UNRESOLVED",
+          "propertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:sp[1]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+          "sourceRawLexeme": null,
+          "present": false,
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "reason": "UNRESOLVED_OR_PER_PAINT_OPACITY"
+        },
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_OPACITY",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "GENERATED_REVIEW_DISPLAY_DOES_NOT_RETAIN_SOURCE_FONT",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-9",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-9-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/unknown",
+    "sourceComponentKind": "unknown",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-10",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-10-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/unknown",
+    "sourceComponentKind": "unknown",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-11",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-11-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/unknown",
+    "sourceComponentKind": "unknown",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-12",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourceResolution": null,
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-12-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/geometry",
+    "sourceComponentKind": "geometry",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourceResolution": null,
+        "nativeProperty": {
+          "kind": "rgb",
+          "value": "ABCDEF",
+          "transforms": [],
+          "attributes": {}
+        },
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-13",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]",
+    "componentId": null,
+    "sourceComponentKind": "SOURCE_OBJECT_WRAPPER",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  },
+  {
+    "inventoryId": "source-13-part-0",
+    "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]",
+    "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]/background",
+    "sourceComponentKind": "background",
+    "logicalEntityIds": [],
+    "sourceIRObjectId": null,
+    "sourceRawText": null,
+    "sourceRawXmlReference": {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]",
+      "partHash": "728c20b2016136df111a6597cf10e62b48c89ed7ad8dbde3bd50f799747ddbfe",
+      "packageHash": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c"
+    },
+    "properties": [
+      {
+        "property": "strokeColor",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_STROKECOLOR_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source strokeColor before faithful production export"
+      },
+      {
+        "property": "fill",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FILL_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source fill before faithful production export"
+      },
+      {
+        "property": "width",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_WIDTH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source width before faithful production export"
+      },
+      {
+        "property": "dash",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_DASH_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source dash before faithful production export"
+      },
+      {
+        "property": "opacity",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_OPACITY_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source opacity before faithful production export"
+      },
+      {
+        "property": "font",
+        "sourceValue": null,
+        "sourceResolution": null,
+        "nativeProperty": null,
+        "sourcePropertyClaim": null,
+        "retention": "NOT_RETAINED",
+        "reason": "NO_TARGET_ENTITY_SOURCE_FONT_PRESERVED_IN_RAW_EVIDENCE",
+        "targetPolicyId": "vdraw-generated-review-geometry-policy/1",
+        "nextHumanAction": "Inspect original source font before faithful production export"
+      }
+    ],
+    "reviewOutlineOverride": false,
+    "reviewVisibilityOverride": false
+  }
+]

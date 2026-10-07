@@ -1,0 +1,34 @@
+[
+  {
+    "id": "source-2-part-0-dxf-logical",
+    "inventoryId": "source-2-part-0",
+    "objectId": "source-2-part-0-object",
+    "entityType": "POLYLINE",
+    "sourceGeometryKind": "polygon",
+    "rawHandles": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105"
+    ],
+    "sourceBinding": {
+      "sourceAssetId": "pptx-source",
+      "sha256": "9e78716fb9ec13708d93dadd3448dd18894bb6f5b5cedfbb490ac5a33bed0d52",
+      "pageId": "page-0",
+      "nativeObjectId": "2",
+      "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+    },
+    "frameId": "page-0-cad-mm",
+    "physicalUnit": "MM",
+    "unitRole": "LAYOUT",
+    "scaleStatus": "UNSCALED",
+    "yAxis": "UP",
+    "geometryRetention": "GEOMETRY_REVIEW_ONLY",
+    "appearanceRetention": "NOT_RETAINED",
+    "filename": "vdraw-review-9e78716fb9ec13708d93dadd3448dd18894bb6f5b5cedfbb490ac5a33bed0d52-p001.dxf",
+    "fileSha256": "0e94dbd0f2c4118d4ba01089658ace4b4b953cabf60511d957f4bfdf63aa5261",
+    "pageId": "page-0"
+  }
+]
