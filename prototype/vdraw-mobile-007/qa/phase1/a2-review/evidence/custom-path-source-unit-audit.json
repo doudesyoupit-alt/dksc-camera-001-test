@@ -1,0 +1,85 @@
+{
+  "schema": "vdraw-G-custom-path-source-unit-authority-audit/1",
+  "sourceTruthHead": "478383bf506123b97b0b94d1d9fbba84af34295f",
+  "BfixedHead": "4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22",
+  "primarySource": {
+    "url": "https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.drawing.point?view=openxml-3.0.1",
+    "section": "Remarks",
+    "verifiedLines": [
+      199,
+      206,
+      207,
+      242,
+      244
+    ],
+    "claim": "Path coordinates use arbitrary path w/h dimensions; shape ext uses EMU. Native raw path point units cannot be declared physical EMU just because their normalized transformed coordinates are EMU."
+  },
+  "findings": [
+    {
+      "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+      "nativeGeometry": {
+        "kind": "polyline",
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            300,
+            0
+          ],
+          [
+            120,
+            200
+          ]
+        ],
+        "closed": false
+      },
+      "sourcePathExtent": [
+        300,
+        200
+      ],
+      "actualDeclaredNativeUnit": "EMU",
+      "expectedRawNativeCoordinateUnit": "ARBITRARY_PATH_COORDINATES_NOT_PHYSICAL_EMU",
+      "status": "FAIL_SOURCE_UNIT_DECLARATION",
+      "numericPageEMUandCADmm": "MATCHES_PREVIOUS_INDEPENDENT_NUMERIC_REPORT",
+      "requiredB2Disposition": "CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE_LEDGER",
+      "originalG3Finding": "G3 nativeFrameUnit check only compared labels; not native-unit semantic authority"
+    },
+    {
+      "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry",
+      "nativeGeometry": {
+        "kind": "polygon",
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            300,
+            0
+          ],
+          [
+            120,
+            200
+          ]
+        ],
+        "closed": true
+      },
+      "sourcePathExtent": [
+        300,
+        200
+      ],
+      "actualDeclaredNativeUnit": "EMU",
+      "expectedRawNativeCoordinateUnit": "ARBITRARY_PATH_COORDINATES_NOT_PHYSICAL_EMU",
+      "status": "FAIL_SOURCE_UNIT_DECLARATION",
+      "numericPageEMUandCADmm": "MATCHES_PREVIOUS_INDEPENDENT_NUMERIC_REPORT",
+      "requiredB2Disposition": "CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE_LEDGER",
+      "originalG3Finding": "G3 nativeFrameUnit check only compared labels; not native-unit semantic authority"
+    }
+  ],
+  "failSourceUnitDeclarations": 2,
+  "candidate2ContractChange": "NONE_GEOMETRY_UNIT_GUARDS_UNCHANGED",
+  "priorNumericResultsPreserved": true,
+  "productGate": "HOLD"
+}

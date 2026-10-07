@@ -1,0 +1,63 @@
+{
+  "format": "WORK_HANDOFF_V1",
+  "schema": "vdraw-G-A2-style-review-handoff/1",
+  "instruction_id": "VDRAW-PHASE1-G-STYLE-UNKNOWN-QA-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "G",
+  "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+  "expected_base_head": "c3ce46318a65fc5fb691dc8579d643df06b6521f",
+  "head": null,
+  "head_resolution": "Resolve immutable containing commit; no circular self-SHA",
+  "status": "CANDIDATE2_BOUNDED_STYLE_PIN_RECOMMENDED_WITH_CUSTOM_SOURCE_UNIT_RESTRICTION",
+  "recommendation": "BOUNDED_ISOLATED_PIN_YES_NATIVE_EMU_PRIMITIVES_UNKNOWN_APPEARANCE_ONLY",
+  "A2head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+  "A2version": "vdraw-drawing-ir/1.0.0-candidate.2",
+  "schemaSha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+  "validatorSha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/EVIDENCE-A2-STYLE-UNKNOWN-REVIEW-V1.json",
+      "sha256": "cd526a354c19194be454354185d74826ce82d5d7a31307b11f57bb65f728aa95"
+    }
+  ],
+  "test": {
+    "pass": 43,
+    "fail": 0,
+    "skip": 0,
+    "groups": [
+      41,
+      2
+    ]
+  },
+  "semanticFindings": {
+    "B1head": "4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22",
+    "failFindings": 2,
+    "status": "FAIL_SOURCE_UNIT_DECLARATION_UNRESOLVED_PENDING_B2_CORRECTION",
+    "coordinateNumerics": "PREVIOUS_NUMERIC_MATCH_PRESERVED",
+    "prior2418ChecksIncludedThisSemanticAudit": false
+  },
+  "blocker": [
+    "TWO_B1_CUSTOM_PATH_NATIVE_EMU_LABEL_FINDINGS_REQUIRE_B2_LEDGER_CORRECTION",
+    "B2_ACTUAL_SOURCE_TO_IR_NOT_IMPLEMENTED_NOT_ACCEPTED",
+    "NATIVE_DASH_LEXICAL_ENCODING_UNSUPPORTED_AS_EXPLICIT_DASH_JSON",
+    "ORIGINAL_XML_PROPERTY_AUTHORITY_G_ORACLE_REQUIRED",
+    "TEXT_PLACEMENT_FONT_UNRESOLVED",
+    "MM_DXF_REAL_APPS_ROUNDTRIP_NOT_RUN"
+  ],
+  "nextAction": "Bounded fixed-head B2 adapter preserving all source denominators; custom arbitrary path units ledger CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE; independent G source/property/mm/unit audit next. Any further contract mutation requires new version/hash + QA.",
+  "productGate": "HOLD",
+  "Human_Gate": {
+    "isolatedReview": "AUTHORIZED_SAVED_DISPATCH",
+    "product": "HOLD",
+    "substitution": false
+  },
+  "protection": {
+    "appendOnly": true,
+    "priorGCheckpointsChanged": false,
+    "AorBImplementationChanged": false,
+    "mainValidationRelease006SigningChanged": false,
+    "SAVE001": "CLOSED_REUSED",
+    "APK": false,
+    "AIrequests": 0
+  }
+}

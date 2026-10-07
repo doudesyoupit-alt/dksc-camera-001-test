@@ -1,0 +1,92 @@
+{
+  "schema": "vdraw-G-A2-independent-style-evidence/1",
+  "instruction_id": "VDRAW-PHASE1-G-STYLE-UNKNOWN-QA-20261007-V1",
+  "dispatchCommit": "84270dd15f56b62c07b34f23399fb301bd79597a",
+  "expectedGHead": "c3ce46318a65fc5fb691dc8579d643df06b6521f",
+  "A2head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+  "A2version": "vdraw-drawing-ir/1.0.0-candidate.2",
+  "schemaSha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+  "validatorSha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+  "recommendation": "BOUNDED_ISOLATED_PIN_YES_NATIVE_EMU_PRIMITIVES_UNKNOWN_APPEARANCE_ONLY",
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/a2-review/evidence/custom-path-source-unit-audit.json",
+      "sha256": "e282718df7026498e1a00c11ccdedc3d237b9f21c4508842d48aad6cca8d8831",
+      "bytes": 2639
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/a2-review/evidence/custom-source-unit-guards.tap",
+      "sha256": "9d1baa889990eb7ab040248d76e4aa7fd00e244ed49e6ff562a7542e3da03177",
+      "bytes": 608
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/a2-review/evidence/minimal-delta-review.json",
+      "sha256": "88b7c951a976283fa1a83654ea434c81c248439092fe0a88e203d2dde8cd8ca2",
+      "bytes": 634
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/a2-review/evidence/style-unknown-independent.tap",
+      "sha256": "0a1d32ff58eea0cbe5a6fc65d4c443a467814a9f17775da76e229d7ed294ca26",
+      "bytes": 7051
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/a2-review/fixtures/independent-style-scaffold.mjs",
+      "sha256": "e4de1029d710eafb4d38bee0a6139b1695a4cca12c7cab49ea43e1a0d97085d6",
+      "bytes": 3927
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/a2-review/tools/custom-source-unit-guards.test.mjs",
+      "sha256": "f5eca9f2bde06a8fd631bceb5c324550ef4a866c2acfcffbbb5c779b8296c3a1",
+      "bytes": 687
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/a2-review/tools/style-unknown-independent.test.mjs",
+      "sha256": "3763de3f0f71a0bd36319156ea031f5954b47676a6f806b06b4127863831417c",
+      "bytes": 6789
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/A2-STYLE-UNKNOWN-REVIEW-V1.md",
+      "sha256": "f88206486bf0beb465c7cc28cba72a1e39d941153e82084461a93a57b46afd1d",
+      "bytes": 5010
+    }
+  ],
+  "namedContractTests": {
+    "pass": 43,
+    "fail": 0,
+    "skip": 0,
+    "groups": [
+      41,
+      2
+    ]
+  },
+  "minimalDelta": {
+    "originalABlobsPreserved": 569,
+    "newABlobs": 9,
+    "localNewABlobMatches": 9,
+    "geometryUnitCalibrationValidatorCoreSHA256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "schemaOtherThanStyleVersionExactMatch": true,
+    "textBroadening": false
+  },
+  "sourceUnitSemanticAudit": {
+    "B1head": "4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22",
+    "failFindings": 2,
+    "status": "FAIL_SOURCE_UNIT_DECLARATION_UNRESOLVED_PENDING_B2_CORRECTION",
+    "coordinateNumerics": "PREVIOUS_NUMERIC_MATCH_PRESERVED",
+    "prior2418ChecksIncludedThisSemanticAudit": false
+  },
+  "B2Adapter": "NOT_IMPLEMENTED_NOT_ACCEPTED",
+  "DASH_JSON": "SYNTHETIC_ONLY_NATIVE_SOLID_UNRESOLVED",
+  "SPEC_DEFAULT": "DISABLED",
+  "sourceAuthorityBoundary": "INTERNAL_CONSISTENCY_ONLY_ORIGINAL_XML_PROPERTY_ORACLE_REQUIRED",
+  "productGate": "HOLD",
+  "HumanGate": "NO_SUBSTITUTION",
+  "protection": {
+    "appendOnly": true,
+    "priorGCheckpointsChanged": false,
+    "AorBImplementationChanged": false,
+    "mainValidationRelease006SigningChanged": false,
+    "SAVE001": "CLOSED_REUSED",
+    "APK": false,
+    "AIrequests": 0
+  }
+}

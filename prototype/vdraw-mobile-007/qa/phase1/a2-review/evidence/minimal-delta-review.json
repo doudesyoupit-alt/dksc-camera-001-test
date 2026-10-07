@@ -1,0 +1,14 @@
+{
+  "schema": "vdraw-G-A2-independent-minimal-delta-review/1",
+  "fixedA2Head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+  "candidate1ValidatorAfterRemovingOnlyDeclaredHooksIdentical": true,
+  "geometryUnitCalibrationCoreSHA256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+  "schemaAfterRemovingOnlyStyleVersionDeltaIdentical": true,
+  "textGeometryChanged": false,
+  "namedTests": 43,
+  "fail": 0,
+  "skip": 0,
+  "authenticityBoundary": "VALIDATOR_CHECKS_INTERNAL_BINDING_LEXEMES_NOT_ORIGINAL_XML_PROPERTY_AUTHORITY",
+  "candidate2SourceAdapter": "NOT_IMPLEMENTED_NOT_ACCEPTED",
+  "productGate": "HOLD"
+}

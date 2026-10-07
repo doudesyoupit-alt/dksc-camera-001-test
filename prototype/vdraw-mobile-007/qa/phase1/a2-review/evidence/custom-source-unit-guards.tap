@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: custom arbitrary source coordinates cannot be called UNSCALED PPTX SOURCE frame without new contract
+ok 1 - custom arbitrary source coordinates cannot be called UNSCALED PPTX SOURCE frame without new contract
+  ---
+  duration_ms: 4.51833
+  type: 'test'
+  ...
+# Subtest: PPTX source geometry cannot silently relabel custom path coordinates as PX
+ok 2 - PPTX source geometry cannot silently relabel custom path coordinates as PX
+  ---
+  duration_ms: 1.959184
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 105.840598
