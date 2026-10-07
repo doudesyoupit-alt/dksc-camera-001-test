@@ -1,0 +1,81 @@
+{
+  "marker": "[WORK_HANDOFF_V1]",
+  "schema": "vdraw-work-handoff/1",
+  "instruction_id": "VDRAW-4ROUTE-D-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "D",
+  "branch": "work/vdraw-paper-camera-jwcad-v1",
+  "expected_base_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "head": "RESOLVE_FROM_ENCLOSING_GIT_COMMIT",
+  "headResolution": "This file and audit are committed atomically. Resolve exact saved head from the enclosing commit and verify the current branch ref before use; no self-referential commit SHA is fabricated.",
+  "manifest_head": "615ec928dc880e1fbbec6f1c2702ed5c8c253476",
+  "source_branch": "work/vdraw007-photo-accuracy-20261006",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "release_head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "status": "AUDIT_COMPLETE_IMPLEMENTATION_NOT_STARTED",
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/D/INITIAL-AUDIT-V1.md",
+      "gitBlobSHA": "5f7d02a85844f200a3151803e5f89b773e140f66"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/DRAWING-IR-INITIAL-CONTRACT-V1.md",
+      "gitBlobSHA": "d712b439a119ac9fe17ed4fa69b67589fc84839c",
+      "contract": "PROVISIONAL"
+    }
+  ],
+  "test": {
+    "newTests": "NOT_RUN_AUDIT_ONLY",
+    "newTestCount": 0,
+    "existingEvidence": "INHERITED_ONLY",
+    "sourceCI": {
+      "run": 37416413246,
+      "head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+      "conclusion": "success"
+    },
+    "existingSuitesReportedByCoordinator": 55,
+    "existingSuiteCredit": "SOFTWARE_REGRESSION_ONLY_NOT_PAPER_ACCURACY",
+    "readOnlyVerification": "5 local source blobs match Git tree entries",
+    "realPaperAccuracy": "NOT_MEASURED",
+    "realPaperImagesAnalyzed": 0,
+    "jwcad": "NOT_RUN"
+  },
+  "constraints": {
+    "productCodeChanged": false,
+    "APKGenerated": false,
+    "imagesRecollected": false,
+    "AIRequests": 0,
+    "secretsAccessed": 0,
+    "mainChanged": false,
+    "validationChanged": false,
+    "releaseChanged": false,
+    "GoldenDeleted": false,
+    "testDeleted": false,
+    "skipAdded": false
+  },
+  "protection": {
+    "subtree006": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "SAVE001": "CLOSED_FROM_EXISTING_HUMAN_ACCEPTANCE",
+    "fixedSigning": "UNCHANGED"
+  },
+  "product_phase_gate": "HOLD",
+  "HumanGate": {
+    "requiredForAuditSave": false,
+    "productAdoption": "HOLD_HUMAN_FINAL",
+    "HumanApprovalSubstituted": false
+  },
+  "blocker": [
+    "A shared IR version/schema/hash not finalized",
+    "E Paper-specific quality/corners/framing/local quality not established; current heuristic offline only",
+    "Paper pipeline corners/perspective/lens/denoise/line/circle/OCR/symbol/scale evidence not implemented in audited runtime",
+    "Paper Human Golden and practical accuracy not established",
+    "mm DXF and real Jw_cad acceptance not established at baseline"
+  ],
+  "next_action": "After new Coordinator dispatch, isolate a manual four-corner intake + planar rectification module preserving original pixel frame/hash, homography/inverse/validRegion; remain UNSCALED and no Camera OS/OCR/symbol/mm/product integration.",
+  "dependencies": [
+    "A common IR",
+    "E Paper quality contract",
+    "B DXF backend",
+    "G Golden and real Jw_cad acceptance"
+  ]
+}
