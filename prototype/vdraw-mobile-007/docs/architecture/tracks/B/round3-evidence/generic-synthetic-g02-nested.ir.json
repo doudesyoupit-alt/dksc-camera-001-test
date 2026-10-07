@@ -1,0 +1,937 @@
+{
+  "schemaVersion": "vdraw-drawing-ir/1.0.0-candidate.1",
+  "contractStatus": "CANDIDATE",
+  "documentId": "pptx-4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+  "sourceType": "PPTX",
+  "scaleStatus": "UNSCALED",
+  "sourceAssets": [
+    {
+      "id": "pptx-source",
+      "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "mediaType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sourceType": "PPTX",
+      "immutableUri": "urn:sha256:4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page-0",
+      "sourceAssetId": "pptx-source",
+      "index": 0,
+      "objectIds": [],
+      "inventoryIds": [
+        "source-0",
+        "source-1",
+        "source-2",
+        "source-2-part-0",
+        "source-2-part-1",
+        "source-3",
+        "source-3-part-0",
+        "source-4",
+        "source-4-part-0",
+        "source-5",
+        "source-6",
+        "source-7",
+        "source-8",
+        "source-9",
+        "source-10",
+        "source-11",
+        "source-11-part-0",
+        "source-12",
+        "source-12-part-0",
+        "source-13",
+        "source-13-part-0",
+        "source-14",
+        "source-14-part-0",
+        "source-15",
+        "source-15-part-0",
+        "source-16",
+        "source-16-part-0"
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "id": "page-0-emu",
+      "physicalUnit": "EMU",
+      "unitRole": "SOURCE",
+      "origin": [
+        0,
+        0
+      ],
+      "yAxis": "DOWN",
+      "extent": [
+        7200000,
+        5400000
+      ],
+      "pageId": "page-0"
+    },
+    {
+      "id": "page-0-layout-mm",
+      "physicalUnit": "MM",
+      "unitRole": "LAYOUT",
+      "origin": [
+        0,
+        0
+      ],
+      "yAxis": "DOWN",
+      "extent": [
+        200,
+        150
+      ],
+      "pageId": "page-0"
+    },
+    {
+      "id": "page-0-cad-mm",
+      "physicalUnit": "MM",
+      "unitRole": "LAYOUT",
+      "origin": [
+        0,
+        0
+      ],
+      "yAxis": "UP",
+      "extent": [
+        200,
+        150
+      ],
+      "pageId": "page-0"
+    }
+  ],
+  "calibrations": [],
+  "transforms": [
+    {
+      "id": "page-0-unit",
+      "fromFrameId": "page-0-emu",
+      "toFrameId": "page-0-layout-mm",
+      "type": "AFFINE",
+      "matrix": [
+        0.00002777777777777778,
+        0,
+        0,
+        0,
+        0.00002777777777777778,
+        0,
+        0,
+        0,
+        1
+      ],
+      "convention": "ROW_MAJOR_COLUMN_VECTOR",
+      "composition": "NEXT_TIMES_PREVIOUS",
+      "invertible": true,
+      "provenance": {
+        "method": "KNOWN_EMU_LAYOUT_UNIT",
+        "evidenceIds": [
+          "unit"
+        ]
+      },
+      "validRegion": null,
+      "calibrationId": null
+    },
+    {
+      "id": "page-0-axis",
+      "fromFrameId": "page-0-layout-mm",
+      "toFrameId": "page-0-cad-mm",
+      "type": "AFFINE",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        150,
+        0,
+        0,
+        1
+      ],
+      "convention": "ROW_MAJOR_COLUMN_VECTOR",
+      "composition": "NEXT_TIMES_PREVIOUS",
+      "invertible": true,
+      "provenance": {
+        "method": "EXPLICIT_TOP_LEFT_TO_BOTTOM_LEFT_REVERSIBLE",
+        "evidenceIds": [
+          "unit"
+        ]
+      },
+      "validRegion": null,
+      "calibrationId": null
+    }
+  ],
+  "layers": [
+    {
+      "id": "page-0-layer",
+      "name": "Source slide 0",
+      "provenance": "SYNTHETIC",
+      "evidenceIds": []
+    }
+  ],
+  "objects": [],
+  "sourceInventory": [
+    {
+      "id": "source-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:nvGrpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-1",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-2",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "2",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-2-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "2",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE"
+    },
+    {
+      "id": "source-2-part-1",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "2",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/text"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT"
+    },
+    {
+      "id": "source-3",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "3",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-3-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "3",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE"
+    },
+    {
+      "id": "source-4",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "4",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-4-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "4",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE"
+    },
+    {
+      "id": "source-5",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "5",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/object"
+      },
+      "role": "CONTAINER",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-6",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:nvGrpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-7",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-8",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "11",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/object"
+      },
+      "role": "CONTAINER",
+      "parentId": "source-5",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-9",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:nvGrpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": "source-5",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-10",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:grpSpPr[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": "source-5",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-11",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "6",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": "source-8",
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-11-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "6",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/geometry"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": "source-8",
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "nextHumanAction": "Inspect preserved native XML and resolve APP_AFFINE_SEMANTICS_UNVERIFIED"
+    },
+    {
+      "id": "source-12",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "7",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-12-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "7",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/unknown"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN"
+    },
+    {
+      "id": "source-13",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "8",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-13-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "8",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/unknown"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN"
+    },
+    {
+      "id": "source-14",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/object"
+      },
+      "role": "NON_DRAWABLE",
+      "parentId": null,
+      "support": "SUPPORTED",
+      "reason": null,
+      "nextHumanAction": null
+    },
+    {
+      "id": "source-14-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/unknown"
+      },
+      "role": "DRAWABLE_PART",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN"
+    },
+    {
+      "id": "source-15",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "10",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/object"
+      },
+      "role": "HIDDEN",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED"
+    },
+    {
+      "id": "source-15-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "10",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/geometry"
+      },
+      "role": "HIDDEN",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED"
+    },
+    {
+      "id": "source-16",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]/object"
+      },
+      "role": "BACKGROUND",
+      "parentId": null,
+      "support": "HUMAN_CHECK_REQUIRED",
+      "reason": "BACKGROUND_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve BACKGROUND_POLICY_REQUIRED"
+    },
+    {
+      "id": "source-16-part-0",
+      "sourceBinding": {
+        "sourceAssetId": "pptx-source",
+        "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "pageId": "page-0",
+        "nativeObjectId": "anonymous",
+        "partPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:bg[1]/background"
+      },
+      "role": "BACKGROUND",
+      "parentId": null,
+      "support": "UNSUPPORTED",
+      "reason": "UNSUPPORTED_NATIVE_BACKGROUND",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_BACKGROUND"
+    }
+  ],
+  "sourceLedger": [
+    {
+      "inventoryId": "source-0",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-1",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-2",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-2-part-0",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-2-part-1",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-3",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-3-part-0",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-4",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-4-part-0",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-5",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-6",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-7",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-8",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-9",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-10",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-11",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-11-part-0",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "nextHumanAction": "Inspect preserved native XML and resolve APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-12",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-12-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-13",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-13-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-14",
+      "disposition": "REPRESENTED",
+      "objectIds": [],
+      "reason": null,
+      "nextHumanAction": null,
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-14-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-15",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-15-part-0",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-16",
+      "disposition": "HUMAN_CHECK_REQUIRED",
+      "objectIds": [],
+      "reason": "BACKGROUND_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve BACKGROUND_POLICY_REQUIRED",
+      "policyEvidenceId": null
+    },
+    {
+      "inventoryId": "source-16-part-0",
+      "disposition": "UNSUPPORTED",
+      "objectIds": [],
+      "reason": "UNSUPPORTED_NATIVE_BACKGROUND",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_BACKGROUND",
+      "policyEvidenceId": null
+    }
+  ],
+  "relationships": [],
+  "issues": [
+    {
+      "id": "issue-0",
+      "code": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "inventoryId": "source-2-part-0",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-1",
+      "code": "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "inventoryId": "source-2-part-1",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-2",
+      "code": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "inventoryId": "source-3-part-0",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-3",
+      "code": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "inventoryId": "source-4-part-0",
+      "reason": "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "nextHumanAction": "Inspect preserved native XML and resolve CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-4",
+      "code": "APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "inventoryId": "source-11-part-0",
+      "reason": "APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "nextHumanAction": "Inspect preserved native XML and resolve APP_AFFINE_SEMANTICS_UNVERIFIED",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-5",
+      "code": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "inventoryId": "source-12-part-0",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-6",
+      "code": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "inventoryId": "source-13-part-0",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-7",
+      "code": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "inventoryId": "source-14-part-0",
+      "reason": "UNSUPPORTED_NATIVE_UNKNOWN",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_UNKNOWN",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-8",
+      "code": "HIDDEN_POLICY_REQUIRED",
+      "inventoryId": "source-15",
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-9",
+      "code": "HIDDEN_POLICY_REQUIRED",
+      "inventoryId": "source-15-part-0",
+      "reason": "HIDDEN_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve HIDDEN_POLICY_REQUIRED",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-10",
+      "code": "BACKGROUND_POLICY_REQUIRED",
+      "inventoryId": "source-16",
+      "reason": "BACKGROUND_POLICY_REQUIRED",
+      "nextHumanAction": "Inspect preserved native XML and resolve BACKGROUND_POLICY_REQUIRED",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    },
+    {
+      "id": "issue-11",
+      "code": "UNSUPPORTED_NATIVE_BACKGROUND",
+      "inventoryId": "source-16-part-0",
+      "reason": "UNSUPPORTED_NATIVE_BACKGROUND",
+      "nextHumanAction": "Inspect preserved native XML and resolve UNSUPPORTED_NATIVE_BACKGROUND",
+      "evidenceIds": [
+        "page-0-part"
+      ]
+    }
+  ],
+  "exportEvaluations": [],
+  "evidence": [
+    {
+      "id": "package",
+      "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "uri": "urn:sha256:4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "method": "SOURCE_PACKAGE"
+    },
+    {
+      "id": "unit",
+      "sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+      "uri": "urn:github:3e1f6892ff5c6b06644b07b8247ccd9053b978db:drawing-ir/schema.json",
+      "method": "PINNED_EMU_LAYOUT_CONTRACT"
+    },
+    {
+      "id": "page-0-part",
+      "sha256": "bf45cc63fe02fb781950fb77486c60aa0e1d13f775a606e36cf490c6616153d9",
+      "uri": "urn:pptx-part:ppt/slides/slide1.xml",
+      "method": "SOURCE_PART_HASH"
+    }
+  ]
+}

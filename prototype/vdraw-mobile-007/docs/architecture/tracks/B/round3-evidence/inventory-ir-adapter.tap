@@ -1,0 +1,220 @@
+TAP version 13
+# Subtest: explicit source style line: independent endpoint/unit/axis oracle
+ok 1 - explicit source style line: independent endpoint/unit/axis oracle
+  ---
+  duration_ms: 97.143547
+  type: 'test'
+  ...
+# Subtest: rotated rectangle retains all four vertices; no bbox diagonal reduction
+ok 2 - rotated rectangle retains all four vertices; no bbox diagonal reduction
+  ---
+  duration_ms: 43.247902
+  type: 'test'
+  ...
+# Subtest: group transforms reversed local→parent composition and negative offsets preserved
+ok 3 - group transforms reversed local→parent composition and negative offsets preserved
+  ---
+  duration_ms: 27.553122
+  type: 'test'
+  ...
+# Subtest: flipH line direction preserved without endpoint sorting
+ok 4 - flipH line direction preserved without endpoint sorting
+  ---
+  duration_ms: 37.093601
+  type: 'test'
+  ...
+# Subtest: nonuniform nonrotated rectangular group retains geometry; no bbox approximation
+ok 5 - nonuniform nonrotated rectangular group retains geometry; no bbox approximation
+  ---
+  duration_ms: 20.023099
+  type: 'test'
+  ...
+# Subtest: nonuniform rotated group is explicit app-semantics hold
+ok 6 - nonuniform rotated group is explicit app-semantics hold
+  ---
+  duration_ms: 15.692107
+  type: 'test'
+  ...
+# Subtest: explicit resolved circle stays circle with source radius and target unit
+ok 7 - explicit resolved circle stays circle with source radius and target unit
+  ---
+  duration_ms: 6.257347
+  type: 'test'
+  ...
+# Subtest: similarity rotated ellipse retains radii and basis orientation
+ok 8 - similarity rotated ellipse retains radii and basis orientation
+  ---
+  duration_ms: 6.993957
+  type: 'test'
+  ...
+# Subtest: ellipse nonsimilarity is explicit unsupported, native axes retained
+ok 9 - ellipse nonsimilarity is explicit unsupported, native axes retained
+  ---
+  duration_ms: 6.277438
+  type: 'test'
+  ...
+# Subtest: open polyline native path uses all signed points and normalization
+ok 10 - open polyline native path uses all signed points and normalization
+  ---
+  duration_ms: 10.31843
+  type: 'test'
+  ...
+# Subtest: closed polygon native path uses all signed points and normalization
+ok 11 - closed polygon native path uses all signed points and normalization
+  ---
+  duration_ms: 10.126864
+  type: 'test'
+  ...
+# Subtest: text structure preserved separately from geometry, no guessed font/anchor/dimension
+ok 12 - text structure preserved separately from geometry, no guessed font/anchor/dimension
+  ---
+  duration_ms: 13.600672
+  type: 'test'
+  ...
+# Subtest: missing opacity/dash: geometry retained as candidate, no invented mandatory values
+ok 13 - missing opacity/dash: geometry retained as candidate, no invented mandatory values
+  ---
+  duration_ms: 10.100922
+  type: 'test'
+  ...
+# Subtest: theme color is unresolved, never arbitrary black
+ok 14 - theme color is unresolved, never arbitrary black
+  ---
+  duration_ms: 9.890069
+  type: 'test'
+  ...
+# Subtest: hidden object/component and background require explicit policy
+ok 15 - hidden object/component and background require explicit policy
+  ---
+  duration_ms: 8.89657
+  type: 'test'
+  ...
+# Subtest: multiple slides have independent frames/order and reversible Y mapping
+ok 16 - multiple slides have independent frames/order and reversible Y mapping
+  ---
+  duration_ms: 15.923786
+  type: 'test'
+  ...
+# Subtest: fail closed: unknown schema
+ok 17 - fail closed: unknown schema
+  ---
+  duration_ms: 11.501856
+  type: 'test'
+  ...
+# Subtest: fail closed: unit role mismatch
+ok 18 - fail closed: unit role mismatch
+  ---
+  duration_ms: 6.018742
+  type: 'test'
+  ...
+# Subtest: fail closed: unsafe coordinates
+ok 19 - fail closed: unsafe coordinates
+  ---
+  duration_ms: 9.288676
+  type: 'test'
+  ...
+# Subtest: fail closed: unsafe integer
+ok 20 - fail closed: unsafe integer
+  ---
+  duration_ms: 6.221766
+  type: 'test'
+  ...
+# Subtest: fail closed: duplicate source identity
+ok 21 - fail closed: duplicate source identity
+  ---
+  duration_ms: 8.482666
+  type: 'test'
+  ...
+# Subtest: fail closed: omitted component ledger
+ok 22 - fail closed: omitted component ledger
+  ---
+  duration_ms: 6.291567
+  type: 'test'
+  ...
+# Subtest: fail closed: source object omitted
+ok 23 - fail closed: source object omitted
+  ---
+  duration_ms: 4.4553
+  type: 'test'
+  ...
+# Subtest: fail closed: missing text component
+ok 24 - fail closed: missing text component
+  ---
+  duration_ms: 4.377261
+  type: 'test'
+  ...
+# Subtest: fail closed: missing unsupported reason
+ok 25 - fail closed: missing unsupported reason
+  ---
+  duration_ms: 4.849403
+  type: 'test'
+  ...
+# Subtest: fail closed: missing unsupported action
+ok 26 - fail closed: missing unsupported action
+  ---
+  duration_ms: 6.492005
+  type: 'test'
+  ...
+# Subtest: fail closed: tampered chain matrix
+ok 27 - fail closed: tampered chain matrix
+  ---
+  duration_ms: 8.119031
+  type: 'test'
+  ...
+# Subtest: fail closed: duplicate component ledger
+ok 28 - fail closed: duplicate component ledger
+  ---
+  duration_ms: 6.274042
+  type: 'test'
+  ...
+# Subtest: adapter output passes pinned validator; missing ledger or changed target rejected
+ok 29 - adapter output passes pinned validator; missing ledger or changed target rejected
+  ---
+  duration_ms: 7.059081
+  type: 'test'
+  ...
+# Subtest: caller source is unchanged and independent copies survive result mutation
+ok 30 - caller source is unchanged and independent copies survive result mutation
+  ---
+  duration_ms: 4.557196
+  type: 'test'
+  ...
+# Subtest: fixed G package generic-synthetic-g01: source accounting and exact native inventory preservation
+ok 31 - fixed G package generic-synthetic-g01: source accounting and exact native inventory preservation
+  ---
+  duration_ms: 12.516837
+  type: 'test'
+  ...
+# Subtest: fixed G package generic-synthetic-g02-nested: source accounting and exact native inventory preservation
+ok 32 - fixed G package generic-synthetic-g02-nested: source accounting and exact native inventory preservation
+  ---
+  duration_ms: 8.644343
+  type: 'test'
+  ...
+# Subtest: fixed G package native-vdraw-n01: source accounting and exact native inventory preservation
+ok 33 - fixed G package native-vdraw-n01: source accounting and exact native inventory preservation
+  ---
+  duration_ms: 16.680375
+  type: 'test'
+  ...
+# Subtest: original signed/zero-padded numeric lexemes survive canonical candidate mapping
+ok 34 - original signed/zero-padded numeric lexemes survive canonical candidate mapping
+  ---
+  duration_ms: 11.413529
+  type: 'test'
+  ...
+# Subtest: G expanded two-page source retains 15 source objects and 17 components without declaring drawable readiness
+ok 35 - G expanded two-page source retains 15 source objects and 17 components without declaring drawable readiness
+  ---
+  duration_ms: 18.27776
+  type: 'test'
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 763.381203

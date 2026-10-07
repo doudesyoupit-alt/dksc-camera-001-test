@@ -1,0 +1,310 @@
+{
+  "schema": "vdraw-pptx-inventory-ir-evidence/1",
+  "instruction_id": "VDRAW-PHASE1-B-ADAPTER-20261007-V1",
+  "dispatch_commit": "354aa48e334532028ceac0b90fecc9777f557fd7",
+  "expected_base_head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+  "status": "SOURCE_TO_IR_PRODUCT_CONNECTION_BLOCKED",
+  "implementation_status": "ISOLATED_ADAPTER_ACCOUNTING_IMPLEMENTED",
+  "pinned_ir": {
+    "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+    "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+    "schema_sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+    "validator_sha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "mutated": false
+  },
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/schema.json",
+      "bytes": 35914,
+      "sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+      "git_blob_sha": "985f80b3ffa14ede80f8ffbd52b1fb4c66bd47d7"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/validate.mjs",
+      "bytes": 25213,
+      "sha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+      "git_blob_sha": "c1ed051bde8a511bfc0bb9ffbce95a1bb2065f62"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/version.mjs",
+      "bytes": 205,
+      "sha256": "6cdd8881fa04221151f2ad50b66a22de3df35ce6604df62a281a9c60cdd1f340",
+      "git_blob_sha": "44ee9036493ae5ae09802392fe1e792e59fa2487"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/inventory-ir-adapter.mjs",
+      "bytes": 20101,
+      "sha256": "5393fbcceee252072f58cd10ebb021586b70b9b7dafa4649dcbc9a296a4ead73",
+      "git_blob_sha": "d10fad130bcae31c3beda6023b8e467f910c71ae"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/IR-ADAPTER-CAPABILITY-V1.md",
+      "bytes": 5189,
+      "sha256": "df753543c68fd4d8a52b7dc84c26b0032a5921bcf06392690008323ba33738cf",
+      "git_blob_sha": "acb6e5bc34da0c73cf905e670a7a91d000947af2"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/inventory-ir-adapter.test.mjs",
+      "bytes": 12553,
+      "sha256": "58d18b841758c8280c8919158a09f561cbc4cfc92843a8189c1d72709f998583",
+      "git_blob_sha": "b85ceca11a76050401e7245f5737bf548b756b9e"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/capture-adapter-evidence.mjs",
+      "bytes": 2695,
+      "sha256": "9ccad750b5d26ae27bec515671b69af282f6b01cf095d372e9fed4aa89e4a4c6",
+      "git_blob_sha": "d2385336168b30c859ba5d924a7b84c6e53c40d3"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/fixtures/native-vdraw-n01.pptx",
+      "bytes": 48291,
+      "sha256": "20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2",
+      "git_blob_sha": "1dad91f1ee6aae15ade90e84353b4d3f19cfa154"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/fixtures/generic-synthetic-g01.pptx",
+      "bytes": 2070,
+      "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+      "git_blob_sha": "7bc691fdc7390722204f9879e2d89c48fba2dbd5"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/fixtures/generic-synthetic-g02-nested.pptx",
+      "bytes": 2110,
+      "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "git_blob_sha": "455328b96b672306be5fb7b11ee71aecd8043da3"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/fixtures/synthetic-g03-expanded.pptx",
+      "bytes": 4176,
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "git_blob_sha": "948393a7bc6d5da07eab187bced08dbfacd3589f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/SOURCE-RETENTION-SUMMARY-V1.json",
+      "bytes": 3644,
+      "sha256": "ed5c7c170f31f0ffe202a9c6a586f45341009d4ef05c392f1a5fdfff46f1785a",
+      "git_blob_sha": "8b71b22a5b44380d368ed4b42bd296c4a8870949"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/generic-synthetic-g01.adapter-result.json",
+      "bytes": 139911,
+      "sha256": "4ab3cec66d26ede60f3cd2294bace5b4b5aaf3ed9f42f7a768a0e52830e009ca",
+      "git_blob_sha": "8541a009b340a8def12c3e9dd5baeaba9067250c"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/generic-synthetic-g01.ir.json",
+      "bytes": 27571,
+      "sha256": "d69595b4e8483e014b82a6afa476034d21f2d85c7bf6410d7578d7af08ea315a",
+      "git_blob_sha": "15a3ad032b281f6e8acf8472d79f653c065a839e"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/generic-synthetic-g01.part-manifest.json",
+      "bytes": 33377,
+      "sha256": "98113c9e255f5e9a25e61947fc55d6be86fbf13ae9aa632bfddf1bfc7b80a7aa",
+      "git_blob_sha": "7bb675cb906abdf9fecd91d9fde169741e177723"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/generic-synthetic-g02-nested.adapter-result.json",
+      "bytes": 155830,
+      "sha256": "c6f93f4281ad17d691fd8f7a1de4361348cb3ff673f30b408a490e893503c08e",
+      "git_blob_sha": "e5cfc1323cd45b19247b7457518b1c739a650eca"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/generic-synthetic-g02-nested.ir.json",
+      "bytes": 29614,
+      "sha256": "de6ca9c8a53f2b2cd4a2e9afac5a342538733c3c81197292725b08de6cd63e78",
+      "git_blob_sha": "f026fe5304f4ce55b22e9085509cab31551aad6b"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/generic-synthetic-g02-nested.part-manifest.json",
+      "bytes": 28925,
+      "sha256": "e60acd824144af55be7dcd5f592d17b602f310deeb49e663c484c791589cfcea",
+      "git_blob_sha": "159cbd29b82c464f8cb8dfd0789fb8b499d59e1a"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/inventory-ir-adapter.tap",
+      "bytes": 6900,
+      "sha256": "63f028e186c3680db4180b782a845ba702a6fbca8279e1655ab9837eae69e7a4",
+      "git_blob_sha": "d359157be0f60d6dfaf3628d67ddd8a9bce8fc3e"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/native-vdraw-n01.adapter-result.json",
+      "bytes": 118119,
+      "sha256": "40a938aecce9f7dd5c80a63095c49ea8abf16fa7223540c7ac305f9ef301bb16",
+      "git_blob_sha": "10c0e5e93888972a48adfa20da380c19040b90be"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/native-vdraw-n01.ir.json",
+      "bytes": 20716,
+      "sha256": "225b25cdd5acf235f9673dc32f07c1e2cc45318494d6e4eb5ab6c8615570ab89",
+      "git_blob_sha": "bb65a55f4399d2fda1c4736be2e24173db07bae4"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/native-vdraw-n01.part-manifest.json",
+      "bytes": 33436,
+      "sha256": "1ebd70f9b2d21f6922a35b2037eee7bd555e6d64258c2e1e8e766c3051c1918a",
+      "git_blob_sha": "ed553c7b0847b5a4c0640f11a7f42f49fc9a6439"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/synthetic-g03-expanded.adapter-result.json",
+      "bytes": 267391,
+      "sha256": "250985f9668e5d6f30f5fe4014cbe4daa7bcd7c8f2afb6a7cb9f028142bad27a",
+      "git_blob_sha": "fa811f030a39350b0ce3b119ea145a30a52bc0ee"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/synthetic-g03-expanded.ir.json",
+      "bytes": 48035,
+      "sha256": "5dafab14c4d736b949435739142b296db5d06970904feac70660f9264a089b3a",
+      "git_blob_sha": "f96996312a16cb5d282618a88f5346674450c102"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round3-evidence/synthetic-g03-expanded.part-manifest.json",
+      "bytes": 56210,
+      "sha256": "4781c19e7c9aa39627ba9604786e384eb2f6171a7c209abb161a1d5ce714330d",
+      "git_blob_sha": "e53356b5e19df30be186247499d9182534ee0873"
+    }
+  ],
+  "new_tests": {
+    "command": "node --test --test-reporter=tap prototype/vdraw-mobile-007/routes/pptx/tests/inventory-ir-adapter.test.mjs",
+    "pass": 35,
+    "fail": 0,
+    "skip": 0,
+    "cancelled": 0,
+    "denominator": "35 newly added named adapter tests; previous 34 inventory/86 IR tests reused and not rerun",
+    "log_sha256": "63f028e186c3680db4180b782a845ba702a6fbca8279e1655ab9837eae69e7a4"
+  },
+  "source_retention": [
+    {
+      "fixture": "generic-synthetic-g01",
+      "sourceHead": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+      "sourceSha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+      "sourceObjectsAll": 14,
+      "sourceObjectsWithoutMetadataOrBackground": 9,
+      "componentsAll": 10,
+      "componentsWithoutBackground": 9,
+      "sourceGeometryDenominator": 5,
+      "sourceTextDenominator": 1,
+      "sourceInventory": 24,
+      "sourceLedger": 24,
+      "geometryCandidates": 5,
+      "representedGeometry": 0,
+      "representedText": 0,
+      "irValidation": true,
+      "readiness": "HOLD",
+      "reasons": [
+        "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+        "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+        "UNSUPPORTED_NATIVE_UNKNOWN",
+        "HIDDEN_POLICY_REQUIRED",
+        "BACKGROUND_POLICY_REQUIRED",
+        "UNSUPPORTED_NATIVE_BACKGROUND"
+      ]
+    },
+    {
+      "fixture": "generic-synthetic-g02-nested",
+      "sourceHead": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+      "sourceSha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "sourceObjectsAll": 17,
+      "sourceObjectsWithoutMetadataOrBackground": 10,
+      "componentsAll": 10,
+      "componentsWithoutBackground": 9,
+      "sourceGeometryDenominator": 5,
+      "sourceTextDenominator": 1,
+      "sourceInventory": 27,
+      "sourceLedger": 27,
+      "geometryCandidates": 4,
+      "representedGeometry": 0,
+      "representedText": 0,
+      "irValidation": true,
+      "readiness": "HOLD",
+      "reasons": [
+        "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+        "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+        "APP_AFFINE_SEMANTICS_UNVERIFIED",
+        "UNSUPPORTED_NATIVE_UNKNOWN",
+        "HIDDEN_POLICY_REQUIRED",
+        "BACKGROUND_POLICY_REQUIRED",
+        "UNSUPPORTED_NATIVE_BACKGROUND"
+      ]
+    },
+    {
+      "fixture": "native-vdraw-n01",
+      "sourceHead": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+      "sourceSha256": "20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2",
+      "sourceObjectsAll": 8,
+      "sourceObjectsWithoutMetadataOrBackground": 6,
+      "componentsAll": 8,
+      "componentsWithoutBackground": 8,
+      "sourceGeometryDenominator": 6,
+      "sourceTextDenominator": 2,
+      "sourceInventory": 16,
+      "sourceLedger": 16,
+      "geometryCandidates": 6,
+      "representedGeometry": 0,
+      "representedText": 0,
+      "irValidation": true,
+      "readiness": "HOLD",
+      "reasons": [
+        "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_COLOR_OR_OPACITY",
+        "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_WIDTH",
+        "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT"
+      ]
+    },
+    {
+      "fixture": "synthetic-g03-expanded",
+      "sourceHead": "478383bf506123b97b0b94d1d9fbba84af34295f",
+      "sourceSha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "sourceObjectsAll": 24,
+      "sourceObjectsWithoutMetadataOrBackground": 15,
+      "componentsAll": 18,
+      "componentsWithoutBackground": 17,
+      "sourceGeometryDenominator": 12,
+      "sourceTextDenominator": 4,
+      "sourceInventory": 42,
+      "sourceLedger": 42,
+      "geometryCandidates": 8,
+      "representedGeometry": 0,
+      "representedText": 0,
+      "irValidation": true,
+      "readiness": "HOLD",
+      "reasons": [
+        "APP_AFFINE_SEMANTICS_UNVERIFIED",
+        "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_COLOR_OR_OPACITY",
+        "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+        "UNSUPPORTED_NATIVE_GEOMETRY",
+        "CONTRACT_CAPABILITY_LIMITATION_UNRESOLVED_LINE_STYLE",
+        "UNSUPPORTED_NATIVE_UNKNOWN",
+        "BACKGROUND_POLICY_REQUIRED",
+        "UNSUPPORTED_NATIVE_BACKGROUND"
+      ]
+    }
+  ],
+  "blocker": [
+    "All four fixed G packages have zero drawable IR due to unresolved mandatory candidate.1 style values; geometry-only manifest retention is not product IR conversion",
+    "Independent G source-to-IR check pending",
+    "No DXF authorized or implemented",
+    "Actual Jw_cad Open/Edit/Save/Round-trip NOT_RUN"
+  ],
+  "corrections": [
+    "Initial new test mutation of inventory shared identity matrix was isolated by cloning test input; existing reader unchanged",
+    "Source oracle 15/17 excludes metadata/background; inventory totals 24/18 and IR inventory42 retained separately",
+    "New test null-reason guard corrected"
+  ],
+  "gates": {
+    "candidate1": "UNCHANGED_IMMUTABLE",
+    "source_accounting": "LOCAL_NEW_CHECKS_PASS_ONLY",
+    "source_to_ir_product": "BLOCKED",
+    "DXF": "NOT_IMPLEMENTED",
+    "product": "HOLD"
+  },
+  "protection": {
+    "old_inventory_reader": "UNCHANGED",
+    "old_tests_evidence_Golden": "UNCHANGED",
+    "006": "UNCHANGED",
+    "fixed_signing": "UNCHANGED",
+    "SAVE_001": "CLOSED_NO_RECONFIRMATION",
+    "main_validation_release": "NOT_CHANGED",
+    "APK": "NOT_GENERATED",
+    "AI_API_CALLS": 0
+  }
+}
