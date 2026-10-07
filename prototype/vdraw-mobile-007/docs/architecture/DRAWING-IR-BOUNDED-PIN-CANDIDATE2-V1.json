@@ -1,0 +1,46 @@
+{
+  "schema": "vdraw-ir-bounded-freeze/1",
+  "status": "CANDIDATE2_PIN_ACCEPTED_SCOPE_ONLY",
+  "parent_coordinator_head": "84270dd15f56b62c07b34f23399fb301bd79597a",
+  "IR": {
+    "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+    "head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "schema_path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json",
+    "schema_sha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "validator_sha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "G_review_head": "97978333911083f419828b8424ecbba9dee7dd20",
+    "scope": "NATIVE_EMU_PRIMITIVES_PLUS_EXPLICIT_UNKNOWN_APPEARANCE_ONLY",
+    "wire_contractStatus": "CANDIDATE",
+    "product_gate": "HOLD"
+  },
+  "candidate1": "PRESERVED_IMMUTABLE_NOT_REPLACED",
+  "verification": {
+    "A_new_named_tests": 47,
+    "G_new_independent_named_tests": 43,
+    "A_immutable_evidence_hash_matches": 8,
+    "A_previous_blobs_preserved": 569,
+    "source_unit_semantic_fail_findings": 2,
+    "source_unit_findings_status": "PENDING_B2_CORRECTION",
+    "B3_new_tests": 35,
+    "G3_new_tests": 77,
+    "G3_prior_numeric_comparisons": 2418,
+    "prior_checks_prove_custom_raw_unit_meaning": false
+  },
+  "source_to_IR_gate": "B1_BLOCKED_B2_PENDING_INDEPENDENT_REVIEW",
+  "scope_exclusions": [
+    "RAW_CUSTOM_PATH_UNITS",
+    "NATIVE_SOLID_DASH_RESOLUTION",
+    "TEXT_LAYOUT_FONT",
+    "DXF",
+    "REAL_JWCAD",
+    "PRODUCT_ACCEPTANCE"
+  ],
+  "next_dispatch": {
+    "instruction_id": "VDRAW-PHASE1-B-CANDIDATE2-ADAPTER-20261007-V1",
+    "expected_branch": "work/vdraw-pptx-jwcad-v1",
+    "expected_head": "4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22"
+  },
+  "product_phase1_gate": "HOLD",
+  "Human_substitution": false,
+  "protection": "APPEND_ONLY_ALL_PREVIOUS_CHECKPOINTS_PRESERVED"
+}
