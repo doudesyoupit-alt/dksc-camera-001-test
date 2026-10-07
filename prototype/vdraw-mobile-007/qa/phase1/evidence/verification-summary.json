@@ -1,0 +1,146 @@
+{
+  "schema": "vdraw-independent-qa-summary/1",
+  "candidatePair": {
+    "schema": "vdraw-phase1-candidate-hash-pair/1",
+    "status": "SOURCE_ORACLE_CANDIDATE_PAIR_FROZEN_AFTER_G_INDEPENDENT_REVIEW",
+    "freezeScope": "QA source truth/inventory and candidate contract agreement only; not production IR adapter, DXF retention, real-app acceptance or full Golden coverage",
+    "A": {
+      "branch": "work/vdraw-drawing-ir-v1",
+      "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+      "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+      "schemaSha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+      "validatorSha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+      "adverseChecks": "12 independent named tests"
+    },
+    "B": {
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+      "version": "vdraw-pptx-native-inventory/1",
+      "interfaceSha256": "ceecb509891f34d0701cdad525ee3d8d6722dbd2ea92d94aaccfe4aecf381742",
+      "moduleSha256": "41d2995bc8b3b62f5faa4a33e7cd914f0286e348815c6ac0f9c00c0e0f562c89",
+      "domQaAdapterSha256": "2f15ef496a08224f04889b1e9277aae2dd81e90ffb0803def585a0eae1a9c610",
+      "sourceOracleMatches": 3
+    },
+    "unsupportedRetention": "NOT_EVALUATED",
+    "externalGenericAppGolden": "BLOCKED_NONE_ACQUIRED",
+    "realPptxApp": "NOT_RUN",
+    "realJwCad": "NOT_RUN",
+    "productGate": "HOLD"
+  },
+  "checks": [
+    {
+      "name": "oracle-and-b-loss",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/tools",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "environment": {},
+      "pass": 48,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "denominator": "named_test_case",
+      "logPath": "evidence/oracle-and-b-loss.log",
+      "logSha256": "5a2391a7cc34654a135c11090868c3605bee95ff9fb7da5984da404e56ab80da"
+    },
+    {
+      "name": "ir-independent",
+      "command": [
+        "node",
+        "--test",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/tools/test_ir_independent.mjs"
+      ],
+      "environment": {
+        "VDRAW_IR_ROOT": "/workspace/scratch/aa24ec8813c2/scratch-g-reviewed/A"
+      },
+      "pass": 12,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "denominator": "named_test_case",
+      "logPath": "evidence/ir-independent.log",
+      "logSha256": "5e62b60a6ef3fb6385a516240ae8835035395bf90a977bc8661987447efebd2f"
+    },
+    {
+      "name": "native-vdraw-n01-B-source-match",
+      "command": [
+        "python",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/tools/compare_b_inventory.py",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/fixtures/native-vdraw-n01.pptx",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/evidence/native-vdraw-n01.b-result.json",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/evidence/native-vdraw-n01.b-compare.json"
+      ],
+      "pass": 122,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "denominator": "source_comparison_check",
+      "cases": 1,
+      "scope": "SOURCE_INVENTORY_MATCH_ONLY_TARGET_NOT_EVALUATED",
+      "reportPath": "evidence/native-vdraw-n01.b-compare.json",
+      "reportSha256": "337cef4d2de88a83053a16b2d7777f8363af161adfe46231e1e103cb5ed65871"
+    },
+    {
+      "name": "generic-synthetic-g01-B-source-match",
+      "command": [
+        "python",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/tools/compare_b_inventory.py",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/fixtures/generic-synthetic-g01.pptx",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/evidence/generic-synthetic-g01.b-result.json",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/evidence/generic-synthetic-g01.b-compare.json"
+      ],
+      "pass": 129,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "denominator": "source_comparison_check",
+      "cases": 1,
+      "scope": "SOURCE_INVENTORY_MATCH_ONLY_TARGET_NOT_EVALUATED",
+      "reportPath": "evidence/generic-synthetic-g01.b-compare.json",
+      "reportSha256": "539a536e7f693db6ae52ca38868bccd1dbc64986f469d9b4f59db7a91fe02d26"
+    },
+    {
+      "name": "generic-synthetic-g02-nested-B-source-match",
+      "command": [
+        "python",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/tools/compare_b_inventory.py",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/fixtures/generic-synthetic-g02-nested.pptx",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/evidence/generic-synthetic-g02-nested.b-result.json",
+        "track-g/prototype/vdraw-mobile-007/qa/phase1/evidence/generic-synthetic-g02-nested.b-compare.json"
+      ],
+      "pass": 140,
+      "fail": 0,
+      "blocked": 0,
+      "skip": 0,
+      "denominator": "source_comparison_check",
+      "cases": 1,
+      "scope": "SOURCE_INVENTORY_MATCH_ONLY_TARGET_NOT_EVALUATED",
+      "reportPath": "evidence/generic-synthetic-g02-nested.b-compare.json",
+      "reportSha256": "c3047ebce355384caa0a0197b994bdcfb47e52efed34ee54b0b5ea8834aacdd6"
+    }
+  ],
+  "totals": {
+    "namedTests": 60,
+    "sourceComparisonChecks": 391,
+    "sourcePackages": 3,
+    "fail": 0,
+    "blockedInExecutedChecks": 0,
+    "skip": 0
+  },
+  "unexecutedProductGates": [
+    "MM_DXF",
+    "REAL_PPTX_APP",
+    "EXTERNAL_GENERIC_APP_GOLDEN",
+    "REAL_JWCAD",
+    "ROUND_TRIP"
+  ],
+  "productGate": "HOLD",
+  "existingRegressionRerun": false
+}

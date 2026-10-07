@@ -1,0 +1,7 @@
+// G QA harness; B result is tested against independent Python oracle, never truth.
+import fs from 'node:fs/promises';import path from 'node:path';import {pathToFileURL} from 'node:url';import {createRequire} from 'node:module';import {webcrypto} from 'node:crypto';
+const [bRoot,fixtureRoot,outRoot]=process.argv.slice(2);if(!bRoot||!fixtureRoot||!outRoot)throw Error('usage: node run-b-extraction.mjs B_ROOT FIXTURE_ROOT OUT_ROOT');
+const deps=process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES;if(!deps)throw Error('Explicit runtime module root required');const require=createRequire(path.join(deps,'package.json')),JSZip=require('jszip');
+const {readNativePptx}=await import(pathToFileURL(path.join(path.resolve(bRoot),'native-inventory.mjs')));const {DOMParser,XMLSerializer}=await import(pathToFileURL(path.join(path.resolve(bRoot),'tests/node-xml-adapter.mjs')));
+await fs.mkdir(outRoot,{recursive:true});
+for(const name of ['native-vdraw-n01','generic-synthetic-g01','generic-synthetic-g02-nested']){const data=await fs.readFile(path.join(fixtureRoot,name+'.pptx'));const result=await readNativePptx(data,{JSZip,DOMParser,XMLSerializer,crypto:webcrypto,origin:name.startsWith('native')?'VDRAW_NATIVE_QA_EXPORTER_OUTPUT':'GENERIC_SYNTHETIC_NOT_EXTERNAL_APP'});await fs.writeFile(path.join(outRoot,name+'.b-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({name,counts:result.counts,exportReadiness:result.exportReadiness,supportedRetention:result.supportedRetention}));}

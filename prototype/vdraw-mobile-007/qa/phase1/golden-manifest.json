@@ -1,0 +1,128 @@
+{
+  "schema": "vdraw-phase1-golden-manifest/1",
+  "freezeStatus": "SOURCE_ORACLE_CANDIDATE_PAIR_FROZEN_AFTER_G_INDEPENDENT_REVIEW",
+  "freezeScope": "INDEPENDENT_SOURCE_ORACLE_ONLY_CANDIDATE_BINDING_NOT_PRODUCT_ACCEPTANCE",
+  "goldens": [
+    {
+      "id": "native-vdraw-n01",
+      "path": "fixtures/native-vdraw-n01.pptx",
+      "sha256": "20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2",
+      "classification": "VDRAW_NATIVE_QA_UNCHANGED_EXPORTER_DIFFERENT_PACKAGER_SCOPE",
+      "nativeSourceOracleCounts": {
+        "sourceObjects": 6,
+        "containers": 0,
+        "drawableObjects": 6,
+        "hiddenObjects": 0,
+        "backgrounds": 0,
+        "parts": 8,
+        "unsupportedParts": 0
+      },
+      "oraclePath": "fixtures/native-vdraw-n01.oracle.json",
+      "oracleSha256": "11613b7b14c9e920f926224596b2940fb0b8cd2a41ce0c0e00c2735226163433",
+      "createdApp": "QA_NODE_EXPORTER_HARNESS",
+      "realAppVerified": false,
+      "status": "SOURCE_ORACLE_PREPARED_TARGET_RETENTION_NOT_EVALUATED",
+      "sourceAssetIdentityPolicy": "immutable package/slide hash plus canonical native object/part path"
+    },
+    {
+      "id": "generic-synthetic-g01",
+      "path": "fixtures/generic-synthetic-g01.pptx",
+      "sha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+      "classification": "GENERIC_SYNTHETIC_NOT_EXTERNAL_APP",
+      "nativeSourceOracleCounts": {
+        "sourceObjects": 9,
+        "containers": 1,
+        "drawableObjects": 7,
+        "hiddenObjects": 1,
+        "backgrounds": 1,
+        "parts": 9,
+        "unsupportedParts": 3
+      },
+      "oraclePath": "fixtures/generic-synthetic-g01.oracle.json",
+      "oracleSha256": "2ea5774596646122590b45a9a557ce77308bbf9649309ecacf5e74c90d1c1cc8",
+      "createdApp": "QA_RAW_OOXML_GENERATOR",
+      "realAppVerified": false,
+      "status": "SOURCE_ORACLE_PREPARED_TARGET_RETENTION_NOT_EVALUATED",
+      "sourceAssetIdentityPolicy": "immutable package/slide hash plus canonical native object/part path"
+    },
+    {
+      "id": "generic-synthetic-g02-nested",
+      "path": "fixtures/generic-synthetic-g02-nested.pptx",
+      "sha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+      "classification": "GENERIC_SYNTHETIC_NOT_EXTERNAL_APP",
+      "nativeSourceOracleCounts": {
+        "sourceObjects": 10,
+        "containers": 2,
+        "drawableObjects": 7,
+        "hiddenObjects": 1,
+        "backgrounds": 1,
+        "parts": 9,
+        "unsupportedParts": 3
+      },
+      "oraclePath": "fixtures/generic-synthetic-g02-nested.oracle.json",
+      "oracleSha256": "0fd6abb4af683d5391ebb9c09e833a1fa628ffe477eae1a8a5ebdd1cfde3feef",
+      "createdApp": "QA_RAW_OOXML_GENERATOR",
+      "realAppVerified": false,
+      "status": "SOURCE_ORACLE_PREPARED_TARGET_RETENTION_NOT_EVALUATED",
+      "sourceAssetIdentityPolicy": "immutable package/slide hash plus canonical native object/part path"
+    }
+  ],
+  "counts": {
+    "nativeQaExporter": 1,
+    "genericSynthetic": 2,
+    "externalGenericAppCreated": 0,
+    "realPptxAppVerified": 0,
+    "realJwCadRoundTrips": 0
+  },
+  "requiredCoverage": [
+    {
+      "feature": "line/rect/circle/ellipse",
+      "status": "SOURCE_FIXTURES_PREPARED_TARGET_PENDING"
+    },
+    {
+      "feature": "shape-plus-text/Japanese/ASCII/run/paragraph/br",
+      "status": "SOURCE_FIXTURES_PREPARED_TEXT_LAYOUT_PENDING"
+    },
+    {
+      "feature": "native 90deg/flipH/basic-nested-group/nonuniform-scale",
+      "status": "SOURCE_FIXTURES_PREPARED_OFFICE_SEMANTICS_PENDING"
+    },
+    {
+      "feature": "hidden/background/pic/graphicFrame/unknown",
+      "status": "EXPLICIT_UNSUPPORTED_OR_POLICY_HOLD"
+    },
+    {
+      "feature": "simple open polyline/closed polygon",
+      "status": "PENDING_G_INDEPENDENT_FIXTURE"
+    },
+    {
+      "feature": "arc/complex curves",
+      "status": "PENDING_G_INDEPENDENT_UNSUPPORTED_FIXTURE"
+    },
+    {
+      "feature": "negative source offset/negative line direction",
+      "status": "PENDING_G_INDEPENDENT_FIXTURE"
+    },
+    {
+      "feature": "negative/359deg angles/flipV",
+      "status": "PENDING_G_INDEPENDENT_FIXTURE"
+    },
+    {
+      "feature": "multi-slide/orphan/master/layout/theme inheritance",
+      "status": "PENDING_G_INDEPENDENT_FIXTURE_AND_APP"
+    },
+    {
+      "feature": "external Generic real PowerPoint/LibreOffice provenance",
+      "status": "BLOCKED_NO_ACQUIRED_APP_GOLDEN"
+    },
+    {
+      "feature": "CAD mm backend/real Jw_cad round-trip",
+      "status": "BLOCKED_NOT_IMPLEMENTED_NOT_RUN"
+    }
+  ],
+  "semanticPolicy": "Generic UNKNOWN; Native semantic metadata authority UNVERIFIED; drawing layout MM is not real-world MM",
+  "targetRetention": "NOT_EVALUATED",
+  "productGate": "HOLD",
+  "candidateHashPairPath": "candidate-hash-pair.json",
+  "candidateHashPairSha256": "b42942b6066bcb23ded7e579a22d0391c20174072307a3a4767d7f2c17fc3047"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "vdraw-phase1-candidate-hash-pair/1",
+  "status": "SOURCE_ORACLE_CANDIDATE_PAIR_FROZEN_AFTER_G_INDEPENDENT_REVIEW",
+  "freezeScope": "QA source truth/inventory and candidate contract agreement only; not production IR adapter, DXF retention, real-app acceptance or full Golden coverage",
+  "A": {
+    "branch": "work/vdraw-drawing-ir-v1",
+    "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+    "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+    "schemaSha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+    "validatorSha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "adverseChecks": "12 independent named tests"
+  },
+  "B": {
+    "branch": "work/vdraw-pptx-jwcad-v1",
+    "head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+    "version": "vdraw-pptx-native-inventory/1",
+    "interfaceSha256": "ceecb509891f34d0701cdad525ee3d8d6722dbd2ea92d94aaccfe4aecf381742",
+    "moduleSha256": "41d2995bc8b3b62f5faa4a33e7cd914f0286e348815c6ac0f9c00c0e0f562c89",
+    "domQaAdapterSha256": "2f15ef496a08224f04889b1e9277aae2dd81e90ffb0803def585a0eae1a9c610",
+    "sourceOracleMatches": 3
+  },
+  "unsupportedRetention": "NOT_EVALUATED",
+  "externalGenericAppGolden": "BLOCKED_NONE_ACQUIRED",
+  "realPptxApp": "NOT_RUN",
+  "realJwCad": "NOT_RUN",
+  "productGate": "HOLD"
+}

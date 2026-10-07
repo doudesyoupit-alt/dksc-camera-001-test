@@ -1,0 +1,120 @@
+{
+  "classification": "GENERIC_SYNTHETIC_OOXML_NOT_EXTERNAL_APP",
+  "externalAppGoldenCount": 0,
+  "appVerification": "NOT_RUN",
+  "sourceSizeEmu": [
+    7200000,
+    5400000
+  ],
+  "objects": {
+    "2": {
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "partKinds": [
+        "geometry",
+        "text"
+      ],
+      "text": "分電盤ABC\n1000\n次行",
+      "xfrm": {
+        "x": 360000,
+        "y": 720000,
+        "cx": 720000,
+        "cy": 360000
+      },
+      "globalBoxEmu": [
+        360000,
+        720000,
+        720000,
+        360000
+      ]
+    },
+    "3": {
+      "kind": "cxnSp",
+      "role": "DRAWABLE",
+      "partKinds": [
+        "geometry"
+      ],
+      "xfrm": {
+        "x": 914400,
+        "y": 1828800,
+        "cx": 914400,
+        "cy": 0,
+        "rot": 5400000,
+        "flipH": true
+      }
+    },
+    "4": {
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "partKinds": [
+        "geometry"
+      ],
+      "preset": "ellipse",
+      "globalBoxEmu": [
+        360000,
+        720000,
+        360000,
+        360000
+      ]
+    },
+    "5": {
+      "kind": "grpSp",
+      "role": "CONTAINER",
+      "partKinds": []
+    },
+    "6": {
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "partKinds": [
+        "geometry"
+      ],
+      "globalBoxEmu": [
+        720000,
+        1080000,
+        180000,
+        540000
+      ]
+    },
+    "7": {
+      "kind": "pic",
+      "role": "DRAWABLE",
+      "partKinds": [
+        "unsupported"
+      ],
+      "support": "UNSUPPORTED"
+    },
+    "8": {
+      "kind": "graphicFrame",
+      "role": "DRAWABLE",
+      "partKinds": [
+        "unsupported"
+      ],
+      "support": "UNSUPPORTED"
+    },
+    "9": {
+      "kind": "unknownShape",
+      "role": "DRAWABLE",
+      "partKinds": [
+        "unsupported"
+      ],
+      "support": "UNSUPPORTED"
+    },
+    "10": {
+      "kind": "sp",
+      "role": "HIDDEN",
+      "partKinds": [
+        "geometry"
+      ]
+    }
+  },
+  "counts": {
+    "sourceObjects": 9,
+    "containers": 1,
+    "drawableObjects": 7,
+    "hiddenObjects": 1,
+    "backgrounds": 1,
+    "parts": 9,
+    "unsupportedParts": 3
+  },
+  "rootMetadataPolicy": "nvGrpSpPr/grpSpPr are infrastructure; preserved source XML, excluded drawable denominator; root id1 recorded as infrastructure, never an implicit source drawable"
+}

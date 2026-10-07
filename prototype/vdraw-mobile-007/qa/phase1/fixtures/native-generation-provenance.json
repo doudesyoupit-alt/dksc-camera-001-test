@@ -1,0 +1,17 @@
+{
+  "sourceHead": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "unchangedExporter": true,
+  "packagerVersion": "4.0.1",
+  "zipVersion": "3.10.1",
+  "adapter": "Blob/uint8array packaging type only; photo-free unused native IO module dependency injection",
+  "semanticMetadataAuthority": "UNVERIFIED",
+  "appVerification": "NOT_RUN",
+  "classification": "VDRAW_NATIVE_QA_EXPORTER_OUTPUT",
+  "accuracyEvidence": false,
+  "sourceModuleSha256": {
+    "core": "94f5ae9ffe1c4459a673cf83f864efbfa3d74ef39b4dd8b504925499eeca023d",
+    "render": "1b6005e3a4eb5813aef4b918357f375e80fecde568138e88e4f2859cf94ef870",
+    "exporters": "9b6ce6d50d373dfed80bdc853e301fe867faf0e7adaa49775207209b74347632"
+  },
+  "sameAsShippedVendorBundle": "NOT_VERIFIED"
+}

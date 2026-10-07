@@ -1,0 +1,20 @@
+✔ independent unit scaffold is contract-only HOLD (4.52651ms)
+✔ two diagonal rect corners cannot prove shear rect retention (2.925093ms)
+✔ 45deg rotated rect cannot falsely become axis rect from diagonal (0.651239ms)
+✔ explicit four corners for 90deg native rect preserve transform (2.584527ms)
+✔ rotated ellipse nonuniform transform needs basis solution or rejection (1.01746ms)
+✔ homography valid region must contain input endpoints (0.97185ms)
+✔ duplicate IDs with equal inventory length fail closed (1.582922ms)
+✔ text part source row cannot be replaced by another retained shape (0.750901ms)
+✔ required supported part removed only from target denominator rejected (0.571602ms)
+✔ layout mm cannot be interpreted as REAL_WORLD solely by unit label (4.129607ms)
+✔ unknown schema rejected without source mutation (0.60149ms)
+✔ nested asymmetric group basis retains order and sign (1.083315ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 137.925441

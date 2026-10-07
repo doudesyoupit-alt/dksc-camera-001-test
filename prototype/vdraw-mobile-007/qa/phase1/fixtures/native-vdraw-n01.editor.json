@@ -1,0 +1,148 @@
+{
+  "schema": "vdraw-mobile/1",
+  "version": 1,
+  "id": "qa-native-doc",
+  "title": "QA Native Fixture",
+  "createdAt": "2026-10-07T00:00:00Z",
+  "updatedAt": "2026-10-07T00:00:00Z",
+  "revision": 0,
+  "activePageId": "qa-native-page",
+  "pages": [
+    {
+      "id": "qa-native-page",
+      "name": "図面 1",
+      "canvas": {
+        "width": 1200,
+        "height": 800,
+        "yAxis": "down"
+      },
+      "elements": [
+        {
+          "id": "native-line",
+          "kind": "line",
+          "name": "horizontal",
+          "category": "汎用図形",
+          "x": 100,
+          "y": 100,
+          "w": 300,
+          "h": 0,
+          "points": [],
+          "fill": "none",
+          "stroke": "#112233",
+          "strokeWidth": 3,
+          "text": "文字",
+          "fontSize": 30,
+          "visible": true,
+          "layerId": "drawing",
+          "origin": "manual"
+        },
+        {
+          "id": "native-rect",
+          "kind": "rect",
+          "name": "rectangle",
+          "category": "汎用図形",
+          "x": 200,
+          "y": 200,
+          "w": 180,
+          "h": 100,
+          "points": [],
+          "fill": "#ABCDEF",
+          "stroke": "#102030",
+          "strokeWidth": 3,
+          "text": "文字",
+          "fontSize": 30,
+          "visible": true,
+          "layerId": "drawing",
+          "origin": "manual"
+        },
+        {
+          "id": "native-ellipse",
+          "kind": "ellipse",
+          "name": "ellipse",
+          "category": "汎用図形",
+          "x": 450,
+          "y": 250,
+          "w": 100,
+          "h": 160,
+          "points": [],
+          "fill": "none",
+          "stroke": "#334455",
+          "strokeWidth": 3,
+          "text": "文字",
+          "fontSize": 30,
+          "visible": true,
+          "layerId": "drawing",
+          "origin": "manual"
+        },
+        {
+          "id": "native-text",
+          "kind": "text",
+          "name": "japanese",
+          "category": "汎用図形",
+          "x": 100,
+          "y": 500,
+          "w": 400,
+          "h": 100,
+          "points": [],
+          "fill": "#224466",
+          "stroke": "#224466",
+          "strokeWidth": 3,
+          "text": "分電盤 ABC\n1000",
+          "fontSize": 24,
+          "visible": true,
+          "layerId": "drawing",
+          "origin": "manual"
+        },
+        {
+          "id": "native-dimension",
+          "kind": "dimension",
+          "name": "manual annotation",
+          "category": "汎用図形",
+          "x": 700,
+          "y": 500,
+          "w": 200,
+          "h": 0,
+          "points": [],
+          "fill": "none",
+          "stroke": "#334466",
+          "strokeWidth": 3,
+          "text": "1000",
+          "fontSize": 30,
+          "visible": true,
+          "layerId": "drawing",
+          "origin": "manual",
+          "dimension": {
+            "status": "MANUAL",
+            "valueMm": 1000
+          }
+        }
+      ],
+      "layers": [
+        {
+          "id": "drawing",
+          "name": "図面",
+          "visible": true,
+          "locked": false
+        }
+      ],
+      "sourceId": null,
+      "calibration": {
+        "status": "UNSCALED",
+        "references": [],
+        "mmPerUnit": null
+      },
+      "view": {
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      }
+    }
+  ],
+  "sources": [],
+  "candidates": [],
+  "adoptions": [],
+  "manualEvents": [],
+  "exports": [],
+  "importWarnings": [],
+  "sample": false
+}

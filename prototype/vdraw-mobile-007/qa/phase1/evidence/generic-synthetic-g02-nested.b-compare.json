@@ -1,0 +1,938 @@
+{
+  "status": "SOURCE_INVENTORY_MATCH_ONLY",
+  "checks": [
+    {
+      "name": "package source SHA256",
+      "pass": true
+    },
+    {
+      "name": "native EMU/source and UNSCALED real-world",
+      "pass": true
+    },
+    {
+      "name": "slide physical size and relationship order",
+      "pass": true
+    },
+    {
+      "name": "all B source identities unique",
+      "pass": true
+    },
+    {
+      "name": "original drawable/hidden/container object set exact",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/text",
+      "pass": true
+    },
+    {
+      "name": "paragraph/run/br content /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "text placement matrix /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw transform attrs /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw off /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw ext /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chOff /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chExt /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent full affine /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "supported structural primitive geometry present /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent rect type /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "semantic color remains UNKNOWN /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "direct raw RGB/transforms fill /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent four rect corners /p:sld/p:cSld/p:spTree/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:cxnSp[1]/geometry",
+      "pass": true
+    },
+    {
+      "name": "raw transform attrs /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw off /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw ext /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chOff /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chExt /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent full affine /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "supported structural primitive geometry present /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent line type/endpoints /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "semantic color remains UNKNOWN /p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry",
+      "pass": true
+    },
+    {
+      "name": "raw transform attrs /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "raw off /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "raw ext /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "raw chOff /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "raw chExt /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "independent full affine /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "supported structural primitive geometry present /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "independent circle/ellipse type/center/axes/size /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "semantic color remains UNKNOWN /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "direct raw RGB/transforms fill /p:sld/p:cSld/p:spTree/p:sp[2]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw transform attrs /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw off /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw ext /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chOff /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chExt /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent full affine /p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw transform attrs /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw off /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw ext /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chOff /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chExt /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent full affine /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]/geometry",
+      "pass": true
+    },
+    {
+      "name": "raw transform attrs /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw off /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw ext /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chOff /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "raw chExt /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent full affine /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "supported structural primitive geometry present /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent rect type /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "semantic color remains UNKNOWN /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "direct raw RGB/transforms fill /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "independent four rect corners /p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:pic[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:pic[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:pic[1]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:pic[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:pic[1]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:pic[1]/unknown",
+      "pass": true
+    },
+    {
+      "name": "unsupported source retained /p:sld/p:cSld/p:spTree/p:pic[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:graphicFrame[1]/unknown",
+      "pass": true
+    },
+    {
+      "name": "unsupported source retained /p:sld/p:cSld/p:spTree/p:graphicFrame[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:unknownShape[1]/unknown",
+      "pass": true
+    },
+    {
+      "name": "unsupported source retained /p:sld/p:cSld/p:spTree/p:unknownShape[1]",
+      "pass": true
+    },
+    {
+      "name": "source hash/page part /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "role/type /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "full native XML/text/style/source identity /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "native id /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "object parts exact /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "component source identity ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[3]/geometry",
+      "pass": true
+    },
+    {
+      "name": "raw transform attrs /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "raw off /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "raw ext /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "raw chOff /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "raw chExt /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "independent full affine /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "supported structural primitive geometry present /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "independent rect type /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "semantic color remains UNKNOWN /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "direct raw RGB/transforms fill /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "independent four rect corners /p:sld/p:cSld/p:spTree/p:sp[3]",
+      "pass": true
+    },
+    {
+      "name": "unique component identities and ledger coverage",
+      "pass": true
+    },
+    {
+      "name": "source ledger unique and complete",
+      "pass": true
+    },
+    {
+      "name": "background denominator explicit",
+      "pass": true
+    },
+    {
+      "name": "infrastructure denominator explicit",
+      "pass": true
+    },
+    {
+      "name": "component plus background denominator exact",
+      "pass": true
+    },
+    {
+      "name": "unsupported count exact with background split",
+      "pass": true
+    },
+    {
+      "name": "unsupported reasons and Human action retained",
+      "pass": true
+    },
+    {
+      "name": "source accounting cannot promote target readiness",
+      "pass": true
+    }
+  ],
+  "numericDeltas": [
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "stage": "OOXML_SOURCE_AFFINE_EMU",
+      "metric": "matrix",
+      "expected": [
+        1.0,
+        0.0,
+        360000.0,
+        0.0,
+        1.0,
+        720000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual": [
+        1,
+        0,
+        360000,
+        0,
+        1,
+        720000,
+        0,
+        0,
+        1
+      ],
+      "rawDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "stage": "OOXML_SOURCE_AFFINE_EMU",
+      "metric": "matrix",
+      "expected": [
+        -6.123233995736766e-17,
+        -1.0,
+        1371600.0,
+        -1.0,
+        6.123233995736766e-17,
+        2286000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual": [
+        -6.123233995736766e-17,
+        -1,
+        1371600,
+        -1,
+        6.123233995736766e-17,
+        2286000,
+        0,
+        0,
+        1
+      ],
+      "rawDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:cxnSp[1]",
+      "stage": "OOXML_SOURCE_COMPONENT_EMU",
+      "metric": "lineEndpoints",
+      "expected": [
+        [
+          1371600.0,
+          2286000.0
+        ],
+        [
+          1371600.0,
+          1371600.0
+        ]
+      ],
+      "actual": [
+        [
+          1371600,
+          2286000
+        ],
+        [
+          1371600,
+          1371600
+        ]
+      ],
+      "rawDelta": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:sp[2]",
+      "stage": "OOXML_SOURCE_AFFINE_EMU",
+      "metric": "matrix",
+      "expected": [
+        1.0,
+        0.0,
+        360000.0,
+        0.0,
+        1.0,
+        720000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual": [
+        1,
+        0,
+        360000,
+        0,
+        1,
+        720000,
+        0,
+        0,
+        1
+      ],
+      "rawDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:sp[2]",
+      "stage": "OOXML_SOURCE_COMPONENT_EMU",
+      "metric": "centerAndAxisVectors",
+      "expected": [
+        [
+          540000.0,
+          900000.0
+        ],
+        [
+          180000.0,
+          0.0
+        ],
+        [
+          0.0,
+          180000.0
+        ]
+      ],
+      "actual": [
+        [
+          540000,
+          900000
+        ],
+        [
+          180000,
+          0
+        ],
+        [
+          0,
+          180000
+        ]
+      ],
+      "rawDelta": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:grpSp[1]",
+      "stage": "OOXML_SOURCE_AFFINE_EMU",
+      "metric": "matrix",
+      "expected": [
+        2.0,
+        0.0,
+        360000.0,
+        0.0,
+        3.0,
+        720000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual": [
+        2,
+        0,
+        360000,
+        0,
+        3,
+        720000,
+        0,
+        0,
+        1
+      ],
+      "rawDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]",
+      "stage": "OOXML_SOURCE_AFFINE_EMU",
+      "metric": "matrix",
+      "expected": [
+        -1.2246467991473532e-16,
+        -2.0,
+        840000.0,
+        -3.0,
+        1.8369701987210297e-16,
+        1350000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual": [
+        -1.2246467991473532e-16,
+        -2,
+        840000,
+        -3,
+        1.8369701987210297e-16,
+        1350000,
+        0,
+        0,
+        1
+      ],
+      "rawDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:grpSp[1]/p:grpSp[1]/p:sp[1]",
+      "stage": "OOXML_SOURCE_AFFINE_EMU",
+      "metric": "matrix",
+      "expected": [
+        -1.2246467991473532e-16,
+        -2.0,
+        800000.0,
+        -3.0,
+        1.8369701987210297e-16,
+        1260000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual": [
+        -1.2246467991473532e-16,
+        -2,
+        800000,
+        -3,
+        1.8369701987210297e-16,
+        1260000,
+        0,
+        0,
+        1
+      ],
+      "rawDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    },
+    {
+      "sourcePath": "/p:sld/p:cSld/p:spTree/p:sp[3]",
+      "stage": "OOXML_SOURCE_AFFINE_EMU",
+      "metric": "matrix",
+      "expected": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "rawDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "budget": 1e-08,
+      "authority": "QA_SOURCE_ARITHMETIC_PROPOSAL_ONLY"
+    }
+  ],
+  "failures": [],
+  "supportedRetention": "NOT_EVALUATED",
+  "productGate": "HOLD",
+  "unknownSemantic": "NO_PROMOTION",
+  "realApps": "NOT_RUN"
+}

@@ -1,0 +1,20 @@
+{
+  "classification": "GENERIC_SYNTHETIC_OOXML_NOT_EXTERNAL_APP",
+  "expectedChildNativeId": "6",
+  "globalBoxEmu": [
+    720000,
+    1080000,
+    80000,
+    180000
+  ],
+  "expectedBasisVectorXEmu": [
+    0,
+    -180000
+  ],
+  "expectedBasisVectorYEmu": [
+    -80000,
+    0
+  ],
+  "derivation": "inner 90-degree rotation with flipH gives local x=240000-y, y=210000-x; outer x=360000+2*x, y=720000+3*y",
+  "appVerification": "NOT_RUN"
+}
