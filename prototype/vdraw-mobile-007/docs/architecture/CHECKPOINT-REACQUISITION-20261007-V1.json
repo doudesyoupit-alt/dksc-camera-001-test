@@ -1,0 +1,57 @@
+{
+  "schema": "vdraw-coordinator-checkpoint-reacquisition/1",
+  "instruction_id": "VDRAW-COORDINATOR-PHASE1-CONTINUE-20261007-V1",
+  "dispatch_commit": "354aa48e334532028ceac0b90fecc9777f557fd7",
+  "status": "DISPATCH_DELIVERED_SPECIALISTS_ACKNOWLEDGED",
+  "immutable_heads": {
+    "A": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+    "B": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+    "G": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+    "previous_coordinator": "002daf4a74e1070b5094c4b5f5132e683133c06c"
+  },
+  "verification": {
+    "head_matches": true,
+    "exact_evidence_SHA256_matches": {
+      "A": 9,
+      "B": 18,
+      "G": 33
+    },
+    "hash_mismatches": 0,
+    "schema_sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+    "validator_sha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "B_module_sha256": "41d2995bc8b3b62f5faa4a33e7cd914f0286e348815c6ac0f9c00c0e0f562c89",
+    "old_blobs_preserved_each": 559,
+    "old_blob_changes_each": 0,
+    "new_test_execution_this_checkpoint": 0,
+    "saved_Round2_tests_reused": true,
+    "product_accuracy": "NOT_MEASURED"
+  },
+  "delivery": {
+    "B": {
+      "instruction_id": "VDRAW-PHASE1-B-ADAPTER-20261007-V1",
+      "acknowledged": true,
+      "status": "EXECUTING_CONTINUATION_ON_EXISTING_TRACK"
+    },
+    "G": {
+      "instruction_id": "VDRAW-PHASE1-G-ADAPTER-QA-20261007-V1",
+      "acknowledged": true,
+      "status": "INDEPENDENT_TRUTH_PREPARATION_BEFORE_ADAPTER_RESULTS"
+    },
+    "A": "PINNED_NO_RERUN",
+    "CDEF": "HOLD_NO_INTEGRATION"
+  },
+  "protection": {
+    "main": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+    "validation": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "release": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+    "protection006_tree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "fixed_signing": "UNCHANGED_NO_SECRET_ACCESS",
+    "SAVE001": "CLOSED_NO_RECONFIRMATION",
+    "old_Golden_and_tests": "UNCHANGED_NO_REMOVAL_NO_SKIP",
+    "old_coordinator_files": "PRESERVED"
+  },
+  "phase1_gate": "HOLD",
+  "next_gate": "G_SOURCE_TO_IR_QUALIFICATION_BEFORE_MM_DXF",
+  "known_contract_limitation": "Candidate style width/opacity and text font/anchor require known values; unsupported/unknowns must be ledgered without invented defaults; source accounting is not retention acceptance",
+  "real_jwcad": "NOT_RUN"
+}
