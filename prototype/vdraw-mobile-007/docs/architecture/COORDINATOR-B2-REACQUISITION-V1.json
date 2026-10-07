@@ -1,0 +1,222 @@
+{
+  "schema": "vdraw-coordinator-adapter-reacquisition/1",
+  "status": "B2_FIXED_REACQUIRED_G_INDEPENDENT_REVIEW_PENDING",
+  "B": {
+    "head": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "adapter_sha256": "d1b7f0982ced37bbbfd59ab4b811960fe75833d1c7b93d19986cf13ff53f89dd",
+    "new_tests": {
+      "command": "node --test --test-reporter=tap prototype/vdraw-mobile-007/routes/pptx/tests/inventory-ir-adapter-v2.test.mjs",
+      "pass": 26,
+      "fail": 0,
+      "skip": 0,
+      "cancelled": 0,
+      "denominator": "26 new named B2 adapter tests including source rotation metadata; A2/B1/old inventory tests not rerun",
+      "log_sha256": "07aad79be29061401c5e4abbe05a234504b61ae6b6225757b0861e509e705cfc"
+    },
+    "source_retention": [
+      {
+        "fixture": "generic-synthetic-g01",
+        "sourceHead": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+        "sourceSha256": "9119c2389a230e7e517aa71c098fe509f28fbe8fc6b0c8d0d5a7a516cbd68e8c",
+        "sourceObjectsAll": 14,
+        "sourceObjectsWithoutMetadataOrBackground": 9,
+        "componentsAll": 10,
+        "componentsWithoutBackground": 9,
+        "sourceGeometryDenominator": 5,
+        "sourceTextDenominator": 1,
+        "sourceInventory": 24,
+        "sourceLedger": 24,
+        "geometryCandidates": 5,
+        "representedGeometry": 4,
+        "representedText": 0,
+        "unresolvedProperties": 17,
+        "propertyStateCounts": {
+          "EXPLICIT": 3,
+          "UNRESOLVED": 17,
+          "NOT_APPLICABLE": 0
+        },
+        "customPathCoordinateBlocks": 0,
+        "irValidation": true,
+        "readiness": "HOLD",
+        "reasons": [
+          "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+          "UNSUPPORTED_NATIVE_UNKNOWN",
+          "HIDDEN_POLICY_REQUIRED",
+          "BACKGROUND_POLICY_REQUIRED",
+          "UNSUPPORTED_NATIVE_BACKGROUND"
+        ]
+      },
+      {
+        "fixture": "generic-synthetic-g02-nested",
+        "sourceHead": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+        "sourceSha256": "4324253239ab3f9d0e45ef4a9f940f1001949dbf5646dc2dea82b0bcc842b95e",
+        "sourceObjectsAll": 17,
+        "sourceObjectsWithoutMetadataOrBackground": 10,
+        "componentsAll": 10,
+        "componentsWithoutBackground": 9,
+        "sourceGeometryDenominator": 5,
+        "sourceTextDenominator": 1,
+        "sourceInventory": 27,
+        "sourceLedger": 27,
+        "geometryCandidates": 4,
+        "representedGeometry": 3,
+        "representedText": 0,
+        "unresolvedProperties": 13,
+        "propertyStateCounts": {
+          "EXPLICIT": 2,
+          "UNRESOLVED": 13,
+          "NOT_APPLICABLE": 0
+        },
+        "customPathCoordinateBlocks": 0,
+        "irValidation": true,
+        "readiness": "HOLD",
+        "reasons": [
+          "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+          "APP_AFFINE_SEMANTICS_UNVERIFIED",
+          "UNSUPPORTED_NATIVE_UNKNOWN",
+          "HIDDEN_POLICY_REQUIRED",
+          "BACKGROUND_POLICY_REQUIRED",
+          "UNSUPPORTED_NATIVE_BACKGROUND"
+        ]
+      },
+      {
+        "fixture": "native-vdraw-n01",
+        "sourceHead": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+        "sourceSha256": "20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2",
+        "sourceObjectsAll": 8,
+        "sourceObjectsWithoutMetadataOrBackground": 6,
+        "componentsAll": 8,
+        "componentsWithoutBackground": 8,
+        "sourceGeometryDenominator": 6,
+        "sourceTextDenominator": 2,
+        "sourceInventory": 16,
+        "sourceLedger": 16,
+        "geometryCandidates": 6,
+        "representedGeometry": 6,
+        "representedText": 0,
+        "unresolvedProperties": 14,
+        "propertyStateCounts": {
+          "EXPLICIT": 16,
+          "UNRESOLVED": 14,
+          "NOT_APPLICABLE": 0
+        },
+        "customPathCoordinateBlocks": 0,
+        "irValidation": true,
+        "readiness": "HOLD",
+        "reasons": [
+          "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT"
+        ]
+      },
+      {
+        "fixture": "synthetic-g03-expanded",
+        "sourceHead": "478383bf506123b97b0b94d1d9fbba84af34295f",
+        "sourceSha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+        "sourceObjectsAll": 24,
+        "sourceObjectsWithoutMetadataOrBackground": 15,
+        "componentsAll": 18,
+        "componentsWithoutBackground": 17,
+        "sourceGeometryDenominator": 12,
+        "sourceTextDenominator": 4,
+        "sourceInventory": 42,
+        "sourceLedger": 42,
+        "geometryCandidates": 8,
+        "representedGeometry": 6,
+        "representedText": 0,
+        "unresolvedProperties": 15,
+        "propertyStateCounts": {
+          "EXPLICIT": 15,
+          "UNRESOLVED": 15,
+          "NOT_APPLICABLE": 0
+        },
+        "customPathCoordinateBlocks": 2,
+        "irValidation": true,
+        "readiness": "HOLD",
+        "reasons": [
+          "APP_AFFINE_SEMANTICS_UNVERIFIED",
+          "CONTRACT_CAPABILITY_LIMITATION_TEXT_ANCHOR_BASELINE_FONT",
+          "CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE",
+          "UNSUPPORTED_NATIVE_GEOMETRY",
+          "UNSUPPORTED_NATIVE_UNKNOWN",
+          "BACKGROUND_POLICY_REQUIRED",
+          "UNSUPPORTED_NATIVE_BACKGROUND"
+        ]
+      },
+      {
+        "fixture": "explicit-paint-width-alpha-witness",
+        "sourceHead": "Containing B2 commit; no circular self-SHA",
+        "sourceSha256": "9e78716fb9ec13708d93dadd3448dd18894bb6f5b5cedfbb490ac5a33bed0d52",
+        "sourceObjectsAll": 3,
+        "sourceObjectsWithoutMetadataOrBackground": 1,
+        "componentsAll": 1,
+        "componentsWithoutBackground": 1,
+        "sourceGeometryDenominator": 1,
+        "sourceTextDenominator": 0,
+        "sourceInventory": 4,
+        "sourceLedger": 4,
+        "geometryCandidates": 1,
+        "representedGeometry": 1,
+        "representedText": 0,
+        "unresolvedProperties": 1,
+        "propertyStateCounts": {
+          "EXPLICIT": 4,
+          "UNRESOLVED": 1,
+          "NOT_APPLICABLE": 0
+        },
+        "customPathCoordinateBlocks": 0,
+        "irValidation": true,
+        "readiness": "HOLD",
+        "reasons": []
+      }
+    ],
+    "hash_reacquisition": {
+      "files": 30,
+      "sha256_matches": 30,
+      "git_blob_matches": 30,
+      "byte_size_matches": 30
+    },
+    "preservation": {
+      "old": 607,
+      "kept": 607,
+      "changedOrRemoved": [],
+      "new": 32
+    }
+  },
+  "A": {
+    "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+    "head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "schema_path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json",
+    "schema_sha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "validator_sha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "G_review_head": "97978333911083f419828b8424ecbba9dee7dd20",
+    "scope": "NATIVE_EMU_PRIMITIVES_PLUS_EXPLICIT_UNKNOWN_APPEARANCE_ONLY",
+    "wire_contractStatus": "CANDIDATE",
+    "product_gate": "HOLD"
+  },
+  "G": {
+    "pre_output_oracle_heads": [
+      "6e9fdbfe7fe09cb3e6739923a248d9c67d44fd43",
+      "504a14f4aecef39a19c60f3776f347d54c091e66"
+    ],
+    "new_pre_output_named_tests": 33,
+    "status": "INDEPENDENT_B2_OUTPUT_REVIEW_RUNNING",
+    "source_unit_findings": "2_OLD_B1_FAILURES_PRESERVED_PENDING_REQUALIFICATION",
+    "rotation_semantics": "SOURCE_DECLARATION_REQUIRED_NOT_COMPOSED_BASIS"
+  },
+  "guards": {
+    "main": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+    "validation": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "stable_release": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+    "SAVE_001": "CLOSED_NO_RECONFIRMATION",
+    "prototype006": "UNCHANGED",
+    "fixed_signature": "UNCHANGED",
+    "CDEF": "HELD"
+  },
+  "gates": {
+    "source_to_IR_geometry": "PENDING_G_BOUNDED_QUALIFICATION",
+    "appearance": "HOLD",
+    "mm_DXF": "DRAFT_DISPATCH_PREPARED_NOT_EXECUTED",
+    "actual_JwCAD": "NOT_RUN",
+    "product_phase1": "HOLD",
+    "AI": "OPTIONAL_NO_CALLS"
+  }
+}
