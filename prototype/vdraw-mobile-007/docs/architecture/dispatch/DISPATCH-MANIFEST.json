@@ -1,0 +1,89 @@
+{
+  "schema": "vdraw-four-route-dispatch/1",
+  "architectureBaselineCommit": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "sourceHead": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "coordinatorBranch": "work/vdraw-four-route-coordinator-v1",
+  "status": "WAVE1_DISPATCH_READY",
+  "productGate": "HOLD",
+  "IRContract": "PROVISIONAL",
+  "executionScope": "audit/contract/test plan only",
+  "tracks": [
+    {
+      "key": "A",
+      "role": "Drawing IR / Architecture Contract",
+      "branch": "work/vdraw-drawing-ir-v1",
+      "scope": "共通IR・unit・coordinate・transform・scale provenance・uncertainty・relationshipsの契約レビュー。初回はschema/test設計と契約差分のみ。Editor/UI変更禁止。",
+      "owns": "新規 drawing-ir/ と docs/architecture/tracks/A/。既存core.jsを読み取り。",
+      "task": "initial-contract-review",
+      "instruction_id": "VDRAW-4ROUTE-A-INITIAL-20261007-V1",
+      "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "status": "READY_TO_DISPATCH"
+    },
+    {
+      "key": "B",
+      "role": "PPTX → Jw_cad",
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "scope": "最優先。native OOXML→IR→mm DXFの差分監査と孤立実装計画。line/polyline/rect/ellipse/circle/text/simple polygon/rotation/basic group/color/layerを対象。初回は既存処理の読取り監査・fixture計画まで。",
+      "owns": "将来新規 routes/pptx/。今回は docs/architecture/tracks/B/ のみ。既存importers.js/exporters.js変更禁止。",
+      "task": "pptx-phase1-audit",
+      "instruction_id": "VDRAW-4ROUTE-B-INITIAL-20261007-V1",
+      "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "status": "READY_TO_DISPATCH"
+    },
+    {
+      "key": "C",
+      "role": "PDF → Jw_cad",
+      "branch": "work/vdraw-pdf-jwcad-v1",
+      "scope": "Vector/Raster/Mixed/UNKNOWN分類、native path/text/page size/coordinate/transform監査。Vectorを画像化して再認識しない。Raster fallback/OCR条件を設計。初回監査のみ。",
+      "owns": "将来新規 routes/pdf/。今回は docs/architecture/tracks/C/ のみ。既存importers.js変更禁止。",
+      "task": "pdf-route-audit",
+      "instruction_id": "VDRAW-4ROUTE-C-INITIAL-20261007-V1",
+      "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "status": "READY_TO_DISPATCH"
+    },
+    {
+      "key": "D",
+      "role": "Paper Drawing Camera → Jw_cad",
+      "branch": "work/vdraw-paper-camera-jwcad-v1",
+      "scope": "四隅/Perspective/Lens/denoise/line/circle/OCR/symbol/scale Evidence監査。根拠なし寸法生成・mm化は禁止。初回監査のみ。",
+      "owns": "将来新規 routes/paper/。今回は docs/architecture/tracks/D/ のみ。",
+      "task": "paper-route-audit",
+      "instruction_id": "VDRAW-4ROUTE-D-INITIAL-20261007-V1",
+      "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "status": "READY_TO_DISPATCH"
+    },
+    {
+      "key": "E",
+      "role": "Camera Quality / Guidance",
+      "branch": "work/vdraw-camera-quality-guide-v1",
+      "scope": "Route A/B共通の撮影前/中/後の品質契約と既存offline heuristicの差分監査。傾き/正面性/blur/focus/dark/backlight/clipping/glare/framing/distance/resolution/四隅/markerを扱う。初回設計のみ。",
+      "owns": "将来新規 quality/。今回は docs/architecture/tracks/E/ のみ。既存photo-quality.py読取り。",
+      "task": "camera-quality-audit",
+      "instruction_id": "VDRAW-4ROUTE-E-INITIAL-20261007-V1",
+      "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "status": "READY_TO_DISPATCH"
+    },
+    {
+      "key": "F",
+      "role": "Field Photo → Editable PPTX",
+      "branch": "work/vdraw-photo-editable-pptx-v2",
+      "scope": "Phase5。既存10枚・sourceBinding/Overlay/geometry/editor/PPTX経路の監査。必要対象Recall、不要除去Precision、Geometry、Overlay、Human Correction Costを分離。既存写真再収集/再推論禁止。初回監査のみ。",
+      "owns": "将来新規 routes/photo/。今回は docs/architecture/tracks/F/ のみ。",
+      "task": "photo-route-audit",
+      "instruction_id": "VDRAW-4ROUTE-F-INITIAL-20261007-V1",
+      "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "status": "READY_TO_DISPATCH"
+    },
+    {
+      "key": "G",
+      "role": "Independent QA / Round-trip / Jw_cad",
+      "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+      "scope": "独立QA。Phase1 Golden/Regression/実Jw_cad/Open/選択/編集/保存/Round-trip検証計画。Jw_cad実行環境の存在を確認し、未実施をPASSにしない。制作実装禁止。",
+      "owns": "docs/architecture/tracks/G/ と独立qa設計のみ。",
+      "task": "independent-phase1-qa-plan",
+      "instruction_id": "VDRAW-4ROUTE-G-INITIAL-20261007-V1",
+      "expected_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+      "status": "READY_TO_DISPATCH"
+    }
+  ]
+}
