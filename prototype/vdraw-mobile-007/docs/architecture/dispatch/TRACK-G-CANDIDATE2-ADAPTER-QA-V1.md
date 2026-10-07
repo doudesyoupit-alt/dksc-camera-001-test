@@ -1,0 +1,16 @@
+[WORK_DISPATCH_V1]
+# Track G continuation — independent candidate.2 adapter source/property/unit QA
+instruction_id: VDRAW-PHASE1-G-CANDIDATE2-ADAPTER-QA-20261007-V1
+expected_branch: work/vdraw-jwcad-roundtrip-qa-v1
+expected_head: 97978333911083f419828b8424ecbba9dee7dd20
+A_pin: {"version":"vdraw-drawing-ir/1.0.0-candidate.2","head":"32fac121b5a7df53cde79e0be515581a9dc8496d","schema_path":"prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json","schema_sha256":"5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc","validator_sha256":"b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2","G_review_head":"97978333911083f419828b8424ecbba9dee7dd20","scope":"NATIVE_EMU_PRIMITIVES_PLUS_EXPLICIT_UNKNOWN_APPEARANCE_ONLY","wire_contractStatus":"CANDIDATE","product_gate":"HOLD"}
+B_expected_parent: 4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22
+B_result_head: PENDING_FIXED_HEAD_DELIVERY_FROM_COORDINATOR
+
+Prepare independent source/property/unit checks against G's immutable original source truth (478383bf506123b97b0b94d1d9fbba84af34295f expanded fixture and original packages 7835d3588fdb53131a113e9fb1fba797d28c6a89), not B output. Read B saved dispatch at coordinator b197ed9daaef3e1a45e4963f684c0cd953658826. Preserve earlier reports; don't repeat completed whole suites. Do not infer source authenticity from schema/source-hash consistency. Independent raw XML property inspection required for every claimed EXPLICIT width, paint, alpha; preserve original lexemes and source identity.
+
+When coordinator delivers fixed B2 HEAD, acquire HANDOFF/Evidence and outputs from that exact HEAD and authenticate hashes. Verify source object/component/type/text/position/size/rotation/color/unit/unsupported ledger and original complete denominators. Distinguish represented geometry and source ledger coverage from appearance fidelity. Require nonzero IR geometry on all four fixed source fixtures, plus direct paint/width/alpha witness; unknown fields remain null with honest issues and FULL blocked. noFill vs unresolved; raw 'solid' is not fake DASH_JSON []; no theme/default appearance or fonts invented.
+
+Revisit two open FAIL_SOURCE_UNIT_DECLARATION findings. Custom raw path coordinates are arbitrary path w/h units, NOT EMU: raw custom points must not be an EMU-native IR object. Independently confirm corrected PATH_COORDINATE versus derived EMU/MM labels, preserved path dimensions/raw XML/lexemes, explicit CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE source ledger and normalization candidates. Mark findings resolved only with concrete source+output evidence. Correct numerical normalized geometry never alone proves source unit labels. Preserve old B1 failure records as immutable historical evidence.
+
+Append independent new adverse cases/tests/log/report/HANDOFF-CANDIDATE2-ADAPTER-QA-V1.json and EVIDENCE-CANDIDATE2-ADAPTER-QA-V1.json on existing G branch, expected-head lease. New named tests and source assertions separately. Report bounded adapter geometry readiness YES/NO, remaining source-to-IR blockers and property exclusions, and mm DXF next-stage preconditions. No DXF acceptance or actual Jw_cad/practical score. Product phase1 HOLD; actual Jw Open/Edit/Save/Round-trip NOT_RUN. All old blobs/Golden/tests retained, no skip/delete/rewrite/reset/rebase/clean; main/validation/006/signing/SAVE001/CDEF untouched.
