@@ -1,0 +1,23 @@
+{
+  "version": "vdraw-pptx-native-inventory/1",
+  "status": "PROVISIONAL_NATIVE_INVENTORY_ONLY",
+  "entry": "readNativePptx(Uint8Array|ArrayBuffer, {JSZip,DOMParser,XMLSerializer,crypto,origin})",
+  "output": ["schema", "contract", "contractStatus", "source", "slides", "objects", "sourceLedger", "componentLedger", "unsupportedLedger", "counts", "issues", "accountingComplete", "supportedRetention", "exportReadiness"],
+  "identity": ["package SHA256", "part SHA256", "part path", "XML path", "native id", "slide index"],
+  "native": "Original serialized XML and raw xfrm attribute strings remain separate from computed coordinates. No Editor/IR/CAD conversion.",
+  "sourceCoordinate": {"unit": "EMU", "axes": "x-right y-down", "nativeIntegerPolicy": "raw decimal strings always retained; arithmetic only safe finite integers"},
+  "layout": "slide width/height divided by 36000 is LAYOUT mm only; real-world scale remains UNSCALED",
+  "matrix": {"storage": "row-major 3x3", "vectors": "column [x,y,1]", "order": "world = parent * local", "rotation": "raw ST_Angle retained; candidate degrees=raw/60000 clockwise in y-down source frame", "group": "candidate T(center)*R*F*T(-center)*T(off)*S(ext/chExt)*T(-chOff)", "shape": "candidate T(off+ext/2)*R*F*T(-ext/2)", "complex": "Nonuniform group scaling combined with non-half-turn rotation is an affine candidate requiring native app semantics verification. Raw chain and full quad/axis vectors preserved."},
+  "geometry": ["line endpoints", "rect four corners", "circle/ellipse center and two affine axis vectors", "single custom open polyline", "single custom closed polygon"],
+  "unsupportedGeometry": ["preset polygons except rect", "compound custom paths", "Bezier/arc/custom formula commands", "geometry adjustment", "inherited geometry missing xfrm"],
+  "text": "Every native paragraph has ordered r/fld/br items; concatenate runs within paragraph, br is newline, join paragraphs by newline. Original run XML/rPr/color/font retained. Baseline/layout/theme/font unresolved stays HUMAN_CHECK_REQUIRED.",
+  "roles": ["CONTAINER", "NON_DRAWABLE", "BACKGROUND", "HIDDEN", "DRAWABLE"],
+  "componentKinds": ["geometry", "text", "background", "unknown"],
+  "dispositions": ["EXTRACTED", "HUMAN_CHECK_REQUIRED", "UNSUPPORTED", "CONTAINER_RECORDED", "METADATA_RECORDED"],
+  "ledger": "Each spTree direct child plus group children and explicit cSld background gets source row. Shape+text gets separate component rows. Unsupported component view includes source identity/reasons/next action. Every inventory count explained is not evidence of supported target retention.",
+  "limits": {"inputBytes": 31457280, "expandedBytes": 104857600, "parts": 5000, "slides": 50, "objects": 5000, "depth": 32},
+  "packageFailures": "Missing part/relationship/native slide size, duplicate ZIP name or slide reference, unsafe ZIP/relationship path, CRC/XML/DTD/namespace failure fail atomically with InventoryError.code/source; no result adoption.",
+  "guaranteesNotClaimed": ["common Drawing IR schema", "supported target retention", "native app visual acceptance", "Jw_cad", "DXF", "real-world dimensions", "practical recognition accuracy"],
+  "origin": "Caller-reported provenance label only. SYNTHETIC_GENERIC/G generic and VDRAW_NATIVE labels do not validate semantics; semanticMetadataVerified=false.",
+  "readiness": {"exportReadiness": "HOLD", "supportedRetention": "NOT_EVALUATED"}
+}

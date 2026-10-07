@@ -1,0 +1,208 @@
+TAP version 13
+# Subtest: old connector omitted with no unsupported warning; new inventory retains source/geometry
+ok 1 - old connector omitted with no unsupported warning; new inventory retains source/geometry
+  ---
+  duration_ms: 47.428637
+  type: 'test'
+  ...
+# Subtest: old group child mapped without parent; new basic group endpoints preserve expected parent mapping
+ok 2 - old group child mapped without parent; new basic group endpoints preserve expected parent mapping
+  ---
+  duration_ms: 17.114354
+  type: 'test'
+  ...
+# Subtest: old text-bearing shape loses its geometry part; new inventory retains both parts
+ok 3 - old text-bearing shape loses its geometry part; new inventory retains both parts
+  ---
+  duration_ms: 14.654766
+  type: 'test'
+  ...
+# Subtest: old importer inserts newline between adjacent text runs; new text follows paragraph/br
+ok 4 - old importer inserts newline between adjacent text runs; new text follows paragraph/br
+  ---
+  duration_ms: 17.442675
+  type: 'test'
+  ...
+# Subtest: real ZIP bytes preserve integer EMU, package/part source hash, layout versus actual scale
+ok 5 - real ZIP bytes preserve integer EMU, package/part source hash, layout versus actual scale
+  ---
+  duration_ms: 88.397935
+  type: 'test'
+  ...
+# Subtest: connector inventory retains negative-direction endpoints and original flip
+ok 6 - connector inventory retains negative-direction endpoints and original flip
+  ---
+  duration_ms: 12.282234
+  type: 'test'
+  ...
+# Subtest: geometry and text parts are both retained; same-paragraph runs have no artificial newline
+ok 7 - geometry and text parts are both retained; same-paragraph runs have no artificial newline
+  ---
+  duration_ms: 24.118931
+  type: 'test'
+  ...
+# Subtest: basic group chOff/chExt maps child coordinates without normalization
+ok 8 - basic group chOff/chExt maps child coordinates without normalization
+  ---
+  duration_ms: 8.131127
+  type: 'test'
+  ...
+# Subtest: nested groups and clockwise 5400000 rotation retain parent order/pivots
+ok 9 - nested groups and clockwise 5400000 rotation retain parent order/pivots
+  ---
+  duration_ms: 13.642651
+  type: 'test'
+  ...
+# Subtest: shape rotation and flips preserve endpoint geometry and raw attrs
+ok 10 - shape rotation and flips preserve endpoint geometry and raw attrs
+  ---
+  duration_ms: 26.227209
+  type: 'test'
+  ...
+# Subtest: nonuniform parent plus rotation preserves affine quad and signals app semantics unverified
+ok 11 - nonuniform parent plus rotation preserves affine quad and signals app semantics unverified
+  ---
+  duration_ms: 14.759926
+  type: 'test'
+  ...
+# Subtest: ellipse full affine axis vectors survive nonuniform rotation; no bbox collapse
+ok 12 - ellipse full affine axis vectors survive nonuniform rotation; no bbox collapse
+  ---
+  duration_ms: 10.548925
+  type: 'test'
+  ...
+# Subtest: circle, ellipse, rect and line inventory remain distinct
+ok 13 - circle, ellipse, rect and line inventory remain distinct
+  ---
+  duration_ms: 15.047453
+  type: 'test'
+  ...
+# Subtest: simple open and closed paths retain ordered vertices
+ok 14 - simple open and closed paths retain ordered vertices
+  ---
+  duration_ms: 11.397416
+  type: 'test'
+  ...
+# Subtest: curve path unsupported is source-bound and never flattened into points
+ok 15 - curve path unsupported is source-bound and never flattened into points
+  ---
+  duration_ms: 5.773868
+  type: 'test'
+  ...
+# Subtest: every child including unknown/picture/chart/background/hidden has a ledger identity
+ok 16 - every child including unknown/picture/chart/background/hidden has a ledger identity
+  ---
+  duration_ms: 12.732146
+  type: 'test'
+  ...
+# Subtest: same native id across slides is namespaced; duplicate within slide is explicit
+ok 17 - same native id across slides is namespaced; duplicate within slide is explicit
+  ---
+  duration_ms: 13.818643
+  type: 'test'
+  ...
+# Subtest: theme/unknown style unresolved is not substituted as faithful black
+ok 18 - theme/unknown style unresolved is not substituted as faithful black
+  ---
+  duration_ms: 5.475128
+  type: 'test'
+  ...
+# Subtest: missing xfrm/native geometry retains text, raw XML and reasons
+ok 19 - missing xfrm/native geometry retains text, raw XML and reasons
+  ---
+  duration_ms: 10.017863
+  type: 'test'
+  ...
+# Subtest: unsafe integer is preserved as native string but not converted to finite fake geometry
+ok 20 - unsafe integer is preserved as native string but not converted to finite fake geometry
+  ---
+  duration_ms: 7.623357
+  type: 'test'
+  ...
+# Subtest: singular group keeps child inventory but blocks coordinate guessing
+ok 21 - singular group keeps child inventory but blocks coordinate guessing
+  ---
+  duration_ms: 10.541733
+  type: 'test'
+  ...
+# Subtest: missing relationship target rejects atomically
+ok 22 - missing relationship target rejects atomically
+  ---
+  duration_ms: 4.356936
+  type: 'test'
+  ...
+# Subtest: missing slide size never guesses default 1200 canvas
+ok 23 - missing slide size never guesses default 1200 canvas
+  ---
+  duration_ms: 4.59168
+  type: 'test'
+  ...
+# Subtest: malformed XML rejected
+ok 24 - malformed XML rejected
+  ---
+  duration_ms: 10.848219
+  type: 'test'
+  ...
+# Subtest: DTD declarations rejected before XML parse
+ok 25 - DTD declarations rejected before XML parse
+  ---
+  duration_ms: 13.346849
+  type: 'test'
+  ...
+# Subtest: unsafe ZIP path rejected before JSZip path sanitization
+ok 26 - unsafe ZIP path rejected before JSZip path sanitization
+  ---
+  duration_ms: 4.070984
+  type: 'test'
+  ...
+# Subtest: duplicate ZIP names rejected before JSZip overwrites them
+ok 27 - duplicate ZIP names rejected before JSZip overwrites them
+  ---
+  duration_ms: 6.601026
+  type: 'test'
+  ...
+# Subtest: external relationships never execute network fetch
+ok 28 - external relationships never execute network fetch
+  ---
+  duration_ms: 12.313687
+  type: 'test'
+  ...
+# Subtest: JSON serialization preserves raw geometry/binding/ledger; no IR or DXF readiness
+ok 29 - JSON serialization preserves raw geometry/binding/ledger; no IR or DXF readiness
+  ---
+  duration_ms: 14.977446
+  type: 'test'
+  ...
+# Subtest: frozen fixture hashes and contract hash bind actual native bytes
+ok 30 - frozen fixture hashes and contract hash bind actual native bytes
+  ---
+  duration_ms: 38.776088
+  type: 'test'
+  ...
+# Subtest: duplicate slide reference rejects atomically
+ok 31 - duplicate slide reference rejects atomically
+  ---
+  duration_ms: 11.314998
+  type: 'test'
+  ...
+# Subtest: blank native slide preserves infrastructure without fabricated drawing objects
+ok 32 - blank native slide preserves infrastructure without fabricated drawing objects
+  ---
+  duration_ms: 3.649123
+  type: 'test'
+  ...
+# Subtest: duplicate relationship IDs reject rather than arbitrarily choosing target
+ok 33 - duplicate relationship IDs reject rather than arbitrarily choosing target
+  ---
+  duration_ms: 9.756135
+  type: 'test'
+  ...
+1..33
+# tests 33
+# suites 0
+# pass 33
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 647.673567

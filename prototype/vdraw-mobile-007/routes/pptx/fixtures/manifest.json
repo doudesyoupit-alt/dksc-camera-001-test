@@ -1,0 +1,55 @@
+{
+  "schema": "vdraw-pptx-inventory-fixtures/1",
+  "generator": "tests/freeze-fixtures.mjs",
+  "version": "1",
+  "fixtures": [
+    {
+      "id": "B-SYN-basic-components",
+      "filename": "basic-components.pptx",
+      "origin": "SYNTHETIC_GENERIC_RAW_OOXML",
+      "SHA256": "89efcc36552c7fa2c29789e3b91b64cd9c6901a706de553bc6031a9edafe5ace",
+      "bytes": 2096,
+      "realAppEvidence": false
+    },
+    {
+      "id": "B-SYN-connector-shape-text",
+      "filename": "connector-shape-text.pptx",
+      "origin": "SYNTHETIC_GENERIC_RAW_OOXML",
+      "SHA256": "8e03f7256cf5f0e185dc14265f5823079b5f60745c44778f5f7f6c7d69a15841",
+      "bytes": 2088,
+      "realAppEvidence": false
+    },
+    {
+      "id": "B-SYN-basic-group",
+      "filename": "basic-group.pptx",
+      "origin": "SYNTHETIC_GENERIC_RAW_OOXML",
+      "SHA256": "c7aced1b36472524f7d14aeebe19f87416fa677d937856b27aea8858e3285cd8",
+      "bytes": 1979,
+      "realAppEvidence": false
+    },
+    {
+      "id": "B-SYN-complex-affine",
+      "filename": "complex-affine.pptx",
+      "origin": "SYNTHETIC_GENERIC_RAW_OOXML",
+      "SHA256": "9f7c5babbdf98ba5c7d02ed335b7c9d049d556e7dcd0e411d31a4ae045791b40",
+      "bytes": 2000,
+      "realAppEvidence": false
+    },
+    {
+      "id": "B-SYN-unknown-hidden-background",
+      "filename": "unknown-hidden-background.pptx",
+      "origin": "SYNTHETIC_GENERIC_RAW_OOXML",
+      "SHA256": "db5e4260b692aec5d7f4b34cea6dc4f0c4bb50be261674ec939031c272ec3d50",
+      "bytes": 1968,
+      "realAppEvidence": false
+    },
+    {
+      "id": "B-SYN-identity-collision",
+      "filename": "identity-collision.pptx",
+      "origin": "SYNTHETIC_GENERIC_RAW_OOXML",
+      "SHA256": "2bb7a59a7049db4d7b53bf0fbcd2575c0c7d7831c73b535c7f550c7302121113",
+      "bytes": 2395,
+      "realAppEvidence": false
+    }
+  ]
+}
