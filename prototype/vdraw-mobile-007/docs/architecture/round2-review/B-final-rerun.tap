@@ -1,0 +1,42 @@
+✔ old connector omitted with no unsupported warning; new inventory retains source/geometry (52.158277ms)
+✔ old group child mapped without parent; new basic group endpoints preserve expected parent mapping (18.394494ms)
+✔ old text-bearing shape loses its geometry part; new inventory retains both parts (25.16371ms)
+✔ old importer inserts newline between adjacent text runs; new text follows paragraph/br (30.32428ms)
+✔ real ZIP bytes preserve integer EMU, package/part source hash, layout versus actual scale (72.944206ms)
+✔ connector inventory retains negative-direction endpoints and original flip (21.637081ms)
+✔ geometry and text parts are both retained; same-paragraph runs have no artificial newline (18.257111ms)
+✔ basic group chOff/chExt maps child coordinates without normalization (8.455869ms)
+✔ nested groups and clockwise 5400000 rotation retain parent order/pivots (10.107809ms)
+✔ shape rotation and flips preserve endpoint geometry and raw attrs (14.048638ms)
+✔ nonuniform parent plus rotation preserves affine quad and signals app semantics unverified (5.438178ms)
+✔ ellipse full affine axis vectors survive nonuniform rotation; no bbox collapse (8.391419ms)
+✔ circle, ellipse, rect and line inventory remain distinct (7.747133ms)
+✔ simple open and closed paths retain ordered vertices (9.352588ms)
+✔ curve path unsupported is source-bound and never flattened into points (4.832785ms)
+✔ every child including unknown/picture/chart/background/hidden has a ledger identity (5.053404ms)
+✔ same native id across slides is namespaced; duplicate within slide is explicit (11.219768ms)
+✔ theme/unknown style unresolved is not substituted as faithful black (7.211932ms)
+✔ missing xfrm/native geometry retains text, raw XML and reasons (4.321706ms)
+✔ unsafe integer is preserved as native string but not converted to finite fake geometry (7.153139ms)
+✔ singular group keeps child inventory but blocks coordinate guessing (4.959501ms)
+✔ missing relationship target rejects atomically (3.374603ms)
+✔ missing slide size never guesses default 1200 canvas (3.302421ms)
+✔ malformed XML rejected (4.580836ms)
+✔ DTD declarations rejected before XML parse (6.891218ms)
+✔ unsafe ZIP path rejected before JSZip path sanitization (2.809118ms)
+✔ duplicate ZIP names rejected before JSZip overwrites them (4.918832ms)
+✔ external relationships never execute network fetch (9.280571ms)
+✔ JSON serialization preserves raw geometry/binding/ledger; no IR or DXF readiness (10.176073ms)
+✔ frozen fixture hashes and contract hash bind actual native bytes (33.513462ms)
+✔ duplicate slide reference rejects atomically (9.355859ms)
+✔ blank native slide preserves infrastructure without fabricated drawing objects (4.822514ms)
+✔ duplicate relationship IDs reject rather than arbitrarily choosing target (2.932893ms)
+✔ relationship missing Type and invalid root namespace fail with typed errors (8.835445ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 505.972701

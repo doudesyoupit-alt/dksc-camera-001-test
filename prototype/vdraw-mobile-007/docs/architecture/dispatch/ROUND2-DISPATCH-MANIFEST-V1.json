@@ -10,8 +10,10 @@
       "branch": "work/vdraw-drawing-ir-v1",
       "expected_head": "b023fdc1a0dacd1d9280db3af2b3ad4da17f3609",
       "initial_handoff_blob": "ec49ae7950d4ae949b41847a619aa2033c02f25f",
-      "status": "DISPATCH_READY",
-      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-A-ROUND2-V1.md"
+      "status": "COMPLETED_DO_NOT_RERUN",
+      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-A-ROUND2-V1.md",
+      "latest_saved_head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/HANDOFF-ROUND2-V1.json"
     },
     {
       "track": "B",
@@ -19,8 +21,10 @@
       "branch": "work/vdraw-pptx-jwcad-v1",
       "expected_head": "595cb93a6b7f797cffcbcbc9caf858e695c5e932",
       "initial_handoff_blob": "8417033c2e614e590dcac3df1b040cb3963ac687",
-      "status": "DISPATCH_READY",
-      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-B-ROUND2-V1.md"
+      "status": "COMPLETED_DO_NOT_RERUN",
+      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-B-ROUND2-V1.md",
+      "latest_saved_head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/HANDOFF-ROUND2-V1.json"
     },
     {
       "track": "G",
@@ -28,8 +32,10 @@
       "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
       "expected_head": "07eaa6a66930e4caa9d417d965e5eeda583a28cf",
       "initial_handoff_blob": "7b68a3100d754f3ea948762798caddefdb08ae0e",
-      "status": "DISPATCH_READY",
-      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-G-ROUND2-V1.md"
+      "status": "COMPLETED_DO_NOT_RERUN",
+      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-G-ROUND2-V1.md",
+      "latest_saved_head": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/HANDOFF-ROUND2-V1.json"
     }
   ],
   "preserved_tracks": [
@@ -39,7 +45,10 @@
     "F"
   ],
   "scope": "isolated implementation A/B; independent QA preparation G",
-  "integrationGate": "HOLD_UNTIL_A_B_G_REVIEW",
+  "integrationGate": "ROUND2_PREREQUISITES_PASS_SCOPE_ONLY",
   "phase1ProductGate": "HOLD",
-  "nextIntegration": "separate subsequent dispatch after all three conditions; actual Jw_cad acceptance still required"
+  "nextIntegration": "separate subsequent dispatch after all three conditions; actual Jw_cad acceptance still required",
+  "status": "ROUND2_COMPLETE_SCOPE_ONLY",
+  "IRContract": "FREEZE_CANDIDATE_ACCEPTED_IMMUTABLE_HASH_PIN",
+  "coordinatorReview": "prototype/vdraw-mobile-007/docs/architecture/ROUND2-ACCEPTANCE-V1.json"
 }

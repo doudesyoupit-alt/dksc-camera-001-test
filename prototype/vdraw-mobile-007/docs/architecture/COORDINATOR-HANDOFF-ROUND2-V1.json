@@ -1,0 +1,91 @@
+{
+  "marker": "[WORK_HANDOFF_V1]",
+  "schema": "vdraw-coordinator-round2-handoff/1",
+  "instruction_id": "VDRAW-4ROUTE-COORDINATOR-ROUND2-20261007-V1",
+  "branch": "work/vdraw-four-route-coordinator-v1",
+  "parent_head": "5e1fabba4d2c640d67e780169c569d9284554ac9",
+  "head": null,
+  "head_resolution": "Resolve containing GitHub commit; no self hash fabrication",
+  "status": "ROUND2_PREREQUISITES_PASS_SCOPE_ONLY",
+  "tracks": {
+    "A": {
+      "branch": "work/vdraw-drawing-ir-v1",
+      "start_head": "b023fdc1a0dacd1d9280db3af2b3ad4da17f3609",
+      "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/HANDOFF-ROUND2-V1.json",
+      "handoff_git_blob": "db64a209ea7cc81739258267aed34ba6a438766b",
+      "tests": {
+        "pass": 86,
+        "fail": 0,
+        "blocked_executed": 0,
+        "skip": 0,
+        "denominator": "named_test_case"
+      },
+      "gate": "IR_V1_FREEZE_CANDIDATE_ACCEPTED",
+      "changed_paths": 10,
+      "existing_paths_changed_or_deleted": 0,
+      "existing_branch_blobs_preserved": 559
+    },
+    "B": {
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "start_head": "595cb93a6b7f797cffcbcbc9caf858e695c5e932",
+      "head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/HANDOFF-ROUND2-V1.json",
+      "handoff_git_blob": "79085ad36beee0118eea4e61997e365c62baa98d",
+      "tests": {
+        "pass": 34,
+        "fail": 0,
+        "blocked_executed": 0,
+        "skip": 0,
+        "denominator": "named_test_case"
+      },
+      "gate": "NATIVE_SOURCE_INVENTORY_ESTABLISHED",
+      "changed_paths": 21,
+      "existing_paths_changed_or_deleted": 0,
+      "existing_branch_blobs_preserved": 559
+    },
+    "G": {
+      "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+      "start_head": "07eaa6a66930e4caa9d417d965e5eeda583a28cf",
+      "head": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/HANDOFF-ROUND2-V1.json",
+      "handoff_git_blob": "23ebdf5672f05180dcfa17bcb182e3866a143642",
+      "tests": {
+        "pass": 60,
+        "fail": 0,
+        "blocked_executed": 0,
+        "skip": 0,
+        "denominator": "named_test_case"
+      },
+      "gate": "INDEPENDENT_SOURCE_ORACLE_PREPARED",
+      "changed_paths": 34,
+      "existing_paths_changed_or_deleted": 0,
+      "existing_branch_blobs_preserved": 559
+    }
+  },
+  "IR_freeze_record": "prototype/vdraw-mobile-007/docs/architecture/DRAWING-IR-FREEZE-CANDIDATE-V1.json",
+  "Evidence": [
+    "prototype/vdraw-mobile-007/docs/architecture/ROUND2-ACCEPTANCE-V1.json",
+    "prototype/vdraw-mobile-007/docs/architecture/ROUND2-REPORT-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/round2-review/"
+  ],
+  "phase1_product_gate": "HOLD",
+  "blocker": [
+    "PPTX native inventory -> shared IR adapter not implemented",
+    "mm-based DXF backend/target retention not implemented or evaluated",
+    "G open/closed polyline/polygon, negative offsets/directions/angles, arc/curve, multi-slide/theme/master Golden coverage pending",
+    "Real external Generic app Golden=0; Native QA output shipped-bundle parity and real PPTX editability unverified",
+    "Actual Jw_cad Open/select/edit/non-raster/separate/save and edited DXF round-trip NOT_RUN",
+    "Actual-app physical tolerance not frozen; synthetic/source checks are not practical accuracy"
+  ],
+  "next_action": {
+    "eligible": true,
+    "stage": "NEXT_BOUNDED_DISPATCH_AFTER_ROUND2",
+    "first": "B native inventory -> pinned IR candidate adapter, explicit capability/part ledger; G independent coverage expansion",
+    "following": "mm DXF backend and numerical target oracle, then actual Jw_cad acceptance/round-trip",
+    "dispatched_in_this_round": false,
+    "prohibited": "Do not bypass actual-app/Human product Gate; C/D/E/F stay held"
+  },
+  "Human_final_product_judgment": true,
+  "coordinator_implementation": false
+}

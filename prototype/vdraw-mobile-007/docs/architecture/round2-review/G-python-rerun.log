@@ -1,0 +1,53 @@
+test_circle_axis_mutated_but_source_xml_unchanged (test_b_loss.BLossOracle.test_circle_axis_mutated_but_source_xml_unchanged) ... ok
+test_circle_center_mutated_but_source_xml_unchanged (test_b_loss.BLossOracle.test_circle_center_mutated_but_source_xml_unchanged) ... ok
+test_circle_type_mutated_but_source_xml_unchanged (test_b_loss.BLossOracle.test_circle_type_mutated_but_source_xml_unchanged) ... ok
+test_color_native_xml_mutation (test_b_loss.BLossOracle.test_color_native_xml_mutation) ... ok
+test_direct_resolved_fill_false_substitution (test_b_loss.BLossOracle.test_direct_resolved_fill_false_substitution) ... ok
+test_explicit_break_lost (test_b_loss.BLossOracle.test_explicit_break_lost) ... ok
+test_false_target_retention_pass (test_b_loss.BLossOracle.test_false_target_retention_pass) ... ok
+test_geometry_missing_but_component_accounted (test_b_loss.BLossOracle.test_geometry_missing_but_component_accounted) ... ok
+test_group_affine_mutation (test_b_loss.BLossOracle.test_group_affine_mutation) ... ok
+test_independent_source_match_remains_hold (test_b_loss.BLossOracle.test_independent_source_match_remains_hold) ... ok
+test_line_endpoint_mutated_but_source_xml_unchanged (test_b_loss.BLossOracle.test_line_endpoint_mutated_but_source_xml_unchanged) ... ok
+test_line_type_mutated_but_source_xml_unchanged (test_b_loss.BLossOracle.test_line_type_mutated_but_source_xml_unchanged) ... ok
+test_rotation_raw_mutation (test_b_loss.BLossOracle.test_rotation_raw_mutation) ... ok
+test_same_count_duplicate_source (test_b_loss.BLossOracle.test_same_count_duplicate_source) ... ok
+test_same_counts_duplicate_component_ledger (test_b_loss.BLossOracle.test_same_counts_duplicate_component_ledger) ... ok
+test_shape_retained_text_part_deleted (test_b_loss.BLossOracle.test_shape_retained_text_part_deleted) ... ok
+test_source_key_hash_mutation (test_b_loss.BLossOracle.test_source_key_hash_mutation) ... ok
+test_unknown_source_deleted (test_b_loss.BLossOracle.test_unknown_source_deleted) ... ok
+test_unsupported_reason_action_erased (test_b_loss.BLossOracle.test_unsupported_reason_action_erased) ... ok
+test_background_denominator_cannot_disappear (test_oracle.GoldenOracle.test_background_denominator_cannot_disappear) ... ok
+test_connector_rotation_flip_keeps_zero_extent (test_oracle.GoldenOracle.test_connector_rotation_flip_keeps_zero_extent) ... ok
+test_count_match_is_not_supported_retention (test_oracle.GoldenOracle.test_count_match_is_not_supported_retention) ... ok
+test_explicit_br_run_structure_loss_detected (test_oracle.GoldenOracle.test_explicit_br_run_structure_loss_detected) ... ok
+test_fixed_object_part_denominators (test_oracle.GoldenOracle.test_fixed_object_part_denominators) ... ok
+test_group_nonuniform_scale_known_manual_corners (test_oracle.GoldenOracle.test_group_nonuniform_scale_known_manual_corners) ... ok
+test_group_parent_transform_loss_rejected (test_oracle.GoldenOracle.test_group_parent_transform_loss_rejected) ... ok
+test_layout_cannot_claim_realworld (test_oracle.GoldenOracle.test_layout_cannot_claim_realworld) ... ok
+test_name_mutation_detected (test_oracle.GoldenOracle.test_name_mutation_detected) ... ok
+test_native_actual_stroke_color_mutation_detected (test_oracle.GoldenOracle.test_native_actual_stroke_color_mutation_detected) ... ok
+test_native_coordinate_mutation_rejected (test_oracle.GoldenOracle.test_native_coordinate_mutation_rejected) ... ok
+test_native_flip_mutation_detected (test_oracle.GoldenOracle.test_native_flip_mutation_detected) ... ok
+test_native_generation_not_external_app_evidence (test_oracle.GoldenOracle.test_native_generation_not_external_app_evidence) ... ok
+test_native_manual_expected_positions_and_quantization (test_oracle.GoldenOracle.test_native_manual_expected_positions_and_quantization) ... ok
+test_native_rotation_mutation_detected (test_oracle.GoldenOracle.test_native_rotation_mutation_detected) ... ok
+test_native_shape_text_part_denominator (test_oracle.GoldenOracle.test_native_shape_text_part_denominator) ... ok
+test_native_slide_size_layout_only (test_oracle.GoldenOracle.test_native_slide_size_layout_only) ... ok
+test_nested_rotation_flip_asymmetric_parent_known_basis (test_oracle.GoldenOracle.test_nested_rotation_flip_asymmetric_parent_known_basis) ... ok
+test_paragraph_run_explicit_break_content (test_oracle.GoldenOracle.test_paragraph_run_explicit_break_content) ... ok
+test_presentation_order_mutation_detected (test_oracle.GoldenOracle.test_presentation_order_mutation_detected) ... ok
+test_raw_line_color_mutation_detected (test_oracle.GoldenOracle.test_raw_line_color_mutation_detected) ... ok
+test_raw_native_xml_mutation_detected (test_oracle.GoldenOracle.test_raw_native_xml_mutation_detected) ... ok
+test_same_count_duplicate_source_replaces_connector (test_oracle.GoldenOracle.test_same_count_duplicate_source_replaces_connector) ... ok
+test_shape_present_text_part_missing (test_oracle.GoldenOracle.test_shape_present_text_part_missing) ... ok
+test_slide_size_mutation_detected (test_oracle.GoldenOracle.test_slide_size_mutation_detected) ... ok
+test_source_hash_rebinding_rejected (test_oracle.GoldenOracle.test_source_hash_rebinding_rejected) ... ok
+test_unit_header_without_correct_unit_rejected (test_oracle.GoldenOracle.test_unit_header_without_correct_unit_rejected) ... ok
+test_unknown_source_unledgered (test_oracle.GoldenOracle.test_unknown_source_unledgered) ... ok
+test_unsupported_reason_erased (test_oracle.GoldenOracle.test_unsupported_reason_erased) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.057s
+
+OK

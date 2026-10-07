@@ -1,0 +1,189 @@
+{
+  "schema": "vdraw-coordinator-round2-acceptance/1",
+  "instruction_id": "VDRAW-4ROUTE-COORDINATOR-ROUND2-20261007-V1",
+  "status": "ROUND2_PREREQUISITES_PASS_SCOPE_ONLY",
+  "scope": "isolated IR freeze-candidate, native source inventory, independent source oracle preparation",
+  "dispatch_head": "5e1fabba4d2c640d67e780169c569d9284554ac9",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "release_head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "tracks": {
+    "A": {
+      "branch": "work/vdraw-drawing-ir-v1",
+      "start_head": "b023fdc1a0dacd1d9280db3af2b3ad4da17f3609",
+      "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/HANDOFF-ROUND2-V1.json",
+      "handoff_git_blob": "db64a209ea7cc81739258267aed34ba6a438766b",
+      "tests": {
+        "pass": 86,
+        "fail": 0,
+        "blocked_executed": 0,
+        "skip": 0,
+        "denominator": "named_test_case"
+      },
+      "gate": "IR_V1_FREEZE_CANDIDATE_ACCEPTED",
+      "changed_paths": 10,
+      "existing_paths_changed_or_deleted": 0,
+      "existing_branch_blobs_preserved": 559
+    },
+    "B": {
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "start_head": "595cb93a6b7f797cffcbcbc9caf858e695c5e932",
+      "head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/HANDOFF-ROUND2-V1.json",
+      "handoff_git_blob": "79085ad36beee0118eea4e61997e365c62baa98d",
+      "tests": {
+        "pass": 34,
+        "fail": 0,
+        "blocked_executed": 0,
+        "skip": 0,
+        "denominator": "named_test_case"
+      },
+      "gate": "NATIVE_SOURCE_INVENTORY_ESTABLISHED",
+      "changed_paths": 21,
+      "existing_paths_changed_or_deleted": 0,
+      "existing_branch_blobs_preserved": 559
+    },
+    "G": {
+      "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+      "start_head": "07eaa6a66930e4caa9d417d965e5eeda583a28cf",
+      "head": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+      "handoff_path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/HANDOFF-ROUND2-V1.json",
+      "handoff_git_blob": "23ebdf5672f05180dcfa17bcb182e3866a143642",
+      "tests": {
+        "pass": 60,
+        "fail": 0,
+        "blocked_executed": 0,
+        "skip": 0,
+        "denominator": "named_test_case"
+      },
+      "gate": "INDEPENDENT_SOURCE_ORACLE_PREPARED",
+      "changed_paths": 34,
+      "existing_paths_changed_or_deleted": 0,
+      "existing_branch_blobs_preserved": 559
+    }
+  },
+  "fixed_candidate_pair": {
+    "schema": "vdraw-phase1-candidate-hash-pair/1",
+    "status": "SOURCE_ORACLE_CANDIDATE_PAIR_FROZEN_AFTER_G_INDEPENDENT_REVIEW",
+    "freezeScope": "QA source truth/inventory and candidate contract agreement only; not production IR adapter, DXF retention, real-app acceptance or full Golden coverage",
+    "A": {
+      "branch": "work/vdraw-drawing-ir-v1",
+      "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+      "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+      "schemaSha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+      "validatorSha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+      "adverseChecks": "12 independent named tests"
+    },
+    "B": {
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "head": "d5de55e43a8a0b848a2fe676488bda346bf1a356",
+      "version": "vdraw-pptx-native-inventory/1",
+      "interfaceSha256": "ceecb509891f34d0701cdad525ee3d8d6722dbd2ea92d94aaccfe4aecf381742",
+      "moduleSha256": "41d2995bc8b3b62f5faa4a33e7cd914f0286e348815c6ac0f9c00c0e0f562c89",
+      "domQaAdapterSha256": "2f15ef496a08224f04889b1e9277aae2dd81e90ffb0803def585a0eae1a9c610",
+      "sourceOracleMatches": 3
+    },
+    "unsupportedRetention": "NOT_EVALUATED",
+    "externalGenericAppGolden": "BLOCKED_NONE_ACQUIRED",
+    "realPptxApp": "NOT_RUN",
+    "realJwCad": "NOT_RUN",
+    "productGate": "HOLD"
+  },
+  "verification": {
+    "method": "GitHub immutable files re-fetched into separate coordinator review directories; exact SHA256 checked, saved tests rerun, live B outputs recomputed against G original-source oracle",
+    "named_tests_total": 180,
+    "source_comparison_checks": 391,
+    "source_packages": 3,
+    "pass": 180,
+    "fail": 0,
+    "blocked_executed": 0,
+    "skip": 0,
+    "evidence_hash_matches": {
+      "A": 9,
+      "B": 18,
+      "G": 33
+    },
+    "runtime": {
+      "node": "24.19.0",
+      "python": "3.12.14",
+      "jszip": "3.10.1",
+      "xml_js": "1.6.11",
+      "sax": "1.6.1"
+    },
+    "full_existing_regression_rerun": false,
+    "historical_ci": [
+      {
+        "run": 37416413246,
+        "head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+        "conclusion": "success",
+        "scope": "historical dev baseline only"
+      },
+      {
+        "run": 37409871705,
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+        "conclusion": "success",
+        "scope": "historical stable0.8.2 only"
+      }
+    ],
+    "setup_corrections": [
+      "First B replay before remaining binary fixtures were copied produced ENOENT; full immutable fixtures fetched, unchanged tests rerun successfully.",
+      "One large G evidence local text copy hash mismatched; re-fetched same immutable blob as base64, all33 Evidence hashes matched before acceptance. No GitHub artifact or implementation change."
+    ]
+  },
+  "protection": {
+    "original_development_blob_count": 547,
+    "original_development_blob_diffs_each_track": 0,
+    "initial_handoffs_preserved": true,
+    "protection006_tree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "main_head": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+    "validation_head": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "fixed_signing": "UNCHANGED_NO_SECRET_READ",
+    "SAVE_001": "CLOSED_NO_RECONFIRMATION",
+    "legacy_tests_Golden": "UNCHANGED_NO_REMOVAL_OR_SKIP",
+    "coordinator_specialist_implementation": false,
+    "IR_adapter": false,
+    "mm_DXF": false,
+    "UI": false,
+    "APK": false,
+    "AI_requests": 0
+  },
+  "preserved_tracks": {
+    "C": {
+      "branch": "work/vdraw-pdf-jwcad-v1",
+      "head": "da04782922dd48524366d8b564efc5f2ec512ff0",
+      "status": "INITIAL_AUDIT_PRESERVED_NO_RERUN_NO_INTEGRATION"
+    },
+    "D": {
+      "branch": "work/vdraw-paper-camera-jwcad-v1",
+      "head": "1708d4015e51285e763f58394f9e5921c4bef081",
+      "status": "INITIAL_AUDIT_PRESERVED_NO_RERUN_NO_INTEGRATION"
+    },
+    "E": {
+      "branch": "work/vdraw-camera-quality-guide-v1",
+      "head": "a15bbe1e8ad9a156937d41e4bbcddfc738be0bdb",
+      "status": "INITIAL_AUDIT_PRESERVED_NO_RERUN_NO_INTEGRATION"
+    },
+    "F": {
+      "branch": "work/vdraw-photo-editable-pptx-v2",
+      "head": "d95810dca2a4ad427e40cb561734fdcb2ac8ae94",
+      "status": "INITIAL_AUDIT_PRESERVED_NO_RERUN_NO_INTEGRATION"
+    }
+  },
+  "phase1_product_gate": "HOLD",
+  "blocker": [
+    "PPTX native inventory -> shared IR adapter not implemented",
+    "mm-based DXF backend/target retention not implemented or evaluated",
+    "G open/closed polyline/polygon, negative offsets/directions/angles, arc/curve, multi-slide/theme/master Golden coverage pending",
+    "Real external Generic app Golden=0; Native QA output shipped-bundle parity and real PPTX editability unverified",
+    "Actual Jw_cad Open/select/edit/non-raster/separate/save and edited DXF round-trip NOT_RUN",
+    "Actual-app physical tolerance not frozen; synthetic/source checks are not practical accuracy"
+  ],
+  "next_action": {
+    "eligible": true,
+    "stage": "NEXT_BOUNDED_DISPATCH_AFTER_ROUND2",
+    "first": "B native inventory -> pinned IR candidate adapter, explicit capability/part ledger; G independent coverage expansion",
+    "following": "mm DXF backend and numerical target oracle, then actual Jw_cad acceptance/round-trip",
+    "dispatched_in_this_round": false,
+    "prohibited": "Do not bypass actual-app/Human product Gate; C/D/E/F stay held"
+  }
+}
