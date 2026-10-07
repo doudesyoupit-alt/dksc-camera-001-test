@@ -1,0 +1,98 @@
+{
+  "format": "WORK_HANDOFF_V1",
+  "schema": "vdraw-track-initial-handoff/1",
+  "instruction_id": "VDRAW-4ROUTE-G-INITIAL-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "G",
+  "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+  "expected_base_head": "9ae8e1b4137cbb4a65f630e2501a94af6cb826ad",
+  "source_branch": "work/vdraw007-photo-accuracy-20261006",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "release_head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "head": null,
+  "head_resolution": "Resolve the immutable commit containing this HANDOFF.json via GitHub branch history; post-save head is reported to Coordinator separately. Self commit SHA cannot be embedded into its own content.",
+  "status": "INITIAL_PLAN_COMPLETE",
+  "evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/INITIAL-AUDIT-V1.md",
+      "sha256": "6907a92000c82c8f0fe53800e24dbbf71dc0f6b3a11714238c003964694bc788"
+    }
+  ],
+  "qa_scope": "Independent read-only initial audit and plan; no production code/schema/test implementation",
+  "github_revalidated": {
+    "own_head_match": true,
+    "source_head_match": true,
+    "release_head_match": true,
+    "dispatch_manifest_read": true,
+    "phase1_plan_read": true,
+    "006_subtree": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "save001": "CLOSED",
+    "open_issues": [
+      1
+    ]
+  },
+  "test": {
+    "new_runs": 0,
+    "execution_status": "NOT_RUN_BY_THIS_WORK",
+    "reused_ci": [
+      {
+        "run_id": 37416413246,
+        "head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+        "conclusion": "success",
+        "summary_authority": "Coordinator BASELINE-V1 and baseline-evidence.json",
+        "pass": 55,
+        "fail": 0,
+        "blocked": 0,
+        "skip": 0,
+        "denominator_unit": "suite"
+      },
+      {
+        "run_id": 37409871705,
+        "head": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+        "conclusion": "success"
+      }
+    ],
+    "new_route_acceptance": "NOT_RUN"
+  },
+  "environment": {
+    "scope": "Local Linux workspace and PATH only; user or remote Windows not surveyed",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "wine": null,
+    "wine64": null,
+    "jw_win": null,
+    "jw_win_exe": null,
+    "jwcad_application_test": "NOT_RUN",
+    "round_trip": "UNMEASURED"
+  },
+  "findings": [
+    "connector p:cxnSp not enumerated by current importer",
+    "text-plus-shape component loss candidate",
+    "nested group parent transform not applied",
+    "text runs joined with newlines",
+    "current DXF INSUNITS=0",
+    "ELLIPSE/MTEXT/truecolor actual Jw_cad acceptance unmeasured"
+  ],
+  "product_phase_gate": "HOLD",
+  "Human Gate": {
+    "required_for_this_docs_only_save": false,
+    "product_adoption": "HOLD_HUMAN_FINAL_JUDGMENT",
+    "approval_substitution": false
+  },
+  "blocker": [
+    "IR_VERSION_HASH_PROVISIONAL",
+    "NATIVE_INVENTORY_GROUP_TEXT_LOSS_UNRESOLVED",
+    "MM_DXF_NOT_IMPLEMENTED",
+    "TOLERANCE_NOT_FROZEN",
+    "DEVICE_JWCAD_EVIDENCE_REQUIRED",
+    "REAL_PPTX_APP_EVIDENCE_REQUIRED"
+  ],
+  "next_action": "After A version/hash and B candidate specification, freeze independent Native/Generic Golden inventory and unit/loss oracle manifest; no runtime implementation.",
+  "changes": [
+    "prototype/vdraw-mobile-007/docs/architecture/tracks/G/INITIAL-AUDIT-V1.md",
+    "prototype/vdraw-mobile-007/docs/architecture/tracks/G/HANDOFF.json"
+  ],
+  "production_changes": 0,
+  "protected_branch_changes": 0,
+  "secrets_accessed": 0,
+  "apk_generated": false
+}
