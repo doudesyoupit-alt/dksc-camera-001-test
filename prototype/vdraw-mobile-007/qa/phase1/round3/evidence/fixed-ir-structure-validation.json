@@ -1,0 +1,34 @@
+[
+  {
+    "name": "native-vdraw-n01",
+    "ok": true,
+    "errors": [],
+    "scope": "IR_CONTRACT_ONLY",
+    "drawableIR": 0,
+    "productGate": "HOLD"
+  },
+  {
+    "name": "generic-synthetic-g01",
+    "ok": true,
+    "errors": [],
+    "scope": "IR_CONTRACT_ONLY",
+    "drawableIR": 0,
+    "productGate": "HOLD"
+  },
+  {
+    "name": "generic-synthetic-g02-nested",
+    "ok": true,
+    "errors": [],
+    "scope": "IR_CONTRACT_ONLY",
+    "drawableIR": 0,
+    "productGate": "HOLD"
+  },
+  {
+    "name": "synthetic-g03-expanded",
+    "ok": true,
+    "errors": [],
+    "scope": "IR_CONTRACT_ONLY",
+    "drawableIR": 0,
+    "productGate": "HOLD"
+  }
+]

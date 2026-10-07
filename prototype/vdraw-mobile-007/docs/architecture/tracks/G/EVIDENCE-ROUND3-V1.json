@@ -1,0 +1,227 @@
+{
+  "schema": "vdraw-track-G-round3-independent-evidence/1",
+  "instruction_id": "VDRAW-PHASE1-G-ADAPTER-QA-20261007-V1",
+  "expected_base_head": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+  "fixtureTruthFreezeHead": "478383bf506123b97b0b94d1d9fbba84af34295f",
+  "sourceCheckerFreezeHead": "8f8c7e440b49a0002e1470a5ed92ea95706417d9",
+  "numericalCheckerPreparedHead": "1960ea230abdd6b2af33b55df12ba67177f01c70",
+  "BfixedHead": "4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22",
+  "adapterSha256": "5393fbcceee252072f58cd10ebb021586b70b9b7dafa4649dcbc9a296a4ead73",
+  "A": {
+    "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+    "schemaSha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+    "validatorSha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+    "changed": false
+  },
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/MM-DXF-ORACLE-INTERFACE-V1.md",
+      "sha256": "83e8668ee10e335ab8eb81214cf201e0853c41f533aa860148c59da800eb1e10",
+      "bytes": 2850
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/TRUTH-FREEZE-MANIFEST-V1.json",
+      "sha256": "45cb94c8740a336313a8af4867d2b2dc97b03d85e1b589d10fd720fa41792da1",
+      "bytes": 2061
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/fixed-adapter-independent-tests.log",
+      "sha256": "c9ad0c7b56868d90ab75d19cf78e76f6630d464f52a834f4db4b17d18c2c3605",
+      "bytes": 1807
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/fixed-ir-structure-validation.json",
+      "sha256": "7f4dbb9f694ac0a7f16cf9463ff4ec2c82ecce3431283267fb770baee98fce6d",
+      "bytes": 646
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/generic-synthetic-g01.independent-adapter-compare.json",
+      "sha256": "22aec9a829569be0bd590da35f07b66a21f94483b51c6c32094a90d6fbc235db",
+      "bytes": 119598
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/generic-synthetic-g02-nested.independent-adapter-compare.json",
+      "sha256": "83cbb353f3a3ede103e53326e3d41bfe2d1a1598f8d400369eb0510ab76179a0",
+      "bytes": 123074
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/ir-checker-tests.log",
+      "sha256": "3be66543bb669a0a3f41e7e4938aa3ccde6f8eda175cc772ddd37417f51b508f",
+      "bytes": 1809
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/ir-numerical-tests.log",
+      "sha256": "ed6f6b0600bf847966506ae197699bc3d8f39b3bb84874d66b8885d30160efec",
+      "bytes": 1303
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/native-vdraw-n01.independent-adapter-compare.json",
+      "sha256": "1862bc706a3084019b0cf766f09f75ea9bfb19074fb7db3ecad11fb7991d0032",
+      "bytes": 118669
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/source-truth-tests.log",
+      "sha256": "a7cd1af66ab4d3b64325be2852de2ac2a819ff723347180ad4e3d50d0e21bc00",
+      "bytes": 3011
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/synthetic-g03-expanded.independent-adapter-compare.json",
+      "sha256": "c15fef6b173352da66453f1ca386c93213ee16f2ef7da09696ebb898f329a61f",
+      "bytes": 234069
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/fixtures/synthetic-g03-design-truth.json",
+      "sha256": "421a293c4813db9e246e1798f41bc80dbd8319668977857b95bab93802d1b42f",
+      "bytes": 1544
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/fixtures/synthetic-g03-expanded.pptx",
+      "sha256": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+      "bytes": 4176
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/fixtures/synthetic-g03-source-truth.json",
+      "sha256": "34e97b32321b6009bdbbdf6fd4977520c2164b19f6b0d88ec17e6f1565cf8df0",
+      "bytes": 66224
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/compare_source_ir.py",
+      "sha256": "2078a45d2f40638005c0307212058a120f3ddaa6e3221e4c23a2ff6a27087c7d",
+      "bytes": 3406
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/evaluate_saved_adapter.py",
+      "sha256": "045b803c54c3b54dda9d05c441a6e44e2a4ccb8f515d992f8f6cda3de77a62fc",
+      "bytes": 10636
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/generate_round3.py",
+      "sha256": "a061bfd40c26e90d66d8da919da55d0c5291e6bc6964e26b5b3fa90e5e59000b",
+      "bytes": 6924
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/ir_numerical_oracle.py",
+      "sha256": "7108b89671effd3d31b9a866dd5f6c39c0fde5f3e724d51273c1f19938a31ab7",
+      "bytes": 4641
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/source_truth.py",
+      "sha256": "4ba7a36494173ebf8c04767789cbc2f7134af5457748573db113b723e55df8e8",
+      "bytes": 3054
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/test_fixed_adapter_independent.py",
+      "sha256": "a3f76b0269d159662e5147b2a70e35d7780e4a0a5492b1fb67c5ee170c5d778a",
+      "bytes": 2829
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/test_ir_checker.py",
+      "sha256": "59a6cb41fdbf6be3e431056f55566260d68ec1f74507e987f77f2f5c1d51e3ee",
+      "bytes": 2731
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/test_ir_numerical.py",
+      "sha256": "c270a8d04443383439c7beac3c3611f8ba5c1f47ad8e2b07376a63ba5d9575e6",
+      "bytes": 2579
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/round3/tools/test_source_truth.py",
+      "sha256": "946cd791a83a228c3634deba61512e878c113473554cbfacf1779b5f2db5836b",
+      "bytes": 5116
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/ROUND3-REPORT-V1.md",
+      "sha256": "9e6284fc65b35691313370ec8879123b5e3534e3e261f5817bace6e1555e8572",
+      "bytes": 4376
+    }
+  ],
+  "newTests": {
+    "namedTests": 77,
+    "pass": 77,
+    "fail": 0,
+    "skip": 0,
+    "groups": {
+      "sourceTruth": 31,
+      "sourceChecker": 19,
+      "numericIRChecker": 13,
+      "fixedAdapterAdverse": 14
+    }
+  },
+  "sourceComparisonChecks": 2418,
+  "failComparisonChecks": 0,
+  "savedIRStructureDocuments": 4,
+  "structurePass": 4,
+  "fixtures": [
+    {
+      "fixture": "generic-synthetic-g01",
+      "pass": 520,
+      "fail": 0,
+      "sourceObjects": 9,
+      "sourceComponents": 9,
+      "geometryDenominator": 5,
+      "textDenominator": 1,
+      "geometryCandidates": 5,
+      "drawableIR": 0,
+      "reportPath": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/generic-synthetic-g01.independent-adapter-compare.json"
+    },
+    {
+      "fixture": "generic-synthetic-g02-nested",
+      "pass": 499,
+      "fail": 0,
+      "sourceObjects": 10,
+      "sourceComponents": 9,
+      "geometryDenominator": 5,
+      "textDenominator": 1,
+      "geometryCandidates": 4,
+      "drawableIR": 0,
+      "reportPath": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/generic-synthetic-g02-nested.independent-adapter-compare.json"
+    },
+    {
+      "fixture": "native-vdraw-n01",
+      "pass": 500,
+      "fail": 0,
+      "sourceObjects": 6,
+      "sourceComponents": 8,
+      "geometryDenominator": 6,
+      "textDenominator": 2,
+      "geometryCandidates": 6,
+      "drawableIR": 0,
+      "reportPath": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/native-vdraw-n01.independent-adapter-compare.json"
+    },
+    {
+      "fixture": "synthetic-g03-expanded",
+      "pass": 899,
+      "fail": 0,
+      "sourceObjects": 15,
+      "sourceComponents": 17,
+      "geometryDenominator": 12,
+      "textDenominator": 4,
+      "geometryCandidates": 8,
+      "drawableIR": 0,
+      "reportPath": "prototype/vdraw-mobile-007/qa/phase1/round3/evidence/synthetic-g03-expanded.independent-adapter-compare.json"
+    }
+  ],
+  "immutableVerification": {
+    "originalGBlobMatches": 36,
+    "fixedBLocalTreeMatches": 37,
+    "BfileSHA256Matches": 25
+  },
+  "productGate": "HOLD",
+  "sourceToIRProductGate": "SOURCE_TO_IR_PRODUCT_CONNECTION_BLOCKED",
+  "rawThemeMasterRetention": "IMMUTABLE_SOURCE_ASSET_ONLY_NOT_RESOLVED",
+  "realJwCad": "NOT_RUN",
+  "externalGenericRealAppPackages": 0,
+  "DXF": "PREPARATION_INTERFACE_ONLY_NOT_IMPLEMENTED",
+  "protection": {
+    "newFilesOnly": true,
+    "oldGoldenOrTestModified": false,
+    "AorBImplementationModified": false,
+    "mainValidationReleaseChanged": false,
+    "006": "UNCHANGED",
+    "signing": "UNCHANGED",
+    "SAVE001": "CLOSED_REUSED",
+    "AIcalls": 0,
+    "APK": "NOT_GENERATED"
+  }
+}

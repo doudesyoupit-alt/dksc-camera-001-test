@@ -1,0 +1,61 @@
+{
+  "format": "WORK_HANDOFF_V1",
+  "schema": "vdraw-track-G-round3-handoff/1",
+  "instruction_id": "VDRAW-PHASE1-G-ADAPTER-QA-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "G",
+  "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+  "expected_base_head": "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+  "head": null,
+  "head_resolution": "Resolve containing immutable commit; no fabricated self-SHA",
+  "status": "SOURCE_TO_IR_PRODUCT_CONNECTION_BLOCKED",
+  "scopeGate": "SOURCE_ACCOUNTING_AND_GEOMETRY_SIDECAR_ONLY",
+  "BfixedHead": "4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22",
+  "A": {
+    "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+    "schemaSha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+    "validatorSha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+    "changed": false
+  },
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/EVIDENCE-ROUND3-V1.json",
+      "sha256": "2629c1a5cae222b838edd9e5f7afdf695a7a20ae4c80ee88f370cd7e4e190f7c"
+    }
+  ],
+  "test": {
+    "newNamedTests": 77,
+    "sourceComparisonChecks": 2418,
+    "structureDocuments": 4,
+    "fail": 0,
+    "skip": 0,
+    "originalRound2ReusedNotRerun": true
+  },
+  "blocker": [
+    "DRAWABLE_IR_ZERO_ALL_FOUR_FIXED_PACKAGES",
+    "CANDIDATE1_UNRESOLVED_MANDATORY_STYLE_FIELDS",
+    "A_CANDIDATE2_FIXED_HEAD_INDEPENDENT_REVIEW_REQUIRED",
+    "TEXT_ANCHOR_BASELINE_FONT_UNRESOLVED",
+    "MM_DXF_NOT_IMPLEMENTED",
+    "REAL_PPTX_EXTERNAL_GENERIC_APP_AND_JWCAD_ROUNDTRIP_NOT_RUN",
+    "ACTUAL_APP_TOLERANCE_UNSET"
+  ],
+  "Human_Gate": {
+    "isolatedQA": "AUTHORIZED_DISPATCH",
+    "product": "HOLD",
+    "approvalSubstitution": false
+  },
+  "nextAction": "Independent fixed A candidate.2 review, then bounded B delta + G source truth comparison. Keep candidate.1 immutable. No product DXF/Jw_cad promotion.",
+  "protection": {
+    "newFilesOnly": true,
+    "oldGoldenOrTestModified": false,
+    "AorBImplementationModified": false,
+    "mainValidationReleaseChanged": false,
+    "006": "UNCHANGED",
+    "signing": "UNCHANGED",
+    "SAVE001": "CLOSED_REUSED",
+    "AIcalls": 0,
+    "APK": "NOT_GENERATED"
+  }
+}
