@@ -1,0 +1,18 @@
+test_duplicate_inventory (test_ir_numerical.NumericalTests.test_duplicate_inventory) ... ok
+test_false_calibration (test_ir_numerical.NumericalTests.test_false_calibration) ... ok
+test_independent_mm_endpoints (test_ir_numerical.NumericalTests.test_independent_mm_endpoints) ... ok
+test_label_mm_no_conversion (test_ir_numerical.NumericalTests.test_label_mm_no_conversion) ... ok
+test_real_world_frame (test_ir_numerical.NumericalTests.test_real_world_frame) ... ok
+test_swapped_direction (test_ir_numerical.NumericalTests.test_swapped_direction) ... ok
+test_unknown_binding (test_ir_numerical.NumericalTests.test_unknown_binding) ... ok
+test_unproven_target_full (test_ir_numerical.NumericalTests.test_unproven_target_full) ... ok
+test_wrong_rotation (test_ir_numerical.NumericalTests.test_wrong_rotation) ... ok
+test_wrong_same_count_endpoint (test_ir_numerical.NumericalTests.test_wrong_same_count_endpoint) ... ok
+test_wrong_source_hash (test_ir_numerical.NumericalTests.test_wrong_source_hash) ... ok
+test_wrong_type (test_ir_numerical.NumericalTests.test_wrong_type) ... ok
+test_zero_objects_is_no_target_retention (test_ir_numerical.NumericalTests.test_zero_objects_is_no_target_retention) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.001s
+
+OK
