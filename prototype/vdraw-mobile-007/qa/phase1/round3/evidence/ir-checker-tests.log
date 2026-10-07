@@ -1,0 +1,24 @@
+test_changed_basis (test_ir_checker.CheckerTests.test_changed_basis) ... ok
+test_changed_color (test_ir_checker.CheckerTests.test_changed_color) ... ok
+test_changed_endpoint (test_ir_checker.CheckerTests.test_changed_endpoint) ... ok
+test_duplicate_component (test_ir_checker.CheckerTests.test_duplicate_component) ... ok
+test_empty_human_action (test_ir_checker.CheckerTests.test_empty_human_action) ... ok
+test_empty_unsupported_reason (test_ir_checker.CheckerTests.test_empty_unsupported_reason) ... ok
+test_erased_background (test_ir_checker.CheckerTests.test_erased_background) ... ok
+test_erased_component_denominator (test_ir_checker.CheckerTests.test_erased_component_denominator) ... ok
+test_erased_exact_text (test_ir_checker.CheckerTests.test_erased_exact_text) ... ok
+test_erased_theme_master (test_ir_checker.CheckerTests.test_erased_theme_master) ... ok
+test_fake_target_pass (test_ir_checker.CheckerTests.test_fake_target_pass) ... ok
+test_false_geometry_retention (test_ir_checker.CheckerTests.test_false_geometry_retention) ... ok
+test_honest_accounting_is_only_accounting (test_ir_checker.CheckerTests.test_honest_accounting_is_only_accounting) ... ok
+test_label_only_mm (test_ir_checker.CheckerTests.test_label_only_mm) ... ok
+test_real_world_promotion (test_ir_checker.CheckerTests.test_real_world_promotion) ... ok
+test_same_count_changed_native_type (test_ir_checker.CheckerTests.test_same_count_changed_native_type) ... ok
+test_unknown_same_count_binding (test_ir_checker.CheckerTests.test_unknown_same_count_binding) ... ok
+test_wrong_rotation (test_ir_checker.CheckerTests.test_wrong_rotation) ... ok
+test_wrong_slide_order (test_ir_checker.CheckerTests.test_wrong_slide_order) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.033s
+
+OK
