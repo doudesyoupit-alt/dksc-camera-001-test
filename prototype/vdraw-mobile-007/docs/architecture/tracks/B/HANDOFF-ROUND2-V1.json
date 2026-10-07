@@ -1,0 +1,187 @@
+{
+  "schema": "vdraw-work-handoff/1",
+  "marker": "[WORK_HANDOFF_V1]",
+  "instruction_id": "VDRAW-4ROUTE-B-ROUND2-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "B",
+  "branch": "work/vdraw-pptx-jwcad-v1",
+  "expected_base_head": "595cb93a6b7f797cffcbcbc9caf858e695c5e932",
+  "head": null,
+  "head_resolution": "Containing commit; reviewer re-fetch GitHub branch HEAD. No circular self-SHA fabrication.",
+  "first_candidate_head": "2d4af6017ea9e02df9f22bf38068a5bd0dcdd0c7",
+  "dispatch_ref": "5e1fabba4d2c640d67e780169c569d9284554ac9",
+  "source_head": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "status": "ISOLATED_NATIVE_INVENTORY_IMPLEMENTED",
+  "inventory_contract": {
+    "version": "vdraw-pptx-native-inventory/1",
+    "sha256": "ceecb509891f34d0701cdad525ee3d8d6722dbd2ea92d94aaccfe4aecf381742",
+    "path": "prototype/vdraw-mobile-007/routes/pptx/inventory-contract.json",
+    "status": "PROVISIONAL_NATIVE_ONLY"
+  },
+  "implementation_sha256": "41d2995bc8b3b62f5faa4a33e7cd914f0286e348815c6ac0f9c00c0e0f562c89",
+  "IR_candidate_evidence_only": {
+    "head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+    "branch": "work/vdraw-drawing-ir-v1",
+    "path": "prototype/vdraw-mobile-007/drawing-ir/schema.json",
+    "version": "vdraw-drawing-ir/1.0.0-candidate.1",
+    "sha256": "65f43167210d86fac84c9918cfc1cd7266afb05f8a53c2c5b240d4f4584096c8",
+    "adapter_connected": false
+  },
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/README.md",
+      "bytes": 4236,
+      "sha256": "2a7bff8ad92930950f1d307abc087f18166be6bec43065aa97ad77bfb53e7fe2",
+      "git_blob_sha": "76858e71ee0873ee985c36199639ea263c80b431"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/fixtures/basic-components.pptx",
+      "bytes": 2096,
+      "sha256": "89efcc36552c7fa2c29789e3b91b64cd9c6901a706de553bc6031a9edafe5ace",
+      "git_blob_sha": "baf838c268c7515942965c27462da93d5e31e1b4"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/fixtures/basic-group.pptx",
+      "bytes": 1979,
+      "sha256": "c7aced1b36472524f7d14aeebe19f87416fa677d937856b27aea8858e3285cd8",
+      "git_blob_sha": "391e7add0e374cc362bd09a8da8e14ebe4ae5d8f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/fixtures/complex-affine.pptx",
+      "bytes": 2000,
+      "sha256": "9f7c5babbdf98ba5c7d02ed335b7c9d049d556e7dcd0e411d31a4ae045791b40",
+      "git_blob_sha": "be40099917cf7531c1061c6355939773e404e2a6"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/fixtures/connector-shape-text.pptx",
+      "bytes": 2088,
+      "sha256": "8e03f7256cf5f0e185dc14265f5823079b5f60745c44778f5f7f6c7d69a15841",
+      "git_blob_sha": "d01e42507a7edb7d988f79082443aa939839419c"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/fixtures/identity-collision.pptx",
+      "bytes": 2395,
+      "sha256": "2bb7a59a7049db4d7b53bf0fbcd2575c0c7d7831c73b535c7f550c7302121113",
+      "git_blob_sha": "21660a294729589be794174af40f4eaad65f8832"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/fixtures/manifest.json",
+      "bytes": 1810,
+      "sha256": "d52f16dfae0529b04cd046d8b55deaacc9860d3bddba0ecf6b3fa35068fedf05",
+      "git_blob_sha": "25a992fae3c0084606978ec2b0b3a22b6fe99491"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/fixtures/unknown-hidden-background.pptx",
+      "bytes": 1968,
+      "sha256": "db5e4260b692aec5d7f4b34cea6dc4f0c4bb50be261674ec939031c272ec3d50",
+      "git_blob_sha": "8e2a2c20c940e1837f032b03cbeef7c07470f859"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/inventory-contract.json",
+      "bytes": 3421,
+      "sha256": "ceecb509891f34d0701cdad525ee3d8d6722dbd2ea92d94aaccfe4aecf381742",
+      "git_blob_sha": "75299746f946928299996fa99100bebf1f2e4716"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/native-inventory.mjs",
+      "bytes": 24928,
+      "sha256": "41d2995bc8b3b62f5faa4a33e7cd914f0286e348815c6ac0f9c00c0e0f562c89",
+      "git_blob_sha": "8e3f7d89df603bf8bf609710ab2b7306829bd2e1"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/fixture-builder.mjs",
+      "bytes": 3819,
+      "sha256": "a35e0e6130cf3f4517d44ad75ce2fedb59872a37a9d5dc18e2fc34cd47c9b20f",
+      "git_blob_sha": "9296af73618be79b2bbc698a4dcae1e061747432"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/freeze-fixtures.mjs",
+      "bytes": 1692,
+      "sha256": "a885ccd2606e392b5e18c824703619f59a906b7a82fde59c36460380ebe95cd6",
+      "git_blob_sha": "2a2f88d322c1585e9198863e55d7ced95c0b7180"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/inspect-pptx.mjs",
+      "bytes": 995,
+      "sha256": "a8d3cd6cd2a7d812995dc2204e369d17466a6c27ef2576c2c27c3ea9a66edbfb",
+      "git_blob_sha": "4bedffb23541f7bf245d129c5471746a509254e0"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/legacy-defect-comparison.test.mjs",
+      "bytes": 3732,
+      "sha256": "f660449aa300aaf92f89b39eaab20ccaf89cd6058ea2e93199dba15368bd5891",
+      "git_blob_sha": "30a64e59d1053ac471ba882a5bddd894c450cc2f"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/native-inventory.test.mjs",
+      "bytes": 14328,
+      "sha256": "bc6c67839258b9b8bf785b5f707dd2e238c771c2e3fecd8d96c0607291d0adac",
+      "git_blob_sha": "31b5619a14ffc60b8e047f158a752f1b238619bd"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/routes/pptx/tests/node-xml-adapter.mjs",
+      "bytes": 2758,
+      "sha256": "2f15ef496a08224f04889b1e9277aae2dd81e90ffb0803def585a0eae1a9c610",
+      "git_blob_sha": "e9103f97ec1931457877f374328218b898b59383"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round2-evidence/connector-shape-text-inventory.json",
+      "bytes": 22372,
+      "sha256": "bc852b647bf34c51c4b6ac4c71d5151ab7938e249a2679a3cf2f12b0a5ca94eb",
+      "git_blob_sha": "35e067020fa5352084136259b711cc8456ac47af"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/B/round2-evidence/native-inventory.tap",
+      "bytes": 7237,
+      "sha256": "a30214c76430279221862666b65f58921e8d30748d9fa7836b4c17523bbd29be",
+      "git_blob_sha": "a1643d8895ff90cbc9566b585c7e70e3c744d267"
+    }
+  ],
+  "tests": {
+    "command": "VDRAW_LEGACY_ROOT=/workspace/scratch/aa24ec8813c2/baseline/prototype/vdraw-mobile-007 node --test --test-reporter=tap track-b/prototype/vdraw-mobile-007/routes/pptx/tests/native-inventory.test.mjs track-b/prototype/vdraw-mobile-007/routes/pptx/tests/legacy-defect-comparison.test.mjs",
+    "portable_command": "node --test prototype/vdraw-mobile-007/routes/pptx/tests/native-inventory.test.mjs prototype/vdraw-mobile-007/routes/pptx/tests/legacy-defect-comparison.test.mjs",
+    "pass": 34,
+    "fail": 0,
+    "blocked": 0,
+    "skip": 0,
+    "denominator": "34 named Node test cases: 30 source inventory/package/fixture contract cases + 4 unchanged legacy importer defect witnesses",
+    "fixtures": "6 frozen synthetic Generic raw native OOXML ZIP packages; not real-app Golden",
+    "browser": "NOT_RUN_NO_EXECUTABLE",
+    "PowerPoint": "NOT_RUN",
+    "Jw_cad": "NOT_RUN",
+    "supported_target_retention": "NOT_EVALUATED",
+    "practical_accuracy": "NOT_MEASURED",
+    "independent_QA": "PENDING_TRACK_G_IMMUTABLE_RECHECK"
+  },
+  "protection": {
+    "initial_HANDOFF": "PRESERVED",
+    "legacy_importers_exporters_core": "UNCHANGED",
+    "old_tests_Golden_signing_006": "UNCHANGED",
+    "006_tree_sha": "47cabdf70e9aebf7c64a1e028e85c476df32a169",
+    "SAVE_001": "EXISTING_HUMAN_CLOSED",
+    "APK": "NOT_GENERATED",
+    "IR_DXF_UI_integration": "NOT_DONE",
+    "main_validation_release": "NOT_CHANGED"
+  },
+  "limitations": [
+    "Unresolved theme/master/layout/text/font/baseline/anchor retained with Human check",
+    "Only direct primitive presets line/rect/ellipse and single simple custom polygon/polyline resolved; other preset polygons/curves unsupported",
+    "Nonuniform parent + rotation keeps full affine candidate/raw chain; native app rendering verification required",
+    "Browser dependency execution not available; Node uses injected generic XML adapter",
+    "Inventory accounting parity is not independent coverage or supported target retention",
+    "ZIP64/multidisk/unknown encoding/schema/unsafe parts fail closed"
+  ],
+  "product_phase_gate": "HOLD",
+  "Human_Gate": {
+    "isolated_work": "Already authorized Round2 scope",
+    "product": "Human final judgment HOLD"
+  },
+  "blocker": [
+    "G independent immutable recheck pending",
+    "Common IR freeze/adapter not in scope",
+    "Dedicated mm DXF not implemented",
+    "Real Jw_cad edit/save/roundtrip Evidence required",
+    "Official acceptance tolerances not frozen"
+  ],
+  "next_action": "Coordinator review Track G independent source inventory evidence, then dispatch a single pinned-IR adapter unit; do not integrate DXF/UI in this Work"
+}

@@ -138,11 +138,13 @@ export async function readNativePptx(input,{JSZip=globalThis.JSZip,DOMParser=glo
  }
  async function relationships(path,required=true){
   const record=await part(relPath(path),required);if(!record)return [];if(record.document.documentElement.namespaceURI!==REL||local(record.document.documentElement)!=='Relationships')fail('INVALID_RELATIONSHIPS','Relationship document root invalid',record.path);
-  const rows=children(record.document.documentElement).map(n=>({id:n.getAttribute('Id'),type:n.getAttribute('Type'),target:n.getAttribute('Target'),external:n.getAttribute('TargetMode')==='External'})),ids=new Set();
-  for(const r of rows){if(!r.id||ids.has(r.id))fail('DUPLICATE_RELATIONSHIP_ID','Missing/duplicate relationship identity',record.path);ids.add(r.id);if(!r.external){r.resolvedPart=partTarget(path,r.target);if(!zip.file(r.resolvedPart))fail('MISSING_RELATIONSHIP_TARGET','Relationship target absent',r.resolvedPart);}}
+  const nodes=children(record.document.documentElement);if(nodes.some(n=>n.namespaceURI!==REL||local(n)!=='Relationship'))fail('INVALID_RELATIONSHIPS','Unknown relationship element',record.path);
+  const rows=nodes.map(n=>({id:n.getAttribute('Id'),type:n.getAttribute('Type'),target:n.getAttribute('Target'),external:n.getAttribute('TargetMode')==='External'})),ids=new Set();
+  for(const r of rows){if(!r.id||ids.has(r.id))fail('DUPLICATE_RELATIONSHIP_ID','Missing/duplicate relationship identity',record.path);if(!r.type||!r.target)fail('INVALID_RELATIONSHIPS','Missing relationship type/target',record.path);ids.add(r.id);if(!r.external){r.resolvedPart=partTarget(path,r.target);if(!zip.file(r.resolvedPart))fail('MISSING_RELATIONSHIP_TARGET','Relationship target absent',r.resolvedPart);}}
   return rows;
  }
- const rootR=await part('_rels/.rels'),rootRows=children(rootR.document.documentElement),office=rootRows.filter(n=>(n.getAttribute('Type')||'').endsWith('/officeDocument'));
+ const rootR=await part('_rels/.rels');if(rootR.document.documentElement.namespaceURI!==REL||local(rootR.document.documentElement)!=='Relationships')fail('INVALID_RELATIONSHIPS','Root relationships namespace invalid',rootR.path);
+ const rootRows=children(rootR.document.documentElement),office=rootRows.filter(n=>n.namespaceURI===REL&&local(n)==='Relationship'&&n.getAttribute('Type')===R+'/officeDocument');
  if(office.length!==1||office[0].getAttribute('TargetMode')==='External')fail('PRESENTATION_RELATIONSHIP_REQUIRED','Single internal presentation relationship required');
  const presentationPath=partTarget('',office[0].getAttribute('Target')),pres=await part(presentationPath);
  if(pres.document.documentElement.namespaceURI!==P||local(pres.document.documentElement)!=='presentation')fail('PRESENTATION_NAMESPACE_UNSUPPORTED','Only Transitional OOXML presentation supported',presentationPath);
@@ -184,7 +186,7 @@ export async function readNativePptx(input,{JSZip=globalThis.JSZip,DOMParser=glo
  }
  for(let i=0;i<ids.length;i++){
   const id=ids[i].getAttributeNS(R,'id'),relationship=presR.find(r=>r.id===id);
-  if(!relationship||relationship.external||!relationship.type.endsWith('/slide'))fail('SLIDE_RELATIONSHIP_REQUIRED','Missing/wrong slide relationship',id);
+  if(!relationship||relationship.external||relationship.type!==R+'/slide')fail('SLIDE_RELATIONSHIP_REQUIRED','Missing/wrong slide relationship',id);
   if(slideParts.has(relationship.resolvedPart))fail('DUPLICATE_SLIDE_REFERENCE','Slide part referenced more than once',relationship.resolvedPart);slideParts.add(relationship.resolvedPart);
   const record=await part(relationship.resolvedPart),root=record.document.documentElement;
   if(root.namespaceURI!==P||local(root)!=='sld')fail('SLIDE_NAMESPACE_UNSUPPORTED','Unsupported slide document root',record.path);

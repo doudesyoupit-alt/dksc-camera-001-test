@@ -103,3 +103,8 @@ test('duplicate relationship IDs reject rather than arbitrarily choosing target'
  const rel=`<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="s0" Type="${R}/slide" Target="slides/slide1.xml"/><Relationship Id="s0" Type="${R}/slide" Target="slides/slide1.xml"/></Relationships>`;
  await assert.rejects(read(await pptx(shape(),{presentationRels:rel})),e=>e.code==='DUPLICATE_RELATIONSHIP_ID');
 });
+test('relationship missing Type and invalid root namespace fail with typed errors',async()=>{
+ const badType='<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="s0" Target="slides/slide1.xml"/></Relationships>';
+ await assert.rejects(read(await pptx(shape(),{presentationRels:badType})),e=>e.code==='INVALID_RELATIONSHIPS');
+ await assert.rejects(read(await pptx(shape(),{extraParts:{'_rels/.rels':'<Relationships xmlns="urn:wrong"><Relationship Id="root" Type="'+R+'/officeDocument" Target="ppt/presentation.xml"/></Relationships>'}})),e=>e.code==='INVALID_RELATIONSHIPS');
+});
