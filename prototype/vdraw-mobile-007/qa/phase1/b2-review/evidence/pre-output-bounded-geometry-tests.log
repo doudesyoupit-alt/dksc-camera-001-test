@@ -1,0 +1,13 @@
+test_359_not_zero (test_pre_output_bounded_geometry.BoundedGeometryTests.test_359_not_zero) ... ok
+test_90_degree_endpoints (test_pre_output_bounded_geometry.BoundedGeometryTests.test_90_degree_endpoints) ... ok
+test_custom_raw_excluded (test_pre_output_bounded_geometry.BoundedGeometryTests.test_custom_raw_excluded) ... ok
+test_direct_witness_mm (test_pre_output_bounded_geometry.BoundedGeometryTests.test_direct_witness_mm) ... ok
+test_line_emu_direction (test_pre_output_bounded_geometry.BoundedGeometryTests.test_line_emu_direction) ... ok
+test_nativeUnit_layout_not_world (test_pre_output_bounded_geometry.BoundedGeometryTests.test_nativeUnit_layout_not_world) ... ok
+test_nested_rect_basis_not_axis_box (test_pre_output_bounded_geometry.BoundedGeometryTests.test_nested_rect_basis_not_axis_box) ... ok
+test_rect_full_vertices (test_pre_output_bounded_geometry.BoundedGeometryTests.test_rect_full_vertices) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK
