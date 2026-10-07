@@ -1,0 +1,124 @@
+{
+  "schema": "vdraw-coordinator-phase1-bounded-adapter-review/1",
+  "status": "BOUNDED_ADAPTER_ACCEPTED_NEXT_MM_DXF_DISPATCH",
+  "IR": {
+    "version": "vdraw-drawing-ir/1.0.0-candidate.2",
+    "head": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "schema_path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json",
+    "schema_sha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "validator_sha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "G_review_head": "97978333911083f419828b8424ecbba9dee7dd20",
+    "scope": "NATIVE_EMU_PRIMITIVES_PLUS_EXPLICIT_UNKNOWN_APPEARANCE_ONLY",
+    "wire_contractStatus": "CANDIDATE",
+    "product_gate": "HOLD"
+  },
+  "B": {
+    "head": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "tests": {
+      "newNamedPASS": 26,
+      "FAIL": 0,
+      "skip": 0
+    },
+    "adapter_sha256": "d1b7f0982ced37bbbfd59ab4b811960fe75833d1c7b93d19986cf13ff53f89dd",
+    "evidence_exact_hash_matches": 30,
+    "preservation": {
+      "old": 607,
+      "kept": 607,
+      "changedOrRemoved": [],
+      "new": 32
+    }
+  },
+  "G": {
+    "head": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+    "tests": {
+      "newNamedPass": 74,
+      "newNamedFail": 0,
+      "skip": 0,
+      "groups": {
+        "preOutputOriginalPropertyUnit": 25,
+        "preOutputBoundedGeometry": 8,
+        "fixedResultIndependentAdverse": 36,
+        "fixedResultContractAdverse": 5
+      },
+      "sourceComparisonPass": 3246,
+      "sourceComparisonFail": 0,
+      "IRDocumentsIndependentlyValidated": 6,
+      "broadOldSuitesRerun": false
+    },
+    "evidence_exact_hash_matches": 20,
+    "preservation": {
+      "old": 645,
+      "kept": 645,
+      "changedOrRemoved": [],
+      "new": 22
+    },
+    "source_accounting": "44_objects_47_components",
+    "geometry_retention": {
+      "represented": 23,
+      "total": 32,
+      "scope": "SIX_SYNTHETIC_OR_NATIVE_QA_EXPORT_PACKAGES_ONLY"
+    },
+    "text_drawable_retention": {
+      "represented": 0,
+      "total": 8,
+      "source_raw_text_preserved_in_ledger": true
+    },
+    "findings": {
+      "oldFAILRecordsUnchanged": true,
+      "oldFindings": 2,
+      "resolvedByNewEvidence": 2,
+      "unresolved": 0,
+      "rawCustomDrawableAcceptance": false
+    },
+    "rotation": "SOURCE_DECLARATION_DEG_CW_SOURCE_LOCAL_EMU_PIVOT_INDEPENDENTLY_CHECKED",
+    "checker_refinement": "ORIGINAL_BOTH_ALPHA_PATHS_ALLOWLIST_FROM_PREOUTPUT_TRUTH_NEW_CHECKER_VERSION_OLD_BYTES_PRESERVED"
+  },
+  "freeze": "IMMUTABLE_CANDIDATE2_CONTRACT_PIN_BOUNDED_NATIVE_EMU_GEOMETRY_PLUS_EXPLICIT_UNKNOWN_APPEARANCE",
+  "gates": {
+    "boundedNativeEMUGeometryReadiness": "YES",
+    "completeSourceGeometryRetention": "PARTIAL_23_OF_32",
+    "sourceAccounting": "PASS_ORIGINAL_DENOMINATORS_44_OBJECTS_47_COMPONENTS",
+    "textDrawableRetention": "NOT_QUALIFIED_0_OF_8",
+    "appearanceFidelity": "UNQUALIFIED_UNKNOWN_FIELDS_AND_GENERATED_REVIEW_STYLE_NOT_SOURCE_STYLE",
+    "DXF": "NOT_RUN",
+    "realJwCad": "NOT_RUN",
+    "productPhase1": "HOLD"
+  },
+  "blocker": [
+    "COMPLETE_GEOMETRY_RETENTION_9_OF_32_EXCLUDED_WITH_LEDGER",
+    "TEXT_ANCHOR_BASELINE_FONT_UNRESOLVED_8_COMPONENTS",
+    "STYLE_APPEARANCE_NOT_QUALIFIED_UNKNOWN_DASH_PAINT_WIDTH_ALPHA",
+    "MM_DXF_OUTPUT_NOT_IMPLEMENTED_OR_INDEPENDENTLY_TESTED",
+    "REAL_JW_OPEN_EDIT_SAVE_ROUNDTRIP_NOT_RUN"
+  ],
+  "next_dispatches": [
+    {
+      "instruction_id": "VDRAW-PHASE1-B-MM-DXF-GEOMETRY-V1",
+      "expected_branch": "work/vdraw-pptx-jwcad-v1",
+      "expected_head": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+      "scope": "ISOLATED_PER_PAGE_LAYOUT_MM_GEOMETRY_REVIEW_DXF",
+      "implementation_status": "DISPATCHED_NOT_YET_IMPLEMENTED"
+    },
+    {
+      "instruction_id": "VDRAW-PHASE1-G-MM-DXF-GEOMETRY-QA-V1",
+      "expected_branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+      "expected_head": "7c515ae3cda3af6b086bf115857a9de553f1eaed",
+      "scope": "INDEPENDENT_SOURCE_NUMERIC_DXF_AND_PROPERTY_LOSS_QA",
+      "input_backend_head": "PENDING_NEW_B_FIXED_HEAD"
+    }
+  ],
+  "protection": {
+    "main": "1181c0aeef3a152435cf005583d09a15f209bd0d",
+    "validation": "1ec046fc1582803cf49716dcfa3330b06c21714f",
+    "release": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+    "SAVE_001": "CLOSED_NO_RECONFIRMATION",
+    "prototype006": "UNCHANGED",
+    "fixed_signature": "UNCHANGED",
+    "Golden_tests": "PRESERVED_NO_SKIP_ADDED",
+    "CDEF": "HOLD_UNTIL_PRODUCT_PHASE1_GATE",
+    "merge": "NONE"
+  },
+  "actual_JwCAD": "NOT_RUN_NOT_AUTHORIZED_TO_CLAIM_COMPATIBILITY",
+  "product_phase1": "HOLD",
+  "coordinator_task_endpoint": "REACQUIRE_REVIEW_AND_NEXT_DISPATCH_SAVED_DELIVERED"
+}
