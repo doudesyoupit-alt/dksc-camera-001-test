@@ -1,0 +1,76 @@
+{
+  "schema": "vdraw-G-pre-B2-property-unit-freeze/1",
+  "expectedGParent": "97978333911083f419828b8424ecbba9dee7dd20",
+  "B2ResultsSeen": false,
+  "sourceTruthOriginalHeads": [
+    "7835d3588fdb53131a113e9fb1fba797d28c6a89",
+    "478383bf506123b97b0b94d1d9fbba84af34295f"
+  ],
+  "newWitness": "SYNTHETIC_NOT_EXTERNAL_APP",
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/pre-output-property-oracle-tests.log",
+      "sha256": "417013b4e0ee6921244acb81975edd908452751240687974c9317f38ae54dbac",
+      "bytes": 3173
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/generic-synthetic-g01.property-unit-truth.json",
+      "sha256": "b3fede22c515dd737c17cdf481ee2aaeca41d829a12ea6caa42c9c9f9cb8207e",
+      "bytes": 32396
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/generic-synthetic-g02-nested.property-unit-truth.json",
+      "sha256": "9e6fadb901d6534512722fe3f3043753095436e46815f8fc13d66261620a798b",
+      "bytes": 36656
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/native-vdraw-n01.property-unit-truth.json",
+      "sha256": "476ea2719e4e262f5481c4fa8dde926709a0b51ce1e308fb3eddfced730ef17b",
+      "bytes": 28452
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/synthetic-g03-expanded.property-unit-truth.json",
+      "sha256": "6b03e1c1c1a2163226baf9b2bc97f01b14ccd84b1eb8898f4bec7dd30db8ae0f",
+      "bytes": 69956
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/synthetic-g04-design-truth.json",
+      "sha256": "35ee9d91256c2418f0cfbfa1ebb243a7df0c387231e6899979bff97e31d42b4b",
+      "bytes": 1020
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/synthetic-g04-property-witness.pptx",
+      "sha256": "5d22c9b511997295fe42110b7477c544570c542ebe7b46606c301903c985e4cb",
+      "bytes": 1592
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/synthetic-g04-property-witness.property-unit-truth.json",
+      "sha256": "bf39617a9ebe3c00a2455a9f011c2dfc7dc020634d3ff5a07cf3d4f0b37c34d4",
+      "bytes": 12832
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/generate_property_witness.py",
+      "sha256": "3f9fd72c546bedea47a43c232286a571deb79791f710a77c8e73f8214338cad7",
+      "bytes": 3254
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/property_claim_checker.py",
+      "sha256": "5d04b75523d7c421914aeaa39774cf0394a36eb97e53142811d6d9e797262773",
+      "bytes": 2221
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/property_unit_oracle.py",
+      "sha256": "50d76378e151ba9b3075d2390ecbfcb8fd75eb9976c8eaf9ffb8821b992c8741",
+      "bytes": 4939
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/test_pre_output_property_oracle.py",
+      "sha256": "db35eea862eaa86508d8d4976617f9b5d031193bad72795bed79c12586a93360",
+      "bytes": 4945
+    }
+  ],
+  "newNamedTests": 25,
+  "fail": 0,
+  "skip": 0,
+  "productGate": "HOLD"
+}

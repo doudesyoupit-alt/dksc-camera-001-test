@@ -1,0 +1,35 @@
+import unittest,json,copy,sys
+from pathlib import Path
+from property_unit_oracle import oracle
+from property_claim_checker import evaluate
+R=Path(__file__).resolve().parents[1];T=json.loads((R/'fixtures/synthetic-g04-property-witness.property-unit-truth.json').read_text());G=json.loads((R/'fixtures/synthetic-g03-expanded.property-unit-truth.json').read_text());D=json.loads((R/'fixtures/synthetic-g04-design-truth.json').read_text())
+def o(t,i):return next(v for v in t['objects'] if v['nativeId']==str(i) and v['sourceKey'].startswith('ppt/slides/slide1.xml#'))
+def claims(t):return [{'sourceKey':v['sourceKey'],'sourceHash':t['sourceHash'],'values':{f:p['value'] for f,p in v['properties'].items()},'resolution':{f:{'state':p['state'],'rawLexeme':p['rawLexeme'],'encoding':p['encoding'],'propertyPath':p['sourcePropertyPath'],'reason':'ORIGINAL_UNRESOLVED' if p['state']=='UNRESOLVED' else None} for f,p in v['properties'].items()},'sourceCoordinateUnit':'PATH_COORDINATE' if v['customPaths'] else 'EMU','represented':not bool(v['customPaths']),'ledgerReason':'CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE' if v['customPaths'] else None,'rawPathExtents':[p['pathExtent'] for p in v['customPaths']],'rawPathVertices':[p['rawVertices'] for p in v['customPaths']]} for v in t['objects']]
+class PreOutputOracleTests(unittest.TestCase):
+ def fail(self,a,t=T):self.assertGreater(evaluate(t,a)['fail'],0)
+ def test_original_replay(self):self.assertEqual(T,oracle(R/'fixtures/synthetic-g04-property-witness.pptx'))
+ def test_witness_denominators(self):self.assertEqual(T['sourceObjectDenominator'],3);self.assertEqual(T['componentDenominator'],3)
+ def test_width_raw_and_EMU(self):p=o(T,2)['properties']['width'];self.assertEqual(p['rawLexeme'],'3600');self.assertEqual(p['value'],3600)
+ def test_direct_paint_lexeme(self):self.assertEqual(o(T,2)['properties']['stroke']['rawLexeme'],'010203')
+ def test_noFill_not_unknown(self):p=o(T,2)['properties']['fill'];self.assertEqual(p['state'],'EXPLICIT');self.assertIsNone(p['value']);self.assertEqual(p['rawLexeme'],'noFill')
+ def test_alpha_from_actual_XML(self):p=o(T,2)['properties']['opacity'];self.assertEqual(p['rawLexeme'],'50000');self.assertEqual(p['value'],0.5)
+ def test_native_solid_unknown_not_json_default(self):p=o(T,2)['properties']['dash'];self.assertEqual(p['rawOOXMLLexeme'],'solid');self.assertEqual(p['state'],'UNRESOLVED');self.assertIsNone(p['rawLexeme'])
+ def test_no_stroke_width_dash_not_applicable(self):self.assertEqual(o(T,3)['properties']['width']['state'],'NOT_APPLICABLE');self.assertEqual(o(T,3)['properties']['dash']['state'],'NOT_APPLICABLE')
+ def test_unequal_paint_alpha_cannot_be_single_known_opacity(self):p=o(T,4)['properties']['opacity'];self.assertEqual(p['state'],'UNRESOLVED');self.assertEqual([v['rawLexeme'] for v in p['allPaintAlphas']],['80000','50000'])
+ def test_claim_positive_scaffold_source_only(self):self.assertEqual(evaluate(T,claims(T))['fail'],0)
+ def test_wrong_raw_width_same_value(self):a=claims(T);a[0]['resolution']['width']['rawLexeme']='03600';self.fail(a)
+ def test_wrong_source_property_path(self):a=claims(T);a[0]['resolution']['stroke']['propertyPath']='other';self.fail(a)
+ def test_fabricated_paint_value(self):a=claims(T);a[0]['values']['stroke']='#FFFFFF';self.fail(a)
+ def test_fabricated_alpha(self):a=claims(T);a[0]['values']['opacity']=1;self.fail(a)
+ def test_solid_json_forgery(self):a=claims(T);a[0]['values']['dash']=[];a[0]['resolution']['dash'].update({'state':'EXPLICIT','rawLexeme':'[]','encoding':'DASH_JSON'});self.fail(a)
+ def test_fake_default(self):a=claims(T);a[0]['resolution']['dash']['state']='SPEC_DEFAULT';self.fail(a)
+ def test_source_hash_forged(self):a=claims(T);a[0]['sourceHash']='0'*64;self.fail(a)
+ def test_source_id_unknown(self):a=claims(T);a[0]['sourceKey']='unknown';self.fail(a)
+ def test_missing_reason(self):a=claims(T);a[0]['resolution']['dash']['reason']='';self.fail(a)
+ def test_custom_expected_path_units(self):p=o(G,2)['customPaths'][0];self.assertEqual(p['coordinateUnit'],'PATH_COORDINATE');self.assertEqual(p['pathExtent'],[300,200])
+ def test_custom_labels_match_does_not_establish_EMU(self):a=claims(G);next(v for v in a if v['sourceKey']==o(G,2)['sourceKey'])['sourceCoordinateUnit']='EMU';self.fail(a,G)
+ def test_custom_raw_extents_mutated(self):a=claims(G);v=next(v for v in a if v['sourceKey']==o(G,2)['sourceKey']);v['rawPathExtents']=[[108000,72000]];self.fail(a,G)
+ def test_custom_raw_vertices_mutated(self):a=claims(G);v=next(v for v in a if v['sourceKey']==o(G,2)['sourceKey']);v['rawPathVertices']=[[[0,0]]];self.fail(a,G)
+ def test_custom_same_count_fake_represented(self):a=claims(G);v=next(v for v in a if v['sourceKey']==o(G,2)['sourceKey']);v['represented']=True;self.fail(a,G)
+ def test_custom_ledger_missing(self):a=claims(G);v=next(v for v in a if v['sourceKey']==o(G,2)['sourceKey']);v['ledgerReason']='';self.fail(a,G)
+if __name__=='__main__':unittest.main()

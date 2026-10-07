@@ -1,0 +1,30 @@
+test_alpha_from_actual_XML (test_pre_output_property_oracle.PreOutputOracleTests.test_alpha_from_actual_XML) ... ok
+test_claim_positive_scaffold_source_only (test_pre_output_property_oracle.PreOutputOracleTests.test_claim_positive_scaffold_source_only) ... ok
+test_custom_expected_path_units (test_pre_output_property_oracle.PreOutputOracleTests.test_custom_expected_path_units) ... ok
+test_custom_labels_match_does_not_establish_EMU (test_pre_output_property_oracle.PreOutputOracleTests.test_custom_labels_match_does_not_establish_EMU) ... ok
+test_custom_ledger_missing (test_pre_output_property_oracle.PreOutputOracleTests.test_custom_ledger_missing) ... ok
+test_custom_raw_extents_mutated (test_pre_output_property_oracle.PreOutputOracleTests.test_custom_raw_extents_mutated) ... ok
+test_custom_raw_vertices_mutated (test_pre_output_property_oracle.PreOutputOracleTests.test_custom_raw_vertices_mutated) ... ok
+test_custom_same_count_fake_represented (test_pre_output_property_oracle.PreOutputOracleTests.test_custom_same_count_fake_represented) ... ok
+test_direct_paint_lexeme (test_pre_output_property_oracle.PreOutputOracleTests.test_direct_paint_lexeme) ... ok
+test_fabricated_alpha (test_pre_output_property_oracle.PreOutputOracleTests.test_fabricated_alpha) ... ok
+test_fabricated_paint_value (test_pre_output_property_oracle.PreOutputOracleTests.test_fabricated_paint_value) ... ok
+test_fake_default (test_pre_output_property_oracle.PreOutputOracleTests.test_fake_default) ... ok
+test_missing_reason (test_pre_output_property_oracle.PreOutputOracleTests.test_missing_reason) ... ok
+test_native_solid_unknown_not_json_default (test_pre_output_property_oracle.PreOutputOracleTests.test_native_solid_unknown_not_json_default) ... ok
+test_noFill_not_unknown (test_pre_output_property_oracle.PreOutputOracleTests.test_noFill_not_unknown) ... ok
+test_no_stroke_width_dash_not_applicable (test_pre_output_property_oracle.PreOutputOracleTests.test_no_stroke_width_dash_not_applicable) ... ok
+test_original_replay (test_pre_output_property_oracle.PreOutputOracleTests.test_original_replay) ... ok
+test_solid_json_forgery (test_pre_output_property_oracle.PreOutputOracleTests.test_solid_json_forgery) ... ok
+test_source_hash_forged (test_pre_output_property_oracle.PreOutputOracleTests.test_source_hash_forged) ... ok
+test_source_id_unknown (test_pre_output_property_oracle.PreOutputOracleTests.test_source_id_unknown) ... ok
+test_unequal_paint_alpha_cannot_be_single_known_opacity (test_pre_output_property_oracle.PreOutputOracleTests.test_unequal_paint_alpha_cannot_be_single_known_opacity) ... ok
+test_width_raw_and_EMU (test_pre_output_property_oracle.PreOutputOracleTests.test_width_raw_and_EMU) ... ok
+test_witness_denominators (test_pre_output_property_oracle.PreOutputOracleTests.test_witness_denominators) ... ok
+test_wrong_raw_width_same_value (test_pre_output_property_oracle.PreOutputOracleTests.test_wrong_raw_width_same_value) ... ok
+test_wrong_source_property_path (test_pre_output_property_oracle.PreOutputOracleTests.test_wrong_source_property_path) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.005s
+
+OK
