@@ -1,0 +1,37 @@
+{
+  "schema": "vdraw-G-pre-DXF-numeric-checker-freeze/3",
+  "parentGHEAD": "a5583a3fa6b9e4ed305eee803fa0c5c0ca8d379f",
+  "BBackendOrOutputSeen": false,
+  "absoluteSyntheticNumericToleranceMM": 1e-08,
+  "actualAppToleranceNotAsserted": true,
+  "parserV2Unchanged": true,
+  "parserV3Change": "Strict integer lexemes for POLYLINE flags and vertices-follow; do not truncate fractional flags or accept floating encodings for integer groups. Geometry oracle unchanged.",
+  "newNamedTests": 17,
+  "fail": 0,
+  "skip": 0,
+  "totalNewPreOutputNamedTests": 43,
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/compare_original_parsed_geometry.py",
+      "sha256": "b267ba9c32a080f24731c7d42b694bd94e9fb9d9081316311dbd6c89c4a00974",
+      "bytes": 2497
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/ascii_dxf_parser_v3.py",
+      "sha256": "eba2e7efb05baf5c56140312ae58d7553c6b1a4f8247ade61f9e0ac06d239af6",
+      "bytes": 5194
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/tools/test_pre_result_numeric_checker.py",
+      "sha256": "6e09e977295d4418036985bf95cbccdbb2af47bcef2b537abaa18abc30491508",
+      "bytes": 2926
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/mm-dxf-review-v2/evidence/pre-result-numeric-checker-tests.log",
+      "sha256": "538cd3040b1ae8e4191e28827e4153b24db32e4c51098da65f42fd042d1ca4ff",
+      "bytes": 1801
+    }
+  ],
+  "productGate": "HOLD",
+  "actualJw": "NOT_RUN"
+}

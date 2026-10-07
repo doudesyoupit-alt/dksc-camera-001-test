@@ -1,0 +1,22 @@
+test_circle_radius_zero_reject (__main__.PreResultNumericChecker.test_circle_radius_zero_reject) ... ok
+test_double_y_reflection (__main__.PreResultNumericChecker.test_double_y_reflection) ... ok
+test_extra_vertex (__main__.PreResultNumericChecker.test_extra_vertex) ... ok
+test_fractional_polyflag_reject (__main__.PreResultNumericChecker.test_fractional_polyflag_reject) ... ok
+test_fractional_vertices_follow_reject (__main__.PreResultNumericChecker.test_fractional_vertices_follow_reject) ... ok
+test_hand_authored_rect_all_raw_records (__main__.PreResultNumericChecker.test_hand_authored_rect_all_raw_records) ... ok
+test_misordered_vertices (__main__.PreResultNumericChecker.test_misordered_vertices) ... ok
+test_missing_corner (__main__.PreResultNumericChecker.test_missing_corner) ... ok
+test_missing_raw_mapping (__main__.PreResultNumericChecker.test_missing_raw_mapping) ... ok
+test_missing_seqend_reject (__main__.PreResultNumericChecker.test_missing_seqend_reject) ... ok
+test_no_newer_truecolor (__main__.PreResultNumericChecker.test_no_newer_truecolor) ... ok
+test_source_mm_coordinate_change (__main__.PreResultNumericChecker.test_source_mm_coordinate_change) ... ok
+test_synthetic_circle_parser (__main__.PreResultNumericChecker.test_synthetic_circle_parser) ... ok
+test_vertex_mapping_not_just_polyline_header (__main__.PreResultNumericChecker.test_vertex_mapping_not_just_polyline_header) ... ok
+test_wrong_closure (__main__.PreResultNumericChecker.test_wrong_closure) ... ok
+test_wrong_page_mapping (__main__.PreResultNumericChecker.test_wrong_page_mapping) ... ok
+test_wrong_source_mapping_same_counts (__main__.PreResultNumericChecker.test_wrong_source_mapping_same_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.003s
+
+OK
