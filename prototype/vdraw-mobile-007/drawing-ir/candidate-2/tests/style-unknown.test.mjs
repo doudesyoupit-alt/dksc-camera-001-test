@@ -1,0 +1,48 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {validateDrawingIR,validateStructure,layoutMM,compose,mapPoint} from '../validate.mjs';
+import {IR_VERSION,SCHEMA_SHA256} from '../version.mjs';
+import {fixture,unresolved,calibrated,H} from './fixtures.mjs';
+const pass=d=>{const r=validateDrawingIR(d);assert.equal(r.ok,true,JSON.stringify(r.errors));assert.equal(r.productGate,'HOLD');return r;};
+const fail=(d,code)=>{const r=validateDrawingIR(d);assert.equal(r.ok,false);if(code)assert.ok(r.errors.some(e=>e.code===code),JSON.stringify(r.errors));};
+const change=(name,mutate,code)=>test(name,()=>{const d=fixture();mutate(d);fail(d,code);});
+test('candidate.2 version and exact schema byte hash bound',()=>{assert.equal(IR_VERSION,'vdraw-drawing-ir/1.0.0-candidate.2');assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../schema.json',import.meta.url))).digest('hex'),SCHEMA_SHA256);});
+test('explicit known style carries source binding and lexeme evidence',()=>pass(fixture()));
+for(const field of ['stroke','fill','width','dash','opacity']){
+ test('known geometry with unresolved '+field+' passes structure and remains HOLD',()=>{const d=unresolved(fixture(),field);assert.equal(validateStructure(d).ok,true);const before=JSON.stringify(d);pass(d);assert.equal(JSON.stringify(d),before);assert.equal(d.sourceLedger[0].disposition,'REPRESENTED');assert.equal(d.objects[0].drawingGeometry.end[0],1);});
+ test('unresolved '+field+' prohibits FULL readiness',()=>{const d=unresolved(fixture(),field);d.exportEvaluations[0].readiness='FULL';fail(d,'FALSE_FULL_RETENTION');});
+ test('unresolved '+field+' cannot carry fabricated nonnull default',()=>{const d=unresolved(fixture(),field);d.objects[0].style[field]=fixture().objects[0].style[field]??'#FFFFFF';fail(d,'STYLE_UNRESOLVED_FAKE_VALUE');});
+}
+test('all unresolved appearance retains known geometry with complete property ledger',()=>{const d=fixture();for(const f of ['stroke','fill','width','dash','opacity'])unresolved(d,f);pass(d);assert.equal(d.objects.length,1);assert.equal(d.issues.length,5);});
+test('explicit noFill null distinct from unresolved fill null',()=>{const known=fixture(),unknown=unresolved(fixture(),'fill');assert.equal(known.objects[0].style.fill,null);assert.equal(unknown.objects[0].style.fill,null);assert.notDeepEqual(known.objects[0].style.resolution.fill,unknown.objects[0].style.resolution.fill);pass(known);pass(unknown);});
+change('missing per-field resolution rejected',d=>delete d.objects[0].style.resolution.width,'SCHEMA_REQUIRED');
+change('missing whole resolution ledger rejected',d=>delete d.objects[0].style.resolution,'SCHEMA_REQUIRED');
+change('missing provenance source binding rejected',d=>delete d.objects[0].style.resolution.stroke.sourceBinding,'SCHEMA_REQUIRED');
+change('known values without source evidence rejected',d=>d.objects[0].style.resolution.width.evidenceIds=['ev1'],'STYLE_SOURCE_EVIDENCE_REQUIRED');
+change('empty provenance evidence rejected',d=>d.objects[0].style.resolution.width.evidenceIds=[],'SCHEMA_ARRAY_SIZE');
+change('dangling evidence cannot validate explicit attribute',d=>d.objects[0].style.resolution.width.evidenceIds=['missing'],'STYLE_EVIDENCE_REFERENCE');
+change('label-only source Evidence with wrong content identity rejected',d=>d.evidence.find(e=>e.id==='source-style').sha256='b'.repeat(64),'STYLE_SOURCE_EVIDENCE_REQUIRED');
+change('source binding cannot refer to different shape',d=>d.objects[0].style.resolution.width.sourceBinding.nativeObjectId='other','STYLE_SOURCE_BINDING_MISMATCH');
+change('unresolved style missing issue rejected',d=>{unresolved(d,'width');d.issues=[];},'STYLE_UNRESOLVED_ISSUE_REQUIRED');
+change('unresolved style cannot claim KNOWN object',d=>{unresolved(d,'width');d.objects[0].status='KNOWN';},'STYLE_UNKNOWN_OBJECT_STATUS_REQUIRED');
+change('unresolved style cannot retain hidden explicit lexeme',d=>{unresolved(d,'width');d.objects[0].style.resolution.width.rawLexeme='0';},'STYLE_UNRESOLVED_FAKE_VALUE');
+change('explicit numerical value must match raw lexeme',d=>d.objects[0].style.width=1,'STYLE_EXPLICIT_LEXEME_MISMATCH');
+change('explicit noFill requires actual noFill lexeme',d=>d.objects[0].style.resolution.fill.rawLexeme='missing','STYLE_EXPLICIT_LEXEME_MISMATCH');
+change('explicit color cannot use wrong source lexeme',d=>d.objects[0].style.resolution.stroke.rawLexeme='FFFFFF','STYLE_EXPLICIT_LEXEME_MISMATCH');
+change('fake SPEC_DEFAULT policy label cannot pass',d=>{const r=d.objects[0].style.resolution.width;r.state='SPEC_DEFAULT';r.encoding='SPEC_DEFAULT';r.policyId='alleged-valid-default';},'STYLE_SPEC_DEFAULT_POLICY_NOT_VALIDATED');
+change('NOT_APPLICABLE cannot mask visible stroke width',d=>{const s=d.objects[0].style,r=s.resolution.width;s.width=null;Object.assign(r,{state:'NOT_APPLICABLE',encoding:'NOT_APPLICABLE',rawLexeme:null,reason:'pretend irrelevant'});},'STYLE_NOT_APPLICABLE_INVALID');
+test('explicit noFill stroke permits irrelevant width/dash with scoped evidence',()=>{const d=fixture(),s=d.objects[0].style;s.stroke=null;Object.assign(s.resolution.stroke,{encoding:'OOXML_NO_FILL',rawLexeme:'noFill'});for(const f of ['width','dash']){s[f]=null;Object.assign(s.resolution[f],{state:'NOT_APPLICABLE',encoding:'NOT_APPLICABLE',rawLexeme:null,reason:'Explicit noFill stroke has no '+f});}pass(d);});
+change('unsupported appearance issue prohibits FULL even with resolved style',d=>d.issues.push({id:'effect',code:'UNSUPPORTED_SOURCE_EFFECT',inventoryId:'part1',reason:'Shadow not representable',nextHumanAction:'Review missing effect',evidenceIds:['source-style']}),'FALSE_FULL_RETENTION');
+test('unsupported appearance issue permits PARTIAL accounting',()=>{const d=fixture();d.exportEvaluations[0].readiness='PARTIAL';d.issues.push({id:'effect',code:'UNSUPPORTED_SOURCE_EFFECT',inventoryId:'part1',reason:'Shadow not representable',nextHumanAction:'Review missing effect',evidenceIds:['source-style']});pass(d);});
+change('unchanged source omission guard effective with unresolved style',d=>{unresolved(d,'width');d.sourceLedger=[];},'SOURCE_INVENTORY_OMISSION');
+change('unchanged transform mismatch guard effective with unresolved style',d=>{unresolved(d,'width');d.objects[0].drawingGeometry.end[0]=2;},'DRAWING_GEOMETRY_TRANSFORM_MISMATCH');
+change('unchanged unit guard effective with unresolved style',d=>{unresolved(d,'width');d.frames[0].physicalUnit='UNSCALED';},'SOURCE_UNIT_MISMATCH');
+change('unchanged real-world calibration gate effective',d=>{unresolved(d,'width');d.frames[1].unitRole='REAL_WORLD';d.exportEvaluations[0].unitRole='REAL_WORLD';},'CALIBRATION_REQUIRED');
+test('unchanged native EMU and PDF UserUnit conversions',()=>{assert.equal(layoutMM(36000,'EMU'),1);assert.equal(layoutMM(914400,'EMU'),25.4);assert.equal(layoutMM(72,'PT',2),50.8);assert.throws(()=>layoutMM(1,'PX'));});
+test('unchanged group composition keeps next-times-previous convention',()=>{assert.deepEqual(mapPoint(compose([2,0,0,0,2,0,0,0,1],[1,0,3,0,1,4,0,0,1]),[1,2]),[8,12]);});
+test('unchanged calibration known values preserved',()=>pass(calibrated()));
+change('text geometry still requires anchor baseline font',d=>{d.objects[0].nativeGeometry={kind:'text',content:'x'};d.objects[0].drawingGeometry={kind:'text',content:'x'};d.objects[0].kind='text';},'SCHEMA_ONE_OF');
+
+change('explicit source width cannot silently relabel EMU value as MM',d=>d.objects[0].style.widthUnit='MM','STYLE_EXPLICIT_WIDTH_SOURCE_UNIT_REQUIRED');

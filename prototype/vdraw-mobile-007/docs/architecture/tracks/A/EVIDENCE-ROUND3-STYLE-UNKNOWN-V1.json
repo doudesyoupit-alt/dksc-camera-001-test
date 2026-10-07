@@ -1,0 +1,80 @@
+{
+  "schema": "vdraw-ir-style-delta-evidence/1",
+  "instruction_id": "VDRAW-PHASE1-A-STYLE-UNKNOWN-20261007-V1",
+  "expected_base_head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+  "dispatch_commit": "65d1a97774b051b7bb5f56cbbbf7a9165b14be46",
+  "IR_version": "vdraw-drawing-ir/1.0.0-candidate.2",
+  "schema_sha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+  "validator_sha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+  "contract_status": "CANDIDATE_2_PENDING_G_INDEPENDENT_REVIEW",
+  "artifacts": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/TEST-ROUND3-STYLE-UNKNOWN-V1.log",
+      "sha256": "551bb577896ee48add013a2d3e81f1323254a448706bfe5905c54df5451c88de",
+      "bytes": 3451
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/README.md",
+      "sha256": "c8477e6871a457be5e2ebe8126a408bc90b6428027e6eda49a81507097cdd3d6",
+      "bytes": 3940
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json",
+      "sha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+      "bytes": 38456
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/fixtures.mjs",
+      "sha256": "70bdb0f9b8aa040d0d47a574da3fb6cd51ee4352c6ce55a2ac3860f0fd6dd7d8",
+      "bytes": 5071
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/style-unknown.test.mjs",
+      "sha256": "36823743c3277a8728d3e127051b7fbec3e623b3848b64961cd160f8ec2fcd29",
+      "bytes": 7555
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/validate.mjs",
+      "sha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+      "bytes": 28707
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/version.mjs",
+      "sha256": "e58b25e47333803fbe0db070e73a7e12b813b4df1d76d05dd3cde0f969a9bceb",
+      "bytes": 226
+    }
+  ],
+  "test": {
+    "command": "node --test prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/style-unknown.test.mjs",
+    "runtime": "Node v24.19.0",
+    "tests": 47,
+    "pass": 47,
+    "fail": 0,
+    "skip": 0,
+    "cancelled": 0,
+    "todo": 0,
+    "denominator": "47 named synthetic candidate.2 contract delta tests only; not source-oracle, product, accuracy or Jw_cad tests"
+  },
+  "verification": {
+    "node_syntax_check": "PASS",
+    "pinned_algorithm_comparison": "EXACT_BYTE_MATCH after removing only two declared style hooks and candidate.2 appended style validator",
+    "pinned_validator_sha256": "8b9ab5443647f89c6b07dbe5ce13c9980a81ff2bf2b5ad1e5705b0407eefbd6e",
+    "baseline_tree": "918361fba624317aabd5a594c732beea1b53fdbc",
+    "prior_blobs_preserved": "Git base tree plus new path entries only",
+    "candidate1_tests_rerun": false
+  },
+  "default_policy": "NO_SPEC_DEFAULT_POLICY_ADOPTED",
+  "product_gate": "HOLD",
+  "actual_JWCAD": "NOT_RUN",
+  "practical_accuracy": "NOT_MEASURED",
+  "limitations": [
+    "Internal binding/hash/lexeme consistency is checked; untrusted source XML claims require independent oracle verification",
+    "No candidate.2 automatic freeze/adoption",
+    "Native inventory adapter/DXF integration outside A scope",
+    "Existing geometry/text limitations remain unchanged"
+  ],
+  "blockers": [
+    "G independent review required for candidate.2",
+    "Product Phase1 remains HOLD pending native adapter, mm DXF and actual Jw_cad qualification"
+  ]
+}

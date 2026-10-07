@@ -1,0 +1,92 @@
+{
+  "marker": "[WORK_HANDOFF_V1]",
+  "schema": "vdraw-four-route-handoff/1",
+  "instruction_id": "VDRAW-PHASE1-A-STYLE-UNKNOWN-20261007-V1",
+  "project": "dksc-camera-001-test",
+  "track": "A",
+  "branch": "work/vdraw-drawing-ir-v1",
+  "expected_base_head": "3e1f6892ff5c6b06644b07b8247ccd9053b978db",
+  "head": null,
+  "head_resolution": "Resolve immutable containing commit after Git ref lease; no circular self SHA",
+  "status": "CANDIDATE_2_STYLE_UNKNOWN_DELTA_READY_FOR_G",
+  "contract_status": "CANDIDATE_2_PENDING_G_INDEPENDENT_REVIEW",
+  "IR_version": "vdraw-drawing-ir/1.0.0-candidate.2",
+  "schema_path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json",
+  "schema_sha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+  "validator_sha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/EVIDENCE-ROUND3-STYLE-UNKNOWN-V1.json",
+      "sha256": "15e50d32bed22208b3f620f79ac78f3f82a86a6fb40e997e31206e1fcb2da37a"
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/A/TEST-ROUND3-STYLE-UNKNOWN-V1.log",
+      "sha256": "551bb577896ee48add013a2d3e81f1323254a448706bfe5905c54df5451c88de",
+      "bytes": 3451
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/README.md",
+      "sha256": "c8477e6871a457be5e2ebe8126a408bc90b6428027e6eda49a81507097cdd3d6",
+      "bytes": 3940
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json",
+      "sha256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+      "bytes": 38456
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/fixtures.mjs",
+      "sha256": "70bdb0f9b8aa040d0d47a574da3fb6cd51ee4352c6ce55a2ac3860f0fd6dd7d8",
+      "bytes": 5071
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/style-unknown.test.mjs",
+      "sha256": "36823743c3277a8728d3e127051b7fbec3e623b3848b64961cd160f8ec2fcd29",
+      "bytes": 7555
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/validate.mjs",
+      "sha256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+      "bytes": 28707
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/drawing-ir/candidate-2/version.mjs",
+      "sha256": "e58b25e47333803fbe0db070e73a7e12b813b4df1d76d05dd3cde0f969a9bceb",
+      "bytes": 226
+    }
+  ],
+  "test": {
+    "command": "node --test prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/style-unknown.test.mjs",
+    "runtime": "Node v24.19.0",
+    "tests": 47,
+    "pass": 47,
+    "fail": 0,
+    "skip": 0,
+    "cancelled": 0,
+    "todo": 0,
+    "denominator": "47 named synthetic candidate.2 contract delta tests only; not source-oracle, product, accuracy or Jw_cad tests"
+  },
+  "blocker": [
+    "G independent review required for candidate.2",
+    "Product Phase1 remains HOLD pending native adapter, mm DXF and actual Jw_cad qualification"
+  ],
+  "Human_Gate": {
+    "isolated_contract": "NO_EXTRA_HUMAN_APPROVAL_REQUIREMENT",
+    "product_adoption": "HOLD_HUMAN_FINAL_JUDGMENT",
+    "approval_substitution": false
+  },
+  "product_phase_gate": "HOLD",
+  "candidate1_preserved": true,
+  "next_action": "G independent review exact candidate.2 bytes and original source identity; Coordinator decides bounded B native adapter continuation only after review; no FULL appearance acceptance from partial geometry",
+  "changed_paths": [
+    "prototype/vdraw-mobile-007/docs/architecture/tracks/A/TEST-ROUND3-STYLE-UNKNOWN-V1.log",
+    "prototype/vdraw-mobile-007/drawing-ir/candidate-2/README.md",
+    "prototype/vdraw-mobile-007/drawing-ir/candidate-2/schema.json",
+    "prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/fixtures.mjs",
+    "prototype/vdraw-mobile-007/drawing-ir/candidate-2/tests/style-unknown.test.mjs",
+    "prototype/vdraw-mobile-007/drawing-ir/candidate-2/validate.mjs",
+    "prototype/vdraw-mobile-007/drawing-ir/candidate-2/version.mjs",
+    "prototype/vdraw-mobile-007/docs/architecture/tracks/A/EVIDENCE-ROUND3-STYLE-UNKNOWN-V1.json",
+    "prototype/vdraw-mobile-007/docs/architecture/tracks/A/HANDOFF-ROUND3-STYLE-UNKNOWN-V1.json"
+  ]
+}
