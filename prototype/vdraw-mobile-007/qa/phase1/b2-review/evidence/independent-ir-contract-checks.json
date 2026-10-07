@@ -1,0 +1,129 @@
+{
+  "schema": "vdraw-G-fixed-B2-independent-IR-contract-checks/1",
+  "validatorFixedHEAD": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+  "validatorSHA256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+  "documentsValidated": 6,
+  "newAdverseTests": 5,
+  "checks": [
+    {
+      "name": "native-vdraw-n01",
+      "expected": "VALID_FIXED_IR",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "generic-synthetic-g01",
+      "expected": "VALID_FIXED_IR",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "generic-synthetic-g02-nested",
+      "expected": "VALID_FIXED_IR",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "synthetic-g03-expanded",
+      "expected": "VALID_FIXED_IR",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "explicit-paint-width-alpha-witness",
+      "expected": "VALID_FIXED_IR",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "synthetic-g04-property-witness",
+      "expected": "VALID_FIXED_IR",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "actual-witness-alpha-value-forged",
+      "expectedCode": "STYLE_EXPLICIT_LEXEME_MISMATCH",
+      "status": "PASS",
+      "errors": [
+        {
+          "code": "STYLE_EXPLICIT_LEXEME_MISMATCH",
+          "path": "/objects/source-2-part-0-object/style/resolution/opacity"
+        }
+      ]
+    },
+    {
+      "name": "actual-witness-alpha-evidence-missing",
+      "expectedCode": "SCHEMA_ARRAY_SIZE",
+      "status": "PASS",
+      "errors": [
+        {
+          "code": "SCHEMA_ARRAY_SIZE",
+          "path": "/objects/0/style/resolution/opacity/evidenceIds"
+        }
+      ]
+    },
+    {
+      "name": "actual-witness-alpha-nonsource-evidence",
+      "expectedCode": "STYLE_SOURCE_EVIDENCE_REQUIRED",
+      "status": "PASS",
+      "errors": [
+        {
+          "code": "STYLE_SOURCE_EVIDENCE_REQUIRED",
+          "path": "/objects/source-2-part-0-object/style/resolution/opacity"
+        }
+      ]
+    },
+    {
+      "name": "actual-witness-dash-fake-default",
+      "expectedCode": "STYLE_SPEC_DEFAULT_POLICY_NOT_VALIDATED",
+      "status": "PASS",
+      "errors": [
+        {
+          "code": "STYLE_SPEC_DEFAULT_POLICY_NOT_VALIDATED",
+          "path": "/objects/source-2-part-0-object/style/resolution/dash"
+        }
+      ]
+    },
+    {
+      "name": "actual-witness-fake-FULL",
+      "expectedCode": "FALSE_FULL_RETENTION",
+      "status": "PASS",
+      "errors": [
+        {
+          "code": "TARGET_PART_DROPPED",
+          "path": "/exportEvaluations",
+          "detail": "source-0"
+        },
+        {
+          "code": "TARGET_PART_DROPPED",
+          "path": "/exportEvaluations",
+          "detail": "source-1"
+        },
+        {
+          "code": "TARGET_PART_DROPPED",
+          "path": "/exportEvaluations",
+          "detail": "source-2"
+        },
+        {
+          "code": "TARGET_PART_DROPPED",
+          "path": "/exportEvaluations",
+          "detail": "source-3"
+        },
+        {
+          "code": "TARGET_PART_DROPPED",
+          "path": "/exportEvaluations",
+          "detail": "source-4"
+        },
+        {
+          "code": "FALSE_FULL_RETENTION",
+          "path": "/exportEvaluations",
+          "detail": "false-full"
+        }
+      ]
+    }
+  ],
+  "pass": 11,
+  "fail": 0,
+  "productGate": "HOLD"
+}

@@ -1,0 +1,244 @@
+{
+  "schema": "vdraw-G-candidate2-adapter-independent-evidence/1",
+  "instruction_id": "VDRAW-PHASE1-G-CANDIDATE2-ADAPTER-QA-20261007-V1",
+  "dispatch_commit": "e717bbe2d7572a6b307fea746f1f11528aa5d14d",
+  "expected_dispatch_head": "97978333911083f419828b8424ecbba9dee7dd20",
+  "expected_save_parent": "504a14f4aecef39a19c60f3776f347d54c091e66",
+  "pins": {
+    "B2HEAD": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "adapterSHA256": "d1b7f0982ced37bbbfd59ab4b811960fe75833d1c7b93d19986cf13ff53f89dd",
+    "A2HEAD": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "IRVersion": "vdraw-drawing-ir/1.0.0-candidate.2",
+    "schemaSHA256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "validatorSHA256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "GPropertyTruthHEAD": "6e9fdbfe7fe09cb3e6739923a248d9c67d44fd43",
+    "GNumericOracleHEAD": "504a14f4aecef39a19c60f3776f347d54c091e66"
+  },
+  "inputAuthentication": {
+    "B2EvidenceFilesSHA256BytesVerified": 30,
+    "B2AcquiredLocalGitBlobsVerified": 53,
+    "B2OldGitBlobsUnchanged": 607,
+    "B2NewGitPaths": 32
+  },
+  "files": [
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/checker-v2-original-alpha-path-refinement.json",
+      "sha256": "ce8f30b33120c100809c7e284007a927dca2298ce9172f13d7c6ff5f80b428e5",
+      "bytes": 2727
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/custom-path-unit-findings-resolution-v1.json",
+      "sha256": "3ddc0ddeb33f78f5c4232d188e77451015023423c36a67be5b69e17cf55495ff",
+      "bytes": 2664
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/explicit-paint-width-alpha-witness.independent-compare.json",
+      "sha256": "391d0237343f42e71e72848c9723dfb8ea00212dca6245e0133f7e4fbe19fe0e",
+      "bytes": 29265
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/fixed-b2-adverse-tests.log",
+      "sha256": "51f9756cf2a21078dc7588655f5a548e5d86eeebdb4db4ad418ade9886fc54ee",
+      "bytes": 135
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/generic-synthetic-g01.independent-compare.json",
+      "sha256": "297ac0d8bab60c97beb8b9df3a173e7709f557f5095e5f6cf6e78efbe0c81bb1",
+      "bytes": 134763
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/generic-synthetic-g02-nested.independent-compare.json",
+      "sha256": "d2ef17ae8a7a1bf890cfe3d2d8e0a4ace428edd4ff35a723dca394ba820e083c",
+      "bytes": 120360
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/independent-comparison-summary.json",
+      "sha256": "2d84ce3f1082bc4bd4b54103bd19953fb2ff0c4e9f5ba74084135cdd29009602",
+      "bytes": 1724
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/independent-ir-contract-checks.json",
+      "sha256": "7be4c9a3bbd9d037fe68896834b70fa8ff92cfddfc98817d0d96883a1293b526",
+      "bytes": 3373
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/native-vdraw-n01.independent-compare.json",
+      "sha256": "9ee996cc0c0f15f0ea32363536ea4b33b6d49020e0682a5ec27e0b8756e19765",
+      "bytes": 167596
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/synthetic-g03-expanded.independent-compare.json",
+      "sha256": "20b4e68c1d14ff64fde711820e150b85451898c05a2f78b6e5d63cffb97b4427",
+      "bytes": 257789
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/synthetic-g04-property-witness.adapter-result.json",
+      "sha256": "4e004e1198856747c1638af0bd3b36e2ba5c3237255ee1d90958d3523594fffc",
+      "bytes": 83554
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/synthetic-g04-property-witness.independent-compare.json",
+      "sha256": "7ff4e4efa78dcdd3cabe6854b0a44b41286ef3e831f83f6ea790d5fe41bc37f6",
+      "bytes": 77372
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/explicit-paint-width-alpha-witness.independent-source-property-truth.json",
+      "sha256": "480c9b0e46ca83f7c077511aa0502c48189fac4840bef1096c4337a715e29eca",
+      "bytes": 4465
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/evaluate_candidate2_adapter.py",
+      "sha256": "2cbef650f5c526f3f06db9a7a3cf8bce1c1cafc689bafbef0d0a344fed232da3",
+      "bytes": 11716
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/property_claim_checker_v2.py",
+      "sha256": "8bf59347a5a23e63fe06d7fb44a26da78a6b6691389b996b77bc182728c46aa6",
+      "bytes": 2597
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/run-fixed-comparisons.py",
+      "sha256": "d79248f6895f45b7f0fb5adeaf1af20bc24125bb44fd92b216569387a002df4e",
+      "bytes": 1512
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/run-independent-witness.mjs",
+      "sha256": "a801f3b09edba703f7b79f97ada31c7210643a2c12c11ca601c4694059686d66",
+      "bytes": 1316
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/test_fixed_b2_adverse.py",
+      "sha256": "8756d5a1d5197424becd0e27d00dd4c7f2f0b8ad5ce19e1dc3441ad7287d9249",
+      "bytes": 7611
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/validate-fixed-ir.mjs",
+      "sha256": "68bfde332b9d60b5194377c625f363ed4044a189880d59ace265b21108e9f288",
+      "bytes": 2961
+    },
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/CANDIDATE2-ADAPTER-QA-REPORT-V1.md",
+      "sha256": "16bfa663820b34cdd9d64229193194e290ab130cda8c72174106da61989a9460",
+      "bytes": 6378
+    }
+  ],
+  "tests": {
+    "newNamedPass": 74,
+    "newNamedFail": 0,
+    "skip": 0,
+    "groups": {
+      "preOutputOriginalPropertyUnit": 25,
+      "preOutputBoundedGeometry": 8,
+      "fixedResultIndependentAdverse": 36,
+      "fixedResultContractAdverse": 5
+    },
+    "sourceComparisonPass": 3246,
+    "sourceComparisonFail": 0,
+    "IRDocumentsIndependentlyValidated": 6,
+    "broadOldSuitesRerun": false
+  },
+  "packages": [
+    {
+      "package": "native-vdraw-n01",
+      "pass": 722,
+      "fail": 0,
+      "sourceObjects": 6,
+      "sourceComponents": 8,
+      "geometryDenominator": 6,
+      "textDenominator": 2,
+      "representedGeometry": 6,
+      "representedText": 0,
+      "boundedGeometryReadiness": "YES"
+    },
+    {
+      "package": "generic-synthetic-g01",
+      "pass": 566,
+      "fail": 0,
+      "sourceObjects": 9,
+      "sourceComponents": 9,
+      "geometryDenominator": 5,
+      "textDenominator": 1,
+      "representedGeometry": 4,
+      "representedText": 0,
+      "boundedGeometryReadiness": "YES"
+    },
+    {
+      "package": "generic-synthetic-g02-nested",
+      "pass": 466,
+      "fail": 0,
+      "sourceObjects": 10,
+      "sourceComponents": 9,
+      "geometryDenominator": 5,
+      "textDenominator": 1,
+      "representedGeometry": 3,
+      "representedText": 0,
+      "boundedGeometryReadiness": "YES"
+    },
+    {
+      "package": "synthetic-g03-expanded",
+      "pass": 994,
+      "fail": 0,
+      "sourceObjects": 15,
+      "sourceComponents": 17,
+      "geometryDenominator": 12,
+      "textDenominator": 4,
+      "representedGeometry": 6,
+      "representedText": 0,
+      "boundedGeometryReadiness": "YES"
+    },
+    {
+      "package": "explicit-paint-width-alpha-witness",
+      "pass": 142,
+      "fail": 0,
+      "sourceObjects": 1,
+      "sourceComponents": 1,
+      "geometryDenominator": 1,
+      "textDenominator": 0,
+      "representedGeometry": 1,
+      "representedText": 0,
+      "boundedGeometryReadiness": "YES"
+    },
+    {
+      "package": "synthetic-g04-property-witness",
+      "pass": 356,
+      "fail": 0,
+      "sourceObjects": 3,
+      "sourceComponents": 3,
+      "geometryDenominator": 3,
+      "textDenominator": 0,
+      "representedGeometry": 3,
+      "representedText": 0,
+      "boundedGeometryReadiness": "YES"
+    }
+  ],
+  "customSourceUnitFindings": {
+    "oldFAILRecordsUnchanged": true,
+    "oldFindings": 2,
+    "resolvedByNewEvidence": 2,
+    "unresolved": 0,
+    "rawCustomDrawableAcceptance": false
+  },
+  "gates": {
+    "boundedNativeEMUGeometryReadiness": "YES",
+    "completeSourceGeometryRetention": "PARTIAL_23_OF_32",
+    "sourceAccounting": "PASS_ORIGINAL_DENOMINATORS_44_OBJECTS_47_COMPONENTS",
+    "textDrawableRetention": "NOT_QUALIFIED_0_OF_8",
+    "appearanceFidelity": "UNQUALIFIED_UNKNOWN_FIELDS_AND_GENERATED_REVIEW_STYLE_NOT_SOURCE_STYLE",
+    "DXF": "NOT_RUN",
+    "realJwCad": "NOT_RUN",
+    "productPhase1": "HOLD"
+  },
+  "protection": {
+    "appendOnly": true,
+    "baseGitBlobsRetained": 645,
+    "localOldBlobsCheckedUnchanged": 88,
+    "oldGTruthFixturesCheckersEvidenceChanged": false,
+    "AorBImplementationChanged": false,
+    "mainValidationRelease006SigningChanged": false,
+    "SAVE001": "CLOSED_REUSED",
+    "CDEFIntegration": false,
+    "APK": false,
+    "AIrequests": 0
+  },
+  "EvidenceSelfHash": "Reference by containing HANDOFF; no circular self-hash"
+}

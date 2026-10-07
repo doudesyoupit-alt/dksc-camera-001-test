@@ -1,0 +1,74 @@
+[
+  {
+    "package": "native-vdraw-n01",
+    "pass": 722,
+    "fail": 0,
+    "sourceObjects": 6,
+    "sourceComponents": 8,
+    "geometryDenominator": 6,
+    "textDenominator": 2,
+    "representedGeometry": 6,
+    "representedText": 0,
+    "boundedGeometryReadiness": "YES"
+  },
+  {
+    "package": "generic-synthetic-g01",
+    "pass": 566,
+    "fail": 0,
+    "sourceObjects": 9,
+    "sourceComponents": 9,
+    "geometryDenominator": 5,
+    "textDenominator": 1,
+    "representedGeometry": 4,
+    "representedText": 0,
+    "boundedGeometryReadiness": "YES"
+  },
+  {
+    "package": "generic-synthetic-g02-nested",
+    "pass": 466,
+    "fail": 0,
+    "sourceObjects": 10,
+    "sourceComponents": 9,
+    "geometryDenominator": 5,
+    "textDenominator": 1,
+    "representedGeometry": 3,
+    "representedText": 0,
+    "boundedGeometryReadiness": "YES"
+  },
+  {
+    "package": "synthetic-g03-expanded",
+    "pass": 994,
+    "fail": 0,
+    "sourceObjects": 15,
+    "sourceComponents": 17,
+    "geometryDenominator": 12,
+    "textDenominator": 4,
+    "representedGeometry": 6,
+    "representedText": 0,
+    "boundedGeometryReadiness": "YES"
+  },
+  {
+    "package": "explicit-paint-width-alpha-witness",
+    "pass": 142,
+    "fail": 0,
+    "sourceObjects": 1,
+    "sourceComponents": 1,
+    "geometryDenominator": 1,
+    "textDenominator": 0,
+    "representedGeometry": 1,
+    "representedText": 0,
+    "boundedGeometryReadiness": "YES"
+  },
+  {
+    "package": "synthetic-g04-property-witness",
+    "pass": 356,
+    "fail": 0,
+    "sourceObjects": 3,
+    "sourceComponents": 3,
+    "geometryDenominator": 3,
+    "textDenominator": 0,
+    "representedGeometry": 3,
+    "representedText": 0,
+    "boundedGeometryReadiness": "YES"
+  }
+]

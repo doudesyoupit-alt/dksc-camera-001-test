@@ -1,0 +1,143 @@
+{
+  "schema": "vdraw-G-pre-B2-source-property-unit-truth/1",
+  "sourceHash": "9e78716fb9ec13708d93dadd3448dd18894bb6f5b5cedfbb490ac5a33bed0d52",
+  "presentationOrder": [
+    "ppt/slides/slide1.xml"
+  ],
+  "sourceSizeEmu": [
+    10972800,
+    7315200
+  ],
+  "layoutMm": [
+    304.8,
+    203.2
+  ],
+  "sourceObjectDenominator": 1,
+  "componentDenominator": 1,
+  "backgroundDenominator": 0,
+  "scaleStatus": "UNSCALED",
+  "objects": [
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "partHash": "eb8bb0daa41e4168d9900b85fa267a65842c8f7bf8e8000f4aee8a626d19566f",
+      "nativeId": "2",
+      "kind": "sp",
+      "role": "DRAWABLE",
+      "preset": "rect",
+      "rawXml": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><ns0:nvSpPr><ns0:cNvPr id=\"2\" name=\"s2\" /><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"36000\" y=\"72000\" /><ns1:ext cx=\"108000\" cy=\"144000\" /></ns1:xfrm><ns1:prstGeom prst=\"rect\"><ns1:avLst /></ns1:prstGeom><ns1:noFill /><ns1:ln w=\"3600\"><ns1:solidFill><ns1:srgbClr val=\"ABCDef\"><ns1:alpha val=\"75000\" /></ns1:srgbClr></ns1:solidFill><ns1:prstDash val=\"solid\" /></ns1:ln></ns0:spPr></ns0:sp>",
+      "components": [
+        {
+          "kind": "geometry",
+          "path": "/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+          "nativeId": "2",
+          "text": null,
+          "status": "SOURCE_TRUTH_COMPONENT_NOT_TARGET_SUPPORT"
+        }
+      ],
+      "nativeShapeCoordinateUnit": "EMU",
+      "customPaths": [],
+      "properties": {
+        "fill": {
+          "state": "EXPLICIT",
+          "value": null,
+          "encoding": "OOXML_NO_FILL",
+          "rawLexeme": "noFill",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:noFill",
+          "xml": "<ns0:noFill xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" />"
+        },
+        "stroke": {
+          "state": "EXPLICIT",
+          "value": "#ABCDef",
+          "encoding": "HEX_RGB",
+          "rawLexeme": "ABCDef",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/@val",
+          "xml": "<ns0:srgbClr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" val=\"ABCDef\"><ns0:alpha val=\"75000\" /></ns0:srgbClr>"
+        },
+        "width": {
+          "state": "EXPLICIT",
+          "value": 3600,
+          "encoding": "NUMBER",
+          "rawLexeme": "3600",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/@w"
+        },
+        "dash": {
+          "state": "UNRESOLVED",
+          "value": null,
+          "encoding": "UNRESOLVED",
+          "rawLexeme": null,
+          "rawOOXMLLexeme": "solid",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:prstDash/@val",
+          "reason": "NO_NATIVE_DASH_ENCODING_ADOPTED"
+        },
+        "opacity": {
+          "state": "EXPLICIT",
+          "value": 0.75,
+          "encoding": "OOXML_ALPHA_100000",
+          "rawLexeme": "75000",
+          "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/a:alpha/@val",
+          "allPaintAlphas": [
+            {
+              "field": "stroke",
+              "rawLexeme": "75000",
+              "value": 0.75,
+              "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/p:spPr/a:ln/a:solidFill/a:srgbClr/a:alpha/@val"
+            }
+          ]
+        }
+      },
+      "orderedCornersEMU": [
+        [
+          36000.0,
+          72000.0
+        ],
+        [
+          144000.0,
+          72000.0
+        ],
+        [
+          144000.0,
+          216000.0
+        ],
+        [
+          36000.0,
+          216000.0
+        ]
+      ],
+      "orderedCornersMM": [
+        [
+          1.0,
+          2.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          4.0,
+          6.0
+        ],
+        [
+          1.0,
+          6.0
+        ]
+      ],
+      "basisEMU": [
+        [
+          108000.0,
+          0.0
+        ],
+        [
+          0.0,
+          144000.0
+        ]
+      ],
+      "xfrm": {
+        "x": 36000,
+        "y": 72000,
+        "cx": 108000,
+        "cy": 144000
+      }
+    }
+  ],
+  "productGate": "HOLD"
+}

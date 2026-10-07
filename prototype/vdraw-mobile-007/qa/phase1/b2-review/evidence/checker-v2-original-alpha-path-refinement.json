@@ -1,0 +1,49 @@
+{
+  "schema": "vdraw-G-checker-alpha-path-refinement/1",
+  "preOutputFreezeHead": "6e9fdbfe7fe09cb3e6739923a248d9c67d44fd43",
+  "frozenTruthPath": "prototype/vdraw-mobile-007/qa/phase1/b2-review/fixtures/native-vdraw-n01.property-unit-truth.json",
+  "truthSHA256": "476ea2719e4e262f5481c4fa8dde926709a0b51ce1e308fb3eddfced730ef17b",
+  "sourceHash": "20e0ed7f5791a57a94afacad7d10dacf38f27b9b4219fb1f223f7cfc05eea4c2",
+  "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]",
+  "originalOpacity": {
+    "state": "EXPLICIT",
+    "value": 0.0,
+    "encoding": "OOXML_ALPHA_100000",
+    "rawLexeme": "0",
+    "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+    "allPaintAlphas": [
+      {
+        "field": "fill",
+        "rawLexeme": "0",
+        "value": 0.0,
+        "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val"
+      },
+      {
+        "field": "stroke",
+        "rawLexeme": "0",
+        "value": 0.0,
+        "sourcePropertyPath": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:ln/a:solidFill/a:srgbClr/a:alpha/@val"
+      }
+    ]
+  },
+  "originalFirstPathOnlyCheckerSHA256": "5d04b75523d7c421914aeaa39774cf0394a36eb97e53142811d6d9e797262773",
+  "oldCheckerUnchanged": true,
+  "newCheckerPath": "prototype/vdraw-mobile-007/qa/phase1/b2-review/tools/property_claim_checker_v2.py",
+  "newCheckerSHA256": "8bf59347a5a23e63fe06d7fb44a26da78a6b6691389b996b77bc182728c46aa6",
+  "reason": "The frozen original allPaintAlphas independently records fill alpha=0 and stroke alpha=0. A single EXPLICIT opacity=0 is supported by either original path, because both active direct paints have equal explicit alpha. v1 incorrectly required only the first recorded path. v2 uses the original truth path set, never the producer path as expected. This is a checker restriction correction, not a source or schema change.",
+  "allowedPaths": [
+    "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:solidFill/a:srgbClr/a:alpha/@val",
+    "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[4]/p:spPr/a:ln/a:solidFill/a:srgbClr/a:alpha/@val"
+  ],
+  "negativeCases": [
+    "unequal alpha remains UNRESOLVED; claiming either alpha as a known single opacity fails",
+    "missing opacity resolution fails required field coverage",
+    "missing direct alpha claim cannot downgrade original EXPLICIT to UNRESOLVED",
+    "wrong original alpha path fails",
+    "missing evidence fails",
+    "missing unknown reason fails"
+  ],
+  "valueLexemeEncodingMustMatchOriginal": true,
+  "allOriginalPaintsExplicitAndAlphaConsensusRequired": true,
+  "noDefaultAppearance": true
+}

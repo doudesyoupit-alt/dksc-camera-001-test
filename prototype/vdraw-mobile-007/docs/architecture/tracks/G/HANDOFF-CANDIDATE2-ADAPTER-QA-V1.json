@@ -1,0 +1,99 @@
+{
+  "format": "WORK_HANDOFF_V1",
+  "schema": "vdraw-G-candidate2-adapter-independent-handoff/1",
+  "instruction_id": "VDRAW-PHASE1-G-CANDIDATE2-ADAPTER-QA-20261007-V1",
+  "track": "G",
+  "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+  "head": null,
+  "head_resolution": "Resolve immutable containing commit; no circular self-SHA",
+  "expected_base_head": "504a14f4aecef39a19c60f3776f347d54c091e66",
+  "dispatch_commit": "e717bbe2d7572a6b307fea746f1f11528aa5d14d",
+  "status": "BOUNDED_NATIVE_EMU_GEOMETRY_ADAPTER_QA_COMPLETE_PRODUCT_HOLD",
+  "pins": {
+    "B2HEAD": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+    "adapterSHA256": "d1b7f0982ced37bbbfd59ab4b811960fe75833d1c7b93d19986cf13ff53f89dd",
+    "A2HEAD": "32fac121b5a7df53cde79e0be515581a9dc8496d",
+    "IRVersion": "vdraw-drawing-ir/1.0.0-candidate.2",
+    "schemaSHA256": "5ad6ce7875e7cd70ee9d95daec98d91aa43b0bb74b1a16aefe76c25b546fcdbc",
+    "validatorSHA256": "b69ac8f46d533674bc9d1c500dcf28b6d121bb874b7dce644a8f16d0b72055a2",
+    "GPropertyTruthHEAD": "6e9fdbfe7fe09cb3e6739923a248d9c67d44fd43",
+    "GNumericOracleHEAD": "504a14f4aecef39a19c60f3776f347d54c091e66"
+  },
+  "Evidence": [
+    {
+      "path": "prototype/vdraw-mobile-007/docs/architecture/tracks/G/EVIDENCE-CANDIDATE2-ADAPTER-QA-V1.json",
+      "sha256": "4ab4daf9b4c64ebd1dae12c4eace37e25ae25ba45733f2ceb2183a4250673f82"
+    }
+  ],
+  "tests": {
+    "newNamedPass": 74,
+    "newNamedFail": 0,
+    "skip": 0,
+    "groups": {
+      "preOutputOriginalPropertyUnit": 25,
+      "preOutputBoundedGeometry": 8,
+      "fixedResultIndependentAdverse": 36,
+      "fixedResultContractAdverse": 5
+    },
+    "sourceComparisonPass": 3246,
+    "sourceComparisonFail": 0,
+    "IRDocumentsIndependentlyValidated": 6,
+    "broadOldSuitesRerun": false
+  },
+  "retention": {
+    "sourceObjects": 44,
+    "sourceComponentsExcludingBackground": 47,
+    "geometry": {
+      "represented": 23,
+      "denominator": 32
+    },
+    "text": {
+      "represented": 0,
+      "denominator": 8
+    }
+  },
+  "customUnitFindings": {
+    "oldFAILRecordsUnchanged": true,
+    "oldFindings": 2,
+    "resolvedByNewEvidence": 2,
+    "unresolved": 0,
+    "rawCustomDrawableAcceptance": false
+  },
+  "boundedRecommendation": "YES_ISOLATED_MM_DXF_NATIVE_EMU_PRIMITIVE_GEOMETRY_PREVIEW_ONLY",
+  "gates": {
+    "boundedNativeEMUGeometryReadiness": "YES",
+    "completeSourceGeometryRetention": "PARTIAL_23_OF_32",
+    "sourceAccounting": "PASS_ORIGINAL_DENOMINATORS_44_OBJECTS_47_COMPONENTS",
+    "textDrawableRetention": "NOT_QUALIFIED_0_OF_8",
+    "appearanceFidelity": "UNQUALIFIED_UNKNOWN_FIELDS_AND_GENERATED_REVIEW_STYLE_NOT_SOURCE_STYLE",
+    "DXF": "NOT_RUN",
+    "realJwCad": "NOT_RUN",
+    "productPhase1": "HOLD"
+  },
+  "blocker": [
+    "COMPLETE_GEOMETRY_RETENTION_9_OF_32_EXCLUDED_WITH_LEDGER",
+    "TEXT_ANCHOR_BASELINE_FONT_UNRESOLVED_8_COMPONENTS",
+    "STYLE_APPEARANCE_NOT_QUALIFIED_UNKNOWN_DASH_PAINT_WIDTH_ALPHA",
+    "MM_DXF_OUTPUT_NOT_IMPLEMENTED_OR_INDEPENDENTLY_TESTED",
+    "REAL_JW_OPEN_EDIT_SAVE_ROUNDTRIP_NOT_RUN"
+  ],
+  "nextAction": "Coordinator may dispatch isolated AC1009/R12 numeric MM geometry preview with full loss ledger and generated-style disclosure; no product acceptance or actual Jw substitute. New backend fixture/oracle must be fixed independently before output review.",
+  "productGate": "HOLD",
+  "Human_Gate": {
+    "isolatedReview": "AUTHORIZED_SAVED_DISPATCH",
+    "product": "HOLD",
+    "substitution": false
+  },
+  "protection": {
+    "appendOnly": true,
+    "baseGitBlobsRetained": 645,
+    "localOldBlobsCheckedUnchanged": 88,
+    "oldGTruthFixturesCheckersEvidenceChanged": false,
+    "AorBImplementationChanged": false,
+    "mainValidationRelease006SigningChanged": false,
+    "SAVE001": "CLOSED_REUSED",
+    "CDEFIntegration": false,
+    "APK": false,
+    "AIrequests": 0
+  }
+}

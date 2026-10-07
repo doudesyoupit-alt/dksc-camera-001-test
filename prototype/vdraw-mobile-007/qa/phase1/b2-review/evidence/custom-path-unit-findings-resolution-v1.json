@@ -1,0 +1,76 @@
+{
+  "schema": "vdraw-G-custom-source-unit-finding-resolution/1",
+  "oldFailureRecordsPreserved": true,
+  "oldGHead": "97978333911083f419828b8424ecbba9dee7dd20",
+  "oldFailurePath": "prototype/vdraw-mobile-007/qa/phase1/a2-review/evidence/custom-path-source-unit-audit.json",
+  "oldB1Head": "4e6e23e31ed0f2e62ef57647518cf65ab6f8dd22",
+  "fixedB2Head": "2ad1c0a2c3537914d2d3a460b5843b542a6dc098",
+  "originalTruthFreezeHead": "6e9fdbfe7fe09cb3e6739923a248d9c67d44fd43",
+  "sourceHash": "8fe170af5f0f527a1d74f8ce633d9998fc53126ea3e11905159f6ab09bc2255d",
+  "truthSha256": "6b03e1c1c1a2163226baf9b2bc97f01b14ccd84b1eb8898f4bec7dd30db8ae0f",
+  "comparisonPath": "prototype/vdraw-mobile-007/qa/phase1/b2-review/evidence/synthetic-g03-expanded.independent-compare.json",
+  "resolutions": [
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]",
+      "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[1]/geometry",
+      "priorFinding": "FAIL_SOURCE_UNIT_DECLARATION",
+      "currentStatus": "RESOLVED_BY_FIXED_B2_EXPLICIT_LEDGER_AND_PATH_COORDINATE_DECLARATION",
+      "newUnit": "PATH_COORDINATE",
+      "reason": "CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE",
+      "inventoryId": "source-12-part-0",
+      "objectIds": [],
+      "rawPathExtent": [
+        300,
+        200
+      ],
+      "rawPoints": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ],
+        [
+          120,
+          200
+        ]
+      ]
+    },
+    {
+      "sourceKey": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]",
+      "componentId": "ppt/slides/slide1.xml#/p:sld/p:cSld/p:spTree/p:sp[2]/geometry",
+      "priorFinding": "FAIL_SOURCE_UNIT_DECLARATION",
+      "currentStatus": "RESOLVED_BY_FIXED_B2_EXPLICIT_LEDGER_AND_PATH_COORDINATE_DECLARATION",
+      "newUnit": "PATH_COORDINATE",
+      "reason": "CUSTOM_PATH_COORDINATE_FRAME_UNREPRESENTABLE",
+      "inventoryId": "source-13-part-0",
+      "objectIds": [],
+      "rawPathExtent": [
+        300,
+        200
+      ],
+      "rawPoints": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ],
+        [
+          120,
+          200
+        ]
+      ]
+    }
+  ],
+  "sourceUnitStatus": "RESOLVED_BY_ORIGINAL_XML_AND_B2_RAW_PATH_UNIT_LEDGER_EVIDENCE",
+  "geometryNumerics": "CORRECT_DERIVED_COORDINATES_NOT_PROOF_OF_RAW_EMU_UNITS",
+  "customRawPathRepresentedInIR": false,
+  "contractCapability": "PATH_COORDINATE_NATIVE_IR_UNREPRESENTABLE_WITH_FROZEN_A2",
+  "productGate": "HOLD",
+  "primarySource": "https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.drawing.point?view=openxml-3.0.1"
+}
