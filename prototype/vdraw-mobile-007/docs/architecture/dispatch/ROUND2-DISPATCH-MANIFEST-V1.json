@@ -1,0 +1,45 @@
+{
+  "schema": "vdraw-round2-dispatch/1",
+  "sourceHead": "6c0facb34757a54ed37d08d94505129b0341ad66",
+  "releaseHead": "15bf3371bec3f7d1e4090e7198a850c5636baf3f",
+  "coordinator_parent": "c731860b5ecbc0031231065625c5263b90a70a3f",
+  "tracks": [
+    {
+      "track": "A",
+      "instruction_id": "VDRAW-4ROUTE-A-ROUND2-20261007-V1",
+      "branch": "work/vdraw-drawing-ir-v1",
+      "expected_head": "b023fdc1a0dacd1d9280db3af2b3ad4da17f3609",
+      "initial_handoff_blob": "ec49ae7950d4ae949b41847a619aa2033c02f25f",
+      "status": "DISPATCH_READY",
+      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-A-ROUND2-V1.md"
+    },
+    {
+      "track": "B",
+      "instruction_id": "VDRAW-4ROUTE-B-ROUND2-20261007-V1",
+      "branch": "work/vdraw-pptx-jwcad-v1",
+      "expected_head": "595cb93a6b7f797cffcbcbc9caf858e695c5e932",
+      "initial_handoff_blob": "8417033c2e614e590dcac3df1b040cb3963ac687",
+      "status": "DISPATCH_READY",
+      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-B-ROUND2-V1.md"
+    },
+    {
+      "track": "G",
+      "instruction_id": "VDRAW-4ROUTE-G-ROUND2-20261007-V1",
+      "branch": "work/vdraw-jwcad-roundtrip-qa-v1",
+      "expected_head": "07eaa6a66930e4caa9d417d965e5eeda583a28cf",
+      "initial_handoff_blob": "7b68a3100d754f3ea948762798caddefdb08ae0e",
+      "status": "DISPATCH_READY",
+      "instruction_path": "prototype/vdraw-mobile-007/docs/architecture/dispatch/TRACK-G-ROUND2-V1.md"
+    }
+  ],
+  "preserved_tracks": [
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "scope": "isolated implementation A/B; independent QA preparation G",
+  "integrationGate": "HOLD_UNTIL_A_B_G_REVIEW",
+  "phase1ProductGate": "HOLD",
+  "nextIntegration": "separate subsequent dispatch after all three conditions; actual Jw_cad acceptance still required"
+}
